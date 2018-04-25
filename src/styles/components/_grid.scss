@@ -1,0 +1,81 @@
+.grid {
+  display: grid;
+  > h3 {
+    justify-self: center;
+    grid-column: 1 / span auto;
+  }
+}
+
+.grid--profile {
+  grid-template-rows: 3fr 2fr;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-flow: dense;
+  > * {
+    padding: 1rem 0 1rem 0;
+  }
+}
+
+.grid--profile__img {
+  justify-self: center;
+  grid-area: 1 / 1 / span 3 / span auto;
+}
+
+.grid--profile__name {
+  font-size: 2rem;
+  justify-self: center;
+  grid-area: 4 / 1 / span 2 / span auto;
+}
+
+.grid--profile__specs {
+  grid-column: 1 / span auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid--profile__features-key {
+  grid-column: 1 / span 1;
+  padding-right: 10px;
+}
+
+.grid--profile__features-value {
+  grid-column: 2 / span auto;
+}
+
+.grid--abilities {
+  // grid-template-columns: [start] 1fr [ability] 1fr [score] 1fr [mod] 1fr [tempScore] 1fr [tempMod];
+  grid-template-columns: repeat(5 1fr);
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  justify-items: center;
+  > h3 {
+    grid-column: 1 / 6;
+    justify-self: center;
+  }
+}
+
+.grid--abilities__ability {
+  // grid-column: start / ability;
+  grid-column: 1 / 2;
+  justify-self: start;
+}
+.grid--abilities__score {
+  // grid-column: ability / score;
+  grid-column: 2 / 3;
+}
+.grid--abilities__mod {
+  // grid-column: score / mod;
+  grid-column: 3 / 4;
+}
+.grid--abilities__tempScore {
+  // grid-column: mod / tempScore;
+  grid-column: 4 / 5;
+}
+.grid--abilities__tempMod {
+  // grid-column: tempScore / tempMod;
+  grid-column: 5 / 6;
+}
+
+.grid--skills {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+}

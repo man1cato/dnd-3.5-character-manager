@@ -1,0 +1,59 @@
+import axios from 'axios';
+
+const apiKey = process.env.AIRTABLE_API_KEY;
+const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
+
+export default async (firebaseUID) => {
+  const characterFilter = `{Firebase UID}="${firebaseUID}"`;
+  const characterResponse = await axios.get(`${baseUrl}/Characters?api_key=${apiKey}&filterByFormula=${characterFilter}`);
+  const characterId = response.data.records[0].id;
+  const fields = response.data.records[0].fields;
+
+  const skillsetFilter = `{Character ID}="${characterId}"`
+  const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${skillsetFilter}`)
+  const skills = skillsetResponse.data.records.map((skill) => skill["Skill (Rank)"]);
+
+  return {
+    id: characterId,
+    fields:{
+      level: fields.Level,
+      hp: fields.HP,
+      xp: fields.XP,
+      hd: fields["Hit Die"],
+      abilities: {
+        str: {
+          name: "STR",
+          score: fields.STR,
+          mod: fields["STR Mod"],
+        },
+        dex: {
+          name: "DEX",
+          score: fields.DEX,
+          mod: fields["STR Mod"],
+        },
+        con: {
+          name: "CON",
+          score: fields.CON,
+          mod: fields["CON Mod"],
+        },
+        int: {
+          name: "INT",
+          score: fields.INT,
+          mod: fields["INT Mod"],
+        },
+        wis: {
+          name: "WIS",
+          score: fields.WIS,
+          mod: fields["WIS Mod"],
+        },
+        cha: {
+          name: "CHA",
+          score: fields.CHA,
+          mod: fields["CHA Mod"],
+        },
+      },
+      skills
+    }
+  }
+
+}
