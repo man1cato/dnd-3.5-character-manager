@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 
 export const ProfilePage = (props) => (
     <div className="container grid grid--profile">
-        <div className="grid--profile__img">
-        </div>
+        <img className="grid--profile__img" src={props.iconUrl} />
+
         <div className="grid--profile__name">{props.name}</div>
         <div className="grid--profile__specs">
           <div>{props.race}</div>

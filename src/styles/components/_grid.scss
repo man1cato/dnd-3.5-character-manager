@@ -6,18 +6,36 @@
   }
 }
 
+.grid--footer {
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.grid--footer_img {
+  padding: $xs-size;
+  height: 50px;
+  width: auto;
+}
+
 .grid--profile {
   grid-template-rows: 3fr 2fr;
   grid-template-columns: 1fr 3fr;
   grid-auto-flow: dense;
   > * {
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
   }
 }
 
 .grid--profile__img {
   justify-self: center;
   grid-area: 1 / 1 / span 3 / span auto;
+  height: 16vh;
+  width: auto;
+  padding-bottom: 0;
 }
 
 .grid--profile__name {
@@ -42,7 +60,6 @@
 }
 
 .grid--abilities {
-  // grid-template-columns: [start] 1fr [ability] 1fr [score] 1fr [mod] 1fr [tempScore] 1fr [tempMod];
   grid-template-columns: repeat(5 1fr);
   grid-template-rows: auto;
   grid-auto-flow: dense;
@@ -54,24 +71,19 @@
 }
 
 .grid--abilities__ability {
-  // grid-column: start / ability;
   grid-column: 1 / 2;
   justify-self: start;
 }
 .grid--abilities__score {
-  // grid-column: ability / score;
   grid-column: 2 / 3;
 }
 .grid--abilities__mod {
-  // grid-column: score / mod;
   grid-column: 3 / 4;
 }
 .grid--abilities__tempScore {
-  // grid-column: mod / tempScore;
   grid-column: 4 / 5;
 }
 .grid--abilities__tempMod {
-  // grid-column: tempScore / tempMod;
   grid-column: 5 / 6;
 }
 

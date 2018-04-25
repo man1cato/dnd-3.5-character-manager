@@ -5,21 +5,16 @@ exports[`should render Header correctly 1`] = `
   className="header"
 >
   <div
-    className="container"
+    className="container container--header"
   >
     <div
       className="header__content"
     >
-      <Link
+      <h2
         className="header__title"
-        exact={true}
-        replace={false}
-        to="/profile"
       >
-        <h2>
-          D&D 3.5 Character Manager
-        </h2>
-      </Link>
+        D&D 3.5 Character Manager
+      </h2>
       <button
         className="button button--link"
         onClick={[Function]}

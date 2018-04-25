@@ -17,6 +17,7 @@ export default async (firebaseUID) => {
   return {
     id: characterId,
     fields:{
+      iconUrl: fields.Icon[0].url,
       name: fields.Name,
       height: fields.Height,
       weight: fields["Weight (lbs)"],
@@ -24,10 +25,10 @@ export default async (firebaseUID) => {
       size: fields.Size[0],
       race: fields["Race - Text"],
       class: fields.Class,
-      deity: fields.Deity,
+      deity: fields.Deity || "None",
       alignment: fields.Alignment,
-      school: fields["School/Discipline"],
-      prohibitedSchools: fields["Prohibited Schools"].join(", "),
+      school: fields["School/Discipline"] || "N/A",
+      prohibitedSchools: fields["Prohibited Schools"].join(", ") || "N/A",
       languages: fields.Languages.join(", "),
       level: fields.Level[0],
       hp: fields.HP,
