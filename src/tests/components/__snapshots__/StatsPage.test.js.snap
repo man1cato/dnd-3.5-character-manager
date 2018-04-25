@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render stats page with profile data 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <h2>
+      Level #
+    </h2>
+    <span>
+      XP: #####
+    </span>
+  </div>
+  <div
+    className="row"
+  >
+    <span>
+      Hit Die: #d#
+    </span>
+    <span>
+      To next level: ####
+    </span>
+  </div>
+  <div
+    className="grid grid--abilities"
+  >
+    <h3>
+      Ability Scores
+    </h3>
+    <div
+      className="grid--abilities__ability"
+    >
+      Ability
+    </div>
+    <div
+      className="grid--abilities__score"
+    >
+      Score
+    </div>
+    <div
+      className="grid--abilities__mod"
+    >
+      Mod
+    </div>
+    <div
+      className="grid--abilities__tempScore"
+    >
+      Temp Score
+    </div>
+    <div
+      className="grid--abilities__tempMod"
+    >
+      Temp Mod
+    </div>
+    <h4
+      className="grid--abilities__ability"
+      key="0"
+    />
+    <h4
+      className="grid--abilities__ability"
+      key="1"
+    />
+    <h4
+      className="grid--abilities__ability"
+      key="2"
+    />
+    <h4
+      className="grid--abilities__ability"
+      key="3"
+    />
+    <h4
+      className="grid--abilities__ability"
+      key="4"
+    />
+    <h4
+      className="grid--abilities__ability"
+      key="5"
+    />
+    <div
+      className="grid--abilities__score"
+      key="0"
+    />
+    <div
+      className="grid--abilities__score"
+      key="1"
+    />
+    <div
+      className="grid--abilities__score"
+      key="2"
+    />
+    <div
+      className="grid--abilities__score"
+      key="3"
+    />
+    <div
+      className="grid--abilities__score"
+      key="4"
+    />
+    <div
+      className="grid--abilities__score"
+      key="5"
+    />
+    <div
+      className="grid--abilities__mod"
+      key="0"
+    />
+    <div
+      className="grid--abilities__mod"
+      key="1"
+    />
+    <div
+      className="grid--abilities__mod"
+      key="2"
+    />
+    <div
+      className="grid--abilities__mod"
+      key="3"
+    />
+    <div
+      className="grid--abilities__mod"
+      key="4"
+    />
+    <div
+      className="grid--abilities__mod"
+      key="5"
+    />
+    <input
+      className="grid--abilities__tempScore"
+      id="str"
+      key="0"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <input
+      className="grid--abilities__tempScore"
+      id="dex"
+      key="1"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <input
+      className="grid--abilities__tempScore"
+      id="con"
+      key="2"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <input
+      className="grid--abilities__tempScore"
+      id="int"
+      key="3"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <input
+      className="grid--abilities__tempScore"
+      id="wis"
+      key="4"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <input
+      className="grid--abilities__tempScore"
+      id="cha"
+      key="5"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <div
+      className="grid--abilities__tempMod"
+      key="0"
+    >
+      0
+    </div>
+    <div
+      className="grid--abilities__tempMod"
+      key="1"
+    >
+      0
+    </div>
+    <div
+      className="grid--abilities__tempMod"
+      key="2"
+    >
+      0
+    </div>
+    <div
+      className="grid--abilities__tempMod"
+      key="3"
+    >
+      0
+    </div>
+    <div
+      className="grid--abilities__tempMod"
+      key="4"
+    >
+      0
+    </div>
+    <div
+      className="grid--abilities__tempMod"
+      key="5"
+    >
+      0
+    </div>
+  </div>
+  <div
+    className="grid grid--skills"
+  >
+    <h3>
+      Skills
+    </h3>
+    <div
+      key="0"
+    >
+      Hide (4)
+    </div>
+    <div
+      key="1"
+    >
+      Climb (3)
+    </div>
+    <div
+      key="2"
+    >
+      Listen (5)
+    </div>
+    <div
+      key="3"
+    >
+      Decipher Script (10)
+    </div>
+    <div
+      key="4"
+    >
+      Escape Artist (4)
+    </div>
+    <div
+      key="5"
+    >
+      Sense Motive (5)
+    </div>
+    <div
+      key="6"
+    >
+      Knowledge (Arcana) (11)
+    </div>
+    <div
+      key="7"
+    >
+      Use Rope (4)
+    </div>
+    <div
+      key="8"
+    >
+      Survival (2)
+    </div>
+    <div
+      key="9"
+    >
+      Swim (2)
+    </div>
+    <div
+      key="10"
+    >
+      Appraise (8)
+    </div>
+    <div
+      key="11"
+    >
+      Spellcraft (12)
+    </div>
+    <div
+      key="12"
+    >
+      Heal (2)
+    </div>
+    <div
+      key="13"
+    >
+      Balance (4)
+    </div>
+    <div
+      key="14"
+    >
+      Search (10)
+    </div>
+    <div
+      key="15"
+    >
+      Ride (4)
+    </div>
+    <div
+      key="16"
+    >
+      Concentration (9)
+    </div>
+    <div
+      key="17"
+    >
+      Craft (Trapmaking) (12)
+    </div>
+    <div
+      key="18"
+    >
+      Jump (2)
+    </div>
+    <div
+      key="19"
+    >
+      Forgery (5)
+    </div>
+    <div
+      key="20"
+    >
+      Knowledge (Arch. & Eng.) (10)
+    </div>
+    <div
+      key="21"
+    >
+      Craft (Sculpting) (13)
+    </div>
+    <div
+      key="22"
+    >
+      Spot (4)
+    </div>
+  </div>
+</div>
+`;

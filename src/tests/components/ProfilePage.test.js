@@ -1,14 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import thunk from 'redux-thunk';
-import configureMockStore from 'redux-mock-store';
 
 import {ProfilePage} from '../../components/ProfilePage';
 import profile from '../fixtures/profile';
-
-
-const createMockStore = configureMockStore([thunk]);
-const store = createMockStore(profileData);
 
 const profileData = {
   id: profile.id,

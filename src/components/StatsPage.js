@@ -73,33 +73,34 @@ export class StatsPage extends React.Component {
           <div className="grid--abilities__mod">Mod</div>
           <div className="grid--abilities__tempScore">Temp Score</div>
           <div className="grid--abilities__tempMod">Temp Mod</div>
-          {Object.entries(this.state.abilities).map((ability) =>
-            <h4 className="grid--abilities__ability">{ability[1].name}</h4>
+          {Object.entries(this.state.abilities).map((ability, i) =>
+            <h4 className="grid--abilities__ability" key={i}>{ability[1].name}</h4>
           )}
-          {Object.entries(this.state.abilities).map((ability) =>
-              <div className="grid--abilities__score">{ability[1].score}</div>
+          {Object.entries(this.state.abilities).map((ability, i) =>
+              <div className="grid--abilities__score" key={i}>{ability[1].score}</div>
           )}
-          {Object.entries(this.state.abilities).map((ability) =>
-              <div className="grid--abilities__mod">{ability[1].mod}</div>
+          {Object.entries(this.state.abilities).map((ability, i) =>
+              <div className="grid--abilities__mod" key={i}>{ability[1].mod}</div>
           )}
-          {Object.entries(this.state.abilities).map((ability) =>
+          {Object.entries(this.state.abilities).map((ability, i) =>
               <input
                 className="grid--abilities__tempScore"
+                key={i}
                 id={ability[0]}
                 type="text"
                 value={ability[1].tempScore}
                 onChange={this.onTempScoreChange}
               />
           )}
-          {Object.entries(this.state.abilities).map((ability) =>
-              <div className="grid--abilities__tempMod">{ability[1].tempMod}</div>
+          {Object.entries(this.state.abilities).map((ability, i) =>
+              <div className="grid--abilities__tempMod" key={i}>{ability[1].tempMod}</div>
           )}
         </div>
 
         <div className="grid grid--skills">
           <h3>Skills</h3>
-          {this.props.skills.map((skill) => (
-            <div>{skill}</div>
+          {this.props.skills.map((skill, i) => (
+            <div key={i}>{skill}</div>
           ))}
         </div>
 
