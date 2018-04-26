@@ -10,11 +10,11 @@ export const ProfilePage = (props) => (
         <div>{props.race}</div>
         <div>{props.gender}</div>
         <div>{props.class}</div>
-        <div>{props.height}</div>
+        <div>{props.age} yrs</div>
         <div>{props.alignment}</div>
-        <div>{props.weight} lbs</div>
-        <div>Deity: {props.deity}</div>
+        <div>{props.height}</div>
         <div>{props.size}</div>
+        <div>{props.weight} lbs</div>
 
         <h4 className="grid--profile__features-key">Languages</h4>
         <div className="grid--profile__features-value">{props.languages}</div>
@@ -26,6 +26,8 @@ export const ProfilePage = (props) => (
         <div className="grid--profile__features-value">{props.school}</div>
         <h4 className="grid--profile__features-key">Prohibited Schools</h4>
         <div className="grid--profile__features-value">{props.prohibitedSchools}</div>
+        <h4 className="grid--profile__features-key">Deity</h4>
+        <div className="grid--profile__features-value">{props.deity}</div>
       </div>
     </div>
 );

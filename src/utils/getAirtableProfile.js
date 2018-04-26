@@ -19,6 +19,7 @@ export default async (firebaseUID) => {
     fields:{
       iconUrl: fields.Icon[0].url,
       name: fields.Name,
+      age: fields.Age,
       height: fields.Height,
       weight: fields["Weight (lbs)"],
       gender: fields.Gender,
