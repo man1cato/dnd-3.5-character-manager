@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Footer = () => (
-  <footer className="container grid grid--footer">
+  <footer className="container container--footer grid grid--footer">
     <Link to="/profile"><img className="grid--footer_img" src="images/person.svg" /></Link>
     <Link to="/stats"><img className="grid--footer_img" src="images/chart.svg" /></Link>
     <Link to="/combat"><img className="grid--footer_img" src="images/shield-with-swords.svg" /></Link>

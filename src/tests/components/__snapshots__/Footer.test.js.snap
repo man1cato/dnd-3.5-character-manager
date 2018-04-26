@@ -2,7 +2,7 @@
 
 exports[`should render footer correctly 1`] = `
 <footer
-  className="container grid grid--footer"
+  className="container container--footer grid grid--footer"
 >
   <Link
     replace={false}

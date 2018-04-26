@@ -2,7 +2,7 @@
 
 exports[`should render stats page with profile data 1`] = `
 <div
-  className="container"
+  className="container container--body"
 >
   <div
     className="row"
@@ -24,194 +24,92 @@ exports[`should render stats page with profile data 1`] = `
       To next level: ####
     </span>
   </div>
-  <div
-    className="grid grid--abilities"
-  >
-    <h3>
-      Ability Scores
-    </h3>
-    <div
-      className="grid--abilities__ability"
-    >
-      Ability
-    </div>
-    <div
-      className="grid--abilities__score"
-    >
-      Score
-    </div>
-    <div
-      className="grid--abilities__mod"
-    >
-      Mod
-    </div>
-    <div
-      className="grid--abilities__tempScore"
-    >
-      Temp Score
-    </div>
-    <div
-      className="grid--abilities__tempMod"
-    >
-      Temp Mod
-    </div>
-    <h4
-      className="grid--abilities__ability"
-      key="0"
-    />
-    <h4
-      className="grid--abilities__ability"
-      key="1"
-    />
-    <h4
-      className="grid--abilities__ability"
-      key="2"
-    />
-    <h4
-      className="grid--abilities__ability"
-      key="3"
-    />
-    <h4
-      className="grid--abilities__ability"
-      key="4"
-    />
-    <h4
-      className="grid--abilities__ability"
-      key="5"
-    />
-    <div
-      className="grid--abilities__score"
-      key="0"
-    />
-    <div
-      className="grid--abilities__score"
-      key="1"
-    />
-    <div
-      className="grid--abilities__score"
-      key="2"
-    />
-    <div
-      className="grid--abilities__score"
-      key="3"
-    />
-    <div
-      className="grid--abilities__score"
-      key="4"
-    />
-    <div
-      className="grid--abilities__score"
-      key="5"
-    />
-    <div
-      className="grid--abilities__mod"
-      key="0"
-    />
-    <div
-      className="grid--abilities__mod"
-      key="1"
-    />
-    <div
-      className="grid--abilities__mod"
-      key="2"
-    />
-    <div
-      className="grid--abilities__mod"
-      key="3"
-    />
-    <div
-      className="grid--abilities__mod"
-      key="4"
-    />
-    <div
-      className="grid--abilities__mod"
-      key="5"
-    />
-    <input
-      className="grid--abilities__tempScore"
-      id="str"
-      key="0"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <input
-      className="grid--abilities__tempScore"
-      id="dex"
-      key="1"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <input
-      className="grid--abilities__tempScore"
-      id="con"
-      key="2"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <input
-      className="grid--abilities__tempScore"
-      id="int"
-      key="3"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <input
-      className="grid--abilities__tempScore"
-      id="wis"
-      key="4"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <input
-      className="grid--abilities__tempScore"
-      id="cha"
-      key="5"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <div
-      className="grid--abilities__tempMod"
-      key="0"
-    >
-      0
-    </div>
-    <div
-      className="grid--abilities__tempMod"
-      key="1"
-    >
-      0
-    </div>
-    <div
-      className="grid--abilities__tempMod"
-      key="2"
-    >
-      0
-    </div>
-    <div
-      className="grid--abilities__tempMod"
-      key="3"
-    >
-      0
-    </div>
-    <div
-      className="grid--abilities__tempMod"
-      key="4"
-    >
-      0
-    </div>
-    <div
-      className="grid--abilities__tempMod"
-      key="5"
-    >
-      0
-    </div>
-  </div>
+  <Abilities
+    abilities={
+      Object {
+        "cha": Object {
+          "mod": 0,
+          "modScore": 0,
+          "name": "CHA",
+          "score": 11,
+          "tempScore": "",
+        },
+        "con": Object {
+          "mod": 3,
+          "modScore": 0,
+          "name": "CON",
+          "score": 16,
+          "tempScore": "",
+        },
+        "dex": Object {
+          "mod": 2,
+          "modScore": 0,
+          "name": "DEX",
+          "score": 18,
+          "tempScore": "",
+        },
+        "int": Object {
+          "mod": 5,
+          "modScore": 0,
+          "name": "INT",
+          "score": 20,
+          "tempScore": "",
+        },
+        "str": Object {
+          "mod": 2,
+          "modScore": 0,
+          "name": "STR",
+          "score": 14,
+          "tempScore": "",
+        },
+        "wis": Object {
+          "mod": 2,
+          "modScore": 0,
+          "name": "WIS",
+          "score": 14,
+          "tempScore": "",
+        },
+      }
+    }
+    alignment="Lawful Evil"
+    hd="D4"
+    hp={32}
+    id="recnPKEA6sOWaOt57"
+    languages="Common, Elven, Draconic, Orc, Sylvan"
+    level={5}
+    name="Istvyll Bannianea"
+    onTempScoreChange={[Function]}
+    prohibitedSchools="Illusion, Necromancy"
+    school="Transmutation"
+    skills={
+      Array [
+        "Hide (4)",
+        "Climb (3)",
+        "Listen (5)",
+        "Decipher Script (10)",
+        "Escape Artist (4)",
+        "Sense Motive (5)",
+        "Knowledge (Arcana) (11)",
+        "Use Rope (4)",
+        "Survival (2)",
+        "Swim (2)",
+        "Appraise (8)",
+        "Spellcraft (12)",
+        "Heal (2)",
+        "Balance (4)",
+        "Search (10)",
+        "Ride (4)",
+        "Concentration (9)",
+        "Craft (Trapmaking) (12)",
+        "Jump (2)",
+        "Forgery (5)",
+        "Knowledge (Arch. & Eng.) (10)",
+        "Craft (Sculpting) (13)",
+        "Spot (4)",
+      ]
+    }
+    xp={10000}
+  />
   <div
     className="grid grid--skills"
   >
