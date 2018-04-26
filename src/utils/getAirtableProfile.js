@@ -11,7 +11,15 @@ export default async (firebaseUID) => {
 
   const skillsetFilter = `{Character ID}="${characterId}"`;
   const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${skillsetFilter}`);
-  const skills = skillsetResponse.data.records.map((skill) => skill.fields["Skill (Rank)"]);
+  const skills = skillsetResponse.data.records.sort((a,b) => {
+    if (a.fields["Skill - Text"] > b.fields["Skill - Text"]) {
+      return 1
+    }
+    return 0
+  }).map((skill) => ({
+    name: skill.fields["Skill - Text"],
+    ranks: skill.fields["Total Ranks"]
+  }));
 
 
   return {

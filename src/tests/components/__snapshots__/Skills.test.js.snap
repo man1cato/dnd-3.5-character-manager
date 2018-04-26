@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render skills with profile data 1`] = `
+<div>
+  <div
+    className="grid grid--skills"
+  >
+    <h4>
+      Skill
+    </h4>
+    <h4
+      className="grid--skills__ranks"
+    >
+      Ranks
+    </h4>
+    <h4>
+      Skill
+    </h4>
+    <h4
+      className="grid--skills__ranks"
+    >
+      Ranks
+    </h4>
+  </div>
+  <div
+    className="flexbox flexbox--skills"
+  >
+    <div
+      className="flexbox flexbox--skills-item"
+      key="0"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="1"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="2"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="3"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="4"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="5"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="6"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="7"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="8"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="9"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="10"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="11"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="12"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="13"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="14"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="15"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="16"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="17"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="18"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="19"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="20"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="21"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+    <div
+      className="flexbox flexbox--skills-item"
+      key="22"
+    >
+      <div
+        className="flexbox--skills-item__name"
+      />
+      <div
+        className="flexbox--skills-item__ranks"
+      />
+    </div>
+  </div>
+</div>
+`;

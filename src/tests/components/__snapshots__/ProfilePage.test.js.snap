@@ -16,54 +16,74 @@ exports[`should render ProfilePage 1`] = `
     <div />
     <div />
     <div />
+    <div>
+       yrs
+    </div>
+    <div />
     <div />
     <div />
     <div>
        lbs
     </div>
-    <div>
-      Deity: 
-    </div>
-    <div />
     <h4
       className="grid--profile__features-key"
+      key="0"
     >
       Languages
     </h4>
-    <div
-      className="grid--profile__features-value"
-    />
     <h4
       className="grid--profile__features-key"
+      key="1"
     >
       Feats
     </h4>
-    <div
-      className="grid--profile__features-value"
-    />
     <h4
       className="grid--profile__features-key"
+      key="2"
     >
       Special Abilities
     </h4>
-    <div
-      className="grid--profile__features-value"
-    />
     <h4
       className="grid--profile__features-key"
+      key="3"
     >
       School
     </h4>
-    <div
-      className="grid--profile__features-value"
-    />
     <h4
       className="grid--profile__features-key"
+      key="4"
     >
       Prohibited Schools
     </h4>
+    <h4
+      className="grid--profile__features-key"
+      key="5"
+    >
+      Deity
+    </h4>
     <div
       className="grid--profile__features-value"
+      key="0"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="1"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="2"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="3"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="4"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="5"
     />
   </div>
 </div>
@@ -87,63 +107,83 @@ exports[`should render ProfilePage with profile data 1`] = `
     <div />
     <div />
     <div />
-    <div />
+    <div>
+       yrs
+    </div>
     <div>
       Lawful Evil
     </div>
+    <div />
+    <div />
     <div>
        lbs
     </div>
-    <div>
-      Deity: 
-    </div>
-    <div />
     <h4
       className="grid--profile__features-key"
+      key="0"
     >
       Languages
     </h4>
-    <div
-      className="grid--profile__features-value"
-    >
-      Common, Elven, Draconic, Orc, Sylvan
-    </div>
     <h4
       className="grid--profile__features-key"
+      key="1"
     >
       Feats
     </h4>
-    <div
-      className="grid--profile__features-value"
-    />
     <h4
       className="grid--profile__features-key"
+      key="2"
     >
       Special Abilities
     </h4>
-    <div
-      className="grid--profile__features-value"
-    />
     <h4
       className="grid--profile__features-key"
+      key="3"
     >
       School
     </h4>
-    <div
-      className="grid--profile__features-value"
-    >
-      Transmutation
-    </div>
     <h4
       className="grid--profile__features-key"
+      key="4"
     >
       Prohibited Schools
     </h4>
+    <h4
+      className="grid--profile__features-key"
+      key="5"
+    >
+      Deity
+    </h4>
     <div
       className="grid--profile__features-value"
+      key="0"
+    >
+      Common, Elven, Draconic, Orc, Sylvan
+    </div>
+    <div
+      className="grid--profile__features-value"
+      key="1"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="2"
+    />
+    <div
+      className="grid--profile__features-value"
+      key="3"
+    >
+      Transmutation
+    </div>
+    <div
+      className="grid--profile__features-value"
+      key="4"
     >
       Illusion, Necromancy
     </div>
+    <div
+      className="grid--profile__features-value"
+      key="5"
+    />
   </div>
 </div>
 `;

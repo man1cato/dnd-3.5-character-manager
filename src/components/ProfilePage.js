@@ -1,6 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+const features = [
+  ["Languages", "languages"],
+  ["Feats", "feats"],
+  ["Special Abilities", "specialAbilities"],
+  ["School", "school"],
+  ["Prohibited Schools", "prohibitedSchools"],
+  ["Deity", "deity"]
+]
+
 export const ProfilePage = (props) => (
     <div className="container container--body">
       <div className="grid grid--profile">
@@ -16,18 +25,12 @@ export const ProfilePage = (props) => (
         <div>{props.size}</div>
         <div>{props.weight} lbs</div>
 
-        <h4 className="grid--profile__features-key">Languages</h4>
-        <div className="grid--profile__features-value">{props.languages}</div>
-        <h4 className="grid--profile__features-key">Feats</h4>
-        <div className="grid--profile__features-value">{props.feats}</div>
-        <h4 className="grid--profile__features-key">Special Abilities</h4>
-        <div className="grid--profile__features-value">{props.specialAbilities}</div>
-        <h4 className="grid--profile__features-key">School</h4>
-        <div className="grid--profile__features-value">{props.school}</div>
-        <h4 className="grid--profile__features-key">Prohibited Schools</h4>
-        <div className="grid--profile__features-value">{props.prohibitedSchools}</div>
-        <h4 className="grid--profile__features-key">Deity</h4>
-        <div className="grid--profile__features-value">{props.deity}</div>
+        {features.map((feature, i) => (
+          <h4 className="grid--profile__features-key" key={i}>{feature[0]}</h4>
+        ))}
+        {features.map((feature, i) => (
+          <div className="grid--profile__features-value" key={i}>{props[feature[1]]}</div>
+        ))}
       </div>
     </div>
 );

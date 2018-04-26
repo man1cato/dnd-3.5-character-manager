@@ -1,0 +1,24 @@
+.flexbox {
+  display: flex;
+}
+
+.flexbox--skills {
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 40vh;
+}
+
+.flexbox--skills-item {
+  justify-content: space-between;
+  width: 50%;
+}
+
+.flexbox--skills-item__name {
+  width: 75%;
+}
+
+.flexbox--skills-item__ranks {
+  text-align: center;
+  width: 25%;
+}

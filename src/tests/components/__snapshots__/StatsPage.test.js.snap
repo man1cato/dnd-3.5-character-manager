@@ -8,17 +8,20 @@ exports[`should render stats page with profile data 1`] = `
     className="row"
   >
     <h2>
-      Level #
+      Level 
+      5
     </h2>
     <span>
-      XP: #####
+      XP: 
+      10000
     </span>
   </div>
   <div
     className="row"
   >
     <span>
-      Hit Die: #d#
+      Hit Die: 
+      D4
     </span>
     <span>
       To next level: ####
@@ -29,42 +32,42 @@ exports[`should render stats page with profile data 1`] = `
       Object {
         "cha": Object {
           "mod": 0,
-          "modScore": 0,
+          "modScore": "",
           "name": "CHA",
           "score": 11,
           "tempScore": "",
         },
         "con": Object {
           "mod": 3,
-          "modScore": 0,
+          "modScore": "",
           "name": "CON",
           "score": 16,
           "tempScore": "",
         },
         "dex": Object {
           "mod": 2,
-          "modScore": 0,
+          "modScore": "",
           "name": "DEX",
           "score": 18,
           "tempScore": "",
         },
         "int": Object {
           "mod": 5,
-          "modScore": 0,
+          "modScore": "",
           "name": "INT",
           "score": 20,
           "tempScore": "",
         },
         "str": Object {
           "mod": 2,
-          "modScore": 0,
+          "modScore": "",
           "name": "STR",
           "score": 14,
           "tempScore": "",
         },
         "wis": Object {
           "mod": 2,
-          "modScore": 0,
+          "modScore": "",
           "name": "WIS",
           "score": 14,
           "tempScore": "",
@@ -110,127 +113,34 @@ exports[`should render stats page with profile data 1`] = `
     }
     xp={10000}
   />
-  <div
-    className="grid grid--skills"
-  >
-    <h3>
-      Skills
-    </h3>
-    <div
-      key="0"
-    >
-      Hide (4)
-    </div>
-    <div
-      key="1"
-    >
-      Climb (3)
-    </div>
-    <div
-      key="2"
-    >
-      Listen (5)
-    </div>
-    <div
-      key="3"
-    >
-      Decipher Script (10)
-    </div>
-    <div
-      key="4"
-    >
-      Escape Artist (4)
-    </div>
-    <div
-      key="5"
-    >
-      Sense Motive (5)
-    </div>
-    <div
-      key="6"
-    >
-      Knowledge (Arcana) (11)
-    </div>
-    <div
-      key="7"
-    >
-      Use Rope (4)
-    </div>
-    <div
-      key="8"
-    >
-      Survival (2)
-    </div>
-    <div
-      key="9"
-    >
-      Swim (2)
-    </div>
-    <div
-      key="10"
-    >
-      Appraise (8)
-    </div>
-    <div
-      key="11"
-    >
-      Spellcraft (12)
-    </div>
-    <div
-      key="12"
-    >
-      Heal (2)
-    </div>
-    <div
-      key="13"
-    >
-      Balance (4)
-    </div>
-    <div
-      key="14"
-    >
-      Search (10)
-    </div>
-    <div
-      key="15"
-    >
-      Ride (4)
-    </div>
-    <div
-      key="16"
-    >
-      Concentration (9)
-    </div>
-    <div
-      key="17"
-    >
-      Craft (Trapmaking) (12)
-    </div>
-    <div
-      key="18"
-    >
-      Jump (2)
-    </div>
-    <div
-      key="19"
-    >
-      Forgery (5)
-    </div>
-    <div
-      key="20"
-    >
-      Knowledge (Arch. & Eng.) (10)
-    </div>
-    <div
-      key="21"
-    >
-      Craft (Sculpting) (13)
-    </div>
-    <div
-      key="22"
-    >
-      Spot (4)
-    </div>
-  </div>
+  <Skills
+    skills={
+      Array [
+        "Hide (4)",
+        "Climb (3)",
+        "Listen (5)",
+        "Decipher Script (10)",
+        "Escape Artist (4)",
+        "Sense Motive (5)",
+        "Knowledge (Arcana) (11)",
+        "Use Rope (4)",
+        "Survival (2)",
+        "Swim (2)",
+        "Appraise (8)",
+        "Spellcraft (12)",
+        "Heal (2)",
+        "Balance (4)",
+        "Search (10)",
+        "Ride (4)",
+        "Concentration (9)",
+        "Craft (Trapmaking) (12)",
+        "Jump (2)",
+        "Forgery (5)",
+        "Knowledge (Arch. & Eng.) (10)",
+        "Craft (Sculpting) (13)",
+        "Spot (4)",
+      ]
+    }
+  />
 </div>
 `;

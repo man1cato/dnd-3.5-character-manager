@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import update from 'react-addons-update';
 
 import Abilities from './Abilities';
+import Skills from './Skills';
 
 export class StatsPage extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ export class StatsPage extends React.Component {
     let abilities = this.props.abilities;
     Object.keys(abilities).forEach((ability) => {
       abilities[ability].tempScore = "";
-      abilities[ability].modScore = 0;
+      abilities[ability].modScore = "";
     });
     this.state = {
       abilities
@@ -19,8 +20,8 @@ export class StatsPage extends React.Component {
 
   onTempScoreChange = (e) => {
     const ability = e.target.id;
-    const tempScore = Number(e.target.value);
-    const tempMod = Math.floor(tempScore/2 - 5);
+    const tempScore = Number(e.target.value) === 0 ? "" : Number(e.target.value);
+    const tempMod = tempScore === "" ? "" : Math.floor(tempScore/2 - 5);
     this.setState((prevState) => {
       let newAbilities = update(prevState.abilities, {
         [ability]: {
@@ -39,12 +40,12 @@ export class StatsPage extends React.Component {
       <div className="container container--body">
 
         <div className="row">
-          <h2>Level #</h2>
-          <span>XP: #####</span>
+          <h2>Level {this.props.level}</h2>
+          <span>XP: {this.props.xp}</span>
         </div>
 
         <div className="row">
-          <span>Hit Die: #d#</span>
+          <span>Hit Die: {this.props.hd}</span>
           <span>To next level: ####</span>
         </div>
 
@@ -54,12 +55,7 @@ export class StatsPage extends React.Component {
           onTempScoreChange={this.onTempScoreChange}
         />
 
-        <div className="grid grid--skills">
-          <h3>Skills</h3>
-          {this.props.skills.map((skill, i) => (
-            <div key={i}>{skill}</div>
-          ))}
-        </div>
+        <Skills skills={this.props.skills}/>
 
       </div>
     );
@@ -68,7 +64,8 @@ export class StatsPage extends React.Component {
 
 const mapStateToProps = (state) => ({
   uid: state.auth.uid,
-  ...state.profile
+  ...state.profile,
+  skills: state.profile.skills.sort()
 })
 
 const mapDispatchToProps = (dispatch, props) => ({                              //DISPATCHES THE RETURN VALUE FROM THE CALLED FUNCTION
