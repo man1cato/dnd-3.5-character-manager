@@ -4,67 +4,67 @@ exports[`should render abilities with profile data 1`] = `
 <div
   className="grid grid--abilities"
 >
-  <div
+  <h4
     className="grid--abilities__ability"
   >
     Ability
-  </div>
-  <div
+  </h4>
+  <h4
     className="grid--abilities__score"
   >
     Score
-  </div>
-  <div
+  </h4>
+  <h4
     className="grid--abilities__mod"
   >
     Mod
-  </div>
-  <div
+  </h4>
+  <h4
     className="grid--abilities__tempScore"
   >
     Temp Score
-  </div>
-  <div
+  </h4>
+  <h4
     className="grid--abilities__tempMod"
   >
     Temp Mod
-  </div>
-  <h4
+  </h4>
+  <div
     className="grid--abilities__ability"
     key="0"
   >
     STR
-  </h4>
-  <h4
+  </div>
+  <div
     className="grid--abilities__ability"
     key="1"
   >
     DEX
-  </h4>
-  <h4
+  </div>
+  <div
     className="grid--abilities__ability"
     key="2"
   >
     CON
-  </h4>
-  <h4
+  </div>
+  <div
     className="grid--abilities__ability"
     key="3"
   >
     INT
-  </h4>
-  <h4
+  </div>
+  <div
     className="grid--abilities__ability"
     key="4"
   >
     WIS
-  </h4>
-  <h4
+  </div>
+  <div
     className="grid--abilities__ability"
     key="5"
   >
     CHA
-  </h4>
+  </div>
   <div
     className="grid--abilities__score"
     key="0"

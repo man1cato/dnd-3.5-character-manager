@@ -2,16 +2,20 @@
   display: flex;
 }
 
+.flexbox--skills-header {
+  justify-content: space-between;
+  width: 100%;
+}
+
 .flexbox--skills {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: stretch;
-  height: 40vh;
+  flex-flow: column wrap;
+  align-content: space-between;
+  width: 100%;
 }
 
 .flexbox--skills-item {
   justify-content: space-between;
-  width: 50%;
+  width: 45%;
 }
 
 .flexbox--skills-item__name {

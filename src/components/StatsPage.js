@@ -40,7 +40,7 @@ export class StatsPage extends React.Component {
       <div className="container container--body">
 
         <div className="row">
-          <h2>Level {this.props.level}</h2>
+          <h3>Level {this.props.level}</h3>
           <span>XP: {this.props.xp}</span>
         </div>
 

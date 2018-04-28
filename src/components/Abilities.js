@@ -2,13 +2,13 @@ import React from 'react';
 
 const Abilities = (props) => (
   <div className="grid grid--abilities">
-    <div className="grid--abilities__ability">Ability</div>
-    <div className="grid--abilities__score">Score</div>
-    <div className="grid--abilities__mod">Mod</div>
-    <div className="grid--abilities__tempScore">Temp Score</div>
-    <div className="grid--abilities__tempMod">Temp Mod</div>
+    <h4 className="grid--abilities__ability">Ability</h4>
+    <h4 className="grid--abilities__score">Score</h4>
+    <h4 className="grid--abilities__mod">Mod</h4>
+    <h4 className="grid--abilities__tempScore">Temp Score</h4>
+    <h4 className="grid--abilities__tempMod">Temp Mod</h4>
     {Object.entries(props.abilities).map((ability, i) =>
-      <h4 className="grid--abilities__ability" key={i}>{ability[1].name}</h4>
+      <div className="grid--abilities__ability" key={i}>{ability[1].name}</div>
     )}
     {Object.entries(props.abilities).map((ability, i) =>
       <div className="grid--abilities__score" key={i}>{ability[1].score}</div>
