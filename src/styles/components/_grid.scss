@@ -9,12 +9,14 @@
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
+  fill: white;
 }
 
-.grid--footer_img {
+.grid--footer__icon {
   padding: $xs-size;
-  height: 50px;
-  width: auto;
+  // height: 50px;
+  // width: auto;
+  // fill: white;
 }
 
 .grid--profile {

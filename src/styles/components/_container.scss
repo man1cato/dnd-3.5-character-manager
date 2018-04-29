@@ -11,9 +11,10 @@
 
 .container--body {
   height: 84vh;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .container--footer {
-  height: 9vh
+  height: 9vh;
+  background-color: $dark-blue;
 }

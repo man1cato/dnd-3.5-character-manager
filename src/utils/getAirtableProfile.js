@@ -21,6 +21,9 @@ export default async (firebaseUID) => {
     ranks: skill.fields["Total Ranks"]
   }));
 
+  const level = fields.Level[0];
+  const xp = fields.XP;
+  const nextLevelXp = level*(level+1)*500;
 
   return {
     id: characterId,
@@ -39,9 +42,10 @@ export default async (firebaseUID) => {
       school: fields["School/Discipline"] || "N/A",
       prohibitedSchools: fields["Prohibited Schools"].join(", ") || "N/A",
       languages: fields.Languages.join(", "),
-      level: fields.Level[0],
+      level,
+      xp,
+      toNextLevel: nextLevelXp-xp,
       hp: fields.HP,
-      xp: fields.XP,
       hd: fields["Hit Die"][0],
       feats: fields["Feats - Text"],
       specialAbilities: fields["Special Abilities - Text"],

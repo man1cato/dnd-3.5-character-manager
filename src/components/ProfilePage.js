@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Header from './Header';
+
 const features = [
   ["Languages", "languages"],
   ["Feats", "feats"],
@@ -11,6 +13,8 @@ const features = [
 ]
 
 export const ProfilePage = (props) => (
+  <div>
+    <Header pageTitle="Character Profile" />
     <div className="container container--body">
       <div className="grid grid--profile">
         <img className="grid--profile__img" src={props.iconUrl} />
@@ -33,6 +37,7 @@ export const ProfilePage = (props) => (
         ))}
       </div>
     </div>
+  </div>
 );
 
 const mapStateToProps = (state) => ({

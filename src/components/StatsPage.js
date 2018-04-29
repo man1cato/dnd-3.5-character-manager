@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import update from 'react-addons-update';
 
+import Header from './Header';
 import Abilities from './Abilities';
 import Skills from './Skills';
 
@@ -37,26 +38,29 @@ export class StatsPage extends React.Component {
 
   render () {
     return (
-      <div className="container container--body">
+      <div>
+        <Header pageTitle="Character Stats" />
+        <div className="container container--body">
 
-        <div className="row">
-          <h3>Level {this.props.level}</h3>
-          <span>XP: {this.props.xp}</span>
+          <div className="row">
+            <h3>Level {this.props.level}</h3>
+            <span>XP: {this.props.xp}</span>
+          </div>
+
+          <div className="row">
+            <span>Hit Die: {this.props.hd}</span>
+            <span>To next level: {this.props.toNextLevel}</span>
+          </div>
+
+          <Abilities
+            {...this.props}
+            abilities={this.state.abilities}
+            onTempScoreChange={this.onTempScoreChange}
+          />
+
+          <Skills skills={this.props.skills}/>
+
         </div>
-
-        <div className="row">
-          <span>Hit Die: {this.props.hd}</span>
-          <span>To next level: ####</span>
-        </div>
-
-        <Abilities
-          {...this.props}
-          abilities={this.state.abilities}
-          onTempScoreChange={this.onTempScoreChange}
-        />
-
-        <Skills skills={this.props.skills}/>
-
       </div>
     );
   }
