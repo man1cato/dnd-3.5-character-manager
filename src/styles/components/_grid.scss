@@ -14,9 +14,8 @@
 
 .grid--footer__icon {
   padding: $xs-size;
-  // height: 50px;
-  // width: auto;
-  // fill: white;
+  height: 50px;
+  width: 50px;
 }
 
 .grid--profile {
@@ -85,7 +84,7 @@
 .grid--skills {
   grid-template-columns: 3fr 1fr 3fr 1fr;
   grid-auto-flow: dense;
-  margin-top: $m-size;
+  margin: $m-size 0;
   grid-row-gap: $xs-size;
   grid-column-gap: $s-size;
   > div{

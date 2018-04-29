@@ -141,36 +141,42 @@ exports[`should render abilities with profile data 1`] = `
     className="grid--abilities__tempScore"
     id="str"
     key="0"
+    onChange={[Function]}
     type="text"
   />
   <input
     className="grid--abilities__tempScore"
     id="dex"
     key="1"
+    onChange={[Function]}
     type="text"
   />
   <input
     className="grid--abilities__tempScore"
     id="con"
     key="2"
+    onChange={[Function]}
     type="text"
   />
   <input
     className="grid--abilities__tempScore"
     id="int"
     key="3"
+    onChange={[Function]}
     type="text"
   />
   <input
     className="grid--abilities__tempScore"
     id="wis"
     key="4"
+    onChange={[Function]}
     type="text"
   />
   <input
     className="grid--abilities__tempScore"
     id="cha"
     key="5"
+    onChange={[Function]}
     type="text"
   />
   <div

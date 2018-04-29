@@ -9,8 +9,16 @@ const profileData = {
   ...profile.fields
 };
 
+let wrapper;
+
+beforeEach(() => {
+  wrapper = shallow(
+    <StatsPage 
+      {...profileData} 
+    />
+  );
+});
 
 test('should render stats page with profile data', () => {
-  const wrapper = shallow(<StatsPage {...profileData} />);
   expect(wrapper).toMatchSnapshot();
-})
+});

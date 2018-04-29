@@ -9,9 +9,7 @@ exports[`should render Header correctly 1`] = `
   >
     <h2
       className="header__title"
-    >
-      D&D 3.5 Character Manager
-    </h2>
+    />
     <button
       className="button button--link"
       onClick={[Function]}

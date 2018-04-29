@@ -9,7 +9,28 @@ const profileData = {
   ...profile.fields
 };
 
+let wrapper, onTempScoreChange;
+
+beforeEach(() => {
+  onTempScoreChange = jest.fn();
+  wrapper = shallow(
+    <Abilities
+      onTempScoreChange={onTempScoreChange}
+      {...profileData}
+    />
+  );
+});
+
 test('should render abilities with profile data', () => {
-  const wrapper = shallow(<Abilities {...profileData} />);
   expect(wrapper).toMatchSnapshot();
-})
+});
+
+test('should handle temp score change', () => {
+  const value = 14;
+  wrapper.find({ id: 'str' }).simulate('change', {
+    target: { value }
+  });
+  expect(onTempScoreChange).toHaveBeenCalledWith({
+    target: { value }
+  });
+});

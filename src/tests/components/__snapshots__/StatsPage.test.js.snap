@@ -1,146 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render stats page with profile data 1`] = `
-<div
-  className="container container--body"
->
+<div>
+  <Connect(Header)
+    pageTitle="Character Stats"
+  />
   <div
-    className="row"
+    className="container container--body"
   >
-    <h3>
-      Level 
-      5
-    </h3>
-    <span>
-      XP: 
-      10000
-    </span>
-  </div>
-  <div
-    className="row"
-  >
-    <span>
-      Hit Die: 
-      D4
-    </span>
-    <span>
-      To next level: ####
-    </span>
-  </div>
-  <Abilities
-    abilities={
-      Object {
-        "cha": Object {
-          "mod": 0,
-          "modScore": "",
-          "name": "CHA",
-          "score": 11,
-          "tempScore": "",
-        },
-        "con": Object {
-          "mod": 3,
-          "modScore": "",
-          "name": "CON",
-          "score": 16,
-          "tempScore": "",
-        },
-        "dex": Object {
-          "mod": 2,
-          "modScore": "",
-          "name": "DEX",
-          "score": 18,
-          "tempScore": "",
-        },
-        "int": Object {
-          "mod": 5,
-          "modScore": "",
-          "name": "INT",
-          "score": 20,
-          "tempScore": "",
-        },
-        "str": Object {
-          "mod": 2,
-          "modScore": "",
-          "name": "STR",
-          "score": 14,
-          "tempScore": "",
-        },
-        "wis": Object {
-          "mod": 2,
-          "modScore": "",
-          "name": "WIS",
-          "score": 14,
-          "tempScore": "",
-        },
+    <div
+      className="row"
+    >
+      <h3>
+        Level 
+        5
+      </h3>
+      <span>
+        XP: 
+        10000
+      </span>
+    </div>
+    <div
+      className="row"
+    >
+      <span>
+        Hit Die: 
+        D4
+      </span>
+      <span>
+        To next level: 
+      </span>
+    </div>
+    <Abilities
+      abilities={
+        Object {
+          "cha": Object {
+            "mod": 0,
+            "modScore": "",
+            "name": "CHA",
+            "score": 11,
+            "tempScore": "",
+          },
+          "con": Object {
+            "mod": 3,
+            "modScore": "",
+            "name": "CON",
+            "score": 16,
+            "tempScore": "",
+          },
+          "dex": Object {
+            "mod": 2,
+            "modScore": "",
+            "name": "DEX",
+            "score": 18,
+            "tempScore": "",
+          },
+          "int": Object {
+            "mod": 5,
+            "modScore": "",
+            "name": "INT",
+            "score": 20,
+            "tempScore": "",
+          },
+          "str": Object {
+            "mod": 2,
+            "modScore": "",
+            "name": "STR",
+            "score": 14,
+            "tempScore": "",
+          },
+          "wis": Object {
+            "mod": 2,
+            "modScore": "",
+            "name": "WIS",
+            "score": 14,
+            "tempScore": "",
+          },
+        }
       }
-    }
-    alignment="Lawful Evil"
-    hd="D4"
-    hp={32}
-    id="recnPKEA6sOWaOt57"
-    languages="Common, Elven, Draconic, Orc, Sylvan"
-    level={5}
-    name="Istvyll Bannianea"
-    onTempScoreChange={[Function]}
-    prohibitedSchools="Illusion, Necromancy"
-    school="Transmutation"
-    skills={
-      Array [
-        "Hide (4)",
-        "Climb (3)",
-        "Listen (5)",
-        "Decipher Script (10)",
-        "Escape Artist (4)",
-        "Sense Motive (5)",
-        "Knowledge (Arcana) (11)",
-        "Use Rope (4)",
-        "Survival (2)",
-        "Swim (2)",
-        "Appraise (8)",
-        "Spellcraft (12)",
-        "Heal (2)",
-        "Balance (4)",
-        "Search (10)",
-        "Ride (4)",
-        "Concentration (9)",
-        "Craft (Trapmaking) (12)",
-        "Jump (2)",
-        "Forgery (5)",
-        "Knowledge (Arch. & Eng.) (10)",
-        "Craft (Sculpting) (13)",
-        "Spot (4)",
-      ]
-    }
-    xp={10000}
-  />
-  <Skills
-    skills={
-      Array [
-        "Hide (4)",
-        "Climb (3)",
-        "Listen (5)",
-        "Decipher Script (10)",
-        "Escape Artist (4)",
-        "Sense Motive (5)",
-        "Knowledge (Arcana) (11)",
-        "Use Rope (4)",
-        "Survival (2)",
-        "Swim (2)",
-        "Appraise (8)",
-        "Spellcraft (12)",
-        "Heal (2)",
-        "Balance (4)",
-        "Search (10)",
-        "Ride (4)",
-        "Concentration (9)",
-        "Craft (Trapmaking) (12)",
-        "Jump (2)",
-        "Forgery (5)",
-        "Knowledge (Arch. & Eng.) (10)",
-        "Craft (Sculpting) (13)",
-        "Spot (4)",
-      ]
-    }
-  />
+      alignment="Lawful Evil"
+      hd="D4"
+      hp={32}
+      id="recnPKEA6sOWaOt57"
+      languages="Common, Elven, Draconic, Orc, Sylvan"
+      level={5}
+      name="Istvyll Bannianea"
+      onTempScoreChange={[Function]}
+      prohibitedSchools="Illusion, Necromancy"
+      school="Transmutation"
+      skills={
+        Array [
+          "Hide (4)",
+          "Climb (3)",
+          "Listen (5)",
+          "Decipher Script (10)",
+          "Escape Artist (4)",
+          "Sense Motive (5)",
+          "Knowledge (Arcana) (11)",
+          "Use Rope (4)",
+          "Survival (2)",
+          "Swim (2)",
+          "Appraise (8)",
+          "Spellcraft (12)",
+          "Heal (2)",
+          "Balance (4)",
+          "Search (10)",
+          "Ride (4)",
+          "Concentration (9)",
+          "Craft (Trapmaking) (12)",
+          "Jump (2)",
+          "Forgery (5)",
+          "Knowledge (Arch. & Eng.) (10)",
+          "Craft (Sculpting) (13)",
+          "Spot (4)",
+        ]
+      }
+      xp={10000}
+    />
+    <Skills
+      skills={
+        Array [
+          "Hide (4)",
+          "Climb (3)",
+          "Listen (5)",
+          "Decipher Script (10)",
+          "Escape Artist (4)",
+          "Sense Motive (5)",
+          "Knowledge (Arcana) (11)",
+          "Use Rope (4)",
+          "Survival (2)",
+          "Swim (2)",
+          "Appraise (8)",
+          "Spellcraft (12)",
+          "Heal (2)",
+          "Balance (4)",
+          "Search (10)",
+          "Ride (4)",
+          "Concentration (9)",
+          "Craft (Trapmaking) (12)",
+          "Jump (2)",
+          "Forgery (5)",
+          "Knowledge (Arch. & Eng.) (10)",
+          "Craft (Sculpting) (13)",
+          "Spot (4)",
+        ]
+      }
+    />
+  </div>
 </div>
 `;
