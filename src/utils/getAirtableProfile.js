@@ -81,7 +81,11 @@ export default async (firebaseUID) => {
           mod: fields["CHA Mod"],
         },
       },
-      skills
+      skills,
+      fort: fields.Fortitude,
+      ref: fields.Reflex,
+      will: fields.Will,
+      ac: fields.AC
     }
   }
 }

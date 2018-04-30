@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render combat page with profile data 1`] = `
+<div>
+  <Connect(Header)
+    pageTitle="Combat"
+  />
+  <div
+    className="container container--body"
+  >
+    <h4>
+      HP
+    </h4>
+    <div>
+      maxHP
+    </div>
+    <div>
+      -
+    </div>
+    <input
+      className=""
+      id="damage"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <div>
+      =
+    </div>
+    <div>
+      remainingHP
+    </div>
+    <div />
+    <div>
+      Max
+    </div>
+    <div />
+    <div>
+      Dmg
+    </div>
+    <div />
+    <div>
+      Rmng
+    </div>
+    <h4>
+      AC
+    </h4>
+    <div>
+      baseAC
+    </div>
+    <div>
+      flatAC
+    </div>
+    <div>
+      touchAC
+    </div>
+    <div />
+    <div>
+      Base
+    </div>
+    <div>
+      Flat
+    </div>
+    <div>
+      Touch
+    </div>
+    <div>
+      Speed 30 ft/round
+    </div>
+    <div>
+      Initiative
+    </div>
+    <div>
+      dexMod
+    </div>
+    <div>
+      +
+    </div>
+    <input
+      className=""
+      id="init"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <div>
+      =
+    </div>
+    <div>
+      totalInit
+    </div>
+    <Saves
+      fortMod=""
+      onInputChange={[Function]}
+      refMod=""
+      willMod=""
+    />
+  </div>
+</div>
+`;

@@ -11,6 +11,8 @@
 
 .container--body {
   height: 84vh;
+  padding-top: $m-size;
+  padding-bottom: $m-size;
   overflow: auto;
 }
 

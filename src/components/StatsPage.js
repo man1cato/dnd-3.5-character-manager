@@ -72,7 +72,7 @@ const mapStateToProps = (state) => ({
   skills: state.profile.skills.sort()
 })
 
-const mapDispatchToProps = (dispatch, props) => ({                              //DISPATCHES THE RETURN VALUE FROM THE CALLED FUNCTION
+const mapDispatchToProps = (dispatch, props) => ({ 
     startSetProfile: (uid) => dispatch(startSetProfile(uid))
 });
 
