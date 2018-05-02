@@ -63,7 +63,7 @@
   margin-bottom: $l-size;
 
   @media(max-width:576px) {
-    > h4{
+    > h4 {
       font-size: $font-size-small;
     }
   }
@@ -80,7 +80,7 @@
 }
 .grid--abilities__tempScore {
   grid-column: 4 / 5;
-  width: 20vw;
+  width: 80px;
 }
 .grid--abilities__tempMod {
   grid-column: 5 / 6;
@@ -90,7 +90,7 @@
 .grid--skills {
   grid-template-columns: 3fr 1fr 3fr 1fr;
   grid-auto-flow: dense;
-  margin: $m-size 0;
+  margin-bottom: $l-size;
   grid-row-gap: $xs-size;
   grid-column-gap: $s-size;
 
@@ -116,20 +116,29 @@
   justify-self: center;
 }
 
-//SAVES
-.grid--saves {
+
+//OTHER
+.grid--6col {
   grid-template-columns: 2fr repeat(5, 1fr);
-  grid-auto-flow: dense; 
+  grid-auto-flow: dense;
+  grid-row-gap: $xs-size; 
   justify-items: center;
   align-items: end;
   text-align: center; 
-  margin-bottom: $m-size;
+  margin-bottom: $l-size;
   > input {
     width: 20vw;
   }
+  @media(max-width:576px) {
+    > h4 {
+      font-size: $font-size-small;
+    }
+  }
 }
-
-//OTHER
+.grid--8col {
+  @extend .grid--6col;
+  grid-template-columns: repeat(8, 1fr);
+}
 .grid__left-col {
   justify-self: start;
 }

@@ -36,49 +36,57 @@ exports[`should render stats page with profile data 1`] = `
         Object {
           "cha": Object {
             "mod": 0,
-            "modScore": "",
             "name": "CHA",
             "score": 11,
+            "tempMod": "",
             "tempScore": "",
           },
           "con": Object {
             "mod": 3,
-            "modScore": "",
             "name": "CON",
             "score": 16,
+            "tempMod": "",
             "tempScore": "",
           },
           "dex": Object {
             "mod": 2,
-            "modScore": "",
             "name": "DEX",
             "score": 18,
+            "tempMod": "",
             "tempScore": "",
           },
           "int": Object {
             "mod": 5,
-            "modScore": "",
             "name": "INT",
             "score": 20,
+            "tempMod": "",
             "tempScore": "",
           },
           "str": Object {
             "mod": 2,
-            "modScore": "",
             "name": "STR",
             "score": 14,
+            "tempMod": "",
             "tempScore": "",
           },
           "wis": Object {
             "mod": 2,
-            "modScore": "",
             "name": "WIS",
             "score": 14,
+            "tempMod": "",
             "tempScore": "",
           },
         }
       }
       alignment="Lawful Evil"
+      attacks={
+        Object {
+          "bab": "+4 / +2 / 0 / 0",
+          "grapple": 4,
+          "melee": 4,
+          "ranged": 6,
+        }
+      }
       hd="D4"
       hp={32}
       id="recnPKEA6sOWaOt57"
@@ -87,6 +95,13 @@ exports[`should render stats page with profile data 1`] = `
       name="Istvyll Bannianea"
       onTempScoreChange={[Function]}
       prohibitedSchools="Illusion, Necromancy"
+      saves={
+        Object {
+          "fortitude": 4,
+          "reflex": 5,
+          "will": 6,
+        }
+      }
       school="Transmutation"
       skills={
         Array [

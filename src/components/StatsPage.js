@@ -1,18 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import update from 'react-addons-update';
+import {startEditProfile} from '../actions/profile';
 
 import Header from './Header';
 import Abilities from './Abilities';
 import Skills from './Skills';
+
 
 export class StatsPage extends React.Component {
   constructor(props) {
     super(props);
     let abilities = this.props.abilities;
     Object.keys(abilities).forEach((ability) => {
-      abilities[ability].tempScore = "";
-      abilities[ability].modScore = "";
+      abilities[ability].tempScore = abilities[ability].tempScore || "";
+      abilities[ability].tempMod = abilities[ability].tempMod || "";
     });
     this.state = {
       abilities
@@ -34,7 +36,9 @@ export class StatsPage extends React.Component {
     });
   }
 
-  //ADD COMPONENT WILL UNMOUNT TO TRIGGER UPDATES
+  componentWillUnmount() {
+    this.props.startEditProfile(this.props.id, {...this.state});
+  }
 
   render () {
     return (
@@ -73,7 +77,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch, props) => ({ 
-    startSetProfile: (uid) => dispatch(startSetProfile(uid))
+  startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(StatsPage);

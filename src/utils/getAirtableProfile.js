@@ -82,10 +82,23 @@ export default async (firebaseUID) => {
         },
       },
       skills,
-      fort: fields.Fortitude,
-      ref: fields.Reflex,
-      will: fields.Will,
-      ac: fields.AC
+      saves: {
+        fortitude: fields.Fortitude,
+        reflex: fields.Reflex,
+        will: fields.Will,
+      },
+      attacks: {
+        bab: fields.BAB,
+        melee: fields.Melee,
+        ranged: fields.Ranged,
+        grapple: fields.Grapple,
+      },
+      ac: {
+        base: fields["AC - Base"],
+        flat: fields["AC - Flat"],
+        touch: fields["AC - Touch"]
+      },
+      speed: fields.Speed
     }
   }
 }

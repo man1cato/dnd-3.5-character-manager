@@ -66,6 +66,17 @@ export default {
       'Knowledge (Arch. & Eng.) (10)',
       'Craft (Sculpting) (13)',
       'Spot (4)'
-    ]
+    ],
+    saves: {
+      fortitude: 4,
+      reflex: 5,
+      will: 6
+    },
+    attacks: {
+      bab: "+4 / +2 / 0 / 0",
+      melee: 4,
+      ranged: 6,
+      grapple: 4
+    }
   }
 }

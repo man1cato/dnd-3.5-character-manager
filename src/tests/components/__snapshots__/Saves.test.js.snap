@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render saves with profile data 1`] = `
+<div
+  className="grid grid--6col"
+>
+  <h4
+    className="grid__left-col"
+  >
+    Saves
+  </h4>
+  <h4>
+    Base
+  </h4>
+  <div />
+  <h4>
+    Temp Mod
+  </h4>
+  <div />
+  <h4>
+    Total
+  </h4>
+  <div
+    className="grid__left-col"
+  >
+    Fortitude
+  </div>
+  <div />
+  <div>
+    +
+  </div>
+  <input
+    name="fortitude"
+    type="text"
+    value={2}
+  />
+  <div>
+    =
+  </div>
+  <div />
+  <div
+    className="grid__left-col"
+  >
+    Reflex
+  </div>
+  <div>
+    5
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    name="reflex"
+    type="text"
+    value={0}
+  />
+  <div>
+    =
+  </div>
+  <div />
+  <div
+    className="grid__left-col"
+  >
+    Will
+  </div>
+  <div>
+    6
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    name="will"
+    type="text"
+    value={1}
+  />
+  <div>
+    =
+  </div>
+  <div />
+</div>
+`;

@@ -1,51 +1,48 @@
 import React from 'react';
 
 const Saves = (props) => (
-    <div className="grid grid--saves">
-        <div className="grid__left-col">Saves</div>
-        <div>Base</div>
+    <div className="grid grid--6col">
+        <h4 className="grid__left-col">Saves</h4>
+        <h4>Base</h4>
         <div></div>
-        <div>Temp Mod</div>
+        <h4>Temp Mod</h4>
         <div></div>
-        <div>Total</div>
+        <h4>Total</h4>
         <div className="grid__left-col">Fortitude</div>
-        <div>{props.fort}</div>
+        <div>{props.fortitude.base}</div>
         <div>+</div>
         <input
-            className=""
             type="text"
-            id="fort"
-            value={props.fortMod}
+            name="fortitude"
+            value={props.fortitude.mod}
             onChange={props.onInputChange}
         />
         <div>=</div>
-        <div>totalFort</div>
+        <div>{props.fortitude.total}</div>
 
         <div className="grid__left-col">Reflex</div>
-        <div>{props.ref}</div>
+        <div>{props.reflex.base}</div>
         <div>+</div>
         <input
-            className=""
             type="text"
-            id="ref"
-            value={props.refMod}
+            name="reflex"
+            value={props.reflex.mod}
             onChange={props.onInputChange}
         />
         <div>=</div>
-        <div>totalRef</div>
+        <div>{props.reflex.total}</div>
 
         <div className="grid__left-col">Will</div>
-        <div>{props.will}</div>
+        <div>{props.will.base}</div>
         <div>+</div>
         <input
-            className=""
             type="text"
-            id="will"
-            value={props.willMod}
+            name="will"
+            value={props.will.mod}
             onChange={props.onInputChange}
         />
         <div>=</div>
-        <div>totalWill</div>
+        <div>{props.will.total}</div>
     </div>
 )
 

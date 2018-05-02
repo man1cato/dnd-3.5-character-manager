@@ -2,27 +2,21 @@
   display: flex;
 }
 
-.flexbox--skills-header {
+.flexbox--ac {
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  margin-bottom: $m-size;
 }
 
-.flexbox--skills {
-  flex-flow: column wrap;
-  align-content: space-between;
-  width: 100%;
-}
-
-.flexbox--skills-item {
-  justify-content: space-between;
-  width: 45%;
-}
-
-.flexbox--skills-item__name {
-  width: 75%;
-}
-
-.flexbox--skills-item__ranks {
-  text-align: center;
-  width: 25%;
+.flexbox--ac__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media(max-width:576px) {
+    > h4 {
+      font-size: $font-size-small;
+    }
+  }
 }

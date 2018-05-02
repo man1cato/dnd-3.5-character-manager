@@ -16,32 +16,32 @@ const abilities = fields.abilities;
 // });
 
 test('should setup set profile action object with provided values', () => {
-    const action = setProfile(charId, fields);
-    expect(action).toEqual({
-        type: 'SET_PROFILE',
-        id: charId,
-        fields
-    });
+  const action = setProfile(charId, fields);
+  expect(action).toEqual({
+    type: 'SET_PROFILE',
+    id: charId,
+    fields
+  });
 });
 
 test('should setup edit profile action object with provided values', () => {
-    const updates = {
-      hp: 45,
-      xp: 18000,
-      abilities: {
-        str: {
-          tempScore: 15,
-          tempMod: 2
-        },
-        int: {
-          tempScore: 22,
-          tempMod: 5
-        }
+  const updates = {
+    hp: 45,
+    xp: 18000,
+    abilities: {
+      str: {
+        tempScore: 15,
+        tempMod: 2
+      },
+      int: {
+        tempScore: 22,
+        tempMod: 5
       }
-    };
-    const action = editProfile(updates);
-    expect(action).toEqual({
-        type: 'EDIT_PROFILE',
-        updates
-    });
+    }
+  };
+  const action = editProfile(updates);
+  expect(action).toEqual({
+    type: 'EDIT_PROFILE',
+    updates
+  });
 });
