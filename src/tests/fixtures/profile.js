@@ -7,7 +7,11 @@ export default {
     prohibitedSchools:'Illusion, Necromancy',
     languages:'Common, Elven, Draconic, Orc, Sylvan',
     level:5,
-    hp:32,
+    hp: {
+      base: 32,
+      mod: 6,
+      damage: 10
+    },
     xp:10000,
     hd:'D4',
     abilities:{
@@ -68,15 +72,43 @@ export default {
       'Spot (4)'
     ],
     saves: {
-      fortitude: 4,
-      reflex: 5,
-      will: 6
+      fortitude: {
+        name: "Fortitude",
+        base: 4
+      },
+      reflex: {
+        name: "Reflex",
+        base: 5
+      },
+      will: {
+        name: "Will",
+        base: 6
+      }
     },
     attacks: {
-      bab: "+4 / +2 / 0 / 0",
-      melee: 4,
-      ranged: 6,
-      grapple: 4
+      melee: {
+        name: "Melee",
+        base: 4
+      },
+      ranged: {
+        name: "Ranged",
+        base: 6
+      },
+      grapple: {
+        name: "Grapple",
+        base: 4
+      }
+    },
+    ac: {
+      base: 14,
+      flat: 10,
+      touch: 14
+    },
+    speed: 30,
+    bab: [4, 3, 2, 1],
+    initiative: {
+      base: 2,
+      mod: 1
     }
   }
 }

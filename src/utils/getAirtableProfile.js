@@ -45,7 +45,9 @@ export default async (firebaseUID) => {
       level,
       xp,
       toNextLevel: nextLevelXp-xp,
-      hp: fields.HP,
+      hp: { 
+        base: fields.HP 
+      },
       hd: fields["Hit Die"][0],
       feats: fields["Feats - Text"],
       specialAbilities: fields["Special Abilities - Text"],
@@ -83,22 +85,48 @@ export default async (firebaseUID) => {
       },
       skills,
       saves: {
-        fortitude: fields.Fortitude,
-        reflex: fields.Reflex,
-        will: fields.Will,
+        fortitude: {
+          name: "Fortitude",
+          base: fields.Fortitude
+        },
+        reflex: {
+          name: "Reflex",
+          base: fields.Reflex
+        },
+        will: {
+          name: "Will",
+          base: fields.Will
+        }
       },
-      attacks: {
-        bab: fields.BAB,
-        melee: fields.Melee,
-        ranged: fields.Ranged,
-        grapple: fields.Grapple,
+      bab: [
+        fields["BAB 1"][0],
+        fields["BAB 2"][0],
+        fields["BAB 3"][0],
+        fields["BAB 4"][0]
+      ],
+      attacks: {        
+        melee: {
+          name:"Melee",
+          base: fields.Melee
+        },
+        ranged: {
+          name: "Ranged",
+          base: fields.Ranged
+        },
+        grapple: {
+          name: "Grapple",
+          base: fields.Grapple
+        }
       },
       ac: {
         base: fields["AC - Base"],
         flat: fields["AC - Flat"],
         touch: fields["AC - Touch"]
       },
-      speed: fields.Speed
+      speed: fields.Speed[0],
+      initiative: {
+        base: fields["STR Mod"]
+      }
     }
   }
 }

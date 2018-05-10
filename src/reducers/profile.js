@@ -7,7 +7,8 @@ export default (state = {}, action) => {
             };
         case 'EDIT_PROFILE':
             return {
-              ...action.updates
+                ...state,
+                ...action.updates
             };
         default:
             return state;

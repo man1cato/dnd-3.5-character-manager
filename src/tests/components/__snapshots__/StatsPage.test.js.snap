@@ -78,59 +78,7 @@ exports[`should render stats page with profile data 1`] = `
           },
         }
       }
-      alignment="Lawful Evil"
-      attacks={
-        Object {
-          "bab": "+4 / +2 / 0 / 0",
-          "grapple": 4,
-          "melee": 4,
-          "ranged": 6,
-        }
-      }
-      hd="D4"
-      hp={32}
-      id="recnPKEA6sOWaOt57"
-      languages="Common, Elven, Draconic, Orc, Sylvan"
-      level={5}
-      name="Istvyll Bannianea"
       onTempScoreChange={[Function]}
-      prohibitedSchools="Illusion, Necromancy"
-      saves={
-        Object {
-          "fortitude": 4,
-          "reflex": 5,
-          "will": 6,
-        }
-      }
-      school="Transmutation"
-      skills={
-        Array [
-          "Hide (4)",
-          "Climb (3)",
-          "Listen (5)",
-          "Decipher Script (10)",
-          "Escape Artist (4)",
-          "Sense Motive (5)",
-          "Knowledge (Arcana) (11)",
-          "Use Rope (4)",
-          "Survival (2)",
-          "Swim (2)",
-          "Appraise (8)",
-          "Spellcraft (12)",
-          "Heal (2)",
-          "Balance (4)",
-          "Search (10)",
-          "Ride (4)",
-          "Concentration (9)",
-          "Craft (Trapmaking) (12)",
-          "Jump (2)",
-          "Forgery (5)",
-          "Knowledge (Arch. & Eng.) (10)",
-          "Craft (Sculpting) (13)",
-          "Spot (4)",
-        ]
-      }
-      xp={10000}
     />
     <Skills
       skills={

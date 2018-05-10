@@ -40,14 +40,11 @@ export const editProfile = (updates) => ({
 export const startEditProfile = (id, updates) => {
     return (dispatch, getState) => {
         const uid = getState().auth.uid;
-        const profile = getState().profile;
-        const updatedProfile = {...profile, ...updates};
         return database.ref(`users/${uid}/profiles/${id}`).update(updates).then(() => {
-            dispatch(editProfile(updatedProfile));
+            dispatch(editProfile(updates));
         });
     };
 };
-
 
 
 //LEVEL UP CHARACTER

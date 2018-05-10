@@ -4,33 +4,36 @@ exports[`should render saves with profile data 1`] = `
 <div
   className="grid grid--6col"
 >
-  <h4
-    className="grid__left-col"
+  <h5
+    className="grid__col1"
   >
     Saves
-  </h4>
-  <h4>
+  </h5>
+  <h5>
     Base
-  </h4>
+  </h5>
   <div />
-  <h4>
-    Temp Mod
-  </h4>
+  <h5>
+    Mod
+  </h5>
   <div />
-  <h4>
+  <h5>
     Total
-  </h4>
+  </h5>
   <div
-    className="grid__left-col"
+    className="grid__col1"
   >
     Fortitude
   </div>
-  <div />
+  <div>
+    4
+  </div>
   <div>
     +
   </div>
   <input
-    name="fortitude"
+    id="fortitude"
+    name="saves"
     type="text"
     value={2}
   />
@@ -39,7 +42,7 @@ exports[`should render saves with profile data 1`] = `
   </div>
   <div />
   <div
-    className="grid__left-col"
+    className="grid__col1"
   >
     Reflex
   </div>
@@ -50,7 +53,8 @@ exports[`should render saves with profile data 1`] = `
     +
   </div>
   <input
-    name="reflex"
+    id="reflex"
+    name="saves"
     type="text"
     value={0}
   />
@@ -59,7 +63,7 @@ exports[`should render saves with profile data 1`] = `
   </div>
   <div />
   <div
-    className="grid__left-col"
+    className="grid__col1"
   >
     Will
   </div>
@@ -70,7 +74,8 @@ exports[`should render saves with profile data 1`] = `
     +
   </div>
   <input
-    name="will"
+    id="will"
+    name="saves"
     type="text"
     value={1}
   />

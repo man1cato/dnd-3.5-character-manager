@@ -5,202 +5,202 @@ exports[`should render abilities with profile data 1`] = `
   className="grid grid--abilities"
 >
   <h4
-    className="grid--abilities__ability"
+    className="grid__col1"
   >
     Ability
   </h4>
   <h4
-    className="grid--abilities__score"
+    className="grid__col2"
   >
     Score
   </h4>
   <h4
-    className="grid--abilities__mod"
+    className="grid__col3"
   >
     Mod
   </h4>
   <h4
-    className="grid--abilities__tempScore"
+    className="grid__col4"
   >
     Temp Score
   </h4>
   <h4
-    className="grid--abilities__tempMod"
+    className="grid__col5"
   >
     Temp Mod
   </h4>
   <div
-    className="grid--abilities__ability"
+    className="grid__col1"
     key="0"
   >
     STR
   </div>
   <div
-    className="grid--abilities__ability"
+    className="grid__col1"
     key="1"
   >
     DEX
   </div>
   <div
-    className="grid--abilities__ability"
+    className="grid__col1"
     key="2"
   >
     CON
   </div>
   <div
-    className="grid--abilities__ability"
+    className="grid__col1"
     key="3"
   >
     INT
   </div>
   <div
-    className="grid--abilities__ability"
+    className="grid__col1"
     key="4"
   >
     WIS
   </div>
   <div
-    className="grid--abilities__ability"
+    className="grid__col1"
     key="5"
   >
     CHA
   </div>
   <div
-    className="grid--abilities__score"
+    className="grid__col2"
     key="0"
   >
     14
   </div>
   <div
-    className="grid--abilities__score"
+    className="grid__col2"
     key="1"
   >
     18
   </div>
   <div
-    className="grid--abilities__score"
+    className="grid__col2"
     key="2"
   >
     16
   </div>
   <div
-    className="grid--abilities__score"
+    className="grid__col2"
     key="3"
   >
     20
   </div>
   <div
-    className="grid--abilities__score"
+    className="grid__col2"
     key="4"
   >
     14
   </div>
   <div
-    className="grid--abilities__score"
+    className="grid__col2"
     key="5"
   >
     11
   </div>
   <div
-    className="grid--abilities__mod"
+    className="grid__col3"
     key="0"
   >
     2
   </div>
   <div
-    className="grid--abilities__mod"
+    className="grid__col3"
     key="1"
   >
     2
   </div>
   <div
-    className="grid--abilities__mod"
+    className="grid__col3"
     key="2"
   >
     3
   </div>
   <div
-    className="grid--abilities__mod"
+    className="grid__col3"
     key="3"
   >
     5
   </div>
   <div
-    className="grid--abilities__mod"
+    className="grid__col3"
     key="4"
   >
     2
   </div>
   <div
-    className="grid--abilities__mod"
+    className="grid__col3"
     key="5"
   >
     0
   </div>
   <input
-    className="grid--abilities__tempScore"
+    className="grid__col4"
     id="str"
     key="0"
     onChange={[Function]}
     type="text"
   />
   <input
-    className="grid--abilities__tempScore"
+    className="grid__col4"
     id="dex"
     key="1"
     onChange={[Function]}
     type="text"
   />
   <input
-    className="grid--abilities__tempScore"
+    className="grid__col4"
     id="con"
     key="2"
     onChange={[Function]}
     type="text"
   />
   <input
-    className="grid--abilities__tempScore"
+    className="grid__col4"
     id="int"
     key="3"
     onChange={[Function]}
     type="text"
   />
   <input
-    className="grid--abilities__tempScore"
+    className="grid__col4"
     id="wis"
     key="4"
     onChange={[Function]}
     type="text"
   />
   <input
-    className="grid--abilities__tempScore"
+    className="grid__col4"
     id="cha"
     key="5"
     onChange={[Function]}
     type="text"
   />
   <div
-    className="grid--abilities__tempMod"
+    className="grid__col5"
     key="0"
   />
   <div
-    className="grid--abilities__tempMod"
+    className="grid__col5"
     key="1"
   />
   <div
-    className="grid--abilities__tempMod"
+    className="grid__col5"
     key="2"
   />
   <div
-    className="grid--abilities__tempMod"
+    className="grid__col5"
     key="3"
   />
   <div
-    className="grid--abilities__tempMod"
+    className="grid__col5"
     key="4"
   />
   <div
-    className="grid--abilities__tempMod"
+    className="grid__col5"
     key="5"
   />
 </div>

@@ -1,3 +1,228 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render combat page with profile data 1`] = `undefined`;
+exports[`should render combat page with profile data 1`] = `
+<div>
+  <Connect(Header)
+    pageTitle="Combat"
+  />
+  <div
+    className="container container--body"
+  >
+    <div
+      className="row"
+    >
+      Speed:  
+      30
+       ft/round
+    </div>
+    <div
+      className="grid grid--6col"
+    >
+      <div
+        className="grid__col1"
+      >
+        Initiative
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          2
+        </div>
+      </div>
+      <div>
+        +
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Mod
+        </h5>
+        <input
+          name="initiative"
+          onChange={[Function]}
+          type="text"
+          value={1}
+        />
+      </div>
+      <div>
+        =
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Total
+        </h5>
+        <div>
+          2
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid--8col"
+    >
+      <div
+        className="grid__col1"
+      >
+        HP
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          32
+        </div>
+      </div>
+      <div>
+        +
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Mod
+        </h5>
+        <input
+          name="hp"
+          onChange={[Function]}
+          type="text"
+          value={6}
+        />
+      </div>
+      <div>
+        -
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Dmg
+        </h5>
+        <input
+          id="hpDamage"
+          name="hp"
+          onChange={[Function]}
+          type="text"
+          value={10}
+        />
+      </div>
+      <div>
+        =
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Curr
+        </h5>
+        <div>
+          32
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid--5col"
+    >
+      <div
+        className="grid__col1"
+      >
+        Armor Class
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          14
+        </div>
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Flat
+        </h5>
+        <div>
+          10
+        </div>
+      </div>
+      <div
+        className="row__item"
+      >
+        <h5>
+          Touch
+        </h5>
+        <div>
+          14
+        </div>
+      </div>
+    </div>
+    <Saves
+      onInputChange={[Function]}
+      saves={
+        Object {
+          "fortitude": Object {
+            "base": 4,
+            "mod": "",
+            "name": "Fortitude",
+            "total": 4,
+          },
+          "reflex": Object {
+            "base": 5,
+            "mod": "",
+            "name": "Reflex",
+            "total": 5,
+          },
+          "will": Object {
+            "base": 6,
+            "mod": "",
+            "name": "Will",
+            "total": 6,
+          },
+        }
+      }
+    />
+    <div
+      className="row"
+    >
+      Base Attack Bonus: 
+      4 / 3 / 2 / 1
+    </div>
+    <Attacks
+      attacks={
+        Object {
+          "grapple": Object {
+            "base": 4,
+            "mod": "",
+            "name": "Grapple",
+            "total": 4,
+          },
+          "melee": Object {
+            "base": 4,
+            "mod": "",
+            "name": "Melee",
+            "total": 4,
+          },
+          "ranged": Object {
+            "base": 6,
+            "mod": "",
+            "name": "Ranged",
+            "total": 6,
+          },
+        }
+      }
+      onInputChange={[Function]}
+    />
+  </div>
+</div>
+`;

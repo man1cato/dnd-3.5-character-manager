@@ -10,8 +10,10 @@ const props = {
     speed: profile.fields.speed,
     ac: profile.fields.ac,
     initiative: profile.fields.abilities.dex.mod,
-    ...profile.fields.saves,
-    ...profile.fields.attacks
+    saves: profile.fields.saves,
+    attacks: profile.fields.attacks,
+    bab: profile.fields.bab,
+    initiative: profile.fields.initiative
 };
 
 let wrapper;

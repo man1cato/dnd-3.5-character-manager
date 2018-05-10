@@ -14,15 +14,7 @@
     margin-top: $xs-size
   }
   > input {
-    width: 20vw;
+    width: 15vw;
+    text-align: center;
   }
-  @media(max-width:576px) {
-    > h4 {
-      font-size: $font-size-small;
-    }
-  }
-}
-
-input[name="hp"] {
-  width: 15vw;
 }

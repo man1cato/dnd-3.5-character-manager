@@ -23,21 +23,21 @@ export class StatsPage extends React.Component {
 
   onTempScoreChange = (e) => {
     const ability = e.target.id;
-    const tempScore = Number(e.target.value) === 0 ? "" : Number(e.target.value);
+    const value = Number(e.target.value);
+    const tempScore = value === 0 || isNaN(value) ? "" : value;
     const tempMod = tempScore === "" ? "" : Math.floor(tempScore/2 - 5);
-    this.setState((prevState) => {
-      let newAbilities = update(prevState.abilities, {
+    this.setState((prevState) => ({
+      abilities: update(prevState.abilities, {
         [ability]: {
           tempScore: {$set: tempScore},
           tempMod: {$set: tempMod}
         }
-      });
-      return {abilities: newAbilities};
-    });
+      })
+    }))
   }
 
   componentWillUnmount() {
-    this.props.startEditProfile(this.props.id, {...this.state});
+    this.props.startEditProfile(this.props.id, this.state);
   }
 
   render () {
@@ -57,7 +57,6 @@ export class StatsPage extends React.Component {
           </div>
 
           <Abilities
-            {...this.props}
             abilities={this.state.abilities}
             onTempScoreChange={this.onTempScoreChange}
           />

@@ -1,48 +1,51 @@
 import React from 'react';
 
-const Saves = (props) => (
+const Saves = ({saves, onInputChange }) => (
     <div className="grid grid--6col">
-        <h4 className="grid__left-col">Saves</h4>
-        <h4>Base</h4>
+        <h5 className="grid__col1">Saves</h5>
+        <h5>Base</h5>
         <div></div>
-        <h4>Temp Mod</h4>
+        <h5>Mod</h5>
         <div></div>
-        <h4>Total</h4>
-        <div className="grid__left-col">Fortitude</div>
-        <div>{props.fortitude.base}</div>
+        <h5>Total</h5>
+        <div className="grid__col1">Fortitude</div>
+        <div>{saves.fortitude.base}</div>
         <div>+</div>
         <input
             type="text"
-            name="fortitude"
-            value={props.fortitude.mod}
-            onChange={props.onInputChange}
+            name="saves"
+            id="fortitude"
+            value={saves.fortitude.mod}
+            onChange={onInputChange}
         />
         <div>=</div>
-        <div>{props.fortitude.total}</div>
+        <div>{saves.fortitude.total}</div>
 
-        <div className="grid__left-col">Reflex</div>
-        <div>{props.reflex.base}</div>
+        <div className="grid__col1">Reflex</div>
+        <div>{saves.reflex.base}</div>
         <div>+</div>
         <input
             type="text"
-            name="reflex"
-            value={props.reflex.mod}
-            onChange={props.onInputChange}
+            name="saves"
+            id="reflex"
+            value={saves.reflex.mod}
+            onChange={onInputChange}
         />
         <div>=</div>
-        <div>{props.reflex.total}</div>
+        <div>{saves.reflex.total}</div>
 
-        <div className="grid__left-col">Will</div>
-        <div>{props.will.base}</div>
+        <div className="grid__col1">Will</div>
+        <div>{saves.will.base}</div>
         <div>+</div>
         <input
             type="text"
-            name="will"
-            value={props.will.mod}
-            onChange={props.onInputChange}
+            name="saves"
+            id="will"
+            value={saves.will.mod}
+            onChange={onInputChange}
         />
         <div>=</div>
-        <div>{props.will.total}</div>
+        <div>{saves.will.total}</div>
     </div>
 )
 

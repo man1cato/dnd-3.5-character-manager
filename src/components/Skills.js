@@ -7,22 +7,22 @@ const Skills = (props) => {
 
   return (
     <div className="grid grid--skills">
-      <h4>Skill</h4>
-      <h4 className="grid--skills__ranks">Ranks</h4>
-      <h4>Skill</h4>
-      <h4 className="grid--skills__ranks">Ranks</h4>
+      <h4 className="grid--skills__name">Skill</h4>
+      <h4>Ranks</h4>
+      <h4 className="grid--skills__name">Skill</h4>
+      <h4>Ranks</h4>
         
       {col1.map((skill, i) => (        
-        <div className="grid--skills__name--col1" key={i}>{skill.name}</div>
+        <div className="grid__col1 grid--skills__name" key={i}>{skill.name}</div>
       ))}
       {col1.map((skill, i) => (
-        <div className="grid--skills__ranks--col1" key={i}>{skill.ranks}</div>
+        <div className="grid__col2" key={i}>{skill.ranks}</div>
       ))}
       {col2.map((skill, i) => (
-        <div className="grid--skills__name--col2" key={i}>{skill.name}</div>
+        <div className="grid__col3 grid--skills__name" key={i}>{skill.name}</div>
       ))}
       {col2.map((skill, i) => (
-        <div className="grid--skills__ranks--col2" key={i}>{skill.ranks}</div>
+        <div className="grid__col4" key={i}>{skill.ranks}</div>
       ))}
     </div>
   )
