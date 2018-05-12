@@ -5,6 +5,7 @@ import update from 'react-addons-update';
 import Header from './Header';
 import Saves from './Saves';
 import Attacks from './Attacks';
+import Weapons from './Weapons';
 import { startEditProfile } from '../actions/profile';
 
 export class CombatPage extends React.Component {
@@ -25,11 +26,13 @@ export class CombatPage extends React.Component {
 
     this.state = {
       hp: {
+        base: this.props.hp.base,
         mod: this.props.hp.mod || "",
         damage: this.props.hp.damage || "",
         total: this.props.hp.total || this.props.hp.base,
       },
       initiative: {
+        base: this.props.initiative.base, 
         mod: this.props.initiative.mod || "",
         total: this.props.initiative.total || this.props.initiative.base
       },
@@ -174,6 +177,8 @@ export class CombatPage extends React.Component {
             attacks={this.state.attacks}
             onInputChange={this.onInputChange}
           />
+
+          <Weapons />
 
         </div>
       </div>  

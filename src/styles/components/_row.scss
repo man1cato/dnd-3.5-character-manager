@@ -5,6 +5,10 @@
   margin-bottom: $m-size;
 }
 
+.row--center {
+  justify-content: center;
+}
+
 .row__item {
   display: flex;
   flex-direction: column;
