@@ -25,6 +25,42 @@ export default async (firebaseUID) => {
   const xp = fields.XP;
   const nextLevelXp = level*(level+1)*500;
 
+  const equipmentFilter = `{Owner ID}="${characterId}"`;
+  const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${equipmentFilter}`);
+  const equipment = equipmentResponse.data.records.map((item) => {
+    const qty = item.fields.Qty;
+    const value = item.fields["Unit Value"] ? item.fields["Unit Value"][0] : 0;
+    const weight = item.fields["Unit Weight (lbs)"] ? item.fields["Unit Weight (lbs)"][0] : 0;
+    return {
+      id: item.fields["Item ID"][0],
+      name: item.fields.Name,
+      qty,
+      value,
+      weight,
+      category: item.fields.Category[0],
+      totalValue: qty*value,
+      totalWeight: qty*weight
+    }
+  });
+
+  const weaponIds = equipment.filter((item) => item.category === "Weapon").map((weapon) => weapon.id);
+  const weaponsResponse = await axios.get(`${baseUrl}/Items?api_key=${apiKey}&filterByFormula={Category}="Weapon"`);  
+  const weapons = weaponIds.map((id) => {
+    const weapon = weaponsResponse.data.records.find((item) => item.id === id);
+    console.log(weapon);
+
+    return {
+      id: weapon.id,
+      name: weapon.fields.Name,
+      range: weapon.fields.Range,
+      damageMed: weapon.fields["Damage (M)"],
+      critical: weapon.fields.Critical,
+      weaponType: weapon.fields["Weapon Type"],
+      attackType: weapon.fields["Attack Type"],
+      damageType: weapon.fields["Damage Type"].join(" / ")
+    }
+  });
+
   return {
     id: characterId,
     fields:{
@@ -126,7 +162,9 @@ export default async (firebaseUID) => {
       speed: fields.Speed[0],
       initiative: {
         base: fields["STR Mod"]
-      }
+      },
+      equipment,
+      weapons
     }
   }
 }
