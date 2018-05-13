@@ -1,25 +1,31 @@
 import React from 'react';
 
-const Weapons = () => (
+const Weapons = ({weapons, meleeBonus, rangedBonus, grappleBonus}) => (
     <div>
         <div className="row row--center">
             <h3>Weapons</h3>
         </div>
-        <div className="grid grid--weapons">
-            <h4 className=" grid--weapons__name">Longsword</h4>
-            <div className="grid--weapons__features">Medium / Melee / Slashing</div>
 
-            <h5>Rng</h5>
-            <h5>Atk</h5>
-            <h5>Dmg</h5>
-            <h5>Crit</h5>
+        {weapons.map((weapon) => (
+            <div className="grid grid--weapons" key={weapon.id}>
+                <h4 className=" grid--weapons__name">{weapon.name}</h4>
+                <div className="grid--weapons__features">{weapon.weaponType}, {weapon.attackType}, {weapon.damageType}</div>
 
-            <div>-</div>
-            <div>+4</div>
-            <div>1d8+2</div>
-            <div>19-20/x2</div>
+                <h5>Rng</h5>
+                <h5>Atk</h5>
+                <h5>Dmg</h5>
+                <h5>Crit</h5>
 
-        </div>
+                <div>{weapon.range}</div>
+                <div>{
+                    (weapon.attackType === "Ranged" && rangedBonus)
+                    || (weapon.attackType === "Unarmed" && grappleBonus)
+                    || meleeBonus
+                }</div>
+                <div>{weapon.damageMed}</div>
+                <div>{weapon.critical}</div>
+            </div>
+        ))}
     </div>
 )
 

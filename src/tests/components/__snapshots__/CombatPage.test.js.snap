@@ -223,7 +223,11 @@ exports[`should render combat page with profile data 1`] = `
       }
       onInputChange={[Function]}
     />
-    <Weapons />
+    <Weapons
+      grappleBonus={4}
+      meleeBonus={4}
+      rangedBonus={6}
+    />
   </div>
 </div>
 `;

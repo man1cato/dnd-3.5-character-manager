@@ -109,6 +109,28 @@ export default {
     initiative: {
       base: 2,
       mod: 1
-    }
+    },
+    weapons: [
+      { 
+        id: "recAaHr4qEcbytOpu",
+        name: "Repeating Light Crossbow",
+        range: "80 ft.",
+        damageMed: "1d8",
+        critical: "19–20/×2",
+        attackType: "Ranged",
+        damageType: "Piercing",
+        weaponType: "Exotic"
+      },
+      {
+        id: "recWrjoatwOuaSayt",
+        name: "Longsword",
+        range: "—",
+        damageMed: "1d8",
+        critical: "19–20/×2",
+        attackType: "One-Handed Melee",
+        damageType: "Slashing",
+        weaponType: "Martial"
+      }
+    ]
   }
 }

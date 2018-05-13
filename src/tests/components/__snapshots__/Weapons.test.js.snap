@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render skills with profile data 1`] = `
+exports[`should render weapons with profile data 1`] = `
 <div>
   <div
     className="row row--center"
@@ -11,16 +11,21 @@ exports[`should render skills with profile data 1`] = `
   </div>
   <div
     className="grid grid--weapons"
+    key="recAaHr4qEcbytOpu"
   >
     <h4
       className=" grid--weapons__name"
     >
-      Longsword
+      Repeating Light Crossbow
     </h4>
     <div
       className="grid--weapons__features"
     >
-      Medium / Melee / Slashing
+      Exotic
+      , 
+      Ranged
+      , 
+      Piercing
     </div>
     <h5>
       Rng
@@ -35,16 +40,55 @@ exports[`should render skills with profile data 1`] = `
       Crit
     </h5>
     <div>
-      -
+      80 ft.
+    </div>
+    <div />
+    <div>
+      1d8
     </div>
     <div>
-      +4
+      19–20/×2
+    </div>
+  </div>
+  <div
+    className="grid grid--weapons"
+    key="recWrjoatwOuaSayt"
+  >
+    <h4
+      className=" grid--weapons__name"
+    >
+      Longsword
+    </h4>
+    <div
+      className="grid--weapons__features"
+    >
+      Martial
+      , 
+      One-Handed Melee
+      , 
+      Slashing
+    </div>
+    <h5>
+      Rng
+    </h5>
+    <h5>
+      Atk
+    </h5>
+    <h5>
+      Dmg
+    </h5>
+    <h5>
+      Crit
+    </h5>
+    <div>
+      —
+    </div>
+    <div />
+    <div>
+      1d8
     </div>
     <div>
-      1d8+2
-    </div>
-    <div>
-      19-20/x2
+      19–20/×2
     </div>
   </div>
 </div>
