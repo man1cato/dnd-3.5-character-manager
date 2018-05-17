@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: $m-size;
+  margin-bottom: $s-size;
 }
 
 .row--center {
@@ -18,7 +18,7 @@
     margin-top: $xs-size
   }
   > input {
-    width: 15vw;
+    max-width: 15vw;
     text-align: center;
   }
 }

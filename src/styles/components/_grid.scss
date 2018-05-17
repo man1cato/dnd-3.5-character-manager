@@ -9,7 +9,11 @@
   justify-items: center;
   align-items: end;
   text-align: center; 
-  margin-bottom: $m-size;
+  margin-bottom: $l-size;
+  > input {
+    max-width: 15vw;
+    text-align: center;
+  }
 }
 .grid__col1 {
   grid-column: 1;
@@ -28,22 +32,24 @@
   grid-column: 5;
 }
 
-//LAYOUTS
+//TEMPLATES
+.grid--3col {
+  @extend .grid--columns;
+  grid-template-columns: repeat(3, 1fr);
+}
 .grid--5col {
   @extend .grid--columns;
-  grid-template-columns: 2fr repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
+
 .grid--6col {
   @extend .grid--columns;
   grid-template-columns: 2fr repeat(5, 1fr);
-  > input {
-    width: 15vw;
-    text-align: center;
-  }
 }
-.grid--8col {
+
+.grid--7col {
   @extend .grid--columns;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 
 //PROFILE
@@ -82,7 +88,7 @@
   @extend .grid--columns;
   grid-template-columns: repeat(5 1fr);
   > input {
-    width: 80px;
+    max-width: 80px;
     text-align: center;
   }
 }
@@ -100,17 +106,30 @@
   text-align: left;
 }
 
+//SPEED
+.grid__speed {
+  grid-column: 2 / span auto;
+  justify-self: start;
+}
+
 //WEAPONS
 .grid--weapons {
   @extend .grid--columns;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 0;
 }
 .grid--weapons__name {
-  grid-column: 1 / span 2;
-  justify-self: start;
+  grid-column: 1 / span 4;
   text-align: left;
 }
 .grid--weapons__features {
-  grid-column: 3 / span 2;
+  @extend .grid--weapons__name;
+  font-size: $font-size-small;  
+  padding-bottom: $xs-size;
+}
+.grid--weapons__track {
+  width: 100%;
+  border-right: solid 1px $dark-grey;
 }
 
 //FOOTER

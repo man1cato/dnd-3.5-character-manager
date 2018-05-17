@@ -12,9 +12,7 @@ export default async (firebaseUID) => {
   const skillsetFilter = `{Character ID}="${characterId}"`;
   const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${skillsetFilter}`);
   const skills = skillsetResponse.data.records.sort((a,b) => {
-    if (a.fields["Skill - Text"] > b.fields["Skill - Text"]) {
-      return 1
-    }
+    if (a.fields["Skill - Text"] > b.fields["Skill - Text"]) { return 1 }
     return 0
   }).map((skill) => ({
     name: skill.fields["Skill - Text"],
@@ -47,8 +45,6 @@ export default async (firebaseUID) => {
   const weaponsResponse = await axios.get(`${baseUrl}/Items?api_key=${apiKey}&filterByFormula={Category}="Weapon"`);  
   const weapons = weaponIds.map((id) => {
     const weapon = weaponsResponse.data.records.find((item) => item.id === id);
-    console.log(weapon);
-
     return {
       id: weapon.id,
       name: weapon.fields.Name,
@@ -59,6 +55,9 @@ export default async (firebaseUID) => {
       attackType: weapon.fields["Attack Type"],
       damageType: weapon.fields["Damage Type"].join(" / ")
     }
+  }).sort((a, b) => {
+    if (a.name > b.name) { return 1 }
+    return 0
   });
 
   return {
