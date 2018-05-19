@@ -5,7 +5,9 @@ import { EquipmentPage } from '../../components/EquipmentPage';
 import profile from '../fixtures/profile';
 
 const props = {
-
+    id: profile.id,
+    money: profile.fields.money,
+    items: profile.fields.items
 }
 
 let wrapper;

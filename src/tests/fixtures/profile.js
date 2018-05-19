@@ -132,7 +132,13 @@ export default {
         weaponType: "Martial"
       }
     ],
-    equipment: [
+    money: {
+      pp: 0,
+      gp: 1200,
+      sp: 350,
+      cp: 80
+    },
+    items: [
       {
         id: "recdauUcanZYERAL0",
         name: "Displacer hide",
@@ -142,6 +148,15 @@ export default {
         totalWeight: 0
       }, {
         id: "recSYqEwn9Uzr4mec",
+        name: "Repeating Light Crossbow",
+        qty: 1,
+        value: 250,
+        weight: 6,
+        category: "Weapon",
+        totalValue: 250,
+        totalWeight: 6
+      }, {
+        id: "recAaHr4qEcbytOpu",
         name: "Bolt(Repeating Crossbow)",
         qty: 30,
         value: 0.2,
@@ -158,15 +173,6 @@ export default {
         category: "Misc",
         totalValue: 30,
         totalWeight: 6
-      }, {
-        id: "recdok7uDkyJPg6og",
-        name: "Gold Piece",
-        qty: 1000,
-        value: 1,
-        weight: 0.02,
-        category: "Money",
-        totalValue: 1000,
-        totalWeight: 20.02
       }
     ]
   }

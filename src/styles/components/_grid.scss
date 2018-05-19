@@ -108,7 +108,7 @@
 
 //SPEED
 .grid__speed {
-  grid-column: 2 / span auto;
+  grid-column: 2 / 7;
   justify-self: start;
 }
 
@@ -130,6 +130,17 @@
 .grid--weapons__track {
   width: 100%;
   border-right: solid 1px $dark-grey;
+}
+
+//MONEY
+.grid__money {
+  @extend .grid--columns;
+  grid-template-columns: 3fr 1fr;
+  text-align: left;
+  > input {
+    max-width: 100%;
+    text-align: right;
+  }
 }
 
 //FOOTER

@@ -161,9 +161,15 @@ export default async (firebaseUID) => {
       speed: fields.Speed[0],
       initiative: {
         base: fields["STR Mod"]
+      },      
+      weapons,
+      money: {
+        pp: equipment.find((item) => item.name === "Platinum Piece") ? equipment.find((item) => item.name === "Platinum Piece").qty : 0,
+        gp: equipment.find((item) => item.name === "Gold Piece") ? equipment.find((item) => item.name === "Gold Piece").qty : 0,
+        sp: equipment.find((item) => item.name === "Silver Piece") ? equipment.find((item) => item.name === "Silver Piece").qty : 0,
+        cp: equipment.find((item) => item.name === "Copper Piece") ? equipment.find((item) => item.name === "Copper Piece").qty : 0
       },
-      equipment,
-      weapons
+      items: equipment.filter((item) => item.category !== "Money")
     }
   }
 }

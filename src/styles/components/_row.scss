@@ -9,6 +9,18 @@
   justify-content: center;
 }
 
+.row__money {
+  @extend .row;
+  @extend .row--center;
+  > input {
+    max-width: 100px;
+    text-align: right;
+  }
+  > * {
+    margin-right: .6rem;
+  }
+}
+
 .row__item {
   display: flex;
   flex-direction: column;
