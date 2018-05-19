@@ -1,87 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render saves with profile data 1`] = `
-<div
-  className="grid grid--6col"
->
-  <h5
-    className="grid__col1"
+<div>
+  <h3
+    className="row row--center"
   >
-    Saves
-  </h5>
-  <h5>
-    Base
-  </h5>
-  <div />
-  <h5>
-    Mod
-  </h5>
-  <div />
-  <h5>
-    Total
-  </h5>
+    Saving Throws
+  </h3>
   <div
-    className="grid__col1"
+    className="grid grid--6col"
   >
-    Fortitude
+    <h5
+      className="grid__col1"
+    >
+      Saves
+    </h5>
+    <h5>
+      Base
+    </h5>
+    <div />
+    <h5>
+      Mod
+    </h5>
+    <div />
+    <h5>
+      Total
+    </h5>
+    <div
+      className="grid__col1"
+    >
+      Fortitude
+    </div>
+    <div>
+      4
+    </div>
+    <div>
+      +
+    </div>
+    <input
+      id="fortitude"
+      name="saves"
+      type="text"
+      value={2}
+    />
+    <div>
+      =
+    </div>
+    <div />
+    <div
+      className="grid__col1"
+    >
+      Reflex
+    </div>
+    <div>
+      5
+    </div>
+    <div>
+      +
+    </div>
+    <input
+      id="reflex"
+      name="saves"
+      type="text"
+      value={0}
+    />
+    <div>
+      =
+    </div>
+    <div />
+    <div
+      className="grid__col1"
+    >
+      Will
+    </div>
+    <div>
+      6
+    </div>
+    <div>
+      +
+    </div>
+    <input
+      id="will"
+      name="saves"
+      type="text"
+      value={1}
+    />
+    <div>
+      =
+    </div>
+    <div />
   </div>
-  <div>
-    4
-  </div>
-  <div>
-    +
-  </div>
-  <input
-    id="fortitude"
-    name="saves"
-    type="text"
-    value={2}
-  />
-  <div>
-    =
-  </div>
-  <div />
-  <div
-    className="grid__col1"
-  >
-    Reflex
-  </div>
-  <div>
-    5
-  </div>
-  <div>
-    +
-  </div>
-  <input
-    id="reflex"
-    name="saves"
-    type="text"
-    value={0}
-  />
-  <div>
-    =
-  </div>
-  <div />
-  <div
-    className="grid__col1"
-  >
-    Will
-  </div>
-  <div>
-    6
-  </div>
-  <div>
-    +
-  </div>
-  <input
-    id="will"
-    name="saves"
-    type="text"
-    value={1}
-  />
-  <div>
-    =
-  </div>
-  <div />
 </div>
 `;

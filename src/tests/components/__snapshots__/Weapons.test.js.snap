@@ -2,13 +2,11 @@
 
 exports[`should render weapons with profile data 1`] = `
 <div>
-  <div
+  <h3
     className="row row--center"
   >
-    <h3>
-      Weapons
-    </h3>
-  </div>
+    Weapons
+  </h3>
   <div
     className="grid grid--weapons"
     key="recAaHr4qEcbytOpu"
@@ -27,23 +25,37 @@ exports[`should render weapons with profile data 1`] = `
       , 
       Piercing
     </div>
-    <h5>
+    <h5
+      className="grid--weapons__track"
+    >
       Rng
     </h5>
-    <h5>
+    <h5
+      className="grid--weapons__track"
+    >
       Atk
     </h5>
-    <h5>
+    <h5
+      className="grid--weapons__track"
+    >
       Dmg
     </h5>
     <h5>
       Crit
     </h5>
-    <div>
+    <div
+      className="grid--weapons__track"
+    >
       80 ft.
     </div>
-    <div />
-    <div>
+    <div
+      className="grid--weapons__track"
+    >
+      +
+    </div>
+    <div
+      className="grid--weapons__track"
+    >
       1d8
     </div>
     <div>
@@ -68,23 +80,37 @@ exports[`should render weapons with profile data 1`] = `
       , 
       Slashing
     </div>
-    <h5>
+    <h5
+      className="grid--weapons__track"
+    >
       Rng
     </h5>
-    <h5>
+    <h5
+      className="grid--weapons__track"
+    >
       Atk
     </h5>
-    <h5>
+    <h5
+      className="grid--weapons__track"
+    >
       Dmg
     </h5>
     <h5>
       Crit
     </h5>
-    <div>
+    <div
+      className="grid--weapons__track"
+    >
       —
     </div>
-    <div />
-    <div>
+    <div
+      className="grid--weapons__track"
+    >
+      +
+    </div>
+    <div
+      className="grid--weapons__track"
+    >
       1d8
     </div>
     <div>

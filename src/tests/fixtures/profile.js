@@ -131,6 +131,43 @@ export default {
         damageType: "Slashing",
         weaponType: "Martial"
       }
+    ],
+    equipment: [
+      {
+        id: "recdauUcanZYERAL0",
+        name: "Displacer hide",
+        qty: 2,
+        category: "Creature Part",
+        totalValue: 0,
+        totalWeight: 0
+      }, {
+        id: "recSYqEwn9Uzr4mec",
+        name: "Bolt(Repeating Crossbow)",
+        qty: 30,
+        value: 0.2,
+        weight: 0.2,
+        category: "Ammunition",
+        totalValue: 6,
+        totalWeight: 6
+      }, {
+        id: "reckwALiYfzmuSB3v",
+        name: "Wizard's spellbook",
+        qty: 2,
+        value: 15,
+        weight: 3,
+        category: "Misc",
+        totalValue: 30,
+        totalWeight: 6
+      }, {
+        id: "recdok7uDkyJPg6og",
+        name: "Gold Piece",
+        qty: 1000,
+        value: 1,
+        weight: 0.02,
+        category: "Money",
+        totalValue: 1000,
+        totalWeight: 20.02
+      }
     ]
   }
 }
