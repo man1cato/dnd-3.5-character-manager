@@ -3,21 +3,25 @@ import axios from 'axios';
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
 
+const compareByName = (a,b) => {
+  const aName = a.name.toUpperCase();
+  const bName = b.name.toUpperCase();
+  if (aName < bName) { return -1 };
+  if (aName > bName) { return 1 };
+  return 0;
+}
+
 export default async (firebaseUID) => {
   const characterFilter = `{Firebase UID}="${firebaseUID}"`;
   const characterResponse = await axios.get(`${baseUrl}/Characters?api_key=${apiKey}&filterByFormula=${characterFilter}`);
   const characterId = characterResponse.data.records[0].id;
   const fields = characterResponse.data.records[0].fields;
 
-  const skillsetFilter = `{Character ID}="${characterId}"`;
-  const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${skillsetFilter}`);
-  const skills = skillsetResponse.data.records.sort((a,b) => {
-    if (a.fields["Skill - Text"] > b.fields["Skill - Text"]) { return 1 }
-    return 0
-  }).map((skill) => ({
-    name: skill.fields["Skill - Text"],
+  const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula={Character ID}="${characterId}"`);
+  const skills = skillsetResponse.data.records.map((skill) => ({
+    name: skill.fields.Name,
     ranks: skill.fields["Total Ranks"]
-  }));
+  })).sort(compareByName);
 
   const level = fields.Level[0];
   const xp = fields.XP;
@@ -27,19 +31,19 @@ export default async (firebaseUID) => {
   const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${equipmentFilter}`);
   const equipment = equipmentResponse.data.records.map((item) => {
     const qty = item.fields.Qty;
-    const value = item.fields["Unit Value"] ? item.fields["Unit Value"][0] : 0;
-    const weight = item.fields["Unit Weight (lbs)"] ? item.fields["Unit Weight (lbs)"][0] : 0;
+    const unitValue = item.fields["Unit Value"] ? item.fields["Unit Value"][0] : 0;
+    const unitWeight = item.fields["Unit Weight (lbs)"] ? item.fields["Unit Weight (lbs)"][0] : 0;
     return {
       id: item.fields["Item ID"][0],
       name: item.fields.Name,
       qty,
-      value,
-      weight,
+      unitValue,
+      unitWeight,
       category: item.fields.Category[0],
-      totalValue: qty*value,
-      totalWeight: qty*weight
+      totalValue: Number((qty*unitValue).toFixed(2)),
+      totalWeight: Number((qty*unitWeight).toFixed(2))
     }
-  });
+  }).sort(compareByName);
 
   const weaponIds = equipment.filter((item) => item.category === "Weapon").map((weapon) => weapon.id);
   const weaponsResponse = await axios.get(`${baseUrl}/Items?api_key=${apiKey}&filterByFormula={Category}="Weapon"`);  
@@ -55,9 +59,6 @@ export default async (firebaseUID) => {
       attackType: weapon.fields["Attack Type"],
       damageType: weapon.fields["Damage Type"].join(" / ")
     }
-  }).sort((a, b) => {
-    if (a.name > b.name) { return 1 }
-    return 0
   });
 
   return {

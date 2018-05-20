@@ -72,7 +72,7 @@ export class StatsPage extends React.Component {
 const mapStateToProps = (state) => ({
   uid: state.auth.uid,
   ...state.profile,
-  skills: state.profile.skills.sort()
+  skills: state.profile.skills
 })
 
 const mapDispatchToProps = (dispatch, props) => ({ 

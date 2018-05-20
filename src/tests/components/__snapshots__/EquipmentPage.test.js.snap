@@ -20,6 +20,54 @@ exports[`should render equipment page with profile data 1`] = `
       }
       onInputChange={[Function]}
     />
+    <br />
+    <Items
+      items={
+        Array [
+          Object {
+            "category": "Creature Part",
+            "id": "recdauUcanZYERAL0",
+            "name": "Displacer hide",
+            "qty": 2,
+            "totalValue": 0,
+            "totalWeight": 0,
+          },
+          Object {
+            "category": "Weapon",
+            "id": "recSYqEwn9Uzr4mec",
+            "name": "Repeating Light Crossbow",
+            "qty": 1,
+            "totalValue": 250,
+            "totalWeight": 6,
+            "value": 250,
+            "weight": 6,
+          },
+          Object {
+            "category": "Ammunition",
+            "id": "recAaHr4qEcbytOpu",
+            "name": "Bolt(Repeating Crossbow)",
+            "qty": 30,
+            "totalValue": 6,
+            "totalWeight": 6,
+            "value": 0.2,
+            "weight": 0.2,
+          },
+          Object {
+            "category": "Misc",
+            "id": "reckwALiYfzmuSB3v",
+            "name": "Wizard's spellbook",
+            "qty": 2,
+            "totalValue": 30,
+            "totalWeight": 6,
+            "value": 15,
+            "weight": 3,
+          },
+        ]
+      }
+      itemsTotalValue={286}
+      itemsTotalWeight={18}
+      onInputChange={[Function]}
+    />
   </div>
 </div>
 `;
