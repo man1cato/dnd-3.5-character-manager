@@ -16,8 +16,8 @@ export class EquipmentPage extends React.Component {
 
         this.state = {
             money: {
-              ...this.props.money,
-            total
+                ...this.props.money,
+                total
             },
             items: this.props.items
         }
@@ -31,12 +31,22 @@ export class EquipmentPage extends React.Component {
         const name = e.target.name;
         const id = e.target.id;
         let value = Number(e.target.value);
-        value = (value === 0 || isNaN(value)) ? "" : value;
+        value = (value === 0 || isNaN(value)) ? 0 : value;
+        
         this.setState((prevState) => ({ 
             [name]: update(prevState[name], {
                 [id]: {$set: value}
             })            
-        }))
+        }), () => {
+            this.setState((prevState) => {  
+                const total = prevState.money.pp*10 + prevState.money.gp + prevState.money.sp/10 + prevState.money.cp/100;
+                return {
+                    money: update(prevState.money, {
+                        total: {$set: total}
+                    })
+                }
+            })
+        })     
     }
 
     render () {
