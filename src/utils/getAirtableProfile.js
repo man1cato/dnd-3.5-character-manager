@@ -16,8 +16,9 @@ export default async (firebaseUID) => {
   const characterResponse = await axios.get(`${baseUrl}/Characters?api_key=${apiKey}&filterByFormula=${characterFilter}`);
   const characterId = characterResponse.data.records[0].id;
   const fields = characterResponse.data.records[0].fields;
+  const ownerFilter = `{Owner ID}="${characterId}"`;
 
-  const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula={Character ID}="${characterId}"`);
+  const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const skills = skillsetResponse.data.records.map((skill) => ({
     name: skill.fields.Name || "",
     ranks: skill.fields["Total Ranks"] || 0
@@ -26,9 +27,8 @@ export default async (firebaseUID) => {
   const level = fields.Level[0];
   const xp = fields.XP;
   const nextLevelXp = level*(level+1)*500;
-
-  const equipmentFilter = `{Owner ID}="${characterId}"`;
-  const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${equipmentFilter}`);
+  
+  const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const equipment = equipmentResponse.data.records.map((item) => {
     const qty = item.fields.Qty;
     const unitValue = item.fields["Unit Value"] ? item.fields["Unit Value"][0] : 0;
@@ -60,6 +60,30 @@ export default async (firebaseUID) => {
       damageType: weapon.fields["Damage Type"].join(" / ")
     }
   });
+
+  const spellsPerDay = [fields["SPD 0"][0], fields["SPD 1"][0], fields["SPD 2"][0], fields["SPD 3"][0], fields["SPD 4"][0], fields["SPD 5"][0], fields["SPD 6"][0], fields["SPD 7"][0], fields["SPD 8"][0], fields["SPD 9"][0]];
+  const spellbookResponse = await axios.get(`${baseUrl}/Spellbooks?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
+  let spellbook;
+  const spells = spellbookResponse.data.records.map((spell) => {
+    const prepared = spell.fields.Prepared || 0;
+    const used = spell.fields.Used || 0;
+    return {
+      id: spell.id,
+      level: spell.fields.Level,
+      name: spell.fields.Name,
+      description: spell.fields.Description[0],
+      school: spell.fields.School[0],
+      mastered: spell.fields["Mastered?"] || false,
+      prepared,
+      used,
+      remaining: prepared - used
+    }
+  }).sort(compareByName);;
+  spellbook = spellsPerDay.map((spd, i) => ({
+    spellsPerDay: spd,
+    spells: spells.filter((spell) => spell.level == i) 
+  }));
+  console.log(spellbook);
 
   return {
     id: characterId,
@@ -170,7 +194,8 @@ export default async (firebaseUID) => {
         sp: equipment.find((item) => item.name === "Silver Piece") ? equipment.find((item) => item.name === "Silver Piece").qty : 0,
         cp: equipment.find((item) => item.name === "Copper Piece") ? equipment.find((item) => item.name === "Copper Piece").qty : 0
       },
-      items: equipment.filter((item) => item.category !== "Money")
+      items: equipment.filter((item) => item.category !== "Money"),
+      spellbook
     }
   }
 }

@@ -16,12 +16,7 @@ const props = {
     initiative: profile.fields.initiative
 };
 
-let wrapper;
-
-beforeEach(() => {
-    wrapper = shallow(<CombatPage {...props} />);
-});
-
 test('should render combat page with profile data', () => {
+    const wrapper = shallow(<CombatPage {...props} />);
     expect(wrapper).toMatchSnapshot();
 });

@@ -23,10 +23,10 @@ const Items = ({items, itemsTotalValue, itemsTotalWeight, onInputChange}) => (
                 />                                
             ))}
             {items.map((item, i) => (
-                <div className="grid__col3" key={i}>{item.totalValue} gp</div>                                
+                <div className="grid__col3" key={i}>{item.totalValue} gp</div>
             ))}
             {items.map((item, i) => (
-                <div className="grid__col4" key={i}>{item.totalWeight} lbs</div>                                
+                <div className="grid__col4" key={i}>{item.totalWeight} lbs</div> 
             ))}
 
             <div className="grid__col1 grid--items__totals">Totals</div>
