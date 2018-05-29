@@ -138,8 +138,7 @@ export default {
       sp: 350,
       cp: 80
     },
-    items: [
-      {
+    items: [{
         id: "recdauUcanZYERAL0",
         name: "Displacer hide",
         qty: 2,
@@ -173,7 +172,43 @@ export default {
         category: "Misc",
         totalValue: 30,
         totalWeight: 6
-      }
-    ]
+    }],
+    spellbook: [{
+      spells: [{
+        id: 123,
+        level: 0,
+        name: "Acid Splash",
+        description: "Acid missile 1d3 damage",
+        school: "Conj",
+        mastered: false,
+        prepared: 1,
+        used: 0,
+        remaining: 1
+      }, {
+        id: 456,
+        level: 0,
+        name: "Arcane Mark",
+        description: "aomething",
+        school: "Univ",
+        mastered: true,
+        prepared: 2,
+        used: 1,
+        remaining: 1
+      }],
+      spellsPerDay: 4
+    },{
+        spells: [{
+          id: 678,
+          level: 1,
+          name: "Charm Person",
+          description: "Make someone like you",
+          school: "Ench",
+          mastered: false,
+          prepared: 1,
+          used: 1,
+          remaining: 0
+        }],
+        spellsPerDay: 3
+    }]
   }
 }

@@ -7,7 +7,7 @@ import ProfilePage from '../components/ProfilePage';
 import StatsPage from '../components/StatsPage';
 import CombatPage from '../components/CombatPage';
 import EquipmentPage from '../components/EquipmentPage';
-import SpellsPage from '../components/SpellsPage';
+import SpellbookPage from '../components/SpellbookPage';
 import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
@@ -23,7 +23,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/stats" component={StatsPage} />
                 <PrivateRoute path="/combat" component={CombatPage} />
                 <PrivateRoute path="/equipment" component={EquipmentPage} />
-                <PrivateRoute path="/spells" component={SpellsPage} />
+                <PrivateRoute path="/spellbook" component={SpellbookPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>

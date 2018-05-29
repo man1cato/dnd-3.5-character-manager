@@ -6,7 +6,7 @@ import profileSVG from "../../public/images/profile.svg";
 import statsSVG from "../../public/images/stats.svg";
 import combatSVG from "../../public/images/combat.svg";
 import equipmentSVG from "../../public/images/equipment.svg";
-import spellsSVG from "../../public/images/spells.svg";
+import spellbookSVG from "../../public/images/spellbook.svg";
 import companionSVG from "../../public/images/companion.svg";
 
 const svgs = {
@@ -14,7 +14,7 @@ const svgs = {
   stats: statsSVG,
   combat: combatSVG,
   equipment: equipmentSVG,
-  spells: spellsSVG,
+  spellbook: spellbookSVG,
   companion: companionSVG
 }
 

@@ -142,7 +142,6 @@
     text-align: right;
   }
 }
-
 .grid--items__totals {
   align-self: start;
   border-top: solid 1px $dark-grey; 
@@ -152,6 +151,22 @@
   font-weight: bolder;
 }
 
+//SPELLS
+.grid--spells {
+  @extend .grid--columns;
+  grid-template-columns: 3fr repeat(4, 1fr);
+  grid-column-gap: $s-size;
+  justify-items: end;
+  text-align: right;
+  > input {
+    text-align: right;
+  }
+}
+.grid--spells__school {
+  @extend .grid__col2;
+  justify-self: start;
+  font-size: $font-size-small;
+}
 //FOOTER
 .grid--footer {
   grid-template-columns: repeat(6, 1fr);
