@@ -11,7 +11,7 @@
   text-align: center; 
   margin-bottom: $l-size;
   > input {
-    max-width: 15vw;
+    max-width: 50px;
     text-align: center;
   }
 }
@@ -156,17 +156,13 @@
   @extend .grid--columns;
   grid-template-columns: 3fr repeat(4, 1fr);
   grid-column-gap: $s-size;
-  justify-items: end;
-  text-align: right;
-  > input {
-    text-align: right;
-  }
 }
 .grid--spells__school {
   @extend .grid__col2;
   justify-self: start;
   font-size: $font-size-small;
 }
+
 //FOOTER
 .grid--footer {
   grid-template-columns: repeat(6, 1fr);

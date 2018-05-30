@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header
-  className="header"
->
+<header>
   <div
     className="container container--header header__content"
   >

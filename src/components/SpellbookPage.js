@@ -4,15 +4,14 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import { startEditProfile } from '../actions/profile';
+
 
 export class SpellbookPage extends React.Component {
     constructor(props) {
         super(props);
 
-        const totalSpells = () => total = spellbook[i].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
-
         let spellbook = this.props.spellbook;
-        console.log(spellbook)
 
         for (let i = 0; i < spellbook.length; i++) {
             spellbook[i].total = spellbook[i].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
@@ -22,30 +21,42 @@ export class SpellbookPage extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        this.props.startEditProfile(this.props.id, this.state);
+    }
+
     onInputChange = (e) => {
-        const spellIndex = e.target.id;
-        const attribute = e.target.name;
-        const value = e.target.value;
+        const level = e.target.getAttribute("level");
+        const index = e.target.getAttribute("index");
+        const attribute = e.target.getAttribute("attribute");
+        let value = Number(e.target.value);
+        value = isNaN(value) ? 0 : value;
         this.setState((prevState) => {
-            const spell = prevState.spellbook[0].spells[spellIndex];
+            const spell = prevState.spellbook[level].spells[index];
             const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value; 
-            const total = prevState.spellbook[0].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
-            console.log("spell",spell)
-            console.log("remaining", remaining)
-            console.log("total", total)
             return {
                 spellbook: update(prevState.spellbook, {
-                    0: {
+                    [level]: {
                         spells:{
-                            spellIndex: {
-                                [attribute]: { $set: value },
+                            [index]: {
+                                [attribute]: {$set: value},
                                 remaining: {$set: remaining}
                             }
-                        },
-                        total
+                        }
                     }
                 })
             }
+        }, () => {
+            this.setState((prevState) => {
+                const total = prevState.spellbook[level].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
+                return {
+                    spellbook: update(prevState.spellbook, {
+                        [level]: {
+                            total: {$set: total}
+                        }
+                    })
+                }
+            })
         })
     }
 
@@ -76,8 +87,9 @@ export class SpellbookPage extends React.Component {
                                     <input
                                         className="grid__col3"
                                         key={i}
-                                        id={i}
-                                        name="prepared"
+                                        index={i}
+                                        attribute="prepared"
+                                        level={level}
                                         value={spell.prepared}
                                         onChange={this.onInputChange}
                                     />
@@ -86,8 +98,9 @@ export class SpellbookPage extends React.Component {
                                     <input
                                         className="grid__col4"
                                         key={i}
-                                        id={i}
-                                        name="used"
+                                        index={i}
+                                        attribute="used"
+                                        level={level}
                                         value={spell.used}
                                         onChange={this.onInputChange}
                                     />

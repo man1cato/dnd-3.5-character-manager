@@ -69,34 +69,38 @@ exports[`should render combat page with profile data 1`] = `
           Univ
         </div>
         <input
+          attribute="prepared"
           className="grid__col3"
-          id={0}
+          index={0}
           key="0"
-          name="prepared"
+          level={0}
           onChange={[Function]}
           value={1}
         />
         <input
+          attribute="prepared"
           className="grid__col3"
-          id={1}
+          index={1}
           key="1"
-          name="prepared"
+          level={0}
           onChange={[Function]}
           value={2}
         />
         <input
+          attribute="used"
           className="grid__col4"
-          id={0}
+          index={0}
           key="0"
-          name="used"
+          level={0}
           onChange={[Function]}
           value={0}
         />
         <input
+          attribute="used"
           className="grid__col4"
-          id={1}
+          index={1}
           key="1"
-          name="used"
+          level={0}
           onChange={[Function]}
           value={1}
         />
@@ -163,18 +167,20 @@ exports[`should render combat page with profile data 1`] = `
           Ench
         </div>
         <input
+          attribute="prepared"
           className="grid__col3"
-          id={0}
+          index={0}
           key="0"
-          name="prepared"
+          level={1}
           onChange={[Function]}
           value={1}
         />
         <input
+          attribute="used"
           className="grid__col4"
-          id={0}
+          index={0}
           key="0"
-          name="used"
+          level={1}
           onChange={[Function]}
           value={1}
         />

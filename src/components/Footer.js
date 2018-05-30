@@ -25,8 +25,10 @@ const iconWrapper = (page) => (
 )
 
 const Footer = () => (
-  <footer className="container container--footer grid grid--footer">
-    {Object.keys(svgs).map((svg) => iconWrapper(svg))}    
+  <footer>
+    <div className="container container--footer grid grid--footer">
+      {Object.keys(svgs).map((svg) => iconWrapper(svg))}    
+    </div>
   </footer>
 )
 
