@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render combat page with profile data 1`] = `
+exports[`should render SpellbookPage with profile data 1`] = `
 <div>
   <Connect(Header)
     pageTitle="Spellbook"
@@ -68,42 +68,110 @@ exports[`should render combat page with profile data 1`] = `
         >
           Univ
         </div>
-        <input
-          attribute="prepared"
-          className="grid__col3"
-          index={0}
+        <div
+          className="grid__col3 grid--spells__attribute"
           key="0"
-          level={0}
-          onChange={[Function]}
-          value={1}
-        />
-        <input
-          attribute="prepared"
-          className="grid__col3"
-          index={1}
+        >
+          <button
+            attribute="prepared"
+            change={1}
+            index={0}
+            level={0}
+            onClick={[Function]}
+          >
+            +
+          </button>
+          <div>
+            1
+          </div>
+          <button
+            attribute="prepared"
+            change={-1}
+            index={0}
+            level={0}
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
+        <div
+          className="grid__col3 grid--spells__attribute"
           key="1"
-          level={0}
-          onChange={[Function]}
-          value={2}
-        />
-        <input
-          attribute="used"
-          className="grid__col4"
-          index={0}
+        >
+          <button
+            attribute="prepared"
+            change={1}
+            index={1}
+            level={0}
+            onClick={[Function]}
+          >
+            +
+          </button>
+          <div>
+            2
+          </div>
+          <button
+            attribute="prepared"
+            change={-1}
+            index={1}
+            level={0}
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
+        <div
+          className="grid__col4 grid--spells__attribute"
           key="0"
-          level={0}
-          onChange={[Function]}
-          value={0}
-        />
-        <input
-          attribute="used"
-          className="grid__col4"
-          index={1}
+        >
+          <button
+            attribute="used"
+            change={1}
+            index={0}
+            level={0}
+            onClick={[Function]}
+          >
+            +
+          </button>
+          <div>
+            0
+          </div>
+          <button
+            attribute="used"
+            change={-1}
+            index={0}
+            level={0}
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
+        <div
+          className="grid__col4 grid--spells__attribute"
           key="1"
-          level={0}
-          onChange={[Function]}
-          value={1}
-        />
+        >
+          <button
+            attribute="used"
+            change={1}
+            index={1}
+            level={0}
+            onClick={[Function]}
+          >
+            +
+          </button>
+          <div>
+            1
+          </div>
+          <button
+            attribute="used"
+            change={-1}
+            index={1}
+            level={0}
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
         <div
           className="grid__col5"
           key="0"
@@ -166,24 +234,58 @@ exports[`should render combat page with profile data 1`] = `
         >
           Ench
         </div>
-        <input
-          attribute="prepared"
-          className="grid__col3"
-          index={0}
+        <div
+          className="grid__col3 grid--spells__attribute"
           key="0"
-          level={1}
-          onChange={[Function]}
-          value={1}
-        />
-        <input
-          attribute="used"
-          className="grid__col4"
-          index={0}
+        >
+          <button
+            attribute="prepared"
+            change={1}
+            index={0}
+            level={1}
+            onClick={[Function]}
+          >
+            +
+          </button>
+          <div>
+            1
+          </div>
+          <button
+            attribute="prepared"
+            change={-1}
+            index={0}
+            level={1}
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
+        <div
+          className="grid__col4 grid--spells__attribute"
           key="0"
-          level={1}
-          onChange={[Function]}
-          value={1}
-        />
+        >
+          <button
+            attribute="used"
+            change={1}
+            index={0}
+            level={1}
+            onClick={[Function]}
+          >
+            +
+          </button>
+          <div>
+            1
+          </div>
+          <button
+            attribute="used"
+            change={-1}
+            index={0}
+            level={1}
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
         <div
           className="grid__col5"
           key="0"

@@ -162,6 +162,17 @@
   justify-self: start;
   font-size: $font-size-small;
 }
+.grid--spells__attribute {
+  display: flex;
+  justify-content: space-between;
+  > div {
+    text-align: center;
+    align-self: center;
+  }
+  > * {
+    width: 25px;
+  }
+}
 
 //FOOTER
 .grid--footer {

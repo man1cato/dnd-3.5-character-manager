@@ -68,7 +68,7 @@ export default async (firebaseUID) => {
     return {
       id: spell.id,
       level: Number(spell.fields.Level),
-      name: spell.fields.Name,
+      name: spell.fields.Name.replace(/"/g,""),
       description: spell.fields.Description[0],
       school: spell.fields.School[0],
       mastered: spell.fields["Mastered?"] || false,

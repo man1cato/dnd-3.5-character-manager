@@ -9,7 +9,7 @@ const props = {
     spellbook: profile.fields.spellbook
 }
 
-test('should render combat page with profile data', () => {
+test('should render SpellbookPage with profile data', () => {
     const wrapper = shallow(<SpellbookPage {...props} />);
     expect(wrapper).toMatchSnapshot();
 });

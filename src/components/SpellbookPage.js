@@ -25,22 +25,23 @@ export class SpellbookPage extends React.Component {
         this.props.startEditProfile(this.props.id, this.state);
     }
 
-    onInputChange = (e) => {
+    onClick = (e) => {
         const level = e.target.getAttribute("level");
         const index = e.target.getAttribute("index");
         const attribute = e.target.getAttribute("attribute");
-        let value = Number(e.target.value);
-        value = isNaN(value) ? 0 : value;
+        const valueChange = Number(e.target.getAttribute("change"));
         this.setState((prevState) => {
             const spell = prevState.spellbook[level].spells[index];
-            const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value; 
+            const value = prevState.spellbook[level].spells[index][attribute] + valueChange;
+            const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value;
+
             return {
                 spellbook: update(prevState.spellbook, {
                     [level]: {
-                        spells:{
+                        spells: {
                             [index]: {
-                                [attribute]: {$set: value},
-                                remaining: {$set: remaining}
+                                [attribute]: { $set: value },
+                                remaining: { $set: remaining }
                             }
                         }
                     }
@@ -52,7 +53,7 @@ export class SpellbookPage extends React.Component {
                 return {
                     spellbook: update(prevState.spellbook, {
                         [level]: {
-                            total: {$set: total}
+                            total: { $set: total }
                         }
                     })
                 }
@@ -84,27 +85,44 @@ export class SpellbookPage extends React.Component {
                                     <div className="grid--spells__school" key={i}>{spell.school.substr(0,4)}</div>
                                 ))}
                                 {page.spells.map((spell, i) => (
-                                    <input
-                                        className="grid__col3"
-                                        key={i}
-                                        index={i}
-                                        attribute="prepared"
-                                        level={level}
-                                        value={spell.prepared}
-                                        onChange={this.onInputChange}
-                                    />
+                                    <div className="grid__col3 grid--spells__attribute" key={i}>
+                                        <button
+                                            change={1}
+                                            index={i}
+                                            attribute="prepared"
+                                            level={level}
+                                            onClick={this.onClick}
+                                        >+</button>
+                                        <div>{spell.prepared}</div>
+                                        <button
+                                            change={-1}
+                                            index={i}
+                                            attribute="prepared"
+                                            level={level}
+                                            onClick={this.onClick}
+                                        >-</button>
+                                    </div>
                                 ))}
                                 {page.spells.map((spell, i) => (
-                                    <input
-                                        className="grid__col4"
-                                        key={i}
-                                        index={i}
-                                        attribute="used"
-                                        level={level}
-                                        value={spell.used}
-                                        onChange={this.onInputChange}
-                                    />
+                                    <div className="grid__col4 grid--spells__attribute" key={i}>
+                                        <button
+                                            change={1}
+                                            index={i}
+                                            attribute="used"
+                                            level={level}
+                                            onClick={this.onClick}
+                                        >+</button>
+                                        <div>{spell.used}</div>
+                                        <button
+                                            change={-1}
+                                            index={i}
+                                            attribute="used"
+                                            level={level}
+                                            onClick={this.onClick}
+                                        >-</button>
+                                    </div>
                                 ))}
+                               
                                 {page.spells.map((spell, i) => (
                                     <div className="grid__col5" key={i}>{spell.remaining}</div>
                                 ))}
