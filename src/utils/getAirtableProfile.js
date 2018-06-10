@@ -83,6 +83,35 @@ export default async (firebaseUID) => {
     spells: spells.filter((spell) => spell.level == level),
     spellsPerDay: fields[`SPD ${level}`][0]
   }));
+
+  const companionResponse = await axios.get(`${baseUrl}/Companions?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
+  const companionFields = companionResponse.data.records[0].fields;
+  const companion = {
+    name: companionFields.Name,
+    type: companionFields['Animal Type'],
+    hp: companionFields.HP,
+    abilities: {
+      str: companionFields.STR[0],
+      con: companionFields.CON[0],
+      dex: companionFields.DEX[0],
+      int: companionFields.INT,
+      wis: companionFields.WIS[0],
+      cha: companionFields.CHA[0]
+    },
+    groundSpeed: companionFields['Speed (ground)'],
+    flightSpeed: companionFields['Speed (flight)'],
+    initiative: companionFields.Initiative,
+    ac: {
+      base: companionFields['AC'],
+      touch: companionFields['AC Touch'],
+      flat: companionFields['AC Flat']
+    },
+    attack: companionFields.Attack,
+    features: companionFields.Features,
+    feats: companionFields['Feats Text'],
+    specialAbilities: companionFields['Special Abilities Text'],
+    benefit: companionFields['Owner Benefit']
+  }
   
   return {
     id: characterId,
@@ -119,7 +148,7 @@ export default async (firebaseUID) => {
         dex: {
           name: "DEX",
           score: fields.DEX,
-          mod: fields["STR Mod"],
+          mod: fields["DEX Mod"],
         },
         con: {
           name: "CON",
@@ -194,7 +223,8 @@ export default async (firebaseUID) => {
         cp: equipment.find((item) => item.name === "Copper Piece") ? equipment.find((item) => item.name === "Copper Piece").qty : 0
       },
       items: equipment.filter((item) => item.category !== "Money"),
-      spellbook
+      spellbook,
+      companion
     }
   }
 }

@@ -8,6 +8,7 @@ import StatsPage from '../components/StatsPage';
 import CombatPage from '../components/CombatPage';
 import EquipmentPage from '../components/EquipmentPage';
 import SpellbookPage from '../components/SpellbookPage';
+import CompanionPage from '../components/CompanionPage';
 import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
@@ -24,6 +25,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/combat" component={CombatPage} />
                 <PrivateRoute path="/equipment" component={EquipmentPage} />
                 <PrivateRoute path="/spellbook" component={SpellbookPage} />
+                <PrivateRoute path="/companion" component={CompanionPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
