@@ -102,7 +102,9 @@ export default async (firebaseUID) => {
   const companion = {
     name: companionFields.Name,
     type: companionFields['Animal Type'],
-    hp: companionFields.HP,
+    hp: { 
+      base: companionFields.HP 
+    },
     abilities: {
       str: new Ability("STR", companionFields.STR[0]),
       dex: new Ability("DEX", companionFields.DEX[0]),
@@ -112,9 +114,13 @@ export default async (firebaseUID) => {
       cha: new Ability("CHA", companionFields.CHA[0])
     },
     skills: companionSkills,
-    groundSpeed: companionFields['Speed (ground)'],
-    flightSpeed: companionFields['Speed (flight)'],
-    initiative: companionFields.Initiative,
+    speed: {
+      ground: companionFields['Speed (ground)'],
+      flight: companionFields['Speed (flight)'],
+    },
+    initiative: {
+      base: companionFields.Initiative[0]
+    },
     ac: {
       base: companionFields['AC'],
       touch: companionFields['AC Touch'],

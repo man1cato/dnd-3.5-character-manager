@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import PhysicalStats from './PhysicalStats';
 import Saves from './Saves';
 import Attacks from './Attacks';
 import Weapons from './Weapons';
@@ -91,83 +92,13 @@ export class CombatPage extends React.Component {
         <Header pageTitle="Combat" />
         <div className="container container--body">
 
-          <h3 className="row row--center">Hit Points</h3>
-
-          <div className="grid grid--7col">
-            <div className="row__item">
-              <h5>Base</h5>
-              <div>{this.props.hp.base}</div>
-            </div>
-            <div>+</div>
-            <div className="row__item">
-              <h5>Mod</h5>
-              <input
-                type="text"
-                name="hp"
-                value={this.state.hp.mod}
-                onChange={this.onInputChange}
-              />
-            </div>
-            <div>-</div>
-            <div className="row__item">
-              <h5>Damage</h5>
-              <input
-                type="text"
-                name="hp"
-                id="hpDamage"
-                value={this.state.hp.damage}
-                onChange={this.onInputChange}
-              />
-            </div>
-            <div>=</div>
-            <div className="row__item">
-              <h5>Current</h5>
-              <div>{this.state.hp.total}</div>
-            </div>
-          </div>
-          
-          <h3 className="row row--center">Armor Class</h3>
-          <div className="grid grid--3col">
-            <div className="row__item">
-              <h5>Base</h5>
-              <div>{this.props.ac.base}</div>
-            </div>
-            <div className="row__item">
-              <h5>Flat</h5>
-              <div>{this.props.ac.flat}</div>
-            </div>
-            <div className="row__item">
-              <h5>Touch</h5>
-              <div>{this.props.ac.touch}</div>
-            </div>
-          </div>        
-
-          <h3 className="row row--center">Movement</h3>
-          <div className="grid grid--6col">
-            <div className="grid__col1">Speed</div>
-            <div className="grid__speed">{this.props.speed} ft/round</div>
-            <div className="grid__col1">Initiative</div>
-            <div className="row__item">
-              <h5>Base</h5>
-              <div>{this.props.initiative.base}</div>
-            </div>
-            <div>+</div>
-            <div className="row__item">
-              <h5>Mod</h5>
-              <input
-                type="text"
-                name="initiative"
-                value={this.state.initiative.mod}
-                onChange={this.onInputChange}
-              />
-            </div>
-            <div>=</div>
-            <div className="row__item">
-              <h5>Total</h5>
-              <div>{this.state.initiative.total}</div>
-            </div>
-            
-          </div>                     
+          <PhysicalStats
+              hp={this.state.hp}
+              ac={this.props.ac}
+              initiative={this.state.initiative}
+              speed={this.props.speed}
+              onInputChange={this.onInputChange}
+          />                              
 
           <Saves
             saves={this.state.saves}            

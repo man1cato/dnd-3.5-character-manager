@@ -5,7 +5,7 @@ import update from 'react-addons-update';
 
 import Header from './Header';
 import Skills from './Skills';
-import Saves from './Saves';
+import PhysicalStats from './PhysicalStats';
 import { startEditProfile } from '../actions/profile';
 
 
@@ -14,13 +14,63 @@ export class CompanionPage extends React.Component {
         super(props);
 
         this.state = {
-
+            hp: {
+                base: this.props.hp.base,
+                mod: this.props.hp.mod || "",
+                damage: this.props.hp.damage || "",
+                total: this.props.hp.total || this.props.hp.base,
+            },
+            initiative: {
+                base: this.props.initiative.base, 
+                mod: this.props.initiative.mod || "",
+                total: this.props.initiative.total || this.props.initiative.base
+            }
         }
     }
 
     componentWillUnmount() {
         this.props.startEditProfile(this.props.id, this.state);
     }
+
+    onInputChange = (e) => {
+        const name = e.target.name;
+        const id = e.target.id;
+        let mod = Number(e.target.value);
+        mod = (mod === 0 || isNaN(mod)) ? "" : mod;
+        let total;
+        this.setState((prevState) => {
+          if (name === "hp") {
+            if (id === "hpDamage") {
+              total = this.props.hp.base + prevState.hp.mod - mod;
+              return {hp: update(prevState.hp, {
+                damage: { $set: mod },
+                total: { $set: total }
+              })}
+            } 
+            total = this.props.hp.base + mod - prevState.hp.damage;
+            return {hp: update(prevState.hp, {
+              mod: { $set: mod },
+              total: { $set: total }
+            })}
+          } 
+          if (name === "saves" || name === "attacks") {
+            total = this.props[name][id].base + mod;
+            return {[name]: update(prevState[name], {
+              [id]: {
+                mod: { $set: mod },
+                total: { $set: total }
+              }
+            })}
+          }
+          total = this.props[name].base + mod;
+          return {
+            [name]: update(prevState[name], {
+              mod: { $set: mod },
+              total: { $set: total }          
+            })
+          }
+        });
+      }
 
     render() {
         return (
@@ -54,6 +104,15 @@ export class CompanionPage extends React.Component {
                     </div>
 
                     <Skills skills={this.props.skills}/>
+                    
+                    <h3 className="row row--center">Combat</h3>
+                    <PhysicalStats
+                        hp={this.state.hp}
+                        ac={this.props.ac}
+                        initiative={this.state.initiative}
+                        speed={this.props.speed}
+                        onInputChange={this.onInputChange}
+                    />
 
                 </div>
             </div>

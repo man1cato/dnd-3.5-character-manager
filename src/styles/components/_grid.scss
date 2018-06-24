@@ -38,6 +38,10 @@
   @extend .grid--columns;
   grid-template-columns: repeat(3, 1fr);
 }
+.grid--4col {
+  @extend .grid--columns;
+  grid-template-columns: repeat(4, 1fr);
+}
 .grid--5col {
   @extend .grid--columns;
   grid-template-columns: repeat(5, 1fr);
@@ -49,6 +53,10 @@
 .grid--7col {
   @extend .grid--columns;
   grid-template-columns: repeat(7, 1fr);
+}
+.grid--8col {
+  @extend .grid--columns;
+  grid-template-columns: repeat(8, 1fr);
 }
 
 //PROFILE
@@ -172,6 +180,11 @@
   > * {
     width: 25px;
   }
+}
+
+//COMBAT
+.grid--combat {
+  grid-template-columns: 1fr 4fr;
 }
 
 //COMPANION
