@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Skills = (props) => {
-  const skillCount = props.skills.length;
-  const col1 = props.skills.slice(0, Math.ceil(skillCount / 2));
-  const col2 = props.skills.slice(Math.ceil(skillCount / 2));
+const Skills = ({skills}) => {
+  const skillCount = skills.length;
+  const col1 = skills.slice(0, Math.ceil(skillCount / 2));
+  const col2 = skills.slice(Math.ceil(skillCount / 2));
 
   return (
     <div className="grid grid--skills">

@@ -3,6 +3,14 @@ import axios from 'axios';
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
 
+class Ability {
+  constructor(name, score) {
+    this.name = name;
+    this.score = score;
+    this.mod = Math.floor(score/2 - 5);
+  }
+}
+
 const compareByName = (a,b) => {
   const aName = a.name.toUpperCase();
   const bName = b.name.toUpperCase();
@@ -11,7 +19,11 @@ const compareByName = (a,b) => {
   return 0;
 }
 
-const abilityMod = (value) => Math.floor(value/2 - 5);
+const mapSkills = (skillset) => skillset.map((skill) => ({
+  name: skill.fields.Name || "",
+  ranks: skill.fields["Total Ranks"] || 0
+})).sort(compareByName);
+
 
 export default async (firebaseUID) => {
   const characterFilter = `{Firebase UID}="${firebaseUID}"`;
@@ -20,45 +32,8 @@ export default async (firebaseUID) => {
   const fields = characterResponse.data.records[0].fields;
   const ownerFilter = `{Owner ID}="${characterId}"`;
 
-
-  const abilities = {
-    str: {
-      name: "STR",
-      score: fields.STR,
-      mod: abilityMod(fields.STR),
-    },
-    dex: {
-      name: "DEX",
-      score: fields.DEX,
-      mod: abilityMod(fields.DEX),
-    },
-    con: {
-      name: "CON",
-      score: fields.CON,
-      mod: abilityMod(fields.CON),
-    },
-    int: {
-      name: "INT",
-      score: fields.INT,
-      mod: abilityMod(fields.INT),
-    },
-    wis: {
-      name: "WIS",
-      score: fields.WIS,
-      mod: abilityMod(fields.WIS),
-    },
-    cha: {
-      name: "CHA",
-      score: fields.CHA,
-      mod: abilityMod(fields.CHA),
-    },
-  }
-
-  const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
-  const skills = skillsetResponse.data.records.map((skill) => ({
-    name: skill.fields.Name || "",
-    ranks: skill.fields["Total Ranks"] || 0
-  })).sort(compareByName);
+  const characterSkillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
+  const characterSkills = mapSkills(characterSkillsetResponse.data.records);
 
   const level = fields.Level[0];
   const xp = fields.XP;
@@ -122,19 +97,21 @@ export default async (firebaseUID) => {
 
   const companionResponse = await axios.get(`${baseUrl}/Companions?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const companionFields = companionResponse.data.records[0].fields;
+  const companionSkillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula={Companion ID}="${companionFields['Companion ID']}"`);
+  const companionSkills = mapSkills(companionSkillsetResponse.data.records);
   const companion = {
     name: companionFields.Name,
     type: companionFields['Animal Type'],
     hp: companionFields.HP,
     abilities: {
-      str: companionFields.STR[0],
-      con: companionFields.CON[0],
-      dex: companionFields.DEX[0],
-      int: companionFields.INT,
-      wis: companionFields.WIS[0],
-      cha: companionFields.CHA[0]
+      str: new Ability("STR", companionFields.STR[0]),
+      dex: new Ability("DEX", companionFields.DEX[0]),
+      con: new Ability("CON", companionFields.CON[0]),
+      int: new Ability("INT", companionFields.INT),
+      wis: new Ability("WIS", companionFields.WIS[0]),
+      cha: new Ability("CHA", companionFields.CHA[0])
     },
-    skills: companionFields.Skills,
+    skills: companionSkills,
     groundSpeed: companionFields['Speed (ground)'],
     flightSpeed: companionFields['Speed (flight)'],
     initiative: companionFields.Initiative,
@@ -176,8 +153,15 @@ export default async (firebaseUID) => {
       hd: fields["Hit Die"][0],
       feats: fields["Feats - Text"],
       specialAbilities: fields["Special Abilities - Text"],
-      abilities,
-      skills,
+      abilities: {
+        str: new Ability("STR", fields.STR),
+        dex: new Ability("DEX", fields.DEX),
+        con: new Ability("CON", fields.CON),
+        int: new Ability("INT", fields.INT),
+        wis: new Ability("WIS", fields.WIS),
+        cha: new Ability("CHA", fields.CHA)
+      },
+      skills: characterSkills,
       saves: {
         fortitude: {
           name: "Fortitude",

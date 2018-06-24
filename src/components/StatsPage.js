@@ -11,11 +11,13 @@ import Skills from './Skills';
 export class StatsPage extends React.Component {
   constructor(props) {
     super(props);
+    
     let abilities = this.props.abilities;
     Object.keys(abilities).forEach((ability) => {
       abilities[ability].tempScore = abilities[ability].tempScore || "";
       abilities[ability].tempMod = abilities[ability].tempMod || "";
     });
+
     this.state = {
       abilities
     }
