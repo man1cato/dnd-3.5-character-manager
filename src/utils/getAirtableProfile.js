@@ -11,12 +11,48 @@ const compareByName = (a,b) => {
   return 0;
 }
 
+const abilityMod = (value) => Math.floor(value/2 - 5);
+
 export default async (firebaseUID) => {
   const characterFilter = `{Firebase UID}="${firebaseUID}"`;
   const characterResponse = await axios.get(`${baseUrl}/Characters?api_key=${apiKey}&filterByFormula=${characterFilter}`);
   const characterId = characterResponse.data.records[0].id;
   const fields = characterResponse.data.records[0].fields;
   const ownerFilter = `{Owner ID}="${characterId}"`;
+
+
+  const abilities = {
+    str: {
+      name: "STR",
+      score: fields.STR,
+      mod: abilityMod(fields.STR),
+    },
+    dex: {
+      name: "DEX",
+      score: fields.DEX,
+      mod: abilityMod(fields.DEX),
+    },
+    con: {
+      name: "CON",
+      score: fields.CON,
+      mod: abilityMod(fields.CON),
+    },
+    int: {
+      name: "INT",
+      score: fields.INT,
+      mod: abilityMod(fields.INT),
+    },
+    wis: {
+      name: "WIS",
+      score: fields.WIS,
+      mod: abilityMod(fields.WIS),
+    },
+    cha: {
+      name: "CHA",
+      score: fields.CHA,
+      mod: abilityMod(fields.CHA),
+    },
+  }
 
   const skillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const skills = skillsetResponse.data.records.map((skill) => ({
@@ -98,6 +134,7 @@ export default async (firebaseUID) => {
       wis: companionFields.WIS[0],
       cha: companionFields.CHA[0]
     },
+    skills: companionFields.Skills,
     groundSpeed: companionFields['Speed (ground)'],
     flightSpeed: companionFields['Speed (flight)'],
     initiative: companionFields.Initiative,
@@ -139,38 +176,7 @@ export default async (firebaseUID) => {
       hd: fields["Hit Die"][0],
       feats: fields["Feats - Text"],
       specialAbilities: fields["Special Abilities - Text"],
-      abilities: {
-        str: {
-          name: "STR",
-          score: fields.STR,
-          mod: fields["STR Mod"],
-        },
-        dex: {
-          name: "DEX",
-          score: fields.DEX,
-          mod: fields["DEX Mod"],
-        },
-        con: {
-          name: "CON",
-          score: fields.CON,
-          mod: fields["CON Mod"],
-        },
-        int: {
-          name: "INT",
-          score: fields.INT,
-          mod: fields["INT Mod"],
-        },
-        wis: {
-          name: "WIS",
-          score: fields.WIS,
-          mod: fields["WIS Mod"],
-        },
-        cha: {
-          name: "CHA",
-          score: fields.CHA,
-          mod: fields["CHA Mod"],
-        },
-      },
+      abilities,
       skills,
       saves: {
         fortitude: {
