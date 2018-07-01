@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CompanionPage with profile data 1`] = `
+<div>
+  <Connect(Header)
+    pageTitle="Companion"
+  />
+  <div
+    className="container container--body"
+  >
+    <div
+      className="grid grid--companion"
+    >
+      <h3>
+        Nyx
+      </h3>
+      <div>
+        Raven
+      </div>
+      <h4>
+        Feats
+      </h4>
+      <div>
+        Weapon Finesse, Alertness
+      </div>
+      <h4>
+        Special Abilities
+      </h4>
+      <div>
+        Low-Light Vision
+      </div>
+      <h4>
+        Features
+      </h4>
+      <div>
+        Empathic Link, Share Spells, Improved Evasion, Deliver Touch Spells, Speak with Master
+      </div>
+    </div>
+    <Abilities
+      abilities={
+        Object {
+          "cha": 6,
+          "con": 10,
+          "dex": 15,
+          "int": 8,
+          "str": 1,
+          "wis": 14,
+        }
+      }
+      onInputChange={[Function]}
+    />
+    <Skills
+      skills={
+        Array [
+          Object {
+            "name": "Hide",
+            "ranks": 10,
+          },
+          Object {
+            "name": "Climb",
+            "ranks": 3,
+          },
+          Object {
+            "name": "Listen",
+            "ranks": 5,
+          },
+          Object {
+            "name": "Concentration",
+            "ranks": 9,
+          },
+          Object {
+            "name": "Spot",
+            "ranks": 5,
+          },
+        ]
+      }
+    />
+    <h3
+      className="row row--center"
+    >
+      Combat
+    </h3>
+    <PhysicalStats
+      ac={
+        Object {
+          "base": 14,
+          "flat": 12,
+          "touch": 14,
+        }
+      }
+      hp={
+        Object {
+          "base": 16,
+          "damage": "",
+          "mod": "",
+          "total": 16,
+        }
+      }
+      initiative={
+        Object {
+          "base": 2,
+          "mod": "",
+          "total": 2,
+        }
+      }
+      onInputChange={[Function]}
+      speed={
+        Object {
+          "flight": 40,
+          "ground": 10,
+        }
+      }
+    />
+  </div>
+</div>
+`;

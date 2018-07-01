@@ -5,7 +5,8 @@ import { CompanionPage } from '../../components/CompanionPage';
 import profile from '../fixtures/profile';
 
 const props = {
-    id: profile.id
+    id: profile.id,
+    ...profile.fields.companion
 }
 
 test('should render CompanionPage with profile data', () => {

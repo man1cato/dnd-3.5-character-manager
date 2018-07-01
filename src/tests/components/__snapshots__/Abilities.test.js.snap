@@ -4,31 +4,11 @@ exports[`should render abilities with profile data 1`] = `
 <div
   className="grid grid--abilities"
 >
-  <h4
+  <h5
     className="grid__col1"
   >
     Ability
-  </h4>
-  <h4
-    className="grid__col2"
-  >
-    Score
-  </h4>
-  <h4
-    className="grid__col3"
-  >
-    Mod
-  </h4>
-  <h4
-    className="grid__col4"
-  >
-    Temp Score
-  </h4>
-  <h4
-    className="grid__col5"
-  >
-    Temp Mod
-  </h4>
+  </h5>
   <div
     className="grid__col1"
     key="0"
@@ -65,6 +45,11 @@ exports[`should render abilities with profile data 1`] = `
   >
     CHA
   </div>
+  <h5
+    className="grid__col2"
+  >
+    Score
+  </h5>
   <div
     className="grid__col2"
     key="0"
@@ -101,6 +86,11 @@ exports[`should render abilities with profile data 1`] = `
   >
     11
   </div>
+  <h5
+    className="grid__col3"
+  >
+    Mod
+  </h5>
   <div
     className="grid__col3"
     key="0"
@@ -137,10 +127,16 @@ exports[`should render abilities with profile data 1`] = `
   >
     0
   </div>
+  <h5
+    className="grid__col4"
+  >
+    Temp Score
+  </h5>
   <input
     className="grid__col4"
     id="str"
     key="0"
+    name="abilities"
     onChange={[Function]}
     type="text"
   />
@@ -148,6 +144,7 @@ exports[`should render abilities with profile data 1`] = `
     className="grid__col4"
     id="dex"
     key="1"
+    name="abilities"
     onChange={[Function]}
     type="text"
   />
@@ -155,6 +152,7 @@ exports[`should render abilities with profile data 1`] = `
     className="grid__col4"
     id="con"
     key="2"
+    name="abilities"
     onChange={[Function]}
     type="text"
   />
@@ -162,6 +160,7 @@ exports[`should render abilities with profile data 1`] = `
     className="grid__col4"
     id="int"
     key="3"
+    name="abilities"
     onChange={[Function]}
     type="text"
   />
@@ -169,6 +168,7 @@ exports[`should render abilities with profile data 1`] = `
     className="grid__col4"
     id="wis"
     key="4"
+    name="abilities"
     onChange={[Function]}
     type="text"
   />
@@ -176,9 +176,15 @@ exports[`should render abilities with profile data 1`] = `
     className="grid__col4"
     id="cha"
     key="5"
+    name="abilities"
     onChange={[Function]}
     type="text"
   />
+  <h5
+    className="grid__col5"
+  >
+    Temp Mod
+  </h5>
   <div
     className="grid__col5"
     key="0"

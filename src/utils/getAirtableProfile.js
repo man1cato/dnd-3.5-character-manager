@@ -8,6 +8,8 @@ class Ability {
     this.name = name;
     this.score = score;
     this.mod = Math.floor(score/2 - 5);
+    this.tempScore = "";
+    this.tempMod = "";
   }
 }
 
@@ -38,6 +40,14 @@ export default async (firebaseUID) => {
   const level = fields.Level[0];
   const xp = fields.XP;
   const nextLevelXp = level*(level+1)*500;
+  const abilities = {
+    str: new Ability("STR", fields.STR),
+    dex: new Ability("DEX", fields.DEX),
+    con: new Ability("CON", fields.CON),
+    int: new Ability("INT", fields.INT),
+    wis: new Ability("WIS", fields.WIS),
+    cha: new Ability("CHA", fields.CHA)
+  };
   
   const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const equipment = equipmentResponse.data.records.map((item) => {
@@ -99,20 +109,21 @@ export default async (firebaseUID) => {
   const companionFields = companionResponse.data.records[0].fields;
   const companionSkillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula={Companion ID}="${companionFields['Companion ID']}"`);
   const companionSkills = mapSkills(companionSkillsetResponse.data.records);
+  const companionAbilities = {
+    str: new Ability("STR", companionFields.STR[0]),
+    dex: new Ability("DEX", companionFields.DEX[0]),
+    con: new Ability("CON", companionFields.CON[0]),
+    int: new Ability("INT", companionFields.INT),
+    wis: new Ability("WIS", companionFields.WIS[0]),
+    cha: new Ability("CHA", companionFields.CHA[0])
+  }
   const companion = {
     name: companionFields.Name,
     type: companionFields['Animal Type'],
     hp: { 
       base: companionFields.HP 
     },
-    abilities: {
-      str: new Ability("STR", companionFields.STR[0]),
-      dex: new Ability("DEX", companionFields.DEX[0]),
-      con: new Ability("CON", companionFields.CON[0]),
-      int: new Ability("INT", companionFields.INT),
-      wis: new Ability("WIS", companionFields.WIS[0]),
-      cha: new Ability("CHA", companionFields.CHA[0])
-    },
+    abilities: companionAbilities,
     skills: companionSkills,
     speed: {
       ground: companionFields['Speed (ground)'],
@@ -125,6 +136,20 @@ export default async (firebaseUID) => {
       base: companionFields['AC'],
       touch: companionFields['AC Touch'],
       flat: companionFields['AC Flat']
+    },
+    saves: {
+      fortitude: {
+        name: "Fortitude",
+        base: Number(companionFields["Fort Base"]) + companionAbilities.con.mod
+      },
+      reflex: {
+        name: "Reflex",
+        base: Number(companionFields["Ref Base"]) + companionAbilities.dex.mod
+      },
+      will: {
+        name: "Will",
+        base: Number(companionFields["Will Base"]) + companionAbilities.wis.mod
+      }
     },
     attack: companionFields.Attack,
     features: companionFields.Features,
@@ -159,27 +184,20 @@ export default async (firebaseUID) => {
       hd: fields["Hit Die"][0],
       feats: fields["Feats - Text"],
       specialAbilities: fields["Special Abilities - Text"],
-      abilities: {
-        str: new Ability("STR", fields.STR),
-        dex: new Ability("DEX", fields.DEX),
-        con: new Ability("CON", fields.CON),
-        int: new Ability("INT", fields.INT),
-        wis: new Ability("WIS", fields.WIS),
-        cha: new Ability("CHA", fields.CHA)
-      },
+      abilities,
       skills: characterSkills,
       saves: {
         fortitude: {
           name: "Fortitude",
-          base: fields.Fortitude
+          base: Number(fields["Fort Base"]) + abilities.con.mod
         },
         reflex: {
           name: "Reflex",
-          base: fields.Reflex
+          base: Number(fields["Ref Base"]) + abilities.dex.mod
         },
         will: {
           name: "Will",
-          base: fields.Will
+          base: Number(fields["Will Base"]) + abilities.wis.mod
         }
       },
       bab: [

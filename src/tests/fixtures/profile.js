@@ -46,31 +46,22 @@ export default {
         mod:0
       }
     },
-    skills:[
-      'Hide (4)',
-      'Climb (3)',
-      'Listen (5)',
-      'Decipher Script (10)',
-      'Escape Artist (4)',
-      'Sense Motive (5)',
-      'Knowledge (Arcana) (11)',
-      'Use Rope (4)',
-      'Survival (2)',
-      'Swim (2)',
-      'Appraise (8)',
-      'Spellcraft (12)',
-      'Heal (2)',
-      'Balance (4)',
-      'Search (10)',
-      'Ride (4)',
-      'Concentration (9)',
-      'Craft (Trapmaking) (12)',
-      'Jump (2)',
-      'Forgery (5)',
-      'Knowledge (Arch. & Eng.) (10)',
-      'Craft (Sculpting) (13)',
-      'Spot (4)'
-    ],
+    skills:[{
+      name: "Hide",
+      ranks: 4
+    },{
+      name: "Climb",
+      ranks: 3
+    }, {
+      name: "Listen",
+      ranks: 5
+    }, {
+      name: "Decipher Script",
+      ranks: 10
+    }, {
+      name: "Knowledge (Arcana)",
+      ranks: 11
+    }],
     saves: {
       fortitude: {
         name: "Fortitude",
@@ -195,20 +186,68 @@ export default {
         used: 1,
         remaining: 1
       }],
-      spellsPerDay: 4
+    spellsPerDay: 4
     },{
-        spells: [{
-          id: 678,
-          level: 1,
-          name: "Charm Person",
-          description: "Make someone like you",
-          school: "Ench",
-          mastered: false,
-          prepared: 1,
-          used: 1,
-          remaining: 0
-        }],
-        spellsPerDay: 3
-    }]
+    spells: [{
+      id: 678,
+      level: 1,
+      name: "Charm Person",
+      description: "Make someone like you",
+      school: "Ench",
+      mastered: false,
+      prepared: 1,
+      used: 1,
+      remaining: 0
+    }],
+    spellsPerDay: 3
+    }],
+    companion: {
+      name: "Nyx",
+      type: "Raven",
+      hp: { 
+        base: 16 
+      },
+      abilities: {
+        str: 1,
+        dex: 15,
+        con: 10,
+        int: 8,
+        wis: 14,
+        cha: 6
+      },
+      skills: [{
+        name: "Hide",
+        ranks: 10
+      },{
+        name: "Climb",
+        ranks: 3
+      }, {
+        name: "Listen",
+        ranks: 5
+      }, {
+        name: "Concentration",
+        ranks: 9
+      }, {
+        name: "Spot",
+        ranks: 5
+      }],
+      speed: {
+        ground: 10,
+        flight: 40,
+      },
+      initiative: {
+        base: 2
+      },
+      ac: {
+        base: 14,
+        touch: 14,
+        flat: 12
+      },
+      attack: "Claws +4 melee (1d2–5)",
+      features: "Empathic Link, Share Spells, Improved Evasion, Deliver Touch Spells, Speak with Master",
+      feats: "Weapon Finesse, Alertness",
+      specialAbilities: "Low-Light Vision",
+      benefit: "Master gains a +3 bonus on Appraise checks"
+    }
   }
 }

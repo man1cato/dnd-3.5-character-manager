@@ -49,37 +49,37 @@ export class CombatPage extends React.Component {
   onInputChange = (e) => {
     const name = e.target.name;
     const id = e.target.id;
-    let mod = Number(e.target.value);
-    mod = (mod === 0 || isNaN(mod)) ? "" : mod;
+    let value = Number(e.target.value);
+    value = (value === 0 || isNaN(value)) ? "" : value;
     let total;
     this.setState((prevState) => {
       if (name === "hp") {
-        if (id === "hpDamage") {
-          total = this.props.hp.base + prevState.hp.mod - mod;
-          return {hp: update(prevState.hp, {
-            damage: { $set: mod },
-            total: { $set: total }
-          })}
-        } 
-        total = this.props.hp.base + mod - prevState.hp.damage;
-        return {hp: update(prevState.hp, {
-          mod: { $set: mod },
-          total: { $set: total }
-        })}
-      } 
-      if (name === "saves" || name === "attacks") {
-        total = this.props[name][id].base + mod;
-        return {[name]: update(prevState[name], {
-          [id]: {
-            mod: { $set: mod },
-            total: { $set: total }
+        if (id === "damage") {
+          total = this.props.hp.base + prevState.hp.mod - value;
+          return {
+            hp: update(prevState.hp, {
+              damage: { $set: value },
+              total: { $set: total }
+            })
           }
-        })}
+        } 
+        total = this.props.hp.base + value - prevState.hp.damage;
+      } else if (name === "saves" || name === "attacks") {
+        total = this.props[name][id].base + value;
+        return {
+          [name]: update(prevState[name], {
+            [id]: {
+              mod: { $set: value },
+              total: { $set: total }
+            }
+          })
+        }
+      } else {
+        total = this.props[name].base + value;
       }
-      total = this.props[name].base + mod;
       return {
         [name]: update(prevState[name], {
-          mod: { $set: mod },
+          mod: { $set: value },
           total: { $set: total }          
         })
       }
@@ -93,11 +93,11 @@ export class CombatPage extends React.Component {
         <div className="container container--body">
 
           <PhysicalStats
-              hp={this.state.hp}
-              ac={this.props.ac}
-              initiative={this.state.initiative}
-              speed={this.props.speed}
-              onInputChange={this.onInputChange}
+            hp={this.state.hp}
+            ac={this.props.ac}
+            initiative={this.state.initiative}
+            speed={this.props.speed}
+            onInputChange={this.onInputChange}
           />                              
 
           <Saves

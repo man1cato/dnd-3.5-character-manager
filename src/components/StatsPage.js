@@ -12,18 +12,12 @@ export class StatsPage extends React.Component {
   constructor(props) {
     super(props);
     
-    let abilities = this.props.abilities;
-    Object.keys(abilities).forEach((ability) => {
-      abilities[ability].tempScore = abilities[ability].tempScore || "";
-      abilities[ability].tempMod = abilities[ability].tempMod || "";
-    });
-
     this.state = {
-      abilities
+      abilities: this.props.abilities
     }
   }
 
-  onTempScoreChange = (e) => {
+  onInputChange = (e) => {
     const ability = e.target.id;
     const value = Number(e.target.value);
     const tempScore = value === 0 || isNaN(value) ? "" : value;
@@ -60,7 +54,7 @@ export class StatsPage extends React.Component {
 
           <Abilities
             abilities={this.state.abilities}
-            onTempScoreChange={this.onTempScoreChange}
+            onInputChange={this.onInputChange}
           />
 
           <Skills skills={this.props.skills}/>

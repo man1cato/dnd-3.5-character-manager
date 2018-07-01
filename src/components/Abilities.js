@@ -1,33 +1,38 @@
 import React from 'react';
 
-const Abilities = ({ abilities, onTempScoreChange }) => (
+const Abilities = ({ abilities, onInputChange }) => (
   <div className="grid grid--abilities">
-    <h4 className="grid__col1">Ability</h4>
-    <h4 className="grid__col2">Score</h4>
-    <h4 className="grid__col3">Mod</h4>
-    <h4 className="grid__col4">Temp Score</h4>
-    <h4 className="grid__col5">Temp Mod</h4>
-    {Object.entries(abilities).map((ability, i) =>
-      <div className="grid__col1" key={i}>{ability[1].name}</div>
+    <h5 className="grid__col1">Ability</h5>
+    {Object.keys(abilities).map((ability, i) =>
+      <div className="grid__col1" key={i}>{abilities[ability].name}</div>
     )}
-    {Object.entries(abilities).map((ability, i) =>
-      <div className="grid__col2" key={i}>{ability[1].score}</div>
+
+    <h5 className="grid__col2">Score</h5>
+    {Object.keys(abilities).map((ability, i) =>
+      <div className="grid__col2" key={i}>{abilities[ability].score}</div>
     )}
-    {Object.entries(abilities).map((ability, i) =>
-      <div className="grid__col3" key={i}>{ability[1].mod}</div>
+
+    <h5 className="grid__col3">Mod</h5>
+    {Object.keys(abilities).map((ability, i) =>
+      <div className="grid__col3" key={i}>{abilities[ability].mod}</div>
     )}
-    {Object.entries(abilities).map((ability, i) =>
+
+    <h5 className="grid__col4">Temp Score</h5>
+    {Object.keys(abilities).map((ability, i) =>
       <input
         className="grid__col4"
         key={i}
-        id={ability[0]}
+        id={ability}
+        name="abilities"
         type="text"
-        value={ability[1].tempScore}
-        onChange={onTempScoreChange}
+        value={abilities[ability].tempScore}
+        onChange={onInputChange}
       />
     )}
-    {Object.entries(abilities).map((ability, i) =>
-      <div className="grid__col5" key={i}>{ability[1].tempMod}</div>
+
+    <h5 className="grid__col5">Temp Mod</h5>
+    {Object.keys(abilities).map((ability, i) =>
+      <div className="grid__col5" key={i}>{abilities[ability].tempMod}</div>
     )}
   </div>
 )

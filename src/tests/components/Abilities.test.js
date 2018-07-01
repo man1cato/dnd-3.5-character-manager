@@ -9,13 +9,13 @@ const profileData = {
   ...profile.fields
 };
 
-let wrapper, onTempScoreChange;
+let wrapper, onInputChange;
 
 beforeEach(() => {
-  onTempScoreChange = jest.fn();
+  onInputChange = jest.fn();
   wrapper = shallow(
     <Abilities
-      onTempScoreChange={onTempScoreChange}
+      onInputChange={onInputChange}
       {...profileData}
     />
   );
@@ -25,12 +25,12 @@ test('should render abilities with profile data', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should handle temp score change', () => {
+test('should handle input change', () => {
   const value = 14;
   wrapper.find({ id: 'str' }).simulate('change', {
     target: { value }
   });
-  expect(onTempScoreChange).toHaveBeenCalledWith({
+  expect(onInputChange).toHaveBeenCalledWith({
     target: { value }
   });
 });

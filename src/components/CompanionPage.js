@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import Abilities from './Abilities';
 import Skills from './Skills';
 import PhysicalStats from './PhysicalStats';
 import { startEditProfile } from '../actions/profile';
@@ -24,7 +25,8 @@ export class CompanionPage extends React.Component {
                 base: this.props.initiative.base, 
                 mod: this.props.initiative.mod || "",
                 total: this.props.initiative.total || this.props.initiative.base
-            }
+            }, 
+            abilities: this.props.abilities
         }
     }
 
@@ -35,42 +37,54 @@ export class CompanionPage extends React.Component {
     onInputChange = (e) => {
         const name = e.target.name;
         const id = e.target.id;
-        let mod = Number(e.target.value);
-        mod = (mod === 0 || isNaN(mod)) ? "" : mod;
+        let value = Number(e.target.value);
+        value = (value === 0 || isNaN(value)) ? "" : value;
+        let tempMod;
         let total;
+
         this.setState((prevState) => {
-          if (name === "hp") {
-            if (id === "hpDamage") {
-              total = this.props.hp.base + prevState.hp.mod - mod;
-              return {hp: update(prevState.hp, {
-                damage: { $set: mod },
-                total: { $set: total }
-              })}
-            } 
-            total = this.props.hp.base + mod - prevState.hp.damage;
-            return {hp: update(prevState.hp, {
-              mod: { $set: mod },
-              total: { $set: total }
-            })}
-          } 
-          if (name === "saves" || name === "attacks") {
-            total = this.props[name][id].base + mod;
-            return {[name]: update(prevState[name], {
-              [id]: {
-                mod: { $set: mod },
-                total: { $set: total }
-              }
-            })}
-          }
-          total = this.props[name].base + mod;
-          return {
-            [name]: update(prevState[name], {
-              mod: { $set: mod },
-              total: { $set: total }          
-            })
-          }
+            if (name === "hp") {
+                if (id === "damage") {
+                    total = this.props.hp.base + prevState.hp.mod - value;
+                    return {
+                        hp: update(prevState.hp, {
+                            damage: { $set: value },
+                            total: { $set: total }
+                        })
+                    }
+                } 
+                total = this.props.hp.base + value - prevState.hp.damage;
+            } else if (name === "saves" || name === "attacks") {
+                total = this.props[name][id].base + value;
+                return {
+                    [name]: update(prevState[name], {
+                      [id]: {
+                        mod: { $set: value },
+                        total: { $set: total }
+                      }
+                    })
+                  }
+            } else if (name === "abilities") {
+                tempMod = value === "" ? "" : Math.floor(value/2 - 5);
+                return {
+                    abilities: update(prevState.abilities, {
+                        [id]: {
+                            tempScore: {$set: value},
+                            tempMod: {$set: tempMod}
+                        }
+                    })
+                }
+            } else {
+                total = this.props[name].base + value;
+            }
+            return {
+                [name]: update(prevState[name], {
+                    mod: { $set: value },
+                    total: { $set: total }          
+                })
+            }
         });
-      }
+    }
 
     render() {
         return (
@@ -88,20 +102,10 @@ export class CompanionPage extends React.Component {
                         <div>{this.props.features}</div>                        
                     </div>
 
-                    <div className="grid grid--abilities">
-                        <h4 className="grid__col1">Ability</h4>
-                        <h4 className="grid__col2">Score</h4>
-                        <h4 className="grid__col3">Mod</h4>
-                        {Object.entries(this.props.abilities).map((ability, i) =>
-                            <div className="grid__col1" key={i}>{ability[1].name}</div>
-                        )}
-                        {Object.entries(this.props.abilities).map((ability, i) =>
-                            <div className="grid__col2" key={i}>{ability[1].score}</div>
-                        )}
-                        {Object.entries(this.props.abilities).map((ability, i) =>
-                            <div className="grid__col3" key={i}>{ability[1].mod}</div>
-                        )}
-                    </div>
+                    <Abilities
+                        abilities={this.state.abilities}
+                        onInputChange={this.onInputChange}
+                    />
 
                     <Skills skills={this.props.skills}/>
                     

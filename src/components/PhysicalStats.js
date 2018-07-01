@@ -13,21 +13,21 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
             <div className="row__item">
                 <h5>Mod</h5>
                 <input
-                type="text"
-                name="hp"
-                value={hp.mod}
-                onChange={onInputChange}
+                    type="text"
+                    name="hp"
+                    value={hp.mod}
+                    onChange={onInputChange}
                 />
             </div>
             <div className="row__item--bottom">-</div>
             <div className="row__item">
                 <h5>Dmg</h5>
                 <input
-                type="text"
-                name="hp"
-                id="hpDamage"
-                value={hp.damage}
-                onChange={onInputChange}
+                    type="text"
+                    name="hp"
+                    id="damage"
+                    value={hp.damage}
+                    onChange={onInputChange}
                 />
             </div>
             <div className="row__item--bottom">=</div>
@@ -63,10 +63,10 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
             <div className="row__item">
                 <h5>Mod</h5>
                 <input
-                type="text"
-                name="initiative"
-                value={initiative.mod}
-                onChange={onInputChange}
+                    type="text"
+                    name="initiative"
+                    value={initiative.mod}
+                    onChange={onInputChange}
                 />
             </div>
             <div className="row__item--bottom">=</div>
@@ -79,14 +79,14 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
         <div className="row__title">Speed</div>
         {speed.ground ? 
             <div className="row row--left">   
-                    <div className="row__item">
-                        <h5>Ground</h5>
-                        <div>{speed.ground}</div>
-                    </div>
-                    <div className="row__item">
-                        <h5>Flight</h5>
-                        <div>{speed.flight}</div>
-                    </div>                 
+                <div className="row__item">
+                    <h5>Ground</h5>
+                    <div>{speed.ground}</div>
+                </div>
+                <div className="row__item">
+                    <h5>Flight</h5>
+                    <div>{speed.flight}</div>
+                </div>                 
             </div>
         :
             <div className="row row--left">{speed} ft/round</div>            

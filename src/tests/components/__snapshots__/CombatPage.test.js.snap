@@ -8,174 +8,32 @@ exports[`should render combat page with profile data 1`] = `
   <div
     className="container container--body"
   >
-    <h3
-      className="row row--center"
-    >
-      Hit Points
-    </h3>
-    <div
-      className="grid grid--7col"
-    >
-      <div
-        className="row__item"
-      >
-        <h5>
-          Base
-        </h5>
-        <div>
-          32
-        </div>
-      </div>
-      <div>
-        +
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Mod
-        </h5>
-        <input
-          name="hp"
-          onChange={[Function]}
-          type="text"
-          value={6}
-        />
-      </div>
-      <div>
-        -
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Damage
-        </h5>
-        <input
-          id="hpDamage"
-          name="hp"
-          onChange={[Function]}
-          type="text"
-          value={10}
-        />
-      </div>
-      <div>
-        =
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Current
-        </h5>
-        <div>
-          32
-        </div>
-      </div>
-    </div>
-    <h3
-      className="row row--center"
-    >
-      Armor Class
-    </h3>
-    <div
-      className="grid grid--3col"
-    >
-      <div
-        className="row__item"
-      >
-        <h5>
-          Base
-        </h5>
-        <div>
-          14
-        </div>
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Flat
-        </h5>
-        <div>
-          10
-        </div>
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Touch
-        </h5>
-        <div>
-          14
-        </div>
-      </div>
-    </div>
-    <h3
-      className="row row--center"
-    >
-      Movement
-    </h3>
-    <div
-      className="grid grid--6col"
-    >
-      <div
-        className="grid__col1"
-      >
-        Speed
-      </div>
-      <div
-        className="grid__speed"
-      >
-        30
-         ft/round
-      </div>
-      <div
-        className="grid__col1"
-      >
-        Initiative
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Base
-        </h5>
-        <div>
-          2
-        </div>
-      </div>
-      <div>
-        +
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Mod
-        </h5>
-        <input
-          name="initiative"
-          onChange={[Function]}
-          type="text"
-          value={1}
-        />
-      </div>
-      <div>
-        =
-      </div>
-      <div
-        className="row__item"
-      >
-        <h5>
-          Total
-        </h5>
-        <div>
-          2
-        </div>
-      </div>
-    </div>
+    <PhysicalStats
+      ac={
+        Object {
+          "base": 14,
+          "flat": 10,
+          "touch": 14,
+        }
+      }
+      hp={
+        Object {
+          "base": 32,
+          "damage": 10,
+          "mod": 6,
+          "total": 32,
+        }
+      }
+      initiative={
+        Object {
+          "base": 2,
+          "mod": 1,
+          "total": 2,
+        }
+      }
+      onInputChange={[Function]}
+      speed={30}
+    />
     <Saves
       onInputChange={[Function]}
       saves={

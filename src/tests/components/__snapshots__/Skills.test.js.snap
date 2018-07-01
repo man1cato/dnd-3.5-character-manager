@@ -4,205 +4,81 @@ exports[`should render skills with profile data 1`] = `
 <div
   className="grid grid--skills"
 >
-  <h4
+  <h5
     className="grid--skills__name"
   >
     Skill
-  </h4>
-  <h4>
+  </h5>
+  <div
+    className="grid__col1 grid--skills__name"
+    key="0"
+  >
+    Hide
+  </div>
+  <div
+    className="grid__col1 grid--skills__name"
+    key="1"
+  >
+    Climb
+  </div>
+  <div
+    className="grid__col1 grid--skills__name"
+    key="2"
+  >
+    Listen
+  </div>
+  <h5>
     Ranks
-  </h4>
-  <h4
+  </h5>
+  <div
+    className="grid__col2"
+    key="0"
+  >
+    4
+  </div>
+  <div
+    className="grid__col2"
+    key="1"
+  >
+    3
+  </div>
+  <div
+    className="grid__col2"
+    key="2"
+  >
+    5
+  </div>
+  <h5
     className="grid--skills__name"
   >
     Skill
-  </h4>
-  <h4>
+  </h5>
+  <div
+    className="grid__col3 grid--skills__name"
+    key="0"
+  >
+    Decipher Script
+  </div>
+  <div
+    className="grid__col3 grid--skills__name"
+    key="1"
+  >
+    Knowledge (Arcana)
+  </div>
+  <h5>
     Ranks
-  </h4>
-  <div
-    className="grid__col1 grid--skills__name"
-    key="0"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="1"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="2"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="3"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="4"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="5"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="6"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="7"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="8"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="9"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="10"
-  />
-  <div
-    className="grid__col1 grid--skills__name"
-    key="11"
-  />
-  <div
-    className="grid__col2"
-    key="0"
-  />
-  <div
-    className="grid__col2"
-    key="1"
-  />
-  <div
-    className="grid__col2"
-    key="2"
-  />
-  <div
-    className="grid__col2"
-    key="3"
-  />
-  <div
-    className="grid__col2"
-    key="4"
-  />
-  <div
-    className="grid__col2"
-    key="5"
-  />
-  <div
-    className="grid__col2"
-    key="6"
-  />
-  <div
-    className="grid__col2"
-    key="7"
-  />
-  <div
-    className="grid__col2"
-    key="8"
-  />
-  <div
-    className="grid__col2"
-    key="9"
-  />
-  <div
-    className="grid__col2"
-    key="10"
-  />
-  <div
-    className="grid__col2"
-    key="11"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="0"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="1"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="2"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="3"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="4"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="5"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="6"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="7"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="8"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="9"
-  />
-  <div
-    className="grid__col3 grid--skills__name"
-    key="10"
-  />
+  </h5>
   <div
     className="grid__col4"
     key="0"
-  />
+  >
+    10
+  </div>
   <div
     className="grid__col4"
     key="1"
-  />
-  <div
-    className="grid__col4"
-    key="2"
-  />
-  <div
-    className="grid__col4"
-    key="3"
-  />
-  <div
-    className="grid__col4"
-    key="4"
-  />
-  <div
-    className="grid__col4"
-    key="5"
-  />
-  <div
-    className="grid__col4"
-    key="6"
-  />
-  <div
-    className="grid__col4"
-    key="7"
-  />
-  <div
-    className="grid__col4"
-    key="8"
-  />
-  <div
-    className="grid__col4"
-    key="9"
-  />
-  <div
-    className="grid__col4"
-    key="10"
-  />
+  >
+    11
+  </div>
 </div>
 `;
