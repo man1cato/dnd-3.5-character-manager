@@ -108,7 +108,7 @@ export default {
         range: "80 ft.",
         damageMed: "1d8",
         critical: "19–20/×2",
-        attackType: "Ranged",
+        encumbrance: "Ranged",
         damageType: "Piercing",
         weaponType: "Exotic"
       },
@@ -118,7 +118,7 @@ export default {
         range: "—",
         damageMed: "1d8",
         critical: "19–20/×2",
-        attackType: "One-Handed Melee",
+        encumbrance: "One-Handed Melee",
         damageType: "Slashing",
         weaponType: "Martial"
       }

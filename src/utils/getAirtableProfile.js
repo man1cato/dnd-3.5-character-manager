@@ -77,7 +77,7 @@ export default async (firebaseUID) => {
       damageMed: weapon.fields["Damage (M)"],
       critical: weapon.fields.Critical,
       weaponType: weapon.fields["Weapon Type"],
-      attackType: weapon.fields["Attack Type"],
+      encumbrance: weapon.fields.Encumbrance,
       damageType: weapon.fields["Damage Type"].join(" / ")
     }
   });
@@ -151,8 +151,7 @@ export default async (firebaseUID) => {
         base: Number(companionFields["Will Base"]) + companionAbilities.wis.mod
       }
     },
-    attack: companionFields.Attack,
-    features: companionFields.Features,
+    attack: companionFields.Attack[0],
     feats: companionFields['Feats Text'],
     specialAbilities: companionFields['Special Abilities Text'],
     benefit: companionFields['Owner Benefit']

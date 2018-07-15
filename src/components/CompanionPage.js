@@ -7,6 +7,7 @@ import Header from './Header';
 import Abilities from './Abilities';
 import Skills from './Skills';
 import PhysicalStats from './PhysicalStats';
+import Weapons from './Weapons';
 import { startEditProfile } from '../actions/profile';
 
 
@@ -97,11 +98,10 @@ export class CompanionPage extends React.Component {
                         <h4>Feats</h4>
                         <div>{this.props.feats}</div>
                         <h4>Special Abilities</h4>
-                        <div>{this.props.specialAbilities}</div>
-                        <h4>Features</h4>
-                        <div>{this.props.features}</div>                        
+                        <div>{this.props.specialAbilities}</div>                    
                     </div>
 
+                    <h3 className="row row--center">Stats</h3>
                     <Abilities
                         abilities={this.state.abilities}
                         onInputChange={this.onInputChange}
@@ -117,6 +117,13 @@ export class CompanionPage extends React.Component {
                         speed={this.props.speed}
                         onInputChange={this.onInputChange}
                     />
+
+                    <div className="grid grid--combat">
+                        <div className="row__title">Attack</div>
+                        <div className="row row--left">            
+                                {this.props.attack}
+                        </div>
+                    </div>
 
                 </div>
             </div>
