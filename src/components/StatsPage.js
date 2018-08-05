@@ -5,13 +5,14 @@ import {startEditProfile} from '../actions/profile';
 
 import Header from './Header';
 import Abilities from './Abilities';
-import Skills from './Skills';
+import SkillSet from './SkillSet';
 
 
 export class StatsPage extends React.Component {
   state = {
-      abilities: this.props.abilities
-    }
+    abilities: this.props.abilities,
+    selectedSkill: undefined
+  }
 
   onInputChange = (e) => {
     const ability = e.target.id;
@@ -28,8 +29,22 @@ export class StatsPage extends React.Component {
     }))
   }
 
+  handlePick = (e) => {
+    const skillId = e.target.id;
+    console.log('skillId', skillId);
+    const selectedSkill = this.props.skills.filter((skill) => skill.id === skillId)[0];
+    console.log('selectedSkill', selectedSkill);
+    this.setState({selectedSkill});
+  }
+
+  handleCloseModal = () => {
+      this.setState({selectedSkill: undefined});
+  }
+
   componentWillUnmount() {
-    this.props.startEditProfile(this.props.id, this.state);
+    this.props.startEditProfile(this.props.id, {
+      abilities: this.state.abilities
+    });
   }
 
   render () {
@@ -53,7 +68,12 @@ export class StatsPage extends React.Component {
             onInputChange={this.onInputChange}
           />
 
-          <Skills skills={this.props.skills}/>
+          <SkillSet 
+            skillSet={this.props.skillSet}
+            selectedSkill={this.state.selectedSkill}
+            handlePick={this.handlePick}
+            handleCloseModal={this.handleCloseModal}
+          />
 
         </div>
       </div>
@@ -64,7 +84,8 @@ export class StatsPage extends React.Component {
 const mapStateToProps = (state) => ({
   uid: state.auth.uid,
   ...state.profile,
-  skills: state.profile.skills
+  skillSet: state.profile.skillSet,
+  skills: state.skills
 })
 
 const mapDispatchToProps = (dispatch, props) => ({ 

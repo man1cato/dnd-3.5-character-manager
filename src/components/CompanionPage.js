@@ -5,7 +5,7 @@ import update from 'react-addons-update';
 
 import Header from './Header';
 import Abilities from './Abilities';
-import Skills from './Skills';
+import SkillSet from './SkillSet';
 import PhysicalStats from './PhysicalStats';
 import Weapons from './Weapons';
 import { startEditProfile } from '../actions/profile';
@@ -103,7 +103,7 @@ export class CompanionPage extends React.Component {
                         onInputChange={this.onInputChange}
                     />
 
-                    <Skills skills={this.props.skills}/>
+                    <SkillSet skillSet={this.props.skillSet}/>
                     
                     <h3 className="row row--center">Combat</h3>
                     <PhysicalStats

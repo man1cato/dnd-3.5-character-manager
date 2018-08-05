@@ -15,6 +15,7 @@ class Ability {
 }
 
 const mapSkills = (skillset) => skillset.map((skill) => ({
+  id: skill.fields["Skill ID"],
   name: skill.fields.Name || "",
   ranks: skill.fields["Total Ranks"] || 0
 })).sort(compareByName);
@@ -28,7 +29,7 @@ export default async (firebaseUID) => {
   const ownerFilter = `{Owner ID}="${characterId}"`;
 
   const characterSkillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
-  const characterSkills = mapSkills(characterSkillsetResponse.data.records);
+  const characterSkillSet = mapSkills(characterSkillsetResponse.data.records);
 
   const level = fields.Level[0];
   const xp = fields.XP;
@@ -104,7 +105,7 @@ export default async (firebaseUID) => {
   const companionResponse = await axios.get(`${baseUrl}/Companions?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const companionFields = companionResponse.data.records[0].fields;
   const companionSkillsetResponse = await axios.get(`${baseUrl}/Skillsets?api_key=${apiKey}&filterByFormula={Companion ID}="${companionFields['Companion ID']}"`);
-  const companionSkills = mapSkills(companionSkillsetResponse.data.records);
+  const companionSkillSet = mapSkills(companionSkillsetResponse.data.records);
   const companionAbilities = {
     str: new Ability("STR", companionFields.STR[0]),
     dex: new Ability("DEX", companionFields.DEX[0]),
@@ -120,7 +121,7 @@ export default async (firebaseUID) => {
       base: companionFields.HP 
     },
     abilities: companionAbilities,
-    skills: companionSkills,
+    skillSet: companionSkillSet,
     speed: {
       ground: companionFields['Speed (ground)'],
       flight: companionFields['Speed (flight)'],
@@ -180,7 +181,7 @@ export default async (firebaseUID) => {
       feats: fields["Feats - Text"],
       specialAbilities: fields["Special Abilities - Text"],
       abilities,
-      skills: characterSkills,
+      skillSet: characterSkillSet,
       saves: {
         fortitude: {
           name: "Fortitude",
