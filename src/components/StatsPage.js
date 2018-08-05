@@ -31,14 +31,12 @@ export class StatsPage extends React.Component {
 
   handlePick = (e) => {
     const skillId = e.target.id;
-    console.log('skillId', skillId);
     const selectedSkill = this.props.skills.filter((skill) => skill.id === skillId)[0];
-    console.log('selectedSkill', selectedSkill);
     this.setState({selectedSkill});
   }
 
   handleCloseModal = () => {
-      this.setState({selectedSkill: undefined});
+    this.setState({selectedSkill: undefined});
   }
 
   componentWillUnmount() {

@@ -7,6 +7,7 @@ import {login, logout} from './actions/auth';
 import {startSetProfile} from './actions/profile';
 import {startSetSpells} from './actions/spells';
 import {startSetSkills} from './actions/skills';
+import {startSetFeats} from './actions/feats';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -42,6 +43,7 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(login(user.uid));
         store.dispatch(startSetSpells());
         store.dispatch(startSetSkills());
+        store.dispatch(startSetFeats());
         store.dispatch(startSetProfile(user.uid)).then(() => {
           renderApp();
           if (history.location.pathname === '/') {

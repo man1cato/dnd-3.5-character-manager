@@ -178,7 +178,7 @@ export default async (firebaseUID) => {
         base: fields.HP 
       },
       hd: fields["Hit Die"][0],
-      feats: fields["Feats - Text"],
+      feats: fields.Feats,
       specialAbilities: fields["Special Abilities - Text"],
       abilities,
       skillSet: characterSkillSet,

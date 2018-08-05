@@ -4,6 +4,8 @@ import authReducer from '../reducers/auth';
 import profileReducer from '../reducers/profile';
 import spellsReducer from '../reducers/spells';
 import skillsReducer from '../reducers/skills';
+import featsReducer from '../reducers/feats';
+
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -13,7 +15,8 @@ export default () => {
             auth: authReducer,
             profile: profileReducer,
             spells: spellsReducer,
-            skills: skillsReducer
+            skills: skillsReducer,
+            feats: featsReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
     );

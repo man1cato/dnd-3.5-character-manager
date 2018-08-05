@@ -15,7 +15,7 @@ export default async () => {
             name: spell.fields.Name,
             description: spell.fields.Description,
             school: spell.fields.School,
-            components: spell.fields.Components.toString(),
+            components: spell.fields.Components.join(", "),
             castingTime: spell.fields["Casting Time"],
             range: spell.fields.Range,
             effectArea: spell.fields["Target, Effect, Area"],

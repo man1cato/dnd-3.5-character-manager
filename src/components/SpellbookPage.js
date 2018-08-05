@@ -20,8 +20,7 @@ export class SpellbookPage extends React.Component {
 
     handlePick = (e) => {
         const spellId = e.target.id;
-        const selectedSpell = this.props.spells.filter((spell) => spell.id === spellId)[0];
-        console.log('selectedSpell', selectedSpell);
+        const selectedSpell = this.props.spells.find((spell) => spell.id === spellId);
         this.setState({selectedSpell});
     }
 
