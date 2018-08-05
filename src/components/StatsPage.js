@@ -9,13 +9,9 @@ import Skills from './Skills';
 
 
 export class StatsPage extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
+  state = {
       abilities: this.props.abilities
     }
-  }
 
   onInputChange = (e) => {
     const ability = e.target.id;

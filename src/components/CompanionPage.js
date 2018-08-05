@@ -12,23 +12,19 @@ import { startEditProfile } from '../actions/profile';
 
 
 export class CompanionPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            hp: {
-                base: this.props.hp.base,
-                mod: this.props.hp.mod || "",
-                damage: this.props.hp.damage || "",
-                total: this.props.hp.total || this.props.hp.base,
-            },
-            initiative: {
-                base: this.props.initiative.base, 
-                mod: this.props.initiative.mod || "",
-                total: this.props.initiative.total || this.props.initiative.base
-            }, 
-            abilities: this.props.abilities
-        }
+    state = {
+        hp: {
+            base: this.props.hp.base,
+            mod: this.props.hp.mod || "",
+            damage: this.props.hp.damage || "",
+            total: this.props.hp.total || this.props.hp.base,
+        },
+        initiative: {
+            base: this.props.initiative.base, 
+            mod: this.props.initiative.mod || "",
+            total: this.props.initiative.total || this.props.initiative.base
+        }, 
+        abilities: this.props.abilities
     }
 
     componentWillUnmount() {

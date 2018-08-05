@@ -4,28 +4,32 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import SpellModal from './SpellModal';
 import { startEditProfile } from '../actions/profile';
 
 
 export class SpellbookPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        let spellbook = this.props.spellbook;
-
-        for (let i = 0; i < spellbook.length; i++) {
-            spellbook[i].total = spellbook[i].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
-        }
-        this.state = {
-            spellbook
-        }
+    state = {
+        spellbook: this.props.spellbook,
+        selectedSpell: undefined
     }
 
     componentWillUnmount() {
-        this.props.startEditProfile(this.props.id, this.state);
+        this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
     }
 
-    onClick = (e) => {
+    handlePick = (e) => {
+        const spellId = e.target.id;
+        const selectedSpell = this.props.spells.filter((spell) => spell.id === spellId)[0];
+        console.log('selectedSpell', selectedSpell);
+        this.setState({selectedSpell});
+    }
+
+    handleCloseModal = () => {
+        this.setState({selectedSpell: undefined});
+    }
+
+    handleChange = (e) => {
         const level = e.target.getAttribute("level");
         const index = e.target.getAttribute("index");
         const attribute = e.target.getAttribute("attribute");
@@ -65,6 +69,10 @@ export class SpellbookPage extends React.Component {
         return (
             <div>
                 <Header pageTitle="Spellbook" />
+                <SpellModal 
+                    selectedSpell={this.state.selectedSpell}
+                    handleCloseModal={this.handleCloseModal}
+                />
                 <div className="container container--body">
 
                     {this.state.spellbook.map((page, level) => (
@@ -79,7 +87,14 @@ export class SpellbookPage extends React.Component {
                                 <h5>Rmng</h5>
 
                                 {page.spells.map((spell, i) => (
-                                    <div className="grid__col1" key={i}>{spell.name}</div>
+                                    <button 
+                                        id={spell.id}
+                                        className="grid__col1" 
+                                        key={i} 
+                                        onClick={this.handlePick}
+                                    >
+                                        {spell.name}
+                                    </button>
                                 ))}
                                 {page.spells.map((spell, i) => (
                                     <div className="grid--spells__school" key={i}>{spell.school.substr(0,4)}</div>
@@ -91,7 +106,7 @@ export class SpellbookPage extends React.Component {
                                             index={i}
                                             attribute="prepared"
                                             level={level}
-                                            onClick={this.onClick}
+                                            onClick={this.handleChange}
                                         >+</button>
                                         <div>{spell.prepared}</div>
                                         <button
@@ -99,7 +114,7 @@ export class SpellbookPage extends React.Component {
                                             index={i}
                                             attribute="prepared"
                                             level={level}
-                                            onClick={this.onClick}
+                                            onClick={this.handleChange}
                                         >-</button>
                                     </div>
                                 ))}
@@ -110,7 +125,7 @@ export class SpellbookPage extends React.Component {
                                             index={i}
                                             attribute="used"
                                             level={level}
-                                            onClick={this.onClick}
+                                            onClick={this.handleChange}
                                         >+</button>
                                         <div>{spell.used}</div>
                                         <button
@@ -118,7 +133,7 @@ export class SpellbookPage extends React.Component {
                                             index={i}
                                             attribute="used"
                                             level={level}
-                                            onClick={this.onClick}
+                                            onClick={this.handleChange}
                                         >-</button>
                                     </div>
                                 ))}
@@ -139,7 +154,8 @@ export class SpellbookPage extends React.Component {
 
 const mapStateToProps = (state) => ({
     id: state.profile.id,
-    spellbook: state.profile.spellbook
+    spellbook: state.profile.spellbook,
+    spells: state.spells
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

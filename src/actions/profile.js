@@ -1,4 +1,3 @@
-import axios from 'axios';
 import database from '../firebase/firebase';
 import getAirtableProfile from '../utils/getAirtableProfile';
 

@@ -38,7 +38,7 @@
     "react-addons-update": "^15.6.2",
     "react-dates": "^15.1.0",
     "react-dom": "^16.1.0",
-    "react-modal": "^3.1.2",
+    "react-modal": "^3.5.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-svg-inline": "^2.1.0",

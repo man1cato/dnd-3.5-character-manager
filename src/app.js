@@ -5,6 +5,7 @@ import AppRouter, {history} from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import {login, logout} from './actions/auth';
 import {startSetProfile} from './actions/profile';
+import {startSetSpells} from './actions/spells';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/initialize';
@@ -37,6 +38,7 @@ firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         console.log('logged in');
         store.dispatch(login(user.uid));
+        store.dispatch(startSetSpells())
         store.dispatch(startSetProfile(user.uid)).then(() => {
           renderApp();
           if (history.location.pathname === '/') {

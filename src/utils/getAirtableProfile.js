@@ -1,4 +1,5 @@
 import axios from 'axios';
+import compareByName from './compareByName';
 
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
@@ -11,14 +12,6 @@ class Ability {
     this.tempScore = "";
     this.tempMod = "";
   }
-}
-
-const compareByName = (a,b) => {
-  const aName = a.name.toUpperCase();
-  const bName = b.name.toUpperCase();
-  if (aName < bName) { return -1 };
-  if (aName > bName) { return 1 };
-  return 0;
 }
 
 const mapSkills = (skillset) => skillset.map((skill) => ({
@@ -87,7 +80,7 @@ export default async (firebaseUID) => {
     const prepared = spell.fields.Prepared || 0;
     const used = spell.fields.Used || 0;
     return {
-      id: spell.id,
+      id: spell.fields["Spell ID"][0],
       level: Number(spell.fields.Level),
       name: spell.fields.Name.replace(/"/g,""),
       description: spell.fields.Description[0],
@@ -100,10 +93,13 @@ export default async (firebaseUID) => {
   }).sort(compareByName);
   let spellsPerDay = [fields["SPD 0"][0], fields["SPD 1"][0], fields["SPD 2"][0], fields["SPD 3"][0], fields["SPD 4"][0], fields["SPD 5"][0], fields["SPD 6"][0], fields["SPD 7"][0], fields["SPD 8"][0], fields["SPD 9"][0]];
   spellsPerDay = spellsPerDay.filter((spd) => spd > 0);
-  const spellbook = spellsPerDay.map((spd, level) => ({
+  let spellbook = spellsPerDay.map((spd, level) => ({
     spells: spells.filter((spell) => spell.level == level),
     spellsPerDay: fields[`SPD ${level}`][0]
   }));
+  for (let i = 0; i < spellbook.length; i++) {
+    spellbook[i].total = spellbook[i].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
+  }
 
   const companionResponse = await axios.get(`${baseUrl}/Companions?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const companionFields = companionResponse.data.records[0].fields;
