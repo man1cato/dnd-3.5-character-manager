@@ -24,11 +24,8 @@ export class CompanionPage extends React.Component {
             mod: this.props.initiative.mod || "",
             total: this.props.initiative.total || this.props.initiative.base
         }, 
-        abilities: this.props.abilities
-    }
-
-    componentWillUnmount() {
-        this.props.startEditProfile(this.props.id, this.state);
+        abilities: this.props.abilities,
+        selectedSkill: undefined
     }
 
     onInputChange = (e) => {
@@ -83,6 +80,24 @@ export class CompanionPage extends React.Component {
         });
     }
 
+    handlePick = (e) => {
+        const skillId = e.target.id;
+        const selectedSkill = this.props.skills.filter((skill) => skill.id === skillId)[0];
+        this.setState({selectedSkill});
+    }
+
+    handleCloseModal = () => {
+        this.setState({selectedSkill: undefined});
+    }
+
+    componentWillUnmount() {
+        this.props.startEditProfile(this.props.id, {
+            hp: this.state.hp,
+            initiative: this.state.initiative,
+            abilities: this.state.abilities
+        });
+    }
+
     render() {
         return (
             <div>
@@ -103,7 +118,12 @@ export class CompanionPage extends React.Component {
                         onInputChange={this.onInputChange}
                     />
 
-                    <SkillSet skillSet={this.props.skillSet}/>
+                    <SkillSet 
+                        skillSet={this.props.skillSet}
+                        selectedSkill={this.state.selectedSkill}
+                        handlePick={this.handlePick}
+                        handleCloseModal={this.handleCloseModal}
+                    />
                     
                     <h3 className="row row--center">Combat</h3>
                     <PhysicalStats
@@ -129,7 +149,8 @@ export class CompanionPage extends React.Component {
 
 const mapStateToProps = (state) => ({
     id: state.profile.id,
-    ...state.profile.companion
+    ...state.profile.companion,
+    skills: state.skills
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

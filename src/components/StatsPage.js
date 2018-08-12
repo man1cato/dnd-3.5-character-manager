@@ -81,7 +81,11 @@ export class StatsPage extends React.Component {
 
 const mapStateToProps = (state) => ({
   uid: state.auth.uid,
-  ...state.profile,
+  hd: state.profile.hd,
+  level: state.profile.level,
+  xp: state.profile.xp,
+  toNextLevel: state.profile.toNextLevel,
+  abilities: state.profile.abilities,
   skillSet: state.profile.skillSet,
   skills: state.skills
 })

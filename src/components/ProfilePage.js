@@ -56,13 +56,14 @@ export class ProfilePage extends React.Component {
             <h4 className="grid--profile__features-key">Feats</h4>
             <div className="grid--profile__features-value">
               {this.props.profile.feats.map((featId) => (
-                  <button
-                    id={featId}
-                    onClick={this.handlePick}
-                  >
-                    {this.props.feats.find((feat) => feat.id === featId).name}
-                  </button>
-                ))}
+                <button
+                  id={featId}
+                  key={featId}
+                  onClick={this.handlePick}
+                >
+                  {this.props.feats.find((feat) => feat.id === featId).name}
+                </button>
+              ))}
             </div>
     
             <FeatModal 

@@ -60,21 +60,6 @@ export default async (firebaseUID) => {
     }
   }).sort(compareByName);
 
-  const weaponIds = equipment.filter((item) => item.category === "Weapon").map((weapon) => weapon.id);
-  const weaponsResponse = await axios.get(`${baseUrl}/Items?api_key=${apiKey}&filterByFormula={Category}="Weapon"`);  
-  const weapons = weaponIds.map((id) => {
-    const weapon = weaponsResponse.data.records.find((item) => item.id === id);
-    return {
-      id: weapon.id,
-      name: weapon.fields.Name,
-      range: weapon.fields.Range,
-      damageMed: weapon.fields["Damage (M)"],
-      critical: weapon.fields.Critical,
-      weaponType: weapon.fields["Weapon Type"],
-      encumbrance: weapon.fields.Encumbrance,
-      damageType: weapon.fields["Damage Type"].join(" / ")
-    }
-  });
 
   const spellbookResponse = await axios.get(`${baseUrl}/Spellbooks?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
   const spells = spellbookResponse.data.records.map((spell) => {
@@ -225,7 +210,7 @@ export default async (firebaseUID) => {
       initiative: {
         base: fields["STR Mod"]
       },      
-      weapons,
+      weaponSet: equipment.filter((item) => item.category === "Weapon").map((weapon) => weapon.id),
       money: {
         pp: equipment.find((item) => item.name === "Platinum Piece") ? equipment.find((item) => item.name === "Platinum Piece").qty : 0,
         gp: equipment.find((item) => item.name === "Gold Piece") ? equipment.find((item) => item.name === "Gold Piece").qty : 0,

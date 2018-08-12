@@ -111,7 +111,7 @@ export class CombatPage extends React.Component {
           />
 
           <Weapons 
-            weapons={this.props.weapons}
+            weaponSet={this.props.weaponSet}
             meleeBonus={this.state.attacks.melee.total}
             rangedBonus={this.state.attacks.ranged.total}
             grappleBonus={this.state.attacks.grapple.total}
@@ -132,7 +132,7 @@ const mapStateToProps = (state) => ({
   saves: state.profile.saves,
   bab: state.profile.bab,
   attacks: state.profile.attacks,
-  weapons: state.profile.weapons
+  weaponSet: state.profile.weaponSet
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
