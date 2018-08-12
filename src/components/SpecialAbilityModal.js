@@ -3,11 +3,11 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#app');
 
-const FeatModal = ({selected, handleCloseModal}) => (
+const SpecialAbilityModal = ({selected, handleCloseModal}) => (
     <Modal
         isOpen={!!selected}
         onRequestClose={handleCloseModal}
-        contentLabel="Selected Feat"
+        contentLabel="Selected Special Ability"
     >
         {selected && 
             <div>
@@ -20,4 +20,4 @@ const FeatModal = ({selected, handleCloseModal}) => (
 
 )
 
-export default FeatModal;
+export default SpecialAbilityModal;

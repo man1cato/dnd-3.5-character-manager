@@ -11,21 +11,21 @@ import { startEditProfile } from '../actions/profile';
 export class SpellbookPage extends React.Component {
     state = {
         spellbook: this.props.spellbook,
-        selectedSpell: undefined
+        selected: undefined
     }
 
     componentWillUnmount() {
         this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
     }
 
-    handlePick = (e) => {
+    handleOpenModal = (e) => {
         const spellId = e.target.id;
-        const selectedSpell = this.props.spells.find((spell) => spell.id === spellId);
-        this.setState({selectedSpell});
+        const selected = this.props.spells.find((spell) => spell.id === spellId);
+        this.setState({selected});
     }
 
     handleCloseModal = () => {
-        this.setState({selectedSpell: undefined});
+        this.setState({selected: undefined});
     }
 
     handleChange = (e) => {
@@ -69,7 +69,7 @@ export class SpellbookPage extends React.Component {
             <div>
                 <Header pageTitle="Spellbook" />
                 <SpellModal 
-                    selectedSpell={this.state.selectedSpell}
+                    selected={this.state.selected}
                     handleCloseModal={this.handleCloseModal}
                 />
                 <div className="container container--body">
@@ -90,8 +90,7 @@ export class SpellbookPage extends React.Component {
                                         id={spell.id}
                                         className="grid__col1" 
                                         key={i} 
-                                        onClick={this.handlePick}
-                                    >
+                                        onClick={this.handleOpenModal}                                   >
                                         {spell.name}
                                     </button>
                                 ))}

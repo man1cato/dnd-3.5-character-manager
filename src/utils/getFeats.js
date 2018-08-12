@@ -9,9 +9,9 @@ export default async () => {
     let feats = [];
 
     do {
-        const featsResponse = await axios.get(`${baseUrl}/Feats?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '') );
-        offset = featsResponse.data.offset;
-        const featGroup = featsResponse.data.records.map((feat) =>  ({
+        const res = await axios.get(`${baseUrl}/Feats?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '') );
+        offset = res.data.offset;
+        const featGroup = res.data.records.map((feat) =>  ({
             id: feat.id,
             name: feat.fields.Name,
             type: feat.fields.Type.join(", "),

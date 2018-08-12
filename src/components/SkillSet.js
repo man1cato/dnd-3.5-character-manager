@@ -1,53 +1,75 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import SkillModal from './SkillModal';
 
-const SkillSet = ({skillSet, selectedSkill, handlePick, handleCloseModal}) => {
-  const skillCount = skillSet.length;
-  const col1 = skillSet.slice(0, Math.ceil(skillCount / 2));
-  const col2 = skillSet.slice(Math.ceil(skillCount / 2));
+export class SkillSet extends React.Component{
+  state = {
+    selectedSkill: undefined
+  }  
 
-  return (
-    <div className="grid grid--skills">
-      <h5 className="grid--skills__name">Skill</h5>
-      {col1.map((skill, i) => (        
-        <button 
-          id={skill.id}
-          className="grid__col1 grid--skills__name" 
-          key={i}
-          onClick={handlePick}
-        >
-          {skill.name}
-        </button>
-      ))}
+  handlePick = (e) => {
+    const skillId = e.target.id;
+    const selectedSkill = this.props.skills.find((skill) => skill.id === skillId);
+    this.setState({selectedSkill});
+  }
 
-      <h5>Ranks</h5>
-      {col1.map((skill, i) => (
-        <div className="grid__col2" key={i}>{skill.ranks}</div>
-      ))}
-      
-      <h5 className="grid--skills__name">Skill</h5>
-      {col2.map((skill, i) => (
-        <button 
-          id={skill.id}
-          className="grid__col3 grid--skills__name" 
-          key={i}
-          onClick={handlePick}
-        >
-          {skill.name}
-        </button>
-      ))}
-      
-      <h5>Ranks</h5>        
-      {col2.map((skill, i) => (
-        <div className="grid__col4" key={i}>{skill.ranks}</div>
-      ))}
+  handleCloseModal = () => {
+    this.setState({selectedSkill: undefined});
+  }
+  
+  render () {
+    const skillCount = this.props.skillSet.length;
+    const col1 = this.props.skillSet.slice(0, Math.ceil(skillCount / 2));
+    const col2 = this.props.skillSet.slice(Math.ceil(skillCount / 2));
+    
+    return (
+      <div className="grid grid--skills">
+        <h5 className="grid--skills__name">Skill</h5>
+        {col1.map((skill, i) => (        
+          <button 
+            id={skill.id}
+            className="grid__col1 grid--skills__name" 
+            key={i}
+            onClick={this.handlePick}
+          >
+            {skill.name}
+          </button>
+        ))}
 
-      <SkillModal 
-        selectedSkill={selectedSkill}
-        handleCloseModal={handleCloseModal}
-      />
-    </div>
-  )
+        <h5>Ranks</h5>
+        {col1.map((skill, i) => (
+          <div className="grid__col2" key={i}>{skill.ranks}</div>
+        ))}
+        
+        <h5 className="grid--skills__name">Skill</h5>
+        {col2.map((skill, i) => (
+          <button 
+            id={skill.id}
+            className="grid__col3 grid--skills__name" 
+            key={i}
+            onClick={this.handlePick}
+          >
+            {skill.name}
+          </button>
+        ))}
+        
+        <h5>Ranks</h5>        
+        {col2.map((skill, i) => (
+          <div className="grid__col4" key={i}>{skill.ranks}</div>
+        ))}
+
+        <SkillModal 
+          selectedSkill={this.state.selectedSkill}
+          handleCloseModal={this.handleCloseModal}
+        />
+      </div>
+    )
+  }
 }
 
-export default SkillSet;
+
+const mapStateToProps = (state) => ({
+  skills: state.skills
+});
+
+export default connect(mapStateToProps)(SkillSet);

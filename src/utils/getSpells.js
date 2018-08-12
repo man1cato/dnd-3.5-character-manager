@@ -8,9 +8,9 @@ export default async () => {
     let offset;
     let spells = [];
     do {
-        const spellsResponse = await axios.get(`${baseUrl}/Spells?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '')) ;
-        offset = spellsResponse.data.offset;
-        const spellGroup = spellsResponse.data.records.map((spell) =>  ({
+        const res = await axios.get(`${baseUrl}/Spells?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '')) ;
+        offset = res.data.offset;
+        const spellGroup = res.data.records.map((spell) =>  ({
             id: spell.id,
             name: spell.fields.Name,
             description: spell.fields.Description,

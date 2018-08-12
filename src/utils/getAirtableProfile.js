@@ -134,8 +134,8 @@ export default async (firebaseUID) => {
       }
     },
     attack: companionFields.Attack[0],
-    feats: companionFields['Feats Text'],
-    specialAbilities: companionFields['Special Abilities Text'],
+    feats: companionFields.Feats,
+    specialAbilities: companionFields['Special Abilities'],
     benefit: companionFields['Owner Benefit']
   }
   
@@ -164,7 +164,7 @@ export default async (firebaseUID) => {
       },
       hd: fields["Hit Die"][0],
       feats: fields.Feats,
-      specialAbilities: fields["Special Abilities - Text"],
+      specialAbilities: fields["Special Abilities"],
       abilities,
       skillSet: characterSkillSet,
       saves: {

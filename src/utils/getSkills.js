@@ -9,9 +9,9 @@ export default async () => {
     let skills = [];
 
     do {
-        const skillsResponse = await axios.get(`${baseUrl}/Skills?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '') );
-        offset = skillsResponse.data.offset;
-        const skillGroup = skillsResponse.data.records.map((skill) =>  ({
+        const res = await axios.get(`${baseUrl}/Skills?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '') );
+        offset = res.data.offset;
+        const skillGroup = res.data.records.map((skill) =>  ({
             id: skill.id,
             name: skill.fields.Name,
             keyAbility: skill.fields["Key Ability"],

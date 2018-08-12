@@ -5,6 +5,8 @@ import update from 'react-addons-update';
 
 import Header from './Header';
 import Abilities from './Abilities';
+import Feats from './Feats';
+import SpecialAbilities from './SpecialAbilities';
 import SkillSet from './SkillSet';
 import PhysicalStats from './PhysicalStats';
 import Weapons from './Weapons';
@@ -24,8 +26,7 @@ export class CompanionPage extends React.Component {
             mod: this.props.initiative.mod || "",
             total: this.props.initiative.total || this.props.initiative.base
         }, 
-        abilities: this.props.abilities,
-        selectedSkill: undefined
+        abilities: this.props.abilities
     }
 
     onInputChange = (e) => {
@@ -80,16 +81,6 @@ export class CompanionPage extends React.Component {
         });
     }
 
-    handlePick = (e) => {
-        const skillId = e.target.id;
-        const selectedSkill = this.props.skills.filter((skill) => skill.id === skillId)[0];
-        this.setState({selectedSkill});
-    }
-
-    handleCloseModal = () => {
-        this.setState({selectedSkill: undefined});
-    }
-
     componentWillUnmount() {
         this.props.startEditProfile(this.props.id, {
             hp: this.state.hp,
@@ -106,23 +97,19 @@ export class CompanionPage extends React.Component {
                     <div className="grid grid--companion">
                         <h3>{this.props.name}</h3>
                         <div>{this.props.type}</div>
-                        <h4>Feats</h4>
-                        <div>{this.props.feats}</div>
-                        <h4>Special Abilities</h4>
-                        <div>{this.props.specialAbilities}</div>                    
+                        <h4 className="grid__col1">Special Abilities</h4>
+                        <SpecialAbilities specialAbilityIds={this.props.specialAbilities} />                    
+                        <h4 className="grid__col1">Feats</h4>
+                        <Feats featIds={this.props.feats} />
                     </div>
 
-                    <h3 className="row row--center">Stats</h3>
                     <Abilities
                         abilities={this.state.abilities}
                         onInputChange={this.onInputChange}
                     />
 
                     <SkillSet 
-                        skillSet={this.props.skillSet}
-                        selectedSkill={this.state.selectedSkill}
-                        handlePick={this.handlePick}
-                        handleCloseModal={this.handleCloseModal}
+                        skillSet={this.props.skillSet}                        
                     />
                     
                     <h3 className="row row--center">Combat</h3>
@@ -149,8 +136,7 @@ export class CompanionPage extends React.Component {
 
 const mapStateToProps = (state) => ({
     id: state.profile.id,
-    ...state.profile.companion,
-    skills: state.skills
+    ...state.profile.companion
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

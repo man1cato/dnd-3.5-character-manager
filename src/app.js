@@ -8,6 +8,7 @@ import {startSetProfile} from './actions/profile';
 import {startSetSpells} from './actions/spells';
 import {startSetSkills} from './actions/skills';
 import {startSetFeats} from './actions/feats';
+import {startSetSpecialAbilities} from './actions/specialAbilities';
 import {startSetItems} from './actions/items';
 
 import 'normalize.css/normalize.css';
@@ -45,6 +46,7 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(startSetSpells());
         store.dispatch(startSetSkills());
         store.dispatch(startSetFeats());
+        store.dispatch(startSetSpecialAbilities());
         store.dispatch(startSetItems());
         store.dispatch(startSetProfile(user.uid)).then(() => {
           renderApp();

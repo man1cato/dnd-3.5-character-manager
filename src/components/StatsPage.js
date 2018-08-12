@@ -10,8 +10,13 @@ import SkillSet from './SkillSet';
 
 export class StatsPage extends React.Component {
   state = {
-    abilities: this.props.abilities,
-    selectedSkill: undefined
+    abilities: this.props.abilities
+  }
+
+  componentWillUnmount() {
+    this.props.startEditProfile(this.props.id, {
+      abilities: this.state.abilities
+    });
   }
 
   onInputChange = (e) => {
@@ -27,23 +32,7 @@ export class StatsPage extends React.Component {
         }
       })
     }))
-  }
-
-  handlePick = (e) => {
-    const skillId = e.target.id;
-    const selectedSkill = this.props.skills.filter((skill) => skill.id === skillId)[0];
-    this.setState({selectedSkill});
-  }
-
-  handleCloseModal = () => {
-    this.setState({selectedSkill: undefined});
-  }
-
-  componentWillUnmount() {
-    this.props.startEditProfile(this.props.id, {
-      abilities: this.state.abilities
-    });
-  }
+  }  
 
   render () {
     return (
@@ -68,9 +57,6 @@ export class StatsPage extends React.Component {
 
           <SkillSet 
             skillSet={this.props.skillSet}
-            selectedSkill={this.state.selectedSkill}
-            handlePick={this.handlePick}
-            handleCloseModal={this.handleCloseModal}
           />
 
         </div>
@@ -86,8 +72,7 @@ const mapStateToProps = (state) => ({
   xp: state.profile.xp,
   toNextLevel: state.profile.toNextLevel,
   abilities: state.profile.abilities,
-  skillSet: state.profile.skillSet,
-  skills: state.skills
+  skillSet: state.profile.skillSet
 })
 
 const mapDispatchToProps = (dispatch, props) => ({ 

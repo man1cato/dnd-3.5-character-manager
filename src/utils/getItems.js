@@ -8,9 +8,9 @@ export default async () => {
     let offset;
     let items = [];
     do {
-        const itemsResponse = await axios.get(`${baseUrl}/Items?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '')) ;
-        offset = itemsResponse.data.offset;
-        const itemGroup = itemsResponse.data.records.map((item) =>  ({
+        const res = await axios.get(`${baseUrl}/Items?api_key=${apiKey}` + (!!offset && `&offset=${offset}` || '')) ;
+        offset = res.data.offset;
+        const itemGroup = res.data.records.map((item) =>  ({
             id: item.id,
             name: item.fields.Name,
             cost: item.fields.Cost,

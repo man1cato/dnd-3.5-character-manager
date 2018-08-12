@@ -5,6 +5,7 @@ import profileReducer from '../reducers/profile';
 import spellsReducer from '../reducers/spells';
 import skillsReducer from '../reducers/skills';
 import featsReducer from '../reducers/feats';
+import specialAbilitiesReducer from '../reducers/specialAbilities';
 import itemsReducer from '../reducers/items';
 
 
@@ -18,6 +19,7 @@ export default () => {
             spells: spellsReducer,
             skills: skillsReducer,
             feats: featsReducer,
+            specialAbilities: specialAbilitiesReducer,
             items: itemsReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
