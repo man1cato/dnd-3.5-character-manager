@@ -13,16 +13,8 @@
   justify-content: flex-start;
 }
 
-.row__money {
-  @extend .row;
-  @extend .row--center;
-  > input {
-    max-width: 100px;
-    text-align: right;
-  }
-  > * {
-    margin-right: .6rem;
-  }
+.row--right {
+  justify-content: flex-end;
 }
 
 .row__title {

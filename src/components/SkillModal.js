@@ -3,18 +3,18 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#app');
 
-const SkillModal = ({selectedSkill, handleCloseModal}) => (
+const SkillModal = ({selected, handleCloseModal}) => (
     <Modal
-        isOpen={!!selectedSkill}
+        isOpen={!!selected}
         onRequestClose={handleCloseModal}
         contentLabel="Selected Skill"
     >
-        {selectedSkill && 
+        {selected && 
             <div>
-                <h4>{selectedSkill.name}</h4>
-                <h5>{selectedSkill.keyAbility}</h5>
-                <p>{selectedSkill.description}</p>
-                {selectedSkill.notes && <p>Notes: {selectedSkill.notes}</p>}
+                <h4>{selected.name}</h4>
+                <h5>{selected.keyAbility}</h5>
+                <p>{selected.description}</p>
+                {selected.notes && <p>Notes: {selected.notes}</p>}
             </div>
         }
     </Modal>

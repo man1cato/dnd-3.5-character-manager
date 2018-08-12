@@ -13,7 +13,7 @@ export default async () => {
         const itemGroup = res.data.records.map((item) =>  ({
             id: item.id,
             name: item.fields.Name,
-            cost: item.fields.Cost,
+            value: item.fields["Value (gp)"],
             weight: item.fields["Weight (lbs)"],
             category: item.fields.Category,
             weaponType: item.fields["Weapon Type"],

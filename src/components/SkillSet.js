@@ -4,17 +4,17 @@ import SkillModal from './SkillModal';
 
 export class SkillSet extends React.Component{
   state = {
-    selectedSkill: undefined
+    selected: undefined
   }  
 
   handlePick = (e) => {
     const skillId = e.target.id;
-    const selectedSkill = this.props.skills.find((skill) => skill.id === skillId);
-    this.setState({selectedSkill});
+    const selected = this.props.skills.find((skill) => skill.id === skillId);
+    this.setState({selected});
   }
 
   handleCloseModal = () => {
-    this.setState({selectedSkill: undefined});
+    this.setState({selected: undefined});
   }
   
   render () {
@@ -59,7 +59,7 @@ export class SkillSet extends React.Component{
         ))}
 
         <SkillModal 
-          selectedSkill={this.state.selectedSkill}
+          selected={this.state.selected}
           handleCloseModal={this.handleCloseModal}
         />
       </div>

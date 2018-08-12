@@ -217,7 +217,7 @@ export default async (firebaseUID) => {
         sp: equipment.find((item) => item.name === "Silver Piece") ? equipment.find((item) => item.name === "Silver Piece").qty : 0,
         cp: equipment.find((item) => item.name === "Copper Piece") ? equipment.find((item) => item.name === "Copper Piece").qty : 0
       },
-      items: equipment.filter((item) => item.category !== "Money"),
+      equipment: equipment.filter((item) => item.category !== "Money"),
       spellbook,
       companion
     }
