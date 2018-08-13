@@ -35,10 +35,10 @@ export class EquipmentPage extends React.Component {
 
     componentWillUnmount() {
         this.props.startEditProfile(this.props.id, {
-            money,
-            equipment,
-            equipmentTotalValue,
-            equipmentTotalWeight
+            money: this.state.money,
+            equipment: this.state.equipment,
+            equipmentTotalValue: this.state.equipmentTotalValue,
+            equipmentTotalWeight: this.state.equipmentTotalWeight
         });
     }
 
@@ -200,7 +200,7 @@ export class EquipmentPage extends React.Component {
                     </div>
 
                     <button>Add New Item</button>
-                    
+
                     <ItemModal 
                         selected={this.state.selected} 
                         handleCloseModal={this.handleCloseModal}
