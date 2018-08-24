@@ -116,7 +116,7 @@ export class EquipmentPage extends React.Component {
                 <div className="container container--body">
                     
                     <div className="row row--left">
-                        <h4>Total Money: </h4> <div>{this.state.money.total} gp</div> 
+                        <h4>Total money: </h4> <div>{this.state.money.total} gp</div> 
                     </div>
                     <div className="grid grid--money">
                         <div className="grid--money__cell">

@@ -6,6 +6,13 @@ const port = process.env.PORT || 8080;
 
 app.use(express.static(publicPath));
 
+app.post('/api', (req, res) => {
+    console.log(req)
+    res.json({
+        user: 'Andres'
+    });
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 });
