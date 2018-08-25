@@ -7,6 +7,7 @@ import profile from '../fixtures/profile';
 const props = {
     id: profile.id,
     money: profile.fields.money,
+    equipment: profile.fields.equipment, 
     items: profile.fields.items
 }
 

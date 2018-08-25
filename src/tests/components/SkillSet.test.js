@@ -1,12 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import Skills from '../../components/Skills';
+import SkillSet from '../../components/SkillSet';
 import profile from '../fixtures/profile';
 
 const props = {skills: profile.fields.skills};
 
 test('should render skills with profile data', () => {
-  const wrapper = shallow(<Skills {...props} />);
+  const wrapper = shallow(<SkillSet {...props} />);
   expect(wrapper).toMatchSnapshot();
 })

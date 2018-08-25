@@ -1,16 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+
 const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 8080;
 
 app.use(express.static(publicPath));
 
 app.post('/api', (req, res) => {
-    console.log(req)
-    res.json({
-        user: 'Andres'
-    });
+    console.log(req.body)
+    res.send(req.body);
 });
 
 app.get('*', (req, res) => {
