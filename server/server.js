@@ -1,16 +1,22 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
 
+const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 8080;
 
 app.use(express.static(publicPath));
+app.use(bodyParser.json());
 
 app.post('/api', (req, res) => {
-    console.log(req.body)
+    // res.send('Successful POST request');
     res.send(req.body);
 });
+
+app.get('/api', (req, res) => {
+    res.send('Successful GET request');
+}) 
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
