@@ -22,7 +22,7 @@ export const startSetProfile = (uid) => {
 // export const startSetProfile = (uid) => {
 //   return (dispatch) => {
 //     return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
-//       const profile = childSnapshot.val()
+//       const profile = snapshot.val()
 //       dispatch(setProfile(profile));
 //     });
 //   };
