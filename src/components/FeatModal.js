@@ -8,6 +8,7 @@ const FeatModal = ({selected, handleCloseModal}) => (
         isOpen={!!selected}
         onRequestClose={handleCloseModal}
         contentLabel="Selected Feat"
+        className="modal"
     >
         {selected && 
             <div>

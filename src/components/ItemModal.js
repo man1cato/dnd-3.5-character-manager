@@ -8,6 +8,7 @@ const ItemModal = ({selected, handleCloseModal}) => (
         isOpen={!!selected}
         onRequestClose={handleCloseModal}
         contentLabel="Selected Item"
+        className="modal"
     >
         {selected && 
             <div>

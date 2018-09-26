@@ -8,6 +8,7 @@ const SpellModal = ({selected, handleCloseModal}) => (
         isOpen={!!selected}
         onRequestClose={handleCloseModal}
         contentLabel="Selected Spell"
+        className="modal"
     >
         {selected && 
             <div>

@@ -60,9 +60,5 @@
     "jest": "^21.2.1",
     "react-test-renderer": "^16.1.1",
     "webpack-dev-server": "^2.9.4"
-  },
-  "engines": {
-    "node": "9.2.0",
-    "yarn": "1.5.1"
   }
 }
