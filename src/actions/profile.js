@@ -9,24 +9,29 @@ export const setProfile = (id, fields) => ({
     fields
 });
 //GET PROFILE FROM AIRTABLE & UPDATE IN FIREBASE
-export const startSetProfile = (uid) => {
-  return (dispatch) => {
-    return getAirtableProfile(uid).then(({id, fields}) => {
-      dispatch(setProfile(id, fields));
-      database.ref(`users/${uid}/profiles/${id}`).set(fields);
-    });
-  };
-};
-
-//GET PROFILE FROM DATABASE
 // export const startSetProfile = (uid) => {
 //   return (dispatch) => {
-//     return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
-//       const profile = snapshot.val()
-//       dispatch(setProfile(profile));
+//     return getAirtableProfile(uid).then(({id, fields}) => {
+//       dispatch(setProfile(id, fields));
+//       database.ref(`users/${uid}/profiles/${id}`).set(fields);
 //     });
 //   };
 // };
+
+//GET PROFILE FROM DATABASE
+export const startSetProfile = (uid) => {
+  return (dispatch) => {
+    return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
+        const profiles = snapshot.val();
+        if (profiles) {
+            const id = Object.keys(profiles)[0];
+            const fields = profiles[id];
+            dispatch(setProfile(id, fields));
+        }
+        return profiles;
+    });
+  };
+};
 
 
 //EDIT PROFILE IN STORE

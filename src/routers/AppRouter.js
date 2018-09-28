@@ -3,6 +3,7 @@ import {Router, Route, Switch} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import LoginPage from '../components/LoginPage';
+import CharacterCreationPage from '../components/CharacterCreationPage';
 import ProfilePage from '../components/ProfilePage';
 import StatsPage from '../components/StatsPage';
 import CombatPage from '../components/CombatPage';
@@ -20,6 +21,7 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <PublicRoute path="/" component={LoginPage} exact={true}/>
+                <PrivateRoute path="/create" component={CharacterCreationPage} />
                 <PrivateRoute path="/profile" component={ProfilePage} />
                 <PrivateRoute path="/stats" component={StatsPage} />
                 <PrivateRoute path="/combat" component={CombatPage} />
