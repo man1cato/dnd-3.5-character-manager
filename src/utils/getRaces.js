@@ -17,8 +17,8 @@ export default async () => {
             size: race.fields.Size,
             speed: race.fields['Speed (ft/rnd)'],
             racialBonuses: race.fields['Racial Bonuses'],
-            defaultLanguages: race.fields['Languages (Default)'],
-            bonusLanguages: race.fields['Languages (Bonus)'],
+            defaultLanguages: race.fields['Languages (Default)'] && race.fields['Languages (Default)'].join(', '),
+            bonusLanguages: race.fields['Languages (Bonus)'] && race.fields['Languages (Bonus)'].join(', '),
             abilityMods: {
                 str: race.fields['STR Mod'],
                 dex: race.fields['DEX Mod'],
