@@ -68,7 +68,15 @@ const CreatorForm = ({
 
             <div className="form__group">
                 <h4>Racial Bonuses:</h4>
-                <div>{selected.racialBonuses}</div>
+                {selected.racialBonuses ? 
+                    <ul>
+                        {selected.racialBonuses.map((item, i) => (
+                            <li key={`racialBonus${i}`}>{item}</li>
+                        ))}
+                    </ul>
+                    :
+                    <p>None</p>
+                }
             </div>
         </div>
         <div className="container container--footer">

@@ -4,6 +4,8 @@ import _ from 'lodash';
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
 
+const createListArray = (string) => _.compact(string.split(/\n/));
+
 export default async () => {
     let offset;
     let races = [];
@@ -16,7 +18,7 @@ export default async () => {
             name: race.fields.Name,
             size: race.fields.Size,
             speed: race.fields['Speed (ft/rnd)'],
-            racialBonuses: race.fields['Racial Bonuses'],
+            racialBonuses: race.fields['Racial Bonuses'] ? createListArray(race.fields['Racial Bonuses']) : undefined,
             defaultLanguages: race.fields['Languages (Default)'] && race.fields['Languages (Default)'].join(', '),
             bonusLanguages: race.fields['Languages (Bonus)'] && race.fields['Languages (Bonus)'].join(', '),
             abilityMods: {
