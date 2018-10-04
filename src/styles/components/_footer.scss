@@ -1,0 +1,21 @@
+footer {
+    background-color: #364051;
+    grid-area: footer;
+    padding: $s-size 0;
+}
+
+.footer__navbar {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+    fill: white;
+}
+
+.footer__navbar__icon {
+    padding: $xs-size;
+    height: 50px;
+    width: 50px;
+}

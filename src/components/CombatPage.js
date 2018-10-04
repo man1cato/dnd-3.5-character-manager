@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import Footer from './Footer';
 import PhysicalStats from './PhysicalStats';
 import Saves from './Saves';
 import Attacks from './Attacks';
@@ -88,7 +89,7 @@ export class CombatPage extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="layout">
         <Header pageTitle="Combat" />
         <div className="container container--body">
 
@@ -118,6 +119,8 @@ export class CombatPage extends React.Component {
           />
 
         </div>
+
+        <Footer />
       </div>  
     )
   }

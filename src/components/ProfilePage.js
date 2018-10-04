@@ -2,12 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Header from './Header';
+import Footer from './Footer';
 import Feats from './Feats';
 import SpecialAbilities from './SpecialAbilities';
 
 const ProfilePage = (props) => (
-  <div>
+  <div className="layout">
     <Header pageTitle="Character Profile" />
+
     <div className="container container--body">
       <div className="grid grid--profile">
         <img className="grid--profile__img" src={props.iconUrl} />
@@ -41,6 +43,8 @@ const ProfilePage = (props) => (
         <Feats featIds={props.feats} />
       </div>
     </div>
+
+    <Footer />
   </div>
 );
 

@@ -1,5 +1,8 @@
 header {
+    // height: 7vh;
     background: $dark-grey;
+    padding: $s-size 0;
+    grid-area: header;
 }
 
 .header__content {

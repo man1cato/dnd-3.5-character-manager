@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import Footer from './Footer';
 import SpellModal from './SpellModal';
 import { startEditProfile } from '../actions/profile';
 
@@ -66,7 +67,7 @@ export class SpellbookPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="layout">
                 <Header pageTitle="Spellbook" />
                 <SpellModal 
                     selected={this.state.selected}
@@ -145,6 +146,7 @@ export class SpellbookPage extends React.Component {
                     ))}
 
                 </div>
+                <Footer />
             </div>
         )
     }

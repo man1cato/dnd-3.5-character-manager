@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import Footer from './Footer';
 import Abilities from './Abilities';
 import Feats from './Feats';
 import SpecialAbilities from './SpecialAbilities';
@@ -91,7 +92,7 @@ export class CompanionPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="layout">
                 <Header pageTitle="Companion" />
                 <div className="container container--body">
                     <div className="grid grid--companion">
@@ -129,6 +130,7 @@ export class CompanionPage extends React.Component {
                     </div>
 
                 </div>
+                <Footer />
             </div>
         )
     }

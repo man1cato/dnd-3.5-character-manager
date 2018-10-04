@@ -4,6 +4,7 @@ import update from 'react-addons-update';
 import {startEditProfile} from '../actions/profile';
 
 import Header from './Header';
+import Footer from './Footer';
 import Abilities from './Abilities';
 import SkillSet from './SkillSet';
 
@@ -36,7 +37,7 @@ export class StatsPage extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="layout">
         <Header pageTitle="Character Stats" />
         <div className="container container--body">
 
@@ -60,6 +61,7 @@ export class StatsPage extends React.Component {
           />
 
         </div>
+        <Footer />
       </div>
     );
   }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import update from 'react-addons-update';
 
 import Header from './Header';
+import Footer from './Footer';
 import ItemModal from './ItemModal';
 
 import { startEditProfile } from '../actions/profile';
@@ -111,7 +112,7 @@ export class EquipmentPage extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className="layout">
                 <Header pageTitle="Equipment" />
                 <div className="container container--body">
                     
@@ -207,6 +208,7 @@ export class EquipmentPage extends React.Component {
                     />
 
                 </div>
+                <Footer />
             </div>
         )
     }

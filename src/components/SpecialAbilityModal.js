@@ -8,6 +8,7 @@ const SpecialAbilityModal = ({selected, handleCloseModal}) => (
         isOpen={!!selected}
         onRequestClose={handleCloseModal}
         contentLabel="Selected Special Ability"
+        className="modal"
     >
         {selected && 
             <div>
