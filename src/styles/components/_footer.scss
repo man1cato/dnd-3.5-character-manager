@@ -8,10 +8,12 @@ footer {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     fill: white;
 }
 
 .footer__navbar__icon {
-    max-height: 50px;
+    max-height: 40px;
     height: 100%;
+    padding: 0 $s-size;
 }
