@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import FeatModal from './FeatModal';
 
 export class Feats extends React.Component{
@@ -18,16 +19,20 @@ export class Feats extends React.Component{
   }
   
   render () {    
+    const feats = _.orderBy(this.props.featIds.map((featId) => {
+      return this.props.feats.find((feat) => feat.id === featId)
+    }), ['name'], ['asc']);
+
     return (
       <div className="grid--profile__features-value">
-        {this.props.featIds.map((featId) => (
+        {feats.map((feat) => (
             <button
                 className="button--link"
-                id={featId}
-                key={featId}
+                id={feat.id}
+                key={feat.id}
                 onClick={this.handleOpenModal}
             >
-                {this.props.feats.find((feat) => feat.id === featId).name}
+                {feat.name}
             </button>
         ))}
 

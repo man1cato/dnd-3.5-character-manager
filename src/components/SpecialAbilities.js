@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import SpecialAbilityModal from './SpecialAbilityModal';
 
 export class SpecialAbilities extends React.Component{
@@ -18,16 +19,20 @@ export class SpecialAbilities extends React.Component{
   }
   
   render () {    
+    const specialAbilities = _.orderBy(this.props.specialAbilityIds.map((specialAbilityId) => {
+      return this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId)
+    }), ['name'], ['asc']);
+
     return (
       <div className="grid--profile__features-value">
-        {this.props.specialAbilityIds.map((specialAbilityId) => (
+        {specialAbilities.map((specialAbility) => (
         <button
             className="button--link"
-            id={specialAbilityId}
-            key={specialAbilityId}
+            id={specialAbility.id}
+            key={specialAbility.id}
             onClick={this.handleOpenModal}
         >
-            {this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId).name}
+            {specialAbility.name}
         </button>
         ))}
 

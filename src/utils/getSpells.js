@@ -1,5 +1,5 @@
 import axios from 'axios';
-import compareByName from './compareByName';
+import _ from 'lodash';
 
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
@@ -27,5 +27,5 @@ export default async () => {
         spells = spells.concat(spellGroup);
     } while (!!offset);
     
-    return spells.sort(compareByName);
+    return _.orderBy(spells, ['name'], ['asc']);
 };

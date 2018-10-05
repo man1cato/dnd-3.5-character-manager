@@ -1,5 +1,5 @@
 import axios from 'axios';
-import compareByName from './compareByName';
+import _ from 'lodash';
 
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
@@ -14,11 +14,11 @@ class Ability {
   }
 }
 
-const mapSkills = (skillset) => skillset.map((skill) => ({
+const mapSkills = _.orderBy((skillset) => skillset.map((skill) => ({
   id: skill.fields["Skill ID"],
   name: skill.fields.Name || "",
   ranks: skill.fields["Total Ranks"] || 0
-})).sort(compareByName);
+})), ['name'], ['asc']);
 
 
 export default async (firebaseUID) => {
@@ -44,7 +44,7 @@ export default async (firebaseUID) => {
   };
   
   const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
-  const equipment = equipmentResponse.data.records.map((item) => {
+  const equipment = _.orderBy(equipmentResponse.data.records.map((item) => {
     const qty = item.fields.Qty;
     const unitValue = item.fields["Unit Value"] ? item.fields["Unit Value"][0] : 0;
     const unitWeight = item.fields["Unit Weight (lbs)"] ? item.fields["Unit Weight (lbs)"][0] : 0;
@@ -58,11 +58,11 @@ export default async (firebaseUID) => {
       totalValue: Number((qty*unitValue).toFixed(2)),
       totalWeight: Number((qty*unitWeight).toFixed(2))
     }
-  }).sort(compareByName);
+  }),['name'], ['asc']);
 
 
   const spellbookResponse = await axios.get(`${baseUrl}/Spellbooks?api_key=${apiKey}&filterByFormula=${ownerFilter}`);
-  const spells = spellbookResponse.data.records.map((spell) => {
+  const spells = _.orderBy(spellbookResponse.data.records.map((spell) => {
     const prepared = spell.fields.Prepared || 0;
     const used = spell.fields.Used || 0;
     return {
@@ -76,7 +76,7 @@ export default async (firebaseUID) => {
       used,
       remaining: prepared - used
     }
-  }).sort(compareByName);
+  }),['name'], ['asc']);
   let spellsPerDay = [fields["SPD 0"][0], fields["SPD 1"][0], fields["SPD 2"][0], fields["SPD 3"][0], fields["SPD 4"][0], fields["SPD 5"][0], fields["SPD 6"][0], fields["SPD 7"][0], fields["SPD 8"][0], fields["SPD 9"][0]];
   spellsPerDay = spellsPerDay.filter((spd) => spd > 0);
   let spellbook = spellsPerDay.map((spd, level) => ({

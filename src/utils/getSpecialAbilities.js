@@ -1,5 +1,5 @@
 import axios from 'axios';
-import compareByName from './compareByName';
+import _ from 'lodash';
 
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL';
@@ -20,5 +20,5 @@ export default async () => {
         specialAbilities = specialAbilities.concat(specialAbilityGroup);
     } while (!!offset);
     
-    return specialAbilities.sort(compareByName);
+    return _.orderBy(specialAbilities, ['name'], ['asc']);
 };
