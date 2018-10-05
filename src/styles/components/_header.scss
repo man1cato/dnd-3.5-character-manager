@@ -1,5 +1,4 @@
 header {
-    // height: 7vh;
     background: $dark-grey;
     padding: $s-size 0;
     grid-area: header;
@@ -9,11 +8,14 @@ header {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    > * {
+        color: white;
+        background: none;
+        border: none;
+    }
 }
 
 .header__title {
-    color: white;
-    text-decoration: none;
     margin: 0;
     @media(max-width: 576px) {
       font-size: $font-size-large;

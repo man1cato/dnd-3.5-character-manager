@@ -171,7 +171,7 @@ export class EquipmentPage extends React.Component {
 
                         {this.state.equipment.map((item, i) => (
                             <button 
-                                className="grid__col1" 
+                                className="grid__col1 button--link" 
                                 id={item.id}
                                 key={item.id}
                                 onClick={this.handleOpenModal}

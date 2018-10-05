@@ -6,16 +6,12 @@ footer {
 
 .footer__navbar {
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-flow: column;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     fill: white;
 }
 
 .footer__navbar__icon {
-    padding: $xs-size;
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    height: 100%;
 }

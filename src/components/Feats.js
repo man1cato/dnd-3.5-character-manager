@@ -22,6 +22,7 @@ export class Feats extends React.Component{
       <div className="grid--profile__features-value">
         {this.props.featIds.map((featId) => (
             <button
+                className="button--link"
                 id={featId}
                 key={featId}
                 onClick={this.handleOpenModal}

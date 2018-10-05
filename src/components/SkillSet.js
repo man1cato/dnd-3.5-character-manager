@@ -28,7 +28,7 @@ export class SkillSet extends React.Component{
         {col1.map((skill, i) => (        
           <button 
             id={skill.id}
-            className="grid__col1 grid--skills__name" 
+            className="grid__col1 grid--skills__name button--link" 
             key={i}
             onClick={this.handlePick}
           >
@@ -45,7 +45,7 @@ export class SkillSet extends React.Component{
         {col2.map((skill, i) => (
           <button 
             id={skill.id}
-            className="grid__col3 grid--skills__name" 
+            className="grid__col3 grid--skills__name button--link" 
             key={i}
             onClick={this.handlePick}
           >

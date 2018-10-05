@@ -22,6 +22,7 @@ export class SpecialAbilities extends React.Component{
       <div className="grid--profile__features-value">
         {this.props.specialAbilityIds.map((specialAbilityId) => (
         <button
+            className="button--link"
             id={specialAbilityId}
             key={specialAbilityId}
             onClick={this.handleOpenModal}

@@ -89,7 +89,7 @@ export class SpellbookPage extends React.Component {
                                 {page.spells.map((spell, i) => (
                                     <button 
                                         id={spell.id}
-                                        className="grid__col1" 
+                                        className="grid__col1 button--link" 
                                         key={i} 
                                         onClick={this.handleOpenModal}                                   >
                                         {spell.name}
