@@ -19,7 +19,15 @@ import 'react-dates/lib/css/_datepicker.css';
 import {firebase} from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
+//Initialize store and add base data
 const store = configureStore();
+store.dispatch(startSetRaces());
+store.dispatch(startSetSpells());
+store.dispatch(startSetSkills());
+store.dispatch(startSetItems());
+store.dispatch(startSetFeats());
+store.dispatch(startSetSpecialAbilities());
+
 
 const jsx = (
     <Provider store={store}>
@@ -30,6 +38,7 @@ const jsx = (
 let hasRendered = false;
 
 const renderApp = () => {
+    console.log('renderApp triggered');
     if (!hasRendered) {
         ReactDOM.render(jsx, document.getElementById('app'));
         hasRendered = true;
@@ -39,24 +48,17 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
+
+//Auth listener for user login
 firebase.auth().onAuthStateChanged(async (user) => {
+    console.log('Auth state changed');
     if (user) {
         console.log('logged in');
         store.dispatch(login(user.uid));
-        store.dispatch(startSetSpells());
-        store.dispatch(startSetSkills());
-        store.dispatch(startSetItems());
-        await store.dispatch(startSetFeats());
-        await store.dispatch(startSetSpecialAbilities());
 
         const profiles = await store.dispatch(startSetProfile(user.uid));
         console.log('profiles:', profiles);
-        
-        if (!profiles) {
-            console.log('No character profile');
-            await store.dispatch(startSetRaces());
-        }
-        
+
         renderApp();
 
         if (history.location.pathname === '/') {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Form, Field, withFormik } from 'formik';
-import * as Yup from "yup";
+import * as Yup from 'yup';
 
 import Header from './Header';
 

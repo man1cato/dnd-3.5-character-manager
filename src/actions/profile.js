@@ -18,7 +18,7 @@ export const setProfile = (id, fields) => ({
 //   };
 // };
 
-//GET PROFILE FROM DATABASE
+//GET PROFILE FROM FIREBASE
 export const startSetProfile = (uid) => {
   return (dispatch) => {
     return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {

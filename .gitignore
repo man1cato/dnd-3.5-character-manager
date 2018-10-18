@@ -5,3 +5,4 @@ public/dist/
 .env.development
 playground.js
 node_modules
+.vscode
