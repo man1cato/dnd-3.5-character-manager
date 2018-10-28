@@ -11,8 +11,29 @@
 
 .form__group {
     margin-bottom: $s-size;
+
+    & ul, ol {
+        margin: 0;
+    }
+
+    & li {
+        margin-left: -20px;
+    }
 }
 
+.form__inline {
+    display: flex;
+
+    > :first-child {
+        width: 40%;
+        max-width: 130px;
+    } 
+
+    :not(:first-child) {
+        margin-left: $s-size;
+        text-align: center;
+    }
+}
 
 .form__error {
     margin: 0 0 $m-size 0;

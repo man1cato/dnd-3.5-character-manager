@@ -17,6 +17,12 @@ h2, h3, h4, h5 {
   margin: 0;
 }
 
+input, select, textarea {
+  max-width:100%;
+  width: -webkit-fill-available;
+  margin-left: $s-size;
+}
+
 button {
   cursor: pointer;
 }

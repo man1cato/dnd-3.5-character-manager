@@ -19,15 +19,15 @@ const CreatorForm = ({
     <Form className="form layout__body-footer">
         <div className="container container--body">
             <div className="form__group">
-                <label>
-                    Name: 
-                    <Field name="name" />
-                </label>
+                <div className="form__inline">
+                    <h4>Name:</h4>
+                    <Field name="name" value={values.name} />
+                </div>
                 {errors.name && touched.name ? ( <div className="form__error">{errors.name}</div> ) : null}
             </div>
 
-            <label className="form__group">
-                Race: 
+            <div className="form__group form__inline">
+                <h4>Race:</h4>
                 <Field name="race" component="select" onChange={(e) => {handleChange(e); handleSelect(e)}}>
                     {races.map((race) => (
                         <option 
@@ -38,26 +38,26 @@ const CreatorForm = ({
                         </option>
                     ))}
                 </Field>                                    
-            </label>
+            </div>
 
-            <div className="form__group">
+            <div className="form__group form__inline">
                 <h4>Size:</h4>                                 
                 <div>{selected.size}</div>
             </div> 
 
-            <div className="form__group">
+            <div className="form__group form__inline">
                 <h4>Racial Modifiers:</h4>     
                 {Object.entries(selected.abilityMods).filter((mod) => mod[1] !== 0).length > 0 ?
                     Object.entries(selected.abilityMods).filter((mod) => mod[1] !== 0).map((mod) => (
                         <div key={mod}>{mod[0].toUpperCase()}: {mod[1]}</div>
                     ))
                     :
-                    'None'
+                    <div>None</div>
                 }            
             </div>
 
             <div className="form__group">
-                <h4>Default Languages:</h4>
+                <h4>Default Language(s):</h4>
                 <div>{selected.defaultLanguages}</div>
             </div>
 
@@ -89,7 +89,8 @@ const CreatorForm = ({
 const FormikCreatorForm = withFormik({
     mapPropsToValues({race, selected}) {
         return {
-            race: race || selected.id
+            race: race || selected.id,
+            name: ""
         }
     },
     validationSchema: Yup.object().shape({
