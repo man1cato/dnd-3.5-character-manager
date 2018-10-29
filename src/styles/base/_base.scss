@@ -18,9 +18,7 @@ h2, h3, h4, h5 {
 }
 
 input, select, textarea {
-  max-width:100%;
   width: -webkit-fill-available;
-  margin-left: $s-size;
 }
 
 button {

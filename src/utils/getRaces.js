@@ -29,7 +29,8 @@ export default async () => {
                 wis: race.fields['WIS Mod'],
                 cha: race.fields['CHA Mod']
             },
-            specialAbilities: race.fields['Special Abilities']
+            specialAbilities: race.fields['Special Abilities'],
+            favoredClass:  race.fields['Favored Class'] && race.fields['Favored Class'][0]
         }));
         
         races = races.concat(raceGroup);

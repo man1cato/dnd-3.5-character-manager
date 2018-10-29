@@ -5,13 +5,16 @@ import CreatorFormRace from './CreatorFormRace';
 
 export class CharacterCreationPage extends React.Component {
     state = {
-        selected: this.props.races.find((race) => race.name === 'Human')
+        selectedRace: this.props.races.find((race) => race.name === 'Human'),
+        selectedClass: this.props.classes.find((jobClass) => jobClass.name === 'Fighter')
     }
 
     handleSelect = (e) => {
-        const raceId = e.target.value;
-        this.setState(() => ({
-            selected: this.props.races.find((race) => race.id === raceId)
+        const name = e.target.name;
+        const id = e.target.value;
+        this.setState((prevState) => ({
+            selectedRace: name === 'race' ? this.props.races.find((race) => race.id === id) : prevState.selectedRace,
+            selectedClass: name === 'jobClass' ? this.props.classes.find((jobClass) => jobClass.id === id) : prevState.selectedClass
         }));
     }
 
@@ -20,8 +23,8 @@ export class CharacterCreationPage extends React.Component {
             <div className="layout">
                 <Header pageTitle="Character Creation" />
                 <CreatorFormRace 
-                    races={this.props.races} 
-                    selected={this.state.selected} 
+                    selectedRace={this.state.selectedRace} 
+                    selectedClass={this.state.selectedClass}
                     handleSelect={this.handleSelect}                    
                 />
             </div>
@@ -32,10 +35,7 @@ export class CharacterCreationPage extends React.Component {
 
 const mapStateToProps = (state) => ({
     races: state.races,
-    feats: state.feats,
-    specialAbilities: state.specialAbilities,
-    skills: state.skills,
-    spells: state.spells
+    classes: state.classes
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

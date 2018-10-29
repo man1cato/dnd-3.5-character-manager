@@ -8,6 +8,7 @@ import featsReducer from '../reducers/feats';
 import specialAbilitiesReducer from '../reducers/specialAbilities';
 import itemsReducer from '../reducers/items';
 import racesReducer from '../reducers/races';
+import classesReducer from '../reducers/classes';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -22,7 +23,8 @@ export default () => {
             feats: featsReducer,
             specialAbilities: specialAbilitiesReducer,
             items: itemsReducer,
-            races: racesReducer
+            races: racesReducer,
+            classes: classesReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
     );

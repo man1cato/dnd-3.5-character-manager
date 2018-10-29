@@ -11,6 +11,7 @@ import {startSetFeats} from './actions/feats';
 import {startSetSpecialAbilities} from './actions/specialAbilities';
 import {startSetItems} from './actions/items';
 import {startSetRaces} from './actions/races';
+import {startSetClasses} from './actions/classes';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -22,6 +23,7 @@ import LoadingPage from './components/LoadingPage';
 //Initialize store and add base data
 const store = configureStore();
 store.dispatch(startSetRaces());
+store.dispatch(startSetClasses());
 store.dispatch(startSetSpells());
 store.dispatch(startSetSkills());
 store.dispatch(startSetItems());
