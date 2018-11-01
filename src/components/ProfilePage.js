@@ -37,7 +37,9 @@ const ProfilePage = (props) => (
         <div className="grid--profile__features-value">{props.prohibitedSchools}</div>
 
         <h4 className="grid--profile__features-key">Special Abilities</h4>
-        <SpecialAbilities specialAbilityIds={props.specialAbilities} />
+        <div className="grid--profile__features-value">
+          <SpecialAbilities specialAbilityIds={props.specialAbilities} />
+        </div>
 
         <h4 className="grid--profile__features-key">Feats</h4>
         <Feats featIds={props.feats} />

@@ -24,7 +24,7 @@ export class SpecialAbilities extends React.Component{
     }), ['name'], ['asc']);
 
     return (
-      <div className="grid--profile__features-value">
+      <div>
         {specialAbilities.map((specialAbility) => (
         <button
             className="button--link"

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import {convertTextToArray} from '../utils/utils';
 
 Modal.setAppElement('#app');
 
@@ -14,7 +15,9 @@ const SpecialAbilityModal = ({selected, handleCloseModal}) => (
             <div>
                 <h4>{selected.name}</h4>
                 <h5>{selected.type}</h5>
-                <p>{selected.description}</p>
+                {convertTextToArray(selected.description).map((paragraph, i) => 
+                    <p key={i}>{paragraph}</p>
+                )}   
             </div>
         }
     </Modal>
