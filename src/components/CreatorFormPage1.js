@@ -4,14 +4,14 @@ import { Field, ErrorMessage } from 'formik';
 import SpecialAbilities from './SpecialAbilities';
 
 
-const CreatorFormPage1 = ({races, classes, selectedRace, selectedClass, handleSelect, handleChange}) => (
+const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSelect, setFieldValue}) => (
     <div>
         <div className="form__group">
             <div className="form__content--flex">
                 <h4>Name:</h4>
                 <Field name="name" />
             </div>
-            <ErrorMessage name="name" />
+            <ErrorMessage name="name" component="div"/>
         </div>
         
         <div className="form__group form__content--flex">
@@ -27,7 +27,7 @@ const CreatorFormPage1 = ({races, classes, selectedRace, selectedClass, handleSe
 
         <div className="form__group form__content--flex">
             <h4>Choose Race:</h4>
-            <Field name="race" component="select" onChange={(e) => {handleChange(e); handleSelect(e)}}>
+            <Field name="race" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
                 {races.map((race) => (
                     <option 
                         value={race.id} 
@@ -37,6 +37,17 @@ const CreatorFormPage1 = ({races, classes, selectedRace, selectedClass, handleSe
                     </option>
                 ))}
             </Field>                                    
+        </div>
+
+        <div className="form__group form__content--flex">
+            <h4>Favored Class:</h4>
+            <div>
+                {selectedRace.favoredClass ? 
+                    classes.find((jobClass) => selectedRace.favoredClass === jobClass.id).name
+                    :
+                    'Any'
+                }
+            </div>
         </div>
 
         <div className="form__group form__content--flex">
@@ -69,7 +80,9 @@ const CreatorFormPage1 = ({races, classes, selectedRace, selectedClass, handleSe
 
         <div className="form__group form__content--flex">
             <h4>Bonus Languages:</h4>
-            <div>{selectedRace.bonusLanguages.join(', ')}</div>
+            <div>
+                {selectedRace.bonusLanguages.join(', ')}
+            </div>                                    
         </div>
 
         <div className="form__group form__content">
@@ -92,44 +105,8 @@ const CreatorFormPage1 = ({races, classes, selectedRace, selectedClass, handleSe
                 :
                 <div>None</div>
             }
-        </div>
-
-        <div className="form__group form__content--flex">
-            <h4>Favored Class:</h4>
-            <div>
-                {selectedRace.favoredClass ? 
-                    classes.find((jobClass) => selectedRace.favoredClass === jobClass.id).name
-                    :
-                    'Any'
-                }
-            </div>
-        </div>
-
-        <div className="divider"></div>
-
-        <div className="form__group form__content--flex">
-            <h4>Choose Class:</h4>
-            <Field name="jobClass" component="select" onChange={(e) => {handleChange(e); handleSelect(e)}}>
-                {classes.map((jobClass) => (
-                    <option 
-                        value={jobClass.id} 
-                        key={jobClass.id}
-                    >
-                        {jobClass.name}
-                    </option>
-                ))}
-            </Field>                                    
-        </div>
+        </div>        
         
-        <div className="form__group form__content--flex">
-            <h4>Hit Die:</h4>
-            <div>{selectedClass.hitDie}</div>
-        </div>
-
-        <div className="form__group form__content--flex">
-            <h4>Proficiencies:</h4>
-            <div>{selectedClass.proficiencies}</div>
-        </div>
     </div>
 );
 

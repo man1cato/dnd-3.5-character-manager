@@ -1,15 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Header from './Header';
-import { Formik, Form } from 'formik';
+import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 
-import CreatorFormPage1 from './CreatorFormPage1';
-import CreatorFormPage2 from './CreatorFormPage2';
+import Page1 from './CreatorFormPage1';
+import Page2 from './CreatorFormPage2';
+import FormFooter from './FormFooter';
 
+
+const pages = [Page1, Page2];
 
 const validationSchema = Yup.object().shape({
-    name: Yup.string().min(2, 'Name is too short!').max(30, 'Name is too long!').required('Required')
+    page1: Yup.object().shape({
+        name: Yup.string().min(2, 'Name is too short!').max(30, 'Name is too long!').required('Required')
+    }),
+    page2:  undefined
 });
 
 export class CharacterCreationPage extends React.Component {
@@ -19,12 +25,20 @@ export class CharacterCreationPage extends React.Component {
         page: 1
     }
 
-    handleSelect = (e) => {
+    handleSelect = (e, setFieldValue, setFieldError) => {
         const name = e.target.name;
-        const id = e.target.value;
+        const value = e.target.value;
+        if (name === 'race') { setFieldValue('bonusLanguages', []) } 
+        if (name === 'school') {
+            setFieldValue('prohibitedSchools', []);
+            if (value === 'Universal') {
+                setFieldError('prohibitedSchools', undefined);
+            } 
+        } 
         this.setState((prevState) => {
-            const selectedRace = name === 'race' ? this.props.races.find((race) => race.id === id) : prevState.selectedRace;
-            const selectedClass = name === 'jobClass' ? this.props.classes.find((jobClass) => jobClass.id === id) : prevState.selectedClass;
+            const selectedRace = name === 'race' ? this.props.races.find((race) => race.id === value) : prevState.selectedRace;
+            const selectedClass = name === 'jobClass' ? this.props.classes.find((jobClass) => jobClass.id === value) : prevState.selectedClass;
+            
             return {
                 selectedRace,
                 selectedClass
@@ -32,19 +46,32 @@ export class CharacterCreationPage extends React.Component {
         });
     }
 
+    handleMultiSelect = (e, setFieldValue) => {
+        const name = e.target.name;
+        const options = e.target.options;
+        const value = [];
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].selected) {
+                value.push(options[i].value);
+            }
+        }
+        setFieldValue(name, value);
+    }
+
+    handleBack = (setErrors) => {
+        this.setState((prevState) => ({
+            page: prevState.page - 1
+        }));        
+        setErrors({});
+    }
+
     handleNext = () => {
         this.setState((prevState) => ({
             page: prevState.page + 1
-        })) 
-    }
+        }));
+    }    
 
-    handleBack = () => {
-        this.setState((prevState) => ({
-            page: prevState.page - 1
-        }))
-    }
-
-    render() {
+    render() {        
         return (
             <div className="layout">
                 <Header pageTitle="Character Creation" />
@@ -53,63 +80,58 @@ export class CharacterCreationPage extends React.Component {
                     initialValues={{
                         name: '',
                         gender: 'Male',
-                        race: 'Human',
-                        jobClass: 'Fighter',
+                        race: this.props.races.find((race) => race.name === 'Human').id,
+                        jobClass: this.props.classes.find((jobClass) => jobClass.name === 'Fighter').id,
                         deity: '',
-                        school: 'Universal',
-                        prohibitedSchools: []
+                        school: 'Universal'
                     }}
+                                        
+                    validationSchema={Yup.reach(validationSchema, `page${this.state.page}`)}
 
-                    validationSchema={validationSchema}
-
-                    handleSubmit={(values, {setErrors, setSubmitting}) => {
-                        console.log('Submitted:',values);
+                    onSubmit={(values, {setErrors, setSubmitting}) => {
+                        console.log('Submitted:', values);
                         setSubmitting(false);
                     }}
                 >
 
-                    {(values, handleChange, isSubmitting, validateForm) => (
+                    {({values, setFieldValue, handleChange, isSubmitting, isValid, setErrors, setFieldError}) => (
                         <Form >
                             <div className="container container--body">
                                 {{
-                                    1: <CreatorFormPage1 
+                                    1: <Page1 
+                                            values={values}
                                             races={this.props.races}
                                             classes={this.props.classes}
                                             selectedRace={this.state.selectedRace} 
-                                            selectedClass={this.state.selectedClass}
+                                            handleChange={handleChange} 
                                             handleSelect={this.handleSelect}  
-                                            handleChange={handleChange}   
+                                            setFieldValue={setFieldValue}
                                         />,
-                                    2: <CreatorFormPage2
-                                            selectedRace={this.state.selectedRace}
+                                    2: <Page2
+                                            values={values}
+                                            selectedRace={this.state.selectedRace} 
+                                            classes={this.props.classes}
                                             selectedClass={this.state.selectedClass}
                                             schools={this.props.schools}
+                                            handleChange={handleChange}
+                                            handleSelect={this.handleSelect}
+                                            handleMultiSelect={this.handleMultiSelect}
+                                            setFieldValue={setFieldValue}
+                                            setFieldError={setFieldError}
                                         />
                                 }[this.state.page]}
                             </div>
                             
-                            <div className="container container--footer">
-                                {this.state.page === 3 ? (
-                                    <button 
-                                        className="form__button" 
-                                        type="submit" 
-                                        disabled={isSubmitting}
-                                    >   
-                                        Create Character
-                                    </button>
-                                ) : (
-                                    <div>
-                                        {this.state.page !== 1 && (
-                                            <button type="button" onClick={this.handleBack}>   
-                                                Back
-                                            </button>
-                                        )}
-                                        <button type="button" onClick={this.handleNext}>   
-                                            Next
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
+                            <FormFooter 
+                                page={this.state.page}
+                                pages={pages}
+                                handleBack={this.handleBack}
+                                handleNext={this.handleNext}
+                                setErrors={setErrors}
+                                isSubmitting={isSubmitting}
+                                isValid={isValid}
+                            />
+
                         </Form>
                     )}
                 </Formik>

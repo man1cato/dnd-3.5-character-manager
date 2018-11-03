@@ -20,7 +20,7 @@ export default async () => {
             speed: race.fields['Speed (ft/rnd)'],
             racialBonuses: race.fields['Racial Bonuses'] ? convertTextToArray(race.fields['Racial Bonuses']) : undefined,
             defaultLanguages: race.fields['Languages (Default)'] && race.fields['Languages (Default)'],
-            bonusLanguages: race.fields['Languages (Bonus)'] && race.fields['Languages (Bonus)'],
+            bonusLanguages: race.fields['Languages (Bonus)'] && _.orderBy(race.fields['Languages (Bonus)']),
             abilityMods: {
                 str: race.fields['STR Mod'],
                 dex: race.fields['DEX Mod'],
