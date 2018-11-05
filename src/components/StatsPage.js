@@ -46,7 +46,7 @@ export class StatsPage extends React.Component {
             <span>XP: {this.props.xp}</span>
           </div>
 
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between mb-5">
             <span>Hit Die: {this.props.hd}</span>
             <span>To next level: {this.props.toNextLevel}</span>
           </div>

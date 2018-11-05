@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const Weapons = (props) => (
     <div>
-        <h3 className="row row--center">Weapons</h3>
+        <h3 className="text-center mb-5">Weapons</h3>
 
         {props.weaponSet.map((weaponId) => {
             const weapon = props.weapons.find((weapon) => weapon.id === weaponId);

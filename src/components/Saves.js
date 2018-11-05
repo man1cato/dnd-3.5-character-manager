@@ -2,7 +2,7 @@ import React from 'react';
 
 const Saves = ({saves, onInputChange }) => (
     <div>
-        <h3 className="row row--center">Saving Throws</h3>
+        <h3 className="text-center mb-5">Saving Throws</h3>
         
         <div className="grid grid--6col">
             <h5 className="grid__col1">Saves</h5>

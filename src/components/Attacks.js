@@ -2,7 +2,7 @@ import React from 'react';
 
 const Attacks = ({attacks, onInputChange}) => (    
     <div> 
-        <h3 className="row row--center">Attack Bonuses</h3>
+        <h3 className="text-center mb-5">Attack Bonuses</h3>
         
         <div className=" grid grid--6col">
             <h5 className="grid__col1">Type</h5>

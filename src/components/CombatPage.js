@@ -91,7 +91,7 @@ export class CombatPage extends React.Component {
     return (
       <div className="layout">
         <Header pageTitle="Combat" />
-        <div className="container container--body">
+        <div className="layout__body">
 
           <PhysicalStats
             hp={this.state.hp}

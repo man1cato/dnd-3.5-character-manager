@@ -1,18 +1,23 @@
-.input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: $m-size;
+.input-group--stats {
+    @extend .input-group, .d-flex, .align-items-end, .mb-5;
     
-    @media (min-width: $desktop-breakpoint) {
-        flex-direction: row;
-        margin-bottom: $l-size;
+    > * {
+        min-height: 25px;
+        min-width: 40px;
+        margin: 0;
     }
-}
 
-.input-group__item {
-    margin-bottom: $s-size;
+    > :first-child {
+        width: 15%;
+    }
 
-    @media (min-width: $desktop-breakpoint) {
-        margin: 0 $s-size 0 0;
+    > :not(:first-child) {
+        @extend .d-flex, .flex-column, .align-items-center;
+        > input {
+            max-width: 40px;
+        }
+        > :last-child {
+            height: 25px;
+        }
     }
 }
