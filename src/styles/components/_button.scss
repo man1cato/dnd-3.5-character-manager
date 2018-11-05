@@ -9,6 +9,7 @@
     padding: $s-size;
     border: none;
     text-decoration: none;
+    min-width: 120px;
 }
 
 .button--link {
@@ -19,6 +20,14 @@
     text-align: left;
 }
 
+.button--navbar {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
 .button--secondary {
+    @extend .button;
     background: #888888;
 }

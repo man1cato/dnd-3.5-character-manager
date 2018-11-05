@@ -34,8 +34,12 @@ module.exports = (env) => {
                             options: {
                                 sourceMap: true
                             }
-                        },
-                        {
+                        }, {
+                            loader: 'postcss-loader', // Needed for Bootstrap
+                            options: {
+                                plugins:  () => ( [ require('autoprefixer') ] )
+                            }
+                        }, {
                             loader: 'sass-loader',
                             options: {
                                 sourceMap: true

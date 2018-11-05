@@ -1,6 +1,7 @@
 .layout {
+    height: 100vh;
     display: grid;
-    grid-template-rows: 7vh 84vh 9vh;
+    grid-template-rows: 50px auto 60px;
     grid-template-areas: 
         "header"
         "body"
@@ -8,9 +9,11 @@
 }
 
 .layout__body {
+    @extend .container, .py-4;
     grid-area: body;
+    overflow-y: scroll;
 }
 
-.layout__body-footer {
-    grid-row: 2 / -1;
+.layout__footer {
+    grid-area: footer;
 }

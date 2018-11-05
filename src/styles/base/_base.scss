@@ -7,26 +7,11 @@ html {
 }
 
 body {
-  color: $dark-grey;
-  font-family: Roboto, Open-Sans, sans-serif;
-  font-size: $m-size;
-  line-height: 2rem;
-}
-
-h2, h3, h4, h5 {
-  margin: 0;
+  font-size: $font-size-small;
 }
 
 input, select, textarea {
-  width: -webkit-fill-available;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: default;
+  width: stretch;
 }
 
 .is-active {

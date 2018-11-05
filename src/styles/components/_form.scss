@@ -1,7 +1,7 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.form__body {
+    @extend .container;
+    overflow-y: scroll;
+    padding-top: $m-size;
 }
 
 .form__group {
@@ -39,15 +39,18 @@
     }
 }
 
+.form__content--50-50 {
+    @extend .form__content;
+    > :first-child {
+        width: 50%;
+        max-width: unset;
+    } 
+    > :last-child {
+        width: 50%;
+    }
+}
+
 .form__error {
     margin: 0 0 $m-size 0;
     font-style: italic;
-}
-
-.form__footer {
-    display: flex;
-    justify-content: space-between;
-    > * {
-        width: -webkit-fill-available;
-    }
 }

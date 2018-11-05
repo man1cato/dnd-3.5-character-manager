@@ -39,14 +39,14 @@ export class StatsPage extends React.Component {
     return (
       <div className="layout">
         <Header pageTitle="Character Stats" />
-        <div className="container container--body">
+        <div className="layout__body">
 
-          <div className="row">
+          <div className="d-flex justify-content-between">
             <h3>Level {this.props.level}</h3>
             <span>XP: {this.props.xp}</span>
           </div>
 
-          <div className="row">
+          <div className="d-flex justify-content-between">
             <span>Hit Die: {this.props.hd}</span>
             <span>To next level: {this.props.toNextLevel}</span>
           </div>

@@ -5,7 +5,7 @@ import SpecialAbilities from './SpecialAbilities';
 
 
 const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSelect, setFieldValue}) => (
-    <div>
+    <div className="form__body">
         <div className="form__group">
             <div className="form__content--flex">
                 <h4>Name:</h4>
@@ -15,7 +15,7 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
         </div>
         
         <div className="form__group form__content--flex">
-            <h4>Choose Gender:</h4>
+            <h4>Gender:</h4>
             <Field name="gender" component="select" onChange={(e) => {handleChange(e); handleSelect(e)}}>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -26,13 +26,10 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
         <div className="divider"></div>
 
         <div className="form__group form__content--flex">
-            <h4>Choose Race:</h4>
-            <Field name="race" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
+            <h4>Race:</h4>
+            <Field name="raceId" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
                 {races.map((race) => (
-                    <option 
-                        value={race.id} 
-                        key={race.id}
-                    >
+                    <option value={race.id} key={race.id}>
                         {race.name}
                     </option>
                 ))}

@@ -1,10 +1,9 @@
 footer {
-    background-color: #364051;
-    grid-area: footer;
-    padding: $s-size 0;
+    @extend .layout__footer, .py-4;
 }
 
-.footer__navbar {
+.footer--navbar {
+    @extend .container;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -12,8 +11,15 @@ footer {
     fill: white;
 }
 
-.footer__navbar__icon {
+.footer--navbar__icon {
     max-height: 40px;
     height: 100%;
     padding: 0 $s-size;
+}
+
+.footer--form {
+    @extend .container, .d-flex, .justify-content-between;
+    > button {
+        @extend .btn, .flex-fill, .mx-3;
+    }
 }

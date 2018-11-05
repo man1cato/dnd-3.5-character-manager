@@ -13,6 +13,7 @@ import {startSetItems} from './actions/items';
 import {startSetRaces} from './actions/races';
 import {startSetClasses} from './actions/classes';
 
+import 'bootstrap';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/initialize';

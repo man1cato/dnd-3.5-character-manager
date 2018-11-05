@@ -3,7 +3,7 @@
 @import './components/box-layout';
 @import './components/button';
 @import './components/header';
-@import './components/container';
+// @import './components/container';
 @import './components/page-header';
 @import './components/input-group';
 @import './components/inputs';
@@ -12,9 +12,10 @@
 @import './components/list';
 @import './components/loader';
 @import './components/grid';
-@import './components/row';
+// @import './components/row';
 @import './components/modal';
 @import './components/footer';
 @import './components/layout';
 @import './components/divider';
-
+@import "./base/custom";
+@import "~bootstrap/scss/bootstrap";

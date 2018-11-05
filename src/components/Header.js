@@ -4,9 +4,9 @@ import {startLogout} from '../actions/auth';
 
 export const Header = (props) => (
   <header>
-    <div className="container header__content">
-      <h2 className="header__title">{props.pageTitle}</h2>
-      <button onClick={props.startLogout}>Logout</button>
+    <div className="container d-flex justify-content-between align-items-center">
+      <h2 className="text-white m-0">{props.pageTitle}</h2>
+      <button className="btn button--navbar" onClick={props.startLogout}>Logout</button>
     </div>
   </header>
 );

@@ -1,6 +1,5 @@
 header {
-    background: $dark-grey;
-    padding: $s-size 0;
+    @extend .bg-dark, .py-3;
     grid-area: header;
 }
 

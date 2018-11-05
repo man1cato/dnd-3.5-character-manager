@@ -19,14 +19,14 @@ const svgs = {
 }
 
 const iconWrapper = (page) => (
-  <Link to={`/${page}`} className="footer__navbar__icon" key={page}>
+  <Link to={`/${page}`} className="footer--navbar__icon" key={page}>
     <SVGInline svg={svgs[page]} cleanup={true} height="100%" width="100%" fill="white" />
   </Link>
 )
 
 const Footer = () => (
-  <footer>
-    <div className="container footer__navbar">
+  <footer className="bg-primary">
+    <div className="footer--navbar">
       {Object.keys(svgs).map((svg) => iconWrapper(svg))}    
     </div>
   </footer>
