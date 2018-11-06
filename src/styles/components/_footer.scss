@@ -1,9 +1,4 @@
-footer {
-    @extend .layout__footer, .py-4;
-}
-
-.footer--navbar {
-    @extend .container;
+.footer-navbar {
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -11,15 +6,15 @@ footer {
     fill: white;
 }
 
-.footer--navbar__icon {
+.footer-navbar__icon {
     max-height: 40px;
     height: 100%;
     padding: 0 $s-size;
 }
 
 .footer--form {
-    @extend .container, .d-flex, .justify-content-between;
-    > button {
-        @extend .btn, .flex-fill, .mx-3;
+    @extend .d-flex, .justify-content-between;
+    > * {
+        @extend .flex-fill, .mx-3;
     }
 }

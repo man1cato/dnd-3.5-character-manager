@@ -6,14 +6,14 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
         <div className="input-group--stats">
             <h4>HP</h4>
 
-            <div className="stack">
+            <div>
                 <h5>Base</h5>
                 <div>{hp.base}</div>
             </div>
 
             <div>+</div>
 
-            <div className="stack">
+            <div>
                 <h5>Mod</h5>
                 <input
                     type="text"
@@ -25,7 +25,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
 
             <div>-</div>
 
-            <div className="stack">
+            <div>
                 <h5>Dmg</h5>
                 <input
                     type="text"
@@ -36,7 +36,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
                 />
             </div>
             <div>=</div>
-            <div className="stack">
+            <div>
                 <h5>Curr</h5>
                 <div>{hp.total}</div>
             </div>
@@ -45,17 +45,17 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
         <div className="input-group--stats">
             <h4>AC</h4>
 
-            <div className="stack">
+            <div>
                 <h5>Base</h5>
                 <div>{ac.base}</div>
             </div>
 
-            <div className="stack">
+            <div>
                 <h5>Flat</h5>
                 <div>{ac.flat}</div>
             </div>
             
-            <div className="stack">
+            <div>
                 <h5>Touch</h5>
                 <div>{ac.touch}</div>
             </div>

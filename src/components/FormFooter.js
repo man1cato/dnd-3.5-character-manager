@@ -1,12 +1,12 @@
 import React from 'react';
 
 const FormFooter = ({page, pages, handleBack, handleNext, setErrors, isSubmitting, isValid}) => (
-    <footer className="bg-light">
-        <div className="footer--form">
+    <footer className="layout__footer bg-light">
+        <div className="footer--form neg-mx-3">
             {page !== 1 && (
                 <button 
                     type="button" 
-                    className="btn-secondary" 
+                    className="btn btn-secondary" 
                     key="backButton" 
                     onClick={() => handleBack(setErrors)}
                 >   
@@ -15,7 +15,7 @@ const FormFooter = ({page, pages, handleBack, handleNext, setErrors, isSubmittin
             )}
             {page === pages.length ? (
                 <button 
-                    className="btn-primary" 
+                    className="btn btn-primary" 
                     type="submit" 
                     key="submitButton" 
                     disabled={isSubmitting || !isValid}
@@ -24,7 +24,7 @@ const FormFooter = ({page, pages, handleBack, handleNext, setErrors, isSubmittin
                 </button>
             ) : (                                        
                 <button 
-                    className="btn-primary" 
+                    className="btn btn-primary" 
                     type="button" 
                     key="nextButton" 
                     disabled={!isValid} 

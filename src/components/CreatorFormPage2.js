@@ -17,7 +17,7 @@ const validateProhibitedSchools = (selectedSchool) => (value) => {
 }
 
 const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, disciplines, schools, handleChange, handleSelect, handleMultiSelect, setFieldValue, setFieldError}) => (
-    <div className="form__body">
+    <React.Fragment>
         <div className="form__group form__content--flex">
             <h4>Class:</h4>
             <Field name="jobClassId" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
@@ -104,9 +104,7 @@ const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, discipl
             </div>
         )}
 
-        
-
-    </div>
+    </React.Fragment>
 );
 
 

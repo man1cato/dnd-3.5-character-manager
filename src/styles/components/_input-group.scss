@@ -21,3 +21,12 @@
         }
     }
 }
+
+.input-group--money {
+    @extend .input-group, .mx-2;
+
+    > input {
+        @extend .mr-2;
+        max-width: 100px;
+    }
+}

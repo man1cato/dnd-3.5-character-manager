@@ -73,7 +73,7 @@ export class SpellbookPage extends React.Component {
                     selected={this.state.selected}
                     handleCloseModal={this.handleCloseModal}
                 />
-                <div className="container container--body">
+                <div className="layout__body">
 
                     {this.state.spellbook.map((page, level) => (
                         <div key={level}>

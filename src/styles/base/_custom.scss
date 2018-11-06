@@ -6,4 +6,28 @@
 
 $font-size-base: 1.4rem;
 
+$theme-colors: (
+  "primary": #b71616
+);
 
+//Negative margins
+.neg-mx-1 {
+    margin-left: ($spacer * -.25) !important;
+    margin-right: ($spacer * -.25) !important;
+}
+.neg-mx-2 {
+    margin-left: ($spacer * -.5) !important;
+    margin-right: ($spacer * -.5) !important;
+}
+.neg-mx-3 {
+    margin-left: ($spacer * -1) !important;
+    margin-right: ($spacer * -1) !important;
+}
+.neg-mx-4 {
+    margin-left: ($spacer * -1.5) !important;
+    margin-right: ($spacer * -1.5) !important;
+}
+.neg-mx-5 {
+    margin-left: ($spacer * -3) !important;
+    margin-right: ($spacer * -3) !important;
+}

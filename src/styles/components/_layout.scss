@@ -8,12 +8,18 @@
         "footer";
 }
 
+.layout__header {
+    @extend .container-fluid, .py-3;
+    grid-area: header;
+}
+
 .layout__body {
-    @extend .container, .py-4;
+    @extend .container-fluid, .py-4;
     grid-area: body;
     overflow-y: scroll;
 }
 
 .layout__footer {
+    @extend .container-fluid, .py-4;
     grid-area: footer;
 }

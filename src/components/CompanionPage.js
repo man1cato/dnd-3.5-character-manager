@@ -94,7 +94,7 @@ export class CompanionPage extends React.Component {
         return (
             <div className="layout">
                 <Header pageTitle="Companion" />
-                <div className="container container--body">
+                <div className="layout__body">
                     <div className="grid grid--companion">
                         <h3>{this.props.name}</h3>
                         <div>{this.props.type}</div>

@@ -118,34 +118,36 @@ export class CharacterCreationPage extends React.Component {
                     <Form className="layout">
                         <Header pageTitle="Character Creation" />
 
-                        {{
-                            1: <Page1 
-                                    values={values}
-                                    races={this.props.races}
-                                    classes={this.props.classes}
-                                    selectedRace={this.state.selectedRace} 
-                                    handleChange={handleChange} 
-                                    handleSelect={this.handleSelect}  
-                                    setFieldValue={setFieldValue}
-                                />,
-                            2: <Page2
-                                    values={values}
-                                    selectedRace={this.state.selectedRace} 
-                                    classes={this.props.classes}
-                                    selectedClass={this.state.selectedClass}
-                                    disciplines={this.props.disciplines}
-                                    schools={this.props.schools}
-                                    handleChange={handleChange}
-                                    handleSelect={this.handleSelect}
-                                    handleMultiSelect={this.handleMultiSelect}
-                                    setFieldValue={setFieldValue}
-                                    setFieldError={setFieldError}
-                                />,
-                            3: <Page3 
-                                    setFieldValue={setFieldValue}
-                                    handleAbilityScoreRoll={this.handleAbilityScoreRoll}
-                                />
-                        }[this.state.page]}
+                        <div className="layout__body">
+                            {{
+                                1: <Page1 
+                                        values={values}
+                                        races={this.props.races}
+                                        classes={this.props.classes}
+                                        selectedRace={this.state.selectedRace} 
+                                        handleChange={handleChange} 
+                                        handleSelect={this.handleSelect}  
+                                        setFieldValue={setFieldValue}
+                                    />,
+                                2: <Page2
+                                        values={values}
+                                        selectedRace={this.state.selectedRace} 
+                                        classes={this.props.classes}
+                                        selectedClass={this.state.selectedClass}
+                                        disciplines={this.props.disciplines}
+                                        schools={this.props.schools}
+                                        handleChange={handleChange}
+                                        handleSelect={this.handleSelect}
+                                        handleMultiSelect={this.handleMultiSelect}
+                                        setFieldValue={setFieldValue}
+                                        setFieldError={setFieldError}
+                                    />,
+                                3: <Page3 
+                                        setFieldValue={setFieldValue}
+                                        handleAbilityScoreRoll={this.handleAbilityScoreRoll}
+                                    />
+                            }[this.state.page]}
+                        </div>
 
                         <FormFooter 
                             page={this.state.page}

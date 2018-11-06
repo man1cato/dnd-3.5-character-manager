@@ -1,9 +1,3 @@
-.form__body {
-    @extend .container;
-    overflow-y: scroll;
-    padding-top: $m-size;
-}
-
 .form__group {
     margin-bottom: $m-size;
 

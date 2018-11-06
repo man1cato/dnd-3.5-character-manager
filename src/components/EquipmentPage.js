@@ -114,51 +114,63 @@ export class EquipmentPage extends React.Component {
         return (
             <div className="layout">
                 <Header pageTitle="Equipment" />
-                <div className="container container--body">
+                <div className="layout__body">
                     
-                    <div className="row row--left">
+                    <div className="d-flex justify-content-between mb-3">
                         <h4>Total money: </h4> <div>{this.state.money.total} gp</div> 
                     </div>
-                    <div className="grid grid--money">
-                        <div className="grid--money__cell">
+                    <div className="d-flex justify-content-between mb-5 neg-mx-2">
+                        <div className="input-group--money">
                             <input
+                                className="form-control"
                                 type="text"
                                 name="money"
                                 id="pp"
                                 value={this.state.money.pp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div>pp</div>
+                            <div class="input-group-append">
+                                <span classname="input-group-text">pp</span>
+                            </div>
                         </div>
-                        <div className="grid--money__cell">
+                        <div className="input-group--money">
                             <input
+                                className="form-control"
                                 type="text"
                                 name="money"
                                 id="gp"
                                 value={this.state.money.gp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div>gp</div>
+                            <div class="input-group-append">
+                                <span classname="input-group-text">gp</span>
+                            </div>
                         </div>
-                        <div className="grid--money__cell">
-                            <input
+                        <div className="input-group--money">
+                            <input  
+                                className="form-control"
                                 type="text"
                                 name="money"
                                 id="sp"
                                 value={this.state.money.sp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div>sp</div>
+                            <div class="input-group-append">
+                                <span classname="input-group-text">sp</span>
+                            </div>
                         </div>
-                        <div className="grid--money__cell">
+                        <div className="input-group--money">
                             <input
+                                className="form-control"
                                 type="text"
                                 name="money"
                                 id="cp"
                                 value={this.state.money.cp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div>cp</div>            
+                            <div class="input-group-append">
+                                <span classname="input-group-text">cp</span>
+                            </div>            
                         </div>
                     </div>
 

@@ -5,7 +5,7 @@ import SpecialAbilities from './SpecialAbilities';
 
 
 const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSelect, setFieldValue}) => (
-    <div className="form__body">
+    <React.Fragment>
         <div className="form__group">
             <div className="form__content--flex">
                 <h4>Name:</h4>
@@ -104,7 +104,7 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
             }
         </div>        
         
-    </div>
+    </React.Fragment>
 );
 
 
