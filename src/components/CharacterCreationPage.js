@@ -101,7 +101,6 @@ export class CharacterCreationPage extends React.Component {
                     gender: 'Male',
                     raceId: this.props.races.find((race) => race.name === 'Human').id,
                     jobClassId: this.props.classes.find((jobClass) => jobClass.name === 'Fighter').id,
-                    deity: '',
                     school: 'Universal'
                 }}
                                     

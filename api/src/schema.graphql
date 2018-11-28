@@ -1,0 +1,112 @@
+#Scalar types - String, Boolean, Int, Float, ID
+#import UserOrderByInput, CharacterOrderByInput from './generated/prisma.graphql'
+
+type User {
+    id: ID!
+    name: String!
+    email: String
+    password: String!
+    characters: [Character!]! 
+    updatedAt: String!
+    createdAt: String!
+}
+
+type Character {
+    id: ID!
+    name: String!
+    # race: Race!
+    gender: Gender!
+    age: Int!
+    height: String!
+    alignment: Alignment!
+    # class: Class!
+    deity: String
+    # feats: [Feat!]
+    # skills: [Skill!]
+    hp: Int!
+    # equipment: [Item!]
+    owner: User!
+}
+
+type Query {
+    users(query: String, first: Int, skip: Int, after: String, orderBy: UserOrderByInput): [User!]!
+    me: User!
+    myCharacters(query: String, first: Int, skip: Int, after: String, orderBy: CharacterOrderByInput): [Character!]!
+}
+
+type Mutation {
+    loginUser(data: LoginUserInput!): AuthPayload!
+    createUser(data: CreateUserInput!): AuthPayload! 
+    deleteUser: User!
+    updateUser(data: UpdateUserInput!): User!
+    createCharacter(data: CreateCharacterInput!): Character!
+}
+
+# type Subscription {
+
+# }
+
+type AuthPayload {
+    token: String!
+    user: User!
+}
+
+input LoginUserInput {
+    email: String!
+    password: String!
+}
+
+input CreateUserInput {
+    name: String!
+    email: String!
+    password: String!
+}
+
+input UpdateUserInput {
+    name: String
+    email: String
+    password: String
+}
+
+input CreateCharacterInput {
+    name: String!
+    # race: Race!
+    gender: Gender!
+    age: Int!
+    height: String!
+    alignment: Alignment!
+    # class: Class!
+    deity: String
+}
+
+enum MutationType {
+    CREATED
+    UPDATED
+    DELETED
+}
+
+enum Gender {
+  Male
+  Female
+  Non_Binary
+}
+
+enum Alignment {
+  Lawful_Good
+  Neutral_Good
+  Chaotic_Good
+  Lawful_Neutral
+  True_Neutral
+  Chaotic_Neutral
+  Lawful_Evil
+  Neutral_Evil
+  Chaotic_Evil
+}
+
+enum HitDie {
+  D4
+  D6
+  D8
+  D10
+  D12
+}

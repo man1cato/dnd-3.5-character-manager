@@ -129,8 +129,8 @@ export class EquipmentPage extends React.Component {
                                 value={this.state.money.pp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div class="input-group-append">
-                                <span classname="input-group-text">pp</span>
+                            <div className="input-group-append">
+                                <span className="input-group-text">pp</span>
                             </div>
                         </div>
                         <div className="input-group--money">
@@ -142,8 +142,8 @@ export class EquipmentPage extends React.Component {
                                 value={this.state.money.gp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div class="input-group-append">
-                                <span classname="input-group-text">gp</span>
+                            <div className="input-group-append">
+                                <span className="input-group-text">gp</span>
                             </div>
                         </div>
                         <div className="input-group--money">
@@ -155,8 +155,8 @@ export class EquipmentPage extends React.Component {
                                 value={this.state.money.sp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div class="input-group-append">
-                                <span classname="input-group-text">sp</span>
+                            <div className="input-group-append">
+                                <span className="input-group-text">sp</span>
                             </div>
                         </div>
                         <div className="input-group--money">
@@ -168,8 +168,8 @@ export class EquipmentPage extends React.Component {
                                 value={this.state.money.cp}
                                 onChange={this.handleMoneyChange}
                             />  
-                            <div class="input-group-append">
-                                <span classname="input-group-text">cp</span>
+                            <div className="input-group-append">
+                                <span className="input-group-text">cp</span>
                             </div>            
                         </div>
                     </div>
