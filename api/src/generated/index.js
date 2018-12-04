@@ -5,6 +5,10 @@ var typeDefs = require("./prisma-schema").typeDefs;
 
 var models = [
   {
+    name: "AbilityScores",
+    embedded: false
+  },
+  {
     name: "Alignment",
     embedded: false
   },
@@ -13,7 +17,27 @@ var models = [
     embedded: false
   },
   {
+    name: "Class",
+    embedded: false
+  },
+  {
     name: "Gender",
+    embedded: false
+  },
+  {
+    name: "HitDie",
+    embedded: false
+  },
+  {
+    name: "Language",
+    embedded: false
+  },
+  {
+    name: "Race",
+    embedded: false
+  },
+  {
+    name: "Size",
     embedded: false
   },
   {

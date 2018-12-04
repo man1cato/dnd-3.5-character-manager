@@ -69,6 +69,16 @@ const Mutation = {
         return prisma.mutation.createCharacter({
             data: {
                 ...data,
+                race: {
+                    connect: {
+                        id: data.race
+                    }
+                },
+                class: {
+                    connect: {
+                        id: data.class
+                    }
+                },
                 owner: {
                     connect: {
                         id: userId
@@ -88,11 +98,29 @@ const Mutation = {
         if (!characterExists) {
             throw new Error('Cannot update character')
         }
-        
-        return prisma.mutation.updateCharacter({
-            where: { id }, 
+
+        const opArgs = {
+            where: { id },
             data
-        }, info)
+        }
+
+        if (data.race) {
+            opArgs.data.race = {
+                connect: {
+                    id: data.race
+                }
+            }
+        }
+
+        if (data.class) {
+            opArgs.data.class = {
+                connect: {
+                    id: data.class
+                }
+            }
+        }
+        
+        return prisma.mutation.updateCharacter(opArgs, info)
     },
     async deleteCharacter(parent, { id }, { prisma, request }, info) {
         const userId = getUserId(request)

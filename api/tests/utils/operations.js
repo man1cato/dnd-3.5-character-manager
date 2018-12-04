@@ -58,17 +58,14 @@ const createCharacter = gql`
             weight
             alignment
             deity
-        }
-    }
-`
-
-const getMyCharacters = gql`
-    query {
-        myCharacters{
-            id
-            name
-            gender
-            age
+            race {
+                id
+                name
+            }
+            class {
+                id
+                name
+            }
         }
     }
 `
@@ -84,6 +81,14 @@ const updateCharacter = gql`
             weight
             alignment
             deity
+            race {
+                id
+                name
+            }
+            class {
+                id
+                name
+            }
         }
     }
 `
@@ -97,6 +102,18 @@ const deleteCharacter = gql`
     }
 `
 
+const getMyCharacters = gql`
+    query {
+        myCharacters{
+            id
+            name
+            gender
+            age
+        }
+    }
+`
+
+
 export { 
     createUser, 
     login, 
@@ -105,5 +122,5 @@ export {
     createCharacter, 
     updateCharacter,
     deleteCharacter,
-    getMyCharacters 
+    getMyCharacters
 }

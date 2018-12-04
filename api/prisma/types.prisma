@@ -1,0 +1,64 @@
+# Anytime you make a change to this file, run prisma deploy
+
+type User {
+  id: ID! @unique
+  name: String!
+  email: String! @unique
+  password: String!
+  characters: [Character!]! @relation(name: "CharacterToUser", onDelete: CASCADE)
+  updatedAt: DateTime!
+  createdAt: DateTime!
+}
+
+type Character {
+  id: ID! @unique
+  name: String!
+  race: Race! @relation(name: "CharacterToRace", onDelete: SET_NULL)
+  gender: Gender!
+  age: Int!
+  height: Int!
+  weight: Int!
+  alignment: Alignment!
+  class: Class! @relation(name: "CharacterToClass", onDelete: SET_NULL) 
+  deity: String
+  # feats: [Feat!]
+  # skills: [Skill!]
+  # specialAbilities: [SpecialAbility!]!
+  # hp: Int!
+  # equipment: [Item!]
+  # xp: Int!
+  owner: User! @relation(name: "CharacterToUser", onDelete: SET_NULL)
+}
+
+type Race {
+  id: ID! @unique
+  name: String! @unique
+  size: Size!
+  speed: Int!
+  defaultLanguages: [Language!]!
+  bonusLanguages: [Language!]!
+  abilityMods: AbilityScores
+  # specialAbilities: [SpecialAbility!]!
+  racialBonuses: [String!]!
+  favoredClass: Class @relation(name: "RaceToClass", onDelete: SET_NULL)
+  characters: [Character!]! @relation(name: "CharacterToRace", onDelete: SET_NULL)
+}
+
+type Class {
+    id: ID! @unique
+    name: String! @unique
+    hitDie: HitDie!
+    # weaponProficiencies: [Weapon!]!
+    # spells: [Spell!]!
+    favoredRaces: [Race!]! @relation(name: "RaceToClass", onDelete: SET_NULL)
+    characters: [Character!]! @relation(name: "CharacterToClass", onDelete: SET_NULL) 
+}
+
+type AbilityScores {
+    str: Int
+    dex: Int
+    con: Int
+    int: Int
+    wis: Int
+    cha: Int   
+}

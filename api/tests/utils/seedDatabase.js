@@ -35,25 +35,6 @@ const characterOne = {
     character: undefined
 }
 
-// const raceOne = {
-//     name: "Half-Elf",
-//     size: 'Medium',
-//     speed: 30,
-//     defaultLanguages: {
-//         set: ['Common', 'Elven']
-//     },
-//     bonusLanguages: {
-//         set: ['Draconic', 'Dwarven', 'Giant', 'Gnoll', 'Gnome', 'Goblin', 'Orc', 'Halfling', 'Sylvan', 'Undercommon', 'Terran', 'Abyssal']
-//     },
-//     racialBonuses: {
-//         set: [
-//             "+1 on Listen, Search, and Spot checks.",
-//             "+2 on Diplomacy and Gather Information checks.",
-//             "Elven Blood: For all effects related to race, a half-elf is considered an elf."
-//         ]
-//     }
-// }
-
 // const raceTwo = {
 //     name: "Gray Elf",
 //     bonusLanguages: ['Draconic', 'Gnoll', 'Gnome', 'Goblin', 'Orc', 'Sylvan'],
@@ -89,11 +70,16 @@ const seedDatabase = async () => {
     characterOne.character = await prisma.mutation.createCharacter({
         data: {
             ...characterOne.input,
-            // race: {
-            //     connect: {
-            //         name: 'Half-Elf'
-            //     }
-            // },
+            race: {
+                connect: {
+                    name: 'Orc'
+                }
+            },
+            class: {
+                connect: {
+                    name: 'Barbarian'
+                }
+            },
             owner: {
                 connect: {
                     id: userOne.user.id

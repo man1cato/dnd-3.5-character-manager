@@ -1,4 +1,182 @@
+type AbilityScores {
+  str: Int
+  dex: Int
+  con: Int
+  int: Int
+  wis: Int
+  cha: Int
+}
+
+type AbilityScoresConnection {
+  pageInfo: PageInfo!
+  edges: [AbilityScoresEdge]!
+  aggregate: AggregateAbilityScores!
+}
+
+input AbilityScoresCreateInput {
+  str: Int
+  dex: Int
+  con: Int
+  int: Int
+  wis: Int
+  cha: Int
+}
+
+input AbilityScoresCreateOneInput {
+  create: AbilityScoresCreateInput
+}
+
+type AbilityScoresEdge {
+  node: AbilityScores!
+  cursor: String!
+}
+
+enum AbilityScoresOrderByInput {
+  str_ASC
+  str_DESC
+  dex_ASC
+  dex_DESC
+  con_ASC
+  con_DESC
+  int_ASC
+  int_DESC
+  wis_ASC
+  wis_DESC
+  cha_ASC
+  cha_DESC
+  id_ASC
+  id_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type AbilityScoresPreviousValues {
+  str: Int
+  dex: Int
+  con: Int
+  int: Int
+  wis: Int
+  cha: Int
+}
+
+type AbilityScoresSubscriptionPayload {
+  mutation: MutationType!
+  node: AbilityScores
+  updatedFields: [String!]
+  previousValues: AbilityScoresPreviousValues
+}
+
+input AbilityScoresSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: AbilityScoresWhereInput
+  AND: [AbilityScoresSubscriptionWhereInput!]
+  OR: [AbilityScoresSubscriptionWhereInput!]
+  NOT: [AbilityScoresSubscriptionWhereInput!]
+}
+
+input AbilityScoresUpdateDataInput {
+  str: Int
+  dex: Int
+  con: Int
+  int: Int
+  wis: Int
+  cha: Int
+}
+
+input AbilityScoresUpdateManyMutationInput {
+  str: Int
+  dex: Int
+  con: Int
+  int: Int
+  wis: Int
+  cha: Int
+}
+
+input AbilityScoresUpdateOneInput {
+  create: AbilityScoresCreateInput
+  update: AbilityScoresUpdateDataInput
+  upsert: AbilityScoresUpsertNestedInput
+  delete: Boolean
+  disconnect: Boolean
+}
+
+input AbilityScoresUpsertNestedInput {
+  update: AbilityScoresUpdateDataInput!
+  create: AbilityScoresCreateInput!
+}
+
+input AbilityScoresWhereInput {
+  str: Int
+  str_not: Int
+  str_in: [Int!]
+  str_not_in: [Int!]
+  str_lt: Int
+  str_lte: Int
+  str_gt: Int
+  str_gte: Int
+  dex: Int
+  dex_not: Int
+  dex_in: [Int!]
+  dex_not_in: [Int!]
+  dex_lt: Int
+  dex_lte: Int
+  dex_gt: Int
+  dex_gte: Int
+  con: Int
+  con_not: Int
+  con_in: [Int!]
+  con_not_in: [Int!]
+  con_lt: Int
+  con_lte: Int
+  con_gt: Int
+  con_gte: Int
+  int: Int
+  int_not: Int
+  int_in: [Int!]
+  int_not_in: [Int!]
+  int_lt: Int
+  int_lte: Int
+  int_gt: Int
+  int_gte: Int
+  wis: Int
+  wis_not: Int
+  wis_in: [Int!]
+  wis_not_in: [Int!]
+  wis_lt: Int
+  wis_lte: Int
+  wis_gt: Int
+  wis_gte: Int
+  cha: Int
+  cha_not: Int
+  cha_in: [Int!]
+  cha_not_in: [Int!]
+  cha_lt: Int
+  cha_lte: Int
+  cha_gt: Int
+  cha_gte: Int
+  AND: [AbilityScoresWhereInput!]
+  OR: [AbilityScoresWhereInput!]
+  NOT: [AbilityScoresWhereInput!]
+}
+
+type AggregateAbilityScores {
+  count: Int!
+}
+
 type AggregateCharacter {
+  count: Int!
+}
+
+type AggregateClass {
+  count: Int!
+}
+
+type AggregateRace {
   count: Int!
 }
 
@@ -25,11 +203,13 @@ type BatchPayload {
 type Character {
   id: ID!
   name: String!
+  race: Race!
   gender: Gender!
   age: Int!
   height: Int!
   weight: Int!
   alignment: Alignment!
+  class: Class!
   deity: String
   owner: User!
 }
@@ -42,6 +222,35 @@ type CharacterConnection {
 
 input CharacterCreateInput {
   name: String!
+  race: RaceCreateOneWithoutCharactersInput!
+  gender: Gender!
+  age: Int!
+  height: Int!
+  weight: Int!
+  alignment: Alignment!
+  class: ClassCreateOneWithoutCharactersInput!
+  deity: String
+  owner: UserCreateOneWithoutCharactersInput!
+}
+
+input CharacterCreateManyWithoutClassInput {
+  create: [CharacterCreateWithoutClassInput!]
+  connect: [CharacterWhereUniqueInput!]
+}
+
+input CharacterCreateManyWithoutOwnerInput {
+  create: [CharacterCreateWithoutOwnerInput!]
+  connect: [CharacterWhereUniqueInput!]
+}
+
+input CharacterCreateManyWithoutRaceInput {
+  create: [CharacterCreateWithoutRaceInput!]
+  connect: [CharacterWhereUniqueInput!]
+}
+
+input CharacterCreateWithoutClassInput {
+  name: String!
+  race: RaceCreateOneWithoutCharactersInput!
   gender: Gender!
   age: Int!
   height: Int!
@@ -51,19 +260,28 @@ input CharacterCreateInput {
   owner: UserCreateOneWithoutCharactersInput!
 }
 
-input CharacterCreateManyWithoutOwnerInput {
-  create: [CharacterCreateWithoutOwnerInput!]
-  connect: [CharacterWhereUniqueInput!]
+input CharacterCreateWithoutOwnerInput {
+  name: String!
+  race: RaceCreateOneWithoutCharactersInput!
+  gender: Gender!
+  age: Int!
+  height: Int!
+  weight: Int!
+  alignment: Alignment!
+  class: ClassCreateOneWithoutCharactersInput!
+  deity: String
 }
 
-input CharacterCreateWithoutOwnerInput {
+input CharacterCreateWithoutRaceInput {
   name: String!
   gender: Gender!
   age: Int!
   height: Int!
   weight: Int!
   alignment: Alignment!
+  class: ClassCreateOneWithoutCharactersInput!
   deity: String
+  owner: UserCreateOneWithoutCharactersInput!
 }
 
 type CharacterEdge {
@@ -125,11 +343,13 @@ input CharacterSubscriptionWhereInput {
 
 input CharacterUpdateInput {
   name: String
+  race: RaceUpdateOneRequiredWithoutCharactersInput
   gender: Gender
   age: Int
   height: Int
   weight: Int
   alignment: Alignment
+  class: ClassUpdateOneRequiredWithoutCharactersInput
   deity: String
   owner: UserUpdateOneRequiredWithoutCharactersInput
 }
@@ -144,6 +364,15 @@ input CharacterUpdateManyMutationInput {
   deity: String
 }
 
+input CharacterUpdateManyWithoutClassInput {
+  create: [CharacterCreateWithoutClassInput!]
+  delete: [CharacterWhereUniqueInput!]
+  connect: [CharacterWhereUniqueInput!]
+  disconnect: [CharacterWhereUniqueInput!]
+  update: [CharacterUpdateWithWhereUniqueWithoutClassInput!]
+  upsert: [CharacterUpsertWithWhereUniqueWithoutClassInput!]
+}
+
 input CharacterUpdateManyWithoutOwnerInput {
   create: [CharacterCreateWithoutOwnerInput!]
   delete: [CharacterWhereUniqueInput!]
@@ -153,14 +382,54 @@ input CharacterUpdateManyWithoutOwnerInput {
   upsert: [CharacterUpsertWithWhereUniqueWithoutOwnerInput!]
 }
 
-input CharacterUpdateWithoutOwnerDataInput {
+input CharacterUpdateManyWithoutRaceInput {
+  create: [CharacterCreateWithoutRaceInput!]
+  delete: [CharacterWhereUniqueInput!]
+  connect: [CharacterWhereUniqueInput!]
+  disconnect: [CharacterWhereUniqueInput!]
+  update: [CharacterUpdateWithWhereUniqueWithoutRaceInput!]
+  upsert: [CharacterUpsertWithWhereUniqueWithoutRaceInput!]
+}
+
+input CharacterUpdateWithoutClassDataInput {
   name: String
+  race: RaceUpdateOneRequiredWithoutCharactersInput
   gender: Gender
   age: Int
   height: Int
   weight: Int
   alignment: Alignment
   deity: String
+  owner: UserUpdateOneRequiredWithoutCharactersInput
+}
+
+input CharacterUpdateWithoutOwnerDataInput {
+  name: String
+  race: RaceUpdateOneRequiredWithoutCharactersInput
+  gender: Gender
+  age: Int
+  height: Int
+  weight: Int
+  alignment: Alignment
+  class: ClassUpdateOneRequiredWithoutCharactersInput
+  deity: String
+}
+
+input CharacterUpdateWithoutRaceDataInput {
+  name: String
+  gender: Gender
+  age: Int
+  height: Int
+  weight: Int
+  alignment: Alignment
+  class: ClassUpdateOneRequiredWithoutCharactersInput
+  deity: String
+  owner: UserUpdateOneRequiredWithoutCharactersInput
+}
+
+input CharacterUpdateWithWhereUniqueWithoutClassInput {
+  where: CharacterWhereUniqueInput!
+  data: CharacterUpdateWithoutClassDataInput!
 }
 
 input CharacterUpdateWithWhereUniqueWithoutOwnerInput {
@@ -168,10 +437,27 @@ input CharacterUpdateWithWhereUniqueWithoutOwnerInput {
   data: CharacterUpdateWithoutOwnerDataInput!
 }
 
+input CharacterUpdateWithWhereUniqueWithoutRaceInput {
+  where: CharacterWhereUniqueInput!
+  data: CharacterUpdateWithoutRaceDataInput!
+}
+
+input CharacterUpsertWithWhereUniqueWithoutClassInput {
+  where: CharacterWhereUniqueInput!
+  update: CharacterUpdateWithoutClassDataInput!
+  create: CharacterCreateWithoutClassInput!
+}
+
 input CharacterUpsertWithWhereUniqueWithoutOwnerInput {
   where: CharacterWhereUniqueInput!
   update: CharacterUpdateWithoutOwnerDataInput!
   create: CharacterCreateWithoutOwnerInput!
+}
+
+input CharacterUpsertWithWhereUniqueWithoutRaceInput {
+  where: CharacterWhereUniqueInput!
+  update: CharacterUpdateWithoutRaceDataInput!
+  create: CharacterCreateWithoutRaceInput!
 }
 
 input CharacterWhereInput {
@@ -203,6 +489,7 @@ input CharacterWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
+  race: RaceWhereInput
   gender: Gender
   gender_not: Gender
   gender_in: [Gender!]
@@ -235,6 +522,7 @@ input CharacterWhereInput {
   alignment_not: Alignment
   alignment_in: [Alignment!]
   alignment_not_in: [Alignment!]
+  class: ClassWhereInput
   deity: String
   deity_not: String
   deity_in: [String!]
@@ -259,6 +547,151 @@ input CharacterWhereUniqueInput {
   id: ID
 }
 
+type Class {
+  id: ID!
+  name: String!
+  hitDie: HitDie!
+  characters(where: CharacterWhereInput, orderBy: CharacterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Character!]
+}
+
+type ClassConnection {
+  pageInfo: PageInfo!
+  edges: [ClassEdge]!
+  aggregate: AggregateClass!
+}
+
+input ClassCreateInput {
+  name: String!
+  hitDie: HitDie!
+  characters: CharacterCreateManyWithoutClassInput
+}
+
+input ClassCreateOneWithoutCharactersInput {
+  create: ClassCreateWithoutCharactersInput
+  connect: ClassWhereUniqueInput
+}
+
+input ClassCreateWithoutCharactersInput {
+  name: String!
+  hitDie: HitDie!
+}
+
+type ClassEdge {
+  node: Class!
+  cursor: String!
+}
+
+enum ClassOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  hitDie_ASC
+  hitDie_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type ClassPreviousValues {
+  id: ID!
+  name: String!
+  hitDie: HitDie!
+}
+
+type ClassSubscriptionPayload {
+  mutation: MutationType!
+  node: Class
+  updatedFields: [String!]
+  previousValues: ClassPreviousValues
+}
+
+input ClassSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: ClassWhereInput
+  AND: [ClassSubscriptionWhereInput!]
+  OR: [ClassSubscriptionWhereInput!]
+  NOT: [ClassSubscriptionWhereInput!]
+}
+
+input ClassUpdateInput {
+  name: String
+  hitDie: HitDie
+  characters: CharacterUpdateManyWithoutClassInput
+}
+
+input ClassUpdateManyMutationInput {
+  name: String
+  hitDie: HitDie
+}
+
+input ClassUpdateOneRequiredWithoutCharactersInput {
+  create: ClassCreateWithoutCharactersInput
+  update: ClassUpdateWithoutCharactersDataInput
+  upsert: ClassUpsertWithoutCharactersInput
+  connect: ClassWhereUniqueInput
+}
+
+input ClassUpdateWithoutCharactersDataInput {
+  name: String
+  hitDie: HitDie
+}
+
+input ClassUpsertWithoutCharactersInput {
+  update: ClassUpdateWithoutCharactersDataInput!
+  create: ClassCreateWithoutCharactersInput!
+}
+
+input ClassWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  hitDie: HitDie
+  hitDie_not: HitDie
+  hitDie_in: [HitDie!]
+  hitDie_not_in: [HitDie!]
+  characters_every: CharacterWhereInput
+  characters_some: CharacterWhereInput
+  characters_none: CharacterWhereInput
+  AND: [ClassWhereInput!]
+  OR: [ClassWhereInput!]
+  NOT: [ClassWhereInput!]
+}
+
+input ClassWhereUniqueInput {
+  id: ID
+  name: String
+}
+
 scalar DateTime
 
 enum Gender {
@@ -267,15 +700,55 @@ enum Gender {
   Non_Binary
 }
 
+enum HitDie {
+  D4
+  D6
+  D8
+  D10
+  D12
+}
+
+enum Language {
+  Common
+  Abyssal
+  Draconic
+  Dwarven
+  Elven
+  Giant
+  Gnoll
+  Gnome
+  Goblin
+  Orc
+  Halfling
+  Sylvan
+  Undercommon
+  Terran
+}
+
 scalar Long
 
 type Mutation {
+  createAbilityScores(data: AbilityScoresCreateInput!): AbilityScores!
+  updateManyAbilityScoreses(data: AbilityScoresUpdateManyMutationInput!, where: AbilityScoresWhereInput): BatchPayload!
+  deleteManyAbilityScoreses(where: AbilityScoresWhereInput): BatchPayload!
   createCharacter(data: CharacterCreateInput!): Character!
   updateCharacter(data: CharacterUpdateInput!, where: CharacterWhereUniqueInput!): Character
   updateManyCharacters(data: CharacterUpdateManyMutationInput!, where: CharacterWhereInput): BatchPayload!
   upsertCharacter(where: CharacterWhereUniqueInput!, create: CharacterCreateInput!, update: CharacterUpdateInput!): Character!
   deleteCharacter(where: CharacterWhereUniqueInput!): Character
   deleteManyCharacters(where: CharacterWhereInput): BatchPayload!
+  createClass(data: ClassCreateInput!): Class!
+  updateClass(data: ClassUpdateInput!, where: ClassWhereUniqueInput!): Class
+  updateManyClasses(data: ClassUpdateManyMutationInput!, where: ClassWhereInput): BatchPayload!
+  upsertClass(where: ClassWhereUniqueInput!, create: ClassCreateInput!, update: ClassUpdateInput!): Class!
+  deleteClass(where: ClassWhereUniqueInput!): Class
+  deleteManyClasses(where: ClassWhereInput): BatchPayload!
+  createRace(data: RaceCreateInput!): Race!
+  updateRace(data: RaceUpdateInput!, where: RaceWhereUniqueInput!): Race
+  updateManyRaces(data: RaceUpdateManyMutationInput!, where: RaceWhereInput): BatchPayload!
+  upsertRace(where: RaceWhereUniqueInput!, create: RaceCreateInput!, update: RaceUpdateInput!): Race!
+  deleteRace(where: RaceWhereUniqueInput!): Race
+  deleteManyRaces(where: RaceWhereInput): BatchPayload!
   createUser(data: UserCreateInput!): User!
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
   updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
@@ -302,17 +775,249 @@ type PageInfo {
 }
 
 type Query {
+  abilityScoreses(where: AbilityScoresWhereInput, orderBy: AbilityScoresOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [AbilityScores]!
+  abilityScoresesConnection(where: AbilityScoresWhereInput, orderBy: AbilityScoresOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): AbilityScoresConnection!
   character(where: CharacterWhereUniqueInput!): Character
   characters(where: CharacterWhereInput, orderBy: CharacterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Character]!
   charactersConnection(where: CharacterWhereInput, orderBy: CharacterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CharacterConnection!
+  class(where: ClassWhereUniqueInput!): Class
+  classes(where: ClassWhereInput, orderBy: ClassOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Class]!
+  classesConnection(where: ClassWhereInput, orderBy: ClassOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ClassConnection!
+  race(where: RaceWhereUniqueInput!): Race
+  races(where: RaceWhereInput, orderBy: RaceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Race]!
+  racesConnection(where: RaceWhereInput, orderBy: RaceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): RaceConnection!
   user(where: UserWhereUniqueInput!): User
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
   node(id: ID!): Node
 }
 
+type Race {
+  id: ID!
+  name: String!
+  size: Size!
+  speed: Int!
+  defaultLanguages: [Language!]!
+  bonusLanguages: [Language!]!
+  abilityMods: AbilityScores
+  racialBonuses: [String!]!
+  characters(where: CharacterWhereInput, orderBy: CharacterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Character!]
+}
+
+type RaceConnection {
+  pageInfo: PageInfo!
+  edges: [RaceEdge]!
+  aggregate: AggregateRace!
+}
+
+input RaceCreatebonusLanguagesInput {
+  set: [Language!]
+}
+
+input RaceCreatedefaultLanguagesInput {
+  set: [Language!]
+}
+
+input RaceCreateInput {
+  name: String!
+  size: Size!
+  speed: Int!
+  defaultLanguages: RaceCreatedefaultLanguagesInput
+  bonusLanguages: RaceCreatebonusLanguagesInput
+  abilityMods: AbilityScoresCreateOneInput
+  racialBonuses: RaceCreateracialBonusesInput
+  characters: CharacterCreateManyWithoutRaceInput
+}
+
+input RaceCreateOneWithoutCharactersInput {
+  create: RaceCreateWithoutCharactersInput
+  connect: RaceWhereUniqueInput
+}
+
+input RaceCreateracialBonusesInput {
+  set: [String!]
+}
+
+input RaceCreateWithoutCharactersInput {
+  name: String!
+  size: Size!
+  speed: Int!
+  defaultLanguages: RaceCreatedefaultLanguagesInput
+  bonusLanguages: RaceCreatebonusLanguagesInput
+  abilityMods: AbilityScoresCreateOneInput
+  racialBonuses: RaceCreateracialBonusesInput
+}
+
+type RaceEdge {
+  node: Race!
+  cursor: String!
+}
+
+enum RaceOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  size_ASC
+  size_DESC
+  speed_ASC
+  speed_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type RacePreviousValues {
+  id: ID!
+  name: String!
+  size: Size!
+  speed: Int!
+  defaultLanguages: [Language!]!
+  bonusLanguages: [Language!]!
+  racialBonuses: [String!]!
+}
+
+type RaceSubscriptionPayload {
+  mutation: MutationType!
+  node: Race
+  updatedFields: [String!]
+  previousValues: RacePreviousValues
+}
+
+input RaceSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: RaceWhereInput
+  AND: [RaceSubscriptionWhereInput!]
+  OR: [RaceSubscriptionWhereInput!]
+  NOT: [RaceSubscriptionWhereInput!]
+}
+
+input RaceUpdatebonusLanguagesInput {
+  set: [Language!]
+}
+
+input RaceUpdatedefaultLanguagesInput {
+  set: [Language!]
+}
+
+input RaceUpdateInput {
+  name: String
+  size: Size
+  speed: Int
+  defaultLanguages: RaceUpdatedefaultLanguagesInput
+  bonusLanguages: RaceUpdatebonusLanguagesInput
+  abilityMods: AbilityScoresUpdateOneInput
+  racialBonuses: RaceUpdateracialBonusesInput
+  characters: CharacterUpdateManyWithoutRaceInput
+}
+
+input RaceUpdateManyMutationInput {
+  name: String
+  size: Size
+  speed: Int
+  defaultLanguages: RaceUpdatedefaultLanguagesInput
+  bonusLanguages: RaceUpdatebonusLanguagesInput
+  racialBonuses: RaceUpdateracialBonusesInput
+}
+
+input RaceUpdateOneRequiredWithoutCharactersInput {
+  create: RaceCreateWithoutCharactersInput
+  update: RaceUpdateWithoutCharactersDataInput
+  upsert: RaceUpsertWithoutCharactersInput
+  connect: RaceWhereUniqueInput
+}
+
+input RaceUpdateracialBonusesInput {
+  set: [String!]
+}
+
+input RaceUpdateWithoutCharactersDataInput {
+  name: String
+  size: Size
+  speed: Int
+  defaultLanguages: RaceUpdatedefaultLanguagesInput
+  bonusLanguages: RaceUpdatebonusLanguagesInput
+  abilityMods: AbilityScoresUpdateOneInput
+  racialBonuses: RaceUpdateracialBonusesInput
+}
+
+input RaceUpsertWithoutCharactersInput {
+  update: RaceUpdateWithoutCharactersDataInput!
+  create: RaceCreateWithoutCharactersInput!
+}
+
+input RaceWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  size: Size
+  size_not: Size
+  size_in: [Size!]
+  size_not_in: [Size!]
+  speed: Int
+  speed_not: Int
+  speed_in: [Int!]
+  speed_not_in: [Int!]
+  speed_lt: Int
+  speed_lte: Int
+  speed_gt: Int
+  speed_gte: Int
+  abilityMods: AbilityScoresWhereInput
+  characters_every: CharacterWhereInput
+  characters_some: CharacterWhereInput
+  characters_none: CharacterWhereInput
+  AND: [RaceWhereInput!]
+  OR: [RaceWhereInput!]
+  NOT: [RaceWhereInput!]
+}
+
+input RaceWhereUniqueInput {
+  id: ID
+  name: String
+}
+
+enum Size {
+  Tiny
+  Small
+  Medium
+  Large
+  Huge
+}
+
 type Subscription {
+  abilityScores(where: AbilityScoresSubscriptionWhereInput): AbilityScoresSubscriptionPayload
   character(where: CharacterSubscriptionWhereInput): CharacterSubscriptionPayload
+  class(where: ClassSubscriptionWhereInput): ClassSubscriptionPayload
+  race(where: RaceSubscriptionWhereInput): RaceSubscriptionPayload
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
 }
 

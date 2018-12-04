@@ -1,0 +1,52 @@
+# Anytime you make a change to this file, run prisma deploy
+
+enum Gender {
+  Male
+  Female
+  Non_Binary
+}
+
+enum Alignment {
+  Lawful_Good
+  Neutral_Good
+  Chaotic_Good
+  Lawful_Neutral
+  True_Neutral
+  Chaotic_Neutral
+  Lawful_Evil
+  Neutral_Evil
+  Chaotic_Evil
+}
+
+enum HitDie {
+  D4
+  D6
+  D8
+  D10
+  D12
+}
+
+enum Size {
+  Tiny
+  Small
+  Medium
+  Large
+  Huge
+}
+
+enum Language {
+  Common
+  Abyssal
+  Draconic
+  Dwarven
+  Elven
+  Giant
+  Gnoll
+  Gnome
+  Goblin
+  Orc
+  Halfling
+  Sylvan
+  Undercommon
+  Terran
+}

@@ -1,5 +1,7 @@
 endpoint: ${env:PRISMA_ENDPOINT}
-datamodel: datamodel.graphql
+datamodel: 
+    - types.prisma
+    - enums.prisma
 secret: ${env:PRISMA_SECRET}
 generate:
     - generator: javascript-client

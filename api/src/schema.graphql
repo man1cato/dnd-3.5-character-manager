@@ -21,6 +21,8 @@ type Character {
     weight: Int!
     alignment: Alignment!
     deity: String
+    race: Race!
+    class: Class!
     owner: User! 
 }
 
@@ -73,6 +75,8 @@ input CreateCharacterInput {
     height: Int!
     weight: Int!
     alignment: Alignment!
+    race: ID!
+    class: ID!
     deity: String
 }
 
@@ -83,6 +87,8 @@ input UpdateCharacterInput {
     height: Int
     weight: Int
     alignment: Alignment
+    race: ID
+    class: ID
     deity: String
 }
 
