@@ -1,37 +1,25 @@
 import 'cross-fetch/polyfill'
-
 import prisma from '../src/prisma'
 import seedDatabase, { userOne } from './utils/seedDatabase'
 import getClient from './utils/getClient'
-import { createUser, getUsers, getProfile, loginUser } from './utils/operations'
-
+import { createUser, getUsers, login, getProfile } from './utils/operations'
+ 
 const client = getClient()
 
 beforeEach(seedDatabase)
 
-
 test('Should create a new user', async () => {
     const variables = {
         data: {
-            name: 'Andres',
-            email: 'andres@example.com',
-            password: 'red12345'
+            name: 'Andrew',
+            email: 'andrew@example.com',
+            password: 'MyPass123'
         }
     }
     const response = await client.mutate({ mutation: createUser, variables })
-    const userExists = await prisma.exists.User({
-        id: response.data.createUser.user.id
-    }) 
 
-    expect(userExists).toBe(true)
-}) 
-
-test('Should expose public author profiles', async () => {
-    const response = await client.query({ query: getUsers })
-
-    expect(response.data.users.length).toBe(2)
-    expect(response.data.users[0].email).toBe(null)
-    expect(response.data.users[0].name).toBe('Jen')
+    const exists = await prisma.exists.User({ id: response.data.createUser.user.id })
+    expect(exists).toBe(true)
 })
 
 test('Should login and provide authentication token', async () => {
@@ -42,44 +30,38 @@ test('Should login and provide authentication token', async () => {
         }
     }
 
-    const { data } = await client.mutate({ mutation: loginUser, variables })
+    const { data } = await client.mutate({ mutation: login, variables })
 
-    expect(data.loginUser).toHaveProperty('token')
+    expect(data.login).toHaveProperty('token')
+})
+
+test('Should expose public author profiles', async () => {
+    const response = await client.query({ query: getUsers })
+
+    expect(response.data.users.length).toBe(2)
+    expect(response.data.users[0].email).toBe(null)
+    expect(response.data.users[0].name).toBe('Jen')
 })
 
 test('Should not login with bad credentials', async () => {
     const variables = {
         data: {
             email: "jen@example.com",
-            password: "51dhn5gfch1f"
+            password: "red098!@#$"
         }
     }
 
     await expect(
-        client.mutate({ mutation: loginUser, variables })      //this is a Promise
-    ).rejects.toThrow()                         //so it requires the use of "rejects"
+        client.mutate({ mutation: login, variables })
+    ).rejects.toThrow()
 })
 
 test('Should not signup user with invalid password', async () => {
     const variables = {
         data: {
-            name: 'Jeff',
-            email: 'jeff@example.com',
-            password: 'green23'
-        }
-    }
-
-    await expect(
-        client.mutate({ mutation: createUser, variables })
-    ).rejects.toThrow()
-})
-
-test('Should not signup a user with an email that is already in use', async () => {
-    const variables = {
-        data: {
-            name: 'Jenny',
-            email: 'jen@example.com',
-            password: 'aeifji3f9jm'
+            name: 'Andrew',
+            email: 'andrew@example.com',
+            password: 'pass'
         }
     }
 

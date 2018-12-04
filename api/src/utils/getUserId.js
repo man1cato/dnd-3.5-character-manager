@@ -1,21 +1,19 @@
 import jwt from 'jsonwebtoken'
 
-export default (request, requireAuth = true) => {
-    const header = request.request ? 
-        request.request.headers.authorization   //for normal authentication
-        :
-        request.connection.context.Authorization    //for subscription authentication
+const getUserId = (request, requireAuth = true) => {
+    const header = request.request ? request.request.headers.authorization : request.connection.context.Authorization
 
     if (header) {
         const token = header.replace('Bearer ', '')
-        const decoded = jwt.verify(token, process.env.JWT_SECRET)  //if verification fails, error is thrown
-    
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
         return decoded.userId
     }
 
     if (requireAuth) {
         throw new Error('Authentication required')
-    }
-
+    } 
+    
     return null
 }
+
+export { getUserId as default }

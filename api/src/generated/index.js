@@ -17,10 +17,6 @@ var models = [
     embedded: false
   },
   {
-    name: "HitDie",
-    embedded: false
-  },
-  {
     name: "User",
     embedded: false
   }

@@ -28,7 +28,8 @@ type Character {
   name: String!
   gender: Gender!
   age: Int!
-  height: String!
+  height: Int!
+  weight: Int!
   alignment: Alignment!
   deity: String
   owner: User!
@@ -44,7 +45,8 @@ input CharacterCreateInput {
   name: String!
   gender: Gender!
   age: Int!
-  height: String!
+  height: Int!
+  weight: Int!
   alignment: Alignment!
   deity: String
   owner: UserCreateOneWithoutCharactersInput!
@@ -59,7 +61,8 @@ input CharacterCreateWithoutOwnerInput {
   name: String!
   gender: Gender!
   age: Int!
-  height: String!
+  height: Int!
+  weight: Int!
   alignment: Alignment!
   deity: String
 }
@@ -80,6 +83,8 @@ enum CharacterOrderByInput {
   age_DESC
   height_ASC
   height_DESC
+  weight_ASC
+  weight_DESC
   alignment_ASC
   alignment_DESC
   deity_ASC
@@ -95,7 +100,8 @@ type CharacterPreviousValues {
   name: String!
   gender: Gender!
   age: Int!
-  height: String!
+  height: Int!
+  weight: Int!
   alignment: Alignment!
   deity: String
 }
@@ -122,7 +128,8 @@ input CharacterUpdateInput {
   name: String
   gender: Gender
   age: Int
-  height: String
+  height: Int
+  weight: Int
   alignment: Alignment
   deity: String
   owner: UserUpdateOneRequiredWithoutCharactersInput
@@ -132,7 +139,8 @@ input CharacterUpdateManyMutationInput {
   name: String
   gender: Gender
   age: Int
-  height: String
+  height: Int
+  weight: Int
   alignment: Alignment
   deity: String
 }
@@ -150,7 +158,8 @@ input CharacterUpdateWithoutOwnerDataInput {
   name: String
   gender: Gender
   age: Int
-  height: String
+  height: Int
+  weight: Int
   alignment: Alignment
   deity: String
 }
@@ -207,20 +216,22 @@ input CharacterWhereInput {
   age_lte: Int
   age_gt: Int
   age_gte: Int
-  height: String
-  height_not: String
-  height_in: [String!]
-  height_not_in: [String!]
-  height_lt: String
-  height_lte: String
-  height_gt: String
-  height_gte: String
-  height_contains: String
-  height_not_contains: String
-  height_starts_with: String
-  height_not_starts_with: String
-  height_ends_with: String
-  height_not_ends_with: String
+  height: Int
+  height_not: Int
+  height_in: [Int!]
+  height_not_in: [Int!]
+  height_lt: Int
+  height_lte: Int
+  height_gt: Int
+  height_gte: Int
+  weight: Int
+  weight_not: Int
+  weight_in: [Int!]
+  weight_not_in: [Int!]
+  weight_lt: Int
+  weight_lte: Int
+  weight_gt: Int
+  weight_gte: Int
   alignment: Alignment
   alignment_not: Alignment
   alignment_in: [Alignment!]

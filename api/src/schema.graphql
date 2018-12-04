@@ -1,31 +1,27 @@
-#Scalar types - String, Boolean, Int, Float, ID
-#import UserOrderByInput, CharacterOrderByInput from './generated/prisma.graphql'
+# Anytime you make a change to this file, run get-schema
+
+# import UserOrderByInput, CharacterOrderByInput from './generated/prisma.graphql'
 
 type User {
     id: ID!
     name: String!
     email: String
     password: String!
-    characters: [Character!]! 
+    characters: [Character!]!
     updatedAt: String!
     createdAt: String!
 }
 
 type Character {
-    id: ID!
+    id: ID! 
     name: String!
-    # race: Race!
     gender: Gender!
     age: Int!
-    height: String!
+    height: Int!
+    weight: Int!
     alignment: Alignment!
-    # class: Class!
     deity: String
-    # feats: [Feat!]
-    # skills: [Skill!]
-    hp: Int!
-    # equipment: [Item!]
-    owner: User!
+    owner: User! 
 }
 
 type Query {
@@ -35,11 +31,13 @@ type Query {
 }
 
 type Mutation {
-    loginUser(data: LoginUserInput!): AuthPayload!
-    createUser(data: CreateUserInput!): AuthPayload! 
-    deleteUser: User!
+    createUser(data: CreateUserInput!): AuthPayload!
+    login(data: LoginUserInput!): AuthPayload!
     updateUser(data: UpdateUserInput!): User!
+    deleteUser: User!
     createCharacter(data: CreateCharacterInput!): Character!
+    updateCharacter(id: ID!, data: UpdateCharacterInput!): Character!
+    deleteCharacter(id:ID!): Character!
 }
 
 # type Subscription {
@@ -51,13 +49,13 @@ type AuthPayload {
     user: User!
 }
 
-input LoginUserInput {
+input CreateUserInput {
+    name: String!
     email: String!
     password: String!
 }
 
-input CreateUserInput {
-    name: String!
+input LoginUserInput {
     email: String!
     password: String!
 }
@@ -70,12 +68,21 @@ input UpdateUserInput {
 
 input CreateCharacterInput {
     name: String!
-    # race: Race!
     gender: Gender!
     age: Int!
-    height: String!
+    height: Int!
+    weight: Int!
     alignment: Alignment!
-    # class: Class!
+    deity: String
+}
+
+input UpdateCharacterInput {
+    name: String
+    gender: Gender
+    age: Int
+    height: Int
+    weight: Int
+    alignment: Alignment
     deity: String
 }
 
@@ -85,28 +92,3 @@ enum MutationType {
     DELETED
 }
 
-enum Gender {
-  Male
-  Female
-  Non_Binary
-}
-
-enum Alignment {
-  Lawful_Good
-  Neutral_Good
-  Chaotic_Good
-  Lawful_Neutral
-  True_Neutral
-  Chaotic_Neutral
-  Lawful_Evil
-  Neutral_Evil
-  Chaotic_Evil
-}
-
-enum HitDie {
-  D4
-  D6
-  D8
-  D10
-  D12
-}

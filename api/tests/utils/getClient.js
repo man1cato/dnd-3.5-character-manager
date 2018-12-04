@@ -1,19 +1,3 @@
-// import ApolloBoost from 'apollo-boost'
-
-// export default (jwt) => new ApolloBoost({
-//     uri: 'http://localhost:4000',
-//     request(operation) {
-//         if (jwt) {
-//             operation.setContext({
-//                 headers: {
-//                     Authorization: `Bearer ${jwt}`
-//                 }
-//             })
-//         }
-//     }
-// })
-
-
 import '@babel/polyfill/noConflict'
 import { ApolloClient } from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -23,7 +7,7 @@ import { ApolloLink, Observable } from 'apollo-link'
 import { WebSocketLink } from "apollo-link-ws"
 import { getMainDefinition } from 'apollo-utilities'
 
-export default (jwt, httpURL = 'http://localhost:4000', websocketURL = 'ws://localhost:4000') => {
+const getClient = (jwt, httpURL = 'http://localhost:4000', websocketURL = 'ws://localhost:4000') => {
     // Setup the authorization header for the http client
     const request = async (operation) => {
         if (jwt) {
@@ -70,7 +54,7 @@ export default (jwt, httpURL = 'http://localhost:4000', websocketURL = 'ws://loc
                     ),
                 )
             }
-                
+
             if (networkError) {
                 console.log(`[Network error]: ${networkError}`)
             }
@@ -129,3 +113,5 @@ export default (jwt, httpURL = 'http://localhost:4000', websocketURL = 'ws://loc
         cache: new InMemoryCache()
     })
 }
+
+export { getClient as default }

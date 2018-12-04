@@ -1,5 +1,5 @@
 const Character = {
-
+    
 }
 
-export default Character
+export { Character as default }

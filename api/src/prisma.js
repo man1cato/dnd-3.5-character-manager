@@ -1,11 +1,11 @@
 import { Prisma } from 'prisma-binding'
 import { fragmentReplacements } from './resolvers/index'
 
-const prisma = new Prisma ({
+const prisma = new Prisma({
     typeDefs: 'src/generated/prisma.graphql',
     endpoint: process.env.PRISMA_ENDPOINT,
     secret: process.env.PRISMA_SECRET,
-    fragmentReplacements    
+    fragmentReplacements
 })
 
-export default prisma
+export { prisma as default }
