@@ -267,23 +267,15 @@ export interface ClientConstructor<T> {
  * Types
  */
 
-export type CharacterOrderByInput =
+export type RaceOrderByInput =
   | "id_ASC"
   | "id_DESC"
   | "name_ASC"
   | "name_DESC"
-  | "gender_ASC"
-  | "gender_DESC"
-  | "age_ASC"
-  | "age_DESC"
-  | "height_ASC"
-  | "height_DESC"
-  | "weight_ASC"
-  | "weight_DESC"
-  | "alignment_ASC"
-  | "alignment_DESC"
-  | "deity_ASC"
-  | "deity_DESC"
+  | "size_ASC"
+  | "size_DESC"
+  | "speed_ASC"
+  | "speed_DESC"
   | "createdAt_ASC"
   | "createdAt_DESC"
   | "updatedAt_ASC"
@@ -307,6 +299,8 @@ export type Language =
   | "Undercommon"
   | "Terran";
 
+export type HitDie = "D4" | "D6" | "D8" | "D10" | "D12";
+
 export type Gender = "Male" | "Female" | "Non_Binary";
 
 export type Alignment =
@@ -319,8 +313,6 @@ export type Alignment =
   | "Lawful_Evil"
   | "Neutral_Evil"
   | "Chaotic_Evil";
-
-export type HitDie = "D4" | "D6" | "D8" | "D10" | "D12";
 
 export type AbilityScoresOrderByInput =
   | "str_ASC"
@@ -342,6 +334,28 @@ export type AbilityScoresOrderByInput =
   | "updatedAt_ASC"
   | "updatedAt_DESC";
 
+export type CharacterOrderByInput =
+  | "id_ASC"
+  | "id_DESC"
+  | "name_ASC"
+  | "name_DESC"
+  | "gender_ASC"
+  | "gender_DESC"
+  | "age_ASC"
+  | "age_DESC"
+  | "height_ASC"
+  | "height_DESC"
+  | "weight_ASC"
+  | "weight_DESC"
+  | "alignment_ASC"
+  | "alignment_DESC"
+  | "deity_ASC"
+  | "deity_DESC"
+  | "createdAt_ASC"
+  | "createdAt_DESC"
+  | "updatedAt_ASC"
+  | "updatedAt_DESC";
+
 export type ClassOrderByInput =
   | "id_ASC"
   | "id_DESC"
@@ -349,20 +363,6 @@ export type ClassOrderByInput =
   | "name_DESC"
   | "hitDie_ASC"
   | "hitDie_DESC"
-  | "createdAt_ASC"
-  | "createdAt_DESC"
-  | "updatedAt_ASC"
-  | "updatedAt_DESC";
-
-export type RaceOrderByInput =
-  | "id_ASC"
-  | "id_DESC"
-  | "name_ASC"
-  | "name_DESC"
-  | "size_ASC"
-  | "size_DESC"
-  | "speed_ASC"
-  | "speed_DESC"
   | "createdAt_ASC"
   | "createdAt_DESC"
   | "updatedAt_ASC"
@@ -384,10 +384,15 @@ export type UserOrderByInput =
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
-export interface UserCreateWithoutCharactersInput {
+export interface RaceCreateWithoutFavoredClassInput {
   name: String;
-  email: String;
-  password: String;
+  size: Size;
+  speed: Int;
+  defaultLanguages?: RaceCreatedefaultLanguagesInput;
+  bonusLanguages?: RaceCreatebonusLanguagesInput;
+  abilityMods?: AbilityScoresCreateOneInput;
+  racialBonuses?: RaceCreateracialBonusesInput;
+  characters?: CharacterCreateManyWithoutRaceInput;
 }
 
 export interface AbilityScoresWhereInput {
@@ -444,41 +449,106 @@ export interface AbilityScoresWhereInput {
   NOT?: AbilityScoresWhereInput[] | AbilityScoresWhereInput;
 }
 
-export interface ClassUpdateManyMutationInput {
+export interface RaceCreatebonusLanguagesInput {
+  set?: Language[] | Language;
+}
+
+export interface CharacterUpdateManyWithoutRaceInput {
+  create?: CharacterCreateWithoutRaceInput[] | CharacterCreateWithoutRaceInput;
+  delete?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+  disconnect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+  update?:
+    | CharacterUpdateWithWhereUniqueWithoutRaceInput[]
+    | CharacterUpdateWithWhereUniqueWithoutRaceInput;
+  upsert?:
+    | CharacterUpsertWithWhereUniqueWithoutRaceInput[]
+    | CharacterUpsertWithWhereUniqueWithoutRaceInput;
+}
+
+export interface AbilityScoresCreateOneInput {
+  create?: AbilityScoresCreateInput;
+}
+
+export interface RaceUpdatedefaultLanguagesInput {
+  set?: Language[] | Language;
+}
+
+export interface RaceCreateracialBonusesInput {
+  set?: String[] | String;
+}
+
+export interface RaceSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: RaceWhereInput;
+  AND?: RaceSubscriptionWhereInput[] | RaceSubscriptionWhereInput;
+  OR?: RaceSubscriptionWhereInput[] | RaceSubscriptionWhereInput;
+  NOT?: RaceSubscriptionWhereInput[] | RaceSubscriptionWhereInput;
+}
+
+export interface ClassCreateOneWithoutFavoredRacesInput {
+  create?: ClassCreateWithoutFavoredRacesInput;
+  connect?: ClassWhereUniqueInput;
+}
+
+export interface RaceWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
   name?: String;
-  hitDie?: HitDie;
+  name_not?: String;
+  name_in?: String[] | String;
+  name_not_in?: String[] | String;
+  name_lt?: String;
+  name_lte?: String;
+  name_gt?: String;
+  name_gte?: String;
+  name_contains?: String;
+  name_not_contains?: String;
+  name_starts_with?: String;
+  name_not_starts_with?: String;
+  name_ends_with?: String;
+  name_not_ends_with?: String;
+  size?: Size;
+  size_not?: Size;
+  size_in?: Size[] | Size;
+  size_not_in?: Size[] | Size;
+  speed?: Int;
+  speed_not?: Int;
+  speed_in?: Int[] | Int;
+  speed_not_in?: Int[] | Int;
+  speed_lt?: Int;
+  speed_lte?: Int;
+  speed_gt?: Int;
+  speed_gte?: Int;
+  abilityMods?: AbilityScoresWhereInput;
+  favoredClass?: ClassWhereInput;
+  characters_every?: CharacterWhereInput;
+  characters_some?: CharacterWhereInput;
+  characters_none?: CharacterWhereInput;
+  AND?: RaceWhereInput[] | RaceWhereInput;
+  OR?: RaceWhereInput[] | RaceWhereInput;
+  NOT?: RaceWhereInput[] | RaceWhereInput;
 }
 
-export interface CharacterUpdateWithWhereUniqueWithoutClassInput {
-  where: CharacterWhereUniqueInput;
-  data: CharacterUpdateWithoutClassDataInput;
-}
-
-export interface CharacterCreateInput {
+export interface ClassCreateWithoutFavoredRacesInput {
   name: String;
-  race: RaceCreateOneWithoutCharactersInput;
-  gender: Gender;
-  age: Int;
-  height: Int;
-  weight: Int;
-  alignment: Alignment;
-  class: ClassCreateOneWithoutCharactersInput;
-  deity?: String;
-  owner: UserCreateOneWithoutCharactersInput;
-}
-
-export interface AbilityScoresUpdateDataInput {
-  str?: Int;
-  dex?: Int;
-  con?: Int;
-  int?: Int;
-  wis?: Int;
-  cha?: Int;
-}
-
-export interface RaceCreateOneWithoutCharactersInput {
-  create?: RaceCreateWithoutCharactersInput;
-  connect?: RaceWhereUniqueInput;
+  hitDie: HitDie;
+  characters?: CharacterCreateManyWithoutClassInput;
 }
 
 export interface CharacterWhereInput {
@@ -564,6 +634,258 @@ export interface CharacterWhereInput {
   NOT?: CharacterWhereInput[] | CharacterWhereInput;
 }
 
+export interface CharacterCreateManyWithoutClassInput {
+  create?:
+    | CharacterCreateWithoutClassInput[]
+    | CharacterCreateWithoutClassInput;
+  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+}
+
+export interface CharacterSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: CharacterWhereInput;
+  AND?: CharacterSubscriptionWhereInput[] | CharacterSubscriptionWhereInput;
+  OR?: CharacterSubscriptionWhereInput[] | CharacterSubscriptionWhereInput;
+  NOT?: CharacterSubscriptionWhereInput[] | CharacterSubscriptionWhereInput;
+}
+
+export interface CharacterCreateWithoutClassInput {
+  name: String;
+  race: RaceCreateOneWithoutCharactersInput;
+  gender: Gender;
+  age: Int;
+  height: Int;
+  weight: Int;
+  alignment: Alignment;
+  deity?: String;
+  owner: UserCreateOneWithoutCharactersInput;
+}
+
+export interface AbilityScoresSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: AbilityScoresWhereInput;
+  AND?:
+    | AbilityScoresSubscriptionWhereInput[]
+    | AbilityScoresSubscriptionWhereInput;
+  OR?:
+    | AbilityScoresSubscriptionWhereInput[]
+    | AbilityScoresSubscriptionWhereInput;
+  NOT?:
+    | AbilityScoresSubscriptionWhereInput[]
+    | AbilityScoresSubscriptionWhereInput;
+}
+
+export interface UserCreateOneWithoutCharactersInput {
+  create?: UserCreateWithoutCharactersInput;
+  connect?: UserWhereUniqueInput;
+}
+
+export interface CharacterUpsertWithWhereUniqueWithoutOwnerInput {
+  where: CharacterWhereUniqueInput;
+  update: CharacterUpdateWithoutOwnerDataInput;
+  create: CharacterCreateWithoutOwnerInput;
+}
+
+export interface UserCreateWithoutCharactersInput {
+  name: String;
+  email: String;
+  password: String;
+}
+
+export interface CharacterUpdateWithWhereUniqueWithoutOwnerInput {
+  where: CharacterWhereUniqueInput;
+  data: CharacterUpdateWithoutOwnerDataInput;
+}
+
+export interface ClassCreateOneWithoutCharactersInput {
+  create?: ClassCreateWithoutCharactersInput;
+  connect?: ClassWhereUniqueInput;
+}
+
+export interface UserUpdateInput {
+  name?: String;
+  email?: String;
+  password?: String;
+  characters?: CharacterUpdateManyWithoutOwnerInput;
+}
+
+export interface ClassCreateWithoutCharactersInput {
+  name: String;
+  hitDie: HitDie;
+  favoredRaces?: RaceCreateManyWithoutFavoredClassInput;
+}
+
+export interface CharacterCreateWithoutOwnerInput {
+  name: String;
+  race: RaceCreateOneWithoutCharactersInput;
+  gender: Gender;
+  age: Int;
+  height: Int;
+  weight: Int;
+  alignment: Alignment;
+  class: ClassCreateOneWithoutCharactersInput;
+  deity?: String;
+}
+
+export interface RaceCreateManyWithoutFavoredClassInput {
+  create?:
+    | RaceCreateWithoutFavoredClassInput[]
+    | RaceCreateWithoutFavoredClassInput;
+  connect?: RaceWhereUniqueInput[] | RaceWhereUniqueInput;
+}
+
+export interface UserCreateInput {
+  name: String;
+  email: String;
+  password: String;
+  characters?: CharacterCreateManyWithoutOwnerInput;
+}
+
+export interface CharacterUpdateWithoutRaceDataInput {
+  name?: String;
+  gender?: Gender;
+  age?: Int;
+  height?: Int;
+  weight?: Int;
+  alignment?: Alignment;
+  class?: ClassUpdateOneRequiredWithoutCharactersInput;
+  deity?: String;
+  owner?: UserUpdateOneRequiredWithoutCharactersInput;
+}
+
+export type RaceWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+  name?: String;
+}>;
+
+export interface CharacterCreateManyWithoutRaceInput {
+  create?: CharacterCreateWithoutRaceInput[] | CharacterCreateWithoutRaceInput;
+  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+}
+
+export interface RaceCreateInput {
+  name: String;
+  size: Size;
+  speed: Int;
+  defaultLanguages?: RaceCreatedefaultLanguagesInput;
+  bonusLanguages?: RaceCreatebonusLanguagesInput;
+  abilityMods?: AbilityScoresCreateOneInput;
+  racialBonuses?: RaceCreateracialBonusesInput;
+  favoredClass?: ClassCreateOneWithoutFavoredRacesInput;
+  characters?: CharacterCreateManyWithoutRaceInput;
+}
+
+export interface CharacterCreateWithoutRaceInput {
+  name: String;
+  gender: Gender;
+  age: Int;
+  height: Int;
+  weight: Int;
+  alignment: Alignment;
+  class: ClassCreateOneWithoutCharactersInput;
+  deity?: String;
+  owner: UserCreateOneWithoutCharactersInput;
+}
+
+export type UserWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+  email?: String;
+}>;
+
+export interface CharacterUpdateInput {
+  name?: String;
+  race?: RaceUpdateOneRequiredWithoutCharactersInput;
+  gender?: Gender;
+  age?: Int;
+  height?: Int;
+  weight?: Int;
+  alignment?: Alignment;
+  class?: ClassUpdateOneRequiredWithoutCharactersInput;
+  deity?: String;
+  owner?: UserUpdateOneRequiredWithoutCharactersInput;
+}
+
+export interface ClassCreateInput {
+  name: String;
+  hitDie: HitDie;
+  favoredRaces?: RaceCreateManyWithoutFavoredClassInput;
+  characters?: CharacterCreateManyWithoutClassInput;
+}
+
+export interface RaceUpdateOneRequiredWithoutCharactersInput {
+  create?: RaceCreateWithoutCharactersInput;
+  update?: RaceUpdateWithoutCharactersDataInput;
+  upsert?: RaceUpsertWithoutCharactersInput;
+  connect?: RaceWhereUniqueInput;
+}
+
+export interface ClassUpsertWithoutCharactersInput {
+  update: ClassUpdateWithoutCharactersDataInput;
+  create: ClassCreateWithoutCharactersInput;
+}
+
+export interface RaceUpdateWithoutCharactersDataInput {
+  name?: String;
+  size?: Size;
+  speed?: Int;
+  defaultLanguages?: RaceUpdatedefaultLanguagesInput;
+  bonusLanguages?: RaceUpdatebonusLanguagesInput;
+  abilityMods?: AbilityScoresUpdateOneInput;
+  racialBonuses?: RaceUpdateracialBonusesInput;
+  favoredClass?: ClassUpdateOneWithoutFavoredRacesInput;
+}
+
+export interface AbilityScoresCreateInput {
+  str?: Int;
+  dex?: Int;
+  con?: Int;
+  int?: Int;
+  wis?: Int;
+  cha?: Int;
+}
+
+export interface CharacterUpdateWithWhereUniqueWithoutRaceInput {
+  where: CharacterWhereUniqueInput;
+  data: CharacterUpdateWithoutRaceDataInput;
+}
+
+export interface RaceUpsertWithWhereUniqueWithoutFavoredClassInput {
+  where: RaceWhereUniqueInput;
+  update: RaceUpdateWithoutFavoredClassDataInput;
+  create: RaceCreateWithoutFavoredClassInput;
+}
+
+export interface RaceUpdatebonusLanguagesInput {
+  set?: Language[] | Language;
+}
+
+export interface CharacterCreateInput {
+  name: String;
+  race: RaceCreateOneWithoutCharactersInput;
+  gender: Gender;
+  age: Int;
+  height: Int;
+  weight: Int;
+  alignment: Alignment;
+  class: ClassCreateOneWithoutCharactersInput;
+  deity?: String;
+  owner: UserCreateOneWithoutCharactersInput;
+}
+
+export interface AbilityScoresUpdateOneInput {
+  create?: AbilityScoresCreateInput;
+  update?: AbilityScoresUpdateDataInput;
+  upsert?: AbilityScoresUpsertNestedInput;
+  delete?: Boolean;
+  disconnect?: Boolean;
+}
+
 export interface RaceCreateWithoutCharactersInput {
   name: String;
   size: Size;
@@ -572,14 +894,32 @@ export interface RaceCreateWithoutCharactersInput {
   bonusLanguages?: RaceCreatebonusLanguagesInput;
   abilityMods?: AbilityScoresCreateOneInput;
   racialBonuses?: RaceCreateracialBonusesInput;
+  favoredClass?: ClassCreateOneWithoutFavoredRacesInput;
 }
 
-export type CharacterWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-}>;
+export interface AbilityScoresUpdateDataInput {
+  str?: Int;
+  dex?: Int;
+  con?: Int;
+  int?: Int;
+  wis?: Int;
+  cha?: Int;
+}
 
-export interface RaceCreatedefaultLanguagesInput {
-  set?: Language[] | Language;
+export interface UserSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: UserWhereInput;
+  AND?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+  OR?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+  NOT?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+}
+
+export interface AbilityScoresUpsertNestedInput {
+  update: AbilityScoresUpdateDataInput;
+  create: AbilityScoresCreateInput;
 }
 
 export interface ClassWhereInput {
@@ -615,6 +955,9 @@ export interface ClassWhereInput {
   hitDie_not?: HitDie;
   hitDie_in?: HitDie[] | HitDie;
   hitDie_not_in?: HitDie[] | HitDie;
+  favoredRaces_every?: RaceWhereInput;
+  favoredRaces_some?: RaceWhereInput;
+  favoredRaces_none?: RaceWhereInput;
   characters_every?: CharacterWhereInput;
   characters_some?: CharacterWhereInput;
   characters_none?: CharacterWhereInput;
@@ -623,8 +966,8 @@ export interface ClassWhereInput {
   NOT?: ClassWhereInput[] | ClassWhereInput;
 }
 
-export interface RaceCreatebonusLanguagesInput {
-  set?: Language[] | Language;
+export interface RaceUpdateracialBonusesInput {
+  set?: String[] | String;
 }
 
 export interface UserWhereInput {
@@ -708,88 +1051,16 @@ export interface UserWhereInput {
   NOT?: UserWhereInput[] | UserWhereInput;
 }
 
-export interface AbilityScoresCreateOneInput {
-  create?: AbilityScoresCreateInput;
-}
-
-export interface AbilityScoresSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: AbilityScoresWhereInput;
-  AND?:
-    | AbilityScoresSubscriptionWhereInput[]
-    | AbilityScoresSubscriptionWhereInput;
-  OR?:
-    | AbilityScoresSubscriptionWhereInput[]
-    | AbilityScoresSubscriptionWhereInput;
-  NOT?:
-    | AbilityScoresSubscriptionWhereInput[]
-    | AbilityScoresSubscriptionWhereInput;
-}
-
-export interface RaceCreateracialBonusesInput {
-  set?: String[] | String;
-}
-
-export interface CharacterUpsertWithWhereUniqueWithoutOwnerInput {
-  where: CharacterWhereUniqueInput;
-  update: CharacterUpdateWithoutOwnerDataInput;
-  create: CharacterCreateWithoutOwnerInput;
-}
-
-export interface ClassCreateOneWithoutCharactersInput {
-  create?: ClassCreateWithoutCharactersInput;
+export interface ClassUpdateOneWithoutFavoredRacesInput {
+  create?: ClassCreateWithoutFavoredRacesInput;
+  update?: ClassUpdateWithoutFavoredRacesDataInput;
+  upsert?: ClassUpsertWithoutFavoredRacesInput;
+  delete?: Boolean;
+  disconnect?: Boolean;
   connect?: ClassWhereUniqueInput;
 }
 
-export interface CharacterUpdateWithWhereUniqueWithoutOwnerInput {
-  where: CharacterWhereUniqueInput;
-  data: CharacterUpdateWithoutOwnerDataInput;
-}
-
-export interface ClassCreateWithoutCharactersInput {
-  name: String;
-  hitDie: HitDie;
-}
-
-export type ClassWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-  name?: String;
-}>;
-
-export interface UserCreateOneWithoutCharactersInput {
-  create?: UserCreateWithoutCharactersInput;
-  connect?: UserWhereUniqueInput;
-}
-
-export interface CharacterCreateWithoutOwnerInput {
-  name: String;
-  race: RaceCreateOneWithoutCharactersInput;
-  gender: Gender;
-  age: Int;
-  height: Int;
-  weight: Int;
-  alignment: Alignment;
-  class: ClassCreateOneWithoutCharactersInput;
-  deity?: String;
-}
-
-export interface CharacterUpsertWithWhereUniqueWithoutClassInput {
-  where: CharacterWhereUniqueInput;
-  update: CharacterUpdateWithoutClassDataInput;
-  create: CharacterCreateWithoutClassInput;
-}
-
-export interface UserCreateInput {
-  name: String;
-  email: String;
-  password: String;
-  characters?: CharacterCreateManyWithoutOwnerInput;
-}
-
-export interface CharacterUpdateInput {
+export interface CharacterUpdateWithoutOwnerDataInput {
   name?: String;
   race?: RaceUpdateOneRequiredWithoutCharactersInput;
   gender?: Gender;
@@ -799,7 +1070,32 @@ export interface CharacterUpdateInput {
   alignment?: Alignment;
   class?: ClassUpdateOneRequiredWithoutCharactersInput;
   deity?: String;
-  owner?: UserUpdateOneRequiredWithoutCharactersInput;
+}
+
+export interface ClassUpdateWithoutFavoredRacesDataInput {
+  name?: String;
+  hitDie?: HitDie;
+  characters?: CharacterUpdateManyWithoutClassInput;
+}
+
+export type ClassWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+  name?: String;
+}>;
+
+export interface CharacterUpdateManyWithoutClassInput {
+  create?:
+    | CharacterCreateWithoutClassInput[]
+    | CharacterCreateWithoutClassInput;
+  delete?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+  disconnect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+  update?:
+    | CharacterUpdateWithWhereUniqueWithoutClassInput[]
+    | CharacterUpdateWithWhereUniqueWithoutClassInput;
+  upsert?:
+    | CharacterUpsertWithWhereUniqueWithoutClassInput[]
+    | CharacterUpsertWithWhereUniqueWithoutClassInput;
 }
 
 export interface RaceUpdateManyMutationInput {
@@ -811,79 +1107,14 @@ export interface RaceUpdateManyMutationInput {
   racialBonuses?: RaceUpdateracialBonusesInput;
 }
 
-export interface RaceUpdateOneRequiredWithoutCharactersInput {
-  create?: RaceCreateWithoutCharactersInput;
-  update?: RaceUpdateWithoutCharactersDataInput;
-  upsert?: RaceUpsertWithoutCharactersInput;
-  connect?: RaceWhereUniqueInput;
+export interface CharacterUpdateWithWhereUniqueWithoutClassInput {
+  where: CharacterWhereUniqueInput;
+  data: CharacterUpdateWithoutClassDataInput;
 }
 
-export interface CharacterUpdateWithoutRaceDataInput {
+export interface ClassUpdateManyMutationInput {
   name?: String;
-  gender?: Gender;
-  age?: Int;
-  height?: Int;
-  weight?: Int;
-  alignment?: Alignment;
-  class?: ClassUpdateOneRequiredWithoutCharactersInput;
-  deity?: String;
-  owner?: UserUpdateOneRequiredWithoutCharactersInput;
-}
-
-export interface RaceUpdateWithoutCharactersDataInput {
-  name?: String;
-  size?: Size;
-  speed?: Int;
-  defaultLanguages?: RaceUpdatedefaultLanguagesInput;
-  bonusLanguages?: RaceUpdatebonusLanguagesInput;
-  abilityMods?: AbilityScoresUpdateOneInput;
-  racialBonuses?: RaceUpdateracialBonusesInput;
-}
-
-export type UserWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-  email?: String;
-}>;
-
-export interface RaceUpdatedefaultLanguagesInput {
-  set?: Language[] | Language;
-}
-
-export interface RaceUpdateInput {
-  name?: String;
-  size?: Size;
-  speed?: Int;
-  defaultLanguages?: RaceUpdatedefaultLanguagesInput;
-  bonusLanguages?: RaceUpdatebonusLanguagesInput;
-  abilityMods?: AbilityScoresUpdateOneInput;
-  racialBonuses?: RaceUpdateracialBonusesInput;
-  characters?: CharacterUpdateManyWithoutRaceInput;
-}
-
-export interface RaceUpdatebonusLanguagesInput {
-  set?: Language[] | Language;
-}
-
-export interface CharacterCreateManyWithoutRaceInput {
-  create?: CharacterCreateWithoutRaceInput[] | CharacterCreateWithoutRaceInput;
-  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-}
-
-export interface AbilityScoresUpdateOneInput {
-  create?: AbilityScoresCreateInput;
-  update?: AbilityScoresUpdateDataInput;
-  upsert?: AbilityScoresUpsertNestedInput;
-  delete?: Boolean;
-  disconnect?: Boolean;
-}
-
-export interface AbilityScoresCreateInput {
-  str?: Int;
-  dex?: Int;
-  con?: Int;
-  int?: Int;
-  wis?: Int;
-  cha?: Int;
+  hitDie?: HitDie;
 }
 
 export interface CharacterUpdateWithoutClassDataInput {
@@ -898,74 +1129,99 @@ export interface CharacterUpdateWithoutClassDataInput {
   owner?: UserUpdateOneRequiredWithoutCharactersInput;
 }
 
-export interface RaceCreateInput {
-  name: String;
-  size: Size;
-  speed: Int;
-  defaultLanguages?: RaceCreatedefaultLanguagesInput;
-  bonusLanguages?: RaceCreatebonusLanguagesInput;
-  abilityMods?: AbilityScoresCreateOneInput;
-  racialBonuses?: RaceCreateracialBonusesInput;
-  characters?: CharacterCreateManyWithoutRaceInput;
-}
-
-export interface AbilityScoresUpsertNestedInput {
-  update: AbilityScoresUpdateDataInput;
-  create: AbilityScoresCreateInput;
-}
-
-export interface RaceWhereInput {
-  id?: ID_Input;
-  id_not?: ID_Input;
-  id_in?: ID_Input[] | ID_Input;
-  id_not_in?: ID_Input[] | ID_Input;
-  id_lt?: ID_Input;
-  id_lte?: ID_Input;
-  id_gt?: ID_Input;
-  id_gte?: ID_Input;
-  id_contains?: ID_Input;
-  id_not_contains?: ID_Input;
-  id_starts_with?: ID_Input;
-  id_not_starts_with?: ID_Input;
-  id_ends_with?: ID_Input;
-  id_not_ends_with?: ID_Input;
+export interface CharacterUpdateManyMutationInput {
   name?: String;
-  name_not?: String;
-  name_in?: String[] | String;
-  name_not_in?: String[] | String;
-  name_lt?: String;
-  name_lte?: String;
-  name_gt?: String;
-  name_gte?: String;
-  name_contains?: String;
-  name_not_contains?: String;
-  name_starts_with?: String;
-  name_not_starts_with?: String;
-  name_ends_with?: String;
-  name_not_ends_with?: String;
-  size?: Size;
-  size_not?: Size;
-  size_in?: Size[] | Size;
-  size_not_in?: Size[] | Size;
-  speed?: Int;
-  speed_not?: Int;
-  speed_in?: Int[] | Int;
-  speed_not_in?: Int[] | Int;
-  speed_lt?: Int;
-  speed_lte?: Int;
-  speed_gt?: Int;
-  speed_gte?: Int;
-  abilityMods?: AbilityScoresWhereInput;
-  characters_every?: CharacterWhereInput;
-  characters_some?: CharacterWhereInput;
-  characters_none?: CharacterWhereInput;
-  AND?: RaceWhereInput[] | RaceWhereInput;
-  OR?: RaceWhereInput[] | RaceWhereInput;
-  NOT?: RaceWhereInput[] | RaceWhereInput;
+  gender?: Gender;
+  age?: Int;
+  height?: Int;
+  weight?: Int;
+  alignment?: Alignment;
+  deity?: String;
 }
 
-export interface RaceUpdateracialBonusesInput {
-  set?: String[] | String;
+export interface UserUpdateOneRequiredWithoutCharactersInput {
+  create?: UserCreateWithoutCharactersInput;
+  update?: UserUpdateWithoutCharactersDataInput;
+  upsert?: UserUpsertWithoutCharactersInput;
+  connect?: UserWhereUniqueInput;
+}
+
+export interface AbilityScoresUpdateManyMutationInput {
+  str?: Int;
+  dex?: Int;
+  con?: Int;
+  int?: Int;
+  wis?: Int;
+  cha?: Int;
+}
+
+export interface UserUpdateWithoutCharactersDataInput {
+  name?: String;
+  email?: String;
+  password?: String;
+}
+
+export interface RaceCreateOneWithoutCharactersInput {
+  create?: RaceCreateWithoutCharactersInput;
+  connect?: RaceWhereUniqueInput;
+}
+
+export interface UserUpsertWithoutCharactersInput {
+  update: UserUpdateWithoutCharactersDataInput;
+  create: UserCreateWithoutCharactersInput;
+}
+
+export type CharacterWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+}>;
+
+export interface CharacterUpsertWithWhereUniqueWithoutClassInput {
+  where: CharacterWhereUniqueInput;
+  update: CharacterUpdateWithoutClassDataInput;
+  create: CharacterCreateWithoutClassInput;
+}
+
+export interface UserUpdateManyMutationInput {
+  name?: String;
+  email?: String;
+  password?: String;
+}
+
+export interface ClassUpsertWithoutFavoredRacesInput {
+  update: ClassUpdateWithoutFavoredRacesDataInput;
+  create: ClassCreateWithoutFavoredRacesInput;
+}
+
+export interface CharacterCreateManyWithoutOwnerInput {
+  create?:
+    | CharacterCreateWithoutOwnerInput[]
+    | CharacterCreateWithoutOwnerInput;
+  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
+}
+
+export interface RaceUpsertWithoutCharactersInput {
+  update: RaceUpdateWithoutCharactersDataInput;
+  create: RaceCreateWithoutCharactersInput;
+}
+
+export interface ClassUpdateInput {
+  name?: String;
+  hitDie?: HitDie;
+  favoredRaces?: RaceUpdateManyWithoutFavoredClassInput;
+  characters?: CharacterUpdateManyWithoutClassInput;
+}
+
+export interface ClassUpdateOneRequiredWithoutCharactersInput {
+  create?: ClassCreateWithoutCharactersInput;
+  update?: ClassUpdateWithoutCharactersDataInput;
+  upsert?: ClassUpsertWithoutCharactersInput;
+  connect?: ClassWhereUniqueInput;
+}
+
+export interface CharacterUpsertWithWhereUniqueWithoutRaceInput {
+  where: CharacterWhereUniqueInput;
+  update: CharacterUpdateWithoutRaceDataInput;
+  create: CharacterCreateWithoutRaceInput;
 }
 
 export interface ClassSubscriptionWhereInput {
@@ -979,22 +1235,41 @@ export interface ClassSubscriptionWhereInput {
   NOT?: ClassSubscriptionWhereInput[] | ClassSubscriptionWhereInput;
 }
 
-export interface RaceUpsertWithoutCharactersInput {
-  update: RaceUpdateWithoutCharactersDataInput;
-  create: RaceCreateWithoutCharactersInput;
-}
-
-export interface UserUpdateManyMutationInput {
+export interface RaceUpdateWithoutFavoredClassDataInput {
   name?: String;
-  email?: String;
-  password?: String;
+  size?: Size;
+  speed?: Int;
+  defaultLanguages?: RaceUpdatedefaultLanguagesInput;
+  bonusLanguages?: RaceUpdatebonusLanguagesInput;
+  abilityMods?: AbilityScoresUpdateOneInput;
+  racialBonuses?: RaceUpdateracialBonusesInput;
+  characters?: CharacterUpdateManyWithoutRaceInput;
 }
 
-export interface ClassUpdateOneRequiredWithoutCharactersInput {
-  create?: ClassCreateWithoutCharactersInput;
-  update?: ClassUpdateWithoutCharactersDataInput;
-  upsert?: ClassUpsertWithoutCharactersInput;
-  connect?: ClassWhereUniqueInput;
+export interface RaceUpdateWithWhereUniqueWithoutFavoredClassInput {
+  where: RaceWhereUniqueInput;
+  data: RaceUpdateWithoutFavoredClassDataInput;
+}
+
+export interface RaceUpdateManyWithoutFavoredClassInput {
+  create?:
+    | RaceCreateWithoutFavoredClassInput[]
+    | RaceCreateWithoutFavoredClassInput;
+  delete?: RaceWhereUniqueInput[] | RaceWhereUniqueInput;
+  connect?: RaceWhereUniqueInput[] | RaceWhereUniqueInput;
+  disconnect?: RaceWhereUniqueInput[] | RaceWhereUniqueInput;
+  update?:
+    | RaceUpdateWithWhereUniqueWithoutFavoredClassInput[]
+    | RaceUpdateWithWhereUniqueWithoutFavoredClassInput;
+  upsert?:
+    | RaceUpsertWithWhereUniqueWithoutFavoredClassInput[]
+    | RaceUpsertWithWhereUniqueWithoutFavoredClassInput;
+}
+
+export interface ClassUpdateWithoutCharactersDataInput {
+  name?: String;
+  hitDie?: HitDie;
+  favoredRaces?: RaceUpdateManyWithoutFavoredClassInput;
 }
 
 export interface CharacterUpdateManyWithoutOwnerInput {
@@ -1012,197 +1287,20 @@ export interface CharacterUpdateManyWithoutOwnerInput {
     | CharacterUpsertWithWhereUniqueWithoutOwnerInput;
 }
 
-export interface ClassUpdateWithoutCharactersDataInput {
+export interface RaceCreatedefaultLanguagesInput {
+  set?: Language[] | Language;
+}
+
+export interface RaceUpdateInput {
   name?: String;
-  hitDie?: HitDie;
-}
-
-export interface CharacterCreateManyWithoutOwnerInput {
-  create?:
-    | CharacterCreateWithoutOwnerInput[]
-    | CharacterCreateWithoutOwnerInput;
-  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-}
-
-export interface ClassUpsertWithoutCharactersInput {
-  update: ClassUpdateWithoutCharactersDataInput;
-  create: ClassCreateWithoutCharactersInput;
-}
-
-export interface CharacterUpsertWithWhereUniqueWithoutRaceInput {
-  where: CharacterWhereUniqueInput;
-  update: CharacterUpdateWithoutRaceDataInput;
-  create: CharacterCreateWithoutRaceInput;
-}
-
-export interface UserUpdateOneRequiredWithoutCharactersInput {
-  create?: UserCreateWithoutCharactersInput;
-  update?: UserUpdateWithoutCharactersDataInput;
-  upsert?: UserUpsertWithoutCharactersInput;
-  connect?: UserWhereUniqueInput;
-}
-
-export interface CharacterUpdateManyWithoutRaceInput {
-  create?: CharacterCreateWithoutRaceInput[] | CharacterCreateWithoutRaceInput;
-  delete?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-  disconnect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-  update?:
-    | CharacterUpdateWithWhereUniqueWithoutRaceInput[]
-    | CharacterUpdateWithWhereUniqueWithoutRaceInput;
-  upsert?:
-    | CharacterUpsertWithWhereUniqueWithoutRaceInput[]
-    | CharacterUpsertWithWhereUniqueWithoutRaceInput;
-}
-
-export interface UserUpdateWithoutCharactersDataInput {
-  name?: String;
-  email?: String;
-  password?: String;
-}
-
-export interface UserSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: UserWhereInput;
-  AND?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  OR?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  NOT?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-}
-
-export interface UserUpsertWithoutCharactersInput {
-  update: UserUpdateWithoutCharactersDataInput;
-  create: UserCreateWithoutCharactersInput;
-}
-
-export interface CharacterSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: CharacterWhereInput;
-  AND?: CharacterSubscriptionWhereInput[] | CharacterSubscriptionWhereInput;
-  OR?: CharacterSubscriptionWhereInput[] | CharacterSubscriptionWhereInput;
-  NOT?: CharacterSubscriptionWhereInput[] | CharacterSubscriptionWhereInput;
-}
-
-export interface CharacterUpdateManyMutationInput {
-  name?: String;
-  gender?: Gender;
-  age?: Int;
-  height?: Int;
-  weight?: Int;
-  alignment?: Alignment;
-  deity?: String;
-}
-
-export interface UserUpdateInput {
-  name?: String;
-  email?: String;
-  password?: String;
-  characters?: CharacterUpdateManyWithoutOwnerInput;
-}
-
-export interface ClassCreateInput {
-  name: String;
-  hitDie: HitDie;
-  characters?: CharacterCreateManyWithoutClassInput;
-}
-
-export interface CharacterUpdateWithWhereUniqueWithoutRaceInput {
-  where: CharacterWhereUniqueInput;
-  data: CharacterUpdateWithoutRaceDataInput;
-}
-
-export interface CharacterUpdateManyWithoutClassInput {
-  create?:
-    | CharacterCreateWithoutClassInput[]
-    | CharacterCreateWithoutClassInput;
-  delete?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-  disconnect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-  update?:
-    | CharacterUpdateWithWhereUniqueWithoutClassInput[]
-    | CharacterUpdateWithWhereUniqueWithoutClassInput;
-  upsert?:
-    | CharacterUpsertWithWhereUniqueWithoutClassInput[]
-    | CharacterUpsertWithWhereUniqueWithoutClassInput;
-}
-
-export interface ClassUpdateInput {
-  name?: String;
-  hitDie?: HitDie;
-  characters?: CharacterUpdateManyWithoutClassInput;
-}
-
-export interface CharacterCreateWithoutClassInput {
-  name: String;
-  race: RaceCreateOneWithoutCharactersInput;
-  gender: Gender;
-  age: Int;
-  height: Int;
-  weight: Int;
-  alignment: Alignment;
-  deity?: String;
-  owner: UserCreateOneWithoutCharactersInput;
-}
-
-export interface CharacterCreateManyWithoutClassInput {
-  create?:
-    | CharacterCreateWithoutClassInput[]
-    | CharacterCreateWithoutClassInput;
-  connect?: CharacterWhereUniqueInput[] | CharacterWhereUniqueInput;
-}
-
-export interface CharacterCreateWithoutRaceInput {
-  name: String;
-  gender: Gender;
-  age: Int;
-  height: Int;
-  weight: Int;
-  alignment: Alignment;
-  class: ClassCreateOneWithoutCharactersInput;
-  deity?: String;
-  owner: UserCreateOneWithoutCharactersInput;
-}
-
-export type RaceWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-  name?: String;
-}>;
-
-export interface CharacterUpdateWithoutOwnerDataInput {
-  name?: String;
-  race?: RaceUpdateOneRequiredWithoutCharactersInput;
-  gender?: Gender;
-  age?: Int;
-  height?: Int;
-  weight?: Int;
-  alignment?: Alignment;
-  class?: ClassUpdateOneRequiredWithoutCharactersInput;
-  deity?: String;
-}
-
-export interface RaceSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: RaceWhereInput;
-  AND?: RaceSubscriptionWhereInput[] | RaceSubscriptionWhereInput;
-  OR?: RaceSubscriptionWhereInput[] | RaceSubscriptionWhereInput;
-  NOT?: RaceSubscriptionWhereInput[] | RaceSubscriptionWhereInput;
-}
-
-export interface AbilityScoresUpdateManyMutationInput {
-  str?: Int;
-  dex?: Int;
-  con?: Int;
-  int?: Int;
-  wis?: Int;
-  cha?: Int;
+  size?: Size;
+  speed?: Int;
+  defaultLanguages?: RaceUpdatedefaultLanguagesInput;
+  bonusLanguages?: RaceUpdatebonusLanguagesInput;
+  abilityMods?: AbilityScoresUpdateOneInput;
+  racialBonuses?: RaceUpdateracialBonusesInput;
+  favoredClass?: ClassUpdateOneWithoutFavoredRacesInput;
+  characters?: CharacterUpdateManyWithoutRaceInput;
 }
 
 export interface NodeNode {
@@ -1238,80 +1336,6 @@ export interface UserPreviousValuesSubscription
   password: () => Promise<AsyncIterator<String>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-}
-
-export interface CharacterConnection {}
-
-export interface CharacterConnectionPromise
-  extends Promise<CharacterConnection>,
-    Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<CharacterEdge>>() => T;
-  aggregate: <T = AggregateCharacterPromise>() => T;
-}
-
-export interface CharacterConnectionSubscription
-  extends Promise<AsyncIterator<CharacterConnection>>,
-    Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<CharacterEdgeSubscription>>>() => T;
-  aggregate: <T = AggregateCharacterSubscription>() => T;
-}
-
-export interface Race {
-  id: ID_Output;
-  name: String;
-  size: Size;
-  speed: Int;
-  defaultLanguages: Language[];
-  bonusLanguages: Language[];
-  racialBonuses: String[];
-}
-
-export interface RacePromise extends Promise<Race>, Fragmentable {
-  id: () => Promise<ID_Output>;
-  name: () => Promise<String>;
-  size: () => Promise<Size>;
-  speed: () => Promise<Int>;
-  defaultLanguages: () => Promise<Language[]>;
-  bonusLanguages: () => Promise<Language[]>;
-  abilityMods: <T = AbilityScoresPromise>() => T;
-  racialBonuses: () => Promise<String[]>;
-  characters: <T = FragmentableArray<Character>>(
-    args?: {
-      where?: CharacterWhereInput;
-      orderBy?: CharacterOrderByInput;
-      skip?: Int;
-      after?: String;
-      before?: String;
-      first?: Int;
-      last?: Int;
-    }
-  ) => T;
-}
-
-export interface RaceSubscription
-  extends Promise<AsyncIterator<Race>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  name: () => Promise<AsyncIterator<String>>;
-  size: () => Promise<AsyncIterator<Size>>;
-  speed: () => Promise<AsyncIterator<Int>>;
-  defaultLanguages: () => Promise<AsyncIterator<Language[]>>;
-  bonusLanguages: () => Promise<AsyncIterator<Language[]>>;
-  abilityMods: <T = AbilityScoresSubscription>() => T;
-  racialBonuses: () => Promise<AsyncIterator<String[]>>;
-  characters: <T = Promise<AsyncIterator<CharacterSubscription>>>(
-    args?: {
-      where?: CharacterWhereInput;
-      orderBy?: CharacterOrderByInput;
-      skip?: Int;
-      after?: String;
-      before?: String;
-      first?: Int;
-      last?: Int;
-    }
-  ) => T;
 }
 
 export interface User {
@@ -1365,6 +1389,87 @@ export interface UserSubscription
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
 }
 
+export interface Race {
+  id: ID_Output;
+  name: String;
+  size: Size;
+  speed: Int;
+  defaultLanguages: Language[];
+  bonusLanguages: Language[];
+  racialBonuses: String[];
+}
+
+export interface RacePromise extends Promise<Race>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+  size: () => Promise<Size>;
+  speed: () => Promise<Int>;
+  defaultLanguages: () => Promise<Language[]>;
+  bonusLanguages: () => Promise<Language[]>;
+  abilityMods: <T = AbilityScoresPromise>() => T;
+  racialBonuses: () => Promise<String[]>;
+  favoredClass: <T = ClassPromise>() => T;
+  characters: <T = FragmentableArray<Character>>(
+    args?: {
+      where?: CharacterWhereInput;
+      orderBy?: CharacterOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => T;
+}
+
+export interface RaceSubscription
+  extends Promise<AsyncIterator<Race>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+  size: () => Promise<AsyncIterator<Size>>;
+  speed: () => Promise<AsyncIterator<Int>>;
+  defaultLanguages: () => Promise<AsyncIterator<Language[]>>;
+  bonusLanguages: () => Promise<AsyncIterator<Language[]>>;
+  abilityMods: <T = AbilityScoresSubscription>() => T;
+  racialBonuses: () => Promise<AsyncIterator<String[]>>;
+  favoredClass: <T = ClassSubscription>() => T;
+  characters: <T = Promise<AsyncIterator<CharacterSubscription>>>(
+    args?: {
+      where?: CharacterWhereInput;
+      orderBy?: CharacterOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => T;
+}
+
+export interface PageInfo {
+  hasNextPage: Boolean;
+  hasPreviousPage: Boolean;
+  startCursor?: String;
+  endCursor?: String;
+}
+
+export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
+  hasNextPage: () => Promise<Boolean>;
+  hasPreviousPage: () => Promise<Boolean>;
+  startCursor: () => Promise<String>;
+  endCursor: () => Promise<String>;
+}
+
+export interface PageInfoSubscription
+  extends Promise<AsyncIterator<PageInfo>>,
+    Fragmentable {
+  hasNextPage: () => Promise<AsyncIterator<Boolean>>;
+  hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
+  startCursor: () => Promise<AsyncIterator<String>>;
+  endCursor: () => Promise<AsyncIterator<String>>;
+}
+
 export interface Character {
   id: ID_Output;
   name: String;
@@ -1406,6 +1511,29 @@ export interface CharacterSubscription
   owner: <T = UserSubscription>() => T;
 }
 
+export interface UserSubscriptionPayload {
+  mutation: MutationType;
+  updatedFields?: String[];
+}
+
+export interface UserSubscriptionPayloadPromise
+  extends Promise<UserSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = UserPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = UserPreviousValuesPromise>() => T;
+}
+
+export interface UserSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<UserSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = UserSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = UserPreviousValuesSubscription>() => T;
+}
+
 export interface Class {
   id: ID_Output;
   name: String;
@@ -1416,6 +1544,17 @@ export interface ClassPromise extends Promise<Class>, Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   hitDie: () => Promise<HitDie>;
+  favoredRaces: <T = FragmentableArray<Race>>(
+    args?: {
+      where?: RaceWhereInput;
+      orderBy?: RaceOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => T;
   characters: <T = FragmentableArray<Character>>(
     args?: {
       where?: CharacterWhereInput;
@@ -1435,6 +1574,17 @@ export interface ClassSubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   hitDie: () => Promise<AsyncIterator<HitDie>>;
+  favoredRaces: <T = Promise<AsyncIterator<RaceSubscription>>>(
+    args?: {
+      where?: RaceWhereInput;
+      orderBy?: RaceOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => T;
   characters: <T = Promise<AsyncIterator<CharacterSubscription>>>(
     args?: {
       where?: CharacterWhereInput;
@@ -1446,22 +1596,6 @@ export interface ClassSubscription
       last?: Int;
     }
   ) => T;
-}
-
-export interface AggregateUser {
-  count: Int;
-}
-
-export interface AggregateUserPromise
-  extends Promise<AggregateUser>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregateUserSubscription
-  extends Promise<AsyncIterator<AggregateUser>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface BatchPayload {
@@ -1480,18 +1614,18 @@ export interface BatchPayloadSubscription
   count: () => Promise<AsyncIterator<Long>>;
 }
 
-export interface AggregateAbilityScores {
+export interface AggregateUser {
   count: Int;
 }
 
-export interface AggregateAbilityScoresPromise
-  extends Promise<AggregateAbilityScores>,
+export interface AggregateUserPromise
+  extends Promise<AggregateUser>,
     Fragmentable {
   count: () => Promise<Int>;
 }
 
-export interface AggregateAbilityScoresSubscription
-  extends Promise<AsyncIterator<AggregateAbilityScores>>,
+export interface AggregateUserSubscription
+  extends Promise<AsyncIterator<AggregateUser>>,
     Fragmentable {
   count: () => Promise<AsyncIterator<Int>>;
 }
@@ -1510,24 +1644,6 @@ export interface UserEdgeSubscription
     Fragmentable {
   node: <T = UserSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface UserConnection {}
-
-export interface UserConnectionPromise
-  extends Promise<UserConnection>,
-    Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<UserEdge>>() => T;
-  aggregate: <T = AggregateUserPromise>() => T;
-}
-
-export interface UserConnectionSubscription
-  extends Promise<AsyncIterator<UserConnection>>,
-    Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<UserEdgeSubscription>>>() => T;
-  aggregate: <T = AggregateUserSubscription>() => T;
 }
 
 export interface AbilityScores {
@@ -1559,22 +1675,6 @@ export interface AbilityScoresSubscription
   int: () => Promise<AsyncIterator<Int>>;
   wis: () => Promise<AsyncIterator<Int>>;
   cha: () => Promise<AsyncIterator<Int>>;
-}
-
-export interface RaceEdge {
-  cursor: String;
-}
-
-export interface RaceEdgePromise extends Promise<RaceEdge>, Fragmentable {
-  node: <T = RacePromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-export interface RaceEdgeSubscription
-  extends Promise<AsyncIterator<RaceEdge>>,
-    Fragmentable {
-  node: <T = RaceSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
 }
 
 export interface RacePreviousValues {
@@ -1611,22 +1711,59 @@ export interface RacePreviousValuesSubscription
   racialBonuses: () => Promise<AsyncIterator<String[]>>;
 }
 
-export interface AbilityScoresConnection {}
-
-export interface AbilityScoresConnectionPromise
-  extends Promise<AbilityScoresConnection>,
-    Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<AbilityScoresEdge>>() => T;
-  aggregate: <T = AggregateAbilityScoresPromise>() => T;
+export interface RaceEdge {
+  cursor: String;
 }
 
-export interface AbilityScoresConnectionSubscription
-  extends Promise<AsyncIterator<AbilityScoresConnection>>,
+export interface RaceEdgePromise extends Promise<RaceEdge>, Fragmentable {
+  node: <T = RacePromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface RaceEdgeSubscription
+  extends Promise<AsyncIterator<RaceEdge>>,
     Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<AbilityScoresEdgeSubscription>>>() => T;
-  aggregate: <T = AggregateAbilityScoresSubscription>() => T;
+  node: <T = RaceSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface RaceSubscriptionPayload {
+  mutation: MutationType;
+  updatedFields?: String[];
+}
+
+export interface RaceSubscriptionPayloadPromise
+  extends Promise<RaceSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = RacePromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = RacePreviousValuesPromise>() => T;
+}
+
+export interface RaceSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<RaceSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = RaceSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = RacePreviousValuesSubscription>() => T;
+}
+
+export interface AggregateClass {
+  count: Int;
+}
+
+export interface AggregateClassPromise
+  extends Promise<AggregateClass>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateClassSubscription
+  extends Promise<AsyncIterator<AggregateClass>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface AbilityScoresSubscriptionPayload {
@@ -1652,20 +1789,22 @@ export interface AbilityScoresSubscriptionPayloadSubscription
   previousValues: <T = AbilityScoresPreviousValuesSubscription>() => T;
 }
 
-export interface ClassEdge {
-  cursor: String;
-}
+export interface ClassConnection {}
 
-export interface ClassEdgePromise extends Promise<ClassEdge>, Fragmentable {
-  node: <T = ClassPromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-export interface ClassEdgeSubscription
-  extends Promise<AsyncIterator<ClassEdge>>,
+export interface ClassConnectionPromise
+  extends Promise<ClassConnection>,
     Fragmentable {
-  node: <T = ClassSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<ClassEdge>>() => T;
+  aggregate: <T = AggregateClassPromise>() => T;
+}
+
+export interface ClassConnectionSubscription
+  extends Promise<AsyncIterator<ClassConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<ClassEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateClassSubscription>() => T;
 }
 
 export interface AbilityScoresPreviousValues {
@@ -1699,68 +1838,56 @@ export interface AbilityScoresPreviousValuesSubscription
   cha: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface PageInfo {
-  hasNextPage: Boolean;
-  hasPreviousPage: Boolean;
-  startCursor?: String;
-  endCursor?: String;
+export interface AggregateCharacter {
+  count: Int;
 }
 
-export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
-  hasNextPage: () => Promise<Boolean>;
-  hasPreviousPage: () => Promise<Boolean>;
-  startCursor: () => Promise<String>;
-  endCursor: () => Promise<String>;
-}
-
-export interface PageInfoSubscription
-  extends Promise<AsyncIterator<PageInfo>>,
+export interface AggregateCharacterPromise
+  extends Promise<AggregateCharacter>,
     Fragmentable {
-  hasNextPage: () => Promise<AsyncIterator<Boolean>>;
-  hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
-  startCursor: () => Promise<AsyncIterator<String>>;
-  endCursor: () => Promise<AsyncIterator<String>>;
+  count: () => Promise<Int>;
 }
 
-export interface RaceSubscriptionPayload {
-  mutation: MutationType;
-  updatedFields?: String[];
-}
-
-export interface RaceSubscriptionPayloadPromise
-  extends Promise<RaceSubscriptionPayload>,
+export interface AggregateCharacterSubscription
+  extends Promise<AsyncIterator<AggregateCharacter>>,
     Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = RacePromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = RacePreviousValuesPromise>() => T;
+  count: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface RaceSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<RaceSubscriptionPayload>>,
-    Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = RaceSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = RacePreviousValuesSubscription>() => T;
-}
-
-export interface CharacterEdge {
+export interface AbilityScoresEdge {
   cursor: String;
 }
 
-export interface CharacterEdgePromise
-  extends Promise<CharacterEdge>,
+export interface AbilityScoresEdgePromise
+  extends Promise<AbilityScoresEdge>,
     Fragmentable {
-  node: <T = CharacterPromise>() => T;
+  node: <T = AbilityScoresPromise>() => T;
   cursor: () => Promise<String>;
 }
 
-export interface CharacterEdgeSubscription
-  extends Promise<AsyncIterator<CharacterEdge>>,
+export interface AbilityScoresEdgeSubscription
+  extends Promise<AsyncIterator<AbilityScoresEdge>>,
     Fragmentable {
-  node: <T = CharacterSubscription>() => T;
+  node: <T = AbilityScoresSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface CharacterConnection {}
+
+export interface CharacterConnectionPromise
+  extends Promise<CharacterConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<CharacterEdge>>() => T;
+  aggregate: <T = AggregateCharacterPromise>() => T;
+}
+
+export interface CharacterConnectionSubscription
+  extends Promise<AsyncIterator<CharacterConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<CharacterEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateCharacterSubscription>() => T;
 }
 
 export interface CharacterSubscriptionPayload {
@@ -1802,20 +1929,20 @@ export interface AggregateRaceSubscription
   count: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface AggregateClass {
-  count: Int;
+export interface ClassEdge {
+  cursor: String;
 }
 
-export interface AggregateClassPromise
-  extends Promise<AggregateClass>,
-    Fragmentable {
-  count: () => Promise<Int>;
+export interface ClassEdgePromise extends Promise<ClassEdge>, Fragmentable {
+  node: <T = ClassPromise>() => T;
+  cursor: () => Promise<String>;
 }
 
-export interface AggregateClassSubscription
-  extends Promise<AsyncIterator<AggregateClass>>,
+export interface ClassEdgeSubscription
+  extends Promise<AsyncIterator<ClassEdge>>,
     Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
+  node: <T = ClassSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
 }
 
 export interface ClassPreviousValues {
@@ -1863,22 +1990,20 @@ export interface ClassSubscriptionPayloadSubscription
   previousValues: <T = ClassPreviousValuesSubscription>() => T;
 }
 
-export interface AbilityScoresEdge {
-  cursor: String;
+export interface AggregateAbilityScores {
+  count: Int;
 }
 
-export interface AbilityScoresEdgePromise
-  extends Promise<AbilityScoresEdge>,
+export interface AggregateAbilityScoresPromise
+  extends Promise<AggregateAbilityScores>,
     Fragmentable {
-  node: <T = AbilityScoresPromise>() => T;
-  cursor: () => Promise<String>;
+  count: () => Promise<Int>;
 }
 
-export interface AbilityScoresEdgeSubscription
-  extends Promise<AsyncIterator<AbilityScoresEdge>>,
+export interface AggregateAbilityScoresSubscription
+  extends Promise<AsyncIterator<AggregateAbilityScores>>,
     Fragmentable {
-  node: <T = AbilityScoresSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
+  count: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface CharacterPreviousValues {
@@ -1918,22 +2043,22 @@ export interface CharacterPreviousValuesSubscription
   deity: () => Promise<AsyncIterator<String>>;
 }
 
-export interface ClassConnection {}
+export interface AbilityScoresConnection {}
 
-export interface ClassConnectionPromise
-  extends Promise<ClassConnection>,
+export interface AbilityScoresConnectionPromise
+  extends Promise<AbilityScoresConnection>,
     Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<ClassEdge>>() => T;
-  aggregate: <T = AggregateClassPromise>() => T;
+  edges: <T = FragmentableArray<AbilityScoresEdge>>() => T;
+  aggregate: <T = AggregateAbilityScoresPromise>() => T;
 }
 
-export interface ClassConnectionSubscription
-  extends Promise<AsyncIterator<ClassConnection>>,
+export interface AbilityScoresConnectionSubscription
+  extends Promise<AsyncIterator<AbilityScoresConnection>>,
     Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<ClassEdgeSubscription>>>() => T;
-  aggregate: <T = AggregateClassSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<AbilityScoresEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateAbilityScoresSubscription>() => T;
 }
 
 export interface RaceConnection {}
@@ -1954,43 +2079,40 @@ export interface RaceConnectionSubscription
   aggregate: <T = AggregateRaceSubscription>() => T;
 }
 
-export interface UserSubscriptionPayload {
-  mutation: MutationType;
-  updatedFields?: String[];
-}
+export interface UserConnection {}
 
-export interface UserSubscriptionPayloadPromise
-  extends Promise<UserSubscriptionPayload>,
+export interface UserConnectionPromise
+  extends Promise<UserConnection>,
     Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = UserPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = UserPreviousValuesPromise>() => T;
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<UserEdge>>() => T;
+  aggregate: <T = AggregateUserPromise>() => T;
 }
 
-export interface UserSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<UserSubscriptionPayload>>,
+export interface UserConnectionSubscription
+  extends Promise<AsyncIterator<UserConnection>>,
     Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = UserSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = UserPreviousValuesSubscription>() => T;
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<UserEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateUserSubscription>() => T;
 }
 
-export interface AggregateCharacter {
-  count: Int;
+export interface CharacterEdge {
+  cursor: String;
 }
 
-export interface AggregateCharacterPromise
-  extends Promise<AggregateCharacter>,
+export interface CharacterEdgePromise
+  extends Promise<CharacterEdge>,
     Fragmentable {
-  count: () => Promise<Int>;
+  node: <T = CharacterPromise>() => T;
+  cursor: () => Promise<String>;
 }
 
-export interface AggregateCharacterSubscription
-  extends Promise<AsyncIterator<AggregateCharacter>>,
+export interface CharacterEdgeSubscription
+  extends Promise<AsyncIterator<CharacterEdge>>,
     Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
+  node: <T = CharacterSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
 }
 
 /*
@@ -2012,11 +2134,6 @@ export type ID_Input = string | number;
 export type ID_Output = string;
 
 /*
-The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
-*/
-export type String = string;
-
-/*
 DateTime scalar input type, allowing Date
 */
 export type DateTimeInput = Date | string;
@@ -2025,6 +2142,11 @@ export type DateTimeInput = Date | string;
 DateTime scalar output type, which is always a string
 */
 export type DateTimeOutput = string;
+
+/*
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+*/
+export type String = string;
 
 /**
  * Model Metadata

@@ -113,6 +113,23 @@ const getMyCharacters = gql`
     }
 `
 
+const getRaces = gql`
+    query {
+        races {
+            id
+            name
+        }
+    }
+`
+
+const getClasses = gql`
+    query {
+        classes {
+            id
+            name
+        }
+    }
+`
 
 export { 
     createUser, 
@@ -122,5 +139,7 @@ export {
     createCharacter, 
     updateCharacter,
     deleteCharacter,
-    getMyCharacters
+    getMyCharacters,
+    getRaces,
+    getClasses
 }

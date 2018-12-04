@@ -35,20 +35,6 @@ const characterOne = {
     character: undefined
 }
 
-// const raceTwo = {
-//     name: "Gray Elf",
-//     bonusLanguages: ['Draconic', 'Gnoll', 'Gnome', 'Goblin', 'Orc', 'Sylvan'],
-//     size: 'Medium',
-//     defaultLanguages: ["Common", "Elven"],
-//     abilityMods: {
-//         dex: 2,
-//         con: -2,
-//         str: -2,
-//         int: 2,
-//     },
-//     speed: 30
-// }
-
 const seedDatabase = async () => {
     // Delete test data
     await prisma.mutation.deleteManyCharacters()

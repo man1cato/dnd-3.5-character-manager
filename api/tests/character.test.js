@@ -1,5 +1,4 @@
 import 'cross-fetch/polyfill'
-import { gql } from 'apollo-boost'
 
 import prisma from '../src/prisma'
 import seedDatabase, { userOne, characterOne } from './utils/seedDatabase'

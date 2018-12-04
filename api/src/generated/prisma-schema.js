@@ -552,6 +552,7 @@ type Class {
   id: ID!
   name: String!
   hitDie: HitDie!
+  favoredRaces(where: RaceWhereInput, orderBy: RaceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Race!]
   characters(where: CharacterWhereInput, orderBy: CharacterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Character!]
 }
 
@@ -564,6 +565,7 @@ type ClassConnection {
 input ClassCreateInput {
   name: String!
   hitDie: HitDie!
+  favoredRaces: RaceCreateManyWithoutFavoredClassInput
   characters: CharacterCreateManyWithoutClassInput
 }
 
@@ -572,9 +574,21 @@ input ClassCreateOneWithoutCharactersInput {
   connect: ClassWhereUniqueInput
 }
 
+input ClassCreateOneWithoutFavoredRacesInput {
+  create: ClassCreateWithoutFavoredRacesInput
+  connect: ClassWhereUniqueInput
+}
+
 input ClassCreateWithoutCharactersInput {
   name: String!
   hitDie: HitDie!
+  favoredRaces: RaceCreateManyWithoutFavoredClassInput
+}
+
+input ClassCreateWithoutFavoredRacesInput {
+  name: String!
+  hitDie: HitDie!
+  characters: CharacterCreateManyWithoutClassInput
 }
 
 type ClassEdge {
@@ -622,6 +636,7 @@ input ClassSubscriptionWhereInput {
 input ClassUpdateInput {
   name: String
   hitDie: HitDie
+  favoredRaces: RaceUpdateManyWithoutFavoredClassInput
   characters: CharacterUpdateManyWithoutClassInput
 }
 
@@ -637,14 +652,35 @@ input ClassUpdateOneRequiredWithoutCharactersInput {
   connect: ClassWhereUniqueInput
 }
 
+input ClassUpdateOneWithoutFavoredRacesInput {
+  create: ClassCreateWithoutFavoredRacesInput
+  update: ClassUpdateWithoutFavoredRacesDataInput
+  upsert: ClassUpsertWithoutFavoredRacesInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: ClassWhereUniqueInput
+}
+
 input ClassUpdateWithoutCharactersDataInput {
   name: String
   hitDie: HitDie
+  favoredRaces: RaceUpdateManyWithoutFavoredClassInput
+}
+
+input ClassUpdateWithoutFavoredRacesDataInput {
+  name: String
+  hitDie: HitDie
+  characters: CharacterUpdateManyWithoutClassInput
 }
 
 input ClassUpsertWithoutCharactersInput {
   update: ClassUpdateWithoutCharactersDataInput!
   create: ClassCreateWithoutCharactersInput!
+}
+
+input ClassUpsertWithoutFavoredRacesInput {
+  update: ClassUpdateWithoutFavoredRacesDataInput!
+  create: ClassCreateWithoutFavoredRacesInput!
 }
 
 input ClassWhereInput {
@@ -680,6 +716,9 @@ input ClassWhereInput {
   hitDie_not: HitDie
   hitDie_in: [HitDie!]
   hitDie_not_in: [HitDie!]
+  favoredRaces_every: RaceWhereInput
+  favoredRaces_some: RaceWhereInput
+  favoredRaces_none: RaceWhereInput
   characters_every: CharacterWhereInput
   characters_some: CharacterWhereInput
   characters_none: CharacterWhereInput
@@ -802,6 +841,7 @@ type Race {
   bonusLanguages: [Language!]!
   abilityMods: AbilityScores
   racialBonuses: [String!]!
+  favoredClass: Class
   characters(where: CharacterWhereInput, orderBy: CharacterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Character!]
 }
 
@@ -827,7 +867,13 @@ input RaceCreateInput {
   bonusLanguages: RaceCreatebonusLanguagesInput
   abilityMods: AbilityScoresCreateOneInput
   racialBonuses: RaceCreateracialBonusesInput
+  favoredClass: ClassCreateOneWithoutFavoredRacesInput
   characters: CharacterCreateManyWithoutRaceInput
+}
+
+input RaceCreateManyWithoutFavoredClassInput {
+  create: [RaceCreateWithoutFavoredClassInput!]
+  connect: [RaceWhereUniqueInput!]
 }
 
 input RaceCreateOneWithoutCharactersInput {
@@ -847,6 +893,18 @@ input RaceCreateWithoutCharactersInput {
   bonusLanguages: RaceCreatebonusLanguagesInput
   abilityMods: AbilityScoresCreateOneInput
   racialBonuses: RaceCreateracialBonusesInput
+  favoredClass: ClassCreateOneWithoutFavoredRacesInput
+}
+
+input RaceCreateWithoutFavoredClassInput {
+  name: String!
+  size: Size!
+  speed: Int!
+  defaultLanguages: RaceCreatedefaultLanguagesInput
+  bonusLanguages: RaceCreatebonusLanguagesInput
+  abilityMods: AbilityScoresCreateOneInput
+  racialBonuses: RaceCreateracialBonusesInput
+  characters: CharacterCreateManyWithoutRaceInput
 }
 
 type RaceEdge {
@@ -913,6 +971,7 @@ input RaceUpdateInput {
   bonusLanguages: RaceUpdatebonusLanguagesInput
   abilityMods: AbilityScoresUpdateOneInput
   racialBonuses: RaceUpdateracialBonusesInput
+  favoredClass: ClassUpdateOneWithoutFavoredRacesInput
   characters: CharacterUpdateManyWithoutRaceInput
 }
 
@@ -923,6 +982,15 @@ input RaceUpdateManyMutationInput {
   defaultLanguages: RaceUpdatedefaultLanguagesInput
   bonusLanguages: RaceUpdatebonusLanguagesInput
   racialBonuses: RaceUpdateracialBonusesInput
+}
+
+input RaceUpdateManyWithoutFavoredClassInput {
+  create: [RaceCreateWithoutFavoredClassInput!]
+  delete: [RaceWhereUniqueInput!]
+  connect: [RaceWhereUniqueInput!]
+  disconnect: [RaceWhereUniqueInput!]
+  update: [RaceUpdateWithWhereUniqueWithoutFavoredClassInput!]
+  upsert: [RaceUpsertWithWhereUniqueWithoutFavoredClassInput!]
 }
 
 input RaceUpdateOneRequiredWithoutCharactersInput {
@@ -944,11 +1012,34 @@ input RaceUpdateWithoutCharactersDataInput {
   bonusLanguages: RaceUpdatebonusLanguagesInput
   abilityMods: AbilityScoresUpdateOneInput
   racialBonuses: RaceUpdateracialBonusesInput
+  favoredClass: ClassUpdateOneWithoutFavoredRacesInput
+}
+
+input RaceUpdateWithoutFavoredClassDataInput {
+  name: String
+  size: Size
+  speed: Int
+  defaultLanguages: RaceUpdatedefaultLanguagesInput
+  bonusLanguages: RaceUpdatebonusLanguagesInput
+  abilityMods: AbilityScoresUpdateOneInput
+  racialBonuses: RaceUpdateracialBonusesInput
+  characters: CharacterUpdateManyWithoutRaceInput
+}
+
+input RaceUpdateWithWhereUniqueWithoutFavoredClassInput {
+  where: RaceWhereUniqueInput!
+  data: RaceUpdateWithoutFavoredClassDataInput!
 }
 
 input RaceUpsertWithoutCharactersInput {
   update: RaceUpdateWithoutCharactersDataInput!
   create: RaceCreateWithoutCharactersInput!
+}
+
+input RaceUpsertWithWhereUniqueWithoutFavoredClassInput {
+  where: RaceWhereUniqueInput!
+  update: RaceUpdateWithoutFavoredClassDataInput!
+  create: RaceCreateWithoutFavoredClassInput!
 }
 
 input RaceWhereInput {
@@ -993,6 +1084,7 @@ input RaceWhereInput {
   speed_gt: Int
   speed_gte: Int
   abilityMods: AbilityScoresWhereInput
+  favoredClass: ClassWhereInput
   characters_every: CharacterWhereInput
   characters_some: CharacterWhereInput
   characters_none: CharacterWhereInput

@@ -1,6 +1,6 @@
 # Anytime you make a change to this file, run get-schema
 
-# import UserOrderByInput, CharacterOrderByInput from './generated/prisma.graphql'
+# import UserOrderByInput, CharacterOrderByInput, RaceOrderByInput, ClassOrderByInput from './generated/prisma.graphql'
 
 type User {
     id: ID!
@@ -30,6 +30,8 @@ type Query {
     users(query: String, first: Int, skip: Int, after: String, orderBy: UserOrderByInput): [User!]!
     me: User!
     myCharacters(query: String, first: Int, skip: Int, after: String, orderBy: CharacterOrderByInput): [Character!]!
+    races(query: String, first: Int, skip: Int, after: String, orderBy: RaceOrderByInput): [Race!]!
+    classes(query: String, first: Int, skip: Int, after: String, orderBy: ClassOrderByInput): [Class!]!
 }
 
 type Mutation {

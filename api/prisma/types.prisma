@@ -21,8 +21,8 @@ type Character {
   alignment: Alignment!
   class: Class! @relation(name: "CharacterToClass", onDelete: SET_NULL) 
   deity: String
-  # feats: [Feat!]
-  # skills: [Skill!]
+  # feats: [Feat!]!
+  # skills: [Skill!]!
   # specialAbilities: [SpecialAbility!]!
   # hp: Int!
   # equipment: [Item!]
