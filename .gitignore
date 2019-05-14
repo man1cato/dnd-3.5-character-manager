@@ -1,8 +1,6 @@
 yarn-error.log
 public/dist/
-.env
-.env.test
-.env.development
+config/*.env
 playground.js
 node_modules
 .vscode

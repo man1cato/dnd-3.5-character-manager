@@ -8,122 +8,131 @@ import PhysicalStats from './PhysicalStats';
 import Saves from './Saves';
 import Attacks from './Attacks';
 import Weapons from './Weapons';
+import Spells from './Spells';
 import { startEditProfile } from '../actions/profile';
 
 export class CombatPage extends React.Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    let saves = this.props.saves;
-    Object.keys(saves).forEach((save) => {
-      saves[save].mod = saves[save].mod || "";
-      saves[save].total = saves[save].total || saves[save].base;
-    });
+		let saves = this.props.saves;
+		Object.keys(saves).forEach((save) => {
+			saves[save].mod = saves[save].mod || "";
+			saves[save].total = saves[save].total || saves[save].base;
+		});
 
-    let attacks = this.props.attacks;
-    Object.keys(attacks).forEach((attack) => {
-      attacks[attack].mod = attacks[attack].mod || "";
-      attacks[attack].total = attacks[attack].total || attacks[attack].base;
-    });
+		let attacks = this.props.attacks;
+		Object.keys(attacks).forEach((attack) => {
+			attacks[attack].mod = attacks[attack].mod || "";
+			attacks[attack].total = attacks[attack].total || attacks[attack].base;
+		});
 
-    this.state = {
-      hp: {
-        base: this.props.hp.base,
-        mod: this.props.hp.mod || "",
-        damage: this.props.hp.damage || "",
-        total: this.props.hp.total || this.props.hp.base,
-      },
-      initiative: {
-        base: this.props.initiative.base, 
-        mod: this.props.initiative.mod || "",
-        total: this.props.initiative.total || this.props.initiative.base
-      },
-      saves,      
-      attacks
-    }
-  }
+		this.state = {
+			hp: {
+				base: this.props.hp.base,
+				mod: this.props.hp.mod || "",
+				damage: this.props.hp.damage || "",
+				total: this.props.hp.total || this.props.hp.base,
+			},
+			initiative: {
+				base: this.props.initiative.base, 
+				mod: this.props.initiative.mod || "",
+				total: this.props.initiative.total || this.props.initiative.base
+			},
+			saves,      
+			attacks
+		}
+  	}
   
-  componentWillUnmount() {
-    this.props.startEditProfile(this.props.id, this.state);
-  }
+	componentWillUnmount() {
+		this.props.startEditProfile(this.props.id, {
+			hp: this.state.hp, 
+			initiative: this.state.initiative,
+			saves: this.state.saves, 
+			attacks: this.state.attacks
+		});
+	}
 
-  onInputChange = (e) => {
-    const name = e.target.name;
-    const id = e.target.id;
-    let value = Number(e.target.value);
-    value = (value === 0 || isNaN(value)) ? "" : value;
-    let total;
-    this.setState((prevState) => {
-      if (name === "hp") {
-        if (id === "damage") {
-          total = this.props.hp.base + prevState.hp.mod - value;
-          return {
-            hp: update(prevState.hp, {
-              damage: { $set: value },
-              total: { $set: total }
-            })
-          }
-        } 
-        total = this.props.hp.base + value - prevState.hp.damage;
-      } else if (name === "saves" || name === "attacks") {
-        total = this.props[name][id].base + value;
-        return {
-          [name]: update(prevState[name], {
-            [id]: {
-              mod: { $set: value },
-              total: { $set: total }
-            }
-          })
-        }
-      } else {
-        total = this.props[name].base + value;
-      }
-      return {
-        [name]: update(prevState[name], {
-          mod: { $set: value },
-          total: { $set: total }          
-        })
-      }
-    });
-  }
+	onInputChange = (e) => {
+		const name = e.target.name;
+		const id = e.target.id;
+		let value = Number(e.target.value);
+		value = (value === 0 || isNaN(value)) ? "" : value;
+		let total;
+		this.setState((prevState) => {
+			if (name === "hp") {
+				if (id === "damage") {
+					total = this.props.hp.base + prevState.hp.mod - value;
+					return {
+						hp: update(prevState.hp, {
+						damage: { $set: value },
+						total: { $set: total }
+						})
+					}
+				} 
+				total = this.props.hp.base + value - prevState.hp.damage;
+			} else if (name === "saves" || name === "attacks") {
+				total = this.props[name][id].base + value;
+				return {
+					[name]: update(prevState[name], {
+						[id]: {
+						mod: { $set: value },
+						total: { $set: total }
+						}
+					})
+				}
+			} else {
+				total = this.props[name].base + value;
+			}
+			return {
+				[name]: update(prevState[name], {
+					mod: { $set: value },
+					total: { $set: total }          
+				})
+			}
+		});
+	}
 
-  render () {
-    return (
-      <div className="layout">
-        <Header pageTitle="Combat" />
-        <div className="container container--body">
+	render () {
+		return (
+			<div className="layout">
+				<Header pageTitle="Combat" />
+				<div className="container container--body">
 
-          <PhysicalStats
-            hp={this.state.hp}
-            ac={this.props.ac}
-            initiative={this.state.initiative}
-            speed={this.props.speed}
-            onInputChange={this.onInputChange}
-          />                              
+					<PhysicalStats
+						hp={this.state.hp}
+						ac={this.props.ac}
+						initiative={this.state.initiative}
+						speed={this.props.speed}
+						onInputChange={this.onInputChange}
+					/>                              
 
-          <Saves
-            saves={this.state.saves}            
-            onInputChange={this.onInputChange}
-          />            
+					<Saves
+						saves={this.state.saves}            
+						onInputChange={this.onInputChange}
+					/>            
 
-          <Attacks 
-            attacks={this.state.attacks}
-            onInputChange={this.onInputChange}
-          />
+					<Attacks 
+						attacks={this.state.attacks}
+						onInputChange={this.onInputChange}
+					/>
 
-          <Weapons 
-            weaponSet={this.props.weaponSet}
-            meleeBonus={this.state.attacks.melee.total}
-            rangedBonus={this.state.attacks.ranged.total}
-            grappleBonus={this.state.attacks.grapple.total}
-          />
+					<Weapons 
+						weaponSet={this.props.weaponSet}
+						meleeBonus={this.state.attacks.melee.total}
+						rangedBonus={this.state.attacks.ranged.total}
+						grappleBonus={this.state.attacks.grapple.total}
+					/>
 
-        </div>
+					<Spells 
+					/>
 
-        <Footer />
-      </div>  
-    )
-  }
+				</div>
+
+				<Footer />
+			</div>  
+		)
+	}
 }
 
 const mapStateToProps = (state) => ({
@@ -135,7 +144,7 @@ const mapStateToProps = (state) => ({
   saves: state.profile.saves,
   bab: state.profile.bab,
   attacks: state.profile.attacks,
-  weaponSet: state.profile.weaponSet
+  weaponSet: state.profile.weaponSet 
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

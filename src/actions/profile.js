@@ -40,7 +40,7 @@ export const editProfile = (updates) => ({
     updates
 });
 
-//EDIT PROFILE IN DATABASES
+//EDIT PROFILE IN FIREBASE
 export const startEditProfile = (id, updates) => {
     return (dispatch, getState) => {
         const uid = getState().auth.uid;

@@ -182,15 +182,21 @@
 //SPELLS
 .grid--spells {
   @extend .grid--columns;
+  grid-template-columns: 3fr repeat(2, 1fr);
+  grid-column-gap: $s-size;
+}
+
+.grid--spellbook {
+  @extend .grid--columns;
   grid-template-columns: 3fr repeat(4, 1fr);
   grid-column-gap: $s-size;
 }
-.grid--spells__school {
+.grid--spellbook__school {
   @extend .grid__col2;
   justify-self: start;
   font-size: $font-size-small;
 }
-.grid--spells__attribute {
+.grid--spellbook__attribute {
   display: flex;
   justify-content: space-between;
   > div {
