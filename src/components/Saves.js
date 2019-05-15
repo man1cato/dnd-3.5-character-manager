@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Saves = ({saves, onInputChange }) => (
+const Saves = ({saves, handleChange}) => (
     <div>
         <h3 className="row row--center">Saving Throws</h3>
         
@@ -19,7 +19,7 @@ const Saves = ({saves, onInputChange }) => (
                 name="saves"
                 id="fortitude"
                 value={saves.fortitude.mod}
-                onChange={onInputChange}
+                onChange={handleChange}
             />
             <div>=</div>
             <div>{saves.fortitude.total}</div>
@@ -32,7 +32,7 @@ const Saves = ({saves, onInputChange }) => (
                 name="saves"
                 id="reflex"
                 value={saves.reflex.mod}
-                onChange={onInputChange}
+                onChange={handleChange}
             />
             <div>=</div>
             <div>{saves.reflex.total}</div>
@@ -45,7 +45,7 @@ const Saves = ({saves, onInputChange }) => (
                 name="saves"
                 id="will"
                 value={saves.will.mod}
-                onChange={onInputChange}
+                onChange={handleChange}
             />
             <div>=</div>
             <div>{saves.will.total}</div>

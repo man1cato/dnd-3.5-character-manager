@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Attacks = ({attacks, onInputChange}) => (    
+const Attacks = ({attacks, handleChange}) => (    
     <div> 
         <h3 className="row row--center">Attack Bonuses</h3>
         
@@ -20,7 +20,7 @@ const Attacks = ({attacks, onInputChange}) => (
                 name="attacks"
                 id="melee"
                 value={attacks.melee.mod}
-                onChange={onInputChange}
+                onChange={handleChange}
             />
             <div>=</div>
             <div>{attacks.melee.total}</div>
@@ -33,7 +33,7 @@ const Attacks = ({attacks, onInputChange}) => (
                 name="attacks"
                 id="ranged"
                 value={attacks.ranged.mod}
-                onChange={onInputChange}
+                onChange={handleChange}
             />
             <div>=</div>
             <div>{attacks.ranged.total}</div>
@@ -46,7 +46,7 @@ const Attacks = ({attacks, onInputChange}) => (
                 name="attacks"
                 id="grapple"
                 value={attacks.grapple.mod}
-                onChange={onInputChange}
+                onChange={handleChange}
             />
             <div>=</div>
             <div>{attacks.grapple.total}</div>

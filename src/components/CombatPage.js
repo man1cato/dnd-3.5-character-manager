@@ -53,7 +53,7 @@ export class CombatPage extends React.Component {
 		});
 	}
 
-	onInputChange = (e) => {
+	handleChange = (e) => {
 		const name = e.target.name;
 		const id = e.target.id;
 		let value = Number(e.target.value);
@@ -104,17 +104,17 @@ export class CombatPage extends React.Component {
 						ac={this.props.ac}
 						initiative={this.state.initiative}
 						speed={this.props.speed}
-						onInputChange={this.onInputChange}
+						handleChange={this.handleChange}
 					/>                              
 
 					<Saves
 						saves={this.state.saves}            
-						onInputChange={this.onInputChange}
+						handleChange={this.handleChange}
 					/>            
 
 					<Attacks 
 						attacks={this.state.attacks}
-						onInputChange={this.onInputChange}
+						handleChange={this.handleChange}
 					/>
 
 					<Weapons 
@@ -124,8 +124,7 @@ export class CombatPage extends React.Component {
 						grappleBonus={this.state.attacks.grapple.total}
 					/>
 
-					<Spells 
-					/>
+					{this.props.spellbook && <Spells />}
 
 				</div>
 
@@ -144,7 +143,8 @@ const mapStateToProps = (state) => ({
   saves: state.profile.saves,
   bab: state.profile.bab,
   attacks: state.profile.attacks,
-  weaponSet: state.profile.weaponSet 
+  weaponSet: state.profile.weaponSet,
+  spellbook: state.profile.spellbook
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

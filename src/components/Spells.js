@@ -15,7 +15,6 @@ const listPreparedSpells = (spellbook) => {
 }
 
 export class Spells extends React.Component{
-   //spellbook values are not being loaded before component mounts
    constructor(props) {
       super(props)
 
@@ -25,12 +24,6 @@ export class Spells extends React.Component{
          selected: undefined
       }  
    }
-
-   componentDidUpdate(prevProps, prevState) {
-      if (this.state.spellbook !== prevState.spellbook) {
-         this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
-      }
-	}
 
    handleOpenModal = (e) => {
       const spellId = e.target.id;
@@ -44,8 +37,8 @@ export class Spells extends React.Component{
 
    handleChange = (e) => {
       const level = e.target.getAttribute("level");
-      const spellid = e.target.getAttribute("spellid")
-      const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellid);
+      const spellId = e.target.getAttribute("spellid")
+      const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellId);
       const attribute = e.target.getAttribute("attribute");
       const valueChange = Number(e.target.getAttribute("change"));
 
@@ -78,6 +71,8 @@ export class Spells extends React.Component{
                }),
                preparedSpells
             }
+         }, () => {
+            this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
          })
       })
    }

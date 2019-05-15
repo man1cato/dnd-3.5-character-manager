@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
+const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
         
     <div className="grid grid--combat">
         <div className="row__title">HP</div>
@@ -16,7 +16,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
                     type="text"
                     name="hp"
                     value={hp.mod}
-                    onChange={onInputChange}
+                    onChange={handleChange}
                 />
             </div>
             <div className="row__item--bottom">-</div>
@@ -27,7 +27,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
                     name="hp"
                     id="damage"
                     value={hp.damage}
-                    onChange={onInputChange}
+                    onChange={handleChange}
                 />
             </div>
             <div className="row__item--bottom">=</div>
@@ -66,7 +66,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, onInputChange}) => (
                     type="text"
                     name="initiative"
                     value={initiative.mod}
-                    onChange={onInputChange}
+                    onChange={handleChange}
                 />
             </div>
             <div className="row__item--bottom">=</div>

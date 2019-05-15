@@ -6,17 +6,13 @@ import update from 'react-addons-update';
 import Header from './Header';
 import Footer from './Footer';
 import SpellModal from './SpellModal';
-import { startEditProfile } from '../actions/profile';
+import { editProfile, startEditProfile } from '../actions/profile';
 
 
 export class SpellbookPage extends React.Component {
 	state = {
 		spellbook: this.props.spellbook,
 		selected: undefined
-	}
-
-	componentWillUnmount() {
-		this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
 	}
 
 	handleOpenModal = (e) => {
@@ -61,6 +57,8 @@ export class SpellbookPage extends React.Component {
 							}
 						})
 					}
+			}, () => {
+				this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
 			})
 		})
 	}
@@ -87,7 +85,7 @@ export class SpellbookPage extends React.Component {
 								<h5>Rmng</h5>
 
 								{page.spells.map((spell, i) => (
-									<Fragment>
+									<Fragment key={i}>
 										<button 
 											className="grid__col1 button--link" 
 											id={spell.id}
