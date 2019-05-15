@@ -6,7 +6,7 @@ import update from 'react-addons-update';
 import Header from './Header';
 import Footer from './Footer';
 import SpellModal from './SpellModal';
-import { editProfile, startEditProfile } from '../actions/profile';
+import { startEditProfile } from '../actions/profile';
 
 
 export class SpellbookPage extends React.Component {

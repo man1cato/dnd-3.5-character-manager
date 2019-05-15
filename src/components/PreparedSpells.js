@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import update from 'react-addons-update';
 
 import SpellModal from './SpellModal';
-import { startEditProfile } from '../actions/profile';
+
 
 const listPreparedSpells = (spellbook) => {
    let preparedSpells = []
@@ -14,7 +14,7 @@ const listPreparedSpells = (spellbook) => {
    return preparedSpells
 }
 
-export class Spells extends React.Component{
+export class PreparedSpells extends React.Component{
    constructor(props) {
       super(props)
 
@@ -125,14 +125,4 @@ export class Spells extends React.Component{
 }
 
 
-const mapStateToProps = (state) => ({
-   id: state.profile.id,
-   spellbook: state.profile.spellbook,
-   spells: state.spells
-});
-
-const mapDispatchToProps = (dispatch, props) => ({
-	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Spells);
+export default PreparedSpells;

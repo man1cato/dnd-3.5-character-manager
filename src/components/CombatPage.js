@@ -8,7 +8,7 @@ import PhysicalStats from './PhysicalStats';
 import Saves from './Saves';
 import Attacks from './Attacks';
 import Weapons from './Weapons';
-import Spells from './Spells';
+import PreparedSpells from './PreparedSpells';
 import { startEditProfile } from '../actions/profile';
 
 export class CombatPage extends React.Component {
@@ -124,7 +124,14 @@ export class CombatPage extends React.Component {
 						grappleBonus={this.state.attacks.grapple.total}
 					/>
 
-					{this.props.spellbook && <Spells />}
+					{this.props.spellbook && 
+						<PreparedSpells 
+							id={this.props.id}
+							spellbook={this.props.spellbook}
+							spells={this.props.spells}
+							startEditProfile={this.props.startEditProfile}
+						/>
+					}
 
 				</div>
 
@@ -144,7 +151,8 @@ const mapStateToProps = (state) => ({
   bab: state.profile.bab,
   attacks: state.profile.attacks,
   weaponSet: state.profile.weaponSet,
-  spellbook: state.profile.spellbook
+  spellbook: state.profile.spellbook,
+  spells: state.spells
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
