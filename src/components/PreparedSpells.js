@@ -21,6 +21,7 @@ export class PreparedSpells extends React.Component{
       this.state = {
          preparedSpells: listPreparedSpells(this.props.spellbook),
          spellbook: this.props.spellbook,
+         castSpells: [],
          selected: undefined
       }  
    }
@@ -41,11 +42,17 @@ export class PreparedSpells extends React.Component{
       const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellId);
       const attribute = e.target.getAttribute("attribute");
       const valueChange = Number(e.target.getAttribute("change"));
-
+      
       this.setState((prevState) => {
          const spell = prevState.spellbook[level].spells[index];
          const value = prevState.spellbook[level].spells[index][attribute] + valueChange;
          const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value;
+         let castSpells = prevState.castSpells;
+         if (valueChange > 0) {
+            castSpells.push(spellId)
+         } else {
+            castSpells = castSpells.filter((id) => id !== spellId)
+         }
 
          return {
             spellbook: update(prevState.spellbook, {
@@ -57,7 +64,8 @@ export class PreparedSpells extends React.Component{
                      }
                   }
                }
-            })
+            }),
+            castSpells
          }
       }, () => {
          this.setState((prevState) => {
@@ -69,7 +77,7 @@ export class PreparedSpells extends React.Component{
                      total: { $set: total }
                   }
                }),
-               preparedSpells
+               preparedSpells               
             }
          }, () => {
             this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
@@ -87,9 +95,10 @@ export class PreparedSpells extends React.Component{
 
             <h3 className="row row--center">Prepared Spells</h3>
 
-            <div className="grid grid--spells">
+            <div className="grid grid--preparedSpells">
                <h5 className="grid__col1">Spell</h5>
                <h5>Rmng</h5>
+               <div></div>
                <div></div>
 
                {this.state.preparedSpells.map((spell, i) => (
@@ -105,16 +114,37 @@ export class PreparedSpells extends React.Component{
             
                      <div key={`rmng${spell.level}${i}`}>{spell.remaining}</div>
 
-                     <button 
-                        key={`cast${spell.level}${i}`}
-                        spellid={spell.id}
-                        level={spell.level}
-                        attribute="used"
-                        change={1}
-                        onClick={this.handleChange}
-                     >
-                        Cast
-                     </button>
+                     {this.state.castSpells.includes(spell.id) ?
+                        <button 
+                           key={`undo${spell.level}${i}`}
+                           spellid={spell.id}
+                           level={spell.level}
+                           attribute="used"
+                           change={-1}
+                           onClick={this.handleChange}
+                        >
+                           Undo
+                        </button>
+                        :
+                        <div></div>
+                     }
+                     
+                     {spell.remaining > 0 ?
+                        <button 
+                           key={`cast${spell.level}${i}`}
+                           spellid={spell.id}
+                           level={spell.level}
+                           attribute="used"
+                           change={1}
+                           onClick={this.handleChange}
+                        >
+                           Cast
+                        </button>
+                        :
+                        <div></div>
+                     }
+
+                     
                   </Fragment>
                ))}
             </div>
