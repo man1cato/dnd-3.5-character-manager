@@ -68,85 +68,85 @@ export class SpellbookPage extends React.Component {
 	render() {
 		return (
 			<div className="layout">
-					<Header pageTitle="Spellbook" />
-					<SpellModal 
-						selected={this.state.selected}
-						handleCloseModal={this.handleCloseModal}
-					/>
-					<div className="container container--body">
+				<Header pageTitle="Spellbook" />
+				<SpellModal 
+					selected={this.state.selected}
+					handleCloseModal={this.handleCloseModal}
+				/>
+				<div className="container container--body">
 
-						{this.state.spellbook.map((page, level) => (
-							<div key={level}>
-									<h3 className="row row--center">Level {level} Spells ({page.total}/{page.spellsPerDay})</h3>
+					{this.state.spellbook.map((page, level) => (
+						<div key={level}>
+							<h3 className="row row--center">Level {level} Spells ({page.total}/{page.spellsPerDay})</h3>
 
-									<div className="grid grid--spellbook">
-										<h5 className="grid__col1">Spell</h5>
-										<h5 className="grid--spellbook__school">School</h5>
-										<h5>Prep</h5>
-										<h5>Used</h5>
-										<h5>Rmng</h5>
+							<div className="grid grid--spellbook">
+								<h5 className="grid__col1">Spell</h5>
+								<h5 className="grid--spellbook__school">School</h5>
+								<h5>Prep</h5>
+								<h5>Used</h5>
+								<h5>Rmng</h5>
 
-										{page.spells.map((spell, i) => (
-											<Fragment>
-												<button 
-													className="grid__col1 button--link" 
-													id={spell.id}
-													key={`spell${i}`} 
-													onClick={this.handleOpenModal}
-												>
-													{spell.name}
-												</button>
+								{page.spells.map((spell, i) => (
+									<Fragment>
+										<button 
+											className="grid__col1 button--link" 
+											id={spell.id}
+											key={`spell${i}`} 
+											onClick={this.handleOpenModal}
+										>
+											{spell.name}
+										</button>
 
-												<div className="grid--spellbook__school" key={`school${i}`}>
-													{spell.school.substr(0,4)}
-												</div>
-												
-												<div className="grid__col3 grid--spellbook__attribute" key={`prep${i}`}>
-													<button
-														change={1}
-														index={i}
-														attribute="prepared"
-														level={level}
-														onClick={this.handleChange}
-													>+</button>
-													<div>{spell.prepared}</div>
-													<button
-														change={-1}
-														index={i}
-														attribute="prepared"
-														level={level}
-														onClick={this.handleChange}
-													>-</button>
-												</div>
+										<div className="grid--spellbook__school" key={`school${i}`}>
+											{spell.school.substr(0,4)}
+										</div>
+										
+										<div className="grid__col3 grid--spellbook__attribute" key={`prep${i}`}>
+											<button
+												change={1}
+												index={i}
+												attribute="prepared"
+												level={level}
+												onClick={this.handleChange}
+											>+</button>
+											<div>{spell.prepared}</div>
+											<button
+												change={-1}
+												index={i}
+												attribute="prepared"
+												level={level}
+												onClick={this.handleChange}
+											>-</button>
+										</div>
 
-												<div className="grid__col4 grid--spellbook__attribute" key={`used${i}`}>
-													<button
-														change={1}
-														index={i}
-														attribute="used"
-														level={level}
-														onClick={this.handleChange}
-													>+</button>
-													<div>{spell.used}</div>
-													<button
-														change={-1}
-														index={i}
-														attribute="used"
-														level={level}
-														onClick={this.handleChange}
-													>-</button>
-												</div>
-												
-												<div className="grid__col5" key={`rmng${i}`}>{spell.remaining}</div>
-											</Fragment>
-										))}                        
+										<div className="grid__col4 grid--spellbook__attribute" key={`used${i}`}>
+											<button
+												change={1}
+												index={i}
+												attribute="used"
+												level={level}
+												onClick={this.handleChange}
+											>+</button>
+											<div>{spell.used}</div>
+											<button
+												change={-1}
+												index={i}
+												attribute="used"
+												level={level}
+												onClick={this.handleChange}
+											>-</button>
+										</div>
+										
+										<div className="grid__col5" key={`rmng${i}`}>{spell.remaining}</div>
+									</Fragment>
+								))}                        
 
-									</div>
 							</div>
-						))}
+						</div>
+					))}
 
-					</div>
-					<Footer />
+				</div>
+				<Footer />
 			</div>
 		)
 	}

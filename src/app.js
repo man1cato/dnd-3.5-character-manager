@@ -24,11 +24,11 @@ import LoadingPage from './components/LoadingPage';
 const store = configureStore();
 store.dispatch(startSetRaces());
 store.dispatch(startSetClasses());
-store.dispatch(startSetSpells());
-store.dispatch(startSetSkills());
-store.dispatch(startSetItems());
-store.dispatch(startSetFeats());
-store.dispatch(startSetSpecialAbilities());
+// store.dispatch(startSetSpells());
+// store.dispatch(startSetSkills());
+// store.dispatch(startSetItems());
+// store.dispatch(startSetFeats());
+// store.dispatch(startSetSpecialAbilities());
 
 
 const jsx = (
@@ -58,6 +58,12 @@ firebase.auth().onAuthStateChanged(async (user) => {
         console.log('logged in');
         store.dispatch(login(user.uid));
 
+        await store.dispatch(startSetSpells());
+        await store.dispatch(startSetSkills());
+        await store.dispatch(startSetItems());
+        await store.dispatch(startSetFeats());
+        await store.dispatch(startSetSpecialAbilities());
+        
         const profiles = await store.dispatch(startSetProfile(user.uid));
         console.log('profiles:', profiles);
 

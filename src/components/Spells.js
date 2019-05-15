@@ -5,13 +5,26 @@ import update from 'react-addons-update';
 import SpellModal from './SpellModal';
 import { startEditProfile } from '../actions/profile';
 
+const listPreparedSpells = (spellbook) => {
+   let preparedSpells = []
+   spellbook.forEach((page) => {
+      const filteredSpells = page.spells.filter((spell) => spell.prepared > 0)
+      filteredSpells.forEach((spell) => preparedSpells.push(spell))         
+   })
+   return preparedSpells
+}
 
 export class Spells extends React.Component{
    //spellbook values are not being loaded before component mounts
-   state = {
-      spellbook: this.props.spellbook,
-      selected: undefined
-   }  
+   constructor(props) {
+      super(props)
+
+      this.state = {
+         preparedSpells: listPreparedSpells(this.props.spellbook),
+         spellbook: this.props.spellbook,
+         selected: undefined
+      }  
+   }
 
    componentDidUpdate(prevProps, prevState) {
       if (this.state.spellbook !== prevState.spellbook) {
@@ -31,7 +44,8 @@ export class Spells extends React.Component{
 
    handleChange = (e) => {
       const level = e.target.getAttribute("level");
-      const index = e.target.getAttribute("index");
+      const spellid = e.target.getAttribute("spellid")
+      const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellid);
       const attribute = e.target.getAttribute("attribute");
       const valueChange = Number(e.target.getAttribute("change"));
 
@@ -55,18 +69,20 @@ export class Spells extends React.Component{
       }, () => {
          this.setState((prevState) => {
             const total = prevState.spellbook[level].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
+            const preparedSpells = listPreparedSpells(prevState.spellbook)
             return {
                spellbook: update(prevState.spellbook, {
                   [level]: {
                      total: { $set: total }
                   }
-               })
+               }),
+               preparedSpells
             }
          })
       })
    }
   
-   render () {      
+   render () { 
       return (
          <Fragment>
             <SpellModal 
@@ -81,35 +97,31 @@ export class Spells extends React.Component{
                <h5>Rmng</h5>
                <div></div>
 
-               {this.state.spellbook.map((page, level) => 
-                  page.spells.map((spell, i) => (
-                     <Fragment>						
-                        <button 
-                           className="grid__col1 button--link" 
-                           id={spell.id}
-                           key={`spell${level}${i}`}
-                           hidden={spell.prepared < 1} 
-                           onClick={this.handleOpenModal}
-                        >
-                           {spell.name}
-                        </button>
-               
-                        <div key={`rmng${level}${i}`} hidden={spell.prepared < 1}>{spell.remaining}</div>
+               {this.state.preparedSpells.map((spell, i) => (
+                  <Fragment key={i}>						
+                     <button 
+                        className="grid__col1 button--link"                         
+                        key={`spell${spell.level}${i}`}
+                        id={spell.id}
+                        onClick={this.handleOpenModal}
+                     >
+                        {spell.name}
+                     </button>
+            
+                     <div key={`rmng${spell.level}${i}`}>{spell.remaining}</div>
 
-                        <button 
-                           key={`cast${level}${i}`}
-                           change={1}
-                           index={i}
-                           attribute="used"
-                           level={level}
-                           hidden={spell.prepared < 1} 
-                           onClick={this.handleChange}
-                        >
-                           Cast
-                        </button>
-                     </Fragment>
-                  ))
-               )}
+                     <button 
+                        key={`cast${spell.level}${i}`}
+                        spellid={spell.id}
+                        level={spell.level}
+                        attribute="used"
+                        change={1}
+                        onClick={this.handleChange}
+                     >
+                        Cast
+                     </button>
+                  </Fragment>
+               ))}
             </div>
             
          </Fragment>
