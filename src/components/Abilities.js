@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Abilities = ({ abilities, onInputChange }) => (
+const Abilities = ({ abilities, handleChange }) => (
   <div className="grid grid--abilities">
     <h5 className="grid__col1">Ability</h5>
     {Object.keys(abilities).map((ability, i) =>
@@ -26,7 +26,7 @@ const Abilities = ({ abilities, onInputChange }) => (
         name="abilities"
         type="text"
         value={abilities[ability].tempScore}
-        onChange={onInputChange}
+        onChange={handleChange}
       />
     )}
 

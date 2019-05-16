@@ -91,27 +91,7 @@ export class SpellbookPage extends React.Component {
 			})
 		})
 	}
-
-	// handleClear = (e) => {
-	// 	const spellId = e.target.getAttribute("spellid")
-	// 	const level = e.target.getAttribute("level")
-	// 	const index = e.target.getAttribute("index")
-
-	// 	this.setState(() => ({
-	// 		spellbook: update(prevState.spellbook, {
-	// 			[level]: {
-	// 				spells: {
-	// 					[index]: {
-	// 						prepared: { $set: 0 },
-	// 						remaining: { $set: 0 }
-	// 					}
-	// 				}
-	// 			}
-	// 		}),
-	// 		preparedSpells
-	// 	}))
-	// }
-
+	
 	render() {
 		return (
 			<div className="layout">
