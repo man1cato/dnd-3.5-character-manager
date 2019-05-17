@@ -39,6 +39,27 @@
     }
 }
 
+.form__content--inline {
+    @extend .form__content;
+    > :last-child {
+        display: flex;
+        align-items: center;
+        > input {
+            width: 80px;
+        }
+        > * {
+            margin-right: $s-size;
+        }
+    }
+}
+
+.form__content--tall {
+    @extend .form__content;
+    > :last-child {
+        height: 150px;
+    }
+}
+
 .form__error {
     margin: 0 0 $m-size 0;
     font-style: italic;

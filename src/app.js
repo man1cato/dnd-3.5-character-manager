@@ -4,14 +4,14 @@ import {Provider} from 'react-redux';
 import AppRouter, {history} from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import {login, logout} from './actions/auth';
-import {startSetProfile} from './actions/profile';
+import {startGetProfiles} from './actions/profile';
 import {startSetSpells} from './actions/spells';
 import {startSetSkills} from './actions/skills';
 import {startSetFeats} from './actions/feats';
 import {startSetSpecialAbilities} from './actions/specialAbilities';
 import {startSetItems} from './actions/items';
 import {startSetRaces} from './actions/races';
-import {startSetClasses} from './actions/classes';
+import {startSetJobClasses} from './actions/jobClasses';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -20,16 +20,8 @@ import 'react-dates/lib/css/_datepicker.css';
 import {firebase} from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
-//Initialize store and add base data
+//Initialize store
 const store = configureStore();
-store.dispatch(startSetRaces());
-store.dispatch(startSetClasses());
-// store.dispatch(startSetSpells());
-// store.dispatch(startSetSkills());
-// store.dispatch(startSetItems());
-// store.dispatch(startSetFeats());
-// store.dispatch(startSetSpecialAbilities());
-
 
 const jsx = (
     <Provider store={store}>
@@ -58,13 +50,15 @@ firebase.auth().onAuthStateChanged(async (user) => {
         console.log('logged in');
         store.dispatch(login(user.uid));
 
+        store.dispatch(startSetRaces());
+        store.dispatch(startSetJobClasses());
+        store.dispatch(startSetSkills());
+        store.dispatch(startSetItems());
         await store.dispatch(startSetSpells());
-        await store.dispatch(startSetSkills());
-        await store.dispatch(startSetItems());
         await store.dispatch(startSetFeats());
         await store.dispatch(startSetSpecialAbilities());
         
-        const profiles = await store.dispatch(startSetProfile(user.uid));
+        const profiles = await store.dispatch(startGetProfiles(user.uid));
         console.log('profiles:', profiles);
 
         renderApp();

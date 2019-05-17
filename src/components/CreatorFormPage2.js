@@ -16,15 +16,33 @@ const validateProhibitedSchools = (selectedSchool) => (value) => {
 	return error;
 }
 
-const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, schools, handleChange, handleSelect, handleMultiSelect, setFieldValue, setFieldError}) => (
+const CreatorFormPage2 = ({values, alignments, selectedRace, jobClasses, selectedJobClass, schools, handleChange, handleSelect, handleMultiSelect, setFieldValue, setFieldError}) => (
 	<div>
 		<div className="form__group form__content--flex">
-			<h4>Choose Class:</h4>
-			<Field name="jobClass" component="select" onChange={(e) => {handleChange(e); handleSelect(e)}}>
-				{classes.map((jobClass) => (
+			<h4>Alignment:</h4>
+			{selectedJobClass.name === "Paladin" ?
+				<div>Lawful Good</div>
+				:
+				<Field name="alignment" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
+					{alignments.map((alignment, i) => (
+						<option 
+							value={alignment} 
+							key={`alignment${i}`}
+						>
+							{alignment}
+						</option>
+					))}
+				</Field>
+			}
+		</div>
+
+		<div className="form__group form__content--flex">
+			<h4>Job Class:</h4>
+			<Field name="jobClass" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
+				{jobClasses.map((jobClass, i) => (
 					<option 
 						value={jobClass.id} 
-						key={jobClass.id}
+						key={`jobClass${i}`}
 					>
 						{jobClass.name}
 					</option>
@@ -34,15 +52,15 @@ const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, schools
 
 		<div className="form__group form__content--flex">
 			<h4>Hit Die:</h4>
-			<div>{selectedClass.hitDie}</div>
+			<div>{selectedJobClass.hitDie}</div>
 		</div>
 
 		<div className="form__group form__content--flex">
 			<h4>Proficiencies:</h4>
-			<div>{selectedClass.proficiencies}</div>
+			<div>{selectedJobClass.proficiencies}</div>
 		</div>
 
-		<div className="form__group form__content--flex">
+		<div className="form__group form__content--tall">
 			<h4>Choose Bonus Languages:</h4>
 			<Field name="bonusLanguages" component="select" multiple onChange={(e) => {handleMultiSelect(e, setFieldValue)}}>
 				{selectedRace.bonusLanguages.map((language) => (
@@ -61,14 +79,14 @@ const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, schools
 			<Field name="deity" placeholder="(Optional) Enter the name of a Deity" />                                  
 		</div>
 		
-		{selectedClass.name === 'Wizard' && (
+		{selectedJobClass.name === 'Wizard' && (
 			<div className="form__group form__content--flex">
-				<h4>Choose School:</h4>
+				<h4>School:</h4>
 				<Field name="school" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue, setFieldError)}}>
-					{schools.map((school) => (
+					{schools.map((school, i) => (
 						<option 
 							value={school} 
-							key={school}
+							key={`school${i}`}
 						>
 							{school}
 						</option>
@@ -77,9 +95,9 @@ const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, schools
 			</div>
 		)}
 
-		{values.school !== 'Universal' && (
+		{selectedJobClass.name === 'Wizard' && values.school !== 'Universal' && (
 			<div className="form__group">
-				<div className="form__content--flex">
+				<div className="form__content--tall">
 					<h4>Choose Prohibited School(s):</h4>
 					<Field 
 						name="prohibitedSchools" 
@@ -88,10 +106,10 @@ const CreatorFormPage2 = ({values, selectedRace, classes, selectedClass, schools
 						validate={validateProhibitedSchools(values.school)}
 						onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
 					>
-						{_.difference(schools, [values.school, 'Universal', 'Divination']).map((school) => (
+						{_.difference(schools, [values.school, 'Universal', 'Divination']).map((school, i) => (
 							<option 
 								value={school} 
-								key={`prohibited${school}`}
+								key={`prohibited${i}`}
 							>
 								{school}
 							</option>

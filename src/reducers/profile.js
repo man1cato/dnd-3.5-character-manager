@@ -3,7 +3,7 @@ export default (state = {}, action) => {
         case 'SET_PROFILE':
             return {
                 id: action.id,
-                ...action.fields
+                ...action.profile
             };
         case 'EDIT_PROFILE':
             return {

@@ -1,8 +1,8 @@
 export default (state = {}, action) => {
     switch (action.type) {
-        case 'SET_CLASSES':
+        case 'SET_JOB_CLASSES':
             return [
-                ...action.classes
+                ...action.jobClasses
             ];
         default:
             return state;

@@ -36,10 +36,10 @@ export class SpecialAbilities extends React.Component{
 					</button>
 				))}
 
-			<SpecialAbilityModal 
-				selected={this.state.selected}
-				handleCloseModal={this.handleCloseModal}
-			/>
+				<SpecialAbilityModal 
+					selected={this.state.selected}
+					handleCloseModal={this.handleCloseModal}
+				/>
 			</Fragment>
 		)
 	}

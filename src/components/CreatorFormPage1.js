@@ -4,7 +4,7 @@ import { Field, ErrorMessage } from 'formik';
 import SpecialAbilities from './SpecialAbilities';
 
 
-const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSelect, setFieldValue}) => (
+const CreatorFormPage1 = ({races, jobClasses, selectedRace, handleChange, handleSelect, setFieldValue}) => (
 	<div>
 		<div className="form__group">
 			<div className="form__content--flex">
@@ -15,7 +15,7 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
 		</div>
 		
 		<div className="form__group form__content--flex">
-			<h4>Choose Gender:</h4>
+			<h4>Gender:</h4>
 			<Field name="gender" component="select" onChange={(e) => {handleChange(e); handleSelect(e)}}>
 				<option value="Male">Male</option>
 				<option value="Female">Female</option>
@@ -23,15 +23,51 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
 			</Field>                                    
 		</div>
 
+		<div className="form__group">
+			<div className="form__content--inline">
+				<h4>Age:</h4>
+				<div>
+					<Field name="age" />
+					<div> yrs</div>
+				</div>
+			</div>
+			<ErrorMessage name="age" component="div"/>
+		</div>
+
+		<div className="form__group">
+			<div className="form__content--inline">
+				<h4>Height:</h4>
+				<div>
+					<Field name="heightFt" />
+					<div>ft</div>
+					<Field name="heightIn" />
+					<div>in</div>
+				</div>
+			</div>
+			<ErrorMessage name="heightFt" component="div"/>
+			<ErrorMessage name="heightIn" component="div"/>
+		</div>
+
+		<div className="form__group">
+			<div className="form__content--inline">
+				<h4>Weight:</h4>
+				<div>
+					<Field name="weight" />
+					<div>lbs</div>
+				</div>
+			</div>
+			<ErrorMessage name="weight" component="div"/>
+		</div>
+
 		<div className="divider"></div>
 
 		<div className="form__group form__content--flex">
-			<h4>Choose Race:</h4>
+			<h4>Race:</h4>
 			<Field name="race" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
-				{races.map((race) => (
+				{races.map((race, i) => (
 					<option 
 						value={race.id} 
-						key={race.id}
+						key={`race${i}`}
 					>
 						{race.name}
 					</option>
@@ -43,7 +79,7 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
 			<h4>Favored Class:</h4>
 			<div>
 				{selectedRace.favoredClass ? 
-					classes.find((jobClass) => selectedRace.favoredClass === jobClass.id).name
+					jobClasses.find((jobClass) => selectedRace.favoredClass === jobClass.id).name
 					:
 					'Any'
 				}
@@ -100,11 +136,13 @@ const CreatorFormPage1 = ({races, classes, selectedRace, handleChange, handleSel
 
 		<div className="form__group form__content--flex">
 			<h4>Special Abilities:</h4>
-			{selectedRace.specialAbilities ?
-				<SpecialAbilities specialAbilityIds={selectedRace.specialAbilities} />
-				:
-				<div>None</div>
-			}
+			<div>
+				{selectedRace.specialAbilities ?
+					<SpecialAbilities specialAbilityIds={selectedRace.specialAbilities} />
+					:
+					"None"
+				}
+			</div>
 		</div>        
 		
 	</div>

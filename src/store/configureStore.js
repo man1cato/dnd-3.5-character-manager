@@ -8,26 +8,26 @@ import featsReducer from '../reducers/feats';
 import specialAbilitiesReducer from '../reducers/specialAbilities';
 import itemsReducer from '../reducers/items';
 import racesReducer from '../reducers/races';
-import classesReducer from '../reducers/classes';
+import jobClassesReducer from '../reducers/jobClasses';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
-    const store = createStore(
-        combineReducers({
-            auth: authReducer,
-            profile: profileReducer,
-            spells: spellsReducer,
-            skills: skillsReducer,
-            feats: featsReducer,
-            specialAbilities: specialAbilitiesReducer,
-            items: itemsReducer,
-            races: racesReducer,
-            classes: classesReducer
-        }),
-        composeEnhancers(applyMiddleware(thunk))
-    );
+	const store = createStore(
+		combineReducers({
+			auth: authReducer,
+			profile: profileReducer,
+			spells: spellsReducer,
+			skills: skillsReducer,
+			feats: featsReducer,
+			specialAbilities: specialAbilitiesReducer,
+			items: itemsReducer,
+			races: racesReducer,
+			jobClasses: jobClassesReducer
+		}),
+		composeEnhancers(applyMiddleware(thunk))
+	);
 
-    return store;
+	return store;
 };

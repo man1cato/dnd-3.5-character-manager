@@ -1,27 +1,34 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import Header from './Header';
-import {Formik, Form} from 'formik';
-import * as Yup from 'yup';
+import React from 'react'
+import {connect} from 'react-redux'
+import Header from './Header'
+import {Formik, Form} from 'formik'
+import * as Yup from 'yup'
 
-import Page1 from './CreatorFormPage1';
-import Page2 from './CreatorFormPage2';
-import FormFooter from './FormFooter';
+import Page1 from './CreatorFormPage1'
+import Page2 from './CreatorFormPage2'
+import Page3 from './CreatorFormPage3'
+import CreatorFormFooter from './CreatorFormFooter'
+import {history} from '../routers/AppRouter'
+import {startCreateProfile} from '../actions/profile'
 
-
-const pages = [Page1, Page2];
+const pages = [Page1, Page2, Page3]
 
 const validationSchema = Yup.object().shape({
 	page1: Yup.object().shape({
-		name: Yup.string().min(2, 'Name is too short!').max(30, 'Name is too long!').required('Required')
+		name: Yup.string().min(2, 'Name is too short!').max(30, 'Name is too long!').required('Required'),
+		age: Yup.number().required().positive().integer(),
+		heightFt: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required'),
+		heightIn: Yup.number('Enter an integer between 0 and 12').positive('Enter an integer between 0 and 12').integer('Enter an integer between 0 and 12').max(11, 'Enter an integer between 0 and 12').required('Required'),
+		weight: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required')
 	}),
-	page2:  undefined
-});
+	page2: undefined,
+	page3: undefined
+})
 
 export class CharacterCreationPage extends React.Component {
 	state = {
 		selectedRace: this.props.races.find((race) => race.name === 'Human'),
-		selectedClass: this.props.classes.find((jobClass) => jobClass.name === 'Fighter'),
+		selectedJobClass: this.props.jobClasses.find((jobClass) => jobClass.name === 'Fighter'),
 		page: 1
 	}
 
@@ -35,13 +42,24 @@ export class CharacterCreationPage extends React.Component {
 				setFieldError('prohibitedSchools', undefined);
 			} 
 		} 
+		if (name === 'jobClass') {
+			if (value === this.props.jobClasses.find((jobClass) => jobClass.name === 'Paladin').id) { 
+				setFieldValue('alignment', 'Lawful Good') 
+			}
+			if (value === this.props.jobClasses.find((jobClass) => jobClass.name === 'Wizard').id) { 
+				setFieldValue('school', 'Universal') 
+			} else {
+				setFieldValue('school', null)
+			}
+		}
+		
 		this.setState((prevState) => {
 			const selectedRace = name === 'race' ? this.props.races.find((race) => race.id === value) : prevState.selectedRace;
-			const selectedClass = name === 'jobClass' ? this.props.classes.find((jobClass) => jobClass.id === value) : prevState.selectedClass;
+			const selectedJobClass = name === 'jobClass' ? this.props.jobClasses.find((jobClass) => jobClass.id === value) : prevState.selectedJobClass;
 			
 			return {
 				selectedRace,
-				selectedClass
+				selectedJobClass
 			}
 		});
 	}
@@ -80,17 +98,22 @@ export class CharacterCreationPage extends React.Component {
 					initialValues={{
 						name: '',
 						gender: 'Male',
+						age: '',
+						heightFt: '',
+						heightIn: '',
+						weight: '',
 						race: this.props.races.find((race) => race.name === 'Human').id,
-						jobClass: this.props.classes.find((jobClass) => jobClass.name === 'Fighter').id,
-						deity: '',
-						school: 'Universal'
+						jobClass: this.props.jobClasses.find((jobClass) => jobClass.name === 'Fighter').id,
+						alignment: 'Lawful Good',
+						deity: ''
 					}}
 												
 					validationSchema={Yup.reach(validationSchema, `page${this.state.page}`)}
 
 					onSubmit={(values, {setErrors, setSubmitting}) => {
-						console.log('Submitted:', values);
-						setSubmitting(false);
+						this.props.startCreateProfile(values)
+						setSubmitting(false)	
+						setTimeout(() => { history.push('/profile') }, 2000)
 					}}
 				>
 
@@ -101,7 +124,7 @@ export class CharacterCreationPage extends React.Component {
 									1: <Page1 
 										values={values}
 										races={this.props.races}
-										classes={this.props.classes}
+										jobClasses={this.props.jobClasses}
 										selectedRace={this.state.selectedRace} 
 										handleChange={handleChange} 
 										handleSelect={this.handleSelect}  
@@ -110,9 +133,20 @@ export class CharacterCreationPage extends React.Component {
 									2: <Page2
 										values={values}
 										selectedRace={this.state.selectedRace} 
-										classes={this.props.classes}
-										selectedClass={this.state.selectedClass}
+										jobClasses={this.props.jobClasses}
+										selectedJobClass={this.state.selectedJobClass}
+										alignments={this.props.alignments}
 										schools={this.props.schools}
+										handleChange={handleChange}
+										handleSelect={this.handleSelect}
+										handleMultiSelect={this.handleMultiSelect}
+										setFieldValue={setFieldValue}
+										setFieldError={setFieldError}
+									/>,
+									3: <Page3
+										values={values}
+										feats={this.props.feats}
+										selectedJobClass={this.state.selectedJobClass}										
 										handleChange={handleChange}
 										handleSelect={this.handleSelect}
 										handleMultiSelect={this.handleMultiSelect}
@@ -122,11 +156,12 @@ export class CharacterCreationPage extends React.Component {
 								}[this.state.page]}
 							</div>
 							
-							<FormFooter 
+							<CreatorFormFooter 
 								page={this.state.page}
 								pages={pages}
 								handleBack={this.handleBack}
 								handleNext={this.handleNext}
+								handleSubmit={this.handleSubmit}
 								setErrors={setErrors}
 								isSubmitting={isSubmitting}
 								isValid={isValid}
@@ -144,17 +179,23 @@ export class CharacterCreationPage extends React.Component {
 
 const mapStateToProps = (state) => ({
 	races: state.races,
-	classes: state.classes,
+	jobClasses: state.jobClasses,
+	feats: state.feats,
 	schools: [
 		'Abjuration','Clairsentience', 'Conjuration', 'Divination', 
 		'Enchantment', 'Evocation', 'Illusion', 'Metacreativity', 
 		'Necromancy', 'Psychokinesis', 'Psychometabolism', 'Psychoportation', 
 		'Telepathy', 'Transmutation', 'Universal'
+	],
+	alignments: [
+		'Lawful Good', 'Neutral Good', 'Chaotic Good', 
+		'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 
+		'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'
 	]
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
+	startCreateProfile: (profile) => dispatch(startCreateProfile(profile))
 });
 
 
