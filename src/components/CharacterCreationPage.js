@@ -10,6 +10,8 @@ import Page3 from './CreatorFormPage3'
 import CreatorFormFooter from './CreatorFormFooter'
 import {history} from '../routers/AppRouter'
 import {startCreateProfile} from '../actions/profile'
+import {getSpecialAbilityIdsFromLevels} from '../utils/getSpecialAbilities'
+
 
 const pages = [Page1, Page2, Page3]
 
@@ -111,9 +113,25 @@ export class CharacterCreationPage extends React.Component {
 					validationSchema={Yup.reach(validationSchema, `page${this.state.page}`)}
 
 					onSubmit={(values, {setErrors, setSubmitting}) => {
-						this.props.startCreateProfile(values)
-						setSubmitting(false)	
+						getSpecialAbilityIdsFromLevels(values.jobClass, 1).then((specialAbilities) => {
+							const profile = {
+								...values,
+								race: this.state.selectedRace.name,
+								size: this.state.selectedRace.size,
+								specialAbilities,
+								jobClass: this.state.selectedJobClass.name,
+								height:  `${values.heightFt}'${values.heightIn}"`,
+								languages: this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages),
+								deity: !!values.deity ? values.deity : "None",
+								iconUrl: this.state.selectedRace.iconUrl
+							}
+							delete profile.heightFt
+							delete profile.heightIn
+							if(profile.school === null) {delete profile.school}
+							this.props.startCreateProfile(profile)
+						})							
 						setTimeout(() => { history.push('/profile') }, 2000)
+						setSubmitting(false)
 					}}
 				>
 

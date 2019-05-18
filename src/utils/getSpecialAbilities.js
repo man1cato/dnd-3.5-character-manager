@@ -25,9 +25,7 @@ export default async () => {
 
 export const getSpecialAbilityIdsFromLevels = async (jobClassId, level) => {
     const filterFormula = `AND({Class ID}="${jobClassId}", {Level}=${level})`;
-    console.log('filterFormula: ', filterFormula)
     const res = await axios.get(`${baseUrl}/Levels?filterByFormula=${filterFormula}&api_key=${apiKey}`);
-    console.log('getSpecialAbilityIds response: ', res)
     const specialAbilityIds = res.data.records[0].fields["Special Abilities"] ? res.data.records[0].fields["Special Abilities"] : null
     return specialAbilityIds
 };

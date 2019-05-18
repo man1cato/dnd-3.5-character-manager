@@ -24,30 +24,9 @@ export const setProfile = (id, profile) => ({
 
 //CREATE PROFILE IN FIREBASE
 export const startCreateProfile = (profile) => {    
-    
     return (dispatch, getState) => {
-        const uid = getState().auth.uid
-        console.log("before profile: ", profile)
-        getSpecialAbilityIdsFromLevels(profile.jobClass, 1).then((specialAbilityIds) => {
-            const race = getState().races.find((race) => race.id === profile.race)
-            const jobClass = getState().jobClasses.find((jobClass) => jobClass.id === profile.jobClass)
-            profile = {
-                ...profile,
-                race: race.name,
-                size: race.size,
-                specialAbilities: specialAbilityIds,
-                jobClass: jobClass.name,
-                height:  `${profile.heightFt}'${profile.heightIn}"`,
-                languages: race.defaultLanguages.concat(profile.bonusLanguages),
-                deity: !!profile.deity ? profile.deity : "None"
-            }
-            delete profile.heightFt
-            delete profile.heightIn
-            console.log("abilities profile: ", profile)
-        }).then(() => {
-            console.log("after profile: ", profile)
-            return database.ref(`users/${uid}/profiles`).push(profile)
-        }).then((ref) => {
+        const uid = getState().auth.uid       
+        return database.ref(`users/${uid}/profiles`).push(profile).then((ref) => {
             dispatch(setProfile(ref.key, profile))
         })
     }
