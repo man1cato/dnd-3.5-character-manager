@@ -120,9 +120,10 @@ export class CharacterCreationPage extends React.Component {
 								size: this.state.selectedRace.size,
 								specialAbilities,
 								jobClass: this.state.selectedJobClass.name,
-								height:  `${values.heightFt}'${values.heightIn}"`,
+								height: `${values.heightFt}'${values.heightIn}"`,
 								languages: this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages),
 								deity: !!values.deity ? values.deity : "None",
+								level: 1,
 								iconUrl: this.state.selectedRace.iconUrl
 							}
 							delete profile.heightFt

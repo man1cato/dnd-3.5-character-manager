@@ -1,5 +1,4 @@
 import database from '../firebase/firebase';
-import {getSpecialAbilityIdsFromLevels} from '../utils/getSpecialAbilities'
 // import getAirtableProfile from '../utils/getAirtableProfile';
 
 
@@ -21,6 +20,16 @@ export const setProfile = (id, profile) => ({
     profile
 });
 
+//READ PROFILE FROM FIREBASE
+export const startSetProfile = (id) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/profiles/${id}`).once('value').then((snapshot) => {
+            const profile = snapshot.val();
+            dispatch(setProfile(id, profile));
+        });
+    };
+};
 
 //CREATE PROFILE IN FIREBASE
 export const startCreateProfile = (profile) => {    
@@ -31,6 +40,22 @@ export const startCreateProfile = (profile) => {
         })
     }
 }
+
+
+//READ PROFILES FROM FIREBASE AND SET FIRST
+// export const startGetProfiles = (uid) => {
+//     return (dispatch) => {
+//         return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
+//             const profiles = snapshot.val();
+//             if (profiles) {
+//                 const id = Object.keys(profiles)[0];
+//                 const profile = profiles[id];
+//                 dispatch(setProfile(id, profile));
+//             }
+//             return profiles;
+//         });
+//     };
+// };
 
 
 //UPDATE PROFILE IN STORE
@@ -49,32 +74,6 @@ export const startEditProfile = (id, updates) => {
     };
 };
 
-
-//READ PROFILES FROM FIREBASE AND SET FIRST
-export const startGetProfiles = (uid) => {
-    return (dispatch) => {
-        return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
-            const profiles = snapshot.val();
-            if (profiles) {
-                const id = Object.keys(profiles)[0];
-                const profile = profiles[id];
-                dispatch(setProfile(id, profile));
-            }
-            return profiles;
-        });
-    };
-};
-
-//READ PROFILE FROM FIREBASE
-export const startSetProfile = (id) => {
-    return (dispatch, getState) => {
-        const uid = getState().auth.uid;
-        return database.ref(`users/${uid}/profiles/${id}`).once('value').then((snapshot) => {
-            const profile = snapshot.val();
-            dispatch(setProfile(id, profile));
-        });
-    };
-};
 
 
 //LEVEL UP CHARACTER IN STORE

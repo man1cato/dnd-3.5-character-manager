@@ -15,7 +15,7 @@ const ProfilePage = (props) => (
 			<div className="grid grid--profile">
 				<img className="grid--profile__img" src={props.iconUrl} />
 
-				<div className="grid--profile__name">{props.name}</div>
+				<h4 className="grid--profile__name">{props.name}</h4>
 				<div>{props.race}</div>
 				<div>{props.gender}</div>
 				<div>{props.jobClass}</div>

@@ -2,14 +2,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Redirect} from 'react-router-dom';
 
-export const PrivateRoute = ({
+
+export const ProfilesRoute = ({
     isAuthenticated,
+    hasProfiles,
     component: Component,
     ...rest
 }) => (
     <Route {...rest} component={(props) => (
-        isAuthenticated ? (
-            <Component {...props} />     
+        isAuthenticated && hasProfiles ? (
+            <Component {...props} />   
         ) : (
             <Redirect to="/" />
         )
@@ -17,7 +19,8 @@ export const PrivateRoute = ({
 );
 
 const mapStateToProps = (state) => ({
-    isAuthenticated: !!state.auth.uid
+    isAuthenticated: !!state.auth.uid,
+    hasProfiles: state.profiles.length > 1
 });
 
-export default connect(mapStateToProps)(PrivateRoute);
+export default connect(mapStateToProps)(ProfilesRoute);

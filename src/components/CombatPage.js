@@ -90,6 +90,8 @@ export class CombatPage extends React.Component {
 					total: { $set: total }          
 				})
 			}
+		}, () => {
+			this.props.startEditProfile(this.props.id, { [name]: this.state[name] });
 		});
 	}
 

@@ -1,23 +1,25 @@
-import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
-import thunk from 'redux-thunk';
-import authReducer from '../reducers/auth';
-import profileReducer from '../reducers/profile';
-import spellsReducer from '../reducers/spells';
-import skillsReducer from '../reducers/skills';
-import featsReducer from '../reducers/feats';
-import specialAbilitiesReducer from '../reducers/specialAbilities';
-import itemsReducer from '../reducers/items';
-import racesReducer from '../reducers/races';
-import jobClassesReducer from '../reducers/jobClasses';
+import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
+import thunk from 'redux-thunk'
+import authReducer from '../reducers/auth'
+import profileReducer from '../reducers/profile'
+import profilesReducer from '../reducers/profiles'
+import spellsReducer from '../reducers/spells'
+import skillsReducer from '../reducers/skills'
+import featsReducer from '../reducers/feats'
+import specialAbilitiesReducer from '../reducers/specialAbilities'
+import itemsReducer from '../reducers/items'
+import racesReducer from '../reducers/races'
+import jobClassesReducer from '../reducers/jobClasses'
 
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 export default () => {
 	const store = createStore(
 		combineReducers({
 			auth: authReducer,
 			profile: profileReducer,
+			profiles: profilesReducer,
 			spells: spellsReducer,
 			skills: skillsReducer,
 			feats: featsReducer,

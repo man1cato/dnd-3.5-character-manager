@@ -5,6 +5,7 @@ import {Route, Redirect} from 'react-router-dom';
 export const PublicRoute = ({
     isAuthenticated,
     hasProfile,
+    hasProfiles,
     component: Component,
     ...rest
 }) => (
@@ -13,7 +14,11 @@ export const PublicRoute = ({
             hasProfile ? (
                 <Redirect to="/profile" />
             ) : (
-                <Redirect to="/create" />
+                hasProfiles ? (
+                    <Redirect to="/select" />
+                ) : (
+                    <Redirect to="/create" />
+                )
             )
         ) : (
             <Component {...props}/>
@@ -23,7 +28,8 @@ export const PublicRoute = ({
 
 const mapStateToProps = (state) => ({
     isAuthenticated: !!state.auth.uid,
-    hasProfile: !!state.profile.id
+    hasProfile: !!state.profile.id,
+    hasProfiles: state.profiles.length > 1
 });
 
 export default connect(mapStateToProps)(PublicRoute);

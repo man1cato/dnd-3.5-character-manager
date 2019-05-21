@@ -4,7 +4,8 @@ import {Provider} from 'react-redux';
 import AppRouter, {history} from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import {login, logout} from './actions/auth';
-import {startGetProfiles} from './actions/profile';
+import {startSetProfile} from './actions/profile';
+import {startGetProfiles} from './actions/profiles';
 import {startSetSpells} from './actions/spells';
 import {startSetSkills} from './actions/skills';
 import {startSetFeats} from './actions/feats';
@@ -50,32 +51,23 @@ firebase.auth().onAuthStateChanged(async (user) => {
         console.log('logged in');
         store.dispatch(login(user.uid));
 
-        store.dispatch(startSetRaces());
-        store.dispatch(startSetJobClasses());
-        store.dispatch(startSetSkills());
+        store.dispatch(startSetSpells());
         store.dispatch(startSetItems());
-        await store.dispatch(startSetSpells());
+        store.dispatch(startSetSkills());
+        store.dispatch(startSetJobClasses());
+        store.dispatch(startSetRaces());
         await store.dispatch(startSetFeats());
         await store.dispatch(startSetSpecialAbilities());
         
         const profiles = await store.dispatch(startGetProfiles(user.uid));
-        console.log('profiles:', profiles);
+        console.log('profiles: ', profiles)
+        if (profiles.length === 1) {await store.dispatch(startSetProfile(profiles[0].id))}
 
-        renderApp();
-
-        if (history.location.pathname === '/') {
-            if (!!profiles) {
-                console.log('history push profile');
-                history.push('/profile');
-            } else {
-                console.log('history push create');
-                history.push('/create');
-            }
-        }
+        renderApp()
     } else {
-        console.log('logged out');
-        store.dispatch(logout());
-        renderApp();
-        history.push('/');
+        console.log('logged out')
+        store.dispatch(logout())
+        renderApp()
+        history.push('/')
     }
 });

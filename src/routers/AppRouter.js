@@ -4,6 +4,7 @@ import {createBrowserHistory} from 'history';
 
 import LoginPage from '../components/LoginPage';
 import CharacterCreationPage from '../components/CharacterCreationPage';
+import CharacterSelectionPage from '../components/CharacterSelectionPage';
 import ProfilePage from '../components/ProfilePage';
 import StatsPage from '../components/StatsPage';
 import CombatPage from '../components/CombatPage';
@@ -12,6 +13,8 @@ import SpellbookPage from '../components/SpellbookPage';
 import CompanionPage from '../components/CompanionPage';
 import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
+import ProfileRoute from './ProfileRoute';
+import ProfilesRoute from './ProfilesRoute';
 import PublicRoute from './PublicRoute';
 
 export const history = createBrowserHistory();
@@ -22,12 +25,13 @@ const AppRouter = () => (
             <Switch>
                 <PublicRoute path="/" component={LoginPage} exact={true}/>
                 <PrivateRoute path="/create" component={CharacterCreationPage} />
-                <PrivateRoute path="/profile" component={ProfilePage} />
-                <PrivateRoute path="/stats" component={StatsPage} />
-                <PrivateRoute path="/combat" component={CombatPage} />
-                <PrivateRoute path="/equipment" component={EquipmentPage} />
-                <PrivateRoute path="/spellbook" component={SpellbookPage} />
-                <PrivateRoute path="/companion" component={CompanionPage} />
+                <ProfileRoute path="/profile" component={ProfilePage} />
+                <ProfileRoute path="/stats" component={StatsPage} />
+                <ProfileRoute path="/combat" component={CombatPage} />
+                <ProfileRoute path="/equipment" component={EquipmentPage} />
+                <ProfileRoute path="/spellbook" component={SpellbookPage} />
+                <ProfileRoute path="/companion" component={CompanionPage} />
+                <ProfilesRoute path="/select" component={CharacterSelectionPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
