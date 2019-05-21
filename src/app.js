@@ -46,16 +46,15 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 //Auth listener for user login
 firebase.auth().onAuthStateChanged(async (user) => {
-    console.log('Auth state changed');
     if (user) {
         console.log('logged in');
         store.dispatch(login(user.uid));
 
-        store.dispatch(startSetSpells());
         store.dispatch(startSetItems());
         store.dispatch(startSetSkills());
         store.dispatch(startSetJobClasses());
         store.dispatch(startSetRaces());
+        await store.dispatch(startSetSpells());
         await store.dispatch(startSetFeats());
         await store.dispatch(startSetSpecialAbilities());
         

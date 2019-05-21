@@ -43,15 +43,6 @@ export class CombatPage extends React.Component {
 			attacks
 		}
   	}
-  
-	componentWillUnmount() {
-		this.props.startEditProfile(this.props.id, {
-			hp: this.state.hp, 
-			initiative: this.state.initiative,
-			saves: this.state.saves, 
-			attacks: this.state.attacks
-		});
-	}
 
 	handleChange = (e) => {
 		const name = e.target.name;
