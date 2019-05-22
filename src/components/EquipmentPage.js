@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import update from 'immutability-helper'
 
@@ -7,29 +7,51 @@ import Footer from './Footer'
 import ItemModal from './ItemModal'
 
 import { startEditProfile } from '../actions/profile'
+import { findItemById } from '../utils/utils'
 
-const totalMoney = (pp, gp, sp, cp) => (pp*10 + gp + sp/10 + cp/100).toFixed(2)
-const totalValue = (items) => items.map((item) => item.totalValue).reduce((total, num) => total + num)
-const totalWeight = (items) => items.map((item) => item.totalWeight).reduce((total, num) => total + num)
+const totalMoney = (pp, gp, sp, cp) => Number((pp*10 + gp + sp/10 + cp/100).toFixed(2))
+const totalItemValue = (items, id, qty) => {
+	const totalValue = findItemById(items, id).value * qty
+	return isNaN(totalValue) ? 0 : Number(totalValue.toFixed(1))
+}
+const totalItemWeight = (items, id, qty) => {
+	const totalWeight = findItemById(items, id).weight * qty
+	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
+}
+const totalEquipmentValue = (items) => items.map((item) => item.totalValue).reduce((total, num) => total + num)
+const totalEquipmentWeight = (items) => items.map((item) => item.totalWeight).reduce((total, num) => total + num)
 
 const denominations = ['pp', 'gp', 'sp', 'cp']
 
 export class EquipmentPage extends React.Component {
+	constructor(props) {
+		super(props)
 
-	state = {
-		money: {
-			...this.props.money,
-			total: totalMoney(this.props.money.pp, this.props.money.gp, this.props.money.sp, this.props.money.cp)
-		},
-		equipment: this.props.equipment || [],
-		equipmentTotalValue: totalValue(this.props.equipment),
-		equipmentTotalWeight: totalWeight(this.props.equipment),
-		selected: undefined
+		const equipment = this.props.equipment.map((item) => ({
+			...item,
+			totalValue: totalItemValue(this.props.items, item.id, item.qty),
+			totalWeight: totalItemWeight(this.props.items, item.id, item.qty)
+		})) || []
+
+		const equipmentTotalValue = totalEquipmentValue(equipment) || 0
+		const	equipmentTotalWeight = totalEquipmentWeight(equipment) || 0
+
+		this.state = {
+			money: {
+				...this.props.money,
+				total: totalMoney(this.props.money.pp, this.props.money.gp, this.props.money.sp, this.props.money.cp)
+			},
+			equipment,
+			equipmentTotalValue,
+			equipmentTotalWeight,
+			selected: undefined
+		}
 	}
 
 	handleChange = (e) => {
 		const id = e.target.id
 		const name = e.target.name
+		const index = e.target.getAttribute('index')
 		let value = Number(e.target.value)
 
 		this.setState((prevState) => {
@@ -42,18 +64,11 @@ export class EquipmentPage extends React.Component {
 				}
 			}
 
-			const qty = isNaN(value) ? prevState.equipment[id].qty : value;
-
-			let totalValue = prevState.equipment[id].unitValue * qty;
-			totalValue = Number.isInteger(totalValue) ? totalValue : Number(totalValue.toFixed(1));
-
-			let totalWeight = prevState.equipment[id].unitWeight * qty;
-			totalWeight = Number.isInteger(totalWeight) ? totalWeight : Number(totalWeight.toFixed(1));
-
-			let equipment = prevState.equipment;
-			equipment[id].qty = qty;
-			equipment[id].totalValue = totalValue;
-			equipment[id].totalWeight = totalWeight;
+			const qty = isNaN(value) ? prevState.equipment[index].qty : value
+			let equipment = prevState.equipment
+			equipment[index].qty = qty
+			equipment[index].totalValue = totalItemValue(this.props.items, id, qty)
+			equipment[index].totalWeight = totalItemWeight(this.props.items, id, qty)
 			return { equipment }
 		}, () => {
 			this.setState((prevState) => {
@@ -67,20 +82,29 @@ export class EquipmentPage extends React.Component {
 				}
 
 				return {
-					equipmentTotalValue: totalValue(prevState.equipment),
-					equipmentTotalWeight: totalWeight(prevState.equipment)
+					equipmentTotalValue: totalEquipmentValue(prevState.equipment),
+					equipmentTotalWeight: totalEquipmentWeight(prevState.equipment)
 				}
 			}, () => {
-				this.props.startEditProfile(this.props.id, { [name]: this.state[name] });
+				if (name === 'money') {
+					this.props.startEditProfile(this.props.id, { money: this.state.money })
+				}
+
+				this.props.startEditProfile(this.props.id, { 
+					equipment: this.state.equipment.map((item) => ({
+						id: item.id,
+						qty: item.qty
+					})) 
+				})				
 			})
 		})
 
 	}
 
 	handleOpenModal = (e) => {
-		const itemId = e.target.id;
-		const selected = this.props.items.find((item) => item.id === itemId);
-		this.setState({selected});
+		const itemId = e.target.id
+		const selected = findItemById(this.props.items, itemId)
+		this.setState({selected})
 	}
 
 	handleCloseModal = () => {
@@ -94,8 +118,8 @@ export class EquipmentPage extends React.Component {
 				<div className="container container--body">
 					
 					<div className="grid grid--money">
-						{denominations.map((denomination) => (
-							<div className="grid--money__cell">
+						{denominations.map((denomination, i) => (
+							<div className="grid--money__cell" key={`denomination${i}`}>
 								<input
 									type="text"
 									name="money"
@@ -119,30 +143,25 @@ export class EquipmentPage extends React.Component {
 						<h5>Weight</h5>  
 
 						{this.state.equipment.map((item, i) => (
-							<button 
-								className="grid__col1 button--link" 
-								id={item.id}
-								key={item.id}
-								onClick={this.handleOpenModal}
-							>
-								{item.name}
-							</button>                                
-						))}
-						{this.state.equipment.map((item, i) => (
-							<input 
-								className="grid__col2" 
-								key={i}
-								id={i}
-								name="equipment"
-								value={item.qty}
-								onChange={this.handleChange}
-							/>                                
-						))}
-						{this.state.equipment.map((item, i) => (
-							<div className="grid__col3" key={i}>{item.totalValue} gp</div>
-						))}
-						{this.state.equipment.map((item, i) => (
-							<div className="grid__col4" key={i}>{item.totalWeight} lbs</div> 
+							<Fragment key={i}>
+								<button 
+									className="grid__col1 button--link" 
+									id={item.id}
+									onClick={this.handleOpenModal}
+								>
+									{findItemById(this.props.items, item.id).name}
+								</button>                                
+								<input 
+									className="grid__col2" 
+									id={item.id}
+									index={i}
+									name="equipment"
+									value={item.qty}
+									onChange={this.handleChange}
+								/>                                
+								<div className="grid__col3">{item.totalValue} gp</div>
+								<div className="grid__col4">{item.totalWeight} lbs</div> 
+							</Fragment>
 						))}
 
 						<div className="grid__col1 grid--items__totals">Totals</div>

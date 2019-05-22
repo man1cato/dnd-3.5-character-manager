@@ -1,59 +1,52 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import update from 'immutability-helper';
+import React from 'react'
+import { connect } from 'react-redux'
+import update from 'immutability-helper'
 
-import Header from './Header';
-import Footer from './Footer';
-import PhysicalStats from './PhysicalStats';
-import Saves from './Saves';
-import Attacks from './Attacks';
-import Weapons from './Weapons';
-import PreparedSpells from './PreparedSpells';
-import { startEditProfile } from '../actions/profile';
+import Header from './Header'
+import Footer from './Footer'
+import PhysicalStats from './PhysicalStats'
+import Saves from './Saves'
+import Attacks from './Attacks'
+import Weapons from './Weapons'
+import PreparedSpells from './PreparedSpells'
+import { startEditProfile } from '../actions/profile'
+
+
+const setNestedProps = (prop) => {
+	Object.keys(prop).forEach((key) => {
+		prop[key].mod = prop[key].mod || ""
+		prop[key].total = prop[key].total || prop[key].base
+	})
+	return prop
+}
 
 export class CombatPage extends React.Component {
-	constructor(props) {
-		super(props);
-
-		let saves = this.props.saves;
-		Object.keys(saves).forEach((save) => {
-			saves[save].mod = saves[save].mod || "";
-			saves[save].total = saves[save].total || saves[save].base;
-		});
-
-		let attacks = this.props.attacks;
-		Object.keys(attacks).forEach((attack) => {
-			attacks[attack].mod = attacks[attack].mod || "";
-			attacks[attack].total = attacks[attack].total || attacks[attack].base;
-		});
-
-		this.state = {
-			hp: {
-				base: this.props.hp.base,
-				mod: this.props.hp.mod || "",
-				damage: this.props.hp.damage || "",
-				total: this.props.hp.total || this.props.hp.base,
-			},
-			initiative: {
-				base: this.props.initiative.base, 
-				mod: this.props.initiative.mod || "",
-				total: this.props.initiative.total || this.props.initiative.base
-			},
-			saves,      
-			attacks
-		}
-  	}
+	state = {
+		hp: {
+			base: this.props.hp.base,
+			mod: this.props.hp.mod || "",
+			damage: this.props.hp.damage || "",
+			total: this.props.hp.total || this.props.hp.base,
+		},
+		initiative: {
+			base: this.props.initiative.base, 
+			mod: this.props.initiative.mod || "",
+			total: this.props.initiative.total || this.props.initiative.base
+		},
+		saves: setNestedProps(this.props.saves),      
+		attacks: setNestedProps(this.props.attacks)
+	}  	
 
 	handleChange = (e) => {
-		const name = e.target.name;
-		const id = e.target.id;
-		let value = Number(e.target.value);
-		value = (value === 0 || isNaN(value)) ? "" : value;
-		let total;
+		const name = e.target.name
+		const id = e.target.id
+		let value = Number(e.target.value)
+		value = (value === 0 || isNaN(value)) ? "" : value
+		let total
 		this.setState((prevState) => {
 			if (name === "hp") {
 				if (id === "damage") {
-					total = this.props.hp.base + prevState.hp.mod - value;
+					total = this.props.hp.base + prevState.hp.mod - value
 					return {
 						hp: update(prevState.hp, {
 						damage: { $set: value },
@@ -61,7 +54,7 @@ export class CombatPage extends React.Component {
 						})
 					}
 				} 
-				total = this.props.hp.base + value - prevState.hp.damage;
+				total = this.props.hp.base + value - prevState.hp.damage
 			} else if (name === "saves" || name === "attacks") {
 				total = this.props[name][id].base + value;
 				return {
@@ -73,7 +66,7 @@ export class CombatPage extends React.Component {
 					})
 				}
 			} else {
-				total = this.props[name].base + value;
+				total = this.props[name].base + value
 			}
 			return {
 				[name]: update(prevState[name], {
@@ -82,7 +75,7 @@ export class CombatPage extends React.Component {
 				})
 			}
 		}, () => {
-			this.props.startEditProfile(this.props.id, { [name]: this.state[name] });
+			this.props.startEditProfile(this.props.id, { [name]: this.state[name] })
 		});
 	}
 

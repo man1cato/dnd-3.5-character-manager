@@ -15,16 +15,12 @@ const listPreparedSpells = (spellbook) => {
 }
 
 export class PreparedSpells extends React.Component{
-   constructor(props) {
-      super(props)
-
-      this.state = {
-         preparedSpells: listPreparedSpells(this.props.spellbook),
-         spellbook: this.props.spellbook,
-         castSpells: [],
-         selected: undefined
-      }  
-   }
+   state = {
+      preparedSpells: listPreparedSpells(this.props.spellbook),
+      spellbook: this.props.spellbook,
+      castSpells: [],
+      selected: undefined
+   }     
 
    handleOpenModal = (e) => {
       const spellId = e.target.id;
