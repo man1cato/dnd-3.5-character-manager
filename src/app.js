@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import AppRouter, {history} from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import {login, logout} from './actions/auth';
-import {startSetProfile} from './actions/profile';
+import {startSetProfile, startSetAirtableProfile} from './actions/profile';
 import {startGetProfiles} from './actions/profiles';
 import {startSetSpells} from './actions/spells';
 import {startSetSkills} from './actions/skills';
@@ -47,18 +47,19 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 //Auth listener for user login
 firebase.auth().onAuthStateChanged(async (user) => {
     if (user) {
-        console.log('logged in');
-        store.dispatch(login(user.uid));
+        console.log('logged in')
+        store.dispatch(login(user.uid))
 
-        store.dispatch(startSetItems());
-        store.dispatch(startSetSkills());
-        store.dispatch(startSetJobClasses());
-        store.dispatch(startSetRaces());
-        await store.dispatch(startSetSpells());
-        await store.dispatch(startSetFeats());
-        await store.dispatch(startSetSpecialAbilities());
+        store.dispatch(startSetItems())
+        store.dispatch(startSetSkills())
+        store.dispatch(startSetJobClasses())
+        store.dispatch(startSetRaces())
+        await store.dispatch(startSetSpells())
+        await store.dispatch(startSetFeats())
+        await store.dispatch(startSetSpecialAbilities())
         
-        const profiles = await store.dispatch(startGetProfiles(user.uid));
+        // await store.dispatch(startSetAirtableProfile(user.uid))  //Use to reset Firebase
+        const profiles = await store.dispatch(startGetProfiles(user.uid))
         console.log('profiles: ', profiles)
         if (profiles.length === 1) {await store.dispatch(startSetProfile(profiles[0].id))}
 

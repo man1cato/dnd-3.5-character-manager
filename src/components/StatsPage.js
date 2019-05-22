@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import update from 'react-addons-update';
+import update from 'immutability-helper';
 import {startEditProfile} from '../actions/profile';
 
 import Header from './Header';

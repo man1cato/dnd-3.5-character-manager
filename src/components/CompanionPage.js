@@ -1,148 +1,160 @@
-import React from 'react';
+import React from 'react'
 
-import { connect } from 'react-redux';
-import update from 'react-addons-update';
+import { connect } from 'react-redux'
+import update from 'immutability-helper'
 
-import Header from './Header';
-import Footer from './Footer';
-import Abilities from './Abilities';
-import Feats from './Feats';
-import SpecialAbilities from './SpecialAbilities';
-import SkillSet from './SkillSet';
-import PhysicalStats from './PhysicalStats';
-import Weapons from './Weapons';
-import { startEditProfile } from '../actions/profile';
+import Header from './Header'
+import Footer from './Footer'
+import Abilities from './Abilities'
+import Feats from './Feats'
+import SpecialAbilities from './SpecialAbilities'
+import SkillSet from './SkillSet'
+import PhysicalStats from './PhysicalStats'
+import { startEditProfile } from '../actions/profile'
 
 
 export class CompanionPage extends React.Component {
-    state = {
-        hp: {
-            base: this.props.hp.base,
-            mod: this.props.hp.mod || "",
-            damage: this.props.hp.damage || "",
-            total: this.props.hp.total || this.props.hp.base,
-        },
-        initiative: {
-            base: this.props.initiative.base, 
-            mod: this.props.initiative.mod || "",
-            total: this.props.initiative.total || this.props.initiative.base
-        }, 
-        abilities: this.props.abilities
-    }
+	state = {
+		companion: {
+			...this.props.companion,
+			hp: {
+				base: this.props.companion.hp.base,
+				mod: this.props.companion.hp.mod || "",
+				damage: this.props.companion.hp.damage || "",
+				total: this.props.companion.hp.total || this.props.companion.hp.base
+			},
+			initiative: {
+				base: this.props.companion.initiative.base, 
+				mod: this.props.companion.initiative.mod || "",
+				total: this.props.companion.initiative.total || this.props.companion.initiative.base
+			}
+		}
+	}
 
-    onInputChange = (e) => {
-        const name = e.target.name;
-        const id = e.target.id;
-        let value = Number(e.target.value);
-        value = (value === 0 || isNaN(value)) ? "" : value;
-        let tempMod;
-        let total;
+	handleChange = (e) => {
+		const name = e.target.name
+		const id = e.target.id
+		let value = Number(e.target.value)
+		value = (value === 0 || isNaN(value)) ? "" : value
+		let tempMod
+		let total
 
-        this.setState((prevState) => {
-            if (name === "hp") {
-                if (id === "damage") {
-                    total = this.props.hp.base + prevState.hp.mod - value;
-                    return {
-                        hp: update(prevState.hp, {
-                            damage: { $set: value },
-                            total: { $set: total }
-                        })
-                    }
-                } 
-                total = this.props.hp.base + value - prevState.hp.damage;
-            } else if (name === "saves" || name === "attacks") {
-                total = this.props[name][id].base + value;
-                return {
-                    [name]: update(prevState[name], {
-                      [id]: {
-                        mod: { $set: value },
-                        total: { $set: total }
-                      }
-                    })
-                  }
-            } else if (name === "abilities") {
-                tempMod = value === "" ? "" : Math.floor(value/2 - 5);
-                return {
-                    abilities: update(prevState.abilities, {
-                        [id]: {
-                            tempScore: {$set: value},
-                            tempMod: {$set: tempMod}
-                        }
-                    })
-                }
-            } else {
-                total = this.props[name].base + value;
-            }
-            return {
-                [name]: update(prevState[name], {
-                    mod: { $set: value },
-                    total: { $set: total }          
-                })
-            }
-        });
-    }
+		this.setState((prevState) => {
+			if (name === "hp") {
+				if (id === "damage") {
+					total = this.props.companion.hp.base + prevState.companion.hp.mod - value
+					return {
+						companion: update(prevState.companion, {
+							hp: {
+								damage: { $set: value },
+								total: { $set: total }
+							}
+						})
+					}
+				} 
+				total = this.props.companion.hp.base + value - prevState.companion.hp.damage
+			} else if (name === "saves" || name === "attacks") {
+				total = this.props.companion[name][id].base + value
+				return {
+					companion: update(prevState.companion, {
+						[name]: {
+							[id]: {
+								mod: { $set: value },
+								total: { $set: total }
+							}
+						}
+					})
+				}
+			} else if (name === "abilities") {
+				tempMod = value === "" ? "" : Math.floor(value/2 - 5)
+				return {
+					companion: update(prevState.companion, {
+						abilities: {
+							[id]: {
+								tempScore: {$set: value},
+								tempMod: {$set: tempMod}
+							}
+						}
+					})
+				}
+			} else {
+				total = this.props.companion[name].base + value
+			}
+			return {
+				companion: update(prevState.companion, {
+					[name]: {
+						mod: { $set: value },
+						total: { $set: total }          
+					}
+				})
+			}
+		}, () => {
+			this.props.startEditProfile(this.props.id, {
+				companion: { 
+					...this.state.companion,
+					[name]: this.state.companion[name] 
+				}
+			})
+		})
+	}
 
-    componentWillUnmount() {
-        this.props.startEditProfile(this.props.id, {
-            hp: this.state.hp,
-            initiative: this.state.initiative,
-            abilities: this.state.abilities
-        });
-    }
+	render() {
+		return (
+			<div className="layout">
+				<Header pageTitle="Companion" />
+				<div className="container container--body">
+					<div className="grid grid--companion">
+						<h3>{this.props.companion.name}</h3>
+						<div>{this.props.companion.type}</div>
 
-    render() {
-        return (
-            <div className="layout">
-                <Header pageTitle="Companion" />
-                <div className="container container--body">
-                    <div className="grid grid--companion">
-                        <h3>{this.props.name}</h3>
-                        <div>{this.props.type}</div>
-                        <h4 className="grid__col1">Special Abilities</h4>
-                        <SpecialAbilities specialAbilityIds={this.props.specialAbilities} />                    
-                        <h4 className="grid__col1">Feats</h4>
-                        <Feats featIds={this.props.feats} />
-                    </div>
+						<h4 className="grid__col1">Special Abilities</h4>
+						<SpecialAbilities specialAbilityIds={this.props.companion.specialAbilities} />                    
+						
+						<h4 className="grid__col1">Feats</h4>
+						<Feats featIds={this.props.companion.feats} />
+					</div>
 
-                    <Abilities
-                        abilities={this.state.abilities}
-                        onInputChange={this.onInputChange}
-                    />
+					<h3 className="row row--center">Abilities</h3>
+					<Abilities
+						abilities={this.state.companion.abilities}
+						handleChange={this.handleChange}
+					/>
 
-                    <SkillSet 
-                        skillSet={this.props.skillSet}                        
-                    />
-                    
-                    <h3 className="row row--center">Combat</h3>
-                    <PhysicalStats
-                        hp={this.state.hp}
-                        ac={this.props.ac}
-                        initiative={this.state.initiative}
-                        speed={this.props.speed}
-                        onInputChange={this.onInputChange}
-                    />
+					<h3 className="row row--center">Skills</h3>
+					<SkillSet 
+						skillSet={this.props.companion.skillSet}                        
+					/>
+					
+					<h3 className="row row--center">Combat</h3>
+					<PhysicalStats
+						hp={this.state.companion.hp}
+						ac={this.props.companion.ac}
+						initiative={this.state.companion.initiative}
+						speed={this.props.companion.speed}
+						handleChange={this.handleChange}
+					/>
 
-                    <div className="grid grid--combat">
-                        <div className="row__title">Attack</div>
-                        <div className="row row--left">            
-                                {this.props.attack}
-                        </div>
-                    </div>
+					<div className="grid grid--combat">
+						<div className="row__title">Attack</div>
+						<div className="row row--left">            
+							{this.props.companion.attack}
+						</div>
+					</div>
 
-                </div>
-                <Footer />
-            </div>
-        )
-    }
+				</div>
+				<Footer />
+			</div>
+		)
+	}
 }
 
 const mapStateToProps = (state) => ({
-    id: state.profile.id,
-    ...state.profile.companion
+	id: state.profile.id,
+	companion: state.profile.companion
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-    startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
+	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 });
 
 

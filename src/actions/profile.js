@@ -1,16 +1,16 @@
 import database from '../firebase/firebase';
-// import getAirtableProfile from '../utils/getAirtableProfile';
+import getAirtableProfile from '../utils/getAirtableProfile';
 
 
 //GET PROFILE FROM AIRTABLE & UPDATE IN FIREBASE
-// export const startSetProfile = (uid) => {
-//   return (dispatch) => {
-//     return getAirtableProfile(uid).then(({id, fields}) => {
-//       dispatch(setProfile(id, fields));
-//       database.ref(`users/${uid}/profiles/${id}`).set(fields);
-//     });
-//   };
-// };
+export const startSetAirtableProfile = (uid) => {
+  return (dispatch) => {
+    return getAirtableProfile(uid).then(({id, fields}) => {
+        database.ref(`users/${uid}/profiles/${id}`).set(fields)
+        dispatch(setProfile(id, fields))
+    });
+  };
+};
 
 
 //SET PROFILE IN STORE
@@ -40,22 +40,6 @@ export const startCreateProfile = (profile) => {
         })
     }
 }
-
-
-//READ PROFILES FROM FIREBASE AND SET FIRST
-// export const startGetProfiles = (uid) => {
-//     return (dispatch) => {
-//         return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
-//             const profiles = snapshot.val();
-//             if (profiles) {
-//                 const id = Object.keys(profiles)[0];
-//                 const profile = profiles[id];
-//                 dispatch(setProfile(id, profile));
-//             }
-//             return profiles;
-//         });
-//     };
-// };
 
 
 //UPDATE PROFILE IN STORE

@@ -1,6 +1,6 @@
 import profileReducer from '../../reducers/profile';
 import profile from '../fixtures/profile';
-import update from 'react-addons-update';
+import update from 'immutability-helper';
 
 const charId = profile.id;
 const fields = profile.fields;

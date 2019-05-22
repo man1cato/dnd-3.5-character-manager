@@ -14,11 +14,14 @@ class Ability {
   }
 }
 
-const mapSkills = _.orderBy((skillset) => skillset.map((skill) => ({
-  id: skill.fields["Skill ID"],
-  name: skill.fields.Name || "",
-  ranks: skill.fields["Total Ranks"] || 0
-})), ['name'], ['asc']);
+const mapSkills = (skillset) => _.orderBy(
+  skillset.map((skill) => ({
+    id: skill.fields["Skill ID"][0],
+    name: skill.fields.Name || "",
+    ranks: skill.fields["Total Ranks"] || 0
+  })),
+['name'], ['asc'])
+
 
 
 export default async (firebaseUID) => {
@@ -101,23 +104,23 @@ export default async (firebaseUID) => {
   }
   const companion = {
     name: companionFields.Name,
-    type: companionFields['Animal Type'],
+    type: companionFields['Animal Type'][0],
     hp: { 
       base: companionFields.HP 
     },
     abilities: companionAbilities,
     skillSet: companionSkillSet,
     speed: {
-      ground: companionFields['Speed (ground)'],
-      flight: companionFields['Speed (flight)'],
+      ground: companionFields['Speed (ground)'][0],
+      flight: companionFields['Speed (flight)'][0],
     },
     initiative: {
       base: companionFields.Initiative[0]
     },
     ac: {
-      base: companionFields['AC'],
-      touch: companionFields['AC Touch'],
-      flat: companionFields['AC Flat']
+      base: companionFields['AC Base'][0],
+      touch: companionFields['AC Touch'][0],
+      flat: companionFields['AC Flat'][0]
     },
     saves: {
       fortitude: {
@@ -142,7 +145,7 @@ export default async (firebaseUID) => {
   return {
     id: characterId,
     fields:{
-      iconUrl: fields.Icon[0].url,
+      iconUrl: fields["Icon URL"],
       name: fields.Name,
       age: fields.Age,
       height: fields.Height,
@@ -150,12 +153,12 @@ export default async (firebaseUID) => {
       gender: fields.Gender,
       size: fields.Size[0],
       race: fields["Race - Text"],
-      class: fields.Class,
+      jobClass: fields.Class,
       deity: fields.Deity || "None",
       alignment: fields.Alignment,
       school: fields["School/Discipline"] || "N/A",
-      prohibitedSchools: fields["Prohibited Schools"].join(", ") || "N/A",
-      languages: fields.Languages.join(", "),
+      prohibitedSchools: fields["Prohibited Schools"] || null,
+      languages: fields.Languages,
       level,
       xp,
       toNextLevel: nextLevelXp-xp,

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import FeatModal from './FeatModal';
@@ -24,7 +24,7 @@ export class Feats extends React.Component{
 		}), ['name'], ['asc']);
 
 		return (
-			<Fragment>
+			<div>
 				{feats.map((feat) => (
 					<button
 						className="button--link"
@@ -40,7 +40,7 @@ export class Feats extends React.Component{
 					selected={this.state.selected}
 					handleCloseModal={this.handleCloseModal}
 				/>
-			</Fragment>
+			</div>
 		)
 	}
 }

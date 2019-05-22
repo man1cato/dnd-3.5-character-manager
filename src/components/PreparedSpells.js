@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {connect} from 'react-redux';
-import update from 'react-addons-update';
+import update from 'immutability-helper';
 
 import SpellModal from './SpellModal';
 
