@@ -1,16 +1,4 @@
-import database from '../firebase/firebase';
-import getAirtableProfile from '../utils/getAirtableProfile';
-
-
-//GET PROFILE FROM AIRTABLE & UPDATE IN FIREBASE
-export const startSetAirtableProfile = (uid) => {
-  return (dispatch) => {
-    return getAirtableProfile(uid).then(({id, fields}) => {
-        database.ref(`users/${uid}/profiles/${id}`).set(fields)
-        dispatch(setProfile(id, fields))
-    });
-  };
-};
+import database from '../firebase/firebase'
 
 
 //SET PROFILE IN STORE

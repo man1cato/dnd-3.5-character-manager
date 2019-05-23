@@ -1,4 +1,5 @@
-import getSpecialAbilities from '../utils/getSpecialAbilities';
+import database from '../firebase/firebase'
+// import getAirtableSpecialAbilities from '../utils/getAirtableSpecialAbilities';
 
 //SET SPECIAL ABILITIES IN STORE
 export const setSpecialAbilities = (specialAbilities) => ({
@@ -7,10 +8,21 @@ export const setSpecialAbilities = (specialAbilities) => ({
 });
 
 //GET SPECIAL ABILITIES FROM AIRTABLE & DISPATCH TO STORE
+// export const startSetSpecialAbilities = () => {
+//     return (dispatch) => {
+//       return getAirtableSpecialAbilities().then((specialAbilities) => {
+//         dispatch(setSpecialAbilities(specialAbilities));
+//       });
+//     };
+// };
+
+//GET SPECIAL ABILITIES FROM FIREBASE & DISPATCH TO STORE
 export const startSetSpecialAbilities = () => {
-    return (dispatch) => {
-      return getSpecialAbilities().then((specialAbilities) => {
-        dispatch(setSpecialAbilities(specialAbilities));
-      });
-    };
-};
+  return (dispatch) => {
+    return database.ref('api/specialAbilities').once('value').then((snapshot) => {
+      const specialAbilities = snapshot.val()
+      dispatch(setSpecialAbilities(specialAbilities))
+    })
+  }
+}
+

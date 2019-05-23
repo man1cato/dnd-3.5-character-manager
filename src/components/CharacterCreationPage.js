@@ -10,7 +10,7 @@ import Page3 from './CreatorFormPage3'
 import CreatorFormFooter from './CreatorFormFooter'
 import {history} from '../routers/AppRouter'
 import {startCreateProfile} from '../actions/profile'
-import {getSpecialAbilityIdsFromLevels} from '../utils/getSpecialAbilities'
+import {getSpecialAbilityIdsFromLevels} from '../utils/utils'
 
 
 const pages = [Page1, Page2, Page3]
