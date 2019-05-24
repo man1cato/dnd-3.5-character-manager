@@ -126,6 +126,7 @@ export class CharacterCreationPage extends React.Component {
 						}
 						delete profile.heightFt
 						delete profile.heightIn
+						delete profile.bonusLanguages
 						if(profile.school === null) {delete profile.school}
 						this.props.startCreateProfile(profile)
 

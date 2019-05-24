@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Andres Rodriguez",
   "license": "MIT",
+  "engines": {
+    "node": "9.11.1"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
