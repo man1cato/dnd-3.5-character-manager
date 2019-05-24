@@ -12,8 +12,8 @@ export const startGetProfiles = (uid) => {
     return (dispatch) => {
         return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
             let profiles = snapshot.val()
-            const profileIds = Object.keys(profiles)
             if (profiles) {
+                const profileIds = Object.keys(profiles)
                 profiles = profileIds.map((id) => ({
                     id,
                     name: profiles[id].name,
@@ -29,3 +29,8 @@ export const startGetProfiles = (uid) => {
         });
     };
 };
+
+//DELETE PROFILES FROM STORE
+export const deleteProfiles = () => ({
+    type: 'DELETE_PROFILES'
+})

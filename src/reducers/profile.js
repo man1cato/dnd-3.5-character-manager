@@ -4,13 +4,15 @@ export default (state = {}, action) => {
             return {
                 id: action.id,
                 ...action.profile
-            };
+            }
         case 'EDIT_PROFILE':
             return {
                 ...state,
                 ...action.updates
-            };
+            }
+        case 'DELETE_PROFILE': 
+            return {}
         default:
-            return state;
+            return state
     }
-};
+}

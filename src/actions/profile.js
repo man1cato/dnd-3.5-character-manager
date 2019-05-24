@@ -46,7 +46,10 @@ export const startEditProfile = (id, updates) => {
     };
 };
 
-
+//DELETE PROFILE FROM STORE
+export const deleteProfile = () => ({
+    type: 'DELETE_PROFILE'
+})
 
 //LEVEL UP CHARACTER IN STORE
 // export const levelUp = (character) => ({

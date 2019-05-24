@@ -47,9 +47,6 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'))
 //Auth listener for user login
 firebase.auth().onAuthStateChanged(async (user) => {
     if (user) {
-        console.log('logged in')
-        store.dispatch(login(user.uid))
-
         store.dispatch(startSetItems())
         store.dispatch(startSetSkills())
         store.dispatch(startSetJobClasses())
@@ -60,8 +57,11 @@ firebase.auth().onAuthStateChanged(async (user) => {
         
         const profiles = await store.dispatch(startGetProfiles(user.uid))
         console.log('profiles: ', profiles)
-        if (profiles.length === 1) {await store.dispatch(startSetProfile(profiles[0].id))}
-
+        if (profiles) {            
+            if(profiles.length === 1) {await store.dispatch(startSetProfile(profiles[0].id))}
+        }
+        store.dispatch(login(user.uid))
+        console.log('logged in')
         renderApp()
     } else {
         console.log('logged out')
