@@ -3,7 +3,7 @@ import database from '../firebase/firebase'
 
 //SET SPECIAL ABILITIES IN STORE
 export const setSpecialAbilities = (specialAbilities) => ({
-    type: 'SET_SPECIALABILITIES',
+    type: 'SET_SPECIAL_ABILITIES',
     specialAbilities
 });
 

@@ -60,8 +60,8 @@ export class CombatPage extends React.Component {
 				return {
 					[name]: update(prevState[name], {
 						[id]: {
-						mod: { $set: value },
-						total: { $set: total }
+							mod: { $set: value },
+							total: { $set: total }
 						}
 					})
 				}
