@@ -12,6 +12,7 @@ import EquipmentPage from '../components/EquipmentPage';
 import SpellbookPage from '../components/SpellbookPage';
 import CompanionPage from '../components/CompanionPage';
 import NotFoundPage from '../components/NotFoundPage';
+import UnderConstructionPage from '../components/UnderConstructionPage';
 import PrivateRoute from './PrivateRoute';
 import ProfileRoute from './ProfileRoute';
 import ProfilesRoute from './ProfilesRoute';
@@ -32,6 +33,7 @@ const AppRouter = () => (
                 <ProfileRoute path="/spellbook" component={SpellbookPage} />
                 <ProfileRoute path="/companion" component={CompanionPage} />
                 <ProfilesRoute path="/select" component={CharacterSelectionPage} />
+                <PrivateRoute path="/underconstruction" component={UnderConstructionPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
