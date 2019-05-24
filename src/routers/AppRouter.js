@@ -25,8 +25,8 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <PublicRoute path="/" component={LoginPage} exact={true}/>
-                <PrivateRoute path="/create" component={CharacterCreationPage} />
                 <ProfileRoute path="/profile" component={ProfilePage} />
+                <PrivateRoute path="/create" component={CharacterCreationPage} />
                 <ProfileRoute path="/stats" component={StatsPage} />
                 <ProfileRoute path="/combat" component={CombatPage} />
                 <ProfileRoute path="/equipment" component={EquipmentPage} />

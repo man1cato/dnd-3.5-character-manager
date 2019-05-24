@@ -33,7 +33,6 @@ const jsx = (
 let hasRendered = false
 
 const renderApp = () => {
-    console.log('renderApp triggered')
     if (!hasRendered) {
         ReactDOM.render(jsx, document.getElementById('app'))
         hasRendered = true
@@ -55,14 +54,16 @@ firebase.auth().onAuthStateChanged(async (user) => {
         await store.dispatch(startSetFeats())
         await store.dispatch(startSetSpecialAbilities())
         
+        await store.dispatch(login(user.uid))
         const profiles = await store.dispatch(startGetProfiles(user.uid))
-        console.log('profiles: ', profiles)
         if (profiles) {            
-            if(profiles.length === 1) {await store.dispatch(startSetProfile(profiles[0].id))}
+            if (profiles.length === 1) {
+                await store.dispatch(startSetProfile(profiles[0].id))
+            }
         }
-        store.dispatch(login(user.uid))
         console.log('logged in')
         renderApp()
+        history.push('/')
     } else {
         console.log('logged out')
         store.dispatch(logout())
