@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import {CombatPage} from '../../components/CombatPage';
-import profile from '../fixtures/profile';
+import {CombatPage} from '../../components/CombatPage'
+import profile from '../fixtures/profile'
 
 const props = {
     id: profile.id,
@@ -14,9 +14,9 @@ const props = {
     attacks: profile.fields.attacks,
     bab: profile.fields.bab,
     initiative: profile.fields.initiative
-};
+}
 
 test('should render combat page with profile data', () => {
-    const wrapper = shallow(<CombatPage {...props} />);
-    expect(wrapper).toMatchSnapshot();
-});
+    const wrapper = shallow(<CombatPage {...props} />)
+    expect(wrapper).toMatchSnapshot()
+})

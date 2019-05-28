@@ -18,9 +18,14 @@ export default async () => {
 			const featGroup = res.data.records.map((feat) =>  ({
 				id: feat.id,
 				name: feat.fields.Name,
-				type: feat.fields.Type.join(", ") || null,
-				description: feat.fields.Description || null
-			}));
+				types: feat.fields.Types || null,
+				description: feat.fields.Description || null,
+				prerequisites: {
+					level: feat.fields['Prereq. Level'] || null,
+					class: feat.fields['Prereq. Class'] || null,
+					feats: feat.fields['Prereq. Feats'] || null
+				} || null
+			}))
 			
 			feats = feats.concat(featGroup)
 		} while (!!offset)

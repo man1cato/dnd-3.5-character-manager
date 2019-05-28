@@ -63,7 +63,6 @@ firebase.auth().onAuthStateChanged(async (user) => {
         }
         console.log('logged in')
         renderApp()
-        history.push('/')
     } else {
         console.log('logged out')
         store.dispatch(logout())

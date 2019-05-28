@@ -9,19 +9,19 @@ export class SpecialAbilities extends React.Component{
 	}  
 
 	handleOpenModal = (e) => {
-		const specialAbilityId = e.target.id;
-		const selected = this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId);
-		this.setState({selected});
+		const specialAbilityId = e.target.id
+		const selected = this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId)
+		this.setState({selected})
 	}
 
 	handleCloseModal = () => {
-		this.setState({selected: undefined});
+		this.setState({selected: undefined})
 	}
 	
 	render () {    
 		const specialAbilities = _.orderBy(this.props.specialAbilityIds.map((specialAbilityId) => {
 			return this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId)
-		}), ['name'], ['asc']);
+		}), ['name'], ['asc'])
 
 		return (
 			<div>
@@ -48,6 +48,6 @@ export class SpecialAbilities extends React.Component{
 
 const mapStateToProps = (state) => ({
   	specialAbilities: state.specialAbilities
-});
+})
 
-export default connect(mapStateToProps)(SpecialAbilities);
+export default connect(mapStateToProps)(SpecialAbilities)

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CompanionPage with profile data 1`] = `
-<div>
+<div
+  className="layout"
+>
   <Connect(Header)
     pageTitle="Companion"
   />
@@ -17,25 +19,35 @@ exports[`should render CompanionPage with profile data 1`] = `
       <div>
         Raven
       </div>
-      <h4>
-        Feats
-      </h4>
-      <div>
-        Weapon Finesse, Alertness
-      </div>
-      <h4>
+      <h4
+        className="grid__col1"
+      >
         Special Abilities
       </h4>
-      <div>
-        Low-Light Vision
-      </div>
-      <h4>
-        Features
+      <Connect(SpecialAbilities)
+        specialAbilityIds={
+          Array [
+            "recoVjIceMNsVyiqI",
+            "recC7zmmkwPjM104d",
+            "recD7wgtCKPM9k7X9",
+            "recmKq1KJyCGILkHN",
+          ]
+        }
+      />
+      <h4
+        className="grid__col1"
+      >
+        Feats
       </h4>
-      <div>
-        Empathic Link, Share Spells, Improved Evasion, Deliver Touch Spells, Speak with Master
-      </div>
+      <Connect(Feats)
+        featIds="Weapon Finesse, Alertness"
+      />
     </div>
+    <h3
+      className="row row--center"
+    >
+      Abilities
+    </h3>
     <Abilities
       abilities={
         Object {
@@ -47,10 +59,15 @@ exports[`should render CompanionPage with profile data 1`] = `
           "wis": 14,
         }
       }
-      onInputChange={[Function]}
+      handleChange={[Function]}
     />
-    <Skills
-      skills={
+    <h3
+      className="row row--center"
+    >
+      Skills
+    </h3>
+    <Connect(SkillSet)
+      skillSet={
         Array [
           Object {
             "name": "Hide",
@@ -88,6 +105,7 @@ exports[`should render CompanionPage with profile data 1`] = `
           "touch": 14,
         }
       }
+      handleChange={[Function]}
       hp={
         Object {
           "base": 16,
@@ -103,7 +121,6 @@ exports[`should render CompanionPage with profile data 1`] = `
           "total": 2,
         }
       }
-      onInputChange={[Function]}
       speed={
         Object {
           "flight": 40,
@@ -111,6 +128,21 @@ exports[`should render CompanionPage with profile data 1`] = `
         }
       }
     />
+    <div
+      className="grid grid--combat"
+    >
+      <div
+        className="row__title"
+      >
+        Attack
+      </div>
+      <div
+        className="row row--left"
+      >
+        Claws +4 melee (1d2–5)
+      </div>
+    </div>
   </div>
+  <Connect(Footer) />
 </div>
 `;

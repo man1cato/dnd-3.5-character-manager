@@ -1,23 +1,19 @@
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from 'react'
+import {shallow} from 'enzyme'
 
-import { EquipmentPage } from '../../components/EquipmentPage';
-import profile from '../fixtures/profile';
+import { EquipmentPage } from '../../components/EquipmentPage'
+import profile from '../fixtures/profile'
+import items from '../fixtures/items'
 
 const props = {
     id: profile.id,
     money: profile.fields.money,
-    equipment: profile.fields.equipment, 
-    items: profile.fields.items
+    equipment: profile.fields.equipment,
+    items
 }
-
-let wrapper;
-
-beforeEach(() => {
-    wrapper = shallow(<EquipmentPage {...props} />);
-});
 
 
 test('should render equipment page with profile data', () => {
-    expect(wrapper).toMatchSnapshot();
-});
+    const wrapper = shallow(<EquipmentPage {...props} />)
+    expect(wrapper).toMatchSnapshot()
+})

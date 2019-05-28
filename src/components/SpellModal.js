@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import {convertTextToArray} from '../utils/utils';
 
-Modal.setAppElement('#app');
+if (process.env.NODE_ENV !== 'test') { Modal.setAppElement('#app') }
 
 const SpellModal = ({selected, handleCloseModal}) => (
     <Modal

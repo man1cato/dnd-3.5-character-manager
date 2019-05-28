@@ -7,7 +7,7 @@ import Feats from './Feats';
 import SpecialAbilities from './SpecialAbilities';
 
 
-const ProfilePage = (props) => (
+export const ProfilePage = (props) => (
 	<div className="layout">
 		<Header pageTitle="Character Profile" />
 		<div className="container container--body">
@@ -64,8 +64,7 @@ const ProfilePage = (props) => (
 
 		<Footer />
 	</div>
-);
-
+)
 
 
 const mapStateToProps = (state) => ({

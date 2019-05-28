@@ -1,101 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render ProfilePage 1`] = `
-<div>
-  <Connect(Header)
-    pageTitle="Character Profile"
-  />
-  <div
-    className="container container--body"
-  >
-    <div
-      className="grid grid--profile"
-    >
-      <img
-        className="grid--profile__img"
-      />
-      <div
-        className="grid--profile__name"
-      />
-      <div />
-      <div />
-      <div />
-      <div>
-         yrs
-      </div>
-      <div />
-      <div />
-      <div />
-      <div>
-         lbs
-      </div>
-      <h4
-        className="grid--profile__features-key"
-        key="0"
-      >
-        Languages
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="1"
-      >
-        Feats
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="2"
-      >
-        Special Abilities
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="3"
-      >
-        School
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="4"
-      >
-        Prohibited Schools
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="5"
-      >
-        Deity
-      </h4>
-      <div
-        className="grid--profile__features-value"
-        key="0"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="1"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="2"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="3"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="4"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="5"
-      />
-    </div>
-  </div>
-</div>
-`;
-
 exports[`should render ProfilePage with profile data 1`] = `
-<div>
+<div
+  className="layout"
+>
   <Connect(Header)
     pageTitle="Character Profile"
   />
@@ -108,11 +16,11 @@ exports[`should render ProfilePage with profile data 1`] = `
       <img
         className="grid--profile__img"
       />
-      <div
+      <h4
         className="grid--profile__name"
       >
         Istvyll Bannianea
-      </div>
+      </h4>
       <div />
       <div />
       <div />
@@ -129,71 +37,70 @@ exports[`should render ProfilePage with profile data 1`] = `
       </div>
       <h4
         className="grid--profile__features-key"
-        key="0"
       >
         Languages
       </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="1"
+      <div
+        className="grid--profile__features-value"
       >
-        Feats
-      </h4>
+        Common, Elven, Draconic, Orc, Sylvan
+      </div>
       <h4
         className="grid--profile__features-key"
-        key="2"
-      >
-        Special Abilities
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="3"
-      >
-        School
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="4"
-      >
-        Prohibited Schools
-      </h4>
-      <h4
-        className="grid--profile__features-key"
-        key="5"
       >
         Deity
       </h4>
       <div
         className="grid--profile__features-value"
-        key="0"
+      />
+      <h4
+        className="grid--profile__features-key"
       >
-        Common, Elven, Draconic, Orc, Sylvan
-      </div>
+        School
+      </h4>
       <div
         className="grid--profile__features-value"
-        key="1"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="2"
-      />
-      <div
-        className="grid--profile__features-value"
-        key="3"
       >
         Transmutation
       </div>
+      <h4
+        className="grid--profile__features-key"
+      >
+        Prohibited Schools
+      </h4>
       <div
         className="grid--profile__features-value"
-        key="4"
       >
         Illusion, Necromancy
       </div>
+      <h4
+        className="grid--profile__features-key"
+      >
+        Special Abilities
+      </h4>
       <div
         className="grid--profile__features-value"
-        key="5"
-      />
+      >
+        <Connect(SpecialAbilities)
+          specialAbilityIds={
+            Array [
+              "rect54ikkC9SDLJ1x",
+            ]
+          }
+        />
+      </div>
+      <h4
+        className="grid--profile__features-key"
+      >
+        Feats
+      </h4>
+      <div
+        className="grid--profile__features-value"
+      >
+        <Connect(Feats) />
+      </div>
     </div>
   </div>
+  <Connect(Footer) />
 </div>
 `;

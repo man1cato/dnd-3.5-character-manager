@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render combat page with profile data 1`] = `
-<div>
+<div
+  className="layout"
+>
   <Connect(Header)
     pageTitle="Combat"
   />
@@ -16,6 +18,7 @@ exports[`should render combat page with profile data 1`] = `
           "touch": 14,
         }
       }
+      handleChange={[Function]}
       hp={
         Object {
           "base": 32,
@@ -31,11 +34,10 @@ exports[`should render combat page with profile data 1`] = `
           "total": 2,
         }
       }
-      onInputChange={[Function]}
       speed={30}
     />
     <Saves
-      onInputChange={[Function]}
+      handleChange={[Function]}
       saves={
         Object {
           "fortitude": Object {
@@ -82,7 +84,7 @@ exports[`should render combat page with profile data 1`] = `
           },
         }
       }
-      onInputChange={[Function]}
+      handleChange={[Function]}
     />
     <Connect(Weapons)
       grappleBonus={4}
@@ -90,5 +92,6 @@ exports[`should render combat page with profile data 1`] = `
       rangedBonus={6}
     />
   </div>
+  <Connect(Footer) />
 </div>
 `;

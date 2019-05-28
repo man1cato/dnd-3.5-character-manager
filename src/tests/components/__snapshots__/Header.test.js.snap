@@ -3,13 +3,12 @@
 exports[`should render Header correctly 1`] = `
 <header>
   <div
-    className="container container--header header__content"
+    className="container header__content"
   >
     <h2
       className="header__title"
     />
     <button
-      className="button button--link"
       onClick={[Function]}
     >
       Logout

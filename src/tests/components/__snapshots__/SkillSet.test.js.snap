@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render skills with profile data 1`] = `
+<div
+  className="grid grid--skills"
+>
+  <h5
+    className="grid--skills__name"
+  >
+    Skill
+  </h5>
+  <button
+    className="grid__col1 grid--skills__name button--link"
+    id="recfbplSsRmzNs68J"
+    key="0"
+    onClick={[Function]}
+  >
+    Appraise
+  </button>
+  <button
+    className="grid__col1 grid--skills__name button--link"
+    id="recoJ7dkAWtHAkj3v"
+    key="1"
+    onClick={[Function]}
+  >
+    Balance
+  </button>
+  <h5>
+    Ranks
+  </h5>
+  <div
+    className="grid__col2"
+    key="0"
+  >
+    4
+  </div>
+  <div
+    className="grid__col2"
+    key="1"
+  >
+    3
+  </div>
+  <h5
+    className="grid--skills__name"
+  >
+    Skill
+  </h5>
+  <button
+    className="grid__col3 grid--skills__name button--link"
+    id="recHCeKVn3CB0HcNA"
+    key="0"
+    onClick={[Function]}
+  >
+    Climb
+  </button>
+  <button
+    className="grid__col3 grid--skills__name button--link"
+    id="recs2EXcqiCIfwO0w"
+    key="1"
+    onClick={[Function]}
+  >
+    Conscentration
+  </button>
+  <h5>
+    Ranks
+  </h5>
+  <div
+    className="grid__col4"
+    key="0"
+  >
+    5
+  </div>
+  <div
+    className="grid__col4"
+    key="1"
+  >
+    9
+  </div>
+  <SkillModal
+    handleCloseModal={[Function]}
+  />
+</div>
+`;

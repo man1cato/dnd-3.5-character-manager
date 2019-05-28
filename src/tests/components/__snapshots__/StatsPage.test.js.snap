@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render stats page with profile data 1`] = `
-<div>
+<div
+  className="layout"
+>
   <Connect(Header)
     pageTitle="Character Stats"
   />
@@ -66,34 +68,35 @@ exports[`should render stats page with profile data 1`] = `
           },
         }
       }
-      onInputChange={[Function]}
+      handleChange={[Function]}
     />
-    <Skills
-      skills={
+    <Connect(SkillSet)
+      skillSet={
         Array [
           Object {
-            "name": "Hide",
+            "id": "recfbplSsRmzNs68J",
+            "name": "Appraise",
             "ranks": 4,
           },
           Object {
-            "name": "Climb",
+            "id": "recoJ7dkAWtHAkj3v",
+            "name": "Balance",
             "ranks": 3,
           },
           Object {
-            "name": "Listen",
+            "id": "recHCeKVn3CB0HcNA",
+            "name": "Climb",
             "ranks": 5,
           },
           Object {
-            "name": "Decipher Script",
-            "ranks": 10,
-          },
-          Object {
-            "name": "Knowledge (Arcana)",
-            "ranks": 11,
+            "id": "recs2EXcqiCIfwO0w",
+            "name": "Conscentration",
+            "ranks": 9,
           },
         ]
       }
     />
   </div>
+  <Connect(Footer) />
 </div>
 `;

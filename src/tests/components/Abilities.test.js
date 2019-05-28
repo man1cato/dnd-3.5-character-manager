@@ -9,13 +9,13 @@ const profileData = {
   ...profile.fields
 };
 
-let wrapper, onInputChange;
+let wrapper, handleChange;
 
 beforeEach(() => {
-  onInputChange = jest.fn();
+  handleChange = jest.fn();
   wrapper = shallow(
     <Abilities
-      onInputChange={onInputChange}
+      handleChange={handleChange}
       {...profileData}
     />
   );
@@ -30,7 +30,7 @@ test('should handle input change', () => {
   wrapper.find({ id: 'str' }).simulate('change', {
     target: { value }
   });
-  expect(onInputChange).toHaveBeenCalledWith({
+  expect(handleChange).toHaveBeenCalledWith({
     target: { value }
   });
 });

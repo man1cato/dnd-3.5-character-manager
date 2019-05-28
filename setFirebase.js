@@ -71,8 +71,8 @@ const setProfile = (uid) => {
 }
 
 // setRaces()
-setJobClasses()
-// setFeats()
+// setJobClasses()
+setFeats()
 // setSpecialAbilities()
 // setSkills()
 // setItems()

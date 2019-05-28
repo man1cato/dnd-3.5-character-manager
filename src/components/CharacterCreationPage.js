@@ -62,7 +62,7 @@ export class CharacterCreationPage extends React.Component {
 				selectedRace,
 				selectedJobClass
 			}
-		});
+		})
 	}
 
 	handleMultiSelect = (e, setFieldValue) => {
@@ -81,13 +81,13 @@ export class CharacterCreationPage extends React.Component {
 		this.setState((prevState) => ({
 			page: prevState.page - 1
 		}));        
-		setErrors({});
+		setErrors({})
 	}
 
 	handleNext = () => {
 		this.setState((prevState) => ({
 			page: prevState.page + 1
-		}));
+		}))
 	}    
 
 	render() {        
@@ -198,7 +198,7 @@ export class CharacterCreationPage extends React.Component {
 const mapStateToProps = (state) => ({
 	races: state.races,
 	jobClasses: state.jobClasses,
-	feats: state.feats,
+	feats: state.feats.filter((feat) => !feat.types.includes('Epic') && !feat.prerequisites),
 	schools: [
 		'Abjuration','Clairsentience', 'Conjuration', 'Divination', 
 		'Enchantment', 'Evocation', 'Illusion', 'Metacreativity', 
@@ -210,11 +210,11 @@ const mapStateToProps = (state) => ({
 		'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 
 		'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'
 	]
-});
+})
 
 const mapDispatchToProps = (dispatch, props) => ({
 	startCreateProfile: (profile) => dispatch(startCreateProfile(profile))
-});
+})
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharacterCreationPage);

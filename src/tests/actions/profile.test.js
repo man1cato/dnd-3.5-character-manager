@@ -1,26 +1,22 @@
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import {setProfile, startSetProfile, editProfile, startEditProfile} from '../../actions/profile';
-import profile from '../fixtures/profile';
-import database from '../../firebase/firebase';
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import {setProfile, startSetProfile, editProfile, startEditProfile} from '../../actions/profile'
+import profile from '../fixtures/profile'
+import database from '../../firebase/firebase'
 
-const uid = 'abc123';
-const defaultAuthState = { auth: {uid} };
-const createMockStore = configureMockStore([thunk]);
-const charId = profile.id;
-const fields = profile.fields;
-const abilities = fields.abilities;
+const uid = 'abc123'
+const defaultAuthState = { auth: {uid} }
+const createMockStore = configureMockStore([thunk])
+const charId = profile.id
+const fields = profile.fields
 
-// beforeEach((done) => {
-//     database.ref(`users/${uid}/profiles/${charId}`).set(fields).then(() => done());
-// });
 
 test('should setup set profile action object with provided values', () => {
   const action = setProfile(charId, fields);
   expect(action).toEqual({
     type: 'SET_PROFILE',
     id: charId,
-    fields
+    profile: fields
   });
 });
 

@@ -1,12 +1,12 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
-const Weapons = (props) => (
+export const Weapons = (props) => (
 	<div>
 		<h3 className="row row--center">Weapons</h3>
 
 		{props.weaponSet.map((weaponId) => {
-			const weapon = props.weapons.find((weapon) => weapon.id === weaponId);
+			const weapon = props.weapons.find((weapon) => weapon.id === weaponId)
 
 			return (
 				<div className="grid grid--weapons" key={weaponId}>
@@ -34,6 +34,6 @@ const Weapons = (props) => (
 
 const mapStateToProps = (state) => ({
    weapons: state.items.filter((item) => item.category === "Weapon")
-});
+})
 
-export default connect(mapStateToProps)(Weapons);
+export default connect(mapStateToProps)(Weapons)

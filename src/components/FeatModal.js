@@ -1,7 +1,7 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React from 'react'
+import Modal from 'react-modal'
 
-Modal.setAppElement('#app');
+if (process.env.NODE_ENV !== 'test') { Modal.setAppElement('#app') }
 
 const FeatModal = ({selected, handleCloseModal}) => (
     <Modal
@@ -21,4 +21,4 @@ const FeatModal = ({selected, handleCloseModal}) => (
 
 )
 
-export default FeatModal;
+export default FeatModal

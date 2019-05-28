@@ -1,62 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render footer correctly 1`] = `
-<footer
-  className="container container--footer grid grid--footer"
->
-  <Link
-    replace={false}
-    to="/profile"
+<footer>
+  <div
+    className="container footer__navbar"
   >
-    <img
-      className="grid--footer_img"
-      src="images/person.svg"
-    />
-  </Link>
-  <Link
-    replace={false}
-    to="/stats"
-  >
-    <img
-      className="grid--footer_img"
-      src="images/chart.svg"
-    />
-  </Link>
-  <Link
-    replace={false}
-    to="/combat"
-  >
-    <img
-      className="grid--footer_img"
-      src="images/shield-with-swords.svg"
-    />
-  </Link>
-  <Link
-    replace={false}
-    to="/equipment"
-  >
-    <img
-      className="grid--footer_img"
-      src="images/school-bag.svg"
-    />
-  </Link>
-  <Link
-    replace={false}
-    to="/spells"
-  >
-    <img
-      className="grid--footer_img"
-      src="images/magic-wand.svg"
-    />
-  </Link>
-  <Link
-    replace={false}
-    to="/companion"
-  >
-    <img
-      className="grid--footer_img"
-      src="images/paw-print.svg"
-    />
-  </Link>
+    <Link
+      className="footer__navbar__icon"
+      replace={false}
+      to="/profile"
+    >
+      <FooterIcon
+        svgFile="test-file-stub"
+      />
+    </Link>
+    <Link
+      className="footer__navbar__icon"
+      replace={false}
+      to="/stats"
+    >
+      <FooterIcon
+        svgFile="test-file-stub"
+      />
+    </Link>
+    <Link
+      className="footer__navbar__icon"
+      replace={false}
+      to="/combat"
+    >
+      <FooterIcon
+        svgFile="test-file-stub"
+      />
+    </Link>
+    <Link
+      className="footer__navbar__icon"
+      replace={false}
+      to="/equipment"
+    >
+      <FooterIcon
+        svgFile="test-file-stub"
+      />
+    </Link>
+    <Link
+      className="footer__navbar__icon"
+      replace={false}
+      to="/spellbook"
+    >
+      <FooterIcon
+        svgFile="test-file-stub"
+      />
+    </Link>
+    <Link
+      className="footer__navbar__icon"
+      replace={false}
+      to="/companion"
+    >
+      <FooterIcon
+        svgFile="test-file-stub"
+      />
+    </Link>
+  </div>
 </footer>
 `;

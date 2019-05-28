@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-Modal.setAppElement('#app');
+if (process.env.NODE_ENV !== 'test') { Modal.setAppElement('#app') }
 
 const ItemModal = ({selected, handleCloseModal}) => (
     <Modal

@@ -9,74 +9,19 @@ exports[`should render weapons with profile data 1`] = `
   </h3>
   <div
     className="grid grid--weapons"
-    key="recAaHr4qEcbytOpu"
+    key="recOvuth9QArkI54l"
   >
     <h4
       className=" grid--weapons__name"
     >
-      Repeating Light Crossbow
+      Bastard Sword
     </h4>
     <div
       className="grid--weapons__features"
     >
       Exotic
       , 
-      Ranged
-      , 
-      Piercing
-    </div>
-    <h5
-      className="grid--weapons__track"
-    >
-      Rng
-    </h5>
-    <h5
-      className="grid--weapons__track"
-    >
-      Atk
-    </h5>
-    <h5
-      className="grid--weapons__track"
-    >
-      Dmg
-    </h5>
-    <h5>
-      Crit
-    </h5>
-    <div
-      className="grid--weapons__track"
-    >
-      80 ft.
-    </div>
-    <div
-      className="grid--weapons__track"
-    >
-      +
-    </div>
-    <div
-      className="grid--weapons__track"
-    >
-      1d8
-    </div>
-    <div>
-      19–20/×2
-    </div>
-  </div>
-  <div
-    className="grid grid--weapons"
-    key="recWrjoatwOuaSayt"
-  >
-    <h4
-      className=" grid--weapons__name"
-    >
-      Longsword
-    </h4>
-    <div
-      className="grid--weapons__features"
-    >
-      Martial
-      , 
-      One-Handed Melee
+      One-Handed
       , 
       Slashing
     </div>
@@ -111,7 +56,7 @@ exports[`should render weapons with profile data 1`] = `
     <div
       className="grid--weapons__track"
     >
-      1d8
+      1d10
     </div>
     <div>
       19–20/×2

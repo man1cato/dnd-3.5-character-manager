@@ -21,23 +21,23 @@ import PublicRoute from './PublicRoute';
 export const history = createBrowserHistory();
 
 const AppRouter = () => (
-    <Router history={history}>
-        <div>
-            <Switch>
-                <PublicRoute path="/" component={LoginPage} exact={true}/>
-                <ProfileRoute path="/profile" component={ProfilePage} />
-                <PrivateRoute path="/create" component={CharacterCreationPage} />
-                <ProfileRoute path="/stats" component={StatsPage} />
-                <ProfileRoute path="/combat" component={CombatPage} />
-                <ProfileRoute path="/equipment" component={EquipmentPage} />
-                <ProfileRoute path="/spellbook" component={SpellbookPage} />
-                <ProfileRoute path="/companion" component={CompanionPage} />
-                <ProfilesRoute path="/select" component={CharacterSelectionPage} />
-                <PrivateRoute path="/underconstruction" component={UnderConstructionPage} />
-                <Route component={NotFoundPage} />
-            </Switch>
-        </div>
-    </Router>
-);
+	<Router history={history}>
+		<div>
+			<Switch>
+				<PublicRoute path="/" component={LoginPage} exact={true}/>
+				<ProfileRoute path="/profile" component={ProfilePage} />
+				<PrivateRoute path="/create" component={CharacterCreationPage} />
+				<ProfileRoute path="/stats" component={StatsPage} />
+				<ProfileRoute path="/combat" component={CombatPage} />
+				<ProfileRoute path="/equipment" component={EquipmentPage} />
+				<ProfileRoute path="/spellbook" component={SpellbookPage} />
+				<ProfileRoute path="/companion" component={CompanionPage} />
+				<ProfilesRoute path="/select" component={CharacterSelectionPage} />
+				<PrivateRoute path="/underconstruction" component={UnderConstructionPage} />
+				<Route component={NotFoundPage} />
+			</Switch>
+		</div>
+	</Router>
+)
 
 export default AppRouter;

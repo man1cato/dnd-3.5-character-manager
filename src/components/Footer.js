@@ -11,36 +11,40 @@ import spellbookSVG from "../../public/images/spellbook.svg"
 import companionSVG from "../../public/images/companion.svg"
 
 
-const Footer = ({profile}) => (
+const FooterIcon = ({svgFile}) => (
+	<SVGInline svg={svgFile} cleanup={true} height="100%" width="100%" fill="white" />
+)
+
+export const Footer = ({profile}) => (
 	<footer>
 		<div className="container footer__navbar">
 
 			<Link to="/profile" className="footer__navbar__icon">
-				<SVGInline svg={profileSVG} cleanup={true} height="100%" width="100%" fill="white" />
+				<FooterIcon svgFile={profileSVG} />
 			</Link>
 
 			<Link to={profile.attacks ? "/stats" : "/underconstruction"} className="footer__navbar__icon">
-				<SVGInline svg={statsSVG} cleanup={true} height="100%" width="100%" fill="white" />
+				<FooterIcon svgFile={statsSVG} />
 			</Link>
 
 			<Link to={profile.attacks ? "/combat" : "/underconstruction"} className="footer__navbar__icon">
-				<SVGInline svg={combatSVG} cleanup={true} height="100%" width="100%" fill="white" />
+				<FooterIcon svgFile={combatSVG} />
 			</Link>
 
 			<Link to={profile.equipment ? "/equipment" : "/underconstruction"} className="footer__navbar__icon">
-				<SVGInline svg={equipmentSVG} cleanup={true} height="100%" width="100%" fill="white" />
+				<FooterIcon svgFile={equipmentSVG} />
 			</Link>
 
 			
 			{profile.spellbook && 
 				<Link to="/spellbook" className="footer__navbar__icon">
-					<SVGInline svg={spellbookSVG} cleanup={true} height="100%" width="100%" fill="white" />
+					<FooterIcon svgFile={spellbookSVG} />
 				</Link>
 			}
 
 			{profile.companion && 
 				<Link to="/companion" className="footer__navbar__icon">
-					<SVGInline svg={companionSVG} cleanup={true} height="100%" width="100%" fill="white" />
+					<FooterIcon svgFile={companionSVG} />
 				</Link>
 			}
 
