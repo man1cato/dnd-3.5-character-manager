@@ -3,13 +3,15 @@ import thunk from 'redux-thunk'
 import authReducer from '../reducers/auth'
 import profileReducer from '../reducers/profile'
 import profilesReducer from '../reducers/profiles'
-import spellsReducer from '../reducers/spells'
-import skillsReducer from '../reducers/skills'
-import featsReducer from '../reducers/feats'
-import specialAbilitiesReducer from '../reducers/specialAbilities'
-import itemsReducer from '../reducers/items'
-import racesReducer from '../reducers/races'
-import jobClassesReducer from '../reducers/jobClasses'
+import {
+	racesReducer, 
+	jobClassesReducer, 
+	featsReducer, 
+	specialAbilitiesReducer, 
+	spellsReducer, 
+	skillsReducer, 
+	itemsReducer
+} from '../reducers/api'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -29,7 +31,7 @@ export default () => {
 			jobClasses: jobClassesReducer
 		}),
 		composeEnhancers(applyMiddleware(thunk))
-	);
+	)
 
-	return store;
-};
+	return store
+}

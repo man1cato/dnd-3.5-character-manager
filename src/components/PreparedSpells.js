@@ -1,8 +1,8 @@
-import React, {Fragment} from 'react';
-import {connect} from 'react-redux';
-import update from 'immutability-helper';
+import React, {Fragment} from 'react'
+import {connect} from 'react-redux'
+import update from 'immutability-helper'
 
-import SpellModal from './SpellModal';
+import SpellModal from './SpellModal'
 
 
 const listPreparedSpells = (spellbook) => {
@@ -23,27 +23,27 @@ export class PreparedSpells extends React.Component{
    }     
 
    handleOpenModal = (e) => {
-      const spellId = e.target.id;
-      const selected = this.props.spells.find((spell) => spell.id === spellId);
-      this.setState({selected});
+      const id = e.target.id;
+      const selected = this.props.spells[id]
+      this.setState({selected})
    }
 
    handleCloseModal = () => {
-      this.setState({selected: undefined});
+      this.setState({selected: undefined})
    }
 
    handleChange = (e) => {
-      const level = e.target.getAttribute("level");
+      const level = e.target.getAttribute("level")
       const spellId = e.target.getAttribute("spellid")
-      const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellId);
-      const attribute = e.target.getAttribute("attribute");
-      const valueChange = Number(e.target.getAttribute("change"));
+      const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellId)
+      const attribute = e.target.getAttribute("attribute")
+      const valueChange = Number(e.target.getAttribute("change"))
       
       this.setState((prevState) => {
-         const spell = prevState.spellbook[level].spells[index];
-         const value = prevState.spellbook[level].spells[index][attribute] + valueChange;
-         const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value;
-         let castSpells = prevState.castSpells;
+         const spell = prevState.spellbook[level].spells[index]
+         const value = prevState.spellbook[level].spells[index][attribute] + valueChange
+         const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value
+         let castSpells = prevState.castSpells
          if (valueChange > 0) {
             castSpells.push(spellId)
          } else {
@@ -65,7 +65,7 @@ export class PreparedSpells extends React.Component{
          }
       }, () => {
          this.setState((prevState) => {
-            const total = prevState.spellbook[level].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
+            const total = prevState.spellbook[level].spells.map((spell) => spell.prepared).reduce((total, num) => total + num)
             const preparedSpells = listPreparedSpells(prevState.spellbook)
             return {
                spellbook: update(prevState.spellbook, {
@@ -76,7 +76,7 @@ export class PreparedSpells extends React.Component{
                preparedSpells               
             }
          }, () => {
-            this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
+            this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook})
          })
       })
    }
@@ -151,4 +151,4 @@ export class PreparedSpells extends React.Component{
 }
 
 
-export default PreparedSpells;
+export default PreparedSpells

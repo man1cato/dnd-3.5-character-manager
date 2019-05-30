@@ -1,16 +1,16 @@
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from 'react'
+import {shallow} from 'enzyme'
 
-import { SkillSet } from '../../components/SkillSet';
-import profile from '../fixtures/profile';
-import skills from '../fixtures/skills'
+import { SkillSet } from '../../components/SkillSet'
+import profile from '../fixtures/profile'
+import { getSkills } from '../../utils/getFirebaseData'
 
-const props = {
-  skillSet: profile.fields.skillSet,
-  skills
-}
 
-test('should render skills with profile data', () => {
-  const wrapper = shallow(<SkillSet {...props} />);
-  expect(wrapper).toMatchSnapshot();
+test('should render SkillSet with profile data', async () => {
+	const props = {
+		skillSet: profile.fields.skillSet,
+		skills: await getSkills()
+	}
+	const wrapper = shallow(<SkillSet {...props} />)
+	expect(wrapper).toMatchSnapshot()
 })

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FeatModal 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={0}
+  contentLabel="Selected Feat"
+  isOpen={true}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  role="dialog"
+  shouldCloseOnEsc={true}
+  shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
+>
+  <div>
+    <h4>
+      Manyshot
+    </h4>
+    <h5>
+      General, Fighter Bonus
+    </h5>
+    <p>
+      Shoot two or more arrows simultaneously
+    </p>
+  </div>
+</Modal>
+`;

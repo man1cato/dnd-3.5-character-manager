@@ -1,6 +1,6 @@
-import React from 'react';
-import Modal from 'react-modal';
-import {convertTextToArray} from '../utils/utils';
+import React from 'react'
+import Modal from 'react-modal'
+import {convertTextToArray} from '../utils/utils'
 
 if (process.env.NODE_ENV !== 'test') { Modal.setAppElement('#app') }
 
@@ -18,17 +18,17 @@ const SpellModal = ({selected, handleCloseModal}) => (
                 {convertTextToArray(selected.description).map((paragraph, i) => 
                     <p key={i}>{paragraph}</p>
                 )}
-                <p>Components: {selected.components}</p>
-                <p>Casting Time: {selected.castingTime}</p>
-                <p>Range: {selected.range}</p>
-                <p>Duration: {selected.duration}</p>
-                <p>Target / Effect / Area: {selected.effectArea}</p>
-                <p>Saving Throw: {selected.savingThrow}</p>
-                <p>Spell Resistance: {selected.spellResistance}</p>
+                <p><b>Components:</b> {selected.components}</p>
+                <p><b>Casting Time:</b> {selected.castingTime}</p>
+                <p><b>Range:</b> {selected.range}</p>
+                <p><b>Duration:</b> {selected.duration}</p>
+                <p><b>Target / Effect / Area:</b> {selected.effectArea}</p>
+                <p><b>Saving Throw:</b> {selected.savingThrow}</p>
+                <p><b>Spell Resistance:</b> {selected.spellResistance}</p>
             </div>
         }
     </Modal>
 
 )
 
-export default SpellModal;
+export default SpellModal

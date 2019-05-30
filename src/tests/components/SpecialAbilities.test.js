@@ -3,15 +3,15 @@ import {shallow} from 'enzyme';
 
 import { SpecialAbilities } from '../../components/SpecialAbilities';
 import profile from '../fixtures/profile'
-import specialAbilities from '../fixtures/specialAbilities'
+import { getSpecialAbilities } from '../../utils/getFirebaseData'
 
 
-const props = {
-  specialAbilityIds: profile.fields.specialAbilities,
-  specialAbilities
-}
 
-test('should render special abilities with profile data', () => {
+test('should render special abilities with profile data', async () => {
+  const props = {
+    specialAbilityIds: profile.fields.specialAbilities,
+    specialAbilities: await getSpecialAbilities()
+  }
   const wrapper = shallow(<SpecialAbilities {...props} />);
   expect(wrapper).toMatchSnapshot();
 })

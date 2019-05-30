@@ -3,17 +3,16 @@ import {shallow} from 'enzyme'
 
 import { EquipmentPage } from '../../components/EquipmentPage'
 import profile from '../fixtures/profile'
-import items from '../fixtures/items'
-
-const props = {
-    id: profile.id,
-    money: profile.fields.money,
-    equipment: profile.fields.equipment,
-    items
-}
+import { getItems } from '../../utils/getFirebaseData'
 
 
-test('should render equipment page with profile data', () => {
+test('should render equipment page with profile data', async () => {
+    const props = {
+        id: profile.id,
+        money: profile.fields.money,
+        equipment: profile.fields.equipment,
+        items: await getItems()
+    }
     const wrapper = shallow(<EquipmentPage {...props} />)
     expect(wrapper).toMatchSnapshot()
 })

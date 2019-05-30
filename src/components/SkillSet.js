@@ -1,6 +1,6 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import SkillModal from './SkillModal';
+import React from 'react'
+import {connect} from 'react-redux'
+import SkillModal from './SkillModal'
 
 export class SkillSet extends React.Component{
 	state = {
@@ -8,19 +8,19 @@ export class SkillSet extends React.Component{
 	}  
 
 	handlePick = (e) => {
-		const skillId = e.target.id;
-		const selected = this.props.skills.find((skill) => skill.id === skillId);
-		this.setState({selected});
+		const id = e.target.id
+		const selected = this.props.skills[id]
+		this.setState({selected})
 	}
 
 	handleCloseModal = () => {
-		this.setState({selected: undefined});
+		this.setState({selected: undefined})
 	}
 	
 	render () {
-		const skillCount = this.props.skillSet.length;
-		const col1 = this.props.skillSet.slice(0, Math.ceil(skillCount / 2));
-		const col2 = this.props.skillSet.slice(Math.ceil(skillCount / 2));
+		const skillCount = this.props.skillSet.length
+		const col1 = this.props.skillSet.slice(0, Math.ceil(skillCount / 2))
+		const col2 = this.props.skillSet.slice(Math.ceil(skillCount / 2))
 		
 		return (
 			<div className="grid grid--skills">
@@ -32,7 +32,7 @@ export class SkillSet extends React.Component{
 					key={i}
 					onClick={this.handlePick}
 				>
-					{skill.name}
+					{this.props.skills[skill.id].name}
 				</button>
 			))}
 
@@ -49,7 +49,7 @@ export class SkillSet extends React.Component{
 					key={i}
 					onClick={this.handlePick}
 				>
-					{skill.name}
+					{this.props.skills[skill.id].name}
 				</button>
 			))}
 			
@@ -70,6 +70,6 @@ export class SkillSet extends React.Component{
 
 const mapStateToProps = (state) => ({
   	skills: state.skills
-});
+})
 
-export default connect(mapStateToProps)(SkillSet);
+export default connect(mapStateToProps)(SkillSet)

@@ -5,7 +5,7 @@ exports[`should render special abilities with profile data 1`] = `
   <button
     className="button--link"
     id="rect54ikkC9SDLJ1x"
-    key="rect54ikkC9SDLJ1x"
+    key="specialAbility0"
     onClick={[Function]}
   >
     A Thousand Faces

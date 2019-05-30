@@ -5,7 +5,6 @@ import { Field, ErrorMessage } from 'formik';
 
 const CreatorFormPage3 = ({values, feats, selectedJobClass, handleChange, handleSelect, handleMultiSelect, setFieldValue, setFieldError}) => (
 	<div>
-
 		<div className="form__group form__content--tall">
 			<h4>Feats:</h4>
 			<Field name="feats" component="select" multiple onChange={(e) => {handleMultiSelect(e, setFieldValue)}}>
@@ -19,9 +18,8 @@ const CreatorFormPage3 = ({values, feats, selectedJobClass, handleChange, handle
 				))}
 			</Field>                                    
 		</div>
-
 	</div>
 );
 
 
-export default CreatorFormPage3;
+export default CreatorFormPage3

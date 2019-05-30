@@ -12,13 +12,13 @@ const fields = profile.fields
 
 
 test('should setup set profile action object with provided values', () => {
-  const action = setProfile(charId, fields);
+  const action = setProfile(charId, fields)
   expect(action).toEqual({
     type: 'SET_PROFILE',
     id: charId,
     profile: fields
-  });
-});
+  })
+})
 
 test('should setup edit profile action object with provided values', () => {
   const updates = {
@@ -34,10 +34,10 @@ test('should setup edit profile action object with provided values', () => {
         tempMod: 5
       }
     }
-  };
+  }
   const action = editProfile(updates);
   expect(action).toEqual({
     type: 'EDIT_PROFILE',
     updates
-  });
-});
+  })
+})

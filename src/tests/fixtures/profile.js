@@ -47,6 +47,7 @@ export default {
 			}
 		},
 		specialAbilities: ["rect54ikkC9SDLJ1x"],
+		feats: ["recRjuAWe7oy6a7wY", "rec4KkfhKpetKIDqj", "recGkxwkqppy7EYmI"],
 		skillSet:[
 			{
 				id: "recfbplSsRmzNs68J",
@@ -206,7 +207,7 @@ export default {
 			},
 			attack: "Claws +4 melee (1d2–5)",
 			features: "Empathic Link, Share Spells, Improved Evasion, Deliver Touch Spells, Speak with Master",
-			feats: "Weapon Finesse, Alertness",
+			feats: ["recvzMqdCBIzd7z9n", "recVdnKmMFz54fNLF"],
 			specialAbilities: ["recoVjIceMNsVyiqI", "recC7zmmkwPjM104d", "recD7wgtCKPM9k7X9", "recmKq1KJyCGILkHN"],
 			benefit: "Master gains a +3 bonus on Appraise checks"
 		}

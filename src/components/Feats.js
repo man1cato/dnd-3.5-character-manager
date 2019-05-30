@@ -1,7 +1,7 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import _ from 'lodash';
-import FeatModal from './FeatModal';
+import React from 'react'
+import {connect} from 'react-redux'
+import _ from 'lodash'
+import FeatModal from './FeatModal'
 
 export class Feats extends React.Component{
 	state = {
@@ -9,27 +9,28 @@ export class Feats extends React.Component{
 	}  
 
 	handleOpenModal = (e) => {
-		const featId = e.target.id;
-		const selected = this.props.feats.find((feat) => feat.id === featId);
-		this.setState({selected});
+		const featId = e.target.id
+		const selected = this.props.feats[featId]
+		this.setState({selected})
 	}
 
 	handleCloseModal = () => {
-		this.setState({selected: undefined});
+		this.setState({selected: undefined})
 	}
 	
 	render () {    
-		const feats = _.orderBy(this.props.featIds.map((featId) => {
-			return this.props.feats.find((feat) => feat.id === featId)
-		}), ['name'], ['asc']);
+		const feats = _.orderBy(this.props.featIds.map((featId) => ({
+			...this.props.feats[featId],
+			id: featId
+		})), ['name'], ['asc'])
 
 		return (
 			<div>
-				{feats.map((feat) => (
+				{feats.map((feat, i) => (
 					<button
 						className="button--link"
 						id={feat.id}
-						key={feat.id}
+						key={`feat${i}`}
 						onClick={this.handleOpenModal}
 					>
 						{feat.name}
@@ -48,6 +49,6 @@ export class Feats extends React.Component{
 
 const mapStateToProps = (state) => ({
   	feats: state.feats
-});
+})
 
-export default connect(mapStateToProps)(Feats);
+export default connect(mapStateToProps)(Feats)

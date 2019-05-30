@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Header from './Header'
 import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
+import _ from 'lodash'
 
 import Page1 from './CreatorFormPage1'
 import Page2 from './CreatorFormPage2'
@@ -10,6 +11,7 @@ import Page3 from './CreatorFormPage3'
 import CreatorFormFooter from './CreatorFormFooter'
 import {history} from '../routers/AppRouter'
 import {startCreateProfile} from '../actions/profile'
+import {apiObjectToArray} from '../utils/utils'
 
 
 const pages = [Page1, Page2, Page3]
@@ -66,21 +68,21 @@ export class CharacterCreationPage extends React.Component {
 	}
 
 	handleMultiSelect = (e, setFieldValue) => {
-		const name = e.target.name;
-		const options = e.target.options;
-		const value = [];
+		const name = e.target.name
+		const options = e.target.options
+		const value = []
 		for (let i = 0; i < options.length; i++) {
 			if (options[i].selected) {
-				value.push(options[i].value);
+				value.push(options[i].value)
 			}
 		}
-		setFieldValue(name, value);
+		setFieldValue(name, value)
 	}
 
 	handleBack = (setErrors) => {
 		this.setState((prevState) => ({
 			page: prevState.page - 1
-		}));        
+		}))
 		setErrors({})
 	}
 
@@ -103,8 +105,8 @@ export class CharacterCreationPage extends React.Component {
 						heightFt: '',
 						heightIn: '',
 						weight: '',
-						race: this.props.races.find((race) => race.name === 'Human').id,
-						jobClass: this.props.jobClasses.find((jobClass) => jobClass.name === 'Fighter').id,
+						race: this.state.selectedRace.id,
+						jobClass: this.state.selectedJobClass.id,
 						alignment: 'Lawful Good',
 						deity: ''
 					}}
@@ -119,7 +121,7 @@ export class CharacterCreationPage extends React.Component {
 							specialAbilities: this.state.selectedJobClass.levels["1"].specialAbilities,
 							jobClass: this.state.selectedJobClass.name,
 							height: `${values.heightFt}'${values.heightIn}"`,
-							languages: this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages),
+							languages: _.orderBy(this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages)),
 							deity: !!values.deity ? values.deity : "None",
 							level: 1,
 							iconUrl: this.state.selectedRace.iconUrl
@@ -192,13 +194,13 @@ export class CharacterCreationPage extends React.Component {
 			</div>
 		)
 	}
-};
+}
 
 
 const mapStateToProps = (state) => ({
-	races: state.races,
-	jobClasses: state.jobClasses,
-	feats: state.feats.filter((feat) => !feat.types.includes('Epic') && !feat.prerequisites),
+	races: apiObjectToArray(state.races),
+	jobClasses: apiObjectToArray(state.jobClasses),
+	feats: apiObjectToArray(state.feats).filter((feat) => !feat.types.includes('Epic') && !feat.prerequisites),
 	schools: [
 		'Abjuration','Clairsentience', 'Conjuration', 'Divination', 
 		'Enchantment', 'Evocation', 'Illusion', 'Metacreativity', 

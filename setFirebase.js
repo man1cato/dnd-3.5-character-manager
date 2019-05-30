@@ -4,13 +4,7 @@ dotenv.config()
 import admin from 'firebase-admin'
 import serviceAccount from './config/dnd-3-5-character-manager-e3f58e584d80.json'
 
-import getAirtableRaces from './src/utils/getAirtableRaces'
-import getAirtableJobClasses from './src/utils/getAirtableJobClasses'
-import getAirtableFeats from './src/utils/getAirtableFeats'
-import getAirtableSpecialAbilities from './src/utils/getAirtableSpecialAbilities'
-import getAirtableSkills from './src/utils/getAirtableSkills'
-import getAirtableItems from './src/utils/getAirtableItems'
-import getAirtableSpells from './src/utils/getAirtableSpells'
+import { getRaces, getJobClasses, getFeats, getSpecialAbilities, getSkills, getItems, getSpells } from './src/utils/getAirtableData'
 import getAirtableProfile from './src/utils/getAirtableProfile'
 
 
@@ -23,43 +17,43 @@ const database = admin.database()
 
 
 const setRaces = () => {
-   getAirtableRaces().then((races) => {
+   getRaces().then((races) => {
       database.ref('api/races').set(races)
    })
 }
 
 const setJobClasses = () => {
-   getAirtableJobClasses().then((jobClasses) => {
+   getJobClasses().then((jobClasses) => {
       database.ref('api/jobClasses').set(jobClasses)
    })
 }
 
 const setFeats = () => {
-   getAirtableFeats().then((feats) => {
+   getFeats().then((feats) => {
       database.ref('api/feats').set(feats)
    })
 }
 
 const setSpecialAbilities = () => {
-   getAirtableSpecialAbilities().then((specialAbilities) => {
+   getSpecialAbilities().then((specialAbilities) => {
       database.ref('api/specialAbilities').set(specialAbilities)
    })
 }
 
 const setSkills = () => {
-   getAirtableSkills().then((skills) => {
+   getSkills().then((skills) => {
       database.ref('api/skills').set(skills)
    })
 }
 
 const setItems = () => {
-   getAirtableItems().then((items) => {
+   getItems().then((items) => {
       database.ref('api/items').set(items)
    })
 }
 
 const setSpells = () => {
-   getAirtableSpells().then((spells) => {
+   getSpells().then((spells) => {
       database.ref('api/spells').set(spells)
    })
 }
@@ -72,10 +66,10 @@ const setProfile = (uid) => {
 
 // setRaces()
 // setJobClasses()
-setFeats()
+// setFeats()
 // setSpecialAbilities()
 // setSkills()
-// setItems()
+setItems()
 // setSpells()
 // setProfile(process.env.USER_ID)
 

@@ -40,7 +40,12 @@ exports[`should render CompanionPage with profile data 1`] = `
         Feats
       </h4>
       <Connect(Feats)
-        featIds="Weapon Finesse, Alertness"
+        featIds={
+          Array [
+            "recvzMqdCBIzd7z9n",
+            "recVdnKmMFz54fNLF",
+          ]
+        }
       />
     </div>
     <h3

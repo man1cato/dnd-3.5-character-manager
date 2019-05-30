@@ -10,12 +10,12 @@ import { startEditProfile } from '../actions/profile'
 import { findItemById } from '../utils/utils'
 
 const totalMoney = (pp, gp, sp, cp) => Number((pp*10 + gp + sp/10 + cp/100).toFixed(2))
-const totalItemValue = (items, id, qty) => {
-	const totalValue = findItemById(items, id).value * qty
+const totalItemValue = (item, qty) => {
+	const totalValue = item.value * qty
 	return isNaN(totalValue) ? 0 : Number(totalValue.toFixed(1))
 }
-const totalItemWeight = (items, id, qty) => {
-	const totalWeight = findItemById(items, id).weight * qty
+const totalItemWeight = (item, qty) => {
+	const totalWeight = item.weight * qty
 	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
 }
 const totalEquipmentValue = (items) => items.map((item) => item.totalValue).reduce((total, num) => total + num)
@@ -29,8 +29,8 @@ export class EquipmentPage extends React.Component {
 
 		const equipment = this.props.equipment.map((item) => ({
 			...item,
-			totalValue: totalItemValue(this.props.items, item.id, item.qty),
-			totalWeight: totalItemWeight(this.props.items, item.id, item.qty)
+			totalValue: totalItemValue(this.props.items[item.id], item.qty),
+			totalWeight: totalItemWeight(this.props.items[item.id], item.qty)
 		})) || []
 
 		const equipmentTotalValue = totalEquipmentValue(equipment) || 0
@@ -67,8 +67,8 @@ export class EquipmentPage extends React.Component {
 			const qty = isNaN(value) ? prevState.equipment[index].qty : value
 			let equipment = prevState.equipment
 			equipment[index].qty = qty
-			equipment[index].totalValue = totalItemValue(this.props.items, id, qty)
-			equipment[index].totalWeight = totalItemWeight(this.props.items, id, qty)
+			equipment[index].totalValue = totalItemValue(this.props.items[id], qty)
+			equipment[index].totalWeight = totalItemWeight(this.props.items[id], qty)
 			return { equipment }
 		}, () => {
 			this.setState((prevState) => {
@@ -102,8 +102,8 @@ export class EquipmentPage extends React.Component {
 	}
 
 	handleOpenModal = (e) => {
-		const itemId = e.target.id
-		const selected = findItemById(this.props.items, itemId)
+		const id = e.target.id
+		const selected = this.props.items[id]
 		this.setState({selected})
 	}
 
@@ -149,7 +149,7 @@ export class EquipmentPage extends React.Component {
 									id={item.id}
 									onClick={this.handleOpenModal}
 								>
-									{findItemById(this.props.items, item.id).name}
+									{this.props.items[item.id].name}
 								</button>                                
 								<input 
 									className="grid__col2" 
@@ -193,7 +193,7 @@ const mapStateToProps = (state) => ({
   
 const mapDispatchToProps = (dispatch, props) => ({
 	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
-});
+})
   
   
 export default connect(mapStateToProps, mapDispatchToProps)(EquipmentPage)

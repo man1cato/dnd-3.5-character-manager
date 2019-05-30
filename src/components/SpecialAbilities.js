@@ -9,8 +9,8 @@ export class SpecialAbilities extends React.Component{
 	}  
 
 	handleOpenModal = (e) => {
-		const specialAbilityId = e.target.id
-		const selected = this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId)
+		const id = e.target.id
+		const selected = this.props.specialAbilities[id]
 		this.setState({selected})
 	}
 
@@ -19,17 +19,20 @@ export class SpecialAbilities extends React.Component{
 	}
 	
 	render () {    
-		const specialAbilities = _.orderBy(this.props.specialAbilityIds.map((specialAbilityId) => {
-			return this.props.specialAbilities.find((specialAbility) => specialAbility.id === specialAbilityId)
+		const specialAbilities = _.orderBy(this.props.specialAbilityIds.map((id) => {
+			return {
+				...this.props.specialAbilities[id],
+				id
+			}
 		}), ['name'], ['asc'])
 
 		return (
 			<div>
-				{specialAbilities.map((specialAbility) => (
+				{specialAbilities.map((specialAbility, i) => (
 					<button
 						className="button--link"
 						id={specialAbility.id}
-						key={specialAbility.id}
+						key={`specialAbility${i}`}
 						onClick={this.handleOpenModal}
 					>
 						{specialAbility.name}

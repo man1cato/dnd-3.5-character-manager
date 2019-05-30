@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { apiObjectToArray } from '../utils/utils'
+
 
 export const Weapons = (props) => (
 	<div>
@@ -33,7 +35,7 @@ export const Weapons = (props) => (
 )
 
 const mapStateToProps = (state) => ({
-   weapons: state.items.filter((item) => item.category === "Weapon")
+   weapons: apiObjectToArray(state.items).filter((item) => item.category === "Weapon")
 })
 
 export default connect(mapStateToProps)(Weapons)

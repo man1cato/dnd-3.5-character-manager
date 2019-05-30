@@ -97,7 +97,15 @@ exports[`should render ProfilePage with profile data 1`] = `
       <div
         className="grid--profile__features-value"
       >
-        <Connect(Feats) />
+        <Connect(Feats)
+          featIds={
+            Array [
+              "recRjuAWe7oy6a7wY",
+              "rec4KkfhKpetKIDqj",
+              "recGkxwkqppy7EYmI",
+            ]
+          }
+        />
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ export const setProfile = (id, profile) => ({
     type: 'SET_PROFILE',
     id,
     profile
-});
+})
 
 //READ PROFILE FROM FIREBASE
 export const startSetProfile = (id) => {
@@ -15,9 +15,9 @@ export const startSetProfile = (id) => {
         return database.ref(`users/${uid}/profiles/${id}`).once('value').then((snapshot) => {
             const profile = snapshot.val();
             dispatch(setProfile(id, profile));
-        });
-    };
-};
+        })
+    }
+}
 
 //CREATE PROFILE IN FIREBASE
 export const startCreateProfile = (profile) => {    
@@ -34,7 +34,7 @@ export const startCreateProfile = (profile) => {
 export const editProfile = (updates) => ({
     type: 'EDIT_PROFILE',
     updates
-});
+})
 
 //UPDATE PROFILE IN FIREBASE
 export const startEditProfile = (id, updates) => {
@@ -42,9 +42,9 @@ export const startEditProfile = (id, updates) => {
         const uid = getState().auth.uid;
         return database.ref(`users/${uid}/profiles/${id}`).update(updates).then(() => {
             dispatch(editProfile(updates));
-        });
-    };
-};
+        })
+    }
+}
 
 //DELETE PROFILE FROM STORE
 export const deleteProfile = () => ({

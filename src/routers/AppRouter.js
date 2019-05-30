@@ -1,24 +1,25 @@
-import React from 'react';
-import {Router, Route, Switch} from 'react-router-dom';
-import {createBrowserHistory} from 'history';
+import React from 'react'
+import {Router, Route, Switch} from 'react-router-dom'
+import {createBrowserHistory} from 'history'
 
-import LoginPage from '../components/LoginPage';
-import CharacterCreationPage from '../components/CharacterCreationPage';
-import CharacterSelectionPage from '../components/CharacterSelectionPage';
-import ProfilePage from '../components/ProfilePage';
-import StatsPage from '../components/StatsPage';
-import CombatPage from '../components/CombatPage';
-import EquipmentPage from '../components/EquipmentPage';
-import SpellbookPage from '../components/SpellbookPage';
-import CompanionPage from '../components/CompanionPage';
-import NotFoundPage from '../components/NotFoundPage';
-import UnderConstructionPage from '../components/UnderConstructionPage';
-import PrivateRoute from './PrivateRoute';
-import ProfileRoute from './ProfileRoute';
-import ProfilesRoute from './ProfilesRoute';
-import PublicRoute from './PublicRoute';
+import PublicRoute from './PublicRoute'
+import PrivateRoute from './PrivateRoute'
+import ProfileRoute from './ProfileRoute'
+import ProfilesRoute from './ProfilesRoute'
 
-export const history = createBrowserHistory();
+import LoginPage from '../components/LoginPage'
+import CharacterCreationPage from '../components/CharacterCreationPage'
+import CharacterSelectionPage from '../components/CharacterSelectionPage'
+import ProfilePage from '../components/ProfilePage'
+import StatsPage from '../components/StatsPage'
+import CombatPage from '../components/CombatPage'
+import EquipmentPage from '../components/EquipmentPage'
+import SpellbookPage from '../components/SpellbookPage'
+import CompanionPage from '../components/CompanionPage'
+import NotFoundPage from '../components/NotFoundPage'
+import UnderConstructionPage from '../components/UnderConstructionPage'
+
+export const history = createBrowserHistory()
 
 const AppRouter = () => (
 	<Router history={history}>
@@ -40,4 +41,4 @@ const AppRouter = () => (
 	</Router>
 )
 
-export default AppRouter;
+export default AppRouter

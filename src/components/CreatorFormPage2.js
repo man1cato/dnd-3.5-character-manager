@@ -1,6 +1,6 @@
-import React from 'react';
-import _ from 'lodash';
-import { Field, ErrorMessage } from 'formik';
+import React from 'react'
+import _ from 'lodash'
+import { Field, ErrorMessage } from 'formik'
 
 const validateProhibitedSchools = (selectedSchool) => (value) => {
 	let error;
@@ -57,13 +57,13 @@ const CreatorFormPage2 = ({values, alignments, selectedRace, jobClasses, selecte
 
 		<div className="form__group form__content--flex">
 			<h4>Proficiencies:</h4>
-			<div>{selectedJobClass.proficiencies}</div>
+			<div>{selectedJobClass.proficiencies.join(", ")}</div>
 		</div>
 
 		<div className="form__group form__content--tall">
 			<h4>Choose Bonus Languages:</h4>
 			<Field name="bonusLanguages" component="select" multiple onChange={(e) => {handleMultiSelect(e, setFieldValue)}}>
-				{selectedRace.bonusLanguages.map((language) => (
+				{_.orderBy(selectedRace.bonusLanguages).map((language) => (
 					<option 
 						value={language} 
 						key={language}

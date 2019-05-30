@@ -17,8 +17,8 @@ export class SpellbookPage extends React.Component {
 	}
 
 	handleOpenModal = (e) => {
-		const spellId = e.target.id
-		const selected = this.props.spells.find((spell) => spell.id === spellId)
+		const id = e.target.id
+		const selected = this.props.spells[id]
 		this.setState({selected})
 	}
 

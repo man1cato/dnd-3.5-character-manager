@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render skills with profile data 1`] = `
+exports[`should render SkillSet with profile data 1`] = `
 <div
   className="grid grid--skills"
 >
@@ -59,7 +59,7 @@ exports[`should render skills with profile data 1`] = `
     key="1"
     onClick={[Function]}
   >
-    Conscentration
+    Concentration
   </button>
   <h5>
     Ranks
