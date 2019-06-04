@@ -7,7 +7,6 @@ exports[`should render footer correctly 1`] = `
   >
     <Link
       className="footer__navbar__icon"
-      replace={false}
       to="/profile"
     >
       <FooterIcon
@@ -16,7 +15,6 @@ exports[`should render footer correctly 1`] = `
     </Link>
     <Link
       className="footer__navbar__icon"
-      replace={false}
       to="/stats"
     >
       <FooterIcon
@@ -25,7 +23,6 @@ exports[`should render footer correctly 1`] = `
     </Link>
     <Link
       className="footer__navbar__icon"
-      replace={false}
       to="/combat"
     >
       <FooterIcon
@@ -34,7 +31,6 @@ exports[`should render footer correctly 1`] = `
     </Link>
     <Link
       className="footer__navbar__icon"
-      replace={false}
       to="/equipment"
     >
       <FooterIcon
@@ -43,7 +39,6 @@ exports[`should render footer correctly 1`] = `
     </Link>
     <Link
       className="footer__navbar__icon"
-      replace={false}
       to="/spellbook"
     >
       <FooterIcon
@@ -52,7 +47,6 @@ exports[`should render footer correctly 1`] = `
     </Link>
     <Link
       className="footer__navbar__icon"
-      replace={false}
       to="/companion"
     >
       <FooterIcon

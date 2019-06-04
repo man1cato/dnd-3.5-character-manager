@@ -7,7 +7,7 @@ exports[`should render CreatorFormFooter 1`] = `
   <button
     disabled={false}
     key="nextButton"
-    onClick={[Function]}
+    onClick={[MockFunction]}
     type="button"
   >
     Next

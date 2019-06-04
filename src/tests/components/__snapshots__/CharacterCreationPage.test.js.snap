@@ -38,7 +38,7 @@ exports[`should render CharacterCreationPage 1`] = `
         "_deps": Array [],
         "_excludedEdges": Array [],
         "_exclusive": Object {},
-        "_mutate": false,
+        "_mutate": undefined,
         "_nodes": Array [
           "weight",
           "heightIn",
@@ -67,9 +67,9 @@ exports[`should render CharacterCreationPage 1`] = `
             "_exclusive": Object {
               "integer": false,
               "min": true,
-              "required": false,
+              "required": true,
             },
-            "_mutate": false,
+            "_mutate": undefined,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -99,9 +99,9 @@ exports[`should render CharacterCreationPage 1`] = `
             "_exclusive": Object {
               "integer": false,
               "min": true,
-              "required": false,
+              "required": true,
             },
-            "_mutate": false,
+            "_mutate": undefined,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -132,9 +132,9 @@ exports[`should render CharacterCreationPage 1`] = `
               "integer": false,
               "max": true,
               "min": true,
-              "required": false,
+              "required": true,
             },
-            "_mutate": false,
+            "_mutate": undefined,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -165,9 +165,9 @@ exports[`should render CharacterCreationPage 1`] = `
             "_exclusive": Object {
               "max": true,
               "min": true,
-              "required": false,
+              "required": true,
             },
-            "_mutate": false,
+            "_mutate": undefined,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -179,7 +179,6 @@ exports[`should render CharacterCreationPage 1`] = `
               "refs": Map {},
             },
             "tests": Array [
-              [Function],
               [Function],
               [Function],
               [Function],
@@ -198,9 +197,9 @@ exports[`should render CharacterCreationPage 1`] = `
             "_exclusive": Object {
               "integer": false,
               "min": true,
-              "required": false,
+              "required": true,
             },
-            "_mutate": false,
+            "_mutate": undefined,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,

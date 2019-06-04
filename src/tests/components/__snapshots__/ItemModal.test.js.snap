@@ -8,7 +8,6 @@ exports[`should render ItemModal 1`] = `
   closeTimeoutMS={0}
   contentLabel="Selected Item"
   isOpen={true}
-  onRequestClose={[Function]}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   role="dialog"

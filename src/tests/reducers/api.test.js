@@ -1,11 +1,12 @@
 import * as reducers from '../../reducers/api'
-import getApi from '../../utils/getFirebaseData'
+import fs from 'fs'
 
 
 let api
 
 beforeAll( async () => {
-  api = await getApi()
+  api = await fs.promises.readFile('src/tests/fixtures/api.json')
+	api = JSON.parse(api)
 })
 
 

@@ -1,17 +1,17 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import fs from 'fs'
 
 import SpellModal from '../../components/SpellModal'
-import { getSpells } from '../../utils/getFirebaseData'
 
-const handleCloseModal = jest.fn()
+
 let spells, props
 
 beforeAll(async () => {
-   spells = await getSpells()
+   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
+   spells = JSON.parse(api).spells
    props = {
-      selected: Object.values(spells)[0],
-      handleCloseModal
+      selected: Object.values(spells)[0]
    }
 })
 

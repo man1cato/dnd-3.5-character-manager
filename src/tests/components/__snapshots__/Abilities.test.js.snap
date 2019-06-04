@@ -137,7 +137,7 @@ exports[`should render Abilities with profile data 1`] = `
     id="str"
     key="0"
     name="abilities"
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
   />
   <input
@@ -145,7 +145,7 @@ exports[`should render Abilities with profile data 1`] = `
     id="dex"
     key="1"
     name="abilities"
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
   />
   <input
@@ -153,7 +153,7 @@ exports[`should render Abilities with profile data 1`] = `
     id="con"
     key="2"
     name="abilities"
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
   />
   <input
@@ -161,7 +161,7 @@ exports[`should render Abilities with profile data 1`] = `
     id="int"
     key="3"
     name="abilities"
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
   />
   <input
@@ -169,7 +169,7 @@ exports[`should render Abilities with profile data 1`] = `
     id="wis"
     key="4"
     name="abilities"
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
   />
   <input
@@ -177,7 +177,7 @@ exports[`should render Abilities with profile data 1`] = `
     id="cha"
     key="5"
     name="abilities"
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
   />
   <h5

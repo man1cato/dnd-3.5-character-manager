@@ -8,7 +8,6 @@ exports[`should render SpellModal 1`] = `
   closeTimeoutMS={0}
   contentLabel="Selected Spell"
   isOpen={true}
-  onRequestClose={[Function]}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   role="dialog"

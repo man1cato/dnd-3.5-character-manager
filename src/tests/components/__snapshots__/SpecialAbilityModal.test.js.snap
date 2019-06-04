@@ -8,7 +8,6 @@ exports[`should render SpecialAbilityModal 1`] = `
   closeTimeoutMS={0}
   contentLabel="Selected Special Ability"
   isOpen={true}
-  onRequestClose={[Function]}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   role="dialog"

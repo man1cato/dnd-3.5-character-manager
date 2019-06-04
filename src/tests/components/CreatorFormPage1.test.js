@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import fs from 'fs'
 
 import CreatorFormPage1 from '../../components/CreatorFormPage1'
-import getApi from '../../utils/getFirebaseData'
 import { apiObjectToArray } from '../../utils/utils'
 
 
@@ -12,7 +12,8 @@ const setFieldValue = jest.fn()
 let api, wrapper, props
 
 beforeAll(async () => {
-   api = await getApi()
+   api = await fs.promises.readFile('src/tests/fixtures/api.json')
+	api = JSON.parse(api)
    const races = apiObjectToArray(api.races)
    const jobClasses = apiObjectToArray(api.jobClasses).map(jobClass => ({
       id: jobClass.id,

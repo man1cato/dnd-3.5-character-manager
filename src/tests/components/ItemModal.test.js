@@ -1,17 +1,17 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import fs from 'fs'
 
 import ItemModal from '../../components/ItemModal'
-import { getItems } from '../../utils/getFirebaseData'
 
-const handleCloseModal = jest.fn()
+
 let items, props
 
 beforeAll(async () => {
-   items = await getItems()
+   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
+   items = JSON.parse(api).items
    props = {
-      selected: Object.values(items)[0],
-      handleCloseModal
+      selected: Object.values(items)[0]
    }
 })
 

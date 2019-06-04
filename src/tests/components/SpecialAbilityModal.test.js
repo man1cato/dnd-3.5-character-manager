@@ -1,17 +1,17 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import fs from 'fs'
 
 import SpecialAbilityModal from '../../components/SpecialAbilityModal'
-import { getSpecialAbilities } from '../../utils/getFirebaseData'
 
-const handleCloseModal = jest.fn()
+
 let specialAbilities, props
 
 beforeAll(async () => {
-   specialAbilities = await getSpecialAbilities()
+   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
+   specialAbilities = JSON.parse(api).specialAbilities
    props = {
-      selected: Object.values(specialAbilities)[0],
-      handleCloseModal
+      selected: Object.values(specialAbilities)[0]
    }
 })
 

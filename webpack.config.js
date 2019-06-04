@@ -1,21 +1,22 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 if (process.env.NODE_ENV === 'test') {
-    require('dotenv').config({ path: './config/test.env' });
+    require('dotenv').config({ path: './config/test.env' })
 } else if (process.env.NODE_ENV === 'development') {
-    require('dotenv').config({ path: './config/dev.env' });
+    require('dotenv').config({ path: './config/dev.env' })
 }
 
 module.exports = (env) => {
-    const isProduction = env === 'production';
-    const CSSExtract = new ExtractTextPlugin('styles.css');
+    const isProduction = env === 'production'
+    const CSSExtract = new MiniCssExtractPlugin({ filename: 'styles.css' })
 
     return {
-        entry: ['babel-polyfill','./src/app.js'],
+        entry: ['@babel/polyfill','./src/app.js'],
+        mode: isProduction ? 'production' : 'development',
         output: {
             path: path.join(__dirname,'public','dist'),
             filename: 'bundle.js'
@@ -27,22 +28,23 @@ module.exports = (env) => {
                 exclude: /node_modules/
             }, {
                 test: /\.s?css$/,
-                use: CSSExtract.extract({
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: true
-                            }
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
                         }
-                    ]
-                })
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             }, {
                 test: /\.svg$/,
                 loader: 'raw-loader'
@@ -66,5 +68,5 @@ module.exports = (env) => {
             historyApiFallback: true,
             publicPath: '/dist/'
         }
-    };
-};
+    }
+}
