@@ -2,43 +2,43 @@ import database from '../firebase/firebase'
 
 
 //SET FEATS IN STORE
-const setFeats = (feats) => ({
+export const setFeats = (feats) => ({
    type: 'SET_FEATS',
    feats
 })
 
 //SET ITEMS IN STORE
-const setItems = (items) => ({
+export const setItems = (items) => ({
    type: 'SET_ITEMS',
    items
 })
 
 //SET JOB CLASSES IN STORE
-const setJobClasses = (jobClasses) => ({
+export const setJobClasses = (jobClasses) => ({
    type: 'SET_JOB_CLASSES',
    jobClasses
 })
 
 //SET RACES IN STORE
-const setRaces = (races) => ({
+export const setRaces = (races) => ({
 	type: 'SET_RACES',
 	races
 })
 
 //SET SKILLS IN STORE
-const setSkills = (skills) => ({
+export const setSkills = (skills) => ({
    type: 'SET_SKILLS',
    skills
 })
 
 //SET SPECIAL ABILITIES IN STORE
-const setSpecialAbilities = (specialAbilities) => ({
+export const setSpecialAbilities = (specialAbilities) => ({
    type: 'SET_SPECIAL_ABILITIES',
    specialAbilities
 })
 
 //SET SPELLS IN STORE
-const setSpells = (spells) => ({
+export const setSpells = (spells) => ({
    type: 'SET_SPELLS',
    spells
 })

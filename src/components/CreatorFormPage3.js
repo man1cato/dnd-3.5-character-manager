@@ -3,7 +3,15 @@ import _ from 'lodash';
 import { Field, ErrorMessage } from 'formik';
 
 
-const CreatorFormPage3 = ({values, feats, selectedJobClass, handleChange, handleSelect, handleMultiSelect, setFieldValue, setFieldError}) => (
+const CreatorFormPage3 = ({
+	values, 
+	feats, 
+	handleChange, 
+	handleSelect, 
+	handleMultiSelect, 
+	setFieldValue, 
+	setFieldError
+}) => (
 	<div>
 		<div className="form__group form__content--tall">
 			<h4>Feats:</h4>

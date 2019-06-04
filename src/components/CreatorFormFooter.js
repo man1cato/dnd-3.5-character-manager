@@ -1,6 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-const CreatorFormFooter = ({page, pages, handleBack, handleNext, handleSubmit, setErrors, isSubmitting, isValid}) => (
+const CreatorFormFooter = ({
+	page, 
+	pages, 
+	handleBack, 
+	handleNext, 
+	handleSubmit, 
+	setErrors, 
+	isSubmitting, 
+	isValid
+}) => (
 	<div className="container container--footer form__footer">
 		{page !== 1 && (
 			<button type="button" key="backButton" onClick={() => handleBack(setErrors)}>   
@@ -17,6 +26,6 @@ const CreatorFormFooter = ({page, pages, handleBack, handleNext, handleSubmit, s
 			</button>
 		)}
 	</div>
-);
+)
 
-export default CreatorFormFooter;
+export default CreatorFormFooter

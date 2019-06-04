@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render FeatModal 1`] = `
+exports[`should render SpecialAbilityModal 1`] = `
 <Modal
   ariaHideApp={true}
   bodyOpenClassName="ReactModal__Body--open"
   className="modal"
   closeTimeoutMS={0}
-  contentLabel="Selected Feat"
+  contentLabel="Selected Special Ability"
   isOpen={true}
   onRequestClose={[Function]}
   parentSelector={[Function]}
@@ -19,13 +19,13 @@ exports[`should render FeatModal 1`] = `
 >
   <div>
     <h4>
-      Run
+      Weapon Proficiency
     </h4>
-    <h5>
-      General
-    </h5>
-    <p>
-      Run 5 times normal speed, +4 bonus on Jump checks Made after a running start
+    <h5 />
+    <p
+      key="0"
+    >
+      Elves: Receive the Martial Weapon Proficiency feats for the longsword, rapier, (composite) longbow, and (composite) shortbow as bonus feats.
     </p>
   </div>
 </Modal>

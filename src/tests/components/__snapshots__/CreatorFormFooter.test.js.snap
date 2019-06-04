@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CreatorFormFooter 1`] = `
+<div
+  className="container container--footer form__footer"
+>
+  <button
+    disabled={false}
+    key="nextButton"
+    onClick={[Function]}
+    type="button"
+  >
+    Next
+  </button>
+</div>
+`;

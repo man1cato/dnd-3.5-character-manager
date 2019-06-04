@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SpellModal 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={0}
+  contentLabel="Selected Spell"
+  isOpen={true}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  role="dialog"
+  shouldCloseOnEsc={true}
+  shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
+>
+  <div>
+    <h4>
+      Fog Cloud
+    </h4>
+    <h5>
+      Conjuration
+    </h5>
+    <p
+      key="0"
+    >
+      Fog limits vision to 5-ft
+    </p>
+    <p>
+      <b>
+        Components:
+      </b>
+       
+      V, S
+    </p>
+    <p>
+      <b>
+        Casting Time:
+      </b>
+       
+      1 action
+    </p>
+    <p>
+      <b>
+        Range:
+      </b>
+       
+      Medium (100ft + 10ft/lvl)
+    </p>
+    <p>
+      <b>
+        Duration:
+      </b>
+       
+      10 min/lvl
+    </p>
+    <p>
+      <b>
+        Target / Effect / Area:
+      </b>
+       
+      20-ft radius
+    </p>
+    <p>
+      <b>
+        Saving Throw:
+      </b>
+       
+      None
+    </p>
+    <p>
+      <b>
+        Spell Resistance:
+      </b>
+       
+      No
+    </p>
+  </div>
+</Modal>
+`;

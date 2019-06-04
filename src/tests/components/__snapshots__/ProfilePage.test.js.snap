@@ -15,15 +15,22 @@ exports[`should render ProfilePage with profile data 1`] = `
     >
       <img
         className="grid--profile__img"
+        src="images/elf.svg"
       />
       <h4
         className="grid--profile__name"
       >
         Istvyll Bannianea
       </h4>
-      <div />
-      <div />
-      <div />
+      <div>
+        Grey Elf
+      </div>
+      <div>
+        Male
+      </div>
+      <div>
+        Wizard
+      </div>
       <div>
          yrs
       </div>

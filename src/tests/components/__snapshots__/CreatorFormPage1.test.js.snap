@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CreatorFormPage1 1`] = `
+<div>
+  <div
+    className="form__group"
+  >
+    <div
+      className="form__content--flex"
+    >
+      <h4>
+        Name:
+      </h4>
+      <FormikConnect(FieldInner)
+        name="name"
+      />
+    </div>
+    <FormikConnect(ErrorMessageImpl)
+      component="div"
+      name="name"
+    />
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Gender:
+    </h4>
+    <FormikConnect(FieldInner)
+      component="select"
+      name="gender"
+      onChange={[Function]}
+    >
+      <option
+        value="Male"
+      >
+        Male
+      </option>
+      <option
+        value="Female"
+      >
+        Female
+      </option>
+      <option
+        value="Non-Binary"
+      >
+        Non-Binary
+      </option>
+    </FormikConnect(FieldInner)>
+  </div>
+  <div
+    className="form__group"
+  >
+    <div
+      className="form__content--inline"
+    >
+      <h4>
+        Age:
+      </h4>
+      <div>
+        <FormikConnect(FieldInner)
+          name="age"
+        />
+        <div>
+           yrs
+        </div>
+      </div>
+    </div>
+    <FormikConnect(ErrorMessageImpl)
+      component="div"
+      name="age"
+    />
+  </div>
+  <div
+    className="form__group"
+  >
+    <div
+      className="form__content--inline"
+    >
+      <h4>
+        Height:
+      </h4>
+      <div>
+        <FormikConnect(FieldInner)
+          name="heightFt"
+        />
+        <div>
+          ft
+        </div>
+        <FormikConnect(FieldInner)
+          name="heightIn"
+        />
+        <div>
+          in
+        </div>
+      </div>
+    </div>
+    <FormikConnect(ErrorMessageImpl)
+      component="div"
+      name="heightFt"
+    />
+    <FormikConnect(ErrorMessageImpl)
+      component="div"
+      name="heightIn"
+    />
+  </div>
+  <div
+    className="form__group"
+  >
+    <div
+      className="form__content--inline"
+    >
+      <h4>
+        Weight:
+      </h4>
+      <div>
+        <FormikConnect(FieldInner)
+          name="weight"
+        />
+        <div>
+          lbs
+        </div>
+      </div>
+    </div>
+    <FormikConnect(ErrorMessageImpl)
+      component="div"
+      name="weight"
+    />
+  </div>
+  <div
+    className="divider"
+  />
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Race:
+    </h4>
+    <FormikConnect(FieldInner)
+      component="select"
+      name="race"
+      onChange={[Function]}
+    >
+      <option
+        key="race0"
+        value="recOadObhQKOMa7f2"
+      >
+        Gray Elf
+      </option>
+      <option
+        key="race1"
+        value="recUDu56yAAHN3Ue3"
+      >
+        Half-Elf
+      </option>
+      <option
+        key="race2"
+        value="recWfP0nya01jKP44"
+      >
+        Half-Orc
+      </option>
+      <option
+        key="race3"
+        value="recw2GdtKxEQhIpGm"
+      >
+        High Elf
+      </option>
+      <option
+        key="race4"
+        value="recv3zpW98noaCctp"
+      >
+        Hill Dwarf
+      </option>
+      <option
+        key="race5"
+        value="recxyRHegDBrFYJP5"
+      >
+        Human
+      </option>
+      <option
+        key="race6"
+        value="recFEpQ9zuD9Yqu7l"
+      >
+        Lightfoot Halfling
+      </option>
+      <option
+        key="race7"
+        value="recrsiTIDAQXD6mCo"
+      >
+        Mountain Dwarf
+      </option>
+      <option
+        key="race8"
+        value="recoDD3gAaQXU3A56"
+      >
+        Orc
+      </option>
+      <option
+        key="race9"
+        value="recd3zkVkYKZJP92G"
+      >
+        Rock Gnome
+      </option>
+      <option
+        key="race10"
+        value="recGQmGZazcjLyEXv"
+      >
+        Wild Elf
+      </option>
+      <option
+        key="race11"
+        value="recEPV5rASoteAGoq"
+      >
+        Wood Elf
+      </option>
+    </FormikConnect(FieldInner)>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Favored Class:
+    </h4>
+    <div>
+      Wizard
+    </div>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Size:
+    </h4>
+    <div>
+      Medium
+    </div>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Speed:
+    </h4>
+    <div>
+      30
+    </div>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Racial Modifiers:
+    </h4>
+    <div>
+      <div
+        key="con,-2"
+      >
+        CON
+        : 
+        -2
+      </div>
+      <div
+        key="dex,2"
+      >
+        DEX
+        : 
+        2
+      </div>
+      <div
+        key="int,2"
+      >
+        INT
+        : 
+        2
+      </div>
+      <div
+        key="str,-2"
+      >
+        STR
+        : 
+        -2
+      </div>
+    </div>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Default Language(s):
+    </h4>
+    <div>
+      Common, Elven
+    </div>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Bonus Languages:
+    </h4>
+    <div>
+      Draconic, Gnoll, Gnome, Goblin, Orc, Sylvan
+    </div>
+  </div>
+  <div
+    className="form__group form__content"
+  >
+    <h4>
+      Racial Bonuses:
+    </h4>
+    <ul>
+      <li
+        key="racialBonus0"
+      >
+        Immunity to Sleep effects
+      </li>
+      <li
+        key="racialBonus1"
+      >
+        +2 saving throw bonus against enchantment spells or effects
+      </li>
+      <li
+        key="racialBonus2"
+      >
+        +2 on Listen, Search, and Spot checks. Merely passing within 5 feet of a secret or concealed door entitles a Search check to notice as if actively looking for it.
+      </li>
+    </ul>
+  </div>
+  <div
+    className="form__group form__content--flex"
+  >
+    <h4>
+      Special Abilities:
+    </h4>
+    <div>
+      <Connect(SpecialAbilities)
+        specialAbilityIds={
+          Array [
+            "recoVjIceMNsVyiqI",
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

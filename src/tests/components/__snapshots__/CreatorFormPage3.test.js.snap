@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CreatorFormPage3 1`] = `
+<div>
+  <div
+    className="form__group form__content--tall"
+  >
+    <h4>
+      Feats:
+    </h4>
+    <FormikConnect(FieldInner)
+      component="select"
+      multiple={true}
+      name="feats"
+      onChange={[Function]}
+    >
+      <option
+        key="feat0"
+        value="reccKhXP1P03au3WT"
+      >
+        Divine Might
+      </option>
+      <option
+        key="feat1"
+        value="recrA225bMNGuLGF2"
+      >
+        Divine Vengeance
+      </option>
+      <option
+        key="feat2"
+        value="rec5982GoHsn1tfis"
+      >
+        Negative Energy Burst
+      </option>
+      <option
+        key="feat3"
+        value="recJFvWvKKUkM6NJM"
+      >
+        Undead Mastery
+      </option>
+    </FormikConnect(FieldInner)>
+  </div>
+</div>
+`;

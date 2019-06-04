@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render FeatModal 1`] = `
+exports[`should render SkillModal 1`] = `
 <Modal
   ariaHideApp={true}
   bodyOpenClassName="ReactModal__Body--open"
   className="modal"
   closeTimeoutMS={0}
-  contentLabel="Selected Feat"
+  contentLabel="Selected Skill"
   isOpen={true}
   onRequestClose={[Function]}
   parentSelector={[Function]}
@@ -19,13 +19,15 @@ exports[`should render FeatModal 1`] = `
 >
   <div>
     <h4>
-      Run
+      Knowledge (Local)
     </h4>
     <h5>
-      General
+      INT
     </h5>
-    <p>
-      Run 5 times normal speed, +4 bonus on Jump checks Made after a running start
+    <p
+      key="0"
+    >
+      You possess knowledge of local customs and events. 
     </p>
   </div>
 </Modal>

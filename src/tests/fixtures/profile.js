@@ -2,11 +2,15 @@ export default {
 	id:'recnPKEA6sOWaOt57',
 	fields: {
 		name:'Istvyll Bannianea',
+		gender: 'Male',
+		race: 'Grey Elf',
+		jobClass: 'Wizard',
 		alignment:'Lawful Evil',
 		school:'Transmutation',
 		prohibitedSchools: ['Illusion, Necromancy'],
 		languages: ['Common', 'Elven', 'Draconic', 'Orc', 'Sylvan'],
 		level:5,
+		iconUrl: 'images/elf.svg',
 		hp: {
 			base: 32,
 			mod: 6,
@@ -14,33 +18,33 @@ export default {
 		},
 		xp: 10000,
 		hd: 'D4',
-		abilities:{
-			str:{
+		abilities: {
+			str: {
 				name:'STR',
 				score:14,
 				mod:2
 			},
-			dex:{
+			dex: {
 				name:'DEX',
 				score:18,
 				mod:2
 			},
-			con:{
+			con: {
 				name:'CON',
 				score:16,
 				mod:3
 			},
-			int:{
+			int: {
 				name:'INT',
 				score:20,
 				mod:5
 			},
-			wis:{
+			wis: {
 				name:'WIS',
 				score:14,
 				mod:2
 			},
-			cha:{
+			cha: {
 				name:'CHA',
 				score:11,
 				mod:0
@@ -48,7 +52,7 @@ export default {
 		},
 		specialAbilities: ["rect54ikkC9SDLJ1x"],
 		feats: ["recRjuAWe7oy6a7wY", "rec4KkfhKpetKIDqj", "recGkxwkqppy7EYmI"],
-		skillSet:[
+		skillSet: [
 			{
 				id: "recfbplSsRmzNs68J",
 				name: "Appraise",

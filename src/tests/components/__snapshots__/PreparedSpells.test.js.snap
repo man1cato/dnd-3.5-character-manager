@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PreparedSpells with profile data 1`] = `
+<Fragment>
+  <SpellModal
+    handleCloseModal={[Function]}
+  />
+  <h3
+    className="row row--center"
+  >
+    Prepared Spells
+  </h3>
+  <div
+    className="grid grid--preparedSpells"
+  >
+    <h5
+      className="grid__col1"
+    >
+      Spell
+    </h5>
+    <h5>
+      Rmng
+    </h5>
+    <div />
+    <div />
+    <button
+      className="grid__col1 button--link"
+      id={123}
+      key="spell00"
+      onClick={[Function]}
+    >
+      Acid Splash
+    </button>
+    <div
+      key="rmng00"
+    >
+      1
+    </div>
+    <div />
+    <button
+      attribute="used"
+      change={1}
+      key="cast00"
+      level={0}
+      onClick={[Function]}
+      spellid={123}
+    >
+      Cast
+    </button>
+    <button
+      className="grid__col1 button--link"
+      id={456}
+      key="spell01"
+      onClick={[Function]}
+    >
+      Arcane Mark
+    </button>
+    <div
+      key="rmng01"
+    >
+      1
+    </div>
+    <div />
+    <button
+      attribute="used"
+      change={1}
+      key="cast01"
+      level={0}
+      onClick={[Function]}
+      spellid={456}
+    >
+      Cast
+    </button>
+    <button
+      className="grid__col1 button--link"
+      id={678}
+      key="spell12"
+      onClick={[Function]}
+    >
+      Charm Person
+    </button>
+    <div
+      key="rmng12"
+    >
+      0
+    </div>
+    <div />
+    <div />
+  </div>
+</Fragment>
+`;

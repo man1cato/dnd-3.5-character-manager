@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Abilities = ({ abilities, handleChange }) => (
 	<div className="grid grid--abilities">
@@ -20,13 +20,13 @@ const Abilities = ({ abilities, handleChange }) => (
 		<h5 className="grid__col4">Temp Score</h5>
 		{Object.keys(abilities).map((ability, i) =>
 			<input
-			className="grid__col4"
-			key={i}
-			id={ability}
-			name="abilities"
-			type="text"
-			value={abilities[ability].tempScore}
-			onChange={handleChange}
+				className="grid__col4"
+				key={i}
+				id={ability}
+				name="abilities"
+				type="text"
+				value={abilities[ability].tempScore}
+				onChange={handleChange}
 			/>
 		)}
 
@@ -37,4 +37,4 @@ const Abilities = ({ abilities, handleChange }) => (
 	</div>
 )
 
-export default Abilities;
+export default Abilities

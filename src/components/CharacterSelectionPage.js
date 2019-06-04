@@ -7,9 +7,15 @@ import {history} from '../routers/AppRouter'
 
 
 export class CharacterSelectionPage extends React.Component {
+   state = {
+      disabled: false 
+   }
 
    handleClick = (e) => {
-      const id = e.currentTarget.id;
+		const id = e.currentTarget.id
+		this.setState(() => ({
+			disabled: true
+		}))
       this.props.startSetProfile(id)
       setTimeout(() => { history.push('/profile') }, 1500)
    }
@@ -27,12 +33,13 @@ export class CharacterSelectionPage extends React.Component {
                      key={i}
                      className="button-profile"
                      id={profile.id}   
+                     disabled={this.state.disabled}
                      onClick={this.handleClick}
                   >
                      <img src={profile.iconUrl} />
                      <div>
                         <h3>{profile.name}</h3>
-                        <div>{profile.gender}</div>
+                        <div>{profile.gender} {profile.race}</div>
                         <div>{profile.jobClass}</div>
                         <div>{profile.alignment}</div>
                         <div>{`Level ${profile.level}`}</div>

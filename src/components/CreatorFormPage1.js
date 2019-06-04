@@ -4,7 +4,14 @@ import { Field, ErrorMessage } from 'formik';
 import SpecialAbilities from './SpecialAbilities';
 
 
-const CreatorFormPage1 = ({races, jobClasses, selectedRace, handleChange, handleSelect, setFieldValue}) => (
+const CreatorFormPage1 = ({
+	races, 
+	jobClasses, 
+	selectedRace, 
+	handleChange, 
+	handleSelect, 
+	setFieldValue
+}) => (
 	<div>
 		<div className="form__group">
 			<div className="form__content--flex">
@@ -146,7 +153,7 @@ const CreatorFormPage1 = ({races, jobClasses, selectedRace, handleChange, handle
 		</div>        
 		
 	</div>
-);
+)
 
 
-export default CreatorFormPage1;
+export default CreatorFormPage1

@@ -1,7 +1,7 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import Header from './Header'
-import {Formik, Form} from 'formik'
+import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import _ from 'lodash'
 
@@ -9,9 +9,9 @@ import Page1 from './CreatorFormPage1'
 import Page2 from './CreatorFormPage2'
 import Page3 from './CreatorFormPage3'
 import CreatorFormFooter from './CreatorFormFooter'
-import {history} from '../routers/AppRouter'
-import {startCreateProfile} from '../actions/profile'
-import {apiObjectToArray} from '../utils/utils'
+import { history } from '../routers/AppRouter'
+import { startCreateProfile } from '../actions/profile'
+import { apiObjectToArray } from '../utils/utils'
 
 
 const pages = [Page1, Page2, Page3]
@@ -155,8 +155,6 @@ export class CharacterCreationPage extends React.Component {
 										selectedRace={this.state.selectedRace} 
 										jobClasses={this.props.jobClasses}
 										selectedJobClass={this.state.selectedJobClass}
-										alignments={this.props.alignments}
-										schools={this.props.schools}
 										handleChange={handleChange}
 										handleSelect={this.handleSelect}
 										handleMultiSelect={this.handleMultiSelect}
@@ -200,18 +198,7 @@ export class CharacterCreationPage extends React.Component {
 const mapStateToProps = (state) => ({
 	races: apiObjectToArray(state.races),
 	jobClasses: apiObjectToArray(state.jobClasses),
-	feats: apiObjectToArray(state.feats).filter((feat) => !feat.types.includes('Epic') && !feat.prerequisites),
-	schools: [
-		'Abjuration','Clairsentience', 'Conjuration', 'Divination', 
-		'Enchantment', 'Evocation', 'Illusion', 'Metacreativity', 
-		'Necromancy', 'Psychokinesis', 'Psychometabolism', 'Psychoportation', 
-		'Telepathy', 'Transmutation', 'Universal'
-	],
-	alignments: [
-		'Lawful Good', 'Neutral Good', 'Chaotic Good', 
-		'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 
-		'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'
-	]
+	feats: apiObjectToArray(state.feats).filter((feat) => !feat.types.includes('Epic') && !feat.prerequisites)
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

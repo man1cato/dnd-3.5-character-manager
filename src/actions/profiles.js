@@ -17,18 +17,19 @@ export const startGetProfiles = (uid) => {
                 profiles = profileIds.map((id) => ({
                     id,
                     name: profiles[id].name,
+                    race: profiles[id].race,
                     gender: profiles[id].gender,
                     jobClass: profiles[id].jobClass,
                     alignment: profiles[id].alignment,
                     level: profiles[id].level,
                     iconUrl: profiles[id].iconUrl
-                }));
-                dispatch(setProfiles(profiles));
+                }))
+                dispatch(setProfiles(profiles))
             }
             return profiles
-        });
-    };
-};
+        })
+    }
+}
 
 //DELETE PROFILES FROM STORE
 export const deleteProfiles = () => ({

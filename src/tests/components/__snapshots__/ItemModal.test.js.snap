@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ItemModal 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={0}
+  contentLabel="Selected Item"
+  isOpen={true}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  role="dialog"
+  shouldCloseOnEsc={true}
+  shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
+>
+  <div>
+    <h4>
+      Quarterstaff
+    </h4>
+    <h5>
+      Weapon
+    </h5>
+    <div>
+      <p>
+        Type: 
+        Simple
+         / 
+        Two-Handed
+         / 
+        Bludgeoning
+      </p>
+      <p>
+        Range: 
+        —
+      </p>
+      <p>
+        Damage (M): 
+        1d6/1d6
+      </p>
+      <p>
+        Damage (S): 
+        1d4/1d4
+      </p>
+      <p>
+        Critical: 
+        ×2
+      </p>
+    </div>
+    <p>
+      Value: 
+       gp
+    </p>
+    <p>
+      Weight: 
+      4
+       lbs
+    </p>
+  </div>
+</Modal>
+`;

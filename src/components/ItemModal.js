@@ -1,5 +1,5 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React from 'react'
+import Modal from 'react-modal'
 
 if (process.env.NODE_ENV !== 'test') { Modal.setAppElement('#app') }
 
@@ -31,4 +31,4 @@ const ItemModal = ({selected, handleCloseModal}) => (
 
 )
 
-export default ItemModal;
+export default ItemModal

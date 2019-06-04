@@ -1,6 +1,8 @@
 import React from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
+import { schools, alignments } from '../utils/staticData'
+
 
 const validateProhibitedSchools = (selectedSchool) => (value) => {
 	let error;
@@ -16,7 +18,17 @@ const validateProhibitedSchools = (selectedSchool) => (value) => {
 	return error;
 }
 
-const CreatorFormPage2 = ({values, alignments, selectedRace, jobClasses, selectedJobClass, schools, handleChange, handleSelect, handleMultiSelect, setFieldValue, setFieldError}) => (
+const CreatorFormPage2 = ({
+	values, 
+	selectedRace, 
+	jobClasses, 
+	selectedJobClass, 
+	handleChange, 
+	handleSelect, 
+	handleMultiSelect, 
+	setFieldValue, 
+	setFieldError
+}) => (
 	<div>
 		<div className="form__group form__content--flex">
 			<h4>Alignment:</h4>

@@ -1,12 +1,6 @@
-import configureMockStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
-import {setProfile, startSetProfile, editProfile, startEditProfile} from '../../actions/profile'
+import { setProfile, editProfile, deleteProfile } from '../../actions/profile'
 import profile from '../fixtures/profile'
-import database from '../../firebase/firebase'
 
-const uid = 'abc123'
-const defaultAuthState = { auth: {uid} }
-const createMockStore = configureMockStore([thunk])
 const charId = profile.id
 const fields = profile.fields
 
@@ -35,9 +29,16 @@ test('should setup edit profile action object with provided values', () => {
       }
     }
   }
-  const action = editProfile(updates);
+  const action = editProfile(updates)
   expect(action).toEqual({
     type: 'EDIT_PROFILE',
     updates
+  })
+})
+
+test('should setup delete profile action object', () => {
+  const action = deleteProfile()
+  expect(action).toEqual({
+    type: 'DELETE_PROFILE'
   })
 })
