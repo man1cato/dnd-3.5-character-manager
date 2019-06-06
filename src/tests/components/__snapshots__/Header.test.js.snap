@@ -8,11 +8,45 @@ exports[`should render Header correctly 1`] = `
     <h2
       className="header__title"
     />
-    <button
-      onClick={[Function]}
+    <div
+      className="header__nav"
     >
-      Logout
-    </button>
+      <Link
+        className="header__icon"
+        to="/create"
+      >
+        <SVGInline
+          classSuffix="-svg"
+          cleanup={true}
+          cleanupExceptions={Array []}
+          component="span"
+          fill="white"
+          height="100%"
+          svg="test-file-stub"
+          width="100%"
+        />
+      </Link>
+      <Link
+        className="header__icon"
+        to="/select"
+      >
+        <SVGInline
+          classSuffix="-svg"
+          cleanup={true}
+          cleanupExceptions={Array []}
+          component="span"
+          fill="white"
+          height="100%"
+          svg="test-file-stub"
+          width="100%"
+        />
+      </Link>
+      <button
+        onClick={[Function]}
+      >
+        Logout
+      </button>
+    </div>
   </div>
 </header>
 `;

@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import AppRouter, {history} from './routers/AppRouter'
 import configureStore from './store/configureStore'
-import {login, logout} from './actions/auth'
-import {startSetProfile} from './actions/profile'
-import {startGetProfiles} from './actions/profiles'
+import { login, logout } from './actions/auth'
+import { startSetProfile } from './actions/profile'
+import { startGetProfiles } from './actions/profiles'
 import initializeStore from './actions/api'
 
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
-import {firebase} from './firebase/firebase'
+import { firebase } from './firebase/firebase'
 import LoadingPage from './components/LoadingPage'
 
 
@@ -43,12 +43,15 @@ firebase.auth().onAuthStateChanged(async (user) => {
 
     if (user) {
         await store.dispatch(login(user.uid))
+        const selectedCharacterId = localStorage.getItem('selectedCharacterId')
         const profiles = await store.dispatch(startGetProfiles(user.uid))
-        if (!!profiles) {            
-            if (profiles.length === 1) {
-                await store.dispatch(startSetProfile(profiles[0].id))
-            }
+        
+        if (selectedCharacterId) {
+            await store.dispatch(startSetProfile(selectedCharacterId))
+        } else if (profiles.length === 1) {
+            await store.dispatch(startSetProfile(profiles[0].id))                
         }
+
         console.log('logged in')
         renderApp()
     } else {
@@ -57,4 +60,4 @@ firebase.auth().onAuthStateChanged(async (user) => {
         renderApp()
         history.push('/')
     }
-});
+})

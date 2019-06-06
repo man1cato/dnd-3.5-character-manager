@@ -17,6 +17,7 @@ export class CharacterSelectionPage extends React.Component {
 			disabled: true
 		}))
       this.props.startSetProfile(id)
+      localStorage.setItem('selectedCharacterId', id)
       setTimeout(() => { history.push('/profile') }, 1500)
    }
 

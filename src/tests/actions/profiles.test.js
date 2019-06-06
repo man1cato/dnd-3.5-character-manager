@@ -13,6 +13,6 @@ test('should setup profiles action object with provided values', () => {
 test('should setup delete profiles action object', () => {
    const action = deleteProfiles()
    expect(action).toEqual({
-     type: 'DELETE_PROFILES'
+      type: 'DELETE_PROFILES'
    })
- })
+})

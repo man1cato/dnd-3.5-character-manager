@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Link} from 'react-router-dom'
-import SVGInline from "react-svg-inline"
+import { Link } from 'react-router-dom'
+import SVGInline from 'react-svg-inline'
 
 import profileSVG from "../../public/images/profile.svg"
 import statsSVG from "../../public/images/stats.svg"

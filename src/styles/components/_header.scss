@@ -2,13 +2,14 @@ header {
     background: $dark-grey;
     padding: $s-size 0;
     grid-area: header;
+    max-height: 10vh;
 }
 
 .header__content {
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    > * {
+    & * {
         color: white;
         background: none;
         border: none;
@@ -20,4 +21,18 @@ header {
     @media(max-width: 576px) {
       font-size: $font-size-large;
     }
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    max-width: 60%;
+}
+
+.header__icon {
+    height: 130%;
+    max-width: 30px ;
+    margin: 0 $xs-size;
 }

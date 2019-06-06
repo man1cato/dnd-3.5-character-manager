@@ -1,7 +1,7 @@
 import database from '../firebase/firebase'
+import { startGetProfiles } from './profiles'
 
-
-//SET PROFILE IN STORE
+//SET SELECTED PROFILE IN STORE
 export const setProfile = (id, profile) => ({
     type: 'SET_PROFILE',
     id,
@@ -25,6 +25,8 @@ export const startCreateProfile = (profile) => {
         const uid = getState().auth.uid       
         return database.ref(`users/${uid}/profiles`).push(profile).then((ref) => {
             dispatch(setProfile(ref.key, profile))
+            dispatch(startGetProfiles(uid))
+            localStorage.setItem('selectedCharacterId', ref.key)
         })
     }
 }
