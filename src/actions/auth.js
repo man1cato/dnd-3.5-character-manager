@@ -1,9 +1,5 @@
 import {firebase, googleAuthProvider} from '../firebase/firebase'
 
-import {deleteProfile} from './profile'
-import {deleteProfiles} from './profiles'
-
-
 export const login = (uid) => ({
     type: 'LOGIN',
     uid
@@ -22,8 +18,6 @@ export const logout = () => ({
 
 export const startLogout = () => {
     return (dispatch) => {
-        dispatch(deleteProfile())
-        dispatch(deleteProfiles())
         return firebase.auth().signOut()
     }
 }

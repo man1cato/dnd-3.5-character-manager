@@ -1,5 +1,4 @@
 import * as firebase from 'firebase'
-// import { initializeApp, database, auth } from 'firebase'
 
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,

@@ -1,6 +1,6 @@
 import React from 'react'
-import {Router, Route, Switch} from 'react-router-dom'
-import {createBrowserHistory} from 'history'
+import { Router, Route, Switch } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
@@ -23,21 +23,19 @@ export const history = createBrowserHistory()
 
 const AppRouter = () => (
 	<Router history={history}>
-		<div>
-			<Switch>
-				<PublicRoute path="/" component={LoginPage} exact={true}/>
-				<ProfileRoute path="/profile" component={ProfilePage} />
-				<PrivateRoute path="/create" component={CharacterCreationPage} />
-				<ProfileRoute path="/stats" component={StatsPage} />
-				<ProfileRoute path="/combat" component={CombatPage} />
-				<ProfileRoute path="/equipment" component={EquipmentPage} />
-				<ProfileRoute path="/spellbook" component={SpellbookPage} />
-				<ProfileRoute path="/companion" component={CompanionPage} />
-				<ProfilesRoute path="/select" component={CharacterSelectionPage} />
-				<PrivateRoute path="/underconstruction" component={UnderConstructionPage} />
-				<Route component={NotFoundPage} />
-			</Switch>
-		</div>
+		<Switch>
+			<PublicRoute path="/" component={LoginPage} exact={true}/>
+			<PrivateRoute path="/create" component={CharacterCreationPage} />
+			<PrivateRoute path="/select" component={CharacterSelectionPage} />
+			<PrivateRoute path="/profile" component={ProfilePage} />
+			<PrivateRoute path="/stats" component={StatsPage} />
+			<PrivateRoute path="/combat" component={CombatPage} />
+			<PrivateRoute path="/equipment" component={EquipmentPage} />
+			<PrivateRoute path="/spellbook" component={SpellbookPage} />
+			<PrivateRoute path="/companion" component={CompanionPage} />
+			<PrivateRoute path="/underconstruction" component={UnderConstructionPage} />
+			<Route component={NotFoundPage} />
+		</Switch>
 	</Router>
 )
 

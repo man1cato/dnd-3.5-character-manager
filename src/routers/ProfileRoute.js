@@ -18,8 +18,8 @@ export const ProfileRoute = ({
 );
 
 const mapStateToProps = (state) => ({
-   isAuthenticated: !!state.auth.uid,
-   hasProfile: !!state.profile.id
+   isAuthenticated: !!state.auth && !!state.auth.uid,
+   hasProfile: !!state.profile && !!state.profile.id
 });
 
 export default connect(mapStateToProps)(ProfileRoute);

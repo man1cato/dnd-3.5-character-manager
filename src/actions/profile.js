@@ -9,12 +9,11 @@ export const setProfile = (id, profile) => ({
 })
 
 //READ PROFILE FROM FIREBASE
-export const startSetProfile = (id) => {
+export const startSetProfile = (uid, id) => {
     return (dispatch, getState) => {
-        const uid = getState().auth.uid;
         return database.ref(`users/${uid}/profiles/${id}`).once('value').then((snapshot) => {
-            const profile = snapshot.val();
-            dispatch(setProfile(id, profile));
+            const profile = snapshot.val()
+            dispatch(setProfile(id, profile))
         })
     }
 }

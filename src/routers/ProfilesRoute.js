@@ -1,6 +1,6 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {Route, Redirect} from 'react-router-dom';
+import React from 'react'
+import {connect} from 'react-redux'
+import {Route, Redirect} from 'react-router-dom'
 
 
 export const ProfilesRoute = ({
@@ -16,11 +16,11 @@ export const ProfilesRoute = ({
             <Redirect to="/" />
         )
     )} />
-);
+)
 
 const mapStateToProps = (state) => ({
     isAuthenticated: !!state.auth.uid,
     hasProfiles: state.profiles.length > 1
-});
+})
 
 export default connect(mapStateToProps)(ProfilesRoute);

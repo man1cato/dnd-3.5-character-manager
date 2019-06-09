@@ -11,7 +11,7 @@ exports[`should render Header correctly 1`] = `
     <div
       className="header__nav"
     >
-      <Link
+      <NavLink
         className="header__icon"
         to="/create"
       >
@@ -25,8 +25,8 @@ exports[`should render Header correctly 1`] = `
           svg="test-file-stub"
           width="100%"
         />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className="header__icon"
         to="/select"
       >
@@ -40,7 +40,7 @@ exports[`should render Header correctly 1`] = `
           svg="test-file-stub"
           width="100%"
         />
-      </Link>
+      </NavLink>
       <button
         onClick={[Function]}
       >

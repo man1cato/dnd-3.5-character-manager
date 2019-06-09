@@ -26,7 +26,6 @@ export const startGetProfiles = (uid) => {
                 }))
                 dispatch(setProfiles(profiles))
             }
-            return profiles
         })
     }
 }

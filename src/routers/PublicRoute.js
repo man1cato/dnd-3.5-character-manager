@@ -1,35 +1,24 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {Route, Redirect} from 'react-router-dom';
+import React from 'react'
+import { connect } from 'react-redux'
+import { Route, Redirect } from 'react-router-dom'
 
 export const PublicRoute = ({
-    isAuthenticated,
-    hasProfile,
-    hasProfiles,
-    component: Component,
-    ...rest
+	isAuthenticated,
+	component: Component,
+	...rest
 }) => (
-    <Route {...rest} component={(props) => (
-        isAuthenticated ? (
-            hasProfile ? (
-                <Redirect to="/profile" />
-            ) : (
-                hasProfiles ? (
-                    <Redirect to="/select" />
-                ) : (
-                    <Redirect to="/create" />
-                )
-            )
-        ) : (
-            <Component {...props}/>
-        )
-    )} />
-);
+	<Route {...rest} component={(props) => (
+		isAuthenticated ? (
+			console.log('redirecting to /profile'),
+			<Redirect to="/profile" />
+		) : (
+			<Component {...props}/>
+		)
+	)} />
+)
 
 const mapStateToProps = (state) => ({
-    isAuthenticated: !!state.auth.uid,
-    hasProfile: !!state.profile.id,
-    hasProfiles: state.profiles.length > 1
-});
+	isAuthenticated: !!state.auth && !!state.auth.uid
+})
 
-export default connect(mapStateToProps)(PublicRoute);
+export default connect(mapStateToProps)(PublicRoute)
