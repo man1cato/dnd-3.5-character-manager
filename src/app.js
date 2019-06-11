@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import AppRouter, { history } from './routers/AppRouter'
+import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
 import { login, logout } from './actions/auth'
 import { startSetProfile, removeProfile } from './actions/profile'
@@ -51,26 +51,13 @@ firebase.auth().onAuthStateChanged(async (user) => {
 		} 
 		const profile = store.getState().profile
 		
+		store.dispatch(login(user.uid))		
 		renderApp()
-		store.dispatch(login(user.uid))
-		// if (!!profile.id) {
-		// 	console.log('pushing to profile')
-		// 	history.push('/profile')
-		// } else if (profiles.length > 0) {
-		// 	console.log('pushing to select')
-		// 	history.push('/select')
-		// } else {
-		// 	console.log('pushing to create')
-		// 	history.push('/create')
-		// }
-		
-		
 	} else {
 		console.log('logged out')
 		store.dispatch(removeProfile())
 		store.dispatch(removeProfiles())
 		store.dispatch(logout())
 		renderApp()
-		// history.push('/')
 	}
 })

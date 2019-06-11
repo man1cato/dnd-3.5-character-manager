@@ -15,30 +15,17 @@ exports[`should render Header correctly 1`] = `
         className="header__icon"
         to="/create"
       >
-        <SVGInline
-          classSuffix="-svg"
-          cleanup={true}
-          cleanupExceptions={Array []}
-          component="span"
-          fill="white"
-          height="100%"
-          svg="test-file-stub"
-          width="100%"
+        <HeaderIcon
+          svgFile="test-file-stub"
         />
       </NavLink>
       <NavLink
         className="header__icon"
+        hidden={true}
         to="/select"
       >
-        <SVGInline
-          classSuffix="-svg"
-          cleanup={true}
-          cleanupExceptions={Array []}
-          component="span"
-          fill="white"
-          height="100%"
-          svg="test-file-stub"
-          width="100%"
+        <HeaderIcon
+          svgFile="test-file-stub"
         />
       </NavLink>
       <button

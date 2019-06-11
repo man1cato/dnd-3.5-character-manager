@@ -5,11 +5,11 @@ import fs from 'fs'
 import SkillModal from '../../components/SkillModal'
 
 
-let skills, props
+let props
 
 beforeAll(async () => {
    const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   skills = JSON.parse(api).skills
+   const skills = JSON.parse(api).skills
    props = {
       selected: Object.values(skills)[0]
    }

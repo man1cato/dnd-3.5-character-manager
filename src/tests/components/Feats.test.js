@@ -1,17 +1,18 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import fs from 'fs'
 
 import { Feats } from '../../components/Feats'
 import profile from '../fixtures/profile'
-import { getFeats } from '../../utils/getFirebaseData'
 
 
 let props, wrapper
-
 beforeAll(async () => {
+	const api = await fs.promises.readFile('src/tests/fixtures/api.json')
+	const feats = JSON.parse(api).feats
 	props = {
 		featIds: profile.fields.feats,
-		feats: await getFeats()
+		feats
 	}
 	wrapper = shallow(<Feats {...props} />)
 })

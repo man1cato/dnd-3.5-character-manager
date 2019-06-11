@@ -5,11 +5,11 @@ import fs from 'fs'
 import SpecialAbilityModal from '../../components/SpecialAbilityModal'
 
 
-let specialAbilities, props
+let props
 
 beforeAll(async () => {
    const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   specialAbilities = JSON.parse(api).specialAbilities
+   const specialAbilities = JSON.parse(api).specialAbilities
    props = {
       selected: Object.values(specialAbilities)[0]
    }

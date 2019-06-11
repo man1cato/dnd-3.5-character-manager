@@ -7,17 +7,20 @@ import SVGInline from 'react-svg-inline'
 import plusSVG from "../../public/images/plus.svg"
 import swapSVG from "../../public/images/swap.svg"
 
+const HeaderIcon = ({svgFile}) => (
+	<SVGInline svg={svgFile} cleanup={true} height="100%" width="100%" fill="white" />
+)
 
-export const Header = ({pageTitle, startLogout}) => (
+export const Header = ({pageTitle, startLogout, hasProfiles}) => (
 	<header>
 		<div className="container header__content">
 			<h2 className="header__title">{pageTitle}</h2>
 			<div className="header__nav">
 				<NavLink to="/create" className="header__icon">
-					<SVGInline svg={plusSVG} cleanup={true} height="100%" width="100%" fill="white" />
+					<HeaderIcon svgFile={plusSVG} />
 				</NavLink>
-				<NavLink to="/select" className="header__icon">
-					<SVGInline svg={swapSVG} cleanup={true} height="100%" width="100%" fill="white" />
+				<NavLink to="/select" className="header__icon" hidden={!hasProfiles}>
+					<HeaderIcon svgFile={swapSVG} />
 				</NavLink>
 				<button onClick={startLogout}>Logout</button>
 			</div>
@@ -25,8 +28,12 @@ export const Header = ({pageTitle, startLogout}) => (
 	</header>
 )
 
+const mapStateToProps = (state) => ({
+	hasProfiles: !!state.profiles && state.profiles.length > 1
+})
+
 const mapDispatchToProps = (dispatch) => ({
 	startLogout: () => dispatch(startLogout())
 })
 
-export default connect(undefined, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

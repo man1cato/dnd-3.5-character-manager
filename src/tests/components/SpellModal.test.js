@@ -5,11 +5,11 @@ import fs from 'fs'
 import SpellModal from '../../components/SpellModal'
 
 
-let spells, props
+let props
 
 beforeAll(async () => {
    const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   spells = JSON.parse(api).spells
+   const spells = JSON.parse(api).spells
    props = {
       selected: Object.values(spells)[0]
    }
