@@ -9,7 +9,6 @@ export const PublicRoute = ({
 }) => (
 	<Route {...rest} component={(props) => (
 		isAuthenticated ? (
-			console.log('redirecting to /profile'),
 			<Redirect to="/profile" />
 		) : (
 			<Component {...props}/>
@@ -18,7 +17,7 @@ export const PublicRoute = ({
 )
 
 const mapStateToProps = (state) => ({
-	isAuthenticated: !!state.auth && !!state.auth.uid
+	isAuthenticated: !!state.auth && !!state.auth.uid 
 })
 
 export default connect(mapStateToProps)(PublicRoute)

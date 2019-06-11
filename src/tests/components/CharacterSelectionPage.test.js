@@ -6,11 +6,13 @@ import profiles from '../fixtures/profiles'
 
 
 const startSetProfile = jest.fn()
+const uid = 'abc123'
 let wrapper
 
 beforeEach(() => {
 	wrapper = shallow(
 		<CharacterSelectionPage 
+			uid={uid}
 			profiles={profiles} 
 			startSetProfile={startSetProfile}
 		/>
@@ -30,5 +32,5 @@ test('should disable buttons and call startSetProfile', () => {
     
 	expect(wrapper.state('disabled')).toBe(true)
 	expect(wrapper.find('button').at(1).props().disabled).toBe(true)
-	expect(startSetProfile).toHaveBeenCalledWith(id)
+	expect(startSetProfile).toHaveBeenCalledWith(uid, id)
 })

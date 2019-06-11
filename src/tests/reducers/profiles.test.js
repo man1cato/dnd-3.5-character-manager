@@ -12,7 +12,7 @@ test('should set profiles', () => {
 
 test('should clear profiles', () => {
     const action = {
-        type: 'DELETE_PROFILES'
+        type: 'REMOVE_PROFILES'
     }
     const state = profilesReducer(profiles, action)
     expect(state).toEqual([])

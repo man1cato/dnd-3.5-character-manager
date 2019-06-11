@@ -10,7 +10,7 @@ export const setProfile = (id, profile) => ({
 
 //READ PROFILE FROM FIREBASE
 export const startSetProfile = (uid, id) => {
-    return (dispatch, getState) => {
+    return (dispatch) => {
         return database.ref(`users/${uid}/profiles/${id}`).once('value').then((snapshot) => {
             const profile = snapshot.val()
             dispatch(setProfile(id, profile))
@@ -47,9 +47,9 @@ export const startEditProfile = (id, updates) => {
     }
 }
 
-//DELETE PROFILE FROM STORE
-export const deleteProfile = () => ({
-    type: 'DELETE_PROFILE'
+//REMOVE PROFILE FROM STORE
+export const removeProfile = () => ({
+    type: 'REMOVE_PROFILE'
 })
 
 //LEVEL UP CHARACTER IN STORE

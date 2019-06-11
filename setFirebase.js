@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import admin from 'firebase-admin'
-import serviceAccount from './config/dnd-3-5-character-manager-e3f58e584d80.json'
+import serviceAccount from './config/dnd-3-5-character-manager-key.json'
 
 import { getRaces, getJobClasses, getFeats, getSpecialAbilities, getSkills, getItems, getSpells } from './src/utils/getAirtableData'
 import getAirtableProfile from './src/utils/getAirtableProfile'

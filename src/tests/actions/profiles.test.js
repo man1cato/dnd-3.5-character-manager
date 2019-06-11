@@ -1,4 +1,4 @@
-import { setProfiles, deleteProfiles } from '../../actions/profiles'
+import { setProfiles, removeProfiles } from '../../actions/profiles'
 import profiles from '../fixtures/profiles'
 
 
@@ -10,9 +10,9 @@ test('should setup profiles action object with provided values', () => {
    })
 })
 
-test('should setup delete profiles action object', () => {
-   const action = deleteProfiles()
+test('should setup remove profiles action object', () => {
+   const action = removeProfiles()
    expect(action).toEqual({
-      type: 'DELETE_PROFILES'
+      type: 'REMOVE_PROFILES'
    })
 })

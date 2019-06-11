@@ -30,7 +30,7 @@ export const startGetProfiles = (uid) => {
     }
 }
 
-//DELETE PROFILES FROM STORE
-export const deleteProfiles = () => ({
-    type: 'DELETE_PROFILES'
+//REMOVE PROFILES FROM STORE
+export const removeProfiles = () => ({
+    type: 'REMOVE_PROFILES'
 })

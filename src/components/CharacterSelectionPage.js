@@ -16,9 +16,9 @@ export class CharacterSelectionPage extends React.Component {
 		this.setState(() => ({
 			disabled: true
 		}))
-      this.props.startSetProfile(id)
+      this.props.startSetProfile(this.props.uid, id)
       localStorage.setItem('selectedCharacterId', id)
-      setTimeout(() => { history.push('/profile') }, 1500)
+      setTimeout(() => { history.push('/profile') }, 1000)
    }
 
    render() {
@@ -55,11 +55,12 @@ export class CharacterSelectionPage extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
+   uid: state.auth.uid,
 	profiles: state.profiles
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-   startSetProfile: (id) => dispatch(startSetProfile(id))
+   startSetProfile: (uid, id) => dispatch(startSetProfile(uid, id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharacterSelectionPage)

@@ -10,7 +10,7 @@ export default (state = {}, action) => {
                 ...state,
                 ...action.updates
             }
-        case 'DELETE_PROFILE': 
+        case 'REMOVE_PROFILE': 
             return {}
         default:
             return state

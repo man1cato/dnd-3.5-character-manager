@@ -1,4 +1,4 @@
-import { setProfile, editProfile, deleteProfile } from '../../actions/profile'
+import { setProfile, editProfile, removeProfile } from '../../actions/profile'
 import profile from '../fixtures/profile'
 
 const charId = profile.id
@@ -36,9 +36,9 @@ test('should setup edit profile action object with provided values', () => {
   })
 })
 
-test('should setup delete profile action object', () => {
-  const action = deleteProfile()
+test('should setup remove profile action object', () => {
+  const action = removeProfile()
   expect(action).toEqual({
-    type: 'DELETE_PROFILE'
+    type: 'REMOVE_PROFILE'
   })
 })

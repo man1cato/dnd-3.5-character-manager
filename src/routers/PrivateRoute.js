@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 
 export const PrivateRoute = ({
 	isAuthenticated,
-	component: Component,   //this just renames the prop
+	component: Component,
 	...rest
 }) => (
 	<Route {...rest} component={(props) => (

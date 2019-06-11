@@ -1,5 +1,5 @@
 import admin from 'firebase-admin'
-import serviceAccount from '../../config/dnd-3-5-character-manager-e3f58e584d80.json'
+import serviceAccount from '../../config/dnd-3-5-character-manager-key.json'
 
 admin.initializeApp({
    credential: admin.credential.cert(serviceAccount),

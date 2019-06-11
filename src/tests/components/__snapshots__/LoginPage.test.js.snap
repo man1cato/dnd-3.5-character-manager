@@ -10,7 +10,7 @@ exports[`should render login page correctly 1`] = `
     <h1
       className="box-layout__title"
     >
-      D&D Character Manager
+      D&D 3.5e Character Manager
     </h1>
     <button
       className="button"

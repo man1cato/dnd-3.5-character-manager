@@ -26,14 +26,14 @@ const AppRouter = () => (
 		<Switch>
 			<PublicRoute path="/" component={LoginPage} exact={true}/>
 			<PrivateRoute path="/create" component={CharacterCreationPage} />
-			<PrivateRoute path="/select" component={CharacterSelectionPage} />
-			<PrivateRoute path="/profile" component={ProfilePage} />
-			<PrivateRoute path="/stats" component={StatsPage} />
-			<PrivateRoute path="/combat" component={CombatPage} />
-			<PrivateRoute path="/equipment" component={EquipmentPage} />
-			<PrivateRoute path="/spellbook" component={SpellbookPage} />
-			<PrivateRoute path="/companion" component={CompanionPage} />
-			<PrivateRoute path="/underconstruction" component={UnderConstructionPage} />
+			<ProfilesRoute path="/select" component={CharacterSelectionPage} />
+			<ProfileRoute path="/profile" component={ProfilePage} />
+			<ProfileRoute path="/stats" component={StatsPage} />
+			<ProfileRoute path="/combat" component={CombatPage} />
+			<ProfileRoute path="/equipment" component={EquipmentPage} />
+			<ProfileRoute path="/spellbook" component={SpellbookPage} />
+			<ProfileRoute path="/companion" component={CompanionPage} />
+			<ProfileRoute path="/underconstruction" component={UnderConstructionPage} />
 			<Route component={NotFoundPage} />
 		</Switch>
 	</Router>
