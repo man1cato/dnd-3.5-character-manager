@@ -1,19 +1,15 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import fs from 'fs'
+import { apiData } from '../utils'
 
 import CreatorFormPage1 from '../../components/CreatorFormPage1'
 import { apiObjectToArray } from '../../utils/utils'
 
 
-const handleChange = jest.fn()
-const handleSelect = jest.fn()
-const setFieldValue = jest.fn()
 let api, wrapper, props
 
 beforeAll(async () => {
-   api = await fs.promises.readFile('src/tests/fixtures/api.json')
-	api = JSON.parse(api)
+   api = await apiData()
    const races = apiObjectToArray(api.races)
    const jobClasses = apiObjectToArray(api.jobClasses).map(jobClass => ({
       id: jobClass.id,
@@ -25,10 +21,7 @@ beforeAll(async () => {
          name: race.name
       })),
       jobClasses,
-      selectedRace: races[0],
-      handleChange,
-      handleSelect, 
-      setFieldValue
+      selectedRace: races[0]
    }
 })
 
@@ -36,7 +29,7 @@ beforeEach(() => {
    wrapper = shallow(<CreatorFormPage1 {...props} />)
 })
 
-test('should render CreatorFormPage1', () => {
+test('should render CreatorFormPage1 correctly', () => {
 	expect(wrapper).toMatchSnapshot()
 })
 

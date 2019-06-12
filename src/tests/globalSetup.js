@@ -1,5 +1,5 @@
 import fs from 'fs'
-import getApi from '../utils/getFirebaseData'
+import getApi from '../utils/getApi'
 
 export default async () => {
    const api = await getApi()

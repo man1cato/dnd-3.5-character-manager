@@ -28,6 +28,7 @@ const validationSchema = Yup.object().shape({
 	page3: undefined
 })
 
+
 export class CharacterCreationPage extends React.Component {
 	state = {
 		selectedRace: this.props.races.find((race) => race.name === 'Human'),
@@ -206,4 +207,4 @@ const mapDispatchToProps = (dispatch, props) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(CharacterCreationPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CharacterCreationPage)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import fs from 'fs'
+import { apiData } from '../utils'
 
 import CreatorFormPage2 from '../../components/CreatorFormPage2'
 import { apiObjectToArray } from '../../utils/utils'
@@ -14,8 +14,7 @@ const setFieldError = jest.fn()
 let api, wrapper, props
 
 beforeAll(async () => {
-   api = await fs.promises.readFile('src/tests/fixtures/api.json')
-	api = JSON.parse(api)
+   api = await apiData()
    const races = apiObjectToArray(api.races)
    const jobClasses = apiObjectToArray(api.jobClasses)
    props = {

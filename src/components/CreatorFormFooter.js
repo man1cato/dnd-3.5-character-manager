@@ -12,16 +12,16 @@ const CreatorFormFooter = ({
 }) => (
 	<div className="container container--footer form__footer">
 		{page !== 1 && (
-			<button type="button" key="backButton" onClick={() => handleBack(setErrors)}>   
+			<button type="button" id="backButton" onClick={() => handleBack(setErrors)}>   
 				Back
 			</button>
 		)}
 		{page === pages.length ? (
-			<button type="submit" key="submitButton" disabled={isSubmitting || !isValid} onClick={handleSubmit}>   
+			<button type="submit" id="submitButton" disabled={isSubmitting || !isValid} onClick={handleSubmit}>   
 				Create Character
 			</button>
 		) : (                                        
-			<button type="button" key="nextButton" disabled={!isValid} onClick={handleNext}>   
+			<button type="button" id="nextButton" disabled={!isValid} onClick={handleNext}>   
 				Next
 			</button>
 		)}
