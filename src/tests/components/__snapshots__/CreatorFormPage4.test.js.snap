@@ -1,48 +1,602 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render CreatorFormPage4 1`] = `
+exports[`should correctly render CreatorFormPage4 1`] = `
 <div>
-  <div
-    className="form__group form__content--tall"
+  <h3
+    className="row--center"
   >
-    <h4>
-      Feats:
-    </h4>
-    <FormikConnect(FieldInner)
-      component="select"
-      multiple={true}
-      name="feats"
-      onChange={[Function]}
-    >
-      <option
-        key="feat0"
-        value="reccKhXP1P03au3WT"
-      >
-        Divine Might
-      </option>
-      <option
-        key="feat1"
-        value="recrA225bMNGuLGF2"
-      >
-        Divine Vengeance
-      </option>
-      <option
-        key="feat2"
-        value="rec5982GoHsn1tfis"
-      >
-        Negative Energy Burst
-      </option>
-      <option
-        key="feat3"
-        value="recJFvWvKKUkM6NJM"
-      >
-        Undead Mastery
-      </option>
-    </FormikConnect(FieldInner)>
-  </div>
-  <FormikConnect(ErrorMessageImpl)
-    component="div"
+    Feats
+  </h3>
+  <select
     name="feats"
+    onChange={[Function]}
+  >
+    <option
+      key="feat0"
+      value="recdmotqOlGgN2otb"
+    >
+      Ability Focus
+    </option>
+    <option
+      key="feat1"
+      value="recoTlzPQ37bNLFsm"
+    >
+      Acrobatic
+    </option>
+    <option
+      key="feat2"
+      value="rec8uIUF1rFAa2VuG"
+    >
+      Agile
+    </option>
+    <option
+      key="feat3"
+      value="recvzMqdCBIzd7z9n"
+    >
+      Alertness
+    </option>
+    <option
+      key="feat4"
+      value="recnrQnRgUIJQkJOz"
+    >
+      Animal Affinity
+    </option>
+    <option
+      key="feat5"
+      value="recRXzmlbn1MzfoKr"
+    >
+      Armor Proficiency (Light)
+    </option>
+    <option
+      key="feat6"
+      value="recOCyJT5oWscbchC"
+    >
+      Athletic
+    </option>
+    <option
+      key="feat7"
+      value="recQyW6ByR4ClPt80"
+    >
+      Autonomous
+    </option>
+    <option
+      key="feat8"
+      value="recjk6hkPLOgMt6eb"
+    >
+      Blind-Fight
+    </option>
+    <option
+      key="feat9"
+      value="rec6j8vDL2r3twF8o"
+    >
+      Cloak Dance
+    </option>
+    <option
+      key="feat10"
+      value="reclpbMRlP2bTvA8K"
+    >
+      Colossal Wild Shape
+    </option>
+    <option
+      key="feat11"
+      value="recdR990pCoRoCtHN"
+    >
+      Combat Casting
+    </option>
+    <option
+      key="feat12"
+      value="recrc1dWL5N3RPKd6"
+    >
+      Combat Expertise
+    </option>
+    <option
+      key="feat13"
+      value="recXnkMszr2a4cMG2"
+    >
+      Combat Reflexes
+    </option>
+    <option
+      key="feat14"
+      value="recI7IQe71f44n0qs"
+    >
+      Deadly Precision
+    </option>
+    <option
+      key="feat15"
+      value="recFrheLpwNhWFzS3"
+    >
+      Deceitful
+    </option>
+    <option
+      key="feat16"
+      value="recPlnmL0xLwCkhqW"
+    >
+      Deft Hands
+    </option>
+    <option
+      key="feat17"
+      value="rec83JXxeqFaq13F1"
+    >
+      Diligent
+    </option>
+    <option
+      key="feat18"
+      value="rechBgTFWqu5YnOc1"
+    >
+      Diminutive Wild Shape
+    </option>
+    <option
+      key="feat19"
+      value="reccKhXP1P03au3WT"
+    >
+      Divine Might
+    </option>
+    <option
+      key="feat20"
+      value="recrA225bMNGuLGF2"
+    >
+      Divine Vengeance
+    </option>
+    <option
+      key="feat21"
+      value="recyqJvG85XCUZG4x"
+    >
+      Dodge
+    </option>
+    <option
+      key="feat22"
+      value="rec35lBICs5ipkw7m"
+    >
+      Dragon Wild Shape
+    </option>
+    <option
+      key="feat23"
+      value="recHnrZHpmp7psvj2"
+    >
+      Empower Spell-Like Ability
+    </option>
+    <option
+      key="feat24"
+      value="recVCgn24xVSXigbM"
+    >
+      Endurance
+    </option>
+    <option
+      key="feat25"
+      value="rec1UNqoxirOSxnno"
+    >
+      Eschew Materials
+    </option>
+    <option
+      key="feat26"
+      value="recfeBOXTX2up9aUs"
+    >
+      Exotic Weapon Proficiency
+    </option>
+    <option
+      key="feat27"
+      value="recGByPLOPCGQZEW1"
+    >
+      Extra Music
+    </option>
+    <option
+      key="feat28"
+      value="recMrrf3flxHUSgMR"
+    >
+      Extra Turning
+    </option>
+    <option
+      key="feat29"
+      value="recuXAYNPNco1uMdG"
+    >
+      Eyes in the Back of Your Head
+    </option>
+    <option
+      key="feat30"
+      value="recjTsJRbGi8Lptpa"
+    >
+      Fine Wild Shape
+    </option>
+    <option
+      key="feat31"
+      value="recw2WZMbQ3gonDew"
+    >
+      Flyby Attack
+    </option>
+    <option
+      key="feat32"
+      value="rectdd0HKAYm9SmIx"
+    >
+      Gargantuan Wild Shape
+    </option>
+    <option
+      key="feat33"
+      value="recboOAfWHQTIZGfr"
+    >
+      Great Fortitude
+    </option>
+    <option
+      key="feat34"
+      value="recEepS7K6IXvQOQU"
+    >
+      Hover
+    </option>
+    <option
+      key="feat35"
+      value="recEpNvwwJ71UvJm5"
+    >
+      Improved Counterspell
+    </option>
+    <option
+      key="feat36"
+      value="rec5slnNRWWJC8fb2"
+    >
+      Improved Critical
+    </option>
+    <option
+      key="feat37"
+      value="recPwR8YqatQuJqXS"
+    >
+      Improved Elemental Wild Shape
+    </option>
+    <option
+      key="feat38"
+      value="recQDaucsIOGOt9hp"
+    >
+      Improved Familiar
+    </option>
+    <option
+      key="feat39"
+      value="reciazjHVWQmiq1jP"
+    >
+      Improved Initiative
+    </option>
+    <option
+      key="feat40"
+      value="recJSbPjUKOTWNe6m"
+    >
+      Improved Natural Armor
+    </option>
+    <option
+      key="feat41"
+      value="recNxmdwGsIHTAPxj"
+    >
+      Improved Natural Attack
+    </option>
+    <option
+      key="feat42"
+      value="recZ7I3tsw8Wglevc"
+    >
+      Improved Spell Resistance
+    </option>
+    <option
+      key="feat43"
+      value="recuEsiEZ1O2huYCr"
+    >
+      Improved Turning
+    </option>
+    <option
+      key="feat44"
+      value="recCmnimojxd0MNLS"
+    >
+      Improved Unarmed Strike
+    </option>
+    <option
+      key="feat45"
+      value="recs5pgQMU6zotYqL"
+    >
+      Investigator
+    </option>
+    <option
+      key="feat46"
+      value="rec0Rmpc0o4zr5KQZ"
+    >
+      Iron Will
+    </option>
+    <option
+      key="feat47"
+      value="recBS1Vlwp32LWNNe"
+    >
+      Jack of All Trades
+    </option>
+    <option
+      key="feat48"
+      value="recaVxDe7IV4Ibppd"
+    >
+      Leadership
+    </option>
+    <option
+      key="feat49"
+      value="recHPtIzQdLipkdLi"
+    >
+      Lightning Reflexes
+    </option>
+    <option
+      key="feat50"
+      value="rec43FVgR2bo1YDR6"
+    >
+      Magical Aptitude
+    </option>
+    <option
+      key="feat51"
+      value="recExtvt4xN6i7AiO"
+    >
+      Magical Beast Companion
+    </option>
+    <option
+      key="feat52"
+      value="recq2EZvZ93PkGmh4"
+    >
+      Magical Beast Wild Shape
+    </option>
+    <option
+      key="feat53"
+      value="recu6KSoLrL5T47wp"
+    >
+      Martial Weapon Proficiency
+    </option>
+    <option
+      key="feat54"
+      value="recUv7HQzFXwLgRB9"
+    >
+      Mind Over Body
+    </option>
+    <option
+      key="feat55"
+      value="reciJuIqTWUQRhYv0"
+    >
+      Mounted Combat
+    </option>
+    <option
+      key="feat56"
+      value="recKkMD7JxJW1XkHj"
+    >
+      Multiattack
+    </option>
+    <option
+      key="feat57"
+      value="recvJkbFXbH5ZXAXa"
+    >
+      Multiweapon Fighting
+    </option>
+    <option
+      key="feat58"
+      value="reccG488HS3PmSuGK"
+    >
+      Natural Spell
+    </option>
+    <option
+      key="feat59"
+      value="rec5982GoHsn1tfis"
+    >
+      Negative Energy Burst
+    </option>
+    <option
+      key="feat60"
+      value="recoQZX87YxSgmV2T"
+    >
+      Negotiator
+    </option>
+    <option
+      key="feat61"
+      value="recL3E07iXqlgd6Mv"
+    >
+      Nimble Fingers
+    </option>
+    <option
+      key="feat62"
+      value="recFp03E0YFKaq5xr"
+    >
+      Open Minded
+    </option>
+    <option
+      key="feat63"
+      value="recPjLbGCj3xRNPU3"
+    >
+      Persuasive
+    </option>
+    <option
+      key="feat64"
+      value="reco0bwyops62ZxPn"
+    >
+      Plant Defiance
+    </option>
+    <option
+      key="feat65"
+      value="rec81hWf4GNmLBenB"
+    >
+      Plant Wild Shape
+    </option>
+    <option
+      key="feat66"
+      value="rec0Aa93zpU5V3Asy"
+    >
+      Point Blank Shot
+    </option>
+    <option
+      key="feat67"
+      value="recuv5RdScK7Vqhf5"
+    >
+      Power Attack
+    </option>
+    <option
+      key="feat68"
+      value="recpHwtjV89aVIoGB"
+    >
+      Psionic Affinity
+    </option>
+    <option
+      key="feat69"
+      value="recLp3uvkYGZGyywW"
+    >
+      Quick Draw
+    </option>
+    <option
+      key="feat70"
+      value="rec6QsVR3a7aEc8Ev"
+    >
+      Quicken Spell-Like Ability
+    </option>
+    <option
+      key="feat71"
+      value="recmNzyXLWdoJ94Vp"
+    >
+      Rapid Metabolism
+    </option>
+    <option
+      key="feat72"
+      value="recEk5kUnIREk59lF"
+    >
+      Rapid Reload
+    </option>
+    <option
+      key="feat73"
+      value="rec3Z5EqrUQXIcAjy"
+    >
+      Reckless Offense
+    </option>
+    <option
+      key="feat74"
+      value="rec02pDGILJ5EZz1W"
+    >
+      Run
+    </option>
+    <option
+      key="feat75"
+      value="recBV4PEpBYb8mVC0"
+    >
+      Self-Sufficient
+    </option>
+    <option
+      key="feat76"
+      value="recm19w48xltockBW"
+    >
+      Shield Proficiency
+    </option>
+    <option
+      key="feat77"
+      value="rec2wriPyA1jtpZih"
+    >
+      Simple Weapon Proficiency
+    </option>
+    <option
+      key="feat78"
+      value="recaj8lyaZepMlFCM"
+    >
+      Skill Focus
+    </option>
+    <option
+      key="feat79"
+      value="recpeswIYdGxGtd4g"
+    >
+      Snatch
+    </option>
+    <option
+      key="feat80"
+      value="recr648zasZ6BHY5D"
+    >
+      Spell Focus
+    </option>
+    <option
+      key="feat81"
+      value="recQM5J2Z4Bg345O0"
+    >
+      Spell Penetration
+    </option>
+    <option
+      key="feat82"
+      value="recB7JU0g2Bfz5xqS"
+    >
+      Stand Still
+    </option>
+    <option
+      key="feat83"
+      value="rece4EQ3n0Ya33LGf"
+    >
+      Stealthy
+    </option>
+    <option
+      key="feat84"
+      value="reczbG3R5q7p4lj9R"
+    >
+      Toughness
+    </option>
+    <option
+      key="feat85"
+      value="recxkSuS8IvkzRVyV"
+    >
+      Track
+    </option>
+    <option
+      key="feat86"
+      value="recePeBndah0BTNs4"
+    >
+      Two-Weapon Fighting
+    </option>
+    <option
+      key="feat87"
+      value="recJFvWvKKUkM6NJM"
+    >
+      Undead Mastery
+    </option>
+    <option
+      key="feat88"
+      value="reccZ5xjJ9eWUxvY8"
+    >
+      Vermin Wild Shape
+    </option>
+    <option
+      key="feat89"
+      value="recVdnKmMFz54fNLF"
+    >
+      Weapon Finesse
+    </option>
+    <option
+      key="feat90"
+      value="recy5YNMs3lo9rYTp"
+    >
+      Weapon Focus
+    </option>
+    <option
+      key="feat91"
+      value="recF2gHjeFMKLdUmE"
+    >
+      Wild Talent
+    </option>
+    <option
+      key="feat92"
+      value="recI40vCPdTE5LsEu"
+    >
+      Wingover
+    </option>
+  </select>
+  <p>
+    Description: 
+  </p>
+  <div
+    className="row--center"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Select
+    </button>
+  </div>
+  <h4
+    className="row--center"
+  >
+    Selected Feats:
+  </h4>
+  <div>
+    <FormikConnect(ErrorMessageImpl)
+      className="row--center"
+      component="div"
+      name="feats"
+    />
+  </div>
+  <FeatModal
+    handleCloseModal={[Function]}
   />
 </div>
 `;

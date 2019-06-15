@@ -15,7 +15,7 @@ const CreatorFormPage3 = ({
 		validateForm()
 	}, [])
 
-	const hasRolled = _.find(Object.values(values.abilities), (obj) => obj.score !== '')
+	const hasRolled = _.find(_.values(values.abilities), (obj) => obj.score !== '')
 
 	return (
 		<div>
@@ -26,7 +26,7 @@ const CreatorFormPage3 = ({
 					id={`abilitiesRollButton`}
 					type='button'
 					onClick={() => {
-						Object.keys(abilities).forEach((abbr) => {
+						_.keys(abilities).forEach((abbr) => {
 							setFieldValue(`abilities.${abbr}.score`, rollDice(6, 3))
 						})
 					}}
@@ -35,7 +35,7 @@ const CreatorFormPage3 = ({
 				</button>
 			</div>
 
-			{Object.keys(abilities).map((abbr) => {
+			{_.keys(abilities).map((abbr) => {
 				const valueName = `abilities.${abbr}.score`
 				return (
 					<div className="form__group" key={abbr}>

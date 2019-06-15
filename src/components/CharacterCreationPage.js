@@ -234,7 +234,7 @@ export class CharacterCreationPage extends React.Component {
 const mapStateToProps = (state) => ({
 	races: apiObjectToArray(state.races),
 	jobClasses: apiObjectToArray(state.jobClasses),
-	feats: apiObjectToArray(state.feats).filter((feat) => !feat.types.includes('Epic') && !feat.prerequisites)
+	feats: _.omitBy(state.feats, (feat) => !!feat.prerequisites || _.includes(feat.types, 'Epic'))
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

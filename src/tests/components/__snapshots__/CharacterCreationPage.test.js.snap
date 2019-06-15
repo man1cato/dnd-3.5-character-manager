@@ -39,737 +39,644 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
       <Connect(CharacterCreationPage)>
         <CharacterCreationPage
           feats={
-            Array [
-              Object {
-                "id": "recdmotqOlGgN2otb",
-                "name": "Ability Focus",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Jump and Tumble checks",
-                "id": "recoTlzPQ37bNLFsm",
-                "name": "Acrobatic",
+            Object {
+              "rec02pDGILJ5EZz1W": Object {
+                "description": "Run 5 times normal speed, +4 bonus on Jump checks Made after a running start",
+                "name": "Run",
                 "types": Array [
                   "General",
                 ],
               },
-              Object {
-                "description": "+2 bonus on Balance and Escape Artist checks",
-                "id": "rec8uIUF1rFAa2VuG",
-                "name": "Agile",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Listen and Spot checks",
-                "id": "recvzMqdCBIzd7z9n",
-                "name": "Alertness",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Handle Animal and Ride checks",
-                "id": "recnrQnRgUIJQkJOz",
-                "name": "Animal Affinity",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "No armor check penalty on attack rolls",
-                "id": "recRXzmlbn1MzfoKr",
-                "name": "Armor Proficiency (Light)",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Climb and Swim checks",
-                "id": "recOCyJT5oWscbchC",
-                "name": "Athletic",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recQyW6ByR4ClPt80",
-                "name": "Autonomous",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Reroll miss chance for concealment",
-                "id": "recjk6hkPLOgMt6eb",
-                "name": "Blind-Fight",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "rec6j8vDL2r3twF8o",
-                "name": "Cloak Dance",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "reclpbMRlP2bTvA8K",
-                "name": "Colossal Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "description": "+4 bonus on Concentration checks for defensive casting",
-                "id": "recdR990pCoRoCtHN",
-                "name": "Combat Casting",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Trade attack bonus for AC (max 5 points)",
-                "id": "recrc1dWL5N3RPKd6",
-                "name": "Combat Expertise",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "description": "Additional attacks of opportunity",
-                "id": "recXnkMszr2a4cMG2",
-                "name": "Combat Reflexes",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recI7IQe71f44n0qs",
-                "name": "Deadly Precision",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Disguise and Forgery checks",
-                "id": "recFrheLpwNhWFzS3",
-                "name": "Deceitful",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Sleight of Hand and Use Rope checks",
-                "id": "recPlnmL0xLwCkhqW",
-                "name": "Deft Hands",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Appraise and Decipher Script checks",
-                "id": "rec83JXxeqFaq13F1",
-                "name": "Diligent",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "rechBgTFWqu5YnOc1",
-                "name": "Diminutive Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "id": "reccKhXP1P03au3WT",
-                "name": "Divine Might",
-                "types": Array [
-                  "Divine",
-                ],
-              },
-              Object {
-                "id": "recrA225bMNGuLGF2",
-                "name": "Divine Vengeance",
-                "types": Array [
-                  "Divine",
-                ],
-              },
-              Object {
-                "description": "+1 dodge bonus to AC against selected target",
-                "id": "recyqJvG85XCUZG4x",
-                "name": "Dodge",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "rec35lBICs5ipkw7m",
-                "name": "Dragon Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "id": "recHnrZHpmp7psvj2",
-                "name": "Empower Spell-Like Ability",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "description": "+4 bonus on checks or saves to resist nonlethal damage",
-                "id": "recVCgn24xVSXigbM",
-                "name": "Endurance",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Cast spells without material components",
-                "id": "rec1UNqoxirOSxnno",
-                "name": "Eschew Materials",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "No penalty on attacks with specific exotic weapon",
-                "id": "recfeBOXTX2up9aUs",
-                "name": "Exotic Weapon Proficiency",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recGByPLOPCGQZEW1",
-                "name": "Extra Music",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Can turn or rebuke 4 more times per day",
-                "id": "recMrrf3flxHUSgMR",
-                "name": "Extra Turning",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recuXAYNPNco1uMdG",
-                "name": "Eyes in the Back of Your Head",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recjTsJRbGi8Lptpa",
-                "name": "Fine Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "id": "recw2WZMbQ3gonDew",
-                "name": "Flyby Attack",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "id": "rectdd0HKAYm9SmIx",
-                "name": "Gargantuan Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Fortitude saves",
-                "id": "recboOAfWHQTIZGfr",
-                "name": "Great Fortitude",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recEepS7K6IXvQOQU",
-                "name": "Hover",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "description": "Counterspell with spell of same school",
-                "id": "recEpNvwwJ71UvJm5",
-                "name": "Improved Counterspell",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Double threat range of weapon",
-                "id": "rec5slnNRWWJC8fb2",
-                "name": "Improved Critical",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recPwR8YqatQuJqXS",
-                "name": "Improved Elemental Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "id": "recQDaucsIOGOt9hp",
-                "name": "Improved Familiar",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+4 bonus on initiative checks",
-                "id": "reciazjHVWQmiq1jP",
-                "name": "Improved Initiative",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recJSbPjUKOTWNe6m",
-                "name": "Improved Natural Armor",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recNxmdwGsIHTAPxj",
-                "name": "Improved Natural Attack",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "id": "recZ7I3tsw8Wglevc",
-                "name": "Improved Spell Resistance",
-                "types": Array [
-                  "Creature",
-                ],
-              },
-              Object {
-                "description": "+1 level for turning checks",
-                "id": "recuEsiEZ1O2huYCr",
-                "name": "Improved Turning",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Considered armed even when unarmed",
-                "id": "recCmnimojxd0MNLS",
-                "name": "Improved Unarmed Strike",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Gather Information and Search checks",
-                "id": "recs5pgQMU6zotYqL",
-                "name": "Investigator",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Will saves",
-                "id": "rec0Rmpc0o4zr5KQZ",
-                "name": "Iron Will",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recBS1Vlwp32LWNNe",
-                "name": "Jack of All Trades",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Attract cohort and followers",
-                "id": "recaVxDe7IV4Ibppd",
-                "name": "Leadership",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Reflex saves",
-                "id": "recHPtIzQdLipkdLi",
-                "name": "Lightning Reflexes",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Spellcraft and Use Magic Device checks",
-                "id": "rec43FVgR2bo1YDR6",
-                "name": "Magical Aptitude",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recExtvt4xN6i7AiO",
-                "name": "Magical Beast Companion",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "id": "recq2EZvZ93PkGmh4",
-                "name": "Magical Beast Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
-                "description": "No penalty on attacks with specific martial weapon",
-                "id": "recu6KSoLrL5T47wp",
-                "name": "Martial Weapon Proficiency",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recUv7HQzFXwLgRB9",
-                "name": "Mind Over Body",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Negate hits on mount with Ride check",
-                "id": "reciJuIqTWUQRhYv0",
-                "name": "Mounted Combat",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recKkMD7JxJW1XkHj",
-                "name": "Multiattack",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "id": "recvJkbFXbH5ZXAXa",
-                "name": "Multiweapon Fighting",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "description": "Cast spells while in wild shape",
-                "id": "reccG488HS3PmSuGK",
-                "name": "Natural Spell",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "rec5982GoHsn1tfis",
-                "name": "Negative Energy Burst",
-                "types": Array [
-                  "Divine",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Diplomacy and Sense Motive checks",
-                "id": "recoQZX87YxSgmV2T",
-                "name": "Negotiator",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Disable Device and Open Lock checks",
-                "id": "recL3E07iXqlgd6Mv",
-                "name": "Nimble Fingers",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recFp03E0YFKaq5xr",
-                "name": "Open Minded",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Bluff checks and Intimidate   checks",
-                "id": "recPjLbGCj3xRNPU3",
-                "name": "Persuasive",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "reco0bwyops62ZxPn",
-                "name": "Plant Defiance",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "rec81hWf4GNmLBenB",
-                "name": "Plant Wild Shape",
-                "types": Array [
-                  "Wild",
-                ],
-              },
-              Object {
+              "rec0Aa93zpU5V3Asy": Object {
                 "description": "+1 bonus on ranged attack and damage within 30 ft.",
-                "id": "rec0Aa93zpU5V3Asy",
                 "name": "Point Blank Shot",
                 "types": Array [
                   "General",
                   "Fighter Bonus",
                 ],
               },
-              Object {
-                "description": "Trade attack bonus for damage (up to base attack bonus)",
-                "id": "recuv5RdScK7Vqhf5",
-                "name": "Power Attack",
+              "rec0Rmpc0o4zr5KQZ": Object {
+                "description": "+2 bonus on Will saves",
+                "name": "Iron Will",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rec1UNqoxirOSxnno": Object {
+                "description": "Cast spells without material components",
+                "name": "Eschew Materials",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rec2wriPyA1jtpZih": Object {
+                "description": "No -4 penalty on attack rolls with simple weapons",
+                "name": "Simple Weapon Proficiency",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rec35lBICs5ipkw7m": Object {
+                "name": "Dragon Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "rec3Z5EqrUQXIcAjy": Object {
+                "name": "Reckless Offense",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rec43FVgR2bo1YDR6": Object {
+                "description": "+2 bonus on Spellcraft and Use Magic Device checks",
+                "name": "Magical Aptitude",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rec5982GoHsn1tfis": Object {
+                "name": "Negative Energy Burst",
+                "types": Array [
+                  "Divine",
+                ],
+              },
+              "rec5slnNRWWJC8fb2": Object {
+                "description": "Double threat range of weapon",
+                "name": "Improved Critical",
                 "types": Array [
                   "General",
                   "Fighter Bonus",
                 ],
               },
-              Object {
-                "id": "recpHwtjV89aVIoGB",
-                "name": "Psionic Affinity",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Draw weapon as free weapon",
-                "id": "recLp3uvkYGZGyywW",
-                "name": "Quick Draw",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "rec6QsVR3a7aEc8Ev",
+              "rec6QsVR3a7aEc8Ev": Object {
                 "name": "Quicken Spell-Like Ability",
                 "types": Array [
                   "General",
                   "Creature",
                 ],
               },
-              Object {
-                "id": "recmNzyXLWdoJ94Vp",
-                "name": "Rapid Metabolism",
+              "rec6j8vDL2r3twF8o": Object {
+                "name": "Cloak Dance",
                 "types": Array [
                   "General",
                 ],
               },
-              Object {
+              "rec81hWf4GNmLBenB": Object {
+                "name": "Plant Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "rec83JXxeqFaq13F1": Object {
+                "description": "+2 bonus on Appraise and Decipher Script checks",
+                "name": "Diligent",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rec8uIUF1rFAa2VuG": Object {
+                "description": "+2 bonus on Balance and Escape Artist checks",
+                "name": "Agile",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recB7JU0g2Bfz5xqS": Object {
+                "name": "Stand Still",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recBS1Vlwp32LWNNe": Object {
+                "name": "Jack of All Trades",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recBV4PEpBYb8mVC0": Object {
+                "description": "+2 bonus on Heal and Survival checks",
+                "name": "Self-Sufficient",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recCmnimojxd0MNLS": Object {
+                "description": "Considered armed even when unarmed",
+                "name": "Improved Unarmed Strike",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recEepS7K6IXvQOQU": Object {
+                "name": "Hover",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recEk5kUnIREk59lF": Object {
                 "description": "Reload crossbow more quickly",
-                "id": "recEk5kUnIREk59lF",
                 "name": "Rapid Reload",
                 "types": Array [
                   "General",
                   "Fighter Bonus",
                 ],
               },
-              Object {
-                "id": "rec3Z5EqrUQXIcAjy",
-                "name": "Reckless Offense",
+              "recEpNvwwJ71UvJm5": Object {
+                "description": "Counterspell with spell of same school",
+                "name": "Improved Counterspell",
                 "types": Array [
                   "General",
                 ],
               },
-              Object {
-                "description": "Run 5 times normal speed, +4 bonus on Jump checks Made after a running start",
-                "id": "rec02pDGILJ5EZz1W",
-                "name": "Run",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Heal and Survival checks",
-                "id": "recBV4PEpBYb8mVC0",
-                "name": "Self-Sufficient",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "No armor check penalty on attack rolls",
-                "id": "recm19w48xltockBW",
-                "name": "Shield Proficiency",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "No -4 penalty on attack rolls with simple weapons",
-                "id": "rec2wriPyA1jtpZih",
-                "name": "Simple Weapon Proficiency",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+3 bonus on checks with selected skill",
-                "id": "recaj8lyaZepMlFCM",
-                "name": "Skill Focus",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recpeswIYdGxGtd4g",
-                "name": "Snatch",
-                "types": Array [
-                  "General",
-                  "Creature",
-                ],
-              },
-              Object {
-                "description": "+1 bonus on save DCs against specific school of magic",
-                "id": "recr648zasZ6BHY5D",
-                "name": "Spell Focus",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on caster level checks to defeat spell resistance",
-                "id": "recQM5J2Z4Bg345O0",
-                "name": "Spell Penetration",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "id": "recB7JU0g2Bfz5xqS",
-                "name": "Stand Still",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+2 bonus on Hide and Move Silently checks",
-                "id": "rece4EQ3n0Ya33LGf",
-                "name": "Stealthy",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "+3 hit points",
-                "id": "reczbG3R5q7p4lj9R",
-                "name": "Toughness",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Use Survival skill to track",
-                "id": "recxkSuS8IvkzRVyV",
-                "name": "Track",
-                "types": Array [
-                  "General",
-                ],
-              },
-              Object {
-                "description": "Reduce two-weapon fighting penalties by 2",
-                "id": "recePeBndah0BTNs4",
-                "name": "Two-Weapon Fighting",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recJFvWvKKUkM6NJM",
-                "name": "Undead Mastery",
-                "types": Array [
-                  "Divine",
-                ],
-              },
-              Object {
-                "id": "reccZ5xjJ9eWUxvY8",
-                "name": "Vermin Wild Shape",
+              "recExtvt4xN6i7AiO": Object {
+                "name": "Magical Beast Companion",
                 "types": Array [
                   "Wild",
                 ],
               },
-              Object {
-                "description": "Use Dex modifier instead of Str modifier on attack rolls",
-                "id": "recVdnKmMFz54fNLF",
-                "name": "Weapon Finesse",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "description": "+1 bonus on attack rolls with selected weapon",
-                "id": "recy5YNMs3lo9rYTp",
-                "name": "Weapon Focus",
-                "types": Array [
-                  "General",
-                  "Fighter Bonus",
-                ],
-              },
-              Object {
-                "id": "recF2gHjeFMKLdUmE",
+              "recF2gHjeFMKLdUmE": Object {
                 "name": "Wild Talent",
                 "types": Array [
                   "General",
                 ],
               },
-              Object {
-                "id": "recI40vCPdTE5LsEu",
+              "recFp03E0YFKaq5xr": Object {
+                "name": "Open Minded",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recFrheLpwNhWFzS3": Object {
+                "description": "+2 bonus on Disguise and Forgery checks",
+                "name": "Deceitful",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recGByPLOPCGQZEW1": Object {
+                "name": "Extra Music",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recHPtIzQdLipkdLi": Object {
+                "description": "+2 bonus on Reflex saves",
+                "name": "Lightning Reflexes",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recHnrZHpmp7psvj2": Object {
+                "name": "Empower Spell-Like Ability",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recI40vCPdTE5LsEu": Object {
                 "name": "Wingover",
                 "types": Array [
                   "General",
                   "Creature",
                 ],
               },
-            ]
+              "recI7IQe71f44n0qs": Object {
+                "name": "Deadly Precision",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recJFvWvKKUkM6NJM": Object {
+                "name": "Undead Mastery",
+                "types": Array [
+                  "Divine",
+                ],
+              },
+              "recJSbPjUKOTWNe6m": Object {
+                "name": "Improved Natural Armor",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recKkMD7JxJW1XkHj": Object {
+                "name": "Multiattack",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recL3E07iXqlgd6Mv": Object {
+                "description": "+2 bonus on Disable Device and Open Lock checks",
+                "name": "Nimble Fingers",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recLp3uvkYGZGyywW": Object {
+                "description": "Draw weapon as free weapon",
+                "name": "Quick Draw",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recMrrf3flxHUSgMR": Object {
+                "description": "Can turn or rebuke 4 more times per day",
+                "name": "Extra Turning",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recNxmdwGsIHTAPxj": Object {
+                "name": "Improved Natural Attack",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recOCyJT5oWscbchC": Object {
+                "description": "+2 bonus on Climb and Swim checks",
+                "name": "Athletic",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recPjLbGCj3xRNPU3": Object {
+                "description": "+2 bonus on Bluff checks and Intimidate   checks",
+                "name": "Persuasive",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recPlnmL0xLwCkhqW": Object {
+                "description": "+2 bonus on Sleight of Hand and Use Rope checks",
+                "name": "Deft Hands",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recPwR8YqatQuJqXS": Object {
+                "name": "Improved Elemental Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "recQDaucsIOGOt9hp": Object {
+                "name": "Improved Familiar",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recQM5J2Z4Bg345O0": Object {
+                "description": "+2 bonus on caster level checks to defeat spell resistance",
+                "name": "Spell Penetration",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recQyW6ByR4ClPt80": Object {
+                "name": "Autonomous",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recRXzmlbn1MzfoKr": Object {
+                "description": "No armor check penalty on attack rolls",
+                "name": "Armor Proficiency (Light)",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recUv7HQzFXwLgRB9": Object {
+                "name": "Mind Over Body",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recVCgn24xVSXigbM": Object {
+                "description": "+4 bonus on checks or saves to resist nonlethal damage",
+                "name": "Endurance",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recVdnKmMFz54fNLF": Object {
+                "description": "Use Dex modifier instead of Str modifier on attack rolls",
+                "name": "Weapon Finesse",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recXnkMszr2a4cMG2": Object {
+                "description": "Additional attacks of opportunity",
+                "name": "Combat Reflexes",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recZ7I3tsw8Wglevc": Object {
+                "name": "Improved Spell Resistance",
+                "types": Array [
+                  "Creature",
+                ],
+              },
+              "recaVxDe7IV4Ibppd": Object {
+                "description": "Attract cohort and followers",
+                "name": "Leadership",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recaj8lyaZepMlFCM": Object {
+                "description": "+3 bonus on checks with selected skill",
+                "name": "Skill Focus",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recboOAfWHQTIZGfr": Object {
+                "description": "+2 bonus on Fortitude saves",
+                "name": "Great Fortitude",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "reccG488HS3PmSuGK": Object {
+                "description": "Cast spells while in wild shape",
+                "name": "Natural Spell",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "reccKhXP1P03au3WT": Object {
+                "name": "Divine Might",
+                "types": Array [
+                  "Divine",
+                ],
+              },
+              "reccZ5xjJ9eWUxvY8": Object {
+                "name": "Vermin Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "recdR990pCoRoCtHN": Object {
+                "description": "+4 bonus on Concentration checks for defensive casting",
+                "name": "Combat Casting",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recdmotqOlGgN2otb": Object {
+                "name": "Ability Focus",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "rece4EQ3n0Ya33LGf": Object {
+                "description": "+2 bonus on Hide and Move Silently checks",
+                "name": "Stealthy",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recePeBndah0BTNs4": Object {
+                "description": "Reduce two-weapon fighting penalties by 2",
+                "name": "Two-Weapon Fighting",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recfeBOXTX2up9aUs": Object {
+                "description": "No penalty on attacks with specific exotic weapon",
+                "name": "Exotic Weapon Proficiency",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "rechBgTFWqu5YnOc1": Object {
+                "name": "Diminutive Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "reciJuIqTWUQRhYv0": Object {
+                "description": "Negate hits on mount with Ride check",
+                "name": "Mounted Combat",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "reciazjHVWQmiq1jP": Object {
+                "description": "+4 bonus on initiative checks",
+                "name": "Improved Initiative",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recjTsJRbGi8Lptpa": Object {
+                "name": "Fine Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "recjk6hkPLOgMt6eb": Object {
+                "description": "Reroll miss chance for concealment",
+                "name": "Blind-Fight",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "reclpbMRlP2bTvA8K": Object {
+                "name": "Colossal Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "recm19w48xltockBW": Object {
+                "description": "No armor check penalty on attack rolls",
+                "name": "Shield Proficiency",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recmNzyXLWdoJ94Vp": Object {
+                "name": "Rapid Metabolism",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recnrQnRgUIJQkJOz": Object {
+                "description": "+2 bonus on Handle Animal and Ride checks",
+                "name": "Animal Affinity",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "reco0bwyops62ZxPn": Object {
+                "name": "Plant Defiance",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recoQZX87YxSgmV2T": Object {
+                "description": "+2 bonus on Diplomacy and Sense Motive checks",
+                "name": "Negotiator",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recoTlzPQ37bNLFsm": Object {
+                "description": "+2 bonus on Jump and Tumble checks",
+                "name": "Acrobatic",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recpHwtjV89aVIoGB": Object {
+                "name": "Psionic Affinity",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recpeswIYdGxGtd4g": Object {
+                "name": "Snatch",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recq2EZvZ93PkGmh4": Object {
+                "name": "Magical Beast Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "recr648zasZ6BHY5D": Object {
+                "description": "+1 bonus on save DCs against specific school of magic",
+                "name": "Spell Focus",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recrA225bMNGuLGF2": Object {
+                "name": "Divine Vengeance",
+                "types": Array [
+                  "Divine",
+                ],
+              },
+              "recrc1dWL5N3RPKd6": Object {
+                "description": "Trade attack bonus for AC (max 5 points)",
+                "name": "Combat Expertise",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recs5pgQMU6zotYqL": Object {
+                "description": "+2 bonus on Gather Information and Search checks",
+                "name": "Investigator",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "rectdd0HKAYm9SmIx": Object {
+                "name": "Gargantuan Wild Shape",
+                "types": Array [
+                  "Wild",
+                ],
+              },
+              "recu6KSoLrL5T47wp": Object {
+                "description": "No penalty on attacks with specific martial weapon",
+                "name": "Martial Weapon Proficiency",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recuEsiEZ1O2huYCr": Object {
+                "description": "+1 level for turning checks",
+                "name": "Improved Turning",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recuXAYNPNco1uMdG": Object {
+                "name": "Eyes in the Back of Your Head",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recuv5RdScK7Vqhf5": Object {
+                "description": "Trade attack bonus for damage (up to base attack bonus)",
+                "name": "Power Attack",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recvJkbFXbH5ZXAXa": Object {
+                "name": "Multiweapon Fighting",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recvzMqdCBIzd7z9n": Object {
+                "description": "+2 bonus on Listen and Spot checks",
+                "name": "Alertness",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recw2WZMbQ3gonDew": Object {
+                "name": "Flyby Attack",
+                "types": Array [
+                  "General",
+                  "Creature",
+                ],
+              },
+              "recxkSuS8IvkzRVyV": Object {
+                "description": "Use Survival skill to track",
+                "name": "Track",
+                "types": Array [
+                  "General",
+                ],
+              },
+              "recy5YNMs3lo9rYTp": Object {
+                "description": "+1 bonus on attack rolls with selected weapon",
+                "name": "Weapon Focus",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "recyqJvG85XCUZG4x": Object {
+                "description": "+1 dodge bonus to AC against selected target",
+                "name": "Dodge",
+                "types": Array [
+                  "General",
+                  "Fighter Bonus",
+                ],
+              },
+              "reczbG3R5q7p4lj9R": Object {
+                "description": "+3 hit points",
+                "name": "Toughness",
+                "types": Array [
+                  "General",
+                ],
+              },
+            }
           }
           jobClasses={
             Array [
