@@ -32,6 +32,10 @@ const CreatorFormPage4 = ({
 	}, [selectedFeatIds])
 
 	useEffect(() => {
+		setSelectedFeatId(availableFeatIds[0])
+	}, [availableFeatIds])
+
+	useEffect(() => {
 		validateForm()
 	}, [])
 
@@ -39,7 +43,7 @@ const CreatorFormPage4 = ({
 		<div>
 			<h3 className="row--center">Feats</h3>
 
-			<select name="feats" onChange={(e) => setSelectedFeatId(e.target.value)}>
+			<select name="feats" value={selectedFeatId} onChange={(e) => setSelectedFeatId(e.target.value)}>
 				{_.map(availableFeatIds, (featId, i) => (
 					<option 
 						value={featId} 
