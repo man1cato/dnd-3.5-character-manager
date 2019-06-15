@@ -52,6 +52,15 @@ export const removeProfile = () => ({
     type: 'REMOVE_PROFILE'
 })
 
+//REMOVE PROFILE FROM FIREBASE
+// export const startRemoveProfile = () => {
+//     return (dispatch) => {
+//         return database.ref(`users/${uid}/profiles/${id}`).remove().then(() => {
+//             dispatch(removeProfile())
+//         })
+//     }
+// }
+
 //LEVEL UP CHARACTER IN STORE
 // export const levelUp = (character) => ({
 //     type: 'LEVEL_UP',

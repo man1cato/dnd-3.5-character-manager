@@ -53,6 +53,18 @@
     }
 }
 
+.form__content--nowrap {
+    display: flex;
+    justify-content: space-between; 
+    > :first-child {
+        white-space: nowrap;
+    }
+    > :last-child {
+        max-width: 70px; 
+        margin-left: $s-size;
+    }
+}
+
 .form__content--tall {
     @extend .form__content;
     > :last-child {

@@ -6,7 +6,7 @@ exports[`should render PreparedSpells with profile data 1`] = `
     handleCloseModal={[Function]}
   />
   <h3
-    className="row row--center"
+    className="row--center"
   >
     Prepared Spells
   </h3>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render page 1 of CharacterCreationPage 1`] = `
+exports[`should render default state of CharacterCreationPage correctly 1`] = `
 <Provider
   store={
     Object {
@@ -5623,9 +5623,31 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
               enableReinitialize={false}
               initialValues={
                 Object {
+                  "abilities": Object {
+                    "cha": Object {
+                      "score": "",
+                    },
+                    "con": Object {
+                      "score": "",
+                    },
+                    "dex": Object {
+                      "score": "",
+                    },
+                    "int": Object {
+                      "score": "",
+                    },
+                    "str": Object {
+                      "score": "",
+                    },
+                    "wis": Object {
+                      "score": "",
+                    },
+                  },
                   "age": "",
                   "alignment": "Lawful Good",
+                  "bonusLanguages": Array [],
                   "deity": "",
+                  "feats": Array [],
                   "gender": "Male",
                   "heightFt": "",
                   "heightIn": "",
@@ -5843,16 +5865,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                 <Component
                   formik={
                     Object {
-                      "dirty": true,
+                      "dirty": false,
                       "errors": Object {},
                       "handleBlur": [Function],
                       "handleChange": [Function],
                       "handleReset": [Function],
                       "handleSubmit": [Function],
                       "initialValues": Object {
+                        "abilities": Object {
+                          "cha": Object {
+                            "score": "",
+                          },
+                          "con": Object {
+                            "score": "",
+                          },
+                          "dex": Object {
+                            "score": "",
+                          },
+                          "int": Object {
+                            "score": "",
+                          },
+                          "str": Object {
+                            "score": "",
+                          },
+                          "wis": Object {
+                            "score": "",
+                          },
+                        },
                         "age": "",
                         "alignment": "Lawful Good",
+                        "bonusLanguages": Array [],
                         "deity": "",
+                        "feats": Array [],
                         "gender": "Male",
                         "heightFt": "",
                         "heightIn": "",
@@ -5862,7 +5906,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                         "weight": "",
                       },
                       "isSubmitting": false,
-                      "isValid": true,
+                      "isValid": false,
                       "isValidating": false,
                       "registerField": [Function],
                       "resetForm": [Function],
@@ -6084,16 +6128,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                         ],
                       },
                       "values": Object {
-                        "age": "21",
+                        "abilities": Object {
+                          "cha": Object {
+                            "score": "",
+                          },
+                          "con": Object {
+                            "score": "",
+                          },
+                          "dex": Object {
+                            "score": "",
+                          },
+                          "int": Object {
+                            "score": "",
+                          },
+                          "str": Object {
+                            "score": "",
+                          },
+                          "wis": Object {
+                            "score": "",
+                          },
+                        },
+                        "age": "",
                         "alignment": "Lawful Good",
+                        "bonusLanguages": Array [],
                         "deity": "",
+                        "feats": Array [],
                         "gender": "Male",
-                        "heightFt": "4",
-                        "heightIn": "7",
+                        "heightFt": "",
+                        "heightIn": "",
                         "jobClass": "reckjdfZ5f86z4Rtz",
-                        "name": "Arc",
+                        "name": "",
                         "race": "recxyRHegDBrFYJP5",
-                        "weight": "153",
+                        "weight": "",
                       },
                     }
                   }
@@ -10870,16 +10936,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                         setFieldValue={[Function]}
                         values={
                           Object {
-                            "age": "21",
+                            "abilities": Object {
+                              "cha": Object {
+                                "score": "",
+                              },
+                              "con": Object {
+                                "score": "",
+                              },
+                              "dex": Object {
+                                "score": "",
+                              },
+                              "int": Object {
+                                "score": "",
+                              },
+                              "str": Object {
+                                "score": "",
+                              },
+                              "wis": Object {
+                                "score": "",
+                              },
+                            },
+                            "age": "",
                             "alignment": "Lawful Good",
+                            "bonusLanguages": Array [],
                             "deity": "",
+                            "feats": Array [],
                             "gender": "Male",
-                            "heightFt": "4",
-                            "heightIn": "7",
+                            "heightFt": "",
+                            "heightIn": "",
                             "jobClass": "reckjdfZ5f86z4Rtz",
-                            "name": "Arc",
+                            "name": "",
                             "race": "recxyRHegDBrFYJP5",
-                            "weight": "153",
+                            "weight": "",
                           }
                         }
                       >
@@ -10899,16 +10987,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 <FieldInner
                                   formik={
                                     Object {
-                                      "dirty": true,
+                                      "dirty": false,
                                       "errors": Object {},
                                       "handleBlur": [Function],
                                       "handleChange": [Function],
                                       "handleReset": [Function],
                                       "handleSubmit": [Function],
                                       "initialValues": Object {
+                                        "abilities": Object {
+                                          "cha": Object {
+                                            "score": "",
+                                          },
+                                          "con": Object {
+                                            "score": "",
+                                          },
+                                          "dex": Object {
+                                            "score": "",
+                                          },
+                                          "int": Object {
+                                            "score": "",
+                                          },
+                                          "str": Object {
+                                            "score": "",
+                                          },
+                                          "wis": Object {
+                                            "score": "",
+                                          },
+                                        },
                                         "age": "",
                                         "alignment": "Lawful Good",
+                                        "bonusLanguages": Array [],
                                         "deity": "",
+                                        "feats": Array [],
                                         "gender": "Male",
                                         "heightFt": "",
                                         "heightIn": "",
@@ -10918,7 +11028,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                         "weight": "",
                                       },
                                       "isSubmitting": false,
-                                      "isValid": true,
+                                      "isValid": false,
                                       "isValidating": false,
                                       "registerField": [Function],
                                       "resetForm": [Function],
@@ -11140,16 +11250,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                         ],
                                       },
                                       "values": Object {
-                                        "age": "21",
+                                        "abilities": Object {
+                                          "cha": Object {
+                                            "score": "",
+                                          },
+                                          "con": Object {
+                                            "score": "",
+                                          },
+                                          "dex": Object {
+                                            "score": "",
+                                          },
+                                          "int": Object {
+                                            "score": "",
+                                          },
+                                          "str": Object {
+                                            "score": "",
+                                          },
+                                          "wis": Object {
+                                            "score": "",
+                                          },
+                                        },
+                                        "age": "",
                                         "alignment": "Lawful Good",
+                                        "bonusLanguages": Array [],
                                         "deity": "",
+                                        "feats": Array [],
                                         "gender": "Male",
-                                        "heightFt": "4",
-                                        "heightIn": "7",
+                                        "heightFt": "",
+                                        "heightIn": "",
                                         "jobClass": "reckjdfZ5f86z4Rtz",
-                                        "name": "Arc",
+                                        "name": "",
                                         "race": "recxyRHegDBrFYJP5",
-                                        "weight": "153",
+                                        "weight": "",
                                       },
                                     }
                                   }
@@ -11159,7 +11291,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                     name="name"
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    value="Arc"
+                                    value=""
                                   />
                                 </FieldInner>
                               </FormikConnect(FieldInner)>
@@ -11172,16 +11304,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="div"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -11191,7 +11345,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -11413,16 +11567,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -11445,16 +11621,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="select"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -11464,7 +11662,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -11686,16 +11884,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -11743,16 +11963,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                   <FieldInner
                                     formik={
                                       Object {
-                                        "dirty": true,
+                                        "dirty": false,
                                         "errors": Object {},
                                         "handleBlur": [Function],
                                         "handleChange": [Function],
                                         "handleReset": [Function],
                                         "handleSubmit": [Function],
                                         "initialValues": Object {
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
                                           "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
                                           "heightFt": "",
                                           "heightIn": "",
@@ -11762,7 +12004,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           "weight": "",
                                         },
                                         "isSubmitting": false,
-                                        "isValid": true,
+                                        "isValid": false,
                                         "isValidating": false,
                                         "registerField": [Function],
                                         "resetForm": [Function],
@@ -11984,16 +12226,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           ],
                                         },
                                         "values": Object {
-                                          "age": "21",
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
+                                          "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
-                                          "heightFt": "4",
-                                          "heightIn": "7",
+                                          "heightFt": "",
+                                          "heightIn": "",
                                           "jobClass": "reckjdfZ5f86z4Rtz",
-                                          "name": "Arc",
+                                          "name": "",
                                           "race": "recxyRHegDBrFYJP5",
-                                          "weight": "153",
+                                          "weight": "",
                                         },
                                       }
                                     }
@@ -12003,7 +12267,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       name="age"
                                       onBlur={[Function]}
                                       onChange={[Function]}
-                                      value="21"
+                                      value=""
                                     />
                                   </FieldInner>
                                 </FormikConnect(FieldInner)>
@@ -12020,16 +12284,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="div"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -12039,7 +12325,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -12261,16 +12547,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -12294,16 +12602,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                   <FieldInner
                                     formik={
                                       Object {
-                                        "dirty": true,
+                                        "dirty": false,
                                         "errors": Object {},
                                         "handleBlur": [Function],
                                         "handleChange": [Function],
                                         "handleReset": [Function],
                                         "handleSubmit": [Function],
                                         "initialValues": Object {
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
                                           "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
                                           "heightFt": "",
                                           "heightIn": "",
@@ -12313,7 +12643,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           "weight": "",
                                         },
                                         "isSubmitting": false,
-                                        "isValid": true,
+                                        "isValid": false,
                                         "isValidating": false,
                                         "registerField": [Function],
                                         "resetForm": [Function],
@@ -12535,16 +12865,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           ],
                                         },
                                         "values": Object {
-                                          "age": "21",
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
+                                          "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
-                                          "heightFt": "4",
-                                          "heightIn": "7",
+                                          "heightFt": "",
+                                          "heightIn": "",
                                           "jobClass": "reckjdfZ5f86z4Rtz",
-                                          "name": "Arc",
+                                          "name": "",
                                           "race": "recxyRHegDBrFYJP5",
-                                          "weight": "153",
+                                          "weight": "",
                                         },
                                       }
                                     }
@@ -12554,7 +12906,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       name="heightFt"
                                       onBlur={[Function]}
                                       onChange={[Function]}
-                                      value="4"
+                                      value=""
                                     />
                                   </FieldInner>
                                 </FormikConnect(FieldInner)>
@@ -12567,16 +12919,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                   <FieldInner
                                     formik={
                                       Object {
-                                        "dirty": true,
+                                        "dirty": false,
                                         "errors": Object {},
                                         "handleBlur": [Function],
                                         "handleChange": [Function],
                                         "handleReset": [Function],
                                         "handleSubmit": [Function],
                                         "initialValues": Object {
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
                                           "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
                                           "heightFt": "",
                                           "heightIn": "",
@@ -12586,7 +12960,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           "weight": "",
                                         },
                                         "isSubmitting": false,
-                                        "isValid": true,
+                                        "isValid": false,
                                         "isValidating": false,
                                         "registerField": [Function],
                                         "resetForm": [Function],
@@ -12808,16 +13182,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           ],
                                         },
                                         "values": Object {
-                                          "age": "21",
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
+                                          "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
-                                          "heightFt": "4",
-                                          "heightIn": "7",
+                                          "heightFt": "",
+                                          "heightIn": "",
                                           "jobClass": "reckjdfZ5f86z4Rtz",
-                                          "name": "Arc",
+                                          "name": "",
                                           "race": "recxyRHegDBrFYJP5",
-                                          "weight": "153",
+                                          "weight": "",
                                         },
                                       }
                                     }
@@ -12827,7 +13223,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       name="heightIn"
                                       onBlur={[Function]}
                                       onChange={[Function]}
-                                      value="7"
+                                      value=""
                                     />
                                   </FieldInner>
                                 </FormikConnect(FieldInner)>
@@ -12844,16 +13240,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="div"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -12863,7 +13281,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -13085,16 +13503,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -13109,16 +13549,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="div"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -13128,7 +13590,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -13350,16 +13812,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -13383,16 +13867,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                   <FieldInner
                                     formik={
                                       Object {
-                                        "dirty": true,
+                                        "dirty": false,
                                         "errors": Object {},
                                         "handleBlur": [Function],
                                         "handleChange": [Function],
                                         "handleReset": [Function],
                                         "handleSubmit": [Function],
                                         "initialValues": Object {
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
                                           "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
                                           "heightFt": "",
                                           "heightIn": "",
@@ -13402,7 +13908,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           "weight": "",
                                         },
                                         "isSubmitting": false,
-                                        "isValid": true,
+                                        "isValid": false,
                                         "isValidating": false,
                                         "registerField": [Function],
                                         "resetForm": [Function],
@@ -13624,16 +14130,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                           ],
                                         },
                                         "values": Object {
-                                          "age": "21",
+                                          "abilities": Object {
+                                            "cha": Object {
+                                              "score": "",
+                                            },
+                                            "con": Object {
+                                              "score": "",
+                                            },
+                                            "dex": Object {
+                                              "score": "",
+                                            },
+                                            "int": Object {
+                                              "score": "",
+                                            },
+                                            "str": Object {
+                                              "score": "",
+                                            },
+                                            "wis": Object {
+                                              "score": "",
+                                            },
+                                          },
+                                          "age": "",
                                           "alignment": "Lawful Good",
+                                          "bonusLanguages": Array [],
                                           "deity": "",
+                                          "feats": Array [],
                                           "gender": "Male",
-                                          "heightFt": "4",
-                                          "heightIn": "7",
+                                          "heightFt": "",
+                                          "heightIn": "",
                                           "jobClass": "reckjdfZ5f86z4Rtz",
-                                          "name": "Arc",
+                                          "name": "",
                                           "race": "recxyRHegDBrFYJP5",
-                                          "weight": "153",
+                                          "weight": "",
                                         },
                                       }
                                     }
@@ -13643,7 +14171,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       name="weight"
                                       onBlur={[Function]}
                                       onChange={[Function]}
-                                      value="153"
+                                      value=""
                                     />
                                   </FieldInner>
                                 </FormikConnect(FieldInner)>
@@ -13660,16 +14188,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="div"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -13679,7 +14229,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -13901,16 +14451,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -13936,16 +14508,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                 component="select"
                                 formik={
                                   Object {
-                                    "dirty": true,
+                                    "dirty": false,
                                     "errors": Object {},
                                     "handleBlur": [Function],
                                     "handleChange": [Function],
                                     "handleReset": [Function],
                                     "handleSubmit": [Function],
                                     "initialValues": Object {
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
                                       "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
                                       "heightFt": "",
                                       "heightIn": "",
@@ -13955,7 +14549,7 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
-                                    "isValid": true,
+                                    "isValid": false,
                                     "isValidating": false,
                                     "registerField": [Function],
                                     "resetForm": [Function],
@@ -14177,16 +14771,38 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                                       ],
                                     },
                                     "values": Object {
-                                      "age": "21",
+                                      "abilities": Object {
+                                        "cha": Object {
+                                          "score": "",
+                                        },
+                                        "con": Object {
+                                          "score": "",
+                                        },
+                                        "dex": Object {
+                                          "score": "",
+                                        },
+                                        "int": Object {
+                                          "score": "",
+                                        },
+                                        "str": Object {
+                                          "score": "",
+                                        },
+                                        "wis": Object {
+                                          "score": "",
+                                        },
+                                      },
+                                      "age": "",
                                       "alignment": "Lawful Good",
+                                      "bonusLanguages": Array [],
                                       "deity": "",
+                                      "feats": Array [],
                                       "gender": "Male",
-                                      "heightFt": "4",
-                                      "heightIn": "7",
+                                      "heightFt": "",
+                                      "heightIn": "",
                                       "jobClass": "reckjdfZ5f86z4Rtz",
-                                      "name": "Arc",
+                                      "name": "",
                                       "race": "recxyRHegDBrFYJP5",
-                                      "weight": "153",
+                                      "weight": "",
                                     },
                                   }
                                 }
@@ -14373,22 +14989,24 @@ exports[`should render page 1 of CharacterCreationPage 1`] = `
                       handleBack={[Function]}
                       handleNext={[Function]}
                       isSubmitting={false}
-                      isValid={true}
+                      isValid={false}
                       page={1}
                       pages={
                         Array [
                           [Function],
                           [Function],
                           [Function],
+                          [Function],
                         ]
                       }
                       setErrors={[Function]}
+                      validateForm={[Function]}
                     >
                       <div
                         className="container container--footer form__footer"
                       >
                         <button
-                          disabled={false}
+                          disabled={true}
                           id="nextButton"
                           onClick={[Function]}
                           type="button"

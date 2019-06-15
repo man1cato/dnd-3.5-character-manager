@@ -32,7 +32,6 @@ const renderApp = () => {
 			ReactDOM.render(jsx, document.getElementById('app'))
 		})
 		hasRendered = true
-		console.log('rendered app')
 	}
 }
 
@@ -40,8 +39,8 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'))
 
 firebase.auth().onAuthStateChanged(async (user) => {
 	if (user) {
+		console.log('logged in')
 		await store.dispatch(startGetProfiles(user.uid))
-		
 		const profiles = store.getState().profiles
 		const selectedCharacterId = localStorage.getItem('selectedCharacterId')
 		const profileId = selectedCharacterId || profiles.length === 1 && profiles[0].id
@@ -49,7 +48,6 @@ firebase.auth().onAuthStateChanged(async (user) => {
 		if (profileId) {
 			await store.dispatch(startSetProfile(user.uid, profileId))
 		} 
-		const profile = store.getState().profile
 		
 		store.dispatch(login(user.uid))		
 		renderApp()

@@ -6,14 +6,17 @@
 }
 
 .row--center {
+  @extend .row;
   justify-content: center;
 }
 
 .row--left {
+  @extend .row;
   justify-content: flex-start;
 }
 
 .row--right {
+  @extend .row;
   justify-content: flex-end;
 }
 

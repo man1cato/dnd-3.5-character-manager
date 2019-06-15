@@ -49,7 +49,7 @@ exports[`should render CompanionPage with profile data 1`] = `
       />
     </div>
     <h3
-      className="row row--center"
+      className="row--center"
     >
       Abilities
     </h3>
@@ -67,7 +67,7 @@ exports[`should render CompanionPage with profile data 1`] = `
       handleChange={[Function]}
     />
     <h3
-      className="row row--center"
+      className="row--center"
     >
       Skills
     </h3>
@@ -98,7 +98,7 @@ exports[`should render CompanionPage with profile data 1`] = `
       }
     />
     <h3
-      className="row row--center"
+      className="row--center"
     >
       Combat
     </h3>
@@ -142,7 +142,7 @@ exports[`should render CompanionPage with profile data 1`] = `
         Attack
       </div>
       <div
-        className="row row--left"
+        className="row--left"
       >
         Claws +4 melee (1d2–5)
       </div>

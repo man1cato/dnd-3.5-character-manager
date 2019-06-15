@@ -75,7 +75,7 @@ exports[`should render equipment page with profile data 1`] = `
       </div>
     </div>
     <div
-      className="row row--right"
+      className="row--right"
     >
       <h4>
         Total money: 

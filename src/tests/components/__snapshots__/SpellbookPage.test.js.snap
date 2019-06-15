@@ -17,7 +17,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
       key="0"
     >
       <h3
-        className="row row--center"
+        className="row--center"
       >
         Level 
         0
@@ -170,7 +170,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
       key="1"
     >
       <h3
-        className="row row--center"
+        className="row--center"
       >
         Level 
         1

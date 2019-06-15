@@ -21,7 +21,7 @@ const CreatorFormFooter = ({
 				Create Character
 			</button>
 		) : (                                        
-			<button type="button" id="nextButton" disabled={!isValid} onClick={handleNext}>   
+			<button type="button" id="nextButton" disabled={!isValid} onClick={() => handleNext()}>   
 				Next
 			</button>
 		)}

@@ -8,24 +8,40 @@ import _ from 'lodash'
 import Page1 from './CreatorFormPage1'
 import Page2 from './CreatorFormPage2'
 import Page3 from './CreatorFormPage3'
+import Page4 from './CreatorFormPage4'
 import CreatorFormFooter from './CreatorFormFooter'
 import { history } from '../routers/AppRouter'
 import { startCreateProfile } from '../actions/profile'
 import { apiObjectToArray } from '../utils/utils'
+import { abilities } from '../utils/staticData'
 
 
-const pages = [Page1, Page2, Page3]
+const pages = [Page1, Page2, Page3, Page4]
 
+const abilityMessage = 'Enter an integer between 3 and 18'
+const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError(' ')
 const validationSchema = Yup.object().shape({
 	page1: Yup.object().shape({
 		name: Yup.string().min(2, 'Name is too short!').max(30, 'Name is too long!').required('Required'),
-		age: Yup.number().required().positive().integer(),
-		heightFt: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required'),
-		heightIn: Yup.number('Enter an integer between 0 and 12').positive('Enter an integer between 0 and 12').integer('Enter an integer between 0 and 12').max(11, 'Enter an integer between 0 and 12').required('Required'),
-		weight: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required')
+		age: Yup.number().positive().integer().required('Required').typeError('Enter a number'),
+		heightFt: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number'),
+		heightIn: Yup.number('Enter an integer between 0 and 12').positive('Enter an integer between 0 and 12').integer('Enter an integer between 0 and 12').max(11, 'Enter an integer between 0 and 12').required('Required').typeError('Enter a number'),
+		weight: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number')
 	}),
 	page2: undefined,
-	page3: undefined
+	page3: Yup.object().shape({
+		abilities: Yup.object().shape({
+			str: Yup.object().shape({ score: abilityValidation	}),
+			dex: Yup.object().shape({ score: abilityValidation }),
+			con: Yup.object().shape({ score: abilityValidation }),
+			int: Yup.object().shape({ score: abilityValidation }),
+			wis: Yup.object().shape({ score: abilityValidation }),
+			cha: Yup.object().shape({ score: abilityValidation }),
+		})
+	}),
+	page4: Yup.object().shape({
+		feats: Yup.array().required('Select at least one feat')
+	})
 })
 
 
@@ -87,7 +103,7 @@ export class CharacterCreationPage extends React.Component {
 		setErrors({})
 	}
 
-	handleNext = () => {
+	handleNext = (validateForm) => {
 		this.setState((prevState) => ({
 			page: prevState.page + 1
 		}))
@@ -107,38 +123,47 @@ export class CharacterCreationPage extends React.Component {
 						heightIn: '',
 						weight: '',
 						race: this.state.selectedRace.id,
-						jobClass: this.state.selectedJobClass.id,
 						alignment: 'Lawful Good',
-						deity: ''
+						jobClass: this.state.selectedJobClass.id,
+						bonusLanguages: [],
+						deity: '',
+						abilities: _.mapValues(abilities, () => ({ score: '' })),
+						feats: []
 					}}
 												
 					validationSchema={Yup.reach(validationSchema, `page${this.state.page}`)}
 
 					onSubmit={(values, {setErrors, setSubmitting}) => {
 						const profile = {
-							...values,
+							name: values.name,
+							gender: values.gender,
+							age: values.age,
+							height: `${values.heightFt}'${values.heightIn}"`,
+							weight: values.weight,
 							race: this.state.selectedRace.name,
 							size: this.state.selectedRace.size,
-							specialAbilities: this.state.selectedJobClass.levels["1"].specialAbilities,
+							alignment: values.alignment,
 							jobClass: this.state.selectedJobClass.name,
-							height: `${values.heightFt}'${values.heightIn}"`,
 							languages: _.orderBy(this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages)),
+							abilities: values.abilities,
+							specialAbilities: this.state.selectedJobClass.levels["1"].specialAbilities,
+							feats: values.feats,
 							deity: !!values.deity ? values.deity : "None",
 							level: 1,
 							iconUrl: this.state.selectedRace.iconUrl
 						}
-						delete profile.heightFt
-						delete profile.heightIn
-						delete profile.bonusLanguages
-						if(profile.school === null) {delete profile.school}
+						if(!!values.school) {
+							profile.school = values.school 
+							profile.prohibitedSchools = values.prohibitedSchools
+						}
 						this.props.startCreateProfile(profile)
-
+						
 						setTimeout(() => { history.push('/profile') }, 1500)
 						setSubmitting(false)
 					}}
 				>
 
-					{({values, setFieldValue, handleChange, isSubmitting, isValid, setErrors, setFieldError}) => (
+					{({ values, setFieldValue, handleChange, isSubmitting, isValid, validateForm, setErrors, setFieldError}) => (
 						<Form >
 							<div className="container container--body">
 								{{
@@ -161,16 +186,25 @@ export class CharacterCreationPage extends React.Component {
 										handleMultiSelect={this.handleMultiSelect}
 										setFieldValue={setFieldValue}
 										setFieldError={setFieldError}
+										validateForm={validateForm}
 									/>,
 									3: <Page3
+										values={values}										
+										handleChange={handleChange}
+										setFieldValue={setFieldValue}
+										setFieldError={setFieldError}		
+										validateForm={validateForm}								
+									/>,
+									4: <Page4
 										values={values}
 										feats={this.props.feats}
-										selectedJobClass={this.state.selectedJobClass}										
+										selectedJobClass={this.state.selectedJobClass}
 										handleChange={handleChange}
 										handleSelect={this.handleSelect}
 										handleMultiSelect={this.handleMultiSelect}
 										setFieldValue={setFieldValue}
 										setFieldError={setFieldError}
+										validateForm={validateForm}
 									/>
 								}[this.state.page]}
 							</div>
@@ -184,6 +218,7 @@ export class CharacterCreationPage extends React.Component {
 								setErrors={setErrors}
 								isSubmitting={isSubmitting}
 								isValid={isValid}
+								validateForm={validateForm}
 							/>
 
 						</Form>

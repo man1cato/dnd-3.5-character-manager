@@ -9,3 +9,12 @@ export const apiObjectToArray = (obj) => _.orderBy(Object.keys(obj).map((id) => 
 	id,
 	...obj[id]
 })), ['name'], ['asc'])
+
+
+export const rollDice = (dieFaces = 6, countDice = 1) => {
+	let total = 0
+	for (let i = 0; i < countDice; i++) {
+		total += Math.floor((Math.random() * dieFaces) + 1)
+	}
+	return total
+}

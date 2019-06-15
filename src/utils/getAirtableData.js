@@ -1,9 +1,6 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 import axios from 'axios'
 import _ from 'lodash'
-import {convertTextToArray} from './utils'
+import { convertTextToArray } from './utils'
 
 const apiKey = process.env.AIRTABLE_API_KEY
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL'

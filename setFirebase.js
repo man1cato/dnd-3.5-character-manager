@@ -1,16 +1,24 @@
 import dotenv from 'dotenv'
-dotenv.config()
-
 import admin from 'firebase-admin'
-import serviceAccount from './config/dnd-3-5-character-manager-key.json'
+import serviceAccountDev from './config/dnd-3-5-character-manager-key.json'
+import serviceAccountTest from './config/dnd-3-5-character-manager-test-key.json'
+
 
 import { getRaces, getJobClasses, getFeats, getSpecialAbilities, getSkills, getItems, getSpells } from './src/utils/getAirtableData'
 import getAirtableProfile from './src/utils/getAirtableProfile'
 
+let serviceAccount
+if (process.env.NODE_ENV === 'test') {
+   dotenv.config({ path: './config/test.env' })
+   serviceAccount = serviceAccountTest
+} else if (process.env.NODE_ENV === 'development') {
+   dotenv.config({ path: './config/dev.env' })
+   serviceAccount = serviceAccountDev
+}
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://dnd-3-5-character-manager.firebaseio.com"
+   credential: admin.credential.cert(serviceAccount),
+   databaseURL: process.env.FIREBASE_DATABASE_URL
 })
 
 const database = admin.database()
@@ -64,13 +72,16 @@ const setProfile = (uid) => {
   });
 }
 
-// setRaces()
-// setJobClasses()
-// setFeats()
-// setSpecialAbilities()
-// setSkills()
+setRaces()
+setJobClasses()
+setFeats()
+setSpecialAbilities()
+setSkills()
 setItems()
-// setSpells()
+setSpells()
 // setProfile(process.env.USER_ID)
 
+// Run the following in the powershell to set env var: 
+// $env:NODE_ENV="test"
+// $env:AIRTABLE_API_KEY="key"
 // Run the following in the CLI to execute file: ./node_modules/.bin/babel-node setFirebase.js

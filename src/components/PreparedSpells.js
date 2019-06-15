@@ -89,7 +89,7 @@ export class PreparedSpells extends React.Component{
                handleCloseModal={this.handleCloseModal}
             />            
 
-            <h3 className="row row--center">Prepared Spells</h3>
+            <h3 className="row--center">Prepared Spells</h3>
 
             <div className="grid grid--preparedSpells">
                <h5 className="grid__col1">Spell</h5>

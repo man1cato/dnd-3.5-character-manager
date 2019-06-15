@@ -114,18 +114,18 @@ export class CompanionPage extends React.Component {
 						<Feats featIds={this.props.companion.feats} />
 					</div>
 
-					<h3 className="row row--center">Abilities</h3>
+					<h3 className="row--center">Abilities</h3>
 					<Abilities
 						abilities={this.state.companion.abilities}
 						handleChange={this.handleChange}
 					/>
 
-					<h3 className="row row--center">Skills</h3>
+					<h3 className="row--center">Skills</h3>
 					<SkillSet 
 						skillSet={this.props.companion.skillSet}                        
 					/>
 					
-					<h3 className="row row--center">Combat</h3>
+					<h3 className="row--center">Combat</h3>
 					<PhysicalStats
 						hp={this.state.companion.hp}
 						ac={this.props.companion.ac}
@@ -136,7 +136,7 @@ export class CompanionPage extends React.Component {
 
 					<div className="grid grid--combat">
 						<div className="row__title">Attack</div>
-						<div className="row row--left">            
+						<div className="row--left">            
 							{this.props.companion.attack}
 						</div>
 					</div>

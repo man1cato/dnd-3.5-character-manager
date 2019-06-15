@@ -132,7 +132,7 @@ export class EquipmentPage extends React.Component {
 						))}
 					</div>
 
-					<div className="row row--right">
+					<div className="row--right">
 						<h4>Total money: {this.state.money.total} gp</h4> 
 					</div>
 					

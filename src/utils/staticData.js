@@ -10,3 +10,12 @@ export const alignments = [
    'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 
    'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'
 ]
+
+export const abilities = {
+   str: 'Strength',
+   dex: 'Dexterity',
+   con: 'Constitution',
+   int: 'Intelligence',
+   wis: 'Wisdom',
+   cha: 'Charisma'
+}
