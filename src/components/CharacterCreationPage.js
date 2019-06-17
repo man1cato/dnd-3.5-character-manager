@@ -57,9 +57,9 @@ export class CharacterCreationPage extends React.Component {
 		const value = e.target.value;
 		if (name === 'race') { setFieldValue('bonusLanguages', []) } 
 		if (name === 'school') {
-			setFieldValue('prohibitedSchools', []);
+			setFieldValue('prohibitedSchools', [])
 			if (value === 'Universal') {
-				setFieldError('prohibitedSchools', undefined);
+				setFieldError('prohibitedSchools', undefined)
 			} 
 		} 
 		if (name === 'jobClass') {
@@ -103,7 +103,7 @@ export class CharacterCreationPage extends React.Component {
 		setErrors({})
 	}
 
-	handleNext = (validateForm) => {
+	handleNext = () => {
 		this.setState((prevState) => ({
 			page: prevState.page + 1
 		}))
@@ -127,7 +127,7 @@ export class CharacterCreationPage extends React.Component {
 						jobClass: this.state.selectedJobClass.id,
 						bonusLanguages: [],
 						deity: '',
-						abilities: _.mapValues(abilities, () => ({ score: '' })),
+						abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
 						feats: []
 					}}
 												
@@ -140,16 +140,16 @@ export class CharacterCreationPage extends React.Component {
 							age: values.age,
 							height: `${values.heightFt}'${values.heightIn}"`,
 							weight: values.weight,
-							race: this.state.selectedRace.name,
-							size: this.state.selectedRace.size,
+							race: this.state.selectedRace.id,
 							alignment: values.alignment,
-							jobClass: this.state.selectedJobClass.name,
+							jobClass: this.state.selectedJobClass.id,
 							languages: _.orderBy(this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages)),
-							abilities: values.abilities,
+							abilities: _.mapValues(values.abilities, (ability) => ({score: ability.final})),
 							specialAbilities: this.state.selectedJobClass.levels["1"].specialAbilities,
 							feats: values.feats,
 							deity: !!values.deity ? values.deity : "None",
 							level: 1,
+							xp: 0,
 							iconUrl: this.state.selectedRace.iconUrl
 						}
 						if(!!values.school) {
@@ -189,7 +189,8 @@ export class CharacterCreationPage extends React.Component {
 										validateForm={validateForm}
 									/>,
 									3: <Page3
-										values={values}										
+										values={values}
+										selectedRace={this.state.selectedRace} 
 										handleChange={handleChange}
 										setFieldValue={setFieldValue}
 										setFieldError={setFieldError}		

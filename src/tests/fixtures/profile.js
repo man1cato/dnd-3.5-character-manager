@@ -3,8 +3,8 @@ export default {
 	fields: {
 		name:'Istvyll Bannianea',
 		gender: 'Male',
-		race: 'Grey Elf',
-		jobClass: 'Wizard',
+		race: 'recOadObhQKOMa7f2',
+		jobClass: 'recBCWC99ohXXKqwL',
 		alignment:'Lawful Evil',
 		school:'Transmutation',
 		prohibitedSchools: ['Illusion, Necromancy'],
@@ -17,35 +17,28 @@ export default {
 			damage: 10
 		},
 		xp: 10000,
-		hd: 'D4',
 		abilities: {
 			str: {
-				name:'STR',
 				score:14,
 				mod:2
 			},
 			dex: {
-				name:'DEX',
 				score:18,
 				mod:2
 			},
 			con: {
-				name:'CON',
 				score:16,
 				mod:3
 			},
 			int: {
-				name:'INT',
 				score:20,
 				mod:5
 			},
 			wis: {
-				name:'WIS',
 				score:14,
 				mod:2
 			},
 			cha: {
-				name:'CHA',
 				score:11,
 				mod:0
 			}
@@ -55,34 +48,27 @@ export default {
 		skillSet: [
 			{
 				id: "recfbplSsRmzNs68J",
-				name: "Appraise",
 				ranks: 4
 			},{
 				id: "recoJ7dkAWtHAkj3v",
-				name: "Balance",
 				ranks: 3
 			}, {
 				id: "recHCeKVn3CB0HcNA",
-				name: "Climb",
 				ranks: 5
 			}, {
 				id: "recs2EXcqiCIfwO0w",
-				name: "Conscentration",
 				ranks: 9
 			}
 		],
 		saves: {
 			fortitude: {
-				name: "Fortitude",
-				base: 4
+				mod: 4
 			},
 			reflex: {
-				name: "Reflex",
-				base: 5
+				mod: 5
 			},
 			will: {
-				name: "Will",
-				base: 6
+				mod: 6
 			}
 		},
 		attacks: {
@@ -145,7 +131,7 @@ export default {
 				id: 456,
 				level: 0,
 				name: "Arcane Mark",
-				description: "aomething",
+				description: "Something",
 				school: "Univ",
 				mastered: true,
 				prepared: 2,

@@ -11,37 +11,37 @@ exports[`should render Abilities with profile data 1`] = `
   </h5>
   <div
     className="grid__col1"
-    key="0"
+    key="ability0"
   >
     STR
   </div>
   <div
     className="grid__col1"
-    key="1"
+    key="ability1"
   >
     DEX
   </div>
   <div
     className="grid__col1"
-    key="2"
+    key="ability2"
   >
     CON
   </div>
   <div
     className="grid__col1"
-    key="3"
+    key="ability3"
   >
     INT
   </div>
   <div
     className="grid__col1"
-    key="4"
+    key="ability4"
   >
     WIS
   </div>
   <div
     className="grid__col1"
-    key="5"
+    key="ability5"
   >
     CHA
   </div>
@@ -52,37 +52,37 @@ exports[`should render Abilities with profile data 1`] = `
   </h5>
   <div
     className="grid__col2"
-    key="0"
+    key="score0"
   >
     14
   </div>
   <div
     className="grid__col2"
-    key="1"
+    key="score1"
   >
     18
   </div>
   <div
     className="grid__col2"
-    key="2"
+    key="score2"
   >
     16
   </div>
   <div
     className="grid__col2"
-    key="3"
+    key="score3"
   >
     20
   </div>
   <div
     className="grid__col2"
-    key="4"
+    key="score4"
   >
     14
   </div>
   <div
     className="grid__col2"
-    key="5"
+    key="score5"
   >
     11
   </div>
@@ -93,37 +93,37 @@ exports[`should render Abilities with profile data 1`] = `
   </h5>
   <div
     className="grid__col3"
-    key="0"
+    key="mod0"
   >
     2
   </div>
   <div
     className="grid__col3"
-    key="1"
+    key="mod1"
   >
     2
   </div>
   <div
     className="grid__col3"
-    key="2"
+    key="mod2"
   >
     3
   </div>
   <div
     className="grid__col3"
-    key="3"
+    key="mod3"
   >
     5
   </div>
   <div
     className="grid__col3"
-    key="4"
+    key="mod4"
   >
     2
   </div>
   <div
     className="grid__col3"
-    key="5"
+    key="mod5"
   >
     0
   </div>
@@ -135,7 +135,7 @@ exports[`should render Abilities with profile data 1`] = `
   <input
     className="grid__col4"
     id="str"
-    key="0"
+    key="tempScore0"
     name="abilities"
     onChange={[MockFunction]}
     type="text"
@@ -143,7 +143,7 @@ exports[`should render Abilities with profile data 1`] = `
   <input
     className="grid__col4"
     id="dex"
-    key="1"
+    key="tempScore1"
     name="abilities"
     onChange={[MockFunction]}
     type="text"
@@ -151,7 +151,7 @@ exports[`should render Abilities with profile data 1`] = `
   <input
     className="grid__col4"
     id="con"
-    key="2"
+    key="tempScore2"
     name="abilities"
     onChange={[MockFunction]}
     type="text"
@@ -159,7 +159,7 @@ exports[`should render Abilities with profile data 1`] = `
   <input
     className="grid__col4"
     id="int"
-    key="3"
+    key="tempScore3"
     name="abilities"
     onChange={[MockFunction]}
     type="text"
@@ -167,7 +167,7 @@ exports[`should render Abilities with profile data 1`] = `
   <input
     className="grid__col4"
     id="wis"
-    key="4"
+    key="tempScore4"
     name="abilities"
     onChange={[MockFunction]}
     type="text"
@@ -175,7 +175,7 @@ exports[`should render Abilities with profile data 1`] = `
   <input
     className="grid__col4"
     id="cha"
-    key="5"
+    key="tempScore5"
     name="abilities"
     onChange={[MockFunction]}
     type="text"
@@ -187,27 +187,27 @@ exports[`should render Abilities with profile data 1`] = `
   </h5>
   <div
     className="grid__col5"
-    key="0"
+    key="tempMod0"
   />
   <div
     className="grid__col5"
-    key="1"
+    key="tempMod1"
   />
   <div
     className="grid__col5"
-    key="2"
+    key="tempMod2"
   />
   <div
     className="grid__col5"
-    key="3"
+    key="tempMod3"
   />
   <div
     className="grid__col5"
-    key="4"
+    key="tempMod4"
   />
   <div
     className="grid__col5"
-    key="5"
+    key="tempMod5"
   />
 </div>
 `;

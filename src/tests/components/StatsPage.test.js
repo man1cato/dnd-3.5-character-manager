@@ -1,24 +1,27 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-
-import {StatsPage} from '../../components/StatsPage';
-import profile from '../fixtures/profile';
+import React from 'react'
+import ConnectedStatsPage from '../../components/StatsPage'
+import profile from '../fixtures/profile'
+import { apiData, createConnectedWrapper } from '../utils'
+ 
 
 const profileData = {
-  id: profile.id,
-  ...profile.fields
-};
+	id: profile.id,
+	...profile.fields
+}
 
-let wrapper;
+let wrapper
 
-beforeEach(() => {
-  wrapper = shallow(
-    <StatsPage 
-      {...profileData} 
-    />
-  );
-});
+beforeAll(async () => {
+	const api = await apiData()
+	wrapper = createConnectedWrapper(ConnectedStatsPage,
+		{
+			profile: profileData,
+			jobClasses: api.jobClasses,
+			skills: api.skills
+		}
+	)
+})
 
 test('should render stats page with profile data', () => {
-  expect(wrapper).toMatchSnapshot();
-});
+  	expect(wrapper).toMatchSnapshot()
+})

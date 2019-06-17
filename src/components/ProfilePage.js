@@ -1,10 +1,10 @@
-import React, {Fragment} from 'react';
-import {connect} from 'react-redux';
+import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
 
-import Header from './Header';
-import Footer from './Footer';
-import Feats from './Feats';
-import SpecialAbilities from './SpecialAbilities';
+import Header from './Header'
+import Footer from './Footer'
+import Feats from './Feats'
+import SpecialAbilities from './SpecialAbilities'
 
 
 export const ProfilePage = (props) => (
@@ -16,13 +16,13 @@ export const ProfilePage = (props) => (
 				<img className="grid--profile__img" src={props.iconUrl} />
 
 				<h4 className="grid--profile__name">{props.name}</h4>
-				<div>{props.race}</div>
+				<div>{props.race.name}</div>
 				<div>{props.gender}</div>
-				<div>{props.jobClass}</div>
+				<div>{props.jobClass.name}</div>
 				<div>{props.age} yrs</div>
 				<div>{props.alignment}</div>
 				<div>{props.height}</div>
-				<div>{props.size}</div>
+				<div>{props.race.size}</div>
 				<div>{props.weight} lbs</div>
 
 				<h4 className="grid--profile__features-key">Languages</h4>
@@ -67,23 +67,10 @@ export const ProfilePage = (props) => (
 )
 
 
-const mapStateToProps = (state) => ({
-	name: state.profile.name,
-	race: state.profile.race,
-	gender: state.profile.gender,
-	jobClass: state.profile.jobClass,
-	age: state.profile.age,
-	alignment: state.profile.alignment,
-	height: state.profile.height,
-	size: state.profile.size,
-	weight: state.profile.weight,
-	languages: state.profile.languages,
-	feats: state.profile.feats,
-	specialAbilities: state.profile.specialAbilities,
-	school: state.profile.school,
-	prohibitedSchools: state.profile.prohibitedSchools,
-	deity: state.profile.deity,
-	iconUrl: state.profile.iconUrl
+const mapStateToProps = ({profile, races, jobClasses}) => ({
+	...profile,
+	race: races[profile.race],
+	jobClass: jobClasses[profile.jobClass]
 })
 
-export default connect(mapStateToProps)(ProfilePage);
+export default connect(mapStateToProps)(ProfilePage)

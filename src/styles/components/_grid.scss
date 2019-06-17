@@ -32,6 +32,9 @@
 .grid__col5 {
   grid-column: 5;
 }
+.grid__col-span4 {
+  grid-column: 1 / span 4;
+}
 
 //TEMPLATES
 .grid--3col {
@@ -58,6 +61,7 @@
   @extend .grid--columns;
   grid-template-columns: repeat(8, 1fr);
 }
+
 
 //PROFILE
 .grid--profile {
@@ -97,6 +101,10 @@
     max-width: 80px;
     text-align: center;
   }
+}
+.grid--abilities-set {
+  @extend .grid--abilities;
+  grid-template-columns: 2fr repeat(3 1fr);
 }
 
 //SKILLS
@@ -209,7 +217,7 @@
 
 //COMBAT
 .grid--combat {
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 2fr 3fr;
 }
 
 //COMPANION

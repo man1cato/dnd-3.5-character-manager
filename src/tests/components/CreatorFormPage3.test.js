@@ -3,12 +3,16 @@ import { shallow } from 'enzyme'
 import _ from 'lodash'
 import CreatorFormPage3 from '../../components/CreatorFormPage3'
 import { abilities } from '../../utils/staticData'
+import { apiData } from '../utils'
+import profile from '../fixtures/profile'
 
 
 let wrapper, props
-beforeEach(() => {
+beforeAll(async () => {
+   const api = await apiData()
    props = {
-      values: { abilities: _.mapValues(abilities, () => ({ score: '' })) }
+      values: { abilities: _.mapValues(abilities, () => ({ score: '' })) },
+      selectedRace: api.races[profile.fields.race]
    }
    wrapper = shallow(<CreatorFormPage3 {...props} />)
 })

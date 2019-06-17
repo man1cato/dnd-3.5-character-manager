@@ -5,10 +5,6 @@ import Abilities from '../../components/Abilities'
 import profile from '../fixtures/profile'
 
 
-const profileData = {
-  id: profile.id,
-  ...profile.fields
-}
 const handleChange = jest.fn()
 
 let wrapper

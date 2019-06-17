@@ -3,7 +3,7 @@ import React from 'react';
 const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
         
     <div className="grid grid--combat">
-        <div className="row__title">HP</div>
+        <div className="row__title">Hit Points</div>
         <div className="row--left">
             <div className="row__item">
                 <h5>Base</h5>
@@ -37,7 +37,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
             </div>
         </div>
 
-        <div className="row__title">AC</div>
+        <div className="row__title">Armor Class</div>
         <div className="row--left">            
             <div className="row__item">
                 <h5>Base</h5>
@@ -53,7 +53,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
             </div>
         </div>
 
-        <div className="row__title">Init</div>
+        <div className="row__title">Initiative</div>
         <div className="row--left">            
             <div className="row__item">
                 <h5>Base</h5>

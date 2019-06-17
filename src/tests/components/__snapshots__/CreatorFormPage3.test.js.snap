@@ -8,150 +8,193 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
     Ability Scores
   </h3>
   <div
-    className="row--center"
+    className="grid grid--abilities-set"
   >
-    <button
-      id="abilitiesRollButton"
-      onClick={[Function]}
-      type="button"
+    <h5
+      className="grid__col1"
     >
-      Roll
-    </button>
-  </div>
-  <div
-    className="form__group"
-    key="str"
-  >
+      Ability
+    </h5>
+    <h5
+      className="grid__col2"
+    >
+      Score
+    </h5>
+    <h5
+      className="grid__col3"
+    >
+      Race Mod
+    </h5>
+    <h5
+      className="grid__col4"
+    >
+      Final
+    </h5>
+    <h4
+      className="grid__col1"
+    >
+      Strength
+       (
+      STR
+      )
+    </h4>
+    <FormikConnect(FieldInner)
+      className="grid__col2"
+      id="strInput"
+      name="abilities.str.score"
+      onChange={[Function]}
+      value=""
+    />
     <div
-      className="form__content--nowrap"
+      className="grid__col3"
     >
-      <h4>
-        Strength
-         (
-        STR
-        )
-      </h4>
-      <FormikConnect(FieldInner)
-        id="strInput"
-        name="abilities.str.score"
-      />
+      -2
     </div>
+    <div
+      className="grid__col4"
+    />
     <FormikConnect(ErrorMessageImpl)
+      className="grid__col-span4"
       component="div"
       name="abilities.str.score"
     />
-  </div>
-  <div
-    className="form__group"
-    key="dex"
-  >
-    <div
-      className="form__content--nowrap"
+    <h4
+      className="grid__col1"
     >
-      <h4>
-        Dexterity
-         (
-        DEX
-        )
-      </h4>
-      <FormikConnect(FieldInner)
-        id="dexInput"
-        name="abilities.dex.score"
-      />
+      Dexterity
+       (
+      DEX
+      )
+    </h4>
+    <FormikConnect(FieldInner)
+      className="grid__col2"
+      id="dexInput"
+      name="abilities.dex.score"
+      onChange={[Function]}
+      value=""
+    />
+    <div
+      className="grid__col3"
+    >
+      2
     </div>
+    <div
+      className="grid__col4"
+    />
     <FormikConnect(ErrorMessageImpl)
+      className="grid__col-span4"
       component="div"
       name="abilities.dex.score"
     />
-  </div>
-  <div
-    className="form__group"
-    key="con"
-  >
-    <div
-      className="form__content--nowrap"
+    <h4
+      className="grid__col1"
     >
-      <h4>
-        Constitution
-         (
-        CON
-        )
-      </h4>
-      <FormikConnect(FieldInner)
-        id="conInput"
-        name="abilities.con.score"
-      />
+      Constitution
+       (
+      CON
+      )
+    </h4>
+    <FormikConnect(FieldInner)
+      className="grid__col2"
+      id="conInput"
+      name="abilities.con.score"
+      onChange={[Function]}
+      value=""
+    />
+    <div
+      className="grid__col3"
+    >
+      -2
     </div>
+    <div
+      className="grid__col4"
+    />
     <FormikConnect(ErrorMessageImpl)
+      className="grid__col-span4"
       component="div"
       name="abilities.con.score"
     />
-  </div>
-  <div
-    className="form__group"
-    key="int"
-  >
-    <div
-      className="form__content--nowrap"
+    <h4
+      className="grid__col1"
     >
-      <h4>
-        Intelligence
-         (
-        INT
-        )
-      </h4>
-      <FormikConnect(FieldInner)
-        id="intInput"
-        name="abilities.int.score"
-      />
+      Intelligence
+       (
+      INT
+      )
+    </h4>
+    <FormikConnect(FieldInner)
+      className="grid__col2"
+      id="intInput"
+      name="abilities.int.score"
+      onChange={[Function]}
+      value=""
+    />
+    <div
+      className="grid__col3"
+    >
+      2
     </div>
+    <div
+      className="grid__col4"
+    />
     <FormikConnect(ErrorMessageImpl)
+      className="grid__col-span4"
       component="div"
       name="abilities.int.score"
     />
-  </div>
-  <div
-    className="form__group"
-    key="wis"
-  >
-    <div
-      className="form__content--nowrap"
+    <h4
+      className="grid__col1"
     >
-      <h4>
-        Wisdom
-         (
-        WIS
-        )
-      </h4>
-      <FormikConnect(FieldInner)
-        id="wisInput"
-        name="abilities.wis.score"
-      />
+      Wisdom
+       (
+      WIS
+      )
+    </h4>
+    <FormikConnect(FieldInner)
+      className="grid__col2"
+      id="wisInput"
+      name="abilities.wis.score"
+      onChange={[Function]}
+      value=""
+    />
+    <div
+      className="grid__col3"
+    >
+      0
     </div>
+    <div
+      className="grid__col4"
+    />
     <FormikConnect(ErrorMessageImpl)
+      className="grid__col-span4"
       component="div"
       name="abilities.wis.score"
     />
-  </div>
-  <div
-    className="form__group"
-    key="cha"
-  >
-    <div
-      className="form__content--nowrap"
+    <h4
+      className="grid__col1"
     >
-      <h4>
-        Charisma
-         (
-        CHA
-        )
-      </h4>
-      <FormikConnect(FieldInner)
-        id="chaInput"
-        name="abilities.cha.score"
-      />
+      Charisma
+       (
+      CHA
+      )
+    </h4>
+    <FormikConnect(FieldInner)
+      className="grid__col2"
+      id="chaInput"
+      name="abilities.cha.score"
+      onChange={[Function]}
+      value=""
+    />
+    <div
+      className="grid__col3"
+    >
+      0
     </div>
+    <div
+      className="grid__col4"
+    />
     <FormikConnect(ErrorMessageImpl)
+      className="grid__col-span4"
       component="div"
       name="abilities.cha.score"
     />
@@ -160,12 +203,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
     className="row--center"
   >
     <button
-      disabled={true}
-      id="abilitiesResetButton"
+      id="abilitiesRollButton"
       onClick={[Function]}
-      type="submit"
+      type="button"
     >
-      Reset
+      Roll Scores
     </button>
   </div>
 </div>

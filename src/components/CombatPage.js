@@ -76,7 +76,7 @@ export class CombatPage extends React.Component {
 			}
 		}, () => {
 			this.props.startEditProfile(this.props.id, { [name]: this.state[name] })
-		});
+		})
 	}
 
 	render () {
@@ -127,22 +127,29 @@ export class CombatPage extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => ({
-  id: state.profile.id,
-  hp: state.profile.hp,
-  speed: state.profile.speed,
-  ac: state.profile.ac,
-  initiative: state.profile.initiative,
-  saves: state.profile.saves,
-  bab: state.profile.bab,
-  attacks: state.profile.attacks,
-  weaponSet: state.profile.weaponSet,
-  spellbook: state.profile.spellbook,
-  spells: state.spells
-})
+const mapStateToProps = ({profile, spells, jobClasses}) => {
+	const baseSaves = jobClasses[profile.jobClass].levels[profile.level].saves
+	let saves = profile.saves
+	saves.fortitude.base = baseSaves.fortitude
+	saves.reflex.base = baseSaves.reflex
+	saves.will.base = baseSaves.will
+	return {
+		id: profile.id,
+		hp: profile.hp,
+		speed: profile.speed,
+		ac: profile.ac,
+		initiative: profile.initiative,
+		saves,
+		bab: profile.bab,
+		attacks: profile.attacks,
+		weaponSet: profile.weaponSet,
+		spellbook: profile.spellbook,
+		spells
+	}
+} 
 
 const mapDispatchToProps = (dispatch, props) => ({
-  startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
+  	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 });
 
 

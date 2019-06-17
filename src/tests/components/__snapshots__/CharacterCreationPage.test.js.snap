@@ -5532,21 +5532,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 Object {
                   "abilities": Object {
                     "cha": Object {
+                      "final": "",
                       "score": "",
                     },
                     "con": Object {
+                      "final": "",
                       "score": "",
                     },
                     "dex": Object {
+                      "final": "",
                       "score": "",
                     },
                     "int": Object {
+                      "final": "",
                       "score": "",
                     },
                     "str": Object {
+                      "final": "",
                       "score": "",
                     },
                     "wis": Object {
+                      "final": "",
                       "score": "",
                     },
                   },
@@ -5781,21 +5787,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       "initialValues": Object {
                         "abilities": Object {
                           "cha": Object {
+                            "final": "",
                             "score": "",
                           },
                           "con": Object {
+                            "final": "",
                             "score": "",
                           },
                           "dex": Object {
+                            "final": "",
                             "score": "",
                           },
                           "int": Object {
+                            "final": "",
                             "score": "",
                           },
                           "str": Object {
+                            "final": "",
                             "score": "",
                           },
                           "wis": Object {
+                            "final": "",
                             "score": "",
                           },
                         },
@@ -6037,21 +6049,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       "values": Object {
                         "abilities": Object {
                           "cha": Object {
+                            "final": "",
                             "score": "",
                           },
                           "con": Object {
+                            "final": "",
                             "score": "",
                           },
                           "dex": Object {
+                            "final": "",
                             "score": "",
                           },
                           "int": Object {
+                            "final": "",
                             "score": "",
                           },
                           "str": Object {
+                            "final": "",
                             "score": "",
                           },
                           "wis": Object {
+                            "final": "",
                             "score": "",
                           },
                         },
@@ -10845,21 +10863,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                           Object {
                             "abilities": Object {
                               "cha": Object {
+                                "final": "",
                                 "score": "",
                               },
                               "con": Object {
+                                "final": "",
                                 "score": "",
                               },
                               "dex": Object {
+                                "final": "",
                                 "score": "",
                               },
                               "int": Object {
+                                "final": "",
                                 "score": "",
                               },
                               "str": Object {
+                                "final": "",
                                 "score": "",
                               },
                               "wis": Object {
+                                "final": "",
                                 "score": "",
                               },
                             },
@@ -10903,21 +10927,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "initialValues": Object {
                                         "abilities": Object {
                                           "cha": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "con": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "dex": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "int": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "str": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "wis": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                         },
@@ -11159,21 +11189,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "values": Object {
                                         "abilities": Object {
                                           "cha": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "con": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "dex": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "int": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "str": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                           "wis": Object {
+                                            "final": "",
                                             "score": "",
                                           },
                                         },
@@ -11220,21 +11256,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -11476,21 +11518,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -11537,21 +11585,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -11793,21 +11847,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -11879,21 +11939,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "initialValues": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -12135,21 +12201,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "values": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -12200,21 +12272,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -12456,21 +12534,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -12518,21 +12602,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "initialValues": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -12774,21 +12864,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "values": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -12835,21 +12931,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "initialValues": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -13091,21 +13193,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "values": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -13156,21 +13264,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -13412,21 +13526,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -13465,21 +13585,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -13721,21 +13847,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -13783,21 +13915,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "initialValues": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -14039,21 +14177,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "values": Object {
                                           "abilities": Object {
                                             "cha": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "con": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "dex": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "int": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "str": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                             "wis": Object {
+                                              "final": "",
                                               "score": "",
                                             },
                                           },
@@ -14104,21 +14248,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -14360,21 +14510,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -14424,21 +14580,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "initialValues": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },
@@ -14680,21 +14842,27 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "values": Object {
                                       "abilities": Object {
                                         "cha": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "con": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "dex": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "int": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "str": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                         "wis": Object {
+                                          "final": "",
                                           "score": "",
                                         },
                                       },

@@ -32,7 +32,7 @@ exports[`should render saves with profile data 1`] = `
       Fortitude
     </div>
     <div>
-      4
+      1
     </div>
     <div>
       +
@@ -40,8 +40,9 @@ exports[`should render saves with profile data 1`] = `
     <input
       id="fortitude"
       name="saves"
+      onChange={[MockFunction]}
       type="text"
-      value={2}
+      value={4}
     />
     <div>
       =
@@ -53,7 +54,7 @@ exports[`should render saves with profile data 1`] = `
       Reflex
     </div>
     <div>
-      5
+      1
     </div>
     <div>
       +
@@ -61,8 +62,9 @@ exports[`should render saves with profile data 1`] = `
     <input
       id="reflex"
       name="saves"
+      onChange={[MockFunction]}
       type="text"
-      value={0}
+      value={4}
     />
     <div>
       =
@@ -74,7 +76,7 @@ exports[`should render saves with profile data 1`] = `
       Will
     </div>
     <div>
-      6
+      4
     </div>
     <div>
       +
@@ -82,8 +84,9 @@ exports[`should render saves with profile data 1`] = `
     <input
       id="will"
       name="saves"
+      onChange={[MockFunction]}
       type="text"
-      value={1}
+      value={4}
     />
     <div>
       =

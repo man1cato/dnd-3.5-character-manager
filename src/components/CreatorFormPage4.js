@@ -7,11 +7,7 @@ import FeatModal from './FeatModal'
 const CreatorFormPage4 = ({
 	values, 
 	feats, 
-	handleChange, 
-	handleSelect, 
-	handleMultiSelect, 
 	setFieldValue, 
-	setFieldError,
 	validateForm
 }) => {
 	const featIds = _.map( 

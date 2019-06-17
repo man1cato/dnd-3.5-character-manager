@@ -10,6 +10,7 @@ exports[`should correctly render CreatorFormPage4 1`] = `
   <select
     name="feats"
     onChange={[Function]}
+    value="recdmotqOlGgN2otb"
   >
     <option
       key="feat0"

@@ -41,22 +41,16 @@ exports[`should render combat page with profile data 1`] = `
       saves={
         Object {
           "fortitude": Object {
-            "base": 4,
-            "mod": "",
-            "name": "Fortitude",
-            "total": 4,
+            "mod": 4,
+            "total": undefined,
           },
           "reflex": Object {
-            "base": 5,
-            "mod": "",
-            "name": "Reflex",
-            "total": 5,
+            "mod": 5,
+            "total": undefined,
           },
           "will": Object {
-            "base": 6,
-            "mod": "",
-            "name": "Will",
-            "total": 6,
+            "mod": 6,
+            "total": undefined,
           },
         }
       }
@@ -90,6 +84,61 @@ exports[`should render combat page with profile data 1`] = `
       grappleBonus={4}
       meleeBonus={4}
       rangedBonus={6}
+      weaponSet={
+        Array [
+          "recOvuth9QArkI54l",
+        ]
+      }
+    />
+    <PreparedSpells
+      id="recnPKEA6sOWaOt57"
+      spellbook={
+        Array [
+          Object {
+            "spells": Array [
+              Object {
+                "description": "Acid missile 1d3 damage",
+                "id": 123,
+                "level": 0,
+                "mastered": false,
+                "name": "Acid Splash",
+                "prepared": 1,
+                "remaining": 1,
+                "school": "Conj",
+                "used": 0,
+              },
+              Object {
+                "description": "Something",
+                "id": 456,
+                "level": 0,
+                "mastered": true,
+                "name": "Arcane Mark",
+                "prepared": 2,
+                "remaining": 1,
+                "school": "Univ",
+                "used": 1,
+              },
+            ],
+            "spellsPerDay": 4,
+          },
+          Object {
+            "spells": Array [
+              Object {
+                "description": "Make someone like you",
+                "id": 678,
+                "level": 1,
+                "mastered": false,
+                "name": "Charm Person",
+                "prepared": 1,
+                "remaining": 0,
+                "school": "Ench",
+                "used": 1,
+              },
+            ],
+            "spellsPerDay": 3,
+          },
+        ]
+      }
     />
   </div>
   <Connect(Footer) />
