@@ -30,7 +30,7 @@ exports[`should render CharacterSelectionPage with profiles data 1`] = `
         <div>
           Male
            
-          Grey Elf
+          Gray Elf
         </div>
         <div>
           Wizard
@@ -60,10 +60,10 @@ exports[`should render CharacterSelectionPage with profiles data 1`] = `
         <div>
           Male
            
-          Half-Orc
+          Orc
         </div>
         <div>
-          Wizard
+          Barbarian
         </div>
         <div>
           Lawful Evil

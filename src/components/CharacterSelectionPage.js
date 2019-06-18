@@ -1,9 +1,9 @@
 import React from 'react'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import Header from './Header'
-import {startSetProfile} from '../actions/profile'
-import {history} from '../routers/AppRouter'
+import { startSetProfile } from '../actions/profile'
+import { history } from '../routers/AppRouter'
 
 
 export class CharacterSelectionPage extends React.Component {
@@ -40,8 +40,8 @@ export class CharacterSelectionPage extends React.Component {
                      <img src={profile.iconUrl} />
                      <div>
                         <h3>{profile.name}</h3>
-                        <div>{profile.gender} {profile.race}</div>
-                        <div>{profile.jobClass}</div>
+                        <div>{profile.gender} {this.props.races[profile.race].name}</div>
+                        <div>{this.props.jobClasses[profile.jobClass].name}</div>
                         <div>{profile.alignment}</div>
                         <div>{`Level ${profile.level}`}</div>
                      </div>
@@ -56,7 +56,9 @@ export class CharacterSelectionPage extends React.Component {
 
 const mapStateToProps = (state) => ({
    uid: state.auth.uid,
-	profiles: state.profiles
+   profiles: state.profiles,
+   jobClasses: state.jobClasses,
+   races: state.races
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

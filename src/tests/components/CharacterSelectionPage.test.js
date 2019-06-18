@@ -1,22 +1,28 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import { CharacterSelectionPage } from '../../components/CharacterSelectionPage';
+import { CharacterSelectionPage } from '../../components/CharacterSelectionPage'
 import profiles from '../fixtures/profiles'
+import { apiData } from '../utils'
 
 
 const startSetProfile = jest.fn()
 const uid = 'abc123'
-let wrapper
+let wrapper, props
+
+beforeAll(async () => {
+	const api = await apiData()
+	props = {
+		uid: 'abc123',
+		profiles,
+		startSetProfile,
+		jobClasses: api.jobClasses,
+		races: api.races
+	}
+})
 
 beforeEach(() => {
-	wrapper = shallow(
-		<CharacterSelectionPage 
-			uid={uid}
-			profiles={profiles} 
-			startSetProfile={startSetProfile}
-		/>
-	)
+	wrapper = shallow(<CharacterSelectionPage {...props}	/>)
 })
 
 

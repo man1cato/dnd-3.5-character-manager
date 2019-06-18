@@ -3,7 +3,6 @@ import { Provider } from 'react-redux'
 import { MemoryRouter, Switch, Route } from 'react-router-dom'
 import { mount } from 'enzyme'
 import configureStore from 'redux-mock-store'
-import fs from 'fs'
 
 import profile from '../fixtures/profile'
 import profiles from '../fixtures/profiles'
@@ -16,6 +15,7 @@ import ProfilePage from '../../components/ProfilePage'
 import CharacterCreationPage from '../../components/CharacterCreationPage'
 import CharacterSelectionPage from '../../components/CharacterSelectionPage'
 import NotFoundPage from '../../components/NotFoundPage'
+import { apiData } from '../utils'
 
 
 const mockStore = configureStore()
@@ -40,8 +40,7 @@ const createWrapper = (pathHistory, state) => mount(
 let api, wrapper, state
 
 beforeAll(async () => {
-	api = await fs.promises.readFile('src/tests/fixtures/api.json')
-	api = JSON.parse(api)
+	api = await apiData()
 })
 
 
