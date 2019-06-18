@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import { EquipmentPage } from '../../components/EquipmentPage'
 import profile from '../fixtures/profile'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 let props
 beforeAll(async () => {

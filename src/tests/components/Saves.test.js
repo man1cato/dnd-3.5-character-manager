@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Saves from '../../components/Saves'
 import profile from '../fixtures/profile'
-import { apiData, createConnectedWrapper } from '../utils'
+import { apiData } from '../utils/utils'
 
 const handleChange = jest.fn()
 

@@ -40,9 +40,9 @@ export const editProfile = (updates) => ({
 //UPDATE PROFILE IN FIREBASE
 export const startEditProfile = (id, updates) => {
     return (dispatch, getState) => {
-        const uid = getState().auth.uid;
+        const uid = getState().auth.uid
         return database.ref(`users/${uid}/profiles/${id}`).update(updates).then(() => {
-            dispatch(editProfile(updates));
+            dispatch(editProfile(updates))
         })
     }
 }

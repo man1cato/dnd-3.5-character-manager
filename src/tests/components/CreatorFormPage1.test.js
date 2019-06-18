@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 import CreatorFormPage1 from '../../components/CreatorFormPage1'
 import { apiObjectToArray } from '../../utils/utils'

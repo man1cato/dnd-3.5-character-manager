@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import { SkillSet } from '../../components/SkillSet'
 import profile from '../fixtures/profile'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 
 let  props, wrapper, api

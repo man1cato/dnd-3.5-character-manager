@@ -73,6 +73,7 @@ exports[`should render ProfilePage with profile data 1`] = `
               "touch": 14,
             }
           }
+          age={21}
           alignment="Lawful Evil"
           attacks={
             Object {
@@ -191,6 +192,7 @@ exports[`should render ProfilePage with profile data 1`] = `
             ]
           }
           gender="Male"
+          height="5'2\\""
           hp={
             Object {
               "base": 32,
@@ -793,6 +795,7 @@ exports[`should render ProfilePage with profile data 1`] = `
               "recOvuth9QArkI54l",
             ]
           }
+          weight={147}
           xp={10000}
         >
           <div
@@ -946,16 +949,20 @@ exports[`should render ProfilePage with profile data 1`] = `
                   Wizard
                 </div>
                 <div>
+                  21
                    yrs
                 </div>
                 <div>
                   Lawful Evil
                 </div>
-                <div />
+                <div>
+                  5'2"
+                </div>
                 <div>
                   Medium
                 </div>
                 <div>
+                  147
                    lbs
                 </div>
                 <h4
@@ -4701,6 +4708,7 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       "flat": 10,
                       "touch": 14,
                     },
+                    "age": 21,
                     "alignment": "Lawful Evil",
                     "attacks": Object {
                       "grapple": Object {
@@ -4808,6 +4816,7 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       "recGkxwkqppy7EYmI",
                     ],
                     "gender": "Male",
+                    "height": "5'2\\"",
                     "hp": Object {
                       "base": 32,
                       "damage": 10,
@@ -4921,6 +4930,7 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     "weaponSet": Array [
                       "recOvuth9QArkI54l",
                     ],
+                    "weight": 147,
                     "xp": 10000,
                   }
                 }

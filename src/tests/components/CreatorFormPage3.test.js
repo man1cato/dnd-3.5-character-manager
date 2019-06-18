@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import _ from 'lodash'
 import CreatorFormPage3 from '../../components/CreatorFormPage3'
 import { abilities } from '../../utils/staticData'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 import profile from '../fixtures/profile'
 
 

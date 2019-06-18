@@ -15,7 +15,7 @@ import ProfilePage from '../../components/ProfilePage'
 import CharacterCreationPage from '../../components/CharacterCreationPage'
 import CharacterSelectionPage from '../../components/CharacterSelectionPage'
 import NotFoundPage from '../../components/NotFoundPage'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 
 const mockStore = configureStore()

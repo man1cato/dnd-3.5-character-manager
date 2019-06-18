@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import { CharacterSelectionPage } from '../../components/CharacterSelectionPage'
 import profiles from '../fixtures/profiles'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 
 const startSetProfile = jest.fn()

@@ -4,7 +4,7 @@ import fs from 'fs'
 
 import { Feats } from '../../components/Feats'
 import profile from '../fixtures/profile'
-import { apiData } from '../utils';
+import { apiData } from '../utils/utils';
 
 
 let props, wrapper

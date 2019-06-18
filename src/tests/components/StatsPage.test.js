@@ -1,7 +1,7 @@
 import React from 'react'
 import ConnectedStatsPage from '../../components/StatsPage'
 import profile from '../fixtures/profile'
-import { apiData, createConnectedWrapper } from '../utils'
+import { apiData, createConnectedWrapper } from '../utils/utils'
  
 
 let wrapper

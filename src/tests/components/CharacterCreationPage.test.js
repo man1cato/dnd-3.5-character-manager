@@ -1,6 +1,6 @@
 import React from 'react'
-import { apiData, createConnectedWrapper } from '../utils'
-import ConnectedCharacterCreationPage, { CharacterCreationPage } from '../../components/CharacterCreationPage'
+import { apiData, createConnectedWrapper } from '../utils/utils'
+import ConnectedCharacterCreationPage from '../../components/CharacterCreationPage'
 import CreatorFormPage1 from '../../components/CreatorFormPage1'
 import CreatorFormPage2 from '../../components/CreatorFormPage2'
 import CreatorFormPage3 from '../../components/CreatorFormPage3'

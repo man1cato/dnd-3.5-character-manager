@@ -3,7 +3,7 @@ import {shallow} from 'enzyme'
 
 import { SpecialAbilities } from '../../components/SpecialAbilities'
 import profile from '../fixtures/profile'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 
 let props, wrapper

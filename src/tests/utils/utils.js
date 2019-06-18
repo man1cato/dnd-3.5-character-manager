@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { StaticRouter } from 'react-router-dom'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import fs from 'fs'
 import configureStore from 'redux-mock-store'
 

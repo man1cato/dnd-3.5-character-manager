@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import SpecialAbilityModal from '../../components/SpecialAbilityModal'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 
 
 let props

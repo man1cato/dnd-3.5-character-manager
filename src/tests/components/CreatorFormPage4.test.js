@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import _ from 'lodash'
-import { apiData } from '../utils'
+import { apiData } from '../utils/utils'
 import CreatorFormPage4 from '../../components/CreatorFormPage4'
 
 
