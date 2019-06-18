@@ -36,7 +36,6 @@ const createWrapper = (pathHistory, state) => mount(
 	</Provider>
 )
 
-const storeProfile = { id: profile.id, ...profile.fields }
 
 let api, wrapper, state
 
@@ -69,7 +68,7 @@ describe('authenticated user with /profile route', () => {
 	})
 
 	test('should be directed to /profile if one profile exists', () => {
-		state.profile = storeProfile
+		state.profile = profile
 		wrapper = createWrapper(pathHistory, state)
 		expect(wrapper.exists(LoginPage)).toEqual(false)
 		expect(wrapper.exists(ProfilePage)).toEqual(true)

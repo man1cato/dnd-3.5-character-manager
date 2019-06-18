@@ -12,7 +12,7 @@ beforeAll(async () => {
 	api = await apiData()
 
 	props = {
-		skillSet: profile.fields.skillSet,
+		skillSet: profile.skillSet,
 		skills: api.skills
 	}
 	

@@ -1,15 +1,15 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import fs from 'fs'
 
 import SkillModal from '../../components/SkillModal'
+import { apiData } from '../utils'
 
 
 let props
 
 beforeAll(async () => {
-   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   const skills = JSON.parse(api).skills
+   const api = await apiData()
+   const skills = api.skills
    props = {
       selected: Object.values(skills)[0]
    }

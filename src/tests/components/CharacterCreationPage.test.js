@@ -10,10 +10,10 @@ import CreatorFormFooter from '../../components/CreatorFormFooter'
 
 const startCreateProfile = jest.fn()
 
-let api, wrapper
+let wrapper
 
 beforeAll(async () => {
-	api = await apiData()
+	const api = await apiData()
 	wrapper = createConnectedWrapper(
 		ConnectedCharacterCreationPage,
 		{

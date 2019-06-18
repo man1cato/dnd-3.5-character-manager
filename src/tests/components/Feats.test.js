@@ -4,14 +4,15 @@ import fs from 'fs'
 
 import { Feats } from '../../components/Feats'
 import profile from '../fixtures/profile'
+import { apiData } from '../utils';
 
 
 let props, wrapper
 beforeAll(async () => {
-	const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-	const feats = JSON.parse(api).feats
+	const api = await apiData()
+	const feats = api.feats
 	props = {
-		featIds: profile.fields.feats,
+		featIds: profile.feats,
 		feats
 	}
 	wrapper = shallow(<Feats {...props} />)

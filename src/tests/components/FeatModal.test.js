@@ -1,17 +1,16 @@
 import React from 'react'
-import {shallow} from 'enzyme'
-import fs from 'fs'
+import { shallow } from 'enzyme'
 
 import FeatModal from '../../components/FeatModal'
+import { apiData } from '../utils'
 
 
 let props
 
 beforeAll(async () => {
-   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   const feats = JSON.parse(api).feats
+   const api = await apiData()
    props = {
-      selected: Object.values(feats)[0]
+      selected: Object.values(api.feats)[0]
    }
 })
 

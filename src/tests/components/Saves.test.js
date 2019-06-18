@@ -11,23 +11,19 @@ let saves, wrapper
 
 beforeAll(async () => {
 	const api = await apiData()
-	const profileData = {
-		id: profile.id,
-		...profile.fields
-	}
-	const jobClassLevel = api.jobClasses[profileData.jobClass].levels[profileData.level]
+	const jobClassLevel = api.jobClasses[profile.jobClass].levels[profile.level]
 	saves = {
 		fortitude: {
 			base: jobClassLevel.saves.fortitude,
-			mod: profileData.saves.fortitude.mod
+			mod: profile.saves.fortitude.mod
 		},
 		reflex: {
 			base: jobClassLevel.saves.reflex,
-			mod: profileData.saves.fortitude.mod
+			mod: profile.saves.fortitude.mod
 		},
 		will: {
 			base: jobClassLevel.saves.will,
-			mod: profileData.saves.fortitude.mod
+			mod: profile.saves.fortitude.mod
 		}
 	}	
 })

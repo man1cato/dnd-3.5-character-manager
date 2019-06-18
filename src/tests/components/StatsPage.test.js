@@ -4,18 +4,13 @@ import profile from '../fixtures/profile'
 import { apiData, createConnectedWrapper } from '../utils'
  
 
-const profileData = {
-	id: profile.id,
-	...profile.fields
-}
-
 let wrapper
 
 beforeAll(async () => {
 	const api = await apiData()
 	wrapper = createConnectedWrapper(ConnectedStatsPage,
 		{
-			profile: profileData,
+			profile,
 			jobClasses: api.jobClasses,
 			skills: api.skills
 		}

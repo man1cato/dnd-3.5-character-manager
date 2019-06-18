@@ -1,15 +1,15 @@
 import React from 'react'
-import {shallow} from 'enzyme'
-import fs from 'fs'
+import { shallow } from 'enzyme'
 
 import SpecialAbilityModal from '../../components/SpecialAbilityModal'
+import { apiData } from '../utils'
 
 
 let props
 
 beforeAll(async () => {
-   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   const specialAbilities = JSON.parse(api).specialAbilities
+   const api = await apiData()
+   const specialAbilities = api.specialAbilities
    props = {
       selected: Object.values(specialAbilities)[0]
    }

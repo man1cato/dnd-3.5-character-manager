@@ -6,7 +6,7 @@ import profile from '../fixtures/profile';
 
 const props = {
     id: profile.id,
-    companion: profile.fields.companion
+    companion: profile.companion
 }
 
 test('should render CompanionPage with profile data', () => {

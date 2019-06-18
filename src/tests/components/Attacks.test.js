@@ -5,17 +5,17 @@ import Attacks from '../../components/Attacks';
 import profile from '../fixtures/profile';
 
 const attacks = {
-    bab: profile.fields.attacks.bab,
+    bab: profile.attacks.bab,
     melee: {
-        base: profile.fields.attacks.melee.base,
+        base: profile.attacks.melee.base,
         mod: 3
     },
     ranged: {
-        base: profile.fields.attacks.ranged.base,
+        base: profile.attacks.ranged.base,
         mod: 3
     },
     grapple: {
-        base: profile.fields.attacks.grapple.base,
+        base: profile.attacks.grapple.base,
         mod: 3
     }
 }

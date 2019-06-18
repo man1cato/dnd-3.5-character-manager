@@ -12,7 +12,7 @@ beforeAll(async () => {
    const items = JSON.parse(api).items
 
    props = { 
-       weaponSet: profile.fields.weaponSet,
+       weaponSet: profile.weaponSet,
        weapons: apiObjectToArray(items).filter((item) => item.category === "Weapon")
    }
 })

@@ -6,7 +6,7 @@ import profile from '../fixtures/profile';
 
 const props = {
     id: profile.id,
-    spellbook: profile.fields.spellbook
+    spellbook: profile.spellbook
 }
 
 test('should render SpellbookPage with profile data', () => {

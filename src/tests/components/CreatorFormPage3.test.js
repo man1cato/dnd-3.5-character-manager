@@ -12,7 +12,7 @@ beforeAll(async () => {
    const api = await apiData()
    props = {
       values: { abilities: _.mapValues(abilities, () => ({ score: '' })) },
-      selectedRace: api.races[profile.fields.race]
+      selectedRace: api.races[profile.race]
    }
    wrapper = shallow(<CreatorFormPage3 {...props} />)
 })

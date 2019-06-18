@@ -1,15 +1,15 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import fs from 'fs'
 
 import ItemModal from '../../components/ItemModal'
+import { apiData } from '../utils'
 
 
 let props
 
 beforeAll(async () => {
-   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   const items = JSON.parse(api).items
+   const api = await apiData()
+   const items = api.items
    props = {
       selected: Object.values(items)[0]
    }

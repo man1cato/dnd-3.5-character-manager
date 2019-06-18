@@ -5,7 +5,7 @@ import PreparedSpells from '../../components/PreparedSpells'
 import profile from '../fixtures/profile'
 
 
-const spellbook = profile.fields.spellbook
+const spellbook = profile.spellbook
 
 test('should render PreparedSpells with profile data', () => {
     const wrapper = shallow(<PreparedSpells spellbook={spellbook} />)

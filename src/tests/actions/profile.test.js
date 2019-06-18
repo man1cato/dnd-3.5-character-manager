@@ -1,11 +1,11 @@
 import { setProfile, editProfile, removeProfile } from '../../actions/profile'
 import profile from '../fixtures/profile'
-
-const charId = profile.id
-const fields = profile.fields
+import _ from 'lodash'
 
 
 test('should setup set profile action object with provided values', () => {
+  const charId = profile.id
+  const fields = _.omit(profile, ['id'])
   const action = setProfile(charId, fields)
   expect(action).toEqual({
     type: 'SET_PROFILE',

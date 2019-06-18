@@ -12,7 +12,7 @@ beforeEach(() => {
   wrapper = shallow(
     <Abilities
       handleChange={handleChange}
-      abilities={profile.fields.abilities}
+      abilities={profile.abilities}
     />
   )
 })
