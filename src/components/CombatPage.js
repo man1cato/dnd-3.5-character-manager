@@ -140,7 +140,7 @@ const mapStateToProps = ({profile, spells, jobClasses}) => {
 		ac: profile.ac,
 		initiative: profile.initiative,
 		saves,
-		bab: profile.bab,
+		baseAttackBonus: profile.baseAttackBonus,
 		attacks: profile.attacks,
 		weaponSet: profile.weaponSet,
 		spellbook: profile.spellbook,

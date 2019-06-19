@@ -69,7 +69,7 @@ const setSpells = () => {
 const setProfile = (uid) => {
    getAirtableProfile(uid).then(({id, fields}) => {
       database.ref(`users/${uid}/profiles/${id}`).set(fields)
-  });
+  })
 }
 
 setRaces()

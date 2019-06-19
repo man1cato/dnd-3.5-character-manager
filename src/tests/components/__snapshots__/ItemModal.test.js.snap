@@ -58,6 +58,12 @@ exports[`should render ItemModal 1`] = `
       4
        lbs
     </p>
+    <button
+      name="weapons"
+      onClick={[Function]}
+    >
+      Equip
+    </button>
   </div>
 </Modal>
 `;

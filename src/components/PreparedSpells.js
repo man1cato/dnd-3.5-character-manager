@@ -104,7 +104,7 @@ export class PreparedSpells extends React.Component{
                         id={spell.id}
                         onClick={this.handleOpenModal}
                      >
-                        {spell.name}
+                        {this.props.spells[spell.id].name}
                      </button>
             
                      <div>{spell.remaining}</div>

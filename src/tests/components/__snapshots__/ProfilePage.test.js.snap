@@ -82,14 +82,6 @@ exports[`should render ProfilePage with profile data 1`] = `
               },
             }
           }
-          bab={
-            Array [
-              2,
-              0,
-              0,
-              0,
-            ]
-          }
           companion={
             Object {
               "abilities": Object {
@@ -175,6 +167,16 @@ exports[`should render ProfilePage with profile data 1`] = `
               },
             ]
           }
+          equipped={
+            Object {
+              "shield": "recZBZ5DTJuo8Uaea",
+              "weapons": Array [
+                "recAaHr4qEcbytOpu",
+                "rec0JezjbAvUiWr8A",
+                "recWQ2ml4RhoLtvik",
+              ],
+            }
+          }
           feats={
             Array [
               "recRjuAWe7oy6a7wY",
@@ -220,7 +222,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 0,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     1,
                   ],
                   "saves": Object {
@@ -235,7 +237,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 1000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     1,
                   ],
                   "saves": Object {
@@ -251,7 +253,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 3000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     2,
                   ],
                   "saves": Object {
@@ -267,7 +269,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 6000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     2,
                   ],
                   "saves": Object {
@@ -287,7 +289,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 10000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     3,
                   ],
                   "saves": Object {
@@ -304,7 +306,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 15000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     3,
                   ],
                   "saves": Object {
@@ -322,7 +324,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 21000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     4,
                   ],
                   "saves": Object {
@@ -340,7 +342,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 28000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     4,
                   ],
                   "saves": Object {
@@ -359,7 +361,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 36000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     5,
                   ],
                   "saves": Object {
@@ -381,7 +383,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 45000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     5,
                   ],
                   "saves": Object {
@@ -401,7 +403,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 55000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     6,
                     1,
                   ],
@@ -422,7 +424,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 66000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     6,
                     1,
                   ],
@@ -444,7 +446,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 78000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     7,
                     2,
                   ],
@@ -466,7 +468,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 91000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     7,
                     2,
                   ],
@@ -492,7 +494,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 105000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     8,
                     3,
                   ],
@@ -515,7 +517,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 120000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     8,
                     3,
                   ],
@@ -539,7 +541,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 136000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     9,
                     4,
                   ],
@@ -563,7 +565,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 153000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     9,
                     4,
                   ],
@@ -587,7 +589,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 171000,
                 },
                 Object {
-                  "bab": Array [
+                  "baseAttackBonus": Array [
                     10,
                     5,
                   ],
@@ -738,25 +740,19 @@ exports[`should render ProfilePage with profile data 1`] = `
               Object {
                 "spells": Array [
                   Object {
-                    "description": "Acid missile 1d3 damage",
-                    "id": 123,
+                    "id": "rec8IQeYmBr3f1BMC",
                     "level": 0,
                     "mastered": false,
-                    "name": "Acid Splash",
                     "prepared": 1,
                     "remaining": 1,
-                    "school": "Conj",
                     "used": 0,
                   },
                   Object {
-                    "description": "Something",
-                    "id": 456,
+                    "id": "recwpeRoCsea4vidW",
                     "level": 0,
                     "mastered": true,
-                    "name": "Arcane Mark",
                     "prepared": 2,
                     "remaining": 1,
-                    "school": "Univ",
                     "used": 1,
                   },
                 ],
@@ -765,14 +761,11 @@ exports[`should render ProfilePage with profile data 1`] = `
               Object {
                 "spells": Array [
                   Object {
-                    "description": "Make someone like you",
-                    "id": 678,
+                    "id": "recRhVs0ahtQZpbXx",
                     "level": 1,
                     "mastered": false,
-                    "name": "Charm Person",
                     "prepared": 1,
                     "remaining": 0,
-                    "school": "Ench",
                     "used": 1,
                   },
                 ],
@@ -4705,12 +4698,6 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                         "base": 6,
                       },
                     },
-                    "bab": Array [
-                      2,
-                      0,
-                      0,
-                      0,
-                    ],
                     "companion": Object {
                       "abilities": Object {
                         "cha": 6,
@@ -4791,6 +4778,14 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                         "qty": 2,
                       },
                     ],
+                    "equipped": Object {
+                      "shield": "recZBZ5DTJuo8Uaea",
+                      "weapons": Array [
+                        "recAaHr4qEcbytOpu",
+                        "rec0JezjbAvUiWr8A",
+                        "recWQ2ml4RhoLtvik",
+                      ],
+                    },
                     "feats": Array [
                       "recRjuAWe7oy6a7wY",
                       "rec4KkfhKpetKIDqj",
@@ -4866,25 +4861,19 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       Object {
                         "spells": Array [
                           Object {
-                            "description": "Acid missile 1d3 damage",
-                            "id": 123,
+                            "id": "rec8IQeYmBr3f1BMC",
                             "level": 0,
                             "mastered": false,
-                            "name": "Acid Splash",
                             "prepared": 1,
                             "remaining": 1,
-                            "school": "Conj",
                             "used": 0,
                           },
                           Object {
-                            "description": "Something",
-                            "id": 456,
+                            "id": "recwpeRoCsea4vidW",
                             "level": 0,
                             "mastered": true,
-                            "name": "Arcane Mark",
                             "prepared": 2,
                             "remaining": 1,
-                            "school": "Univ",
                             "used": 1,
                           },
                         ],
@@ -4893,14 +4882,11 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       Object {
                         "spells": Array [
                           Object {
-                            "description": "Make someone like you",
-                            "id": 678,
+                            "id": "recRhVs0ahtQZpbXx",
                             "level": 1,
                             "mastered": false,
-                            "name": "Charm Person",
                             "prepared": 1,
                             "remaining": 0,
-                            "school": "Ench",
                             "used": 1,
                           },
                         ],

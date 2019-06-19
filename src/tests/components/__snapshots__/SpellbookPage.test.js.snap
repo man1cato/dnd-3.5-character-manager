@@ -48,21 +48,18 @@ exports[`should render SpellbookPage with profile data 1`] = `
         <div />
         <button
           className="grid__col1 button--link"
-          id={123}
-          key="spell0"
+          id="rec8IQeYmBr3f1BMC"
           onClick={[Function]}
         >
           Acid Splash
         </button>
         <div
           className="grid--spellbook__school"
-          key="school0"
         >
           Conj
         </div>
         <div
           className="grid__col3 grid--spellbook__attribute"
-          key="prep0"
         >
           <button
             attribute="prepared"
@@ -70,7 +67,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
             index={0}
             level={0}
             onClick={[Function]}
-            spellid={123}
+            spellid="rec8IQeYmBr3f1BMC"
           >
             +
           </button>
@@ -83,45 +80,40 @@ exports[`should render SpellbookPage with profile data 1`] = `
             index={0}
             level={0}
             onClick={[Function]}
-            spellid={123}
+            spellid="rec8IQeYmBr3f1BMC"
           >
             -
           </button>
         </div>
         <div
           className="grid__col4"
-          key="rmng0"
         >
           1
         </div>
         <button
           className="grid__col5"
           index={0}
-          key="clear0"
           level={0}
           name="clear"
           onClick={[Function]}
-          spellid={123}
+          spellid="rec8IQeYmBr3f1BMC"
         >
           Clear
         </button>
         <button
           className="grid__col1 button--link"
-          id={456}
-          key="spell1"
+          id="recwpeRoCsea4vidW"
           onClick={[Function]}
         >
           Arcane Mark
         </button>
         <div
           className="grid--spellbook__school"
-          key="school1"
         >
           Univ
         </div>
         <div
           className="grid__col3 grid--spellbook__attribute"
-          key="prep1"
         >
           <button
             attribute="prepared"
@@ -129,7 +121,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
             index={1}
             level={0}
             onClick={[Function]}
-            spellid={456}
+            spellid="recwpeRoCsea4vidW"
           >
             +
           </button>
@@ -142,25 +134,23 @@ exports[`should render SpellbookPage with profile data 1`] = `
             index={1}
             level={0}
             onClick={[Function]}
-            spellid={456}
+            spellid="recwpeRoCsea4vidW"
           >
             -
           </button>
         </div>
         <div
           className="grid__col4"
-          key="rmng1"
         >
           1
         </div>
         <button
           className="grid__col5"
           index={1}
-          key="clear1"
           level={0}
           name="clear"
           onClick={[Function]}
-          spellid={456}
+          spellid="recwpeRoCsea4vidW"
         >
           Clear
         </button>
@@ -201,21 +191,18 @@ exports[`should render SpellbookPage with profile data 1`] = `
         <div />
         <button
           className="grid__col1 button--link"
-          id={678}
-          key="spell0"
+          id="recRhVs0ahtQZpbXx"
           onClick={[Function]}
         >
           Charm Person
         </button>
         <div
           className="grid--spellbook__school"
-          key="school0"
         >
           Ench
         </div>
         <div
           className="grid__col3 grid--spellbook__attribute"
-          key="prep0"
         >
           <button
             attribute="prepared"
@@ -223,7 +210,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
             index={0}
             level={1}
             onClick={[Function]}
-            spellid={678}
+            spellid="recRhVs0ahtQZpbXx"
           >
             +
           </button>
@@ -236,25 +223,23 @@ exports[`should render SpellbookPage with profile data 1`] = `
             index={0}
             level={1}
             onClick={[Function]}
-            spellid={678}
+            spellid="recRhVs0ahtQZpbXx"
           >
             -
           </button>
         </div>
         <div
           className="grid__col4"
-          key="rmng0"
         >
           0
         </div>
         <button
           className="grid__col5"
           index={0}
-          key="clear0"
           level={1}
           name="clear"
           onClick={[Function]}
-          spellid={678}
+          spellid="recRhVs0ahtQZpbXx"
         >
           Clear
         </button>

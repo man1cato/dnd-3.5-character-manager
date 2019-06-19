@@ -227,7 +227,19 @@ exports[`should render equipment page with profile data 1`] = `
       </div>
     </div>
     <ItemModal
+      equipped={
+        Object {
+          "armor": null,
+          "shield": "recZBZ5DTJuo8Uaea",
+          "weapons": Array [
+            "recAaHr4qEcbytOpu",
+            "rec0JezjbAvUiWr8A",
+            "recWQ2ml4RhoLtvik",
+          ],
+        }
+      }
       handleCloseModal={[Function]}
+      handleEquip={[Function]}
     />
   </div>
   <Connect(Footer) />

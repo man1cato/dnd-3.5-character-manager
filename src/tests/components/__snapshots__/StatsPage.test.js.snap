@@ -1136,12 +1136,6 @@ exports[`should render stats page with profile data 1`] = `
                         "base": 6,
                       },
                     },
-                    "bab": Array [
-                      2,
-                      0,
-                      0,
-                      0,
-                    ],
                     "companion": Object {
                       "abilities": Object {
                         "cha": 6,
@@ -1222,6 +1216,14 @@ exports[`should render stats page with profile data 1`] = `
                         "qty": 2,
                       },
                     ],
+                    "equipped": Object {
+                      "shield": "recZBZ5DTJuo8Uaea",
+                      "weapons": Array [
+                        "recAaHr4qEcbytOpu",
+                        "rec0JezjbAvUiWr8A",
+                        "recWQ2ml4RhoLtvik",
+                      ],
+                    },
                     "feats": Array [
                       "recRjuAWe7oy6a7wY",
                       "rec4KkfhKpetKIDqj",
@@ -1297,25 +1299,19 @@ exports[`should render stats page with profile data 1`] = `
                       Object {
                         "spells": Array [
                           Object {
-                            "description": "Acid missile 1d3 damage",
-                            "id": 123,
+                            "id": "rec8IQeYmBr3f1BMC",
                             "level": 0,
                             "mastered": false,
-                            "name": "Acid Splash",
                             "prepared": 1,
                             "remaining": 1,
-                            "school": "Conj",
                             "used": 0,
                           },
                           Object {
-                            "description": "Something",
-                            "id": 456,
+                            "id": "recwpeRoCsea4vidW",
                             "level": 0,
                             "mastered": true,
-                            "name": "Arcane Mark",
                             "prepared": 2,
                             "remaining": 1,
-                            "school": "Univ",
                             "used": 1,
                           },
                         ],
@@ -1324,14 +1320,11 @@ exports[`should render stats page with profile data 1`] = `
                       Object {
                         "spells": Array [
                           Object {
-                            "description": "Make someone like you",
-                            "id": 678,
+                            "id": "recRhVs0ahtQZpbXx",
                             "level": 1,
                             "mastered": false,
-                            "name": "Charm Person",
                             "prepared": 1,
                             "remaining": 0,
-                            "school": "Ench",
                             "used": 1,
                           },
                         ],

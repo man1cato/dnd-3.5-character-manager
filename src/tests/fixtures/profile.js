@@ -84,7 +84,6 @@ export default {
 		touch: 14
 	},
 	speed: 30,
-	bab: [2, 0, 0, 0],
 	initiative: {
 		base: 2
 	},
@@ -108,23 +107,25 @@ export default {
 		id: "rec35ieQLel7fW2Mo",
 		qty: 2
 	}],
+	equipped: {
+		shield: 'recZBZ5DTJuo8Uaea',
+		weapons: [
+			'recAaHr4qEcbytOpu',
+			'rec0JezjbAvUiWr8A',
+			'recWQ2ml4RhoLtvik'
+		]
+	},
 	spellbook: [{
 		spells: [{
-			id: 123,
+			id: "rec8IQeYmBr3f1BMC",
 			level: 0,
-			name: "Acid Splash",
-			description: "Acid missile 1d3 damage",
-			school: "Conj",
 			mastered: false,
 			prepared: 1,
 			used: 0,
 			remaining: 1
 		}, {
-			id: 456,
+			id: "recwpeRoCsea4vidW",
 			level: 0,
-			name: "Arcane Mark",
-			description: "Something",
-			school: "Univ",
 			mastered: true,
 			prepared: 2,
 			used: 1,
@@ -133,11 +134,8 @@ export default {
 		spellsPerDay: 4
 	},{
 		spells: [{
-			id: 678,
+			id: "recRhVs0ahtQZpbXx",
 			level: 1,
-			name: "Charm Person",
-			description: "Make someone like you",
-			school: "Ench",
 			mastered: false,
 			prepared: 1,
 			used: 1,

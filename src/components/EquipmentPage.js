@@ -44,7 +44,12 @@ export class EquipmentPage extends React.Component {
 			equipment,
 			equipmentTotalValue,
 			equipmentTotalWeight,
-			selected: undefined
+			selected: undefined,
+			equipped: {
+				weapons: this.props.equipped.weapons || [],
+				armor: this.props.equipped.armor || null,
+				shield: this.props.equipped.shield || null
+			}
 		}
 	}
 
@@ -94,21 +99,47 @@ export class EquipmentPage extends React.Component {
 					equipment: this.state.equipment.map((item) => ({
 						id: item.id,
 						qty: item.qty
-					})) 
-				})				
+					}))
+				})
 			})
 		})
+	}
 
+	handleEquip = (e) => {
+		const id = e.target.id
+		const category = e.target.name
+		this.setState((prevState) => {
+			const alreadyEquipped = _.includes(prevState.equipped[category], id) 
+			console.log('alreadyEquipped', alreadyEquipped)
+			if(category === 'weapons') {
+				const weapons = alreadyEquipped ? _.without(prevState.equipped.weapons, id) : [...prevState.equipped.weapons, id]
+				return {
+					equipped: update(prevState.equipped, {
+						weapons: { $set: weapons }
+					})
+				}
+			} 
+			return {
+				equipped: update(prevState.equipped, {
+					[category]: { $set: alreadyEquipped ? null : id }
+				})
+			}
+			
+		}, () => {
+			this.props.startEditProfile(this.props.id, {
+				equipped: this.state.equipped
+			})
+		})
 	}
 
 	handleOpenModal = (e) => {
 		const id = e.target.id
-		const selected = this.props.items[id]
+		const selected = { id, ...this.props.items[id] }
 		this.setState({selected})
 	}
 
 	handleCloseModal = () => {
-		this.setState({selected: undefined});
+		this.setState({selected: undefined})
 	}
 
 	render () {
@@ -174,8 +205,10 @@ export class EquipmentPage extends React.Component {
 
 					<ItemModal 
 						selected={this.state.selected} 
+						equipped={this.state.equipped}
+						handleEquip={this.handleEquip}
 						handleCloseModal={this.handleCloseModal}
-					/>
+						/>
 
 				</div>
 				<Footer />
@@ -188,6 +221,7 @@ const mapStateToProps = (state) => ({
 	id: state.profile.id,
 	money: state.profile.money,
 	equipment: state.profile.equipment,
+	equipped: state.profile.equipped,
 	items: state.items
 })
   

@@ -686,7 +686,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "levels": Array [
                   null,
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -702,7 +702,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -716,7 +716,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -730,7 +730,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -744,7 +744,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -758,7 +758,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -773,7 +773,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -788,7 +788,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -803,7 +803,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -818,7 +818,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -833,7 +833,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -849,7 +849,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -866,7 +866,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -882,7 +882,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -898,7 +898,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -914,7 +914,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       16,
                       11,
                       6,
@@ -932,7 +932,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       17,
                       12,
                       7,
@@ -949,7 +949,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       18,
                       13,
                       8,
@@ -966,7 +966,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       19,
                       14,
                       9,
@@ -983,7 +983,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       20,
                       15,
                       10,
@@ -1045,7 +1045,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -1059,7 +1059,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -1077,7 +1077,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -1092,7 +1092,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -1108,7 +1108,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -1127,7 +1127,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -1143,7 +1143,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -1164,7 +1164,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -1185,7 +1185,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -1203,7 +1203,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -1222,7 +1222,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -1244,7 +1244,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -1263,7 +1263,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -1286,7 +1286,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -1310,7 +1310,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -1331,7 +1331,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -1353,7 +1353,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -1378,7 +1378,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -1400,7 +1400,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -1459,7 +1459,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -1474,7 +1474,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -1490,7 +1490,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -1506,7 +1506,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -1523,7 +1523,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -1540,7 +1540,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -1558,7 +1558,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -1577,7 +1577,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -1597,7 +1597,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -1617,7 +1617,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -1638,7 +1638,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -1659,7 +1659,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -1681,7 +1681,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -1703,7 +1703,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -1727,7 +1727,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -1751,7 +1751,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -1776,7 +1776,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -1801,7 +1801,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -1826,7 +1826,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -1883,7 +1883,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -1901,7 +1901,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -1920,7 +1920,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -1939,7 +1939,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -1959,7 +1959,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -1979,7 +1979,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -2000,7 +2000,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -2022,7 +2022,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -2045,7 +2045,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -2068,7 +2068,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -2092,7 +2092,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -2116,7 +2116,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -2141,7 +2141,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -2166,7 +2166,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -2194,7 +2194,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -2221,7 +2221,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -2246,7 +2246,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -2274,7 +2274,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -2299,7 +2299,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -2364,7 +2364,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "levels": Array [
                   null,
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -2378,7 +2378,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -2392,7 +2392,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -2403,7 +2403,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -2417,7 +2417,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -2428,7 +2428,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -2443,7 +2443,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -2455,7 +2455,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -2470,7 +2470,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -2482,7 +2482,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -2497,7 +2497,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -2510,7 +2510,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -2526,7 +2526,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -2539,7 +2539,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -2555,7 +2555,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -2568,7 +2568,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       16,
                       11,
                       6,
@@ -2585,7 +2585,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       17,
                       12,
                       7,
@@ -2599,7 +2599,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       18,
                       13,
                       8,
@@ -2616,7 +2616,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       19,
                       14,
                       9,
@@ -2630,7 +2630,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       20,
                       15,
                       10,
@@ -2676,7 +2676,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -2691,7 +2691,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -2705,7 +2705,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -2720,7 +2720,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -2734,7 +2734,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -2749,7 +2749,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -2763,7 +2763,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -2778,7 +2778,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -2793,7 +2793,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -2809,7 +2809,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -2824,7 +2824,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -2840,7 +2840,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -2855,7 +2855,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -2870,7 +2870,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -2886,7 +2886,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -2903,7 +2903,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -2920,7 +2920,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -2936,7 +2936,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -2952,7 +2952,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -2991,7 +2991,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "levels": Array [
                   null,
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -3007,7 +3007,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -3022,7 +3022,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -3037,7 +3037,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -3051,7 +3051,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -3066,7 +3066,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -3084,7 +3084,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -3099,7 +3099,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -3114,7 +3114,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -3132,7 +3132,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -3151,7 +3151,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -3168,7 +3168,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -3189,7 +3189,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -3207,7 +3207,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -3225,7 +3225,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -3248,7 +3248,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       16,
                       11,
                       6,
@@ -3268,7 +3268,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       17,
                       12,
                       7,
@@ -3288,7 +3288,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       18,
                       13,
                       8,
@@ -3311,7 +3311,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       19,
                       14,
                       9,
@@ -3331,7 +3331,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       20,
                       15,
                       10,
@@ -3370,7 +3370,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "levels": Array [
                   null,
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -3386,7 +3386,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -3400,7 +3400,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -3414,7 +3414,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -3428,7 +3428,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -3442,7 +3442,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -3460,7 +3460,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -3478,7 +3478,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -3496,7 +3496,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -3514,7 +3514,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -3533,7 +3533,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -3553,7 +3553,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -3571,7 +3571,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -3592,7 +3592,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -3610,7 +3610,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -3632,7 +3632,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       16,
                       11,
                       6,
@@ -3652,7 +3652,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       17,
                       12,
                       7,
@@ -3675,7 +3675,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       18,
                       13,
                       8,
@@ -3695,7 +3695,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       19,
                       14,
                       9,
@@ -3715,7 +3715,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       20,
                       15,
                       10,
@@ -3784,7 +3784,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -3798,7 +3798,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -3813,7 +3813,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -3827,7 +3827,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -3841,7 +3841,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -3855,7 +3855,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -3869,7 +3869,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -3884,7 +3884,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -3900,7 +3900,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -3915,7 +3915,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -3930,7 +3930,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -3945,7 +3945,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -3961,7 +3961,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -3973,7 +3973,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       11,
                       6,
                       1,
@@ -3990,7 +3990,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -4006,7 +4006,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       12,
                       7,
                       2,
@@ -4022,7 +4022,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       13,
                       8,
                       3,
@@ -4038,7 +4038,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       14,
                       9,
                       4,
@@ -4055,7 +4055,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       15,
                       10,
                       5,
@@ -4131,7 +4131,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -4146,7 +4146,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -4161,7 +4161,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -4177,7 +4177,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -4193,7 +4193,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -4210,7 +4210,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -4227,7 +4227,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -4245,7 +4245,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -4263,7 +4263,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -4282,7 +4282,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -4301,7 +4301,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -4322,7 +4322,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -4343,7 +4343,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -4365,7 +4365,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -4387,7 +4387,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -4410,7 +4410,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -4433,7 +4433,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -4457,7 +4457,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -4481,7 +4481,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -4532,7 +4532,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 0,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -4547,7 +4547,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 1000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       1,
                     ],
                     "saves": Object {
@@ -4563,7 +4563,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 3000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -4579,7 +4579,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 6000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       2,
                     ],
                     "saves": Object {
@@ -4599,7 +4599,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 10000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -4616,7 +4616,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 15000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       3,
                     ],
                     "saves": Object {
@@ -4634,7 +4634,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 21000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -4652,7 +4652,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 28000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       4,
                     ],
                     "saves": Object {
@@ -4671,7 +4671,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 36000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -4693,7 +4693,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 45000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       5,
                     ],
                     "saves": Object {
@@ -4713,7 +4713,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 55000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -4734,7 +4734,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 66000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       6,
                       1,
                     ],
@@ -4756,7 +4756,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 78000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -4778,7 +4778,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 91000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       7,
                       2,
                     ],
@@ -4804,7 +4804,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 105000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -4827,7 +4827,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 120000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       8,
                       3,
                     ],
@@ -4851,7 +4851,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 136000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -4875,7 +4875,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 153000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       9,
                       4,
                     ],
@@ -4899,7 +4899,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "xp": 171000,
                   },
                   Object {
-                    "bab": Array [
+                    "baseAttackBonus": Array [
                       10,
                       5,
                     ],
@@ -6107,7 +6107,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                               "levels": Array [
                                 null,
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -6123,7 +6123,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -6137,7 +6137,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -6151,7 +6151,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -6165,7 +6165,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -6179,7 +6179,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -6194,7 +6194,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -6209,7 +6209,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -6224,7 +6224,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -6239,7 +6239,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -6254,7 +6254,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -6270,7 +6270,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -6287,7 +6287,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -6303,7 +6303,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -6319,7 +6319,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -6335,7 +6335,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     16,
                                     11,
                                     6,
@@ -6353,7 +6353,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     17,
                                     12,
                                     7,
@@ -6370,7 +6370,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     18,
                                     13,
                                     8,
@@ -6387,7 +6387,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     19,
                                     14,
                                     9,
@@ -6404,7 +6404,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     20,
                                     15,
                                     10,
@@ -6466,7 +6466,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -6480,7 +6480,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -6498,7 +6498,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -6513,7 +6513,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -6529,7 +6529,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -6548,7 +6548,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -6564,7 +6564,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -6585,7 +6585,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -6606,7 +6606,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -6624,7 +6624,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -6643,7 +6643,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -6665,7 +6665,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -6684,7 +6684,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -6707,7 +6707,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -6731,7 +6731,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -6752,7 +6752,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -6774,7 +6774,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -6799,7 +6799,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -6821,7 +6821,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -6880,7 +6880,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -6895,7 +6895,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -6911,7 +6911,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -6927,7 +6927,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -6944,7 +6944,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -6961,7 +6961,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -6979,7 +6979,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -6998,7 +6998,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -7018,7 +7018,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -7038,7 +7038,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -7059,7 +7059,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -7080,7 +7080,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -7102,7 +7102,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -7124,7 +7124,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -7148,7 +7148,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -7172,7 +7172,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -7197,7 +7197,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -7222,7 +7222,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -7247,7 +7247,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -7304,7 +7304,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -7322,7 +7322,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -7341,7 +7341,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -7360,7 +7360,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -7380,7 +7380,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -7400,7 +7400,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -7421,7 +7421,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -7443,7 +7443,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -7466,7 +7466,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -7489,7 +7489,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -7513,7 +7513,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -7537,7 +7537,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -7562,7 +7562,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -7587,7 +7587,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -7615,7 +7615,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -7642,7 +7642,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -7667,7 +7667,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -7695,7 +7695,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -7720,7 +7720,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -7785,7 +7785,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                               "levels": Array [
                                 null,
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -7799,7 +7799,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -7813,7 +7813,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -7824,7 +7824,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -7838,7 +7838,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -7849,7 +7849,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -7864,7 +7864,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -7876,7 +7876,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -7891,7 +7891,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -7903,7 +7903,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -7918,7 +7918,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -7931,7 +7931,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -7947,7 +7947,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -7960,7 +7960,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -7976,7 +7976,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -7989,7 +7989,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     16,
                                     11,
                                     6,
@@ -8006,7 +8006,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     17,
                                     12,
                                     7,
@@ -8020,7 +8020,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     18,
                                     13,
                                     8,
@@ -8037,7 +8037,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     19,
                                     14,
                                     9,
@@ -8051,7 +8051,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     20,
                                     15,
                                     10,
@@ -8097,7 +8097,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -8112,7 +8112,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -8126,7 +8126,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -8141,7 +8141,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -8155,7 +8155,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -8170,7 +8170,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -8184,7 +8184,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -8199,7 +8199,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -8214,7 +8214,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -8230,7 +8230,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -8245,7 +8245,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -8261,7 +8261,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -8276,7 +8276,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -8291,7 +8291,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -8307,7 +8307,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -8324,7 +8324,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -8341,7 +8341,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -8357,7 +8357,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -8373,7 +8373,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -8412,7 +8412,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                               "levels": Array [
                                 null,
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -8428,7 +8428,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -8443,7 +8443,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -8458,7 +8458,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -8472,7 +8472,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -8487,7 +8487,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -8505,7 +8505,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -8520,7 +8520,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -8535,7 +8535,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -8553,7 +8553,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -8572,7 +8572,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -8589,7 +8589,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -8610,7 +8610,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -8628,7 +8628,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -8646,7 +8646,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -8669,7 +8669,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     16,
                                     11,
                                     6,
@@ -8689,7 +8689,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     17,
                                     12,
                                     7,
@@ -8709,7 +8709,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     18,
                                     13,
                                     8,
@@ -8732,7 +8732,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     19,
                                     14,
                                     9,
@@ -8752,7 +8752,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     20,
                                     15,
                                     10,
@@ -8791,7 +8791,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                               "levels": Array [
                                 null,
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -8807,7 +8807,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -8821,7 +8821,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -8835,7 +8835,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -8849,7 +8849,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -8863,7 +8863,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -8881,7 +8881,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -8899,7 +8899,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -8917,7 +8917,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -8935,7 +8935,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -8954,7 +8954,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -8974,7 +8974,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -8992,7 +8992,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -9013,7 +9013,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -9031,7 +9031,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -9053,7 +9053,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     16,
                                     11,
                                     6,
@@ -9073,7 +9073,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     17,
                                     12,
                                     7,
@@ -9096,7 +9096,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     18,
                                     13,
                                     8,
@@ -9116,7 +9116,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     19,
                                     14,
                                     9,
@@ -9136,7 +9136,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     20,
                                     15,
                                     10,
@@ -9205,7 +9205,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -9219,7 +9219,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -9234,7 +9234,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -9248,7 +9248,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -9262,7 +9262,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -9276,7 +9276,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -9290,7 +9290,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -9305,7 +9305,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -9321,7 +9321,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -9336,7 +9336,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -9351,7 +9351,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -9366,7 +9366,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -9382,7 +9382,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -9394,7 +9394,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     11,
                                     6,
                                     1,
@@ -9411,7 +9411,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -9427,7 +9427,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     12,
                                     7,
                                     2,
@@ -9443,7 +9443,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     13,
                                     8,
                                     3,
@@ -9459,7 +9459,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     14,
                                     9,
                                     4,
@@ -9476,7 +9476,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     15,
                                     10,
                                     5,
@@ -9552,7 +9552,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -9567,7 +9567,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -9582,7 +9582,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -9598,7 +9598,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -9614,7 +9614,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -9631,7 +9631,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -9648,7 +9648,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -9666,7 +9666,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -9684,7 +9684,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -9703,7 +9703,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -9722,7 +9722,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -9743,7 +9743,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -9764,7 +9764,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -9786,7 +9786,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -9808,7 +9808,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -9831,7 +9831,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -9854,7 +9854,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -9878,7 +9878,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -9902,7 +9902,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],
@@ -9953,7 +9953,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 0,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -9968,7 +9968,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 1000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     1,
                                   ],
                                   "saves": Object {
@@ -9984,7 +9984,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 3000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -10000,7 +10000,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 6000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     2,
                                   ],
                                   "saves": Object {
@@ -10020,7 +10020,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 10000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -10037,7 +10037,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 15000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     3,
                                   ],
                                   "saves": Object {
@@ -10055,7 +10055,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 21000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -10073,7 +10073,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 28000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     4,
                                   ],
                                   "saves": Object {
@@ -10092,7 +10092,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 36000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -10114,7 +10114,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 45000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     5,
                                   ],
                                   "saves": Object {
@@ -10134,7 +10134,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 55000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -10155,7 +10155,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 66000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     6,
                                     1,
                                   ],
@@ -10177,7 +10177,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 78000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -10199,7 +10199,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 91000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     7,
                                     2,
                                   ],
@@ -10225,7 +10225,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 105000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -10248,7 +10248,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 120000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     8,
                                     3,
                                   ],
@@ -10272,7 +10272,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 136000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -10296,7 +10296,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 153000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     9,
                                     4,
                                   ],
@@ -10320,7 +10320,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "xp": 171000,
                                 },
                                 Object {
-                                  "bab": Array [
+                                  "baseAttackBonus": Array [
                                     10,
                                     5,
                                   ],

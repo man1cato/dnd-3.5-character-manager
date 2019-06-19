@@ -25,7 +25,7 @@ exports[`should render PreparedSpells with profile data 1`] = `
     <div />
     <button
       className="grid__col1 button--link"
-      id={123}
+      id="rec8IQeYmBr3f1BMC"
       onClick={[Function]}
     >
       Acid Splash
@@ -40,13 +40,13 @@ exports[`should render PreparedSpells with profile data 1`] = `
       id="cast00"
       level={0}
       onClick={[Function]}
-      spellid={123}
+      spellid="rec8IQeYmBr3f1BMC"
     >
       Cast
     </button>
     <button
       className="grid__col1 button--link"
-      id={456}
+      id="recwpeRoCsea4vidW"
       onClick={[Function]}
     >
       Arcane Mark
@@ -61,13 +61,13 @@ exports[`should render PreparedSpells with profile data 1`] = `
       id="cast01"
       level={0}
       onClick={[Function]}
-      spellid={456}
+      spellid="recwpeRoCsea4vidW"
     >
       Cast
     </button>
     <button
       className="grid__col1 button--link"
-      id={678}
+      id="recRhVs0ahtQZpbXx"
       onClick={[Function]}
     >
       Charm Person

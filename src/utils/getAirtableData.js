@@ -1,6 +1,8 @@
 import axios from 'axios'
 import _ from 'lodash'
-import { convertTextToArray } from './utils'
+import { convertTextToArray } from './utils' 
+import dotenv from 'dotenv'
+dotenv.config({ path: './config/dev.env' })
 
 const apiKey = process.env.AIRTABLE_API_KEY
 const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL'
@@ -82,7 +84,7 @@ const getLevels = async (jobClassId) => {
 					reflex: levelRecord['Reflex'],
 					will: levelRecord['Will']
 				},
-				bab: _.compact([ levelRecord['BAB 1'], levelRecord['BAB 2'], levelRecord['BAB 3'], levelRecord['BAB 4'] ]),
+				baseAttackBonus: _.compact([ levelRecord['BAB 1'], levelRecord['BAB 2'], levelRecord['BAB 3'], levelRecord['BAB 4'] ]),
 				xp: levelRecord['XP Required'],
 				specialAbilities: !!levelRecord['Special Abilities'] ? levelRecord['Special Abilities'] : null,
 				spellsPerDay:  _.compact([ 

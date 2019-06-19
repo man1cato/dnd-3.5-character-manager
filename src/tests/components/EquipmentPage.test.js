@@ -12,6 +12,7 @@ beforeAll(async () => {
         id: profile.id,
         money: profile.money,
         equipment: profile.equipment,
+        equipped: profile.equipped,
         items: api.items
     }
 })
