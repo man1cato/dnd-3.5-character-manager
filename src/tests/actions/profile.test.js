@@ -3,26 +3,25 @@ import thunk from 'redux-thunk'
 import _ from 'lodash'
 
 import database from '../../firebase/firebase'
-import profile from '../fixtures/profile'
 import { setProfile, editProfile, removeProfile, startSetProfile, startCreateProfile, startEditProfile } from '../../actions/profile'
-import seedDatabase, { userOne, userTwo, characterOne, characterTwo, characterThree } from '../utils/seedDatabase'
+import seedDatabase, { userOne, userTwo, characterOne } from '../utils/seedDatabase'
 
+
+const middlewares = [thunk]
+const mockStore = configureStore(middlewares)
 
 beforeAll(async () => {
 	await seedDatabase()
 })
 
-const middlewares = [thunk]
-const mockStore = configureStore(middlewares)
-
 test('should setup set profile action object with provided values', () => {
-	const charId = profile.id
-	const fields = _.omit(profile, ['id'])
-	const action = setProfile(charId, fields)
+	const id = 'characterOne'
+	const profile = characterOne
+	const action = setProfile(id, profile)
 	expect(action).toEqual({
 		type: 'SET_PROFILE',
-		id: charId,
-		profile: fields
+		id,
+		profile
 	})
 })
 

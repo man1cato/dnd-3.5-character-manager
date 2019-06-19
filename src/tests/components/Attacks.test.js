@@ -1,26 +1,23 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import Attacks from '../../components/Attacks';
-import profile from '../fixtures/profile';
+import Attacks from '../../components/Attacks'
+import { characterOne } from '../utils/seedDatabase'
 
-const attacks = {
-    bab: profile.attacks.bab,
-    melee: {
-        base: profile.attacks.melee.base,
-        mod: 3
-    },
-    ranged: {
-        base: profile.attacks.ranged.base,
-        mod: 3
-    },
-    grapple: {
-        base: profile.attacks.grapple.base,
-        mod: 3
-    }
-}
 
-test('should render attacks with profile data', () => {
-    const wrapper = shallow(<Attacks attacks={attacks} />);
-    expect(wrapper).toMatchSnapshot();
+const handleChange = jest.fn()
+let wrapper
+beforeEach(() => {
+    wrapper = shallow(<Attacks attacks={characterOne.attacks} handleChange={handleChange} />)
+})
+
+test('should render attacks with default profile data', () => {
+    expect(wrapper).toMatchSnapshot()
+})
+
+test('should trigger handleChange when input changes', () => {
+	wrapper.find('#melee').simulate('change', {
+        target: { value: 3 }
+    })
+    expect(handleChange).toHaveBeenCalledWith({ target: { value: 3 }})
 })

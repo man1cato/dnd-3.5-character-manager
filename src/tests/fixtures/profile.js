@@ -2,9 +2,9 @@ export default {
 	id:'recnPKEA6sOWaOt57',
 	name:'Istvyll Bannianea',
 	gender: 'Male',
-	age: 21,
+	age: 141,
 	height: `5'2"`,
-	weight: 147,
+	weight: 97,
 	race: 'recOadObhQKOMa7f2',
 	jobClass: 'recBCWC99ohXXKqwL',
 	alignment:'Lawful Evil',
@@ -21,28 +21,22 @@ export default {
 	xp: 10000,
 	abilities: {
 		str: {
-			score:14,
-			mod:2
+			score:14
 		},
 		dex: {
-			score:18,
-			mod:2
+			score:18
 		},
 		con: {
-			score:16,
-			mod:3
+			score:16
 		},
 		int: {
-			score:20,
-			mod:5
+			score:20
 		},
 		wis: {
-			score:14,
-			mod:2
+			score:14
 		},
 		cha: {
-			score:11,
-			mod:0
+			score:11
 		}
 	},
 	specialAbilities: ["rect54ikkC9SDLJ1x"],
@@ -64,26 +58,23 @@ export default {
 	],
 	saves: {
 		fortitude: {
-			mod: 4
+			base: 1
 		},
 		reflex: {
-			mod: 5
+			base: 1
 		},
 		will: {
-			mod: 6
+			base: 4
 		}
 	},
 	attacks: {
 		melee: {
-			name: "Melee",
 			base: 4
 		},
 		ranged: {
-			name: "Ranged",
 			base: 6
 		},
 		grapple: {
-			name: "Grapple",
 			base: 4
 		}
 	},
@@ -93,10 +84,9 @@ export default {
 		touch: 14
 	},
 	speed: 30,
-	bab: [4, 3, 2, 1],
+	bab: [2, 0, 0, 0],
 	initiative: {
-		base: 2,
-		mod: 1
+		base: 2
 	},
 	weaponSet: ["recOvuth9QArkI54l"],
 	money: {

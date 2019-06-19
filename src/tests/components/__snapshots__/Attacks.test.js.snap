@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render attacks with profile data 1`] = `
+exports[`should render attacks with default profile data 1`] = `
 <div>
   <h3
     className="row--center"
@@ -40,8 +40,8 @@ exports[`should render attacks with profile data 1`] = `
     <input
       id="melee"
       name="attacks"
+      onChange={[MockFunction]}
       type="text"
-      value={3}
     />
     <div>
       =
@@ -61,8 +61,8 @@ exports[`should render attacks with profile data 1`] = `
     <input
       id="ranged"
       name="attacks"
+      onChange={[MockFunction]}
       type="text"
-      value={3}
     />
     <div>
       =
@@ -82,8 +82,8 @@ exports[`should render attacks with profile data 1`] = `
     <input
       id="grapple"
       name="attacks"
+      onChange={[MockFunction]}
       type="text"
-      value={3}
     />
     <div>
       =

@@ -26,21 +26,18 @@ exports[`should render PreparedSpells with profile data 1`] = `
     <button
       className="grid__col1 button--link"
       id={123}
-      key="spell00"
       onClick={[Function]}
     >
       Acid Splash
     </button>
-    <div
-      key="rmng00"
-    >
+    <div>
       1
     </div>
     <div />
     <button
       attribute="used"
       change={1}
-      key="cast00"
+      id="cast00"
       level={0}
       onClick={[Function]}
       spellid={123}
@@ -50,21 +47,18 @@ exports[`should render PreparedSpells with profile data 1`] = `
     <button
       className="grid__col1 button--link"
       id={456}
-      key="spell01"
       onClick={[Function]}
     >
       Arcane Mark
     </button>
-    <div
-      key="rmng01"
-    >
+    <div>
       1
     </div>
     <div />
     <button
       attribute="used"
       change={1}
-      key="cast01"
+      id="cast01"
       level={0}
       onClick={[Function]}
       spellid={456}
@@ -74,14 +68,11 @@ exports[`should render PreparedSpells with profile data 1`] = `
     <button
       className="grid__col1 button--link"
       id={678}
-      key="spell12"
       onClick={[Function]}
     >
       Charm Person
     </button>
-    <div
-      key="rmng12"
-    >
+    <div>
       0
     </div>
     <div />

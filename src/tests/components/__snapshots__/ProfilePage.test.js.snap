@@ -41,27 +41,21 @@ exports[`should render ProfilePage with profile data 1`] = `
           abilities={
             Object {
               "cha": Object {
-                "mod": 0,
                 "score": 11,
               },
               "con": Object {
-                "mod": 3,
                 "score": 16,
               },
               "dex": Object {
-                "mod": 2,
                 "score": 18,
               },
               "int": Object {
-                "mod": 5,
                 "score": 20,
               },
               "str": Object {
-                "mod": 2,
                 "score": 14,
               },
               "wis": Object {
-                "mod": 2,
                 "score": 14,
               },
             }
@@ -73,30 +67,27 @@ exports[`should render ProfilePage with profile data 1`] = `
               "touch": 14,
             }
           }
-          age={21}
+          age={141}
           alignment="Lawful Evil"
           attacks={
             Object {
               "grapple": Object {
                 "base": 4,
-                "name": "Grapple",
               },
               "melee": Object {
                 "base": 4,
-                "name": "Melee",
               },
               "ranged": Object {
                 "base": 6,
-                "name": "Ranged",
               },
             }
           }
           bab={
             Array [
-              4,
-              3,
               2,
-              1,
+              0,
+              0,
+              0,
             ]
           }
           companion={
@@ -205,7 +196,6 @@ exports[`should render ProfilePage with profile data 1`] = `
           initiative={
             Object {
               "base": 2,
-              "mod": 1,
             }
           }
           jobClass={
@@ -706,13 +696,13 @@ exports[`should render ProfilePage with profile data 1`] = `
           saves={
             Object {
               "fortitude": Object {
-                "mod": 4,
+                "base": 1,
               },
               "reflex": Object {
-                "mod": 5,
+                "base": 1,
               },
               "will": Object {
-                "mod": 6,
+                "base": 4,
               },
             }
           }
@@ -795,7 +785,7 @@ exports[`should render ProfilePage with profile data 1`] = `
               "recOvuth9QArkI54l",
             ]
           }
-          weight={147}
+          weight={97}
           xp={10000}
         >
           <div
@@ -949,7 +939,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   Wizard
                 </div>
                 <div>
-                  21
+                  141
                    yrs
                 </div>
                 <div>
@@ -962,7 +952,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   Medium
                 </div>
                 <div>
-                  147
+                  97
                    lbs
                 </div>
                 <h4
@@ -4679,27 +4669,21 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                   Object {
                     "abilities": Object {
                       "cha": Object {
-                        "mod": 0,
                         "score": 11,
                       },
                       "con": Object {
-                        "mod": 3,
                         "score": 16,
                       },
                       "dex": Object {
-                        "mod": 2,
                         "score": 18,
                       },
                       "int": Object {
-                        "mod": 5,
                         "score": 20,
                       },
                       "str": Object {
-                        "mod": 2,
                         "score": 14,
                       },
                       "wis": Object {
-                        "mod": 2,
                         "score": 14,
                       },
                     },
@@ -4708,27 +4692,24 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       "flat": 10,
                       "touch": 14,
                     },
-                    "age": 21,
+                    "age": 141,
                     "alignment": "Lawful Evil",
                     "attacks": Object {
                       "grapple": Object {
                         "base": 4,
-                        "name": "Grapple",
                       },
                       "melee": Object {
                         "base": 4,
-                        "name": "Melee",
                       },
                       "ranged": Object {
                         "base": 6,
-                        "name": "Ranged",
                       },
                     },
                     "bab": Array [
-                      4,
-                      3,
                       2,
-                      1,
+                      0,
+                      0,
+                      0,
                     ],
                     "companion": Object {
                       "abilities": Object {
@@ -4826,7 +4807,6 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     "id": "recnPKEA6sOWaOt57",
                     "initiative": Object {
                       "base": 2,
-                      "mod": 1,
                     },
                     "jobClass": "recBCWC99ohXXKqwL",
                     "languages": Array [
@@ -4850,13 +4830,13 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     "race": "recOadObhQKOMa7f2",
                     "saves": Object {
                       "fortitude": Object {
-                        "mod": 4,
+                        "base": 1,
                       },
                       "reflex": Object {
-                        "mod": 5,
+                        "base": 1,
                       },
                       "will": Object {
-                        "mod": 6,
+                        "base": 4,
                       },
                     },
                     "school": "Transmutation",
@@ -4930,7 +4910,7 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     "weaponSet": Array [
                       "recOvuth9QArkI54l",
                     ],
-                    "weight": 147,
+                    "weight": 97,
                     "xp": 10000,
                   }
                 }

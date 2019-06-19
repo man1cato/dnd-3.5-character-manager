@@ -42,7 +42,6 @@ exports[`should render saves with profile data 1`] = `
       name="saves"
       onChange={[MockFunction]}
       type="text"
-      value={4}
     />
     <div>
       =
@@ -64,7 +63,6 @@ exports[`should render saves with profile data 1`] = `
       name="saves"
       onChange={[MockFunction]}
       type="text"
-      value={4}
     />
     <div>
       =
@@ -86,7 +84,6 @@ exports[`should render saves with profile data 1`] = `
       name="saves"
       onChange={[MockFunction]}
       type="text"
-      value={4}
     />
     <div>
       =

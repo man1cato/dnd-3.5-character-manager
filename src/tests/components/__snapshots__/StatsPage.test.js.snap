@@ -41,27 +41,21 @@ exports[`should render stats page with profile data 1`] = `
           abilities={
             Object {
               "cha": Object {
-                "mod": 0,
                 "score": 11,
               },
               "con": Object {
-                "mod": 3,
                 "score": 16,
               },
               "dex": Object {
-                "mod": 2,
                 "score": 18,
               },
               "int": Object {
-                "mod": 5,
                 "score": 20,
               },
               "str": Object {
-                "mod": 2,
                 "score": 14,
               },
               "wis": Object {
-                "mod": 2,
                 "score": 14,
               },
             }
@@ -250,27 +244,21 @@ exports[`should render stats page with profile data 1`] = `
                 abilities={
                   Object {
                     "cha": Object {
-                      "mod": 0,
                       "score": 11,
                     },
                     "con": Object {
-                      "mod": 3,
                       "score": 16,
                     },
                     "dex": Object {
-                      "mod": 2,
                       "score": 18,
                     },
                     "int": Object {
-                      "mod": 5,
                       "score": 20,
                     },
                     "str": Object {
-                      "mod": 2,
                       "score": 14,
                     },
                     "wis": Object {
-                      "mod": 2,
                       "score": 14,
                     },
                   }
@@ -370,39 +358,27 @@ exports[`should render stats page with profile data 1`] = `
                   <div
                     className="grid__col3"
                     key="mod0"
-                  >
-                    2
-                  </div>
+                  />
                   <div
                     className="grid__col3"
                     key="mod1"
-                  >
-                    2
-                  </div>
+                  />
                   <div
                     className="grid__col3"
                     key="mod2"
-                  >
-                    3
-                  </div>
+                  />
                   <div
                     className="grid__col3"
                     key="mod3"
-                  >
-                    5
-                  </div>
+                  />
                   <div
                     className="grid__col3"
                     key="mod4"
-                  >
-                    2
-                  </div>
+                  />
                   <div
                     className="grid__col3"
                     key="mod5"
-                  >
-                    0
-                  </div>
+                  />
                   <h5
                     className="grid__col4"
                   >
@@ -1124,27 +1100,21 @@ exports[`should render stats page with profile data 1`] = `
                   Object {
                     "abilities": Object {
                       "cha": Object {
-                        "mod": 0,
                         "score": 11,
                       },
                       "con": Object {
-                        "mod": 3,
                         "score": 16,
                       },
                       "dex": Object {
-                        "mod": 2,
                         "score": 18,
                       },
                       "int": Object {
-                        "mod": 5,
                         "score": 20,
                       },
                       "str": Object {
-                        "mod": 2,
                         "score": 14,
                       },
                       "wis": Object {
-                        "mod": 2,
                         "score": 14,
                       },
                     },
@@ -1153,27 +1123,24 @@ exports[`should render stats page with profile data 1`] = `
                       "flat": 10,
                       "touch": 14,
                     },
-                    "age": 21,
+                    "age": 141,
                     "alignment": "Lawful Evil",
                     "attacks": Object {
                       "grapple": Object {
                         "base": 4,
-                        "name": "Grapple",
                       },
                       "melee": Object {
                         "base": 4,
-                        "name": "Melee",
                       },
                       "ranged": Object {
                         "base": 6,
-                        "name": "Ranged",
                       },
                     },
                     "bab": Array [
-                      4,
-                      3,
                       2,
-                      1,
+                      0,
+                      0,
+                      0,
                     ],
                     "companion": Object {
                       "abilities": Object {
@@ -1271,7 +1238,6 @@ exports[`should render stats page with profile data 1`] = `
                     "id": "recnPKEA6sOWaOt57",
                     "initiative": Object {
                       "base": 2,
-                      "mod": 1,
                     },
                     "jobClass": "recBCWC99ohXXKqwL",
                     "languages": Array [
@@ -1295,13 +1261,13 @@ exports[`should render stats page with profile data 1`] = `
                     "race": "recOadObhQKOMa7f2",
                     "saves": Object {
                       "fortitude": Object {
-                        "mod": 4,
+                        "base": 1,
                       },
                       "reflex": Object {
-                        "mod": 5,
+                        "base": 1,
                       },
                       "will": Object {
-                        "mod": 6,
+                        "base": 4,
                       },
                     },
                     "school": "Transmutation",
@@ -1375,7 +1341,7 @@ exports[`should render stats page with profile data 1`] = `
                     "weaponSet": Array [
                       "recOvuth9QArkI54l",
                     ],
-                    "weight": 147,
+                    "weight": 97,
                     "xp": 10000,
                   }
                 }

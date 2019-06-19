@@ -30,7 +30,7 @@ exports[`should render combat page with profile data 1`] = `
       initiative={
         Object {
           "base": 2,
-          "mod": 1,
+          "mod": "",
           "total": 2,
         }
       }
@@ -41,16 +41,19 @@ exports[`should render combat page with profile data 1`] = `
       saves={
         Object {
           "fortitude": Object {
-            "mod": 4,
-            "total": undefined,
+            "base": 1,
+            "mod": "",
+            "total": 1,
           },
           "reflex": Object {
-            "mod": 5,
-            "total": undefined,
+            "base": 1,
+            "mod": "",
+            "total": 1,
           },
           "will": Object {
-            "mod": 6,
-            "total": undefined,
+            "base": 4,
+            "mod": "",
+            "total": 4,
           },
         }
       }
@@ -61,19 +64,16 @@ exports[`should render combat page with profile data 1`] = `
           "grapple": Object {
             "base": 4,
             "mod": "",
-            "name": "Grapple",
             "total": 4,
           },
           "melee": Object {
             "base": 4,
             "mod": "",
-            "name": "Melee",
             "total": 4,
           },
           "ranged": Object {
             "base": 6,
             "mod": "",
-            "name": "Ranged",
             "total": 6,
           },
         }
@@ -91,7 +91,6 @@ exports[`should render combat page with profile data 1`] = `
       }
     />
     <PreparedSpells
-      id="recnPKEA6sOWaOt57"
       spellbook={
         Array [
           Object {

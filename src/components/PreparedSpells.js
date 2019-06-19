@@ -23,7 +23,7 @@ export class PreparedSpells extends React.Component{
    }     
 
    handleOpenModal = (e) => {
-      const id = e.target.id;
+      const id = e.target.id
       const selected = this.props.spells[id]
       this.setState({selected})
    }
@@ -83,7 +83,7 @@ export class PreparedSpells extends React.Component{
   
    render () { 
       return (
-         <Fragment>
+         <>
             <SpellModal 
                selected={this.state.selected}
                handleCloseModal={this.handleCloseModal}
@@ -101,18 +101,16 @@ export class PreparedSpells extends React.Component{
                   <Fragment key={i}>						
                      <button 
                         className="grid__col1 button--link"                         
-                        key={`spell${spell.level}${i}`}
                         id={spell.id}
                         onClick={this.handleOpenModal}
                      >
                         {spell.name}
                      </button>
             
-                     <div key={`rmng${spell.level}${i}`}>{spell.remaining}</div>
+                     <div>{spell.remaining}</div>
 
                      {this.state.castSpells.includes(spell.id) ?
                         <button 
-                           key={`undo${spell.level}${i}`}
                            spellid={spell.id}
                            level={spell.level}
                            attribute="used"
@@ -127,7 +125,7 @@ export class PreparedSpells extends React.Component{
                      
                      {spell.remaining > 0 ?
                         <button 
-                           key={`cast${spell.level}${i}`}
+                           id={`cast${spell.level}${i}`}
                            spellid={spell.id}
                            level={spell.level}
                            attribute="used"
@@ -145,7 +143,7 @@ export class PreparedSpells extends React.Component{
                ))}
             </div>
             
-         </Fragment>
+         </>
       )
    }
 }
