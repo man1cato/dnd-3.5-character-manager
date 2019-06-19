@@ -4,9 +4,7 @@ import { apiObjectToArray } from '../utils/utils'
 
 
 export const Weapons = (props) => (
-	<div>
-		<h3 className="row row--center">Weapons</h3>
-
+	<>
 		{props.weaponSet.map((weaponId) => {
 			const weapon = props.weapons.find((weapon) => weapon.id === weaponId)
 
@@ -31,7 +29,7 @@ export const Weapons = (props) => (
 				</div>
 			)
 		})}
-	</div>
+	</>
 )
 
 const mapStateToProps = (state) => ({

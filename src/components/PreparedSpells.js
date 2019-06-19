@@ -84,13 +84,6 @@ export class PreparedSpells extends React.Component{
    render () { 
       return (
          <>
-            <SpellModal 
-               selected={this.state.selected}
-               handleCloseModal={this.handleCloseModal}
-            />            
-
-            <h3 className="row--center">Prepared Spells</h3>
-
             <div className="grid grid--preparedSpells">
                <h5 className="grid__col1">Spell</h5>
                <h5>Rmng</h5>
@@ -142,7 +135,11 @@ export class PreparedSpells extends React.Component{
                   </Fragment>
                ))}
             </div>
-            
+
+            <SpellModal 
+               selected={this.state.selected}
+               handleCloseModal={this.handleCloseModal}
+            />   
          </>
       )
    }

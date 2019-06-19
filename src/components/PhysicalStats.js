@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
-        
     <div className="grid grid--combat">
         <div className="row__title">Hit Points</div>
-        <div className="row--left">
+        <div className="row">
             <div className="row__item">
                 <h5>Base</h5>
                 <div>{hp.base}</div>
@@ -38,7 +37,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
         </div>
 
         <div className="row__title">Armor Class</div>
-        <div className="row--left">            
+        <div className="row">            
             <div className="row__item">
                 <h5>Base</h5>
                 <div>{ac.base}</div>
@@ -54,7 +53,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
         </div>
 
         <div className="row__title">Initiative</div>
-        <div className="row--left">            
+        <div className="row">            
             <div className="row__item">
                 <h5>Base</h5>
                 <div>{initiative.base}</div>
@@ -90,11 +89,8 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
             </div>
         :
             <div className="row--left">{speed} ft/round</div>            
-        }         
-
-        
+        }       
     </div>
-
 )
 
 export default PhysicalStats;

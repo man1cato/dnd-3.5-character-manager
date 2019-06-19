@@ -51,11 +51,13 @@ export class StatsPage extends React.Component {
 						<span>To next level: {this.props.nextLevelXp - this.props.xp}</span>
 					</div>
 
-					<Abilities
-						abilities={this.state.abilities}
-						handleChange={this.handleChange}
-					/>
-
+					<div className="section">
+						<Abilities
+							abilities={this.state.abilities}
+							handleChange={this.handleChange}
+						/>
+					</div>
+					
 					<SkillSet 
 						skillSet={this.props.skillSet}
 					/>

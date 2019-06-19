@@ -103,7 +103,7 @@ export class CompanionPage extends React.Component {
 			<div className="layout">
 				<Header pageTitle="Companion" />
 				<div className="container container--body">
-					<div className="grid grid--companion">
+					<div className="section grid grid--companion">
 						<h3>{this.props.companion.name}</h3>
 						<div>{this.props.companion.type}</div>
 
@@ -114,18 +114,22 @@ export class CompanionPage extends React.Component {
 						<Feats featIds={this.props.companion.feats} />
 					</div>
 
-					<h3 className="row--center">Abilities</h3>
-					<Abilities
-						abilities={this.state.companion.abilities}
-						handleChange={this.handleChange}
-					/>
+					<div className="section">
+						<h3 className="section__title">Abilities</h3>
+						<Abilities
+							abilities={this.state.companion.abilities}
+							handleChange={this.handleChange}
+						/>
+					</div>
 
-					<h3 className="row--center">Skills</h3>
-					<SkillSet 
-						skillSet={this.props.companion.skillSet}                        
-					/>
-					
-					<h3 className="row--center">Combat</h3>
+					<div className="section">
+						<h3 className="section__title">Skills</h3>
+						<SkillSet 
+							skillSet={this.props.companion.skillSet}                        
+						/>
+					</div>
+
+					<h3 className="section__title">Combat</h3>
 					<PhysicalStats
 						hp={this.state.companion.hp}
 						ac={this.props.companion.ac}

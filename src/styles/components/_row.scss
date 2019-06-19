@@ -2,7 +2,7 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-bottom: $s-size;
+  margin-bottom: $m-size;
 }
 
 .row--center {
@@ -22,7 +22,7 @@
 
 .row__title {
   align-self: flex-end;
-  margin-bottom: 12px;
+  margin-bottom: $m-size;
 }
 
 .row__item {

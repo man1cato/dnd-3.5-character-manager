@@ -84,40 +84,54 @@ export class CombatPage extends React.Component {
 			<div className="layout">
 				<Header pageTitle="Combat" />
 				<div className="container container--body">
-
-					<PhysicalStats
-						hp={this.state.hp}
-						ac={this.props.ac}
-						initiative={this.state.initiative}
-						speed={this.props.speed}
-						handleChange={this.handleChange}
-					/>                              
-
-					<Saves
-						saves={this.state.saves}            
-						handleChange={this.handleChange}
-					/>            
-
-					<Attacks 
-						attacks={this.state.attacks}
-						handleChange={this.handleChange}
-					/>
-
-					<Weapons 
-						weaponSet={this.props.weaponSet}
-						meleeBonus={this.state.attacks.melee.total}
-						rangedBonus={this.state.attacks.ranged.total}
-						grappleBonus={this.state.attacks.grapple.total}
-					/>
-
-					{this.props.spellbook && 
-						<PreparedSpells 
-							id={this.props.id}
-							spellbook={this.props.spellbook}
-							spells={this.props.spells}
-							startEditProfile={this.props.startEditProfile}
+					<div className="section">
+						<h3 className="section__title">Physical Stats</h3>
+						<PhysicalStats
+							hp={this.state.hp}
+							ac={this.props.ac}
+							initiative={this.state.initiative}
+							speed={this.props.speed}
+							handleChange={this.handleChange}
 						/>
-					}
+					</div>
+
+					<div className="section">
+						<h3 className="section__title">Saving Throws</h3>
+						<Saves
+							saves={this.state.saves}            
+							handleChange={this.handleChange}
+						/>
+					</div>
+
+					<div className="section">       
+						<h3 className="section__title">Attack Bonuses</h3>
+						<Attacks 
+							attacks={this.state.attacks}
+							handleChange={this.handleChange}
+						/>
+					</div>
+
+					<div className="section">
+						<h3 className="section__title">Equipped Weapons</h3>
+						<Weapons 
+							weaponSet={this.props.equipped.weapons}
+							meleeBonus={this.state.attacks.melee.total}
+							rangedBonus={this.state.attacks.ranged.total}
+							grappleBonus={this.state.attacks.grapple.total}
+						/>
+					</div>
+
+					{this.props.spellbook && (
+						<div className="section">
+							<h3 className="section__title">Prepared Spells</h3>
+							<PreparedSpells 
+								id={this.props.id}
+								spellbook={this.props.spellbook}
+								spells={this.props.spells}
+								startEditProfile={this.props.startEditProfile}
+							/>
+						</div>
+					)}
 
 				</div>
 
@@ -142,7 +156,7 @@ const mapStateToProps = ({profile, spells, jobClasses}) => {
 		saves,
 		baseAttackBonus: profile.baseAttackBonus,
 		attacks: profile.attacks,
-		weaponSet: profile.weaponSet,
+		equipped: profile.equipped,
 		spellbook: profile.spellbook,
 		spells
 	}

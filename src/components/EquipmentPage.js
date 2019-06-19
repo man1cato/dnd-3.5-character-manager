@@ -148,23 +148,25 @@ export class EquipmentPage extends React.Component {
 				<Header pageTitle="Equipment" />
 				<div className="container container--body">
 					
-					<div className="grid grid--money">
-						{denominations.map((denomination, i) => (
-							<div className="grid--money__cell" key={`denomination${i}`}>
-								<input
-									type="text"
-									name="money"
-									id={denomination}
-									value={this.state.money[denomination]}
-									onChange={this.handleChange}
-								/>  
-								<div>{denomination}</div>
-							</div>
-						))}
-					</div>
+					<div className="section">
+						<div className="grid grid--money">
+							{denominations.map((denomination, i) => (
+								<div className="grid--money__cell" key={`denomination${i}`}>
+									<input
+										type="text"
+										name="money"
+										id={denomination}
+										value={this.state.money[denomination]}
+										onChange={this.handleChange}
+									/>  
+									<div>{denomination}</div>
+								</div>
+							))}
+						</div>
 
-					<div className="row--right">
-						<h4>Total money: {this.state.money.total} gp</h4> 
+						<div className="row--right">
+							<h4>Total money: {this.state.money.total} gp</h4> 
+						</div>
 					</div>
 					
 					<div className="grid grid--items">

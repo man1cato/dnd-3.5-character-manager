@@ -103,7 +103,7 @@ export class SpellbookPage extends React.Component {
 				<div className="container container--body">
 
 					{this.state.spellbook.map((page, level) => (
-						<div key={level}>
+						<div className="section" key={level}>
 							<h3 className="row--center">Level {level} Spells ({page.total}/{page.spellsPerDay})</h3>
 
 							<div className="grid grid--spellbook">
