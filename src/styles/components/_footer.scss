@@ -1,18 +1,42 @@
-footer {
-    background-color: #364051;
-    grid-area: footer;
-    padding: $s-size 0;
+.footer {
+    position: fixed;
+    bottom: 0px;
+    height: 10vh;
+    width: -webkit-fill-available;
+    box-shadow: 0 0 5px $light-grey;
+    padding: $m-size 0;
 }
 
-.footer__navbar {
+.footer--navbar {
+    @extend .footer;
+    background: #364051;
+}
+
+.footer--navbar__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     fill: white;
+    > * {
+        max-height: 40px;
+        height: 100%;
+        padding: 0 $s-size;
+    }
+    :first-child {
+        padding-left: 0;
+    }
+    :last-child {
+        padding-right: 0;
+    }
 }
 
-.footer__navbar__icon {
-    max-height: 40px;
-    height: 100%;
-    padding: 0 $s-size;
+.footer__form {
+    display: flex;
+    justify-content: space-between;
+    > * {
+        width: -webkit-fill-available;
+    }
+    :nth-child(2) {
+        margin-left: $s-size;
+    }
 }

@@ -100,7 +100,7 @@ export class CompanionPage extends React.Component {
 
 	render() {
 		return (
-			<div className="layout">
+			<div >
 				<Header pageTitle="Companion" />
 				<div className="container container--body">
 					<div className="section grid grid--companion">

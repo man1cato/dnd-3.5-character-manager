@@ -781,9 +781,7 @@ exports[`should render ProfilePage with profile data 1`] = `
           weight={97}
           xp={10000}
         >
-          <div
-            className="layout"
-          >
+          <div>
             <Connect(Header)
               pageTitle="Character Profile"
             >
@@ -4901,16 +4899,16 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                   }
                 }
               >
-                <footer>
+                <footer
+                  className="footer--navbar"
+                >
                   <div
-                    className="container footer__navbar"
+                    className="container footer--navbar__content"
                   >
                     <Link
-                      className="footer__navbar__icon"
                       to="/profile"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/profile"
                         onClick={[Function]}
                       >
@@ -4940,11 +4938,9 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/stats"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/stats"
                         onClick={[Function]}
                       >
@@ -4974,11 +4970,9 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/combat"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/combat"
                         onClick={[Function]}
                       >
@@ -5008,11 +5002,9 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/equipment"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/equipment"
                         onClick={[Function]}
                       >
@@ -5042,11 +5034,9 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/spellbook"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/spellbook"
                         onClick={[Function]}
                       >
@@ -5076,11 +5066,9 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/companion"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/companion"
                         onClick={[Function]}
                       >

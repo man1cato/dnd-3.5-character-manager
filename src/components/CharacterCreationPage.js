@@ -23,7 +23,7 @@ const abilityMessage = 'Enter an integer between 3 and 18'
 const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError(' ')
 const validationSchema = Yup.object().shape({
 	page1: Yup.object().shape({
-		name: Yup.string().min(2, 'Name is too short!').max(30, 'Name is too long!').required('Required'),
+		name: Yup.string().max(30, 'Name is too long!').required('Required'),
 		age: Yup.number().positive().integer().required('Required').typeError('Enter a number'),
 		heightFt: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number'),
 		heightIn: Yup.number('Enter an integer between 0 and 12').positive('Enter an integer between 0 and 12').integer('Enter an integer between 0 and 12').max(11, 'Enter an integer between 0 and 12').required('Required').typeError('Enter a number'),
@@ -115,7 +115,7 @@ export class CharacterCreationPage extends React.Component {
 
 	render() {        
 		return (
-			<div className="layout">
+			<div>
 				<Header pageTitle="Character Creation" />
 				
 				<Formik

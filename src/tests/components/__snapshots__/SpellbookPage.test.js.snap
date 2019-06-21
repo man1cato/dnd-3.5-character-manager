@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SpellbookPage with profile data 1`] = `
-<div
-  className="layout"
->
+<div>
   <Connect(Header)
     pageTitle="Spellbook"
   />
@@ -14,6 +12,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
     className="container container--body"
   >
     <div
+      className="section"
       key="0"
     >
       <h3
@@ -157,6 +156,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
       </div>
     </div>
     <div
+      className="section"
       key="1"
     >
       <h3

@@ -3,1943 +3,1945 @@
 exports[`should render Selector correctly with feats data 1`] = `
 <div>
   <div
-    className="input-group--80"
+    className="form-group--70"
   >
-    <select
-      className="input-group__item"
-      name="feats"
-      onChange={[Function]}
-      value="recdmotqOlGgN2otb"
-    >
-      <option
-        key="feats0"
+    <div>
+      <select
+        className="select"
+        name="feats"
+        onChange={[Function]}
         value="recdmotqOlGgN2otb"
       >
-        Ability Focus
-      </option>
-      <option
-        key="feats1"
-        value="recoTlzPQ37bNLFsm"
-      >
-        Acrobatic
-      </option>
-      <option
-        key="feats2"
-        value="recat3oy3R6kW5Uts"
-      >
-        Additional Magic Item Space
-      </option>
-      <option
-        key="feats3"
-        value="rec8uIUF1rFAa2VuG"
-      >
-        Agile
-      </option>
-      <option
-        key="feats4"
-        value="recvzMqdCBIzd7z9n"
-      >
-        Alertness
-      </option>
-      <option
-        key="feats5"
-        value="recnrQnRgUIJQkJOz"
-      >
-        Animal Affinity
-      </option>
-      <option
-        key="feats6"
-        value="recST2D4Kyaknrsg3"
-      >
-        Armor Proficiency (Heavy)
-      </option>
-      <option
-        key="feats7"
-        value="recRXzmlbn1MzfoKr"
-      >
-        Armor Proficiency (Light)
-      </option>
-      <option
-        key="feats8"
-        value="recIucb9yIBFfwadA"
-      >
-        Armor Proficiency (Medium)
-      </option>
-      <option
-        key="feats9"
-        value="recTjM3xaRKY5Kzxv"
-      >
-        Armor Skin
-      </option>
-      <option
-        key="feats10"
-        value="recOCyJT5oWscbchC"
-      >
-        Athletic
-      </option>
-      <option
-        key="feats11"
-        value="recOm8zpuXUjChQZH"
-      >
-        Augment Summoning
-      </option>
-      <option
-        key="feats12"
-        value="recBbahLUMGxoCyFF"
-      >
-        Augmented Alchemy
-      </option>
-      <option
-        key="feats13"
-        value="recEjwHNjDZrJG5mP"
-      >
-        Automatic Quicken Spell
-      </option>
-      <option
-        key="feats14"
-        value="recVKDhL94EQG8Bhm"
-      >
-        Automatic Silent Spell
-      </option>
-      <option
-        key="feats15"
-        value="recMYg4ohuZoVhHg3"
-      >
-        Automatic Still Spell
-      </option>
-      <option
-        key="feats16"
-        value="recQyW6ByR4ClPt80"
-      >
-        Autonomous
-      </option>
-      <option
-        key="feats17"
-        value="recwouXSFSvKDipwo"
-      >
-        Awesome Blow
-      </option>
-      <option
-        key="feats18"
-        value="reckdrHwbucszWlx3"
-      >
-        Bane of Enemies
-      </option>
-      <option
-        key="feats19"
-        value="recjk6hkPLOgMt6eb"
-      >
-        Blind-Fight
-      </option>
-      <option
-        key="feats20"
-        value="recX0vHtJoi5E4lcm"
-      >
-        Blinding Speed
-      </option>
-      <option
-        key="feats21"
-        value="recDGl9s66lwqKgCb"
-      >
-        Blindsight, 5-ft. Radius
-      </option>
-      <option
-        key="feats22"
-        value="recZkUp3LzpK7Yl5e"
-      >
-        Bonus Domain
-      </option>
-      <option
-        key="feats23"
-        value="recnxtKAeEeCyobZv"
-      >
-        Brew Potion
-      </option>
-      <option
-        key="feats24"
-        value="recLqr9Z8dkls4ZO1"
-      >
-        Bulwark of Defense
-      </option>
-      <option
-        key="feats25"
-        value="recoGrm1vruan9LwF"
-      >
-        Chaotic Rage
-      </option>
-      <option
-        key="feats26"
-        value="recBl7E7mkej8Kh4a"
-      >
-        Cleave
-      </option>
-      <option
-        key="feats27"
-        value="rec6j8vDL2r3twF8o"
-      >
-        Cloak Dance
-      </option>
-      <option
-        key="feats28"
-        value="reclpbMRlP2bTvA8K"
-      >
-        Colossal Wild Shape
-      </option>
-      <option
-        key="feats29"
-        value="recKz8Kl8cTQvocaG"
-      >
-        Combat Archery
-      </option>
-      <option
-        key="feats30"
-        value="recdR990pCoRoCtHN"
-      >
-        Combat Casting
-      </option>
-      <option
-        key="feats31"
-        value="recrc1dWL5N3RPKd6"
-      >
-        Combat Expertise
-      </option>
-      <option
-        key="feats32"
-        value="recXnkMszr2a4cMG2"
-      >
-        Combat Reflexes
-      </option>
-      <option
-        key="feats33"
-        value="recVBmMvMyOEvRtJs"
-      >
-        Craft Cognizance Crystal
-      </option>
-      <option
-        key="feats34"
-        value="rec2DWXl3MtnjXqRQ"
-      >
-        Craft Construct
-      </option>
-      <option
-        key="feats35"
-        value="recSUUSgdqMnZhJnH"
-      >
-        Craft Dorje
-      </option>
-      <option
-        key="feats36"
-        value="recaofYxttizBhOSa"
-      >
-        Craft Epic Magic Arms and Armor
-      </option>
-      <option
-        key="feats37"
-        value="recxra1jpE6L3EIU4"
-      >
-        Craft Epic Rod
-      </option>
-      <option
-        key="feats38"
-        value="recB1ADsi6OGKayaa"
-      >
-        Craft Epic Staff
-      </option>
-      <option
-        key="feats39"
-        value="recXxMDo6R93rlTxl"
-      >
-        Craft Epic Wondrous Item
-      </option>
-      <option
-        key="feats40"
-        value="recXP8I7doU9uFI0W"
-      >
-        Craft Magic Arms and Armor
-      </option>
-      <option
-        key="feats41"
-        value="recUprO478F0lrfWL"
-      >
-        Craft Psicrown
-      </option>
-      <option
-        key="feats42"
-        value="recfSnDJwFVsQAdyB"
-      >
-        Craft Psionic Arms and Armor
-      </option>
-      <option
-        key="feats43"
-        value="recOEPO2WXGIKsXqc"
-      >
-        Craft Psionic Construct
-      </option>
-      <option
-        key="feats44"
-        value="recXKTZ8KtdrXujgn"
-      >
-        Craft Rod
-      </option>
-      <option
-        key="feats45"
-        value="recxQ92YDwvBv8JJy"
-      >
-        Craft Staff
-      </option>
-      <option
-        key="feats46"
-        value="recyMC6cyMOMLHIws"
-      >
-        Craft Universal Item
-      </option>
-      <option
-        key="feats47"
-        value="rec8F85455BwZqMwF"
-      >
-        Craft Wand
-      </option>
-      <option
-        key="feats48"
-        value="recRjuAWe7oy6a7wY"
-      >
-        Craft Wondrous Item
-      </option>
-      <option
-        key="feats49"
-        value="rechTdfI8DKVXUOuJ"
-      >
-        Damage Reduction
-      </option>
-      <option
-        key="feats50"
-        value="recI7IQe71f44n0qs"
-      >
-        Deadly Precision
-      </option>
-      <option
-        key="feats51"
-        value="recUuhHOIgnt9V7tt"
-      >
-        Deafening Song
-      </option>
-      <option
-        key="feats52"
-        value="recg1OIceV2bKe80O"
-      >
-        Death of Enemies
-      </option>
-      <option
-        key="feats53"
-        value="recFrheLpwNhWFzS3"
-      >
-        Deceitful
-      </option>
-      <option
-        key="feats54"
-        value="reciyf1VerwnZ0ARP"
-      >
-        Deflect Arrows
-      </option>
-      <option
-        key="feats55"
-        value="recPlnmL0xLwCkhqW"
-      >
-        Deft Hands
-      </option>
-      <option
-        key="feats56"
-        value="recPBNJBz2lwwuRyy"
-      >
-        Devastating Critical
-      </option>
-      <option
-        key="feats57"
-        value="recIZdOr3DGPdpbc8"
-      >
-        Dexterous Fortitude
-      </option>
-      <option
-        key="feats58"
-        value="recfjtRjVXdn3xLDZ"
-      >
-        Dexterous Will
-      </option>
-      <option
-        key="feats59"
-        value="rec2vFKZkwMh178E7"
-      >
-        Diehard
-      </option>
-      <option
-        key="feats60"
-        value="rec83JXxeqFaq13F1"
-      >
-        Diligent
-      </option>
-      <option
-        key="feats61"
-        value="rechBgTFWqu5YnOc1"
-      >
-        Diminutive Wild Shape
-      </option>
-      <option
-        key="feats62"
-        value="recP76MPxeKkTmFDW"
-      >
-        Dire Charge
-      </option>
-      <option
-        key="feats63"
-        value="recsvpX6XhsOvLE4O"
-      >
-        Disguise Spell
-      </option>
-      <option
-        key="feats64"
-        value="rec7EdrAu7sixASam"
-      >
-        Distant Shot
-      </option>
-      <option
-        key="feats65"
-        value="reccKhXP1P03au3WT"
-      >
-        Divine Might
-      </option>
-      <option
-        key="feats66"
-        value="recrA225bMNGuLGF2"
-      >
-        Divine Vengeance
-      </option>
-      <option
-        key="feats67"
-        value="recyqJvG85XCUZG4x"
-      >
-        Dodge
-      </option>
-      <option
-        key="feats68"
-        value="rec35lBICs5ipkw7m"
-      >
-        Dragon Wild Shape
-      </option>
-      <option
-        key="feats69"
-        value="recCT1vB6wSaLMWxi"
-      >
-        Efficient Item Creation
-      </option>
-      <option
-        key="feats70"
-        value="recKYm3IPVLJ115Bb"
-      >
-        Empower Spell
-      </option>
-      <option
-        key="feats71"
-        value="recHnrZHpmp7psvj2"
-      >
-        Empower Spell-Like Ability
-      </option>
-      <option
-        key="feats72"
-        value="recVCgn24xVSXigbM"
-      >
-        Endurance
-      </option>
-      <option
-        key="feats73"
-        value="reclmfhLdJV7LOrS2"
-      >
-        Energy Resistance
-      </option>
-      <option
-        key="feats74"
-        value="recYUF3ddygflrQ8w"
-      >
-        Energy Substitution
-      </option>
-      <option
-        key="feats75"
-        value="recnrsa2FZ2yaKVXn"
-      >
-        Enhance Spell
-      </option>
-      <option
-        key="feats76"
-        value="recmf4osOlKrZtp6W"
-      >
-        Enlarge Spell
-      </option>
-      <option
-        key="feats77"
-        value="recTHyYmqyReN98vw"
-      >
-        Epic Dodge
-      </option>
-      <option
-        key="feats78"
-        value="recbfQSkxH5dfDswW"
-      >
-        Epic Endurance
-      </option>
-      <option
-        key="feats79"
-        value="reckenqb745nxu31H"
-      >
-        Epic Fortitude
-      </option>
-      <option
-        key="feats80"
-        value="recAT8p4Gs8rj67Rf"
-      >
-        Epic Inspiration
-      </option>
-      <option
-        key="feats81"
-        value="recBSUl9GE1MUb6YH"
-      >
-        Epic Leadership
-      </option>
-      <option
-        key="feats82"
-        value="recPEtaL0j3Ooo8Mj"
-      >
-        Epic Manifestation
-      </option>
-      <option
-        key="feats83"
-        value="reclI3nmYiSQAFp9T"
-      >
-        Epic Prowess
-      </option>
-      <option
-        key="feats84"
-        value="rec2mAkEGs7m5RoNr"
-      >
-        Epic Reflexes
-      </option>
-      <option
-        key="feats85"
-        value="rec1xvVMTsxgPGHpY"
-      >
-        Epic Reputation
-      </option>
-      <option
-        key="feats86"
-        value="reccuF0PtktDswV4T"
-      >
-        Epic Skill Focus
-      </option>
-      <option
-        key="feats87"
-        value="recaqg6GFLvmQKzJW"
-      >
-        Epic Speed
-      </option>
-      <option
-        key="feats88"
-        value="reciXQdgT1ysY46vz"
-      >
-        Epic Spell Focus
-      </option>
-      <option
-        key="feats89"
-        value="recKVzySxSc8PjyuG"
-      >
-        Epic Spell Penetration
-      </option>
-      <option
-        key="feats90"
-        value="rec36m2Rxdw3ffRjC"
-      >
-        Epic Spellcasting
-      </option>
-      <option
-        key="feats91"
-        value="rec74fL73E22QlwJB"
-      >
-        Epic Toughness
-      </option>
-      <option
-        key="feats92"
-        value="recYH63fal3NkDHgm"
-      >
-        Epic Weapon Focus
-      </option>
-      <option
-        key="feats93"
-        value="recwJazo0cOaHVN82"
-      >
-        Epic Weapon Specialization
-      </option>
-      <option
-        key="feats94"
-        value="recSDxh2UD49CVRyh"
-      >
-        Epic Will
-      </option>
-      <option
-        key="feats95"
-        value="rec1UNqoxirOSxnno"
-      >
-        Eschew Materials
-      </option>
-      <option
-        key="feats96"
-        value="recmjqppdD8oDAHp6"
-      >
-        Exceptional Deflection
-      </option>
-      <option
-        key="feats97"
-        value="recfeBOXTX2up9aUs"
-      >
-        Exotic Weapon Proficiency
-      </option>
-      <option
-        key="feats98"
-        value="recnVpaSB379EQSI0"
-      >
-        Extend Spell
-      </option>
-      <option
-        key="feats99"
-        value="recNPOssjXXPtbKbb"
-      >
-        Extended Life Span
-      </option>
-      <option
-        key="feats100"
-        value="recGByPLOPCGQZEW1"
-      >
-        Extra Music
-      </option>
-      <option
-        key="feats101"
-        value="recMrrf3flxHUSgMR"
-      >
-        Extra Turning
-      </option>
-      <option
-        key="feats102"
-        value="recuXAYNPNco1uMdG"
-      >
-        Eyes in the Back of Your Head
-      </option>
-      <option
-        key="feats103"
-        value="recHRtjo6zEHSw7aL"
-      >
-        Familiar Spell
-      </option>
-      <option
-        key="feats104"
-        value="recVXoEU44zDtbech"
-      >
-        Far Shot
-      </option>
-      <option
-        key="feats105"
-        value="recHkaFWSLu7SI1ee"
-      >
-        Fast Healing
-      </option>
-      <option
-        key="feats106"
-        value="recjTsJRbGi8Lptpa"
-      >
-        Fine Wild Shape
-      </option>
-      <option
-        key="feats107"
-        value="rec8icuDiUWvX1Yry"
-      >
-        Fleet of Foot
-      </option>
-      <option
-        key="feats108"
-        value="recw2WZMbQ3gonDew"
-      >
-        Flyby Attack
-      </option>
-      <option
-        key="feats109"
-        value="reczzAAR51o1WRmdB"
-      >
-        Forge Epic Ring
-      </option>
-      <option
-        key="feats110"
-        value="recohPSgPy9lyD80w"
-      >
-        Forge Ring
-      </option>
-      <option
-        key="feats111"
-        value="rectdd0HKAYm9SmIx"
-      >
-        Gargantuan Wild Shape
-      </option>
-      <option
-        key="feats112"
-        value="recCcqyJ5GL9nrx7G"
-      >
-        Great Charisma
-      </option>
-      <option
-        key="feats113"
-        value="reclT78Am0M14ogH9"
-      >
-        Great Cleave
-      </option>
-      <option
-        key="feats114"
-        value="recG6zBgLZVpCVJ5Y"
-      >
-        Great Constitution
-      </option>
-      <option
-        key="feats115"
-        value="recVCGoQYyuB3ywo9"
-      >
-        Great Dexterity
-      </option>
-      <option
-        key="feats116"
-        value="recboOAfWHQTIZGfr"
-      >
-        Great Fortitude
-      </option>
-      <option
-        key="feats117"
-        value="recIo1dWJeopo2HWe"
-      >
-        Great Intelligence
-      </option>
-      <option
-        key="feats118"
-        value="recX34PyAdbEQghsb"
-      >
-        Great Smiting
-      </option>
-      <option
-        key="feats119"
-        value="recDgjKlw3qhC6Caz"
-      >
-        Great Strength
-      </option>
-      <option
-        key="feats120"
-        value="reckTAO6zjLWF7qZm"
-      >
-        Great Wisdom
-      </option>
-      <option
-        key="feats121"
-        value="recngsilwkNCpwJ1w"
-      >
-        Greater Manyshot
-      </option>
-      <option
-        key="feats122"
-        value="recLKX0TNjlgzGUOx"
-      >
-        Greater Multiweapon Fighting
-      </option>
-      <option
-        key="feats123"
-        value="recfy4jWSGtP77EQv"
-      >
-        Greater Spell Focus
-      </option>
-      <option
-        key="feats124"
-        value="recyUNLnXQEp7Qams"
-      >
-        Greater Spell Penetration
-      </option>
-      <option
-        key="feats125"
-        value="recyONl4n3KUvcZMu"
-      >
-        Greater Two-Weapon Fighting
-      </option>
-      <option
-        key="feats126"
-        value="recvX8MNxV9RUcIHx"
-      >
-        Greater Weapon Focus
-      </option>
-      <option
-        key="feats127"
-        value="recgDuc3CRemo6gop"
-      >
-        Greater Weapon Specialization
-      </option>
-      <option
-        key="feats128"
-        value="rec0o0ZQvthxaPWsK"
-      >
-        Group Inspiration
-      </option>
-      <option
-        key="feats129"
-        value="recDanI1EtcjYcvaT"
-      >
-        Heighten Spell
-      </option>
-      <option
-        key="feats130"
-        value="recFR8hcOZ1VWJeSB"
-      >
-        Hindering Song
-      </option>
-      <option
-        key="feats131"
-        value="recKZ213PbqbXUlZE"
-      >
-        Hold the Line
-      </option>
-      <option
-        key="feats132"
-        value="reczLPssqes9Allcm"
-      >
-        Holy Strike
-      </option>
-      <option
-        key="feats133"
-        value="recEepS7K6IXvQOQU"
-      >
-        Hover
-      </option>
-      <option
-        key="feats134"
-        value="recRflwPRNsV8Mikq"
-      >
-        Ignore Material Components
-      </option>
-      <option
-        key="feats135"
-        value="recB5m8zpzGVdfA47"
-      >
-        Imprint Stone
-      </option>
-      <option
-        key="feats136"
-        value="recH0yaYZUkBoX9Ts"
-      >
-        Improved Alignment-Based Casting
-      </option>
-      <option
-        key="feats137"
-        value="recH507n9eFXFuMtT"
-      >
-        Improved Arrow of Death
-      </option>
-      <option
-        key="feats138"
-        value="recfGJQ6pkNUqa9MX"
-      >
-        Improved Aura of Courage
-      </option>
-      <option
-        key="feats139"
-        value="recgOxsvTHb6WuRpx"
-      >
-        Improved Aura of Despair
-      </option>
-      <option
-        key="feats140"
-        value="recdPR3fvAC3RKGZV"
-      >
-        Improved Bull Rush
-      </option>
-      <option
-        key="feats141"
-        value="recQwtCq32BVgmIpa"
-      >
-        Improved Combat Casting
-      </option>
-      <option
-        key="feats142"
-        value="recIGMapWpvesoRZd"
-      >
-        Improved Combat Reflexes
-      </option>
-      <option
-        key="feats143"
-        value="recEpNvwwJ71UvJm5"
-      >
-        Improved Counterspell
-      </option>
-      <option
-        key="feats144"
-        value="rec5slnNRWWJC8fb2"
-      >
-        Improved Critical
-      </option>
-      <option
-        key="feats145"
-        value="recOw2MnHi1Umie9f"
-      >
-        Improved Darkvision
-      </option>
-      <option
-        key="feats146"
-        value="recQc3GpnKelT57Gs"
-      >
-        Improved Death Attack
-      </option>
-      <option
-        key="feats147"
-        value="recFWf1n5dhhmR308"
-      >
-        Improved Disarm
-      </option>
-      <option
-        key="feats148"
-        value="recPwR8YqatQuJqXS"
-      >
-        Improved Elemental Wild Shape
-      </option>
-      <option
-        key="feats149"
-        value="recQDaucsIOGOt9hp"
-      >
-        Improved Familiar
-      </option>
-      <option
-        key="feats150"
-        value="recm090Df8faJMFly"
-      >
-        Improved Favored Enemy
-      </option>
-      <option
-        key="feats151"
-        value="recJrvSJJCUuc6mhl"
-      >
-        Improved Feint
-      </option>
-      <option
-        key="feats152"
-        value="recZtJj4tIw5XDZbC"
-      >
-        Improved Flyby Attack
-      </option>
-      <option
-        key="feats153"
-        value="reczT5FbnHSASKG1t"
-      >
-        Improved Grapple
-      </option>
-      <option
-        key="feats154"
-        value="recmAqqlY2XXd6vQp"
-      >
-        Improved Heighten Spell
-      </option>
-      <option
-        key="feats155"
-        value="reciazjHVWQmiq1jP"
-      >
-        Improved Initiative
-      </option>
-      <option
-        key="feats156"
-        value="recReZmh5AR841RDE"
-      >
-        Improved Ki Strike
-      </option>
-      <option
-        key="feats157"
-        value="recIgfqdlPFEQaYpG"
-      >
-        Improved Low-Light Vision
-      </option>
-      <option
-        key="feats158"
-        value="recbK0MkITKWaBVvR"
-      >
-        Improved Manyshot
-      </option>
-      <option
-        key="feats159"
-        value="recRctlW1vIRg7aJE"
-      >
-        Improved Metamagic
-      </option>
-      <option
-        key="feats160"
-        value="rec7w1n3zWvQgybB5"
-      >
-        Improved Multiattack
-      </option>
-      <option
-        key="feats161"
-        value="recpqEOvW44yc6IG5"
-      >
-        Improved Multiweapon Fighting
-      </option>
-      <option
-        key="feats162"
-        value="recJSbPjUKOTWNe6m"
-      >
-        Improved Natural Armor
-      </option>
-      <option
-        key="feats163"
-        value="recNxmdwGsIHTAPxj"
-      >
-        Improved Natural Attack
-      </option>
-      <option
-        key="feats164"
-        value="recrcXqW0aKN7CRNg"
-      >
-        Improved Overrun
-      </option>
-      <option
-        key="feats165"
-        value="recMPvjjsCrx8n3MH"
-      >
-        Improved Precise Shot
-      </option>
-      <option
-        key="feats166"
-        value="recEqV253RXFXXTeO"
-      >
-        Improved Shield Bash
-      </option>
-      <option
-        key="feats167"
-        value="recLvwm9VX1l0QOAF"
-      >
-        Improved Sneak Attack
-      </option>
-      <option
-        key="feats168"
-        value="rec8SML7edkgm8Daa"
-      >
-        Improved Spell Capacity
-      </option>
-      <option
-        key="feats169"
-        value="recZ7I3tsw8Wglevc"
-      >
-        Improved Spell Resistance
-      </option>
-      <option
-        key="feats170"
-        value="recBIq6dCa2hCQdXi"
-      >
-        Improved Stunning Fist
-      </option>
-      <option
-        key="feats171"
-        value="rec4xrHW8QTf6eTe3"
-      >
-        Improved Sunder
-      </option>
-      <option
-        key="feats172"
-        value="recv8vlK0if2wVkM2"
-      >
-        Improved Trip
-      </option>
-      <option
-        key="feats173"
-        value="recuEsiEZ1O2huYCr"
-      >
-        Improved Turning
-      </option>
-      <option
-        key="feats174"
-        value="recspc34ofcNegBbe"
-      >
-        Improved Two-Weapon Fighting
-      </option>
-      <option
-        key="feats175"
-        value="recCmnimojxd0MNLS"
-      >
-        Improved Unarmed Strike
-      </option>
-      <option
-        key="feats176"
-        value="recFLUTUFiAZrtWc8"
-      >
-        Improved Whirlwind Attack
-      </option>
-      <option
-        key="feats177"
-        value="rec1XRG78wqr7t77E"
-      >
-        Incite Rage
-      </option>
-      <option
-        key="feats178"
-        value="recopIF1mvoCADeqG"
-      >
-        Infinite Deflection
-      </option>
-      <option
-        key="feats179"
-        value="recSsoZCkJeVaJa2j"
-      >
-        Inspire Excellence
-      </option>
-      <option
-        key="feats180"
-        value="recEQuzMOnWrYWbWM"
-      >
-        Instant Reload
-      </option>
-      <option
-        key="feats181"
-        value="recCqxdMJjuhG8R7d"
-      >
-        Intensify Spell
-      </option>
-      <option
-        key="feats182"
-        value="rec3uAWs5IilEadt9"
-      >
-        Intuitive Trapfinding
-      </option>
-      <option
-        key="feats183"
-        value="recs5pgQMU6zotYqL"
-      >
-        Investigator
-      </option>
-      <option
-        key="feats184"
-        value="rec0Rmpc0o4zr5KQZ"
-      >
-        Iron Will
-      </option>
-      <option
-        key="feats185"
-        value="recBS1Vlwp32LWNNe"
-      >
-        Jack of All Trades
-      </option>
-      <option
-        key="feats186"
-        value="recAeGlhBNBh7upAs"
-      >
-        Keen Strike
-      </option>
-      <option
-        key="feats187"
-        value="recCxUg2DPCVGd5wQ"
-      >
-        Knock-Down
-      </option>
-      <option
-        key="feats188"
-        value="recF1jiy7Z3atlHDa"
-      >
-        Lasting Inspiration
-      </option>
-      <option
-        key="feats189"
-        value="recaVxDe7IV4Ibppd"
-      >
-        Leadership
-      </option>
-      <option
-        key="feats190"
-        value="rec37Jez2aiDnkjqE"
-      >
-        Legendary Climber
-      </option>
-      <option
-        key="feats191"
-        value="rec5gS9hXRPNT4kuC"
-      >
-        Legendary Commander
-      </option>
-      <option
-        key="feats192"
-        value="recbVb12m3xhnyaHT"
-      >
-        Legendary Leaper
-      </option>
-      <option
-        key="feats193"
-        value="recd9irRuDR82SnIL"
-      >
-        Legendary Rider
-      </option>
-      <option
-        key="feats194"
-        value="recbTWNXoiYl9oMVA"
-      >
-        Legendary Tracker
-      </option>
-      <option
-        key="feats195"
-        value="rec0IcSNwYsg80Ldu"
-      >
-        Legendary Wrestler
-      </option>
-      <option
-        key="feats196"
-        value="recHPtIzQdLipkdLi"
-      >
-        Lightning Reflexes
-      </option>
-      <option
-        key="feats197"
-        value="rec3TmlD78AdiPphf"
-      >
-        Lingering Damage
-      </option>
-      <option
-        key="feats198"
-        value="rec43FVgR2bo1YDR6"
-      >
-        Magical Aptitude
-      </option>
-      <option
-        key="feats199"
-        value="recExtvt4xN6i7AiO"
-      >
-        Magical Beast Companion
-      </option>
-      <option
-        key="feats200"
-        value="recq2EZvZ93PkGmh4"
-      >
-        Magical Beast Wild Shape
-      </option>
-      <option
-        key="feats201"
-        value="rec0Ga2RlLe6NZbhu"
-      >
-        Manyshot
-      </option>
-      <option
-        key="feats202"
-        value="recu6KSoLrL5T47wp"
-      >
-        Martial Weapon Proficiency
-      </option>
-      <option
-        key="feats203"
-        value="recXrpfxPke8r5kvy"
-      >
-        Master Staff
-      </option>
-      <option
-        key="feats204"
-        value="recd4WdR6P3ld60lO"
-      >
-        Master Wand
-      </option>
-      <option
-        key="feats205"
-        value="recKfsZpmul8Mc89v"
-      >
-        Maximize Spell
-      </option>
-      <option
-        key="feats206"
-        value="reclfpVhNiab9k5gb"
-      >
-        Mighty Rage
-      </option>
-      <option
-        key="feats207"
-        value="recUv7HQzFXwLgRB9"
-      >
-        Mind Over Body
-      </option>
-      <option
-        key="feats208"
-        value="recx6OyqdQn5OUCyB"
-      >
-        Mobile Defense
-      </option>
-      <option
-        key="feats209"
-        value="rec1oOI1ICj2HuKqa"
-      >
-        Mobility
-      </option>
-      <option
-        key="feats210"
-        value="recqxhXBJB1KCxzIn"
-      >
-        Mounted Archery
-      </option>
-      <option
-        key="feats211"
-        value="reciJuIqTWUQRhYv0"
-      >
-        Mounted Combat
-      </option>
-      <option
-        key="feats212"
-        value="recKkMD7JxJW1XkHj"
-      >
-        Multiattack
-      </option>
-      <option
-        key="feats213"
-        value="rec43FIS2LihZiFYJ"
-      >
-        Multispell
-      </option>
-      <option
-        key="feats214"
-        value="recvJkbFXbH5ZXAXa"
-      >
-        Multiweapon Fighting
-      </option>
-      <option
-        key="feats215"
-        value="recUlskP03KLuUhgq"
-      >
-        Multiweapon Rend
-      </option>
-      <option
-        key="feats216"
-        value="reclFLacz9XUqkOue"
-      >
-        Music of the Gods
-      </option>
-      <option
-        key="feats217"
-        value="reccG488HS3PmSuGK"
-      >
-        Natural Spell
-      </option>
-      <option
-        key="feats218"
-        value="rec5982GoHsn1tfis"
-      >
-        Negative Energy Burst
-      </option>
-      <option
-        key="feats219"
-        value="recoQZX87YxSgmV2T"
-      >
-        Negotiator
-      </option>
-      <option
-        key="feats220"
-        value="recL3E07iXqlgd6Mv"
-      >
-        Nimble Fingers
-      </option>
-      <option
-        key="feats221"
-        value="recFp03E0YFKaq5xr"
-      >
-        Open Minded
-      </option>
-      <option
-        key="feats222"
-        value="rec7KdtT38XqMZ97s"
-      >
-        Overwhelming Critical
-      </option>
-      <option
-        key="feats223"
-        value="rec7k1FJnYts9LVOo"
-      >
-        Penetrate Damage Reduction
-      </option>
-      <option
-        key="feats224"
-        value="rec73w62ZOJtanhuE"
-      >
-        Perfect Health
-      </option>
-      <option
-        key="feats225"
-        value="rec66QzlM01qvGwRN"
-      >
-        Perfect Multiweapon Fighting
-      </option>
-      <option
-        key="feats226"
-        value="recCVQuiZAIWOEuJ1"
-      >
-        Perfect Two-Weapon Fighting
-      </option>
-      <option
-        key="feats227"
-        value="recprHHtBY1m3W8CK"
-      >
-        Permanent Emanation
-      </option>
-      <option
-        key="feats228"
-        value="recaTDqd3gilGLAc0"
-      >
-        Persistent Spell
-      </option>
-      <option
-        key="feats229"
-        value="recPjLbGCj3xRNPU3"
-      >
-        Persuasive
-      </option>
-      <option
-        key="feats230"
-        value="rec7FtveUXIuh63pp"
-      >
-        Planar Turning
-      </option>
-      <option
-        key="feats231"
-        value="recQV754iVrjVSj66"
-      >
-        Plant Control
-      </option>
-      <option
-        key="feats232"
-        value="reco0bwyops62ZxPn"
-      >
-        Plant Defiance
-      </option>
-      <option
-        key="feats233"
-        value="rec81hWf4GNmLBenB"
-      >
-        Plant Wild Shape
-      </option>
-      <option
-        key="feats234"
-        value="rec0Aa93zpU5V3Asy"
-      >
-        Point Blank Shot
-      </option>
-      <option
-        key="feats235"
-        value="recxPPaGukcQBMN4X"
-      >
-        Polyglot
-      </option>
-      <option
-        key="feats236"
-        value="recg6CSotqvsTrakw"
-      >
-        Positive Energy Aura
-      </option>
-      <option
-        key="feats237"
-        value="recuv5RdScK7Vqhf5"
-      >
-        Power Attack
-      </option>
-      <option
-        key="feats238"
-        value="recvGUzVy6V0nxd2G"
-      >
-        Power Critical
-      </option>
-      <option
-        key="feats239"
-        value="recXyoCOASsqgZXOJ"
-      >
-        Precise Shot
-      </option>
-      <option
-        key="feats240"
-        value="recpHwtjV89aVIoGB"
-      >
-        Psionic Affinity
-      </option>
-      <option
-        key="feats241"
-        value="recLp3uvkYGZGyywW"
-      >
-        Quick Draw
-      </option>
-      <option
-        key="feats242"
-        value="recGQ0aIb0LViNIDf"
-      >
-        Quicken Spell
-      </option>
-      <option
-        key="feats243"
-        value="rec6QsVR3a7aEc8Ev"
-      >
-        Quicken Spell-Like Ability
-      </option>
-      <option
-        key="feats244"
-        value="rec3Mczx6e5dOlHOM"
-      >
-        Ranged Inspiration
-      </option>
-      <option
-        key="feats245"
-        value="recjCiBAjZ2MCw8v6"
-      >
-        Rapid Inspiration
-      </option>
-      <option
-        key="feats246"
-        value="recmNzyXLWdoJ94Vp"
-      >
-        Rapid Metabolism
-      </option>
-      <option
-        key="feats247"
-        value="recEk5kUnIREk59lF"
-      >
-        Rapid Reload
-      </option>
-      <option
-        key="feats248"
-        value="recoZbyD7qsch7xSe"
-      >
-        Rapid Shot
-      </option>
-      <option
-        key="feats249"
-        value="reckz7xRmxxdTbh4G"
-      >
-        Reach Spell
-      </option>
-      <option
-        key="feats250"
-        value="recii9zxr6QoJFGgb"
-      >
-        Reactive Countersong
-      </option>
-      <option
-        key="feats251"
-        value="rec3Z5EqrUQXIcAjy"
-      >
-        Reckless Offense
-      </option>
-      <option
-        key="feats252"
-        value="recVoMid9syjVPQAm"
-      >
-        Reflect Arrows
-      </option>
-      <option
-        key="feats253"
-        value="recBVTl3j7Rfs1TjG"
-      >
-        Repeat Spell
-      </option>
-      <option
-        key="feats254"
-        value="reckCFbXtuDrf5Q4N"
-      >
-        Ride-By Attack
-      </option>
-      <option
-        key="feats255"
-        value="recrcCBspMITAt03y"
-      >
-        Righteous Strike
-      </option>
-      <option
-        key="feats256"
-        value="recIpizicw40PTLoT"
-      >
-        Ruinous Rage
-      </option>
-      <option
-        key="feats257"
-        value="rec02pDGILJ5EZz1W"
-      >
-        Run
-      </option>
-      <option
-        key="feats258"
-        value="recpoSavlX3cOnlk4"
-      >
-        Sacred Spell
-      </option>
-      <option
-        key="feats259"
-        value="recPdYl618loaB28p"
-      >
-        Scribe Epic Scroll
-      </option>
-      <option
-        key="feats260"
-        value="recGkxwkqppy7EYmI"
-      >
-        Scribe Scroll
-      </option>
-      <option
-        key="feats261"
-        value="recBQeNMELDj3IE7A"
-      >
-        Scribe Tattoo
-      </option>
-      <option
-        key="feats262"
-        value="recrXs4R086L9BQ2v"
-      >
-        Self-Concealment
-      </option>
-      <option
-        key="feats263"
-        value="recBV4PEpBYb8mVC0"
-      >
-        Self-Sufficient
-      </option>
-      <option
-        key="feats264"
-        value="rechWZl17jELhDThh"
-      >
-        Sharp-Shooting
-      </option>
-      <option
-        key="feats265"
-        value="recy4KGNJkJPrSK6f"
-      >
-        Shattering Strike
-      </option>
-      <option
-        key="feats266"
-        value="recm19w48xltockBW"
-      >
-        Shield Proficiency
-      </option>
-      <option
-        key="feats267"
-        value="recQNpK7311nbBt15"
-      >
-        Shot on the Run
-      </option>
-      <option
-        key="feats268"
-        value="recghbS5KnXshwJmR"
-      >
-        Sidestep Charge
-      </option>
-      <option
-        key="feats269"
-        value="recVyjh0BfUwtXfIF"
-      >
-        Silent Spell
-      </option>
-      <option
-        key="feats270"
-        value="rec2wriPyA1jtpZih"
-      >
-        Simple Weapon Proficiency
-      </option>
-      <option
-        key="feats271"
-        value="recaj8lyaZepMlFCM"
-      >
-        Skill Focus
-      </option>
-      <option
-        key="feats272"
-        value="recpeswIYdGxGtd4g"
-      >
-        Snatch
-      </option>
-      <option
-        key="feats273"
-        value="recU0tKxbZB3ShosK"
-      >
-        Snatch Arrows
-      </option>
-      <option
-        key="feats274"
-        value="recNul9zU9EzV9JYC"
-      >
-        Sneak Attack of Opportunity
-      </option>
-      <option
-        key="feats275"
-        value="recaMu31K8bE507Qh"
-      >
-        Spectral Strike
-      </option>
-      <option
-        key="feats276"
-        value="recr648zasZ6BHY5D"
-      >
-        Spell Focus
-      </option>
-      <option
-        key="feats277"
-        value="recJTQZBWe3uN9DKV"
-      >
-        Spell Knowledge
-      </option>
-      <option
-        key="feats278"
-        value="rec4KkfhKpetKIDqj"
-      >
-        Spell Mastery
-      </option>
-      <option
-        key="feats279"
-        value="recTphofr2OGPwf06"
-      >
-        Spell Opportunity
-      </option>
-      <option
-        key="feats280"
-        value="recQM5J2Z4Bg345O0"
-      >
-        Spell Penetration
-      </option>
-      <option
-        key="feats281"
-        value="recm8xrzST82XRtbb"
-      >
-        Spell Stowaway
-      </option>
-      <option
-        key="feats282"
-        value="recJJTjUAlnPTK5lI"
-      >
-        Spellcasting Harrier
-      </option>
-      <option
-        key="feats283"
-        value="recY4eMlPUaTvuZVL"
-      >
-        Spirited Charge
-      </option>
-      <option
-        key="feats284"
-        value="rec0xSHVkvnocAPyx"
-      >
-        Spontaneous Domain Access
-      </option>
-      <option
-        key="feats285"
-        value="reczBTYLm1NMiiWKO"
-      >
-        Spontaneous Spell
-      </option>
-      <option
-        key="feats286"
-        value="recj9JGm6nU9sSM3W"
-      >
-        Spring Attack
-      </option>
-      <option
-        key="feats287"
-        value="recB7JU0g2Bfz5xqS"
-      >
-        Stand Still
-      </option>
-      <option
-        key="feats288"
-        value="rece4EQ3n0Ya33LGf"
-      >
-        Stealthy
-      </option>
-      <option
-        key="feats289"
-        value="recCEnHpjCHJli3pq"
-      >
-        Still Spell
-      </option>
-      <option
-        key="feats290"
-        value="recE6PzbZgtMuUcVm"
-      >
-        Storm of Throws
-      </option>
-      <option
-        key="feats291"
-        value="recJeI9Rlq6R1io9r"
-      >
-        Stunning Fist
-      </option>
-      <option
-        key="feats292"
-        value="recZ74DWSuSZULLZh"
-      >
-        Subdual Substitution
-      </option>
-      <option
-        key="feats293"
-        value="recfSU9k2yDFrOJl1"
-      >
-        Superior Expertise
-      </option>
-      <option
-        key="feats294"
-        value="recDB8YX4av29yRxm"
-      >
-        Superior Initiative
-      </option>
-      <option
-        key="feats295"
-        value="recfzLBBH3LdkdqGM"
-      >
-        Swarm of Arrows
-      </option>
-      <option
-        key="feats296"
-        value="recGWkniPVHTwxxDB"
-      >
-        Tenacious Magic
-      </option>
-      <option
-        key="feats297"
-        value="receeaaQusxqJ2ZF7"
-      >
-        Terrifying Rage
-      </option>
-      <option
-        key="feats298"
-        value="recBowYlyXstRa97P"
-      >
-        Thundering Rage
-      </option>
-      <option
-        key="feats299"
-        value="reczbG3R5q7p4lj9R"
-      >
-        Toughness
-      </option>
-      <option
-        key="feats300"
-        value="rec4VSjFtUxZwK886"
-      >
-        Tower Shield Proficiency
-      </option>
-      <option
-        key="feats301"
-        value="recxkSuS8IvkzRVyV"
-      >
-        Track
-      </option>
-      <option
-        key="feats302"
-        value="recaut9Caobtz40s0"
-      >
-        Trample
-      </option>
-      <option
-        key="feats303"
-        value="reclhvvxKZVEyX745"
-      >
-        Two-Weapon Defense
-      </option>
-      <option
-        key="feats304"
-        value="recePeBndah0BTNs4"
-      >
-        Two-Weapon Fighting
-      </option>
-      <option
-        key="feats305"
-        value="rec9H5Qje89lulBtp"
-      >
-        Two-Weapon Rend
-      </option>
-      <option
-        key="feats306"
-        value="recwC0QFCIsNCYwCZ"
-      >
-        Uncanny Accuracy
-      </option>
-      <option
-        key="feats307"
-        value="recJFvWvKKUkM6NJM"
-      >
-        Undead Mastery
-      </option>
-      <option
-        key="feats308"
-        value="recpwqw7H735wrK81"
-      >
-        Unholy Strike
-      </option>
-      <option
-        key="feats309"
-        value="reccZ5xjJ9eWUxvY8"
-      >
-        Vermin Wild Shape
-      </option>
-      <option
-        key="feats310"
-        value="recBnl6h3mATsgZJc"
-      >
-        Vorpal Strike
-      </option>
-      <option
-        key="feats311"
-        value="recVdnKmMFz54fNLF"
-      >
-        Weapon Finesse
-      </option>
-      <option
-        key="feats312"
-        value="recy5YNMs3lo9rYTp"
-      >
-        Weapon Focus
-      </option>
-      <option
-        key="feats313"
-        value="recCUKNPq8gkgp8Pt"
-      >
-        Weapon Specialization
-      </option>
-      <option
-        key="feats314"
-        value="recCT26q7TKufh4x9"
-      >
-        Whirlwind Attack
-      </option>
-      <option
-        key="feats315"
-        value="recX8EJKHZx7Qv1yO"
-      >
-        Widen Aura of Courage
-      </option>
-      <option
-        key="feats316"
-        value="recF264keoM3c2uYX"
-      >
-        Widen Aura of Despair
-      </option>
-      <option
-        key="feats317"
-        value="recxFliEDF2AXl0rI"
-      >
-        Widen Spell
-      </option>
-      <option
-        key="feats318"
-        value="recF2gHjeFMKLdUmE"
-      >
-        Wild Talent
-      </option>
-      <option
-        key="feats319"
-        value="recI40vCPdTE5LsEu"
-      >
-        Wingover
-      </option>
-      <option
-        key="feats320"
-        value="recgApBVCXci88ubj"
-      >
-        Zone of Animation
-      </option>
-    </select>
+        <option
+          key="feats0"
+          value="recdmotqOlGgN2otb"
+        >
+          Ability Focus
+        </option>
+        <option
+          key="feats1"
+          value="recoTlzPQ37bNLFsm"
+        >
+          Acrobatic
+        </option>
+        <option
+          key="feats2"
+          value="recat3oy3R6kW5Uts"
+        >
+          Additional Magic Item Space
+        </option>
+        <option
+          key="feats3"
+          value="rec8uIUF1rFAa2VuG"
+        >
+          Agile
+        </option>
+        <option
+          key="feats4"
+          value="recvzMqdCBIzd7z9n"
+        >
+          Alertness
+        </option>
+        <option
+          key="feats5"
+          value="recnrQnRgUIJQkJOz"
+        >
+          Animal Affinity
+        </option>
+        <option
+          key="feats6"
+          value="recST2D4Kyaknrsg3"
+        >
+          Armor Proficiency (Heavy)
+        </option>
+        <option
+          key="feats7"
+          value="recRXzmlbn1MzfoKr"
+        >
+          Armor Proficiency (Light)
+        </option>
+        <option
+          key="feats8"
+          value="recIucb9yIBFfwadA"
+        >
+          Armor Proficiency (Medium)
+        </option>
+        <option
+          key="feats9"
+          value="recTjM3xaRKY5Kzxv"
+        >
+          Armor Skin
+        </option>
+        <option
+          key="feats10"
+          value="recOCyJT5oWscbchC"
+        >
+          Athletic
+        </option>
+        <option
+          key="feats11"
+          value="recOm8zpuXUjChQZH"
+        >
+          Augment Summoning
+        </option>
+        <option
+          key="feats12"
+          value="recBbahLUMGxoCyFF"
+        >
+          Augmented Alchemy
+        </option>
+        <option
+          key="feats13"
+          value="recEjwHNjDZrJG5mP"
+        >
+          Automatic Quicken Spell
+        </option>
+        <option
+          key="feats14"
+          value="recVKDhL94EQG8Bhm"
+        >
+          Automatic Silent Spell
+        </option>
+        <option
+          key="feats15"
+          value="recMYg4ohuZoVhHg3"
+        >
+          Automatic Still Spell
+        </option>
+        <option
+          key="feats16"
+          value="recQyW6ByR4ClPt80"
+        >
+          Autonomous
+        </option>
+        <option
+          key="feats17"
+          value="recwouXSFSvKDipwo"
+        >
+          Awesome Blow
+        </option>
+        <option
+          key="feats18"
+          value="reckdrHwbucszWlx3"
+        >
+          Bane of Enemies
+        </option>
+        <option
+          key="feats19"
+          value="recjk6hkPLOgMt6eb"
+        >
+          Blind-Fight
+        </option>
+        <option
+          key="feats20"
+          value="recX0vHtJoi5E4lcm"
+        >
+          Blinding Speed
+        </option>
+        <option
+          key="feats21"
+          value="recDGl9s66lwqKgCb"
+        >
+          Blindsight, 5-ft. Radius
+        </option>
+        <option
+          key="feats22"
+          value="recZkUp3LzpK7Yl5e"
+        >
+          Bonus Domain
+        </option>
+        <option
+          key="feats23"
+          value="recnxtKAeEeCyobZv"
+        >
+          Brew Potion
+        </option>
+        <option
+          key="feats24"
+          value="recLqr9Z8dkls4ZO1"
+        >
+          Bulwark of Defense
+        </option>
+        <option
+          key="feats25"
+          value="recoGrm1vruan9LwF"
+        >
+          Chaotic Rage
+        </option>
+        <option
+          key="feats26"
+          value="recBl7E7mkej8Kh4a"
+        >
+          Cleave
+        </option>
+        <option
+          key="feats27"
+          value="rec6j8vDL2r3twF8o"
+        >
+          Cloak Dance
+        </option>
+        <option
+          key="feats28"
+          value="reclpbMRlP2bTvA8K"
+        >
+          Colossal Wild Shape
+        </option>
+        <option
+          key="feats29"
+          value="recKz8Kl8cTQvocaG"
+        >
+          Combat Archery
+        </option>
+        <option
+          key="feats30"
+          value="recdR990pCoRoCtHN"
+        >
+          Combat Casting
+        </option>
+        <option
+          key="feats31"
+          value="recrc1dWL5N3RPKd6"
+        >
+          Combat Expertise
+        </option>
+        <option
+          key="feats32"
+          value="recXnkMszr2a4cMG2"
+        >
+          Combat Reflexes
+        </option>
+        <option
+          key="feats33"
+          value="recVBmMvMyOEvRtJs"
+        >
+          Craft Cognizance Crystal
+        </option>
+        <option
+          key="feats34"
+          value="rec2DWXl3MtnjXqRQ"
+        >
+          Craft Construct
+        </option>
+        <option
+          key="feats35"
+          value="recSUUSgdqMnZhJnH"
+        >
+          Craft Dorje
+        </option>
+        <option
+          key="feats36"
+          value="recaofYxttizBhOSa"
+        >
+          Craft Epic Magic Arms and Armor
+        </option>
+        <option
+          key="feats37"
+          value="recxra1jpE6L3EIU4"
+        >
+          Craft Epic Rod
+        </option>
+        <option
+          key="feats38"
+          value="recB1ADsi6OGKayaa"
+        >
+          Craft Epic Staff
+        </option>
+        <option
+          key="feats39"
+          value="recXxMDo6R93rlTxl"
+        >
+          Craft Epic Wondrous Item
+        </option>
+        <option
+          key="feats40"
+          value="recXP8I7doU9uFI0W"
+        >
+          Craft Magic Arms and Armor
+        </option>
+        <option
+          key="feats41"
+          value="recUprO478F0lrfWL"
+        >
+          Craft Psicrown
+        </option>
+        <option
+          key="feats42"
+          value="recfSnDJwFVsQAdyB"
+        >
+          Craft Psionic Arms and Armor
+        </option>
+        <option
+          key="feats43"
+          value="recOEPO2WXGIKsXqc"
+        >
+          Craft Psionic Construct
+        </option>
+        <option
+          key="feats44"
+          value="recXKTZ8KtdrXujgn"
+        >
+          Craft Rod
+        </option>
+        <option
+          key="feats45"
+          value="recxQ92YDwvBv8JJy"
+        >
+          Craft Staff
+        </option>
+        <option
+          key="feats46"
+          value="recyMC6cyMOMLHIws"
+        >
+          Craft Universal Item
+        </option>
+        <option
+          key="feats47"
+          value="rec8F85455BwZqMwF"
+        >
+          Craft Wand
+        </option>
+        <option
+          key="feats48"
+          value="recRjuAWe7oy6a7wY"
+        >
+          Craft Wondrous Item
+        </option>
+        <option
+          key="feats49"
+          value="rechTdfI8DKVXUOuJ"
+        >
+          Damage Reduction
+        </option>
+        <option
+          key="feats50"
+          value="recI7IQe71f44n0qs"
+        >
+          Deadly Precision
+        </option>
+        <option
+          key="feats51"
+          value="recUuhHOIgnt9V7tt"
+        >
+          Deafening Song
+        </option>
+        <option
+          key="feats52"
+          value="recg1OIceV2bKe80O"
+        >
+          Death of Enemies
+        </option>
+        <option
+          key="feats53"
+          value="recFrheLpwNhWFzS3"
+        >
+          Deceitful
+        </option>
+        <option
+          key="feats54"
+          value="reciyf1VerwnZ0ARP"
+        >
+          Deflect Arrows
+        </option>
+        <option
+          key="feats55"
+          value="recPlnmL0xLwCkhqW"
+        >
+          Deft Hands
+        </option>
+        <option
+          key="feats56"
+          value="recPBNJBz2lwwuRyy"
+        >
+          Devastating Critical
+        </option>
+        <option
+          key="feats57"
+          value="recIZdOr3DGPdpbc8"
+        >
+          Dexterous Fortitude
+        </option>
+        <option
+          key="feats58"
+          value="recfjtRjVXdn3xLDZ"
+        >
+          Dexterous Will
+        </option>
+        <option
+          key="feats59"
+          value="rec2vFKZkwMh178E7"
+        >
+          Diehard
+        </option>
+        <option
+          key="feats60"
+          value="rec83JXxeqFaq13F1"
+        >
+          Diligent
+        </option>
+        <option
+          key="feats61"
+          value="rechBgTFWqu5YnOc1"
+        >
+          Diminutive Wild Shape
+        </option>
+        <option
+          key="feats62"
+          value="recP76MPxeKkTmFDW"
+        >
+          Dire Charge
+        </option>
+        <option
+          key="feats63"
+          value="recsvpX6XhsOvLE4O"
+        >
+          Disguise Spell
+        </option>
+        <option
+          key="feats64"
+          value="rec7EdrAu7sixASam"
+        >
+          Distant Shot
+        </option>
+        <option
+          key="feats65"
+          value="reccKhXP1P03au3WT"
+        >
+          Divine Might
+        </option>
+        <option
+          key="feats66"
+          value="recrA225bMNGuLGF2"
+        >
+          Divine Vengeance
+        </option>
+        <option
+          key="feats67"
+          value="recyqJvG85XCUZG4x"
+        >
+          Dodge
+        </option>
+        <option
+          key="feats68"
+          value="rec35lBICs5ipkw7m"
+        >
+          Dragon Wild Shape
+        </option>
+        <option
+          key="feats69"
+          value="recCT1vB6wSaLMWxi"
+        >
+          Efficient Item Creation
+        </option>
+        <option
+          key="feats70"
+          value="recKYm3IPVLJ115Bb"
+        >
+          Empower Spell
+        </option>
+        <option
+          key="feats71"
+          value="recHnrZHpmp7psvj2"
+        >
+          Empower Spell-Like Ability
+        </option>
+        <option
+          key="feats72"
+          value="recVCgn24xVSXigbM"
+        >
+          Endurance
+        </option>
+        <option
+          key="feats73"
+          value="reclmfhLdJV7LOrS2"
+        >
+          Energy Resistance
+        </option>
+        <option
+          key="feats74"
+          value="recYUF3ddygflrQ8w"
+        >
+          Energy Substitution
+        </option>
+        <option
+          key="feats75"
+          value="recnrsa2FZ2yaKVXn"
+        >
+          Enhance Spell
+        </option>
+        <option
+          key="feats76"
+          value="recmf4osOlKrZtp6W"
+        >
+          Enlarge Spell
+        </option>
+        <option
+          key="feats77"
+          value="recTHyYmqyReN98vw"
+        >
+          Epic Dodge
+        </option>
+        <option
+          key="feats78"
+          value="recbfQSkxH5dfDswW"
+        >
+          Epic Endurance
+        </option>
+        <option
+          key="feats79"
+          value="reckenqb745nxu31H"
+        >
+          Epic Fortitude
+        </option>
+        <option
+          key="feats80"
+          value="recAT8p4Gs8rj67Rf"
+        >
+          Epic Inspiration
+        </option>
+        <option
+          key="feats81"
+          value="recBSUl9GE1MUb6YH"
+        >
+          Epic Leadership
+        </option>
+        <option
+          key="feats82"
+          value="recPEtaL0j3Ooo8Mj"
+        >
+          Epic Manifestation
+        </option>
+        <option
+          key="feats83"
+          value="reclI3nmYiSQAFp9T"
+        >
+          Epic Prowess
+        </option>
+        <option
+          key="feats84"
+          value="rec2mAkEGs7m5RoNr"
+        >
+          Epic Reflexes
+        </option>
+        <option
+          key="feats85"
+          value="rec1xvVMTsxgPGHpY"
+        >
+          Epic Reputation
+        </option>
+        <option
+          key="feats86"
+          value="reccuF0PtktDswV4T"
+        >
+          Epic Skill Focus
+        </option>
+        <option
+          key="feats87"
+          value="recaqg6GFLvmQKzJW"
+        >
+          Epic Speed
+        </option>
+        <option
+          key="feats88"
+          value="reciXQdgT1ysY46vz"
+        >
+          Epic Spell Focus
+        </option>
+        <option
+          key="feats89"
+          value="recKVzySxSc8PjyuG"
+        >
+          Epic Spell Penetration
+        </option>
+        <option
+          key="feats90"
+          value="rec36m2Rxdw3ffRjC"
+        >
+          Epic Spellcasting
+        </option>
+        <option
+          key="feats91"
+          value="rec74fL73E22QlwJB"
+        >
+          Epic Toughness
+        </option>
+        <option
+          key="feats92"
+          value="recYH63fal3NkDHgm"
+        >
+          Epic Weapon Focus
+        </option>
+        <option
+          key="feats93"
+          value="recwJazo0cOaHVN82"
+        >
+          Epic Weapon Specialization
+        </option>
+        <option
+          key="feats94"
+          value="recSDxh2UD49CVRyh"
+        >
+          Epic Will
+        </option>
+        <option
+          key="feats95"
+          value="rec1UNqoxirOSxnno"
+        >
+          Eschew Materials
+        </option>
+        <option
+          key="feats96"
+          value="recmjqppdD8oDAHp6"
+        >
+          Exceptional Deflection
+        </option>
+        <option
+          key="feats97"
+          value="recfeBOXTX2up9aUs"
+        >
+          Exotic Weapon Proficiency
+        </option>
+        <option
+          key="feats98"
+          value="recnVpaSB379EQSI0"
+        >
+          Extend Spell
+        </option>
+        <option
+          key="feats99"
+          value="recNPOssjXXPtbKbb"
+        >
+          Extended Life Span
+        </option>
+        <option
+          key="feats100"
+          value="recGByPLOPCGQZEW1"
+        >
+          Extra Music
+        </option>
+        <option
+          key="feats101"
+          value="recMrrf3flxHUSgMR"
+        >
+          Extra Turning
+        </option>
+        <option
+          key="feats102"
+          value="recuXAYNPNco1uMdG"
+        >
+          Eyes in the Back of Your Head
+        </option>
+        <option
+          key="feats103"
+          value="recHRtjo6zEHSw7aL"
+        >
+          Familiar Spell
+        </option>
+        <option
+          key="feats104"
+          value="recVXoEU44zDtbech"
+        >
+          Far Shot
+        </option>
+        <option
+          key="feats105"
+          value="recHkaFWSLu7SI1ee"
+        >
+          Fast Healing
+        </option>
+        <option
+          key="feats106"
+          value="recjTsJRbGi8Lptpa"
+        >
+          Fine Wild Shape
+        </option>
+        <option
+          key="feats107"
+          value="rec8icuDiUWvX1Yry"
+        >
+          Fleet of Foot
+        </option>
+        <option
+          key="feats108"
+          value="recw2WZMbQ3gonDew"
+        >
+          Flyby Attack
+        </option>
+        <option
+          key="feats109"
+          value="reczzAAR51o1WRmdB"
+        >
+          Forge Epic Ring
+        </option>
+        <option
+          key="feats110"
+          value="recohPSgPy9lyD80w"
+        >
+          Forge Ring
+        </option>
+        <option
+          key="feats111"
+          value="rectdd0HKAYm9SmIx"
+        >
+          Gargantuan Wild Shape
+        </option>
+        <option
+          key="feats112"
+          value="recCcqyJ5GL9nrx7G"
+        >
+          Great Charisma
+        </option>
+        <option
+          key="feats113"
+          value="reclT78Am0M14ogH9"
+        >
+          Great Cleave
+        </option>
+        <option
+          key="feats114"
+          value="recG6zBgLZVpCVJ5Y"
+        >
+          Great Constitution
+        </option>
+        <option
+          key="feats115"
+          value="recVCGoQYyuB3ywo9"
+        >
+          Great Dexterity
+        </option>
+        <option
+          key="feats116"
+          value="recboOAfWHQTIZGfr"
+        >
+          Great Fortitude
+        </option>
+        <option
+          key="feats117"
+          value="recIo1dWJeopo2HWe"
+        >
+          Great Intelligence
+        </option>
+        <option
+          key="feats118"
+          value="recX34PyAdbEQghsb"
+        >
+          Great Smiting
+        </option>
+        <option
+          key="feats119"
+          value="recDgjKlw3qhC6Caz"
+        >
+          Great Strength
+        </option>
+        <option
+          key="feats120"
+          value="reckTAO6zjLWF7qZm"
+        >
+          Great Wisdom
+        </option>
+        <option
+          key="feats121"
+          value="recngsilwkNCpwJ1w"
+        >
+          Greater Manyshot
+        </option>
+        <option
+          key="feats122"
+          value="recLKX0TNjlgzGUOx"
+        >
+          Greater Multiweapon Fighting
+        </option>
+        <option
+          key="feats123"
+          value="recfy4jWSGtP77EQv"
+        >
+          Greater Spell Focus
+        </option>
+        <option
+          key="feats124"
+          value="recyUNLnXQEp7Qams"
+        >
+          Greater Spell Penetration
+        </option>
+        <option
+          key="feats125"
+          value="recyONl4n3KUvcZMu"
+        >
+          Greater Two-Weapon Fighting
+        </option>
+        <option
+          key="feats126"
+          value="recvX8MNxV9RUcIHx"
+        >
+          Greater Weapon Focus
+        </option>
+        <option
+          key="feats127"
+          value="recgDuc3CRemo6gop"
+        >
+          Greater Weapon Specialization
+        </option>
+        <option
+          key="feats128"
+          value="rec0o0ZQvthxaPWsK"
+        >
+          Group Inspiration
+        </option>
+        <option
+          key="feats129"
+          value="recDanI1EtcjYcvaT"
+        >
+          Heighten Spell
+        </option>
+        <option
+          key="feats130"
+          value="recFR8hcOZ1VWJeSB"
+        >
+          Hindering Song
+        </option>
+        <option
+          key="feats131"
+          value="recKZ213PbqbXUlZE"
+        >
+          Hold the Line
+        </option>
+        <option
+          key="feats132"
+          value="reczLPssqes9Allcm"
+        >
+          Holy Strike
+        </option>
+        <option
+          key="feats133"
+          value="recEepS7K6IXvQOQU"
+        >
+          Hover
+        </option>
+        <option
+          key="feats134"
+          value="recRflwPRNsV8Mikq"
+        >
+          Ignore Material Components
+        </option>
+        <option
+          key="feats135"
+          value="recB5m8zpzGVdfA47"
+        >
+          Imprint Stone
+        </option>
+        <option
+          key="feats136"
+          value="recH0yaYZUkBoX9Ts"
+        >
+          Improved Alignment-Based Casting
+        </option>
+        <option
+          key="feats137"
+          value="recH507n9eFXFuMtT"
+        >
+          Improved Arrow of Death
+        </option>
+        <option
+          key="feats138"
+          value="recfGJQ6pkNUqa9MX"
+        >
+          Improved Aura of Courage
+        </option>
+        <option
+          key="feats139"
+          value="recgOxsvTHb6WuRpx"
+        >
+          Improved Aura of Despair
+        </option>
+        <option
+          key="feats140"
+          value="recdPR3fvAC3RKGZV"
+        >
+          Improved Bull Rush
+        </option>
+        <option
+          key="feats141"
+          value="recQwtCq32BVgmIpa"
+        >
+          Improved Combat Casting
+        </option>
+        <option
+          key="feats142"
+          value="recIGMapWpvesoRZd"
+        >
+          Improved Combat Reflexes
+        </option>
+        <option
+          key="feats143"
+          value="recEpNvwwJ71UvJm5"
+        >
+          Improved Counterspell
+        </option>
+        <option
+          key="feats144"
+          value="rec5slnNRWWJC8fb2"
+        >
+          Improved Critical
+        </option>
+        <option
+          key="feats145"
+          value="recOw2MnHi1Umie9f"
+        >
+          Improved Darkvision
+        </option>
+        <option
+          key="feats146"
+          value="recQc3GpnKelT57Gs"
+        >
+          Improved Death Attack
+        </option>
+        <option
+          key="feats147"
+          value="recFWf1n5dhhmR308"
+        >
+          Improved Disarm
+        </option>
+        <option
+          key="feats148"
+          value="recPwR8YqatQuJqXS"
+        >
+          Improved Elemental Wild Shape
+        </option>
+        <option
+          key="feats149"
+          value="recQDaucsIOGOt9hp"
+        >
+          Improved Familiar
+        </option>
+        <option
+          key="feats150"
+          value="recm090Df8faJMFly"
+        >
+          Improved Favored Enemy
+        </option>
+        <option
+          key="feats151"
+          value="recJrvSJJCUuc6mhl"
+        >
+          Improved Feint
+        </option>
+        <option
+          key="feats152"
+          value="recZtJj4tIw5XDZbC"
+        >
+          Improved Flyby Attack
+        </option>
+        <option
+          key="feats153"
+          value="reczT5FbnHSASKG1t"
+        >
+          Improved Grapple
+        </option>
+        <option
+          key="feats154"
+          value="recmAqqlY2XXd6vQp"
+        >
+          Improved Heighten Spell
+        </option>
+        <option
+          key="feats155"
+          value="reciazjHVWQmiq1jP"
+        >
+          Improved Initiative
+        </option>
+        <option
+          key="feats156"
+          value="recReZmh5AR841RDE"
+        >
+          Improved Ki Strike
+        </option>
+        <option
+          key="feats157"
+          value="recIgfqdlPFEQaYpG"
+        >
+          Improved Low-Light Vision
+        </option>
+        <option
+          key="feats158"
+          value="recbK0MkITKWaBVvR"
+        >
+          Improved Manyshot
+        </option>
+        <option
+          key="feats159"
+          value="recRctlW1vIRg7aJE"
+        >
+          Improved Metamagic
+        </option>
+        <option
+          key="feats160"
+          value="rec7w1n3zWvQgybB5"
+        >
+          Improved Multiattack
+        </option>
+        <option
+          key="feats161"
+          value="recpqEOvW44yc6IG5"
+        >
+          Improved Multiweapon Fighting
+        </option>
+        <option
+          key="feats162"
+          value="recJSbPjUKOTWNe6m"
+        >
+          Improved Natural Armor
+        </option>
+        <option
+          key="feats163"
+          value="recNxmdwGsIHTAPxj"
+        >
+          Improved Natural Attack
+        </option>
+        <option
+          key="feats164"
+          value="recrcXqW0aKN7CRNg"
+        >
+          Improved Overrun
+        </option>
+        <option
+          key="feats165"
+          value="recMPvjjsCrx8n3MH"
+        >
+          Improved Precise Shot
+        </option>
+        <option
+          key="feats166"
+          value="recEqV253RXFXXTeO"
+        >
+          Improved Shield Bash
+        </option>
+        <option
+          key="feats167"
+          value="recLvwm9VX1l0QOAF"
+        >
+          Improved Sneak Attack
+        </option>
+        <option
+          key="feats168"
+          value="rec8SML7edkgm8Daa"
+        >
+          Improved Spell Capacity
+        </option>
+        <option
+          key="feats169"
+          value="recZ7I3tsw8Wglevc"
+        >
+          Improved Spell Resistance
+        </option>
+        <option
+          key="feats170"
+          value="recBIq6dCa2hCQdXi"
+        >
+          Improved Stunning Fist
+        </option>
+        <option
+          key="feats171"
+          value="rec4xrHW8QTf6eTe3"
+        >
+          Improved Sunder
+        </option>
+        <option
+          key="feats172"
+          value="recv8vlK0if2wVkM2"
+        >
+          Improved Trip
+        </option>
+        <option
+          key="feats173"
+          value="recuEsiEZ1O2huYCr"
+        >
+          Improved Turning
+        </option>
+        <option
+          key="feats174"
+          value="recspc34ofcNegBbe"
+        >
+          Improved Two-Weapon Fighting
+        </option>
+        <option
+          key="feats175"
+          value="recCmnimojxd0MNLS"
+        >
+          Improved Unarmed Strike
+        </option>
+        <option
+          key="feats176"
+          value="recFLUTUFiAZrtWc8"
+        >
+          Improved Whirlwind Attack
+        </option>
+        <option
+          key="feats177"
+          value="rec1XRG78wqr7t77E"
+        >
+          Incite Rage
+        </option>
+        <option
+          key="feats178"
+          value="recopIF1mvoCADeqG"
+        >
+          Infinite Deflection
+        </option>
+        <option
+          key="feats179"
+          value="recSsoZCkJeVaJa2j"
+        >
+          Inspire Excellence
+        </option>
+        <option
+          key="feats180"
+          value="recEQuzMOnWrYWbWM"
+        >
+          Instant Reload
+        </option>
+        <option
+          key="feats181"
+          value="recCqxdMJjuhG8R7d"
+        >
+          Intensify Spell
+        </option>
+        <option
+          key="feats182"
+          value="rec3uAWs5IilEadt9"
+        >
+          Intuitive Trapfinding
+        </option>
+        <option
+          key="feats183"
+          value="recs5pgQMU6zotYqL"
+        >
+          Investigator
+        </option>
+        <option
+          key="feats184"
+          value="rec0Rmpc0o4zr5KQZ"
+        >
+          Iron Will
+        </option>
+        <option
+          key="feats185"
+          value="recBS1Vlwp32LWNNe"
+        >
+          Jack of All Trades
+        </option>
+        <option
+          key="feats186"
+          value="recAeGlhBNBh7upAs"
+        >
+          Keen Strike
+        </option>
+        <option
+          key="feats187"
+          value="recCxUg2DPCVGd5wQ"
+        >
+          Knock-Down
+        </option>
+        <option
+          key="feats188"
+          value="recF1jiy7Z3atlHDa"
+        >
+          Lasting Inspiration
+        </option>
+        <option
+          key="feats189"
+          value="recaVxDe7IV4Ibppd"
+        >
+          Leadership
+        </option>
+        <option
+          key="feats190"
+          value="rec37Jez2aiDnkjqE"
+        >
+          Legendary Climber
+        </option>
+        <option
+          key="feats191"
+          value="rec5gS9hXRPNT4kuC"
+        >
+          Legendary Commander
+        </option>
+        <option
+          key="feats192"
+          value="recbVb12m3xhnyaHT"
+        >
+          Legendary Leaper
+        </option>
+        <option
+          key="feats193"
+          value="recd9irRuDR82SnIL"
+        >
+          Legendary Rider
+        </option>
+        <option
+          key="feats194"
+          value="recbTWNXoiYl9oMVA"
+        >
+          Legendary Tracker
+        </option>
+        <option
+          key="feats195"
+          value="rec0IcSNwYsg80Ldu"
+        >
+          Legendary Wrestler
+        </option>
+        <option
+          key="feats196"
+          value="recHPtIzQdLipkdLi"
+        >
+          Lightning Reflexes
+        </option>
+        <option
+          key="feats197"
+          value="rec3TmlD78AdiPphf"
+        >
+          Lingering Damage
+        </option>
+        <option
+          key="feats198"
+          value="rec43FVgR2bo1YDR6"
+        >
+          Magical Aptitude
+        </option>
+        <option
+          key="feats199"
+          value="recExtvt4xN6i7AiO"
+        >
+          Magical Beast Companion
+        </option>
+        <option
+          key="feats200"
+          value="recq2EZvZ93PkGmh4"
+        >
+          Magical Beast Wild Shape
+        </option>
+        <option
+          key="feats201"
+          value="rec0Ga2RlLe6NZbhu"
+        >
+          Manyshot
+        </option>
+        <option
+          key="feats202"
+          value="recu6KSoLrL5T47wp"
+        >
+          Martial Weapon Proficiency
+        </option>
+        <option
+          key="feats203"
+          value="recXrpfxPke8r5kvy"
+        >
+          Master Staff
+        </option>
+        <option
+          key="feats204"
+          value="recd4WdR6P3ld60lO"
+        >
+          Master Wand
+        </option>
+        <option
+          key="feats205"
+          value="recKfsZpmul8Mc89v"
+        >
+          Maximize Spell
+        </option>
+        <option
+          key="feats206"
+          value="reclfpVhNiab9k5gb"
+        >
+          Mighty Rage
+        </option>
+        <option
+          key="feats207"
+          value="recUv7HQzFXwLgRB9"
+        >
+          Mind Over Body
+        </option>
+        <option
+          key="feats208"
+          value="recx6OyqdQn5OUCyB"
+        >
+          Mobile Defense
+        </option>
+        <option
+          key="feats209"
+          value="rec1oOI1ICj2HuKqa"
+        >
+          Mobility
+        </option>
+        <option
+          key="feats210"
+          value="recqxhXBJB1KCxzIn"
+        >
+          Mounted Archery
+        </option>
+        <option
+          key="feats211"
+          value="reciJuIqTWUQRhYv0"
+        >
+          Mounted Combat
+        </option>
+        <option
+          key="feats212"
+          value="recKkMD7JxJW1XkHj"
+        >
+          Multiattack
+        </option>
+        <option
+          key="feats213"
+          value="rec43FIS2LihZiFYJ"
+        >
+          Multispell
+        </option>
+        <option
+          key="feats214"
+          value="recvJkbFXbH5ZXAXa"
+        >
+          Multiweapon Fighting
+        </option>
+        <option
+          key="feats215"
+          value="recUlskP03KLuUhgq"
+        >
+          Multiweapon Rend
+        </option>
+        <option
+          key="feats216"
+          value="reclFLacz9XUqkOue"
+        >
+          Music of the Gods
+        </option>
+        <option
+          key="feats217"
+          value="reccG488HS3PmSuGK"
+        >
+          Natural Spell
+        </option>
+        <option
+          key="feats218"
+          value="rec5982GoHsn1tfis"
+        >
+          Negative Energy Burst
+        </option>
+        <option
+          key="feats219"
+          value="recoQZX87YxSgmV2T"
+        >
+          Negotiator
+        </option>
+        <option
+          key="feats220"
+          value="recL3E07iXqlgd6Mv"
+        >
+          Nimble Fingers
+        </option>
+        <option
+          key="feats221"
+          value="recFp03E0YFKaq5xr"
+        >
+          Open Minded
+        </option>
+        <option
+          key="feats222"
+          value="rec7KdtT38XqMZ97s"
+        >
+          Overwhelming Critical
+        </option>
+        <option
+          key="feats223"
+          value="rec7k1FJnYts9LVOo"
+        >
+          Penetrate Damage Reduction
+        </option>
+        <option
+          key="feats224"
+          value="rec73w62ZOJtanhuE"
+        >
+          Perfect Health
+        </option>
+        <option
+          key="feats225"
+          value="rec66QzlM01qvGwRN"
+        >
+          Perfect Multiweapon Fighting
+        </option>
+        <option
+          key="feats226"
+          value="recCVQuiZAIWOEuJ1"
+        >
+          Perfect Two-Weapon Fighting
+        </option>
+        <option
+          key="feats227"
+          value="recprHHtBY1m3W8CK"
+        >
+          Permanent Emanation
+        </option>
+        <option
+          key="feats228"
+          value="recaTDqd3gilGLAc0"
+        >
+          Persistent Spell
+        </option>
+        <option
+          key="feats229"
+          value="recPjLbGCj3xRNPU3"
+        >
+          Persuasive
+        </option>
+        <option
+          key="feats230"
+          value="rec7FtveUXIuh63pp"
+        >
+          Planar Turning
+        </option>
+        <option
+          key="feats231"
+          value="recQV754iVrjVSj66"
+        >
+          Plant Control
+        </option>
+        <option
+          key="feats232"
+          value="reco0bwyops62ZxPn"
+        >
+          Plant Defiance
+        </option>
+        <option
+          key="feats233"
+          value="rec81hWf4GNmLBenB"
+        >
+          Plant Wild Shape
+        </option>
+        <option
+          key="feats234"
+          value="rec0Aa93zpU5V3Asy"
+        >
+          Point Blank Shot
+        </option>
+        <option
+          key="feats235"
+          value="recxPPaGukcQBMN4X"
+        >
+          Polyglot
+        </option>
+        <option
+          key="feats236"
+          value="recg6CSotqvsTrakw"
+        >
+          Positive Energy Aura
+        </option>
+        <option
+          key="feats237"
+          value="recuv5RdScK7Vqhf5"
+        >
+          Power Attack
+        </option>
+        <option
+          key="feats238"
+          value="recvGUzVy6V0nxd2G"
+        >
+          Power Critical
+        </option>
+        <option
+          key="feats239"
+          value="recXyoCOASsqgZXOJ"
+        >
+          Precise Shot
+        </option>
+        <option
+          key="feats240"
+          value="recpHwtjV89aVIoGB"
+        >
+          Psionic Affinity
+        </option>
+        <option
+          key="feats241"
+          value="recLp3uvkYGZGyywW"
+        >
+          Quick Draw
+        </option>
+        <option
+          key="feats242"
+          value="recGQ0aIb0LViNIDf"
+        >
+          Quicken Spell
+        </option>
+        <option
+          key="feats243"
+          value="rec6QsVR3a7aEc8Ev"
+        >
+          Quicken Spell-Like Ability
+        </option>
+        <option
+          key="feats244"
+          value="rec3Mczx6e5dOlHOM"
+        >
+          Ranged Inspiration
+        </option>
+        <option
+          key="feats245"
+          value="recjCiBAjZ2MCw8v6"
+        >
+          Rapid Inspiration
+        </option>
+        <option
+          key="feats246"
+          value="recmNzyXLWdoJ94Vp"
+        >
+          Rapid Metabolism
+        </option>
+        <option
+          key="feats247"
+          value="recEk5kUnIREk59lF"
+        >
+          Rapid Reload
+        </option>
+        <option
+          key="feats248"
+          value="recoZbyD7qsch7xSe"
+        >
+          Rapid Shot
+        </option>
+        <option
+          key="feats249"
+          value="reckz7xRmxxdTbh4G"
+        >
+          Reach Spell
+        </option>
+        <option
+          key="feats250"
+          value="recii9zxr6QoJFGgb"
+        >
+          Reactive Countersong
+        </option>
+        <option
+          key="feats251"
+          value="rec3Z5EqrUQXIcAjy"
+        >
+          Reckless Offense
+        </option>
+        <option
+          key="feats252"
+          value="recVoMid9syjVPQAm"
+        >
+          Reflect Arrows
+        </option>
+        <option
+          key="feats253"
+          value="recBVTl3j7Rfs1TjG"
+        >
+          Repeat Spell
+        </option>
+        <option
+          key="feats254"
+          value="reckCFbXtuDrf5Q4N"
+        >
+          Ride-By Attack
+        </option>
+        <option
+          key="feats255"
+          value="recrcCBspMITAt03y"
+        >
+          Righteous Strike
+        </option>
+        <option
+          key="feats256"
+          value="recIpizicw40PTLoT"
+        >
+          Ruinous Rage
+        </option>
+        <option
+          key="feats257"
+          value="rec02pDGILJ5EZz1W"
+        >
+          Run
+        </option>
+        <option
+          key="feats258"
+          value="recpoSavlX3cOnlk4"
+        >
+          Sacred Spell
+        </option>
+        <option
+          key="feats259"
+          value="recPdYl618loaB28p"
+        >
+          Scribe Epic Scroll
+        </option>
+        <option
+          key="feats260"
+          value="recGkxwkqppy7EYmI"
+        >
+          Scribe Scroll
+        </option>
+        <option
+          key="feats261"
+          value="recBQeNMELDj3IE7A"
+        >
+          Scribe Tattoo
+        </option>
+        <option
+          key="feats262"
+          value="recrXs4R086L9BQ2v"
+        >
+          Self-Concealment
+        </option>
+        <option
+          key="feats263"
+          value="recBV4PEpBYb8mVC0"
+        >
+          Self-Sufficient
+        </option>
+        <option
+          key="feats264"
+          value="rechWZl17jELhDThh"
+        >
+          Sharp-Shooting
+        </option>
+        <option
+          key="feats265"
+          value="recy4KGNJkJPrSK6f"
+        >
+          Shattering Strike
+        </option>
+        <option
+          key="feats266"
+          value="recm19w48xltockBW"
+        >
+          Shield Proficiency
+        </option>
+        <option
+          key="feats267"
+          value="recQNpK7311nbBt15"
+        >
+          Shot on the Run
+        </option>
+        <option
+          key="feats268"
+          value="recghbS5KnXshwJmR"
+        >
+          Sidestep Charge
+        </option>
+        <option
+          key="feats269"
+          value="recVyjh0BfUwtXfIF"
+        >
+          Silent Spell
+        </option>
+        <option
+          key="feats270"
+          value="rec2wriPyA1jtpZih"
+        >
+          Simple Weapon Proficiency
+        </option>
+        <option
+          key="feats271"
+          value="recaj8lyaZepMlFCM"
+        >
+          Skill Focus
+        </option>
+        <option
+          key="feats272"
+          value="recpeswIYdGxGtd4g"
+        >
+          Snatch
+        </option>
+        <option
+          key="feats273"
+          value="recU0tKxbZB3ShosK"
+        >
+          Snatch Arrows
+        </option>
+        <option
+          key="feats274"
+          value="recNul9zU9EzV9JYC"
+        >
+          Sneak Attack of Opportunity
+        </option>
+        <option
+          key="feats275"
+          value="recaMu31K8bE507Qh"
+        >
+          Spectral Strike
+        </option>
+        <option
+          key="feats276"
+          value="recr648zasZ6BHY5D"
+        >
+          Spell Focus
+        </option>
+        <option
+          key="feats277"
+          value="recJTQZBWe3uN9DKV"
+        >
+          Spell Knowledge
+        </option>
+        <option
+          key="feats278"
+          value="rec4KkfhKpetKIDqj"
+        >
+          Spell Mastery
+        </option>
+        <option
+          key="feats279"
+          value="recTphofr2OGPwf06"
+        >
+          Spell Opportunity
+        </option>
+        <option
+          key="feats280"
+          value="recQM5J2Z4Bg345O0"
+        >
+          Spell Penetration
+        </option>
+        <option
+          key="feats281"
+          value="recm8xrzST82XRtbb"
+        >
+          Spell Stowaway
+        </option>
+        <option
+          key="feats282"
+          value="recJJTjUAlnPTK5lI"
+        >
+          Spellcasting Harrier
+        </option>
+        <option
+          key="feats283"
+          value="recY4eMlPUaTvuZVL"
+        >
+          Spirited Charge
+        </option>
+        <option
+          key="feats284"
+          value="rec0xSHVkvnocAPyx"
+        >
+          Spontaneous Domain Access
+        </option>
+        <option
+          key="feats285"
+          value="reczBTYLm1NMiiWKO"
+        >
+          Spontaneous Spell
+        </option>
+        <option
+          key="feats286"
+          value="recj9JGm6nU9sSM3W"
+        >
+          Spring Attack
+        </option>
+        <option
+          key="feats287"
+          value="recB7JU0g2Bfz5xqS"
+        >
+          Stand Still
+        </option>
+        <option
+          key="feats288"
+          value="rece4EQ3n0Ya33LGf"
+        >
+          Stealthy
+        </option>
+        <option
+          key="feats289"
+          value="recCEnHpjCHJli3pq"
+        >
+          Still Spell
+        </option>
+        <option
+          key="feats290"
+          value="recE6PzbZgtMuUcVm"
+        >
+          Storm of Throws
+        </option>
+        <option
+          key="feats291"
+          value="recJeI9Rlq6R1io9r"
+        >
+          Stunning Fist
+        </option>
+        <option
+          key="feats292"
+          value="recZ74DWSuSZULLZh"
+        >
+          Subdual Substitution
+        </option>
+        <option
+          key="feats293"
+          value="recfSU9k2yDFrOJl1"
+        >
+          Superior Expertise
+        </option>
+        <option
+          key="feats294"
+          value="recDB8YX4av29yRxm"
+        >
+          Superior Initiative
+        </option>
+        <option
+          key="feats295"
+          value="recfzLBBH3LdkdqGM"
+        >
+          Swarm of Arrows
+        </option>
+        <option
+          key="feats296"
+          value="recGWkniPVHTwxxDB"
+        >
+          Tenacious Magic
+        </option>
+        <option
+          key="feats297"
+          value="receeaaQusxqJ2ZF7"
+        >
+          Terrifying Rage
+        </option>
+        <option
+          key="feats298"
+          value="recBowYlyXstRa97P"
+        >
+          Thundering Rage
+        </option>
+        <option
+          key="feats299"
+          value="reczbG3R5q7p4lj9R"
+        >
+          Toughness
+        </option>
+        <option
+          key="feats300"
+          value="rec4VSjFtUxZwK886"
+        >
+          Tower Shield Proficiency
+        </option>
+        <option
+          key="feats301"
+          value="recxkSuS8IvkzRVyV"
+        >
+          Track
+        </option>
+        <option
+          key="feats302"
+          value="recaut9Caobtz40s0"
+        >
+          Trample
+        </option>
+        <option
+          key="feats303"
+          value="reclhvvxKZVEyX745"
+        >
+          Two-Weapon Defense
+        </option>
+        <option
+          key="feats304"
+          value="recePeBndah0BTNs4"
+        >
+          Two-Weapon Fighting
+        </option>
+        <option
+          key="feats305"
+          value="rec9H5Qje89lulBtp"
+        >
+          Two-Weapon Rend
+        </option>
+        <option
+          key="feats306"
+          value="recwC0QFCIsNCYwCZ"
+        >
+          Uncanny Accuracy
+        </option>
+        <option
+          key="feats307"
+          value="recJFvWvKKUkM6NJM"
+        >
+          Undead Mastery
+        </option>
+        <option
+          key="feats308"
+          value="recpwqw7H735wrK81"
+        >
+          Unholy Strike
+        </option>
+        <option
+          key="feats309"
+          value="reccZ5xjJ9eWUxvY8"
+        >
+          Vermin Wild Shape
+        </option>
+        <option
+          key="feats310"
+          value="recBnl6h3mATsgZJc"
+        >
+          Vorpal Strike
+        </option>
+        <option
+          key="feats311"
+          value="recVdnKmMFz54fNLF"
+        >
+          Weapon Finesse
+        </option>
+        <option
+          key="feats312"
+          value="recy5YNMs3lo9rYTp"
+        >
+          Weapon Focus
+        </option>
+        <option
+          key="feats313"
+          value="recCUKNPq8gkgp8Pt"
+        >
+          Weapon Specialization
+        </option>
+        <option
+          key="feats314"
+          value="recCT26q7TKufh4x9"
+        >
+          Whirlwind Attack
+        </option>
+        <option
+          key="feats315"
+          value="recX8EJKHZx7Qv1yO"
+        >
+          Widen Aura of Courage
+        </option>
+        <option
+          key="feats316"
+          value="recF264keoM3c2uYX"
+        >
+          Widen Aura of Despair
+        </option>
+        <option
+          key="feats317"
+          value="recxFliEDF2AXl0rI"
+        >
+          Widen Spell
+        </option>
+        <option
+          key="feats318"
+          value="recF2gHjeFMKLdUmE"
+        >
+          Wild Talent
+        </option>
+        <option
+          key="feats319"
+          value="recI40vCPdTE5LsEu"
+        >
+          Wingover
+        </option>
+        <option
+          key="feats320"
+          value="recgApBVCXci88ubj"
+        >
+          Zone of Animation
+        </option>
+      </select>
+    </div>
     <button
-      className="input-group__item"
+      className="button--secondary"
       onClick={[Function]}
       type="button"
     >

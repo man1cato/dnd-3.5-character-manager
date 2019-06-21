@@ -58,27 +58,27 @@ const CreatorFormPage5 = ({
 	}, [])
 
 	const Content = ({selected}) => (
-		<>
-			<h5>{selected.category}</h5>
+		<div>
+			<div className="form-group--30"><b>Category:</b> <div>{selected.category}</div></div>
 
 			{selected.weaponType && (
-				<div>
-					<p>Type: {selected.weaponType} / {selected.encumbrance} / {selected.damageType}</p>
-					<p>Range: {selected.range}</p>
-					<p>Damage (M): {selected.damageM}</p>
-					<p>Damage (S): {selected.damageS}</p>
-					<p>Critical: {selected.critical}</p>
-				</div>
+				<>
+					<div className="form-group--30"><b>Type:</b> <div>{selected.weaponType} / {selected.encumbrance} / {selected.damageType}</div></div>
+					<div className="form-group--30"><b>Range:</b> <div>{selected.range}</div></div>
+					<div className="form-group--30"><b>Damage (M):</b> <div>{selected.damageM}</div></div>
+					<div className="form-group--30"><b>Damage (S):</b> <div>{selected.damageS}</div></div>
+					<div className="form-group--30"><b>Critical:</b> <div>{selected.critical}</div></div>
+				</>
 			)}
 
-			<p>Value: {selected.value} gp</p>
-			<p>Weight: {selected.weight} lbs</p>
-		</>
+			<div className="form-group--30"><b>Value:</b> <div>{selected.value} gp</div></div>
+			<div className="form-group--30"><b>Weight:</b> <div>{selected.weight} lbs</div></div>
+		</div>
 	)
 	
 	return (
 		<div>
-			<h3 className="row--center">Equipment</h3>
+			<h3 className="row--center">Select Equipment</h3>
 
 			<Selector
 				apiObject={items} 
@@ -87,6 +87,8 @@ const CreatorFormPage5 = ({
 				selectedObjIds={selectedItemIds}
 				setSelectedObjIds={setSelectedItemIds}
 			/>
+
+			<div className="divider"></div>
 
 			<h4 className="row--left">Selected Equipment:</h4>
 			<div className="grid grid--items">
@@ -105,22 +107,21 @@ const CreatorFormPage5 = ({
 							</button>
 
 							<input 
-								className="grid__col2"
+								className="grid__col2 text-input"
 								id={id}
 								value={_.find(values.equipment, { id }).qty} 
 								onChange={(e) => handleChange(e)} 
 							/>
 							
-							<div className="grid__col3">
-								<EquipButton 								
-									item={item} 
-									equipped={values.equipped} 
-									handleEquip={handleEquip} 
-								/>
-							</div>
+							<EquipButton
+								className="grid__col3"
+								item={item} 
+								equipped={values.equipped} 
+								handleEquip={handleEquip} 
+							/>
 							
 							<button 
-								className="grid__col4"
+								className="grid__col4 button--secondary"
 								type="button" 
 								onClick={() => setSelectedItemIds(_.without(selectedItemIds, id))}
 							>
@@ -137,7 +138,7 @@ const CreatorFormPage5 = ({
 				handleEquip={handleEquip}
 			/>
 
-			<ErrorMessage className="row--left" name="equipment" component="div" />
+			<ErrorMessage className="row--left form__error" name="equipment" component="div" />
 		</div>
 	)
 }

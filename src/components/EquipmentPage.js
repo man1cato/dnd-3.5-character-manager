@@ -143,7 +143,7 @@ export class EquipmentPage extends React.Component {
 
 	render () {
 		return (
-			<div className="layout">
+			<div>
 				<Header pageTitle="Equipment" />
 				<div className="container container--body">
 					

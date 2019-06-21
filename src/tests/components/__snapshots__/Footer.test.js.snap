@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render footer correctly 1`] = `
-<footer>
+<footer
+  className="footer--navbar"
+>
   <div
-    className="container footer__navbar"
+    className="container footer--navbar__content"
   >
     <Link
-      className="footer__navbar__icon"
       to="/profile"
     >
       <FooterIcon
@@ -14,7 +15,6 @@ exports[`should render footer correctly 1`] = `
       />
     </Link>
     <Link
-      className="footer__navbar__icon"
       to="/stats"
     >
       <FooterIcon
@@ -22,7 +22,6 @@ exports[`should render footer correctly 1`] = `
       />
     </Link>
     <Link
-      className="footer__navbar__icon"
       to="/combat"
     >
       <FooterIcon
@@ -30,7 +29,6 @@ exports[`should render footer correctly 1`] = `
       />
     </Link>
     <Link
-      className="footer__navbar__icon"
       to="/equipment"
     >
       <FooterIcon
@@ -38,7 +36,6 @@ exports[`should render footer correctly 1`] = `
       />
     </Link>
     <Link
-      className="footer__navbar__icon"
       to="/spellbook"
     >
       <FooterIcon
@@ -46,7 +43,6 @@ exports[`should render footer correctly 1`] = `
       />
     </Link>
     <Link
-      className="footer__navbar__icon"
       to="/companion"
     >
       <FooterIcon

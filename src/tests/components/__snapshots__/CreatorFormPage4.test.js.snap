@@ -5,7 +5,7 @@ exports[`should correctly render CreatorFormPage4 1`] = `
   <h3
     className="row--center"
   >
-    Feats
+    Select Feats
   </h3>
   <Selector
     Content={[Function]}
@@ -653,6 +653,9 @@ exports[`should correctly render CreatorFormPage4 1`] = `
     selectedObjIds={Array []}
     setSelectedObjIds={[Function]}
   />
+  <div
+    className="divider"
+  />
   <h4
     className="row--left"
   >
@@ -662,7 +665,7 @@ exports[`should correctly render CreatorFormPage4 1`] = `
     handleCloseModal={[Function]}
   />
   <FormikConnect(ErrorMessageImpl)
-    className="row--left"
+    className="row--left form__error"
     component="div"
     name="feats"
   />

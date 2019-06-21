@@ -2,13 +2,13 @@
     background: $blue;
     color: white;
     display: inline-block;
-    font-size: $font-size-large;
+    width: -webkit-fill-available;
+    font-size: $font-size-l;
     font-weight: 300;
-    line-height: 1rem;
-    margin: 0;
-    padding: $s-size;
-    border: none;
     text-decoration: none;
+    border: none;
+    padding: $s-size;
+    margin: 0;
 }
 
 .button--link {
@@ -18,11 +18,12 @@
     text-decoration: underline;
     padding: 0 $xs-size 0 0;
     text-align: left;
+    width: auto;
 }
 
 .button--secondary {
     @extend .button;
-    background: $light-grey;
+    background: $grey;
 }
 
 .button-profile {

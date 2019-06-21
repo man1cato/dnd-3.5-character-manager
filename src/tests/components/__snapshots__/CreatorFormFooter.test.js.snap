@@ -1,16 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CreatorFormFooter 1`] = `
-<div
-  className="container container--footer form__footer"
+<footer
+  className="footer"
 >
-  <button
-    disabled={false}
-    id="nextButton"
-    onClick={[Function]}
-    type="button"
+  <div
+    className="container footer__form"
   >
-    Next
-  </button>
-</div>
+    <button
+      className="button"
+      disabled={false}
+      id="nextButton"
+      onClick={[Function]}
+      type="button"
+    >
+      Next
+    </button>
+  </div>
+</footer>
 `;

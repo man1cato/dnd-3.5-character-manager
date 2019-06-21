@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CompanionPage with profile data 1`] = `
-<div
-  className="layout"
->
+<div>
   <Connect(Header)
     pageTitle="Companion"
   />
@@ -11,7 +9,7 @@ exports[`should render CompanionPage with profile data 1`] = `
     className="container container--body"
   >
     <div
-      className="grid grid--companion"
+      className="section grid grid--companion"
     >
       <h3>
         Nyx
@@ -48,57 +46,65 @@ exports[`should render CompanionPage with profile data 1`] = `
         }
       />
     </div>
-    <h3
-      className="row--center"
+    <div
+      className="section"
     >
-      Abilities
-    </h3>
-    <Abilities
-      abilities={
-        Object {
-          "cha": 6,
-          "con": 10,
-          "dex": 15,
-          "int": 8,
-          "str": 1,
-          "wis": 14,
+      <h3
+        className="section__title"
+      >
+        Abilities
+      </h3>
+      <Abilities
+        abilities={
+          Object {
+            "cha": 6,
+            "con": 10,
+            "dex": 15,
+            "int": 8,
+            "str": 1,
+            "wis": 14,
+          }
         }
-      }
-      handleChange={[Function]}
-    />
-    <h3
-      className="row--center"
+        handleChange={[Function]}
+      />
+    </div>
+    <div
+      className="section"
     >
-      Skills
-    </h3>
-    <Connect(SkillSet)
-      skillSet={
-        Array [
-          Object {
-            "name": "Hide",
-            "ranks": 10,
-          },
-          Object {
-            "name": "Climb",
-            "ranks": 3,
-          },
-          Object {
-            "name": "Listen",
-            "ranks": 5,
-          },
-          Object {
-            "name": "Concentration",
-            "ranks": 9,
-          },
-          Object {
-            "name": "Spot",
-            "ranks": 5,
-          },
-        ]
-      }
-    />
+      <h3
+        className="section__title"
+      >
+        Skills
+      </h3>
+      <Connect(SkillSet)
+        skillSet={
+          Array [
+            Object {
+              "name": "Hide",
+              "ranks": 10,
+            },
+            Object {
+              "name": "Climb",
+              "ranks": 3,
+            },
+            Object {
+              "name": "Listen",
+              "ranks": 5,
+            },
+            Object {
+              "name": "Concentration",
+              "ranks": 9,
+            },
+            Object {
+              "name": "Spot",
+              "ranks": 5,
+            },
+          ]
+        }
+      />
+    </div>
     <h3
-      className="row--center"
+      className="section__title"
     >
       Combat
     </h3>

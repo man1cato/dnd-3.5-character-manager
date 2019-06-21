@@ -7,14 +7,10 @@
 }
 
 .container--body {
+  position: relative;
+  top: 8vh;
+  height: 82vh;
   padding-top: $m-size;
   padding-bottom: $m-size;
   overflow: auto;
-}
-
-.container--footer {
-  height: 9vh;
-  padding-top: $m-size;
-  padding-bottom: $m-size;
-  margin-bottom: 0;
 }

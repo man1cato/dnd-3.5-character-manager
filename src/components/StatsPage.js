@@ -37,7 +37,7 @@ export class StatsPage extends React.Component {
 
 	render () {
 		return (
-			<div className="layout">
+			<div >
 				<Header pageTitle="Character Stats" />
 				<div className="container container--body">
 

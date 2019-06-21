@@ -8,7 +8,7 @@ import SpecialAbilities from './SpecialAbilities'
 
 
 export const ProfilePage = (props) => (
-	<div className="layout">
+	<div>
 		<Header pageTitle="Character Profile" />
 		<div className="container container--body">
 

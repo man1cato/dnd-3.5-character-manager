@@ -3,30 +3,29 @@
 exports[`should render CreatorFormPage1 correctly 1`] = `
 <div>
   <div
-    className="form__group"
+    className="form-group--30"
   >
-    <div
-      className="form__content--flex"
-    >
-      <h4>
-        Name:
-      </h4>
-      <FormikConnect(FieldInner)
-        name="name"
-      />
-    </div>
-    <FormikConnect(ErrorMessageImpl)
-      component="div"
+    <h4>
+      Name:
+    </h4>
+    <FormikConnect(FieldInner)
+      className="text-input"
       name="name"
     />
   </div>
+  <FormikConnect(ErrorMessageImpl)
+    className="form__error"
+    component="div"
+    name="name"
+  />
   <div
-    className="form__group form__content--flex"
+    className="form-group--30"
   >
     <h4>
       Gender:
     </h4>
     <FormikConnect(FieldInner)
+      className="select"
       component="select"
       name="gender"
       onChange={[Function]}
@@ -49,94 +48,97 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form__group"
+    className="form-group--30"
   >
+    <h4>
+      Age:
+    </h4>
     <div
-      className="form__content--inline"
+      className="input-group"
     >
-      <h4>
-        Age:
-      </h4>
+      <FormikConnect(FieldInner)
+        className="text-input"
+        name="age"
+      />
       <div>
-        <FormikConnect(FieldInner)
-          name="age"
-        />
-        <div>
-           yrs
-        </div>
+         yrs
       </div>
     </div>
-    <FormikConnect(ErrorMessageImpl)
-      component="div"
-      name="age"
-    />
   </div>
+  <FormikConnect(ErrorMessageImpl)
+    className="form__error"
+    component="div"
+    name="age"
+  />
   <div
-    className="form__group"
+    className="form-group--30"
   >
+    <h4>
+      Height:
+    </h4>
     <div
-      className="form__content--inline"
+      className="input-group"
     >
-      <h4>
-        Height:
-      </h4>
+      <FormikConnect(FieldInner)
+        className="text-input"
+        name="heightFt"
+      />
       <div>
-        <FormikConnect(FieldInner)
-          name="heightFt"
-        />
-        <div>
-          ft
-        </div>
-        <FormikConnect(FieldInner)
-          name="heightIn"
-        />
-        <div>
-          in
-        </div>
+        ft
+      </div>
+      <FormikConnect(FieldInner)
+        className="text-input"
+        name="heightIn"
+      />
+      <div>
+        in
       </div>
     </div>
-    <FormikConnect(ErrorMessageImpl)
-      component="div"
-      name="heightFt"
-    />
-    <FormikConnect(ErrorMessageImpl)
-      component="div"
-      name="heightIn"
-    />
   </div>
+  <FormikConnect(ErrorMessageImpl)
+    className="form__error"
+    component="div"
+    name="heightFt"
+  />
+  <FormikConnect(ErrorMessageImpl)
+    className="form__error"
+    component="div"
+    name="heightIn"
+  />
   <div
-    className="form__group"
+    className="form-group--30"
   >
+    <h4>
+      Weight:
+    </h4>
     <div
-      className="form__content--inline"
+      className="input-group"
     >
-      <h4>
-        Weight:
-      </h4>
+      <FormikConnect(FieldInner)
+        className="text-input"
+        name="weight"
+      />
       <div>
-        <FormikConnect(FieldInner)
-          name="weight"
-        />
-        <div>
-          lbs
-        </div>
+        lbs
       </div>
     </div>
-    <FormikConnect(ErrorMessageImpl)
-      component="div"
-      name="weight"
-    />
   </div>
+  <FormikConnect(ErrorMessageImpl)
+    className="form__error"
+    component="div"
+    name="weight"
+  />
   <div
     className="divider"
   />
   <div
-    className="form__group form__content--flex"
+    className="form-group--30"
   >
     <h4>
       Race:
     </h4>
     <FormikConnect(FieldInner)
+      className="select"
       component="select"
       name="race"
       onChange={[Function]}
@@ -216,7 +218,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Favored Class:
@@ -226,7 +228,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Size:
@@ -236,7 +238,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Speed:
@@ -246,7 +248,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Racial Modifiers:
@@ -283,7 +285,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Default Language(s):
@@ -293,7 +295,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Bonus Languages:
@@ -303,12 +305,14 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content"
+    className="form-group--30 align-top"
   >
     <h4>
       Racial Bonuses:
     </h4>
-    <ul>
+    <ul
+      className="form-group__list"
+    >
       <li
         key="racialBonus0"
       >
@@ -327,7 +331,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </ul>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Special Abilities:

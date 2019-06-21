@@ -1,53 +1,13 @@
 .input-group {
     display: flex;
-    // flex-direction: column;
-    margin-bottom: $m-size;
-    select {
-        @extend .select;
+    align-items: center;
+    > * {
+        margin-right: $s-size;
     }
-    
-    // @media (min-width: $desktop-breakpoint) {
-        // flex-direction: row;
-        // margin-bottom: $l-size;
-    // }
-}
-
-.input-group--30 {
-    @extend .input-group;
-    :first-child {
-        width: 30%;
+    input {
+        max-width: 70px; 
     }
-    :last-child {
-        width: 70%;
-        margin: 0;
+    > :last-child {
+        margin-right: 0;
     }
-}
-
-.input-group--70 {
-    @extend .input-group;
-    :first-child {
-        width: 70%;
-    }
-    :last-child {
-        width: 30%;
-        margin: 0;
-    }
-}
-
-.input-group--80 {
-    @extend .input-group;
-    :first-child {
-        width: 80%;
-    }
-    :last-child {
-        width: 20%;
-        margin: 0;
-    }
-}
-
-.input-group__item {
-    // margin-bottom: $s-size;
-    // @media (min-width: $desktop-breakpoint) {
-        margin: 0 $s-size 0 0;
-    // }
 }

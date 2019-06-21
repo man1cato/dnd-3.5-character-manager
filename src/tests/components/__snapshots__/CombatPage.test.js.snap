@@ -1,135 +1,180 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render combat page with profile data 1`] = `
-<div
-  className="layout"
->
+<div>
   <Connect(Header)
     pageTitle="Combat"
   />
   <div
     className="container container--body"
   >
-    <PhysicalStats
-      ac={
-        Object {
-          "base": 14,
-          "flat": 10,
-          "touch": 14,
-        }
-      }
-      handleChange={[Function]}
-      hp={
-        Object {
-          "base": 32,
-          "damage": 10,
-          "mod": 6,
-          "total": 32,
-        }
-      }
-      initiative={
-        Object {
-          "base": 2,
-          "mod": "",
-          "total": 2,
-        }
-      }
-      speed={30}
-    />
-    <Saves
-      handleChange={[Function]}
-      saves={
-        Object {
-          "fortitude": Object {
-            "base": 1,
-            "mod": "",
-            "total": 1,
-          },
-          "reflex": Object {
-            "base": 1,
-            "mod": "",
-            "total": 1,
-          },
-          "will": Object {
-            "base": 4,
-            "mod": "",
-            "total": 4,
-          },
-        }
-      }
-    />
-    <Attacks
-      attacks={
-        Object {
-          "grapple": Object {
-            "base": 4,
-            "mod": "",
-            "total": 4,
-          },
-          "melee": Object {
-            "base": 4,
-            "mod": "",
-            "total": 4,
-          },
-          "ranged": Object {
-            "base": 6,
-            "mod": "",
-            "total": 6,
-          },
-        }
-      }
-      handleChange={[Function]}
-    />
-    <Connect(Weapons)
-      grappleBonus={4}
-      meleeBonus={4}
-      rangedBonus={6}
-      weaponSet={
-        Array [
-          "recOvuth9QArkI54l",
-        ]
-      }
-    />
-    <PreparedSpells
-      spellbook={
-        Array [
+    <div
+      className="section"
+    >
+      <h3
+        className="section__title"
+      >
+        Physical Stats
+      </h3>
+      <PhysicalStats
+        ac={
           Object {
-            "spells": Array [
-              Object {
-                "id": "rec8IQeYmBr3f1BMC",
-                "level": 0,
-                "mastered": false,
-                "prepared": 1,
-                "remaining": 1,
-                "used": 0,
-              },
-              Object {
-                "id": "recwpeRoCsea4vidW",
-                "level": 0,
-                "mastered": true,
-                "prepared": 2,
-                "remaining": 1,
-                "used": 1,
-              },
-            ],
-            "spellsPerDay": 4,
-          },
+            "base": 14,
+            "flat": 10,
+            "touch": 14,
+          }
+        }
+        handleChange={[Function]}
+        hp={
           Object {
-            "spells": Array [
-              Object {
-                "id": "recRhVs0ahtQZpbXx",
-                "level": 1,
-                "mastered": false,
-                "prepared": 1,
-                "remaining": 0,
-                "used": 1,
-              },
-            ],
-            "spellsPerDay": 3,
-          },
-        ]
-      }
-    />
+            "base": 32,
+            "damage": 10,
+            "mod": 6,
+            "total": 32,
+          }
+        }
+        initiative={
+          Object {
+            "base": 2,
+            "mod": "",
+            "total": 2,
+          }
+        }
+        speed={30}
+      />
+    </div>
+    <div
+      className="section"
+    >
+      <h3
+        className="section__title"
+      >
+        Saving Throws
+      </h3>
+      <Saves
+        handleChange={[Function]}
+        saves={
+          Object {
+            "fortitude": Object {
+              "base": 1,
+              "mod": "",
+              "total": 1,
+            },
+            "reflex": Object {
+              "base": 1,
+              "mod": "",
+              "total": 1,
+            },
+            "will": Object {
+              "base": 4,
+              "mod": "",
+              "total": 4,
+            },
+          }
+        }
+      />
+    </div>
+    <div
+      className="section"
+    >
+      <h3
+        className="section__title"
+      >
+        Attack Bonuses
+      </h3>
+      <Attacks
+        attacks={
+          Object {
+            "grapple": Object {
+              "base": 4,
+              "mod": "",
+              "total": 4,
+            },
+            "melee": Object {
+              "base": 4,
+              "mod": "",
+              "total": 4,
+            },
+            "ranged": Object {
+              "base": 6,
+              "mod": "",
+              "total": 6,
+            },
+          }
+        }
+        handleChange={[Function]}
+      />
+    </div>
+    <div
+      className="section"
+    >
+      <h3
+        className="section__title"
+      >
+        Equipped Weapons
+      </h3>
+      <Connect(Weapons)
+        grappleBonus={4}
+        meleeBonus={4}
+        rangedBonus={6}
+        weaponSet={
+          Array [
+            "recAaHr4qEcbytOpu",
+            "rec0JezjbAvUiWr8A",
+            "recWQ2ml4RhoLtvik",
+          ]
+        }
+      />
+    </div>
+    <div
+      className="section"
+    >
+      <h3
+        className="section__title"
+      >
+        Prepared Spells
+      </h3>
+      <PreparedSpells
+        spellbook={
+          Array [
+            Object {
+              "spells": Array [
+                Object {
+                  "id": "rec8IQeYmBr3f1BMC",
+                  "level": 0,
+                  "mastered": false,
+                  "prepared": 1,
+                  "remaining": 1,
+                  "used": 0,
+                },
+                Object {
+                  "id": "recwpeRoCsea4vidW",
+                  "level": 0,
+                  "mastered": true,
+                  "prepared": 2,
+                  "remaining": 1,
+                  "used": 1,
+                },
+              ],
+              "spellsPerDay": 4,
+            },
+            Object {
+              "spells": Array [
+                Object {
+                  "id": "recRhVs0ahtQZpbXx",
+                  "level": 1,
+                  "mastered": false,
+                  "prepared": 1,
+                  "remaining": 0,
+                  "used": 1,
+                },
+              ],
+              "spellsPerDay": 3,
+            },
+          ]
+        }
+      />
+    </div>
   </div>
   <Connect(Footer) />
 </div>

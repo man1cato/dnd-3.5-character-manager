@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
 import { schools, alignments } from '../utils/staticData'
@@ -29,116 +29,137 @@ const CreatorFormPage2 = ({
 	setFieldValue, 
 	setFieldError,
 	validateForm
-}) => {
-	useEffect(() => {
-		validateForm()
-	}, [])
-
-	return (
-		<div>
-			<div className="form__group form__content--flex">
-				<h4>Alignment:</h4>
-				{selectedJobClass.name === "Paladin" ?
-					<div>Lawful Good</div>
-					:
-					<Field name="alignment" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
-						{alignments.map((alignment, i) => (
-							<option 
-								value={alignment} 
-								key={`alignment${i}`}
-							>
-								{alignment}
-							</option>
-						))}
-					</Field>
-				}
-			</div>
-
-			<div className="form__group form__content--flex">
-				<h4>Job Class:</h4>
-				<Field name="jobClass" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}>
-					{jobClasses.map((jobClass, i) => (
+}) => (
+	<>
+		<div className="form-group--30">
+			<h4>Alignment:</h4>
+			{selectedJobClass.name === "Paladin" ?
+				<div>Lawful Good</div>
+				:
+				<Field 
+					className="select" 
+					name="alignment" 
+					component="select" 
+					onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}
+				>
+					{alignments.map((alignment, i) => (
 						<option 
-							value={jobClass.id} 
-							key={`jobClass${i}`}
+							value={alignment} 
+							key={`alignment${i}`}
 						>
-							{jobClass.name}
+							{alignment}
 						</option>
 					))}
-				</Field>                                    
-			</div>
+				</Field>
+			}
+		</div>
 
-			<div className="form__group form__content--flex">
-				<h4>Hit Die:</h4>
-				<div>{selectedJobClass.hitDie}</div>
-			</div>
+		<div className="form-group--30">
+			<h4>Job Class:</h4>
+			<Field 
+				className="select" 
+				name="jobClass" 
+				component="select" 
+				onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue)}}
+			>
+				{jobClasses.map((jobClass, i) => (
+					<option 
+						value={jobClass.id} 
+						key={`jobClass${i}`}
+					>
+						{jobClass.name}
+					</option>
+				))}
+			</Field>                                    
+		</div>
 
-			<div className="form__group form__content--flex">
-				<h4>Proficiencies:</h4>
-				<div>{selectedJobClass.proficiencies.join(", ")}</div>
-			</div>
+		<div className="form-group--30 align-top">
+			<h4>Hit Die:</h4>
+			<div>{selectedJobClass.hitDie}</div>
+		</div>
 
-			<div className="form__group form__content--tall">
-				<h4>Choose Bonus Languages:</h4>
-				<Field name="bonusLanguages" component="select" multiple onChange={(e) => {handleMultiSelect(e, setFieldValue)}}>
-					{_.orderBy(selectedRace.bonusLanguages).map((language) => (
+		<div className="form-group--30 align-top">
+			<h4>Proficiencies:</h4>
+			<div>{selectedJobClass.proficiencies.join(", ")}</div>
+		</div>
+
+		<div className="form-group--30 align-top">
+			<h4>Choose Bonus Languages:</h4>
+			<Field 
+				className="multi-select" 
+				name="bonusLanguages" 
+				component="select" 
+				multiple 
+				onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
+			>
+				{_.orderBy(selectedRace.bonusLanguages).map((language) => (
+					<option 
+						value={language} 
+						key={language}
+					>
+						{language}
+					</option>
+				))}
+			</Field>                                    
+		</div>
+
+		<div className="form-group--30">
+			<h4>Deity:</h4>
+			<Field 
+				className="text-input" 
+				name="deity" 
+				placeholder="(Optional) Enter the name of a Deity" 
+			/>                                  
+		</div>
+		
+		{selectedJobClass.name === 'Wizard' && (
+			<div className="form-group--30">
+				<h4>School:</h4>
+				<Field 
+					className="select" 
+					name="school" 
+					component="select" 
+					onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue, setFieldError)}}
+				>
+					{schools.map((school, i) => (
 						<option 
-							value={language} 
-							key={language}
+							value={school} 
+							key={`school${i}`}
 						>
-							{language}
+							{school}
 						</option>
 					))}
-				</Field>                                    
+				</Field>
 			</div>
+		)}
 
-			<div className="form__group form__content--flex">
-				<h4>Deity:</h4>
-				<Field name="deity" placeholder="(Optional) Enter the name of a Deity" />                                  
-			</div>
-			
-			{selectedJobClass.name === 'Wizard' && (
-				<div className="form__group form__content--flex">
-					<h4>School:</h4>
-					<Field name="school" component="select" onChange={(e) => {handleChange(e); handleSelect(e, setFieldValue, setFieldError)}}>
-						{schools.map((school, i) => (
+		{selectedJobClass.name === 'Wizard' && values.school !== 'Universal' && (
+			<>
+				<div className="form-group--30 align-top">
+					<h4>Choose Prohibited School(s):</h4>
+					<Field 
+						className="multi-select"
+						name="prohibitedSchools" 
+						component="select" 
+						multiple 
+						validate={validateProhibitedSchools(values.school)}
+						onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
+					>
+						{_.difference(schools, [values.school, 'Universal', 'Divination']).map((school, i) => (
 							<option 
 								value={school} 
-								key={`school${i}`}
+								key={`prohibited${i}`}
 							>
 								{school}
 							</option>
 						))}
 					</Field>
 				</div>
-			)}
+				<ErrorMessage className="form__error" name="prohibitedSchools" component="div"/>
+			</>
+		)}
+	</>
+)
 
-			{selectedJobClass.name === 'Wizard' && values.school !== 'Universal' && (
-				<div className="form__group">
-					<div className="form__content--tall">
-						<h4>Choose Prohibited School(s):</h4>
-						<Field 
-							name="prohibitedSchools" 
-							component="select" 
-							multiple 
-							validate={validateProhibitedSchools(values.school)}
-							onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
-						>
-							{_.difference(schools, [values.school, 'Universal', 'Divination']).map((school, i) => (
-								<option 
-									value={school} 
-									key={`prohibited${i}`}
-								>
-									{school}
-								</option>
-							))}
-						</Field>
-					</div>
-					<ErrorMessage name="prohibitedSchools" component="div"/>
-				</div>
-			)}
-		</div>
-	)
-}
 
 export default CreatorFormPage2

@@ -34,7 +34,7 @@ const CreatorFormPage3 = ({
 						<Fragment key={abbr}>
 							<h4 className="grid__col1">{abilities[abbr]} ({abbr.toUpperCase()})</h4>
 							<Field 
-								className="grid__col2"
+								className="grid__col2 text-input"
 								name={fieldName}
 								id={`${abbr}Input`}
 								value={values.abilities[abbr].score.toString()}
@@ -52,7 +52,7 @@ const CreatorFormPage3 = ({
 							/>	
 							<div className="grid__col3">{raceMod}</div>
 							<div className="grid__col4">{values.abilities[abbr].final}</div>					
-							<ErrorMessage className="grid__col-span4" name={fieldName} component="div" />
+							<ErrorMessage className="grid__col-span4 form__error" name={fieldName} component="div" />
 						</Fragment>
 					)
 				})}
@@ -60,6 +60,7 @@ const CreatorFormPage3 = ({
 
 			<div className="row--center">
 				<button
+					className="button--secondary"
 					id={`abilitiesRollButton`}
 					type='button'
 					onClick={() => {

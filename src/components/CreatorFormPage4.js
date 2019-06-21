@@ -22,14 +22,15 @@ const CreatorFormPage4 = ({
 	}, [])
 
 	const Content = ({selected}) => (
-		<p>
-			Description: {selected.description}
-		</p>
+		<div>
+			<div>Description:</div> 
+			<p>{selected.description}</p>
+		</div>
 	)
 	
 	return (
 		<div>
-			<h3 className="row--center">Feats</h3>
+			<h3 className="row--center">Select Feats</h3>
 
 			<Selector
 				apiObject={feats} 
@@ -39,11 +40,13 @@ const CreatorFormPage4 = ({
 				setSelectedObjIds={setSelectedFeatIds}
 			/>
 
+			<div className="divider"></div>
+
 			<h4 className="row--left">Selected Feats:</h4>
 			{_.map(values.feats, (featId) => {
 				const feat = {id: featId, ...feats[featId]}
 				return (
-					<div className="row--left" key={featId}>
+					<div className="form-group--80" key={featId}>
 						<button
 							className="button--link"
 							type="button"
@@ -53,7 +56,7 @@ const CreatorFormPage4 = ({
 							{feat.name}
 						</button>
 									
-						<button type="button" onClick={() => setSelectedFeatIds(_.without(selectedFeatIds, featId))}>x</button>
+						<button className="button--secondary" type="button" onClick={() => setSelectedFeatIds(_.without(selectedFeatIds, featId))}>x</button>
 					</div>
 				)
 			})}
@@ -63,7 +66,7 @@ const CreatorFormPage4 = ({
 				handleCloseModal={() => setSelected(undefined)}
 			/>
 
-			<ErrorMessage className="row--left" name="feats" component="div" />
+			<ErrorMessage className="row--left form__error" name="feats" component="div" />
 		</div>
 	)
 }

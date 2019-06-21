@@ -1,8 +1,11 @@
 header {
     background: $dark-grey;
+    position: fixed;
+    top: 0;
+    height: 8vh;
+    width: -webkit-fill-available;
     padding: $s-size 0;
-    grid-area: header;
-    max-height: 10vh;
+    box-shadow: 0 0 5px $light-grey;
 }
 
 .header__content {
@@ -19,7 +22,7 @@ header {
 .header__title {
     margin: 0;
     @media(max-width: 576px) {
-      font-size: $font-size-large;
+      font-size: $font-size-l;
     }
 }
 

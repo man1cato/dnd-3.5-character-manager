@@ -23,7 +23,7 @@ export class CharacterSelectionPage extends React.Component {
 
    render() {
       return (
-         <div className="layout">
+         <div >
             <Header pageTitle="Character Selection" />
 
             <div className="container container--body">

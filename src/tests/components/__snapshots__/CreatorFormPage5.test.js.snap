@@ -5,7 +5,7 @@ exports[`should correctly render CreatorFormPage5 1`] = `
   <h3
     className="row--center"
   >
-    Equipment
+    Select Equipment
   </h3>
   <Selector
     Content={[Function]}
@@ -1334,6 +1334,9 @@ exports[`should correctly render CreatorFormPage5 1`] = `
     selectedObjIds={Array []}
     setSelectedObjIds={[Function]}
   />
+  <div
+    className="divider"
+  />
   <h4
     className="row--left"
   >
@@ -1347,7 +1350,7 @@ exports[`should correctly render CreatorFormPage5 1`] = `
     handleEquip={[Function]}
   />
   <FormikConnect(ErrorMessageImpl)
-    className="row--left"
+    className="row--left form__error"
     component="div"
     name="equipment"
   />

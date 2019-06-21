@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 
 export const UnderConstructionPage = () => (
-   <div className="layout">
+   <div >
       <Header pageTitle="Under Construction" />
       <div className="container container--body">
 

@@ -16,38 +16,36 @@ const FooterIcon = ({svgFile}) => (
 )
 
 export const Footer = ({profile}) => (
-	<footer>
-		<div className="container footer__navbar">
-
-			<Link to="/profile" className="footer__navbar__icon">
+	<footer className="footer--navbar">
+		<div className="container footer--navbar__content" >
+			<Link to="/profile" >
 				<FooterIcon svgFile={profileSVG} />
 			</Link>
 
-			<Link to={profile.attacks ? "/stats" : "/underconstruction"} className="footer__navbar__icon">
+			<Link to={profile.attacks ? "/stats" : "/underconstruction"} >
 				<FooterIcon svgFile={statsSVG} />
 			</Link>
 
-			<Link to={profile.attacks ? "/combat" : "/underconstruction"} className="footer__navbar__icon">
+			<Link to={profile.attacks ? "/combat" : "/underconstruction"} >
 				<FooterIcon svgFile={combatSVG} />
 			</Link>
 
-			<Link to={profile.equipment ? "/equipment" : "/underconstruction"} className="footer__navbar__icon">
+			<Link to={profile.equipment ? "/equipment" : "/underconstruction"} >
 				<FooterIcon svgFile={equipmentSVG} />
 			</Link>
 
 			
 			{profile.spellbook && 
-				<Link to="/spellbook" className="footer__navbar__icon">
+				<Link to="/spellbook" >
 					<FooterIcon svgFile={spellbookSVG} />
 				</Link>
 			}
 
 			{profile.companion && 
-				<Link to="/companion" className="footer__navbar__icon">
+				<Link to="/companion" >
 					<FooterIcon svgFile={companionSVG} />
 				</Link>
 			}
-
 		</div>
 	</footer>
 )

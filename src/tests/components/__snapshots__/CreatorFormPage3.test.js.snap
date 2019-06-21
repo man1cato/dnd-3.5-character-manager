@@ -39,7 +39,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </h4>
     <FormikConnect(FieldInner)
-      className="grid__col2"
+      className="grid__col2 text-input"
       id="strInput"
       name="abilities.str.score"
       onChange={[Function]}
@@ -54,7 +54,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4"
+      className="grid__col-span4 form__error"
       component="div"
       name="abilities.str.score"
     />
@@ -67,7 +67,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </h4>
     <FormikConnect(FieldInner)
-      className="grid__col2"
+      className="grid__col2 text-input"
       id="dexInput"
       name="abilities.dex.score"
       onChange={[Function]}
@@ -82,7 +82,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4"
+      className="grid__col-span4 form__error"
       component="div"
       name="abilities.dex.score"
     />
@@ -95,7 +95,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </h4>
     <FormikConnect(FieldInner)
-      className="grid__col2"
+      className="grid__col2 text-input"
       id="conInput"
       name="abilities.con.score"
       onChange={[Function]}
@@ -110,7 +110,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4"
+      className="grid__col-span4 form__error"
       component="div"
       name="abilities.con.score"
     />
@@ -123,7 +123,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </h4>
     <FormikConnect(FieldInner)
-      className="grid__col2"
+      className="grid__col2 text-input"
       id="intInput"
       name="abilities.int.score"
       onChange={[Function]}
@@ -138,7 +138,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4"
+      className="grid__col-span4 form__error"
       component="div"
       name="abilities.int.score"
     />
@@ -151,7 +151,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </h4>
     <FormikConnect(FieldInner)
-      className="grid__col2"
+      className="grid__col2 text-input"
       id="wisInput"
       name="abilities.wis.score"
       onChange={[Function]}
@@ -166,7 +166,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4"
+      className="grid__col-span4 form__error"
       component="div"
       name="abilities.wis.score"
     />
@@ -179,7 +179,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </h4>
     <FormikConnect(FieldInner)
-      className="grid__col2"
+      className="grid__col2 text-input"
       id="chaInput"
       name="abilities.cha.score"
       onChange={[Function]}
@@ -194,7 +194,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4"
+      className="grid__col-span4 form__error"
       component="div"
       name="abilities.cha.score"
     />
@@ -203,6 +203,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
     className="row--center"
   >
     <button
+      className="button--secondary"
       id="abilitiesRollButton"
       onClick={[Function]}
       type="button"

@@ -94,7 +94,7 @@ export class SpellbookPage extends React.Component {
 	
 	render() {
 		return (
-			<div className="layout">
+			<div >
 				<Header pageTitle="Spellbook" />
 				<SpellModal 
 					selected={this.state.selected}

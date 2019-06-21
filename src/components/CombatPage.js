@@ -81,7 +81,7 @@ export class CombatPage extends React.Component {
 
 	render () {
 		return (
-			<div className="layout">
+			<div >
 				<Header pageTitle="Combat" />
 				<div className="container container--body">
 					<div className="section">

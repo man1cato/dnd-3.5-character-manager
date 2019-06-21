@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CreatorFormPage2 1`] = `
-<div>
+<Fragment>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30"
   >
     <h4>
       Alignment:
     </h4>
     <FormikConnect(FieldInner)
+      className="select"
       component="select"
       name="alignment"
       onChange={[Function]}
@@ -70,12 +71,13 @@ exports[`should render CreatorFormPage2 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30"
   >
     <h4>
       Job Class:
     </h4>
     <FormikConnect(FieldInner)
+      className="select"
       component="select"
       name="jobClass"
       onChange={[Function]}
@@ -149,7 +151,7 @@ exports[`should render CreatorFormPage2 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Hit Die:
@@ -159,7 +161,7 @@ exports[`should render CreatorFormPage2 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30 align-top"
   >
     <h4>
       Proficiencies:
@@ -169,12 +171,13 @@ exports[`should render CreatorFormPage2 1`] = `
     </div>
   </div>
   <div
-    className="form__group form__content--tall"
+    className="form-group--30 align-top"
   >
     <h4>
       Choose Bonus Languages:
     </h4>
     <FormikConnect(FieldInner)
+      className="multi-select"
       component="select"
       multiple={true}
       name="bonusLanguages"
@@ -219,15 +222,16 @@ exports[`should render CreatorFormPage2 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form__group form__content--flex"
+    className="form-group--30"
   >
     <h4>
       Deity:
     </h4>
     <FormikConnect(FieldInner)
+      className="text-input"
       name="deity"
       placeholder="(Optional) Enter the name of a Deity"
     />
   </div>
-</div>
+</Fragment>
 `;

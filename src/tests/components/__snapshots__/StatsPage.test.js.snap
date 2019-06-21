@@ -87,9 +87,7 @@ exports[`should render stats page with profile data 1`] = `
           startEditProfile={[Function]}
           xp={10000}
         >
-          <div
-            className="layout"
-          >
+          <div>
             <Connect(Header)
               pageTitle="Character Stats"
             >
@@ -240,229 +238,233 @@ exports[`should render stats page with profile data 1`] = `
                   5000
                 </span>
               </div>
-              <Abilities
-                abilities={
-                  Object {
-                    "cha": Object {
-                      "score": 11,
-                    },
-                    "con": Object {
-                      "score": 16,
-                    },
-                    "dex": Object {
-                      "score": 18,
-                    },
-                    "int": Object {
-                      "score": 20,
-                    },
-                    "str": Object {
-                      "score": 14,
-                    },
-                    "wis": Object {
-                      "score": 14,
-                    },
-                  }
-                }
-                handleChange={[Function]}
+              <div
+                className="section"
               >
-                <div
-                  className="grid grid--abilities"
+                <Abilities
+                  abilities={
+                    Object {
+                      "cha": Object {
+                        "score": 11,
+                      },
+                      "con": Object {
+                        "score": 16,
+                      },
+                      "dex": Object {
+                        "score": 18,
+                      },
+                      "int": Object {
+                        "score": 20,
+                      },
+                      "str": Object {
+                        "score": 14,
+                      },
+                      "wis": Object {
+                        "score": 14,
+                      },
+                    }
+                  }
+                  handleChange={[Function]}
                 >
-                  <h5
-                    className="grid__col1"
-                  >
-                    Ability
-                  </h5>
                   <div
-                    className="grid__col1"
-                    key="ability0"
+                    className="grid grid--abilities"
                   >
-                    STR
+                    <h5
+                      className="grid__col1"
+                    >
+                      Ability
+                    </h5>
+                    <div
+                      className="grid__col1"
+                      key="ability0"
+                    >
+                      STR
+                    </div>
+                    <div
+                      className="grid__col1"
+                      key="ability1"
+                    >
+                      DEX
+                    </div>
+                    <div
+                      className="grid__col1"
+                      key="ability2"
+                    >
+                      CON
+                    </div>
+                    <div
+                      className="grid__col1"
+                      key="ability3"
+                    >
+                      INT
+                    </div>
+                    <div
+                      className="grid__col1"
+                      key="ability4"
+                    >
+                      WIS
+                    </div>
+                    <div
+                      className="grid__col1"
+                      key="ability5"
+                    >
+                      CHA
+                    </div>
+                    <h5
+                      className="grid__col2"
+                    >
+                      Score
+                    </h5>
+                    <div
+                      className="grid__col2"
+                      key="score0"
+                    >
+                      14
+                    </div>
+                    <div
+                      className="grid__col2"
+                      key="score1"
+                    >
+                      18
+                    </div>
+                    <div
+                      className="grid__col2"
+                      key="score2"
+                    >
+                      16
+                    </div>
+                    <div
+                      className="grid__col2"
+                      key="score3"
+                    >
+                      20
+                    </div>
+                    <div
+                      className="grid__col2"
+                      key="score4"
+                    >
+                      14
+                    </div>
+                    <div
+                      className="grid__col2"
+                      key="score5"
+                    >
+                      11
+                    </div>
+                    <h5
+                      className="grid__col3"
+                    >
+                      Mod
+                    </h5>
+                    <div
+                      className="grid__col3"
+                      key="mod0"
+                    />
+                    <div
+                      className="grid__col3"
+                      key="mod1"
+                    />
+                    <div
+                      className="grid__col3"
+                      key="mod2"
+                    />
+                    <div
+                      className="grid__col3"
+                      key="mod3"
+                    />
+                    <div
+                      className="grid__col3"
+                      key="mod4"
+                    />
+                    <div
+                      className="grid__col3"
+                      key="mod5"
+                    />
+                    <h5
+                      className="grid__col4"
+                    >
+                      Temp Score
+                    </h5>
+                    <input
+                      className="grid__col4"
+                      id="str"
+                      key="tempScore0"
+                      name="abilities"
+                      onChange={[Function]}
+                      type="text"
+                    />
+                    <input
+                      className="grid__col4"
+                      id="dex"
+                      key="tempScore1"
+                      name="abilities"
+                      onChange={[Function]}
+                      type="text"
+                    />
+                    <input
+                      className="grid__col4"
+                      id="con"
+                      key="tempScore2"
+                      name="abilities"
+                      onChange={[Function]}
+                      type="text"
+                    />
+                    <input
+                      className="grid__col4"
+                      id="int"
+                      key="tempScore3"
+                      name="abilities"
+                      onChange={[Function]}
+                      type="text"
+                    />
+                    <input
+                      className="grid__col4"
+                      id="wis"
+                      key="tempScore4"
+                      name="abilities"
+                      onChange={[Function]}
+                      type="text"
+                    />
+                    <input
+                      className="grid__col4"
+                      id="cha"
+                      key="tempScore5"
+                      name="abilities"
+                      onChange={[Function]}
+                      type="text"
+                    />
+                    <h5
+                      className="grid__col5"
+                    >
+                      Temp Mod
+                    </h5>
+                    <div
+                      className="grid__col5"
+                      key="tempMod0"
+                    />
+                    <div
+                      className="grid__col5"
+                      key="tempMod1"
+                    />
+                    <div
+                      className="grid__col5"
+                      key="tempMod2"
+                    />
+                    <div
+                      className="grid__col5"
+                      key="tempMod3"
+                    />
+                    <div
+                      className="grid__col5"
+                      key="tempMod4"
+                    />
+                    <div
+                      className="grid__col5"
+                      key="tempMod5"
+                    />
                   </div>
-                  <div
-                    className="grid__col1"
-                    key="ability1"
-                  >
-                    DEX
-                  </div>
-                  <div
-                    className="grid__col1"
-                    key="ability2"
-                  >
-                    CON
-                  </div>
-                  <div
-                    className="grid__col1"
-                    key="ability3"
-                  >
-                    INT
-                  </div>
-                  <div
-                    className="grid__col1"
-                    key="ability4"
-                  >
-                    WIS
-                  </div>
-                  <div
-                    className="grid__col1"
-                    key="ability5"
-                  >
-                    CHA
-                  </div>
-                  <h5
-                    className="grid__col2"
-                  >
-                    Score
-                  </h5>
-                  <div
-                    className="grid__col2"
-                    key="score0"
-                  >
-                    14
-                  </div>
-                  <div
-                    className="grid__col2"
-                    key="score1"
-                  >
-                    18
-                  </div>
-                  <div
-                    className="grid__col2"
-                    key="score2"
-                  >
-                    16
-                  </div>
-                  <div
-                    className="grid__col2"
-                    key="score3"
-                  >
-                    20
-                  </div>
-                  <div
-                    className="grid__col2"
-                    key="score4"
-                  >
-                    14
-                  </div>
-                  <div
-                    className="grid__col2"
-                    key="score5"
-                  >
-                    11
-                  </div>
-                  <h5
-                    className="grid__col3"
-                  >
-                    Mod
-                  </h5>
-                  <div
-                    className="grid__col3"
-                    key="mod0"
-                  />
-                  <div
-                    className="grid__col3"
-                    key="mod1"
-                  />
-                  <div
-                    className="grid__col3"
-                    key="mod2"
-                  />
-                  <div
-                    className="grid__col3"
-                    key="mod3"
-                  />
-                  <div
-                    className="grid__col3"
-                    key="mod4"
-                  />
-                  <div
-                    className="grid__col3"
-                    key="mod5"
-                  />
-                  <h5
-                    className="grid__col4"
-                  >
-                    Temp Score
-                  </h5>
-                  <input
-                    className="grid__col4"
-                    id="str"
-                    key="tempScore0"
-                    name="abilities"
-                    onChange={[Function]}
-                    type="text"
-                  />
-                  <input
-                    className="grid__col4"
-                    id="dex"
-                    key="tempScore1"
-                    name="abilities"
-                    onChange={[Function]}
-                    type="text"
-                  />
-                  <input
-                    className="grid__col4"
-                    id="con"
-                    key="tempScore2"
-                    name="abilities"
-                    onChange={[Function]}
-                    type="text"
-                  />
-                  <input
-                    className="grid__col4"
-                    id="int"
-                    key="tempScore3"
-                    name="abilities"
-                    onChange={[Function]}
-                    type="text"
-                  />
-                  <input
-                    className="grid__col4"
-                    id="wis"
-                    key="tempScore4"
-                    name="abilities"
-                    onChange={[Function]}
-                    type="text"
-                  />
-                  <input
-                    className="grid__col4"
-                    id="cha"
-                    key="tempScore5"
-                    name="abilities"
-                    onChange={[Function]}
-                    type="text"
-                  />
-                  <h5
-                    className="grid__col5"
-                  >
-                    Temp Mod
-                  </h5>
-                  <div
-                    className="grid__col5"
-                    key="tempMod0"
-                  />
-                  <div
-                    className="grid__col5"
-                    key="tempMod1"
-                  />
-                  <div
-                    className="grid__col5"
-                    key="tempMod2"
-                  />
-                  <div
-                    className="grid__col5"
-                    key="tempMod3"
-                  />
-                  <div
-                    className="grid__col5"
-                    key="tempMod4"
-                  />
-                  <div
-                    className="grid__col5"
-                    key="tempMod5"
-                  />
-                </div>
-              </Abilities>
+                </Abilities>
+              </div>
               <Connect(SkillSet)
                 skillSet={
                   Array [
@@ -1339,16 +1341,16 @@ exports[`should render stats page with profile data 1`] = `
                   }
                 }
               >
-                <footer>
+                <footer
+                  className="footer--navbar"
+                >
                   <div
-                    className="container footer__navbar"
+                    className="container footer--navbar__content"
                   >
                     <Link
-                      className="footer__navbar__icon"
                       to="/profile"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/profile"
                         onClick={[Function]}
                       >
@@ -1378,11 +1380,9 @@ exports[`should render stats page with profile data 1`] = `
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/stats"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/stats"
                         onClick={[Function]}
                       >
@@ -1412,11 +1412,9 @@ exports[`should render stats page with profile data 1`] = `
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/combat"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/combat"
                         onClick={[Function]}
                       >
@@ -1446,11 +1444,9 @@ exports[`should render stats page with profile data 1`] = `
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/equipment"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/equipment"
                         onClick={[Function]}
                       >
@@ -1480,11 +1476,9 @@ exports[`should render stats page with profile data 1`] = `
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/spellbook"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/spellbook"
                         onClick={[Function]}
                       >
@@ -1514,11 +1508,9 @@ exports[`should render stats page with profile data 1`] = `
                       </a>
                     </Link>
                     <Link
-                      className="footer__navbar__icon"
                       to="/companion"
                     >
                       <a
-                        className="footer__navbar__icon"
                         href="/companion"
                         onClick={[Function]}
                       >

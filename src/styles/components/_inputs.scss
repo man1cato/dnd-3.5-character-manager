@@ -1,9 +1,9 @@
 .text-input {
     border: 1px solid #cacccd;
-    // height: $l-size;
-    font-size: $font-size-large;
     font-weight: 300;
+    min-width: 50px;
     padding: $s-size;
+    width: -webkit-fill-available;
 }
 
 .select {
@@ -17,6 +17,8 @@
 
 .multi-select {
     @extend .text-input;
-    max-height: 20rem;
     height: min-content; 
+    @media(min-width: $desktop-breakpoint) {
+        max-height: 25rem;
+    }
 }
