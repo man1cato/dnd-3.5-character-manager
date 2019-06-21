@@ -30,23 +30,21 @@ const Selector = ({
 	return (
 		<div>
 			<div className="form-group--70">
-				<div>
-					<select 
-						className="select"
-						name={fieldName} 
-						value={selectedObjId} 
-						onChange={(e) => setSelectedObjId(e.target.value)}
-					>
-						{_.map(availableObjIds, (objId, i) => (
-							<option 
-								value={objId} 
-								key={fieldName + i}
-							>
-								{apiObject[objId].name}
-							</option>
-						))}
-					</select> 
-				</div>
+				<select 
+					className="select"
+					name={fieldName} 
+					value={selectedObjId} 
+					onChange={(e) => setSelectedObjId(e.target.value)}
+				>
+					{_.map(availableObjIds, (objId, i) => (
+						<option 
+							value={objId} 
+							key={fieldName + i}
+						>
+							{apiObject[objId].name}
+						</option>
+					))}
+				</select> 
 				
 				<button 
 					className="button--secondary"

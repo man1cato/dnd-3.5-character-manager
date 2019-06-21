@@ -59,20 +59,20 @@ const CreatorFormPage5 = ({
 
 	const Content = ({selected}) => (
 		<div>
-			<div className="form-group--30"><b>Category:</b> <div>{selected.category}</div></div>
+			<div className="form-group--35"><b>Category:</b> <div>{selected.category}</div></div>
 
 			{selected.weaponType && (
 				<>
-					<div className="form-group--30"><b>Type:</b> <div>{selected.weaponType} / {selected.encumbrance} / {selected.damageType}</div></div>
-					<div className="form-group--30"><b>Range:</b> <div>{selected.range}</div></div>
-					<div className="form-group--30"><b>Damage (M):</b> <div>{selected.damageM}</div></div>
-					<div className="form-group--30"><b>Damage (S):</b> <div>{selected.damageS}</div></div>
-					<div className="form-group--30"><b>Critical:</b> <div>{selected.critical}</div></div>
+					<div className="form-group--35"><b>Type:</b> <div>{selected.weaponType} / {selected.encumbrance} / {selected.damageType}</div></div>
+					<div className="form-group--35"><b>Range:</b> <div>{selected.range}</div></div>
+					<div className="form-group--35"><b>Damage (M):</b> <div>{selected.damageM}</div></div>
+					<div className="form-group--35"><b>Damage (S):</b> <div>{selected.damageS}</div></div>
+					<div className="form-group--35"><b>Critical:</b> <div>{selected.critical}</div></div>
 				</>
 			)}
 
-			<div className="form-group--30"><b>Value:</b> <div>{selected.value} gp</div></div>
-			<div className="form-group--30"><b>Weight:</b> <div>{selected.weight} lbs</div></div>
+			<div className="form-group--35"><b>Value:</b> <div>{selected.value} gp</div></div>
+			<div className="form-group--35"><b>Weight:</b> <div>{selected.weight} lbs</div></div>
 		</div>
 	)
 	
@@ -91,7 +91,12 @@ const CreatorFormPage5 = ({
 			<div className="divider"></div>
 
 			<h4 className="row--left">Selected Equipment:</h4>
-			<div className="grid grid--items">
+			<div className="form-grid">
+				<h5 className="grid__col1">Item</h5>
+				<h5>Qty</h5>
+				<div></div>
+				<div></div>
+
 				{_.map(values.equipment, (item) => {
 					const id = item.id
 					item = { id, ...items[id] }

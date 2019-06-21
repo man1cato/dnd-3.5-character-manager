@@ -10,19 +10,19 @@ const CreatorFormFooter = ({
 	isSubmitting, 
 	isValid
 }) => (
-	<footer className="footer">
-		<div className="container footer__form">
+	<footer className="footer--form">
+		<div className="container footer--form__content">
 			{page !== 1 && (
-				<button className="button--secondary" type="button" id="backButton" onClick={() => handleBack(setErrors)}>   
+				<button className="button--secondary button--form-nav" type="button" id="backButton" onClick={() => handleBack(setErrors)}>   
 					Back
 				</button>
 			)}
 			{page === pages.length ? (
-				<button className="button" type="submit" id="submitButton" disabled={isSubmitting || !isValid} onClick={handleSubmit}>   
+				<button className="button--form-nav" type="submit" id="submitButton" disabled={isSubmitting || !isValid} onClick={handleSubmit}>   
 					Create Character
 				</button>
 			) : (                                        
-				<button className="button" type="button" id="nextButton" disabled={!isValid} onClick={() => handleNext()}>   
+					<button className="button--form-nav" type="button" id="nextButton" disabled={!isValid} onClick={() => handleNext()}>   
 					Next
 				</button>
 			)}

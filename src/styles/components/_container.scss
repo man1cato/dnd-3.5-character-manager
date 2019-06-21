@@ -7,9 +7,8 @@
 }
 
 .container--body {
-  position: relative;
-  top: 8vh;
-  height: 82vh;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
   padding-top: $m-size;
   padding-bottom: $m-size;
   overflow: auto;

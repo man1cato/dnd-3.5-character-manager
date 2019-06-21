@@ -2,7 +2,9 @@
     position: fixed;
     bottom: 0px;
     height: 10vh;
+    min-height: 40px;
     width: -webkit-fill-available;
+    background: white;
     box-shadow: 0 0 5px $light-grey;
     padding: $m-size 0;
 }
@@ -30,7 +32,12 @@
     }
 }
 
-.footer__form {
+.footer--form {
+    @extend .footer;
+    padding: $s-size 0;
+}
+
+.footer--form__content {
     display: flex;
     justify-content: space-between;
     > * {

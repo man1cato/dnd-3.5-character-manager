@@ -1,10 +1,12 @@
 .button {
     background: $blue;
     color: white;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: -webkit-fill-available;
-    font-size: $font-size-l;
     font-weight: 300;
+    font-size: 120%;
     text-decoration: none;
     border: none;
     padding: $s-size;
@@ -19,6 +21,8 @@
     padding: 0 $xs-size 0 0;
     text-align: left;
     width: auto;
+    font-size: $font-size-l;
+    display: inline-block;
 }
 
 .button--secondary {
@@ -26,11 +30,20 @@
     background: $grey;
 }
 
+.button--form-nav {
+    @extend .button;
+    padding: $xs-size $s-size;
+    white-space: nowrap;
+}
+
 .button-profile {
     display: flex;
     width: 100%;
     padding: $s-size;
     margin-top: $m-size;
+    background: $off-white;
+    border: 1px solid $light-grey;
+    border-radius: $s-size;
     > img {
         width: 30%;
         max-width: 130px;
@@ -41,4 +54,8 @@
         text-align: left;
         line-height: 2rem;
     }
+}
+
+button.button-profile:hover {
+    box-shadow: 0 0 5px $light-grey;
 }

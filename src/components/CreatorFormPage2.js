@@ -31,7 +31,7 @@ const CreatorFormPage2 = ({
 	validateForm
 }) => (
 	<>
-		<div className="form-group--30">
+		<div className="form-group--35">
 			<h4>Alignment:</h4>
 			{selectedJobClass.name === "Paladin" ?
 				<div>Lawful Good</div>
@@ -54,7 +54,7 @@ const CreatorFormPage2 = ({
 			}
 		</div>
 
-		<div className="form-group--30">
+		<div className="form-group--35">
 			<h4>Job Class:</h4>
 			<Field 
 				className="select" 
@@ -73,18 +73,18 @@ const CreatorFormPage2 = ({
 			</Field>                                    
 		</div>
 
-		<div className="form-group--30 align-top">
+		<div className="form-group--35 align-top">
 			<h4>Hit Die:</h4>
 			<div>{selectedJobClass.hitDie}</div>
 		</div>
 
-		<div className="form-group--30 align-top">
+		<div className="form-group--35 align-top">
 			<h4>Proficiencies:</h4>
 			<div>{selectedJobClass.proficiencies.join(", ")}</div>
 		</div>
 
-		<div className="form-group--30 align-top">
-			<h4>Choose Bonus Languages:</h4>
+		<div className="form-group--35 align-top">
+			<h4>Bonus Languages:</h4>
 			<Field 
 				className="multi-select" 
 				name="bonusLanguages" 
@@ -103,7 +103,7 @@ const CreatorFormPage2 = ({
 			</Field>                                    
 		</div>
 
-		<div className="form-group--30">
+		<div className="form-group--35">
 			<h4>Deity:</h4>
 			<Field 
 				className="text-input" 
@@ -113,7 +113,7 @@ const CreatorFormPage2 = ({
 		</div>
 		
 		{selectedJobClass.name === 'Wizard' && (
-			<div className="form-group--30">
+			<div className="form-group--35">
 				<h4>School:</h4>
 				<Field 
 					className="select" 
@@ -135,7 +135,7 @@ const CreatorFormPage2 = ({
 
 		{selectedJobClass.name === 'Wizard' && values.school !== 'Universal' && (
 			<>
-				<div className="form-group--30 align-top">
+				<div className="form-group--35 align-top">
 					<h4>Choose Prohibited School(s):</h4>
 					<Field 
 						className="multi-select"
