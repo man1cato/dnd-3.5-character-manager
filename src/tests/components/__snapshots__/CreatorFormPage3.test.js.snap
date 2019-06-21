@@ -8,7 +8,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
     Ability Scores
   </h3>
   <div
-    className="grid grid--abilities-set"
+    className="section grid grid--abilities-set"
   >
     <h5
       className="grid__col1"

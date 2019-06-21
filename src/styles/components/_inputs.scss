@@ -1,7 +1,7 @@
 .text-input {
     border: 1px solid #cacccd;
-    height: 50px;
-    font-size: font-size-large;
+    // height: $l-size;
+    font-size: $font-size-large;
     font-weight: 300;
     padding: $s-size;
 }
@@ -10,7 +10,13 @@
     @extend .text-input;
 }
 
-.textarea {
+.text-area {
     @extend .text-input;
     height: 10rem;
+}
+
+.multi-select {
+    @extend .text-input;
+    max-height: 20rem;
+    height: min-content; 
 }

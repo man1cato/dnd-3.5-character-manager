@@ -21,7 +21,7 @@ const CreatorFormPage3 = ({
 		<div>
 			<h3 className="row--center">Ability Scores</h3>
 
-			<div className="grid grid--abilities-set">
+			<div className="section grid grid--abilities-set">
 				<h5 className="grid__col1">Ability</h5>
 				<h5 className="grid__col2">Score</h5>
 				<h5 className="grid__col3">Race Mod</h5>

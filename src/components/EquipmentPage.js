@@ -110,7 +110,6 @@ export class EquipmentPage extends React.Component {
 		const category = e.target.name
 		this.setState((prevState) => {
 			const alreadyEquipped = _.includes(prevState.equipped[category], id) 
-			console.log('alreadyEquipped', alreadyEquipped)
 			if(category === 'weapons') {
 				const weapons = alreadyEquipped ? _.without(prevState.equipped.weapons, id) : [...prevState.equipped.weapons, id]
 				return {

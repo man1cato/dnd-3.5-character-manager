@@ -9,6 +9,7 @@ import Page1 from './CreatorFormPage1'
 import Page2 from './CreatorFormPage2'
 import Page3 from './CreatorFormPage3'
 import Page4 from './CreatorFormPage4'
+import Page5 from './CreatorFormPage5'
 import CreatorFormFooter from './CreatorFormFooter'
 import { history } from '../routers/AppRouter'
 import { startCreateProfile } from '../actions/profile'
@@ -16,7 +17,7 @@ import { apiObjectToArray } from '../utils/utils'
 import { abilities } from '../utils/staticData'
 
 
-const pages = [Page1, Page2, Page3, Page4]
+const pages = [Page1, Page2, Page3, Page4, Page5]
 
 const abilityMessage = 'Enter an integer between 3 and 18'
 const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError(' ')
@@ -41,6 +42,9 @@ const validationSchema = Yup.object().shape({
 	}),
 	page4: Yup.object().shape({
 		feats: Yup.array().required('Select at least one feat')
+	}),
+	page5: Yup.object().shape({
+		equipment: Yup.array().required('Select at least one equipment')
 	})
 })
 
@@ -128,7 +132,13 @@ export class CharacterCreationPage extends React.Component {
 						bonusLanguages: [],
 						deity: '',
 						abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
-						feats: []
+						feats: [],
+						equipment: [],
+						equipped: {
+							armor: null,
+							shield: null,
+							weapons: []
+						}
 					}}
 												
 					validationSchema={Yup.reach(validationSchema, `page${this.state.page}`)}
@@ -144,10 +154,12 @@ export class CharacterCreationPage extends React.Component {
 							alignment: values.alignment,
 							jobClass: this.state.selectedJobClass.id,
 							languages: _.orderBy(this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages)),
-							abilities: _.mapValues(values.abilities, (ability) => ({score: ability.final})),
 							specialAbilities: this.state.selectedJobClass.levels["1"].specialAbilities,
-							feats: values.feats,
 							deity: !!values.deity ? values.deity : "None",
+							abilities: _.mapValues(values.abilities, (ability) => ({score: ability.final})),
+							feats: values.feats,
+							equipment: values.equipment,
+							equipped: values.equipped,
 							level: 1,
 							xp: 0,
 							iconUrl: this.state.selectedRace.iconUrl
@@ -200,11 +212,14 @@ export class CharacterCreationPage extends React.Component {
 										values={values}
 										feats={this.props.feats}
 										selectedJobClass={this.state.selectedJobClass}
-										handleChange={handleChange}
-										handleSelect={this.handleSelect}
-										handleMultiSelect={this.handleMultiSelect}
 										setFieldValue={setFieldValue}
-										setFieldError={setFieldError}
+										validateForm={validateForm}
+									/>,
+									5: <Page5
+										values={values}
+										items={this.props.items}
+										selectedJobClass={this.state.selectedJobClass}
+										setFieldValue={setFieldValue}
 										validateForm={validateForm}
 									/>
 								}[this.state.page]}
@@ -235,7 +250,8 @@ export class CharacterCreationPage extends React.Component {
 const mapStateToProps = (state) => ({
 	races: apiObjectToArray(state.races),
 	jobClasses: apiObjectToArray(state.jobClasses),
-	feats: _.omitBy(state.feats, (feat) => !!feat.prerequisites || _.includes(feat.types, 'Epic'))
+	feats: _.omitBy(state.feats, (feat) => feat.prerequisites || _.includes(feat.types, 'Epic')),
+	items: _.omitBy(state.items, (item) => item.weaponType === 'Natural' || item.category === 'Creature Part')
 })
 
 const mapDispatchToProps = (dispatch, props) => ({

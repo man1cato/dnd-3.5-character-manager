@@ -2,9 +2,9 @@
     background: $blue;
     color: white;
     display: inline-block;
-    font-size: $m-size;
+    font-size: $font-size-large;
     font-weight: 300;
-    line-height: 1;
+    line-height: 1rem;
     margin: 0;
     padding: $s-size;
     border: none;
@@ -12,15 +12,17 @@
 }
 
 .button--link {
+    @extend .button;
     background: none;
-    border: none;
+    color: $dark-grey;
     text-decoration: underline;
     padding: 0 $xs-size 0 0;
     text-align: left;
 }
 
 .button--secondary {
-    background: #888888;
+    @extend .button;
+    background: $light-grey;
 }
 
 .button-profile {

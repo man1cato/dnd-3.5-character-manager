@@ -7,7 +7,7 @@ exports[`should render ItemModal 1`] = `
   className="modal"
   closeTimeoutMS={0}
   contentLabel="Selected Item"
-  isOpen={true}
+  isOpen={false}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   role="dialog"
@@ -15,55 +15,5 @@ exports[`should render ItemModal 1`] = `
   shouldCloseOnOverlayClick={true}
   shouldFocusAfterRender={true}
   shouldReturnFocusAfterClose={true}
->
-  <div>
-    <h4>
-      Quarterstaff
-    </h4>
-    <h5>
-      Weapon
-    </h5>
-    <div>
-      <p>
-        Type: 
-        Simple
-         / 
-        Two-Handed
-         / 
-        Bludgeoning
-      </p>
-      <p>
-        Range: 
-        —
-      </p>
-      <p>
-        Damage (M): 
-        1d6/1d6
-      </p>
-      <p>
-        Damage (S): 
-        1d4/1d4
-      </p>
-      <p>
-        Critical: 
-        ×2
-      </p>
-    </div>
-    <p>
-      Value: 
-       gp
-    </p>
-    <p>
-      Weight: 
-      4
-       lbs
-    </p>
-    <button
-      name="weapons"
-      onClick={[Function]}
-    >
-      Equip
-    </button>
-  </div>
-</Modal>
+/>
 `;

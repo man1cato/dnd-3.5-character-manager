@@ -21,14 +21,20 @@ input, select, textarea {
   width: -webkit-fill-available;
 }
 
+select {
+  margin-bottom: $m-size;
+}
+
 button {
   cursor: pointer;
 }
 
 button:disabled {
   cursor: default;
+  background: $light-grey;
+  opacity: 0.5;
 }
 
 .is-active {
-    font-weight: bold;
+  font-weight: bold;
 }

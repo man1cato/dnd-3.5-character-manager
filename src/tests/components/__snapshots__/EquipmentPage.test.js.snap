@@ -11,77 +11,81 @@ exports[`should render equipment page with profile data 1`] = `
     className="container container--body"
   >
     <div
-      className="grid grid--money"
+      className="section"
     >
       <div
-        className="grid--money__cell"
-        key="denomination0"
+        className="grid grid--money"
       >
-        <input
-          id="pp"
-          name="money"
-          onChange={[Function]}
-          type="text"
-          value={0}
-        />
-        <div>
-          pp
+        <div
+          className="grid--money__cell"
+          key="denomination0"
+        >
+          <input
+            id="pp"
+            name="money"
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />
+          <div>
+            pp
+          </div>
+        </div>
+        <div
+          className="grid--money__cell"
+          key="denomination1"
+        >
+          <input
+            id="gp"
+            name="money"
+            onChange={[Function]}
+            type="text"
+            value={1200}
+          />
+          <div>
+            gp
+          </div>
+        </div>
+        <div
+          className="grid--money__cell"
+          key="denomination2"
+        >
+          <input
+            id="sp"
+            name="money"
+            onChange={[Function]}
+            type="text"
+            value={350}
+          />
+          <div>
+            sp
+          </div>
+        </div>
+        <div
+          className="grid--money__cell"
+          key="denomination3"
+        >
+          <input
+            id="cp"
+            name="money"
+            onChange={[Function]}
+            type="text"
+            value={80}
+          />
+          <div>
+            cp
+          </div>
         </div>
       </div>
       <div
-        className="grid--money__cell"
-        key="denomination1"
+        className="row--right"
       >
-        <input
-          id="gp"
-          name="money"
-          onChange={[Function]}
-          type="text"
-          value={1200}
-        />
-        <div>
-          gp
-        </div>
+        <h4>
+          Total money: 
+          1235.8
+           gp
+        </h4>
       </div>
-      <div
-        className="grid--money__cell"
-        key="denomination2"
-      >
-        <input
-          id="sp"
-          name="money"
-          onChange={[Function]}
-          type="text"
-          value={350}
-        />
-        <div>
-          sp
-        </div>
-      </div>
-      <div
-        className="grid--money__cell"
-        key="denomination3"
-      >
-        <input
-          id="cp"
-          name="money"
-          onChange={[Function]}
-          type="text"
-          value={80}
-        />
-        <div>
-          cp
-        </div>
-      </div>
-    </div>
-    <div
-      className="row--right"
-    >
-      <h4>
-        Total money: 
-        1235.8
-         gp
-      </h4>
     </div>
     <div
       className="grid grid--items"
