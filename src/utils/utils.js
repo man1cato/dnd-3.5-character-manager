@@ -18,3 +18,13 @@ export const rollDice = (dieFaces = 6, countDice = 1) => {
 	}
 	return total
 }
+
+export const calcAbilityMod = (abilityScore) => Math.floor(abilityScore/2 - 5)
+
+export const calSizeMod = (size) => ({
+	Huge: -2,
+	Large: -1,
+	Medium: 0,
+	Small: 1,
+	TIny: 2
+}[size])

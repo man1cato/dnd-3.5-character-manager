@@ -13,14 +13,14 @@ import Page5 from './CreatorFormPage5'
 import CreatorFormFooter from './CreatorFormFooter'
 import { history } from '../routers/AppRouter'
 import { startCreateProfile } from '../actions/profile'
-import { apiObjectToArray } from '../utils/utils'
+import { apiObjectToArray, calcAbilityMod, calSizeMod } from '../utils/utils'
 import { abilities } from '../utils/staticData'
 
 
 const pages = [Page1, Page2, Page3, Page4, Page5]
 
 const abilityMessage = 'Enter an integer between 3 and 18'
-const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError('')
+const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError(abilityMessage)
 const validationSchema = Yup.object().shape({
 	page1: Yup.object().shape({
 		name: Yup.string().max(30, 'Name is too long!').required('Required'),
@@ -148,6 +148,12 @@ export class CharacterCreationPage extends React.Component {
 					validationSchema={Yup.reach(validationSchema, `page${this.state.page}`)}
 
 					onSubmit={(values, {setErrors, setSubmitting}) => {
+						const abilities = _.mapValues(values.abilities, (ability) => ({ score: ability.final }))
+						const dexMod = calcAbilityMod(abilities.dex.score)
+						let armorBonus = 0
+						if (values.equipped.armor) { armorBonus += this.props.items[values.equipped.armor].armorBonus }
+						if (values.equipped.shield) { armorBonus += this.props.items[values.equipped.shield].armorBonus }
+						const baseArmorClass = 10 + armorBonus + calSizeMod(this.state.selectedRace.size) + dexMod
 						const profile = {
 							name: values.name,
 							gender: values.gender,
@@ -160,10 +166,15 @@ export class CharacterCreationPage extends React.Component {
 							languages: _.orderBy(this.state.selectedRace.defaultLanguages.concat(values.bonusLanguages)),
 							specialAbilities: this.state.selectedJobClass.levels["1"].specialAbilities,
 							deity: !!values.deity ? values.deity : "None",
-							abilities: _.mapValues(values.abilities, (ability) => ({score: ability.final})),
+							abilities,
 							feats: values.feats,
 							equipment: values.equipment,
 							equipped: values.equipped,
+							ac: {
+								base: baseArmorClass,
+								flat: baseArmorClass - dexMod,
+								touch: baseArmorClass - armorBonus
+							},
 							level: 1,
 							xp: 0,
 							iconUrl: this.state.selectedRace.iconUrl

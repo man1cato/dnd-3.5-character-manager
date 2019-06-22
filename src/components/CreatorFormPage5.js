@@ -106,7 +106,7 @@ const CreatorFormPage5 = ({
 								className="button--link grid__col1"
 								type="button"
 								id={id}
-								onClick={() => setSelected(items[id])}
+								onClick={() => setSelected(item)}
 							>
 								{items[id].name}
 							</button>
@@ -139,6 +139,7 @@ const CreatorFormPage5 = ({
 
 			<ItemModal
 				selected={selected}
+				equipped={values.equipped}
 				handleCloseModal={() => setSelected(undefined)}
 				handleEquip={handleEquip}
 			/>
