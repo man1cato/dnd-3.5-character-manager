@@ -8,36 +8,36 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
     Ability Scores
   </h3>
   <div
-    className="section grid grid--abilities-set"
+    className="section form-grid--abilities"
   >
     <h5
-      className="grid__col1"
+      className="grid__col1 form-grid__header"
     >
       Ability
     </h5>
     <h5
-      className="grid__col2"
+      className="grid__col2 form-grid__header"
     >
       Score
     </h5>
     <h5
-      className="grid__col3"
+      className="grid__col3 form-grid__header"
     >
       Race Mod
     </h5>
     <h5
-      className="grid__col4"
+      className="grid__col4 form-grid__header"
     >
       Final
     </h5>
-    <h4
+    <div
       className="grid__col1"
     >
       Strength
        (
       STR
       )
-    </h4>
+    </div>
     <FormikConnect(FieldInner)
       className="grid__col2 text-input"
       id="strInput"
@@ -54,18 +54,18 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4 form__error"
+      className="grid__col-span4 form-group--error"
       component="div"
       name="abilities.str.score"
     />
-    <h4
+    <div
       className="grid__col1"
     >
       Dexterity
        (
       DEX
       )
-    </h4>
+    </div>
     <FormikConnect(FieldInner)
       className="grid__col2 text-input"
       id="dexInput"
@@ -82,18 +82,18 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4 form__error"
+      className="grid__col-span4 form-group--error"
       component="div"
       name="abilities.dex.score"
     />
-    <h4
+    <div
       className="grid__col1"
     >
       Constitution
        (
       CON
       )
-    </h4>
+    </div>
     <FormikConnect(FieldInner)
       className="grid__col2 text-input"
       id="conInput"
@@ -110,18 +110,18 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4 form__error"
+      className="grid__col-span4 form-group--error"
       component="div"
       name="abilities.con.score"
     />
-    <h4
+    <div
       className="grid__col1"
     >
       Intelligence
        (
       INT
       )
-    </h4>
+    </div>
     <FormikConnect(FieldInner)
       className="grid__col2 text-input"
       id="intInput"
@@ -138,18 +138,18 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4 form__error"
+      className="grid__col-span4 form-group--error"
       component="div"
       name="abilities.int.score"
     />
-    <h4
+    <div
       className="grid__col1"
     >
       Wisdom
        (
       WIS
       )
-    </h4>
+    </div>
     <FormikConnect(FieldInner)
       className="grid__col2 text-input"
       id="wisInput"
@@ -166,18 +166,18 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4 form__error"
+      className="grid__col-span4 form-group--error"
       component="div"
       name="abilities.wis.score"
     />
-    <h4
+    <div
       className="grid__col1"
     >
       Charisma
        (
       CHA
       )
-    </h4>
+    </div>
     <FormikConnect(FieldInner)
       className="grid__col2 text-input"
       id="chaInput"
@@ -194,7 +194,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       className="grid__col4"
     />
     <FormikConnect(ErrorMessageImpl)
-      className="grid__col-span4 form__error"
+      className="grid__col-span4 form-group--error"
       component="div"
       name="abilities.cha.score"
     />
@@ -203,7 +203,7 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
     className="row--center"
   >
     <button
-      className="button--secondary"
+      className="button"
       id="abilitiesRollButton"
       onClick={[Function]}
       type="button"

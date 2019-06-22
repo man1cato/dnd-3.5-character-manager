@@ -21,18 +21,18 @@ const CreatorFormPage3 = ({
 		<div>
 			<h3 className="row--center">Ability Scores</h3>
 
-			<div className="section grid grid--abilities-set">
-				<h5 className="grid__col1">Ability</h5>
-				<h5 className="grid__col2">Score</h5>
-				<h5 className="grid__col3">Race Mod</h5>
-				<h5 className="grid__col4">Final</h5>
+			<div className="section form-grid--abilities">
+				<h5 className="grid__col1 form-grid__header">Ability</h5>
+				<h5 className="grid__col2 form-grid__header">Score</h5>
+				<h5 className="grid__col3 form-grid__header">Race Mod</h5>
+				<h5 className="grid__col4 form-grid__header">Final</h5>
 
 				{_.keys(abilities).map((abbr) => {
 					const fieldName = `abilities.${abbr}.score`
 					const raceMod = raceMods[abbr]
 					return (
 						<Fragment key={abbr}>
-							<h4 className="grid__col1">{abilities[abbr]} ({abbr.toUpperCase()})</h4>
+							<div className="grid__col1">{abilities[abbr]} ({abbr.toUpperCase()})</div>
 							<Field 
 								className="grid__col2 text-input"
 								name={fieldName}
@@ -52,7 +52,7 @@ const CreatorFormPage3 = ({
 							/>	
 							<div className="grid__col3">{raceMod}</div>
 							<div className="grid__col4">{values.abilities[abbr].final}</div>					
-							<ErrorMessage className="grid__col-span4 form__error" name={fieldName} component="div" />
+							<ErrorMessage className="grid__col-span4 form-group--error" name={fieldName} component="div" />
 						</Fragment>
 					)
 				})}
@@ -60,7 +60,7 @@ const CreatorFormPage3 = ({
 
 			<div className="row--center">
 				<button
-					className="button--secondary"
+					className="button"
 					id={`abilitiesRollButton`}
 					type='button'
 					onClick={() => {

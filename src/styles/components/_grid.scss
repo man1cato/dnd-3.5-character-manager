@@ -186,23 +186,13 @@
 }
 
 //SPELLS
-.grid--preparedSpells {
+.grid--spells {
   @extend .grid--columns;
   grid-template-columns: 3fr repeat(3, 1fr);
-  grid-column-gap: $s-size;
+  grid-gap: $s-size;
 }
 
-.grid--spellbook {
-  @extend .grid--columns;
-  grid-template-columns: 3fr repeat(4, 1fr);
-  grid-column-gap: $s-size;
-}
-.grid--spellbook__school {
-  @extend .grid__col2;
-  justify-self: start;
-  font-size: $font-size-s;
-}
-.grid--spellbook__attribute {
+.grid--spells__attribute {
   display: flex;
   justify-content: space-between;
   > div {

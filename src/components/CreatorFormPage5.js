@@ -91,7 +91,7 @@ const CreatorFormPage5 = ({
 			<div className="divider"></div>
 
 			<h4 className="row--left">Selected Equipment:</h4>
-			<div className="form-grid">
+			<div className="form-grid--equipment">
 				<h5 className="grid__col1">Item</h5>
 				<h5>Qty</h5>
 				<div></div>
@@ -126,7 +126,7 @@ const CreatorFormPage5 = ({
 							/>
 							
 							<button 
-								className="grid__col4 button--secondary"
+								className="grid__col4 button"
 								type="button" 
 								onClick={() => setSelectedItemIds(_.without(selectedItemIds, id))}
 							>
@@ -143,7 +143,7 @@ const CreatorFormPage5 = ({
 				handleEquip={handleEquip}
 			/>
 
-			<ErrorMessage className="row--left form__error" name="equipment" component="div" />
+			<ErrorMessage className="row--left form-group--error" name="equipment" component="div" />
 		</div>
 	)
 }

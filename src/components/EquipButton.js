@@ -6,7 +6,7 @@ const EquipButton = ({ item, equipped, handleEquip }) => (
    <>
       {_.includes(['Weapon', 'Armor', 'Shield'], item.category) ? (
          <button
-            className="button--secondary"
+            className="button"
             id={item.id}
             name={item.category === 'Weapon' ? 'weapons' : item.category.toLowerCase()}
             type="button"

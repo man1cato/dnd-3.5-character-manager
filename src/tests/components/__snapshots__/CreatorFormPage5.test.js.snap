@@ -1343,14 +1343,25 @@ exports[`should correctly render CreatorFormPage5 1`] = `
     Selected Equipment:
   </h4>
   <div
-    className="grid grid--items"
-  />
+    className="form-grid--equipment"
+  >
+    <h5
+      className="grid__col1"
+    >
+      Item
+    </h5>
+    <h5>
+      Qty
+    </h5>
+    <div />
+    <div />
+  </div>
   <ItemModal
     handleCloseModal={[Function]}
     handleEquip={[Function]}
   />
   <FormikConnect(ErrorMessageImpl)
-    className="row--left form__error"
+    className="row--left form-group--error"
     component="div"
     name="equipment"
   />

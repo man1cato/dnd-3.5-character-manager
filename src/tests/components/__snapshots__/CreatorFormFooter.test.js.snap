@@ -2,13 +2,13 @@
 
 exports[`should render CreatorFormFooter 1`] = `
 <footer
-  className="footer"
+  className="footer--form"
 >
   <div
-    className="container footer__form"
+    className="container footer--form__content"
   >
     <button
-      className="button"
+      className="button--form-nav button--primary"
       disabled={false}
       id="nextButton"
       onClick={[Function]}

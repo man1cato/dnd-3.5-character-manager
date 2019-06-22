@@ -106,9 +106,8 @@ export class SpellbookPage extends React.Component {
 						<div className="section" key={level}>
 							<h3 className="row--center">Level {level} Spells ({page.total}/{page.spellsPerDay})</h3>
 
-							<div className="grid grid--spellbook">
+							<div className="grid grid--spells">
 								<h5 className="grid__col1">Spell</h5>
-								<h5 className="grid--spellbook__school">School</h5>
 								<h5>Prep</h5>
 								<h5>Rmng</h5>
 								<div></div>
@@ -123,11 +122,7 @@ export class SpellbookPage extends React.Component {
 											{this.props.spells[spell.id].name}
 										</button>
 
-										<div className="grid--spellbook__school">
-											{this.props.spells[spell.id].school.substr(0,4)}
-										</div>
-										
-										<div className="grid__col3 grid--spellbook__attribute" >
+										<div className="grid__col2 grid--spells__attribute" >
 											<button
 												change={1}
 												spellid={spell.id}
@@ -147,18 +142,18 @@ export class SpellbookPage extends React.Component {
 											>-</button>
 										</div>
 										
-										<div className="grid__col4">{spell.remaining}</div>
+										<div className="grid__col3">{spell.remaining}</div>
 
 										{spell.prepared !== 0 || spell.remaining !== 0 || spell.used !== 0 ?
 											<button 
-												className="grid__col5" 
+												className="grid__col4" 
 												name="clear"
 												spellid={spell.id}
 												index={i}
 												level={level}
 												onClick={this.handleChange}
 											>
-												Clear
+												x
 											</button>
 											:
 											<div></div>

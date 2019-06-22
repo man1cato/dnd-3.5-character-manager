@@ -1,33 +1,52 @@
 .button {
-    background: $blue;
-    color: white;
+    background: $off-white;
+    color: $dark-grey;
+    border: 1px solid $off-white;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
     width: -webkit-fill-available;
-    font-weight: 300;
-    font-size: 120%;
+    font-size: 100%;
     text-decoration: none;
     border: none;
-    padding: $s-size;
+    padding: $xs-size;
     margin: 0;
 }
 
-.button--link {
+.button--primary {
     @extend .button;
-    background: none;
-    color: $dark-grey;
-    text-decoration: underline;
-    padding: 0 $xs-size 0 0;
-    text-align: left;
-    width: auto;
-    font-size: $font-size-l;
-    display: inline-block;
+    background: $blue;
+    color: white;
+    border: 1px solid $blue;
+    font-weight: 300;
+    font-size: 120%;
+    padding: $s-size;
+}
+
+.button--primary:disabled {
+  cursor: default;
+  background: $light-grey;
+  opacity: 0.5;
+  border: 1px solid $disabled;
 }
 
 .button--secondary {
-    @extend .button;
+    @extend .button--primary;
     background: $grey;
+    border: 1px solid $grey;
+}
+
+.button--link {
+    display: inline-block;
+    background: none;
+    color: $dark-grey;
+    border: none;
+    text-decoration: underline;
+    padding: 0 $xs-size $xs-size 0;
+    text-align: left;
+    width: auto;
 }
 
 .button--form-nav {
@@ -59,3 +78,4 @@
 button.button-profile:hover {
     box-shadow: 0 0 5px $light-grey;
 }
+

@@ -56,7 +56,7 @@ const CreatorFormPage4 = ({
 							{feat.name}
 						</button>
 									
-						<button className="button--secondary" type="button" onClick={() => setSelectedFeatIds(_.without(selectedFeatIds, featId))}>x</button>
+						<button className="button" type="button" onClick={() => setSelectedFeatIds(_.without(selectedFeatIds, featId))}>x</button>
 					</div>
 				)
 			})}
@@ -66,7 +66,7 @@ const CreatorFormPage4 = ({
 				handleCloseModal={() => setSelected(undefined)}
 			/>
 
-			<ErrorMessage className="row--left form__error" name="feats" component="div" />
+			<ErrorMessage className="row--left form-group--error" name="feats" component="div" />
 		</div>
 	)
 }

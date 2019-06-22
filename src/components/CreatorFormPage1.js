@@ -15,9 +15,11 @@ const CreatorFormPage1 = ({
 	<div>
 		<div className="form-group--35">
 			<h4>Name:</h4>
-			<Field className="text-input" name="name" />
+			<div>
+				<Field className="text-input" name="name" />
+				<ErrorMessage className="form-group--error" name="name" component="div"/>
+			</div>
 		</div>
-		<ErrorMessage className="form__error" name="name" component="div"/>
 		
 		<div className="form-group--35">
 			<h4>Gender:</h4>
@@ -30,33 +32,41 @@ const CreatorFormPage1 = ({
 
 		<div className="form-group--35">
 			<h4>Age:</h4>
-			<div className="input-group">
-				<Field className="text-input" name="age" />
-				<div> yrs</div>
+			<div>
+				<div className="input-group">
+					<Field className="text-input" name="age" />
+					<div> yrs</div>
+				</div>
+				<ErrorMessage className="form-group--error" name="age" component="div"/>
 			</div>
 		</div>
-		<ErrorMessage className="form__error" name="age" component="div"/>
 
 		<div className="form-group--35">
 			<h4>Height:</h4>
-			<div className="input-group">
-				<Field className="text-input" name="heightFt" />
-				<div>ft</div>
-				<Field className="text-input" name="heightIn" />
-				<div>in</div>
+			<div>
+				<div className="input-group">
+					<Field className="text-input" name="height.ft" />
+					<div>ft</div>
+					<Field className="text-input" name="height.in" />
+					<div>in</div>
+				</div>
+				<div className="input-group">
+					<ErrorMessage className="form-group--error" name="height.ft" component="div"/>
+					<ErrorMessage className="form-group--error" name="height.in" component="div"/>
+				</div>
 			</div>
 		</div>
-		<ErrorMessage className="form__error" name="heightFt" component="div"/>
-		<ErrorMessage className="form__error" name="heightIn" component="div"/>
 
 		<div className="form-group--35">
 			<h4>Weight:</h4>
-			<div className="input-group">
-				<Field className="text-input" name="weight" />
-				<div>lbs</div>
+			<div>
+				<div className="input-group">
+					<Field className="text-input" name="weight" />
+					<div>lbs</div>
+				</div>
+				<ErrorMessage className="form-group--error" name="weight" component="div"/>
 			</div>
 		</div>
-		<ErrorMessage className="form__error" name="weight" component="div"/>
 
 		<div className="divider"></div>
 

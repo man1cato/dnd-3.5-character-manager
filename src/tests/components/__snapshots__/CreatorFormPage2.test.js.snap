@@ -3,7 +3,7 @@
 exports[`should render CreatorFormPage2 1`] = `
 <Fragment>
   <div
-    className="form-group--30"
+    className="form-group--35"
   >
     <h4>
       Alignment:
@@ -71,7 +71,7 @@ exports[`should render CreatorFormPage2 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form-group--30"
+    className="form-group--35"
   >
     <h4>
       Job Class:
@@ -151,7 +151,7 @@ exports[`should render CreatorFormPage2 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form-group--30 align-top"
+    className="form-group--35 align-top"
   >
     <h4>
       Hit Die:
@@ -161,7 +161,7 @@ exports[`should render CreatorFormPage2 1`] = `
     </div>
   </div>
   <div
-    className="form-group--30 align-top"
+    className="form-group--35 align-top"
   >
     <h4>
       Proficiencies:
@@ -171,10 +171,10 @@ exports[`should render CreatorFormPage2 1`] = `
     </div>
   </div>
   <div
-    className="form-group--30 align-top"
+    className="form-group--35 align-top"
   >
     <h4>
-      Choose Bonus Languages:
+      Bonus Languages:
     </h4>
     <FormikConnect(FieldInner)
       className="multi-select"
@@ -222,7 +222,7 @@ exports[`should render CreatorFormPage2 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form-group--30"
+    className="form-group--35"
   >
     <h4>
       Deity:

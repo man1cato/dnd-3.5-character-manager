@@ -33,8 +33,8 @@ test('should make form page 1 valid after inputting required fields', () => {
 
 	wrapper.find('input').at(0).simulate("change", { target: { id: '1', name: 'name', value: "Arc" } })
 	wrapper.find('input').at(1).simulate("change", { target: { id: '2', name: 'age', value: "21" } })
-	wrapper.find('input').at(2).simulate("change", { target: { id: '3', name: 'heightFt', value: "4" } })
-	wrapper.find('input').at(3).simulate("change", { target: { id: '4', name: 'heightIn', value: "7" } })
+	wrapper.find('input').at(2).simulate("change", { target: { id: '3', name: 'height.ft', value: "4" } })
+	wrapper.find('input').at(3).simulate("change", { target: { id: '4', name: 'height.in', value: "7" } })
 	wrapper.find('input').at(4).simulate("change", { target: { id: '5', name: 'weight', value: "153" } })
 
 	expect(wrapper.find(CreatorFormFooter).prop('isValid')).toBe(true)
@@ -74,7 +74,7 @@ test('should render page 3 when page 2 is valid and next is clicked', () => {
 	expect(wrapper.find(CreatorFormPage3)).toHaveLength(1)
 	expect(wrapper.find('#submitButton')).toHaveLength(0)
 })
-
+ 
 // test('should render page 4 when page 3 is valid and next is clicked', () => {
 // 	expect(wrapper.find(CreatorFormPage3)).toHaveLength(1)
 // 	expect(wrapper.find(CreatorFormFooter).prop('isValid')).toBe(false)

@@ -1,13 +1,11 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .form-group {
     display: flex;
     align-items: center;
     margin-bottom: $m-size;
+}
+
+.form-group--row {
+    height: 4rem;
 }
 
 .form-group--35 {
@@ -36,7 +34,7 @@
     @extend .form-group;
     > :first-child {
         width: 80%;
-        padding-right: $s-size;
+        padding: 0 $s-size 0 0;
     }
     > :last-child {
         width: 20%;
@@ -50,22 +48,11 @@
     }
 }
 
-.form__error {
-    margin: 0 0 $m-size 0;
+.form-group--error {
+    @extend .form-group;
+    justify-content: flex-start;
     font-style: italic;
     font-size: $font-size-s;
+    margin: 0;
 }
 
-.form-grid {
-    display: grid;
-    grid-auto-flow: dense;
-    grid-template-columns: 3fr 2fr 2fr 1fr;
-    grid-gap: $xs-size;
-    justify-items: center;
-    align-items: center;
-    text-align: center; 
-    font-size: $font-size-m;
-    input {
-        width: 100%;
-    }
-}

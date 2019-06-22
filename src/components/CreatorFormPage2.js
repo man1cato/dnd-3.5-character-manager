@@ -136,7 +136,7 @@ const CreatorFormPage2 = ({
 		{selectedJobClass.name === 'Wizard' && values.school !== 'Universal' && (
 			<>
 				<div className="form-group--35 align-top">
-					<h4>Choose Prohibited School(s):</h4>
+					<h4>Prohibited School(s):</h4>
 					<Field 
 						className="multi-select"
 						name="prohibitedSchools" 
@@ -155,7 +155,7 @@ const CreatorFormPage2 = ({
 						))}
 					</Field>
 				</div>
-				<ErrorMessage className="form__error" name="prohibitedSchools" component="div"/>
+				<ErrorMessage className="form-group--error" name="prohibitedSchools" component="div"/>
 			</>
 		)}
 	</>

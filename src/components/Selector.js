@@ -29,7 +29,7 @@ const Selector = ({
 
 	return (
 		<div>
-			<div className="form-group--70">
+			<div className="form-group--70 form-group--row">
 				<select 
 					className="select"
 					name={fieldName} 
@@ -47,7 +47,7 @@ const Selector = ({
 				</select> 
 				
 				<button 
-					className="button--secondary"
+					className="button"
 					type="button" 
 					onClick={() => setSelectedObjIds([...selectedObjIds, selectedObjId])}
 				>

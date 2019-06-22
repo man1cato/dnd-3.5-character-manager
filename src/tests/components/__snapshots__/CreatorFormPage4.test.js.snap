@@ -665,7 +665,7 @@ exports[`should correctly render CreatorFormPage4 1`] = `
     handleCloseModal={[Function]}
   />
   <FormikConnect(ErrorMessageImpl)
-    className="row--left form__error"
+    className="row--left form-group--error"
     component="div"
     name="feats"
   />

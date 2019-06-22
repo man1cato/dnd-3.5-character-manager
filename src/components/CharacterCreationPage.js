@@ -20,14 +20,16 @@ import { abilities } from '../utils/staticData'
 const pages = [Page1, Page2, Page3, Page4, Page5]
 
 const abilityMessage = 'Enter an integer between 3 and 18'
-const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError(' ')
+const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError('')
 const validationSchema = Yup.object().shape({
 	page1: Yup.object().shape({
 		name: Yup.string().max(30, 'Name is too long!').required('Required'),
 		age: Yup.number().positive().integer().required('Required').typeError('Enter a number'),
-		heightFt: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number'),
-		heightIn: Yup.number('Enter an integer between 0 and 12').positive('Enter an integer between 0 and 12').integer('Enter an integer between 0 and 12').max(11, 'Enter an integer between 0 and 12').required('Required').typeError('Enter a number'),
-		weight: Yup.number('Enter a positive integer').positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number')
+		height: Yup.object().shape({
+			ft: Yup.number().positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number').typeError('Enter a number'),
+			in: Yup.number().positive('Enter an integer between 0 and 12').integer('Enter an integer between 0 and 12').max(11, 'Enter an integer between 0 and 12').required('Required').typeError('Enter a number'),
+		}),
+		weight: Yup.number().positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number')
 	}),
 	page2: undefined,
 	page3: Yup.object().shape({
@@ -123,8 +125,10 @@ export class CharacterCreationPage extends React.Component {
 						name: '',
 						gender: 'Male',
 						age: '',
-						heightFt: '',
-						heightIn: '',
+						height: {
+							ft: '',
+							in: ''
+						},
 						weight: '',
 						race: this.state.selectedRace.id,
 						alignment: 'Lawful Good',
@@ -148,7 +152,7 @@ export class CharacterCreationPage extends React.Component {
 							name: values.name,
 							gender: values.gender,
 							age: values.age,
-							height: `${values.heightFt}'${values.heightIn}"`,
+							height: `${values.height.ft}'${values.height.in}"`,
 							weight: values.weight,
 							race: this.state.selectedRace.id,
 							alignment: values.alignment,

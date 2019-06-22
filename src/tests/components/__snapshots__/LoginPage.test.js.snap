@@ -13,7 +13,7 @@ exports[`should render login page correctly 1`] = `
       D&D 3.5e Character Manager
     </h1>
     <button
-      className="button"
+      className="button--primary"
       onClick={[Function]}
     >
       Login with Google

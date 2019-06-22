@@ -2,16 +2,8 @@
 
 exports[`should render PreparedSpells with profile data 1`] = `
 <Fragment>
-  <SpellModal
-    handleCloseModal={[Function]}
-  />
-  <h3
-    className="row--center"
-  >
-    Prepared Spells
-  </h3>
   <div
-    className="grid grid--preparedSpells"
+    className="grid grid--spells"
   >
     <h5
       className="grid__col1"
@@ -78,5 +70,8 @@ exports[`should render PreparedSpells with profile data 1`] = `
     <div />
     <div />
   </div>
+  <SpellModal
+    handleCloseModal={[Function]}
+  />
 </Fragment>
 `;
