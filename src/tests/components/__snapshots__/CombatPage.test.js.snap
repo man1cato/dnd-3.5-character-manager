@@ -35,9 +35,9 @@ exports[`should render combat page with profile data 1`] = `
         }
         initiative={
           Object {
-            "base": 2,
+            "base": 4,
             "mod": "",
-            "total": 2,
+            "total": 4,
           }
         }
         speed={30}

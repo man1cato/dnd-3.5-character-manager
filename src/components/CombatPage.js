@@ -10,6 +10,7 @@ import Attacks from './Attacks'
 import Weapons from './Weapons'
 import PreparedSpells from './PreparedSpells'
 import { startEditProfile } from '../actions/profile'
+import { calcAbilityMod } from '../utils/utils'
 
 
 const setNestedProps = (prop) => {
@@ -21,21 +22,25 @@ const setNestedProps = (prop) => {
 }
 
 export class CombatPage extends React.Component {
-	state = {
-		hp: {
-			base: this.props.hp.base,
-			mod: this.props.hp.mod || "",
-			damage: this.props.hp.damage || "",
-			total: this.props.hp.total || this.props.hp.base,
-		},
-		initiative: {
-			base: this.props.initiative.base, 
-			mod: this.props.initiative.mod || "",
-			total: this.props.initiative.total || this.props.initiative.base
-		},
-		saves: setNestedProps(this.props.saves),      
-		attacks: setNestedProps(this.props.attacks)
-	}  	
+	constructor(props) {
+		super(props)
+
+		let initiative = {}
+		initiative.base = !!this.props.abilities.dex.tempScore ? calcAbilityMod(this.props.abilities.dex.tempScore) : calcAbilityMod(this.props.abilities.dex.score)
+		initiative.mod = this.props.initiative.mod || ""
+		initiative.total = initiative.base + Number(initiative.mod)
+		this.state = {
+			hp: {
+				base: this.props.hp.base,
+				mod: this.props.hp.mod || "",
+				damage: this.props.hp.damage || "",
+				total: this.props.hp.total || this.props.hp.base,
+			},
+			initiative,
+			saves: setNestedProps(this.props.saves),      
+			attacks: setNestedProps(this.props.attacks)
+		}  	
+	}	
 
 	handleChange = (e) => {
 		const name = e.target.name
@@ -46,7 +51,7 @@ export class CombatPage extends React.Component {
 		this.setState((prevState) => {
 			if (name === "hp") {
 				if (id === "damage") {
-					total = this.props.hp.base + prevState.hp.mod - value
+					total = prevState.hp.base + prevState.hp.mod - value
 					return {
 						hp: update(prevState.hp, {
 						damage: { $set: value },
@@ -54,9 +59,9 @@ export class CombatPage extends React.Component {
 						})
 					}
 				} 
-				total = this.props.hp.base + value - prevState.hp.damage
+				total = prevState.hp.base + value - prevState.hp.damage
 			} else if (name === "saves" || name === "attacks") {
-				total = this.props[name][id].base + value;
+				total = prevState[name][id].base + value;
 				return {
 					[name]: update(prevState[name], {
 						[id]: {
@@ -66,7 +71,7 @@ export class CombatPage extends React.Component {
 					})
 				}
 			} else {
-				total = this.props[name].base + value
+				total = prevState[name].base + value
 			}
 			return {
 				[name]: update(prevState[name], {
@@ -152,8 +157,9 @@ const mapStateToProps = ({profile, spells, jobClasses}) => {
 		hp: profile.hp,
 		speed: profile.speed,
 		ac: profile.ac,
-		initiative: profile.initiative,
 		saves,
+		initiative: profile.initiative,
+		abilities: profile.abilities,
 		baseAttackBonus: profile.baseAttackBonus,
 		attacks: profile.attacks,
 		equipped: profile.equipped,
