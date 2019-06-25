@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreatorFormFooter = ({
 	page, 
-	pages, 
+	pageCount, 
 	handleBack, 
 	handleNext, 
 	handleSubmit, 
@@ -17,7 +17,7 @@ const CreatorFormFooter = ({
 					Back
 				</button>
 			)}
-			{page === pages.length ? (
+			{page === pageCount ? (
 				<button className="button--form-nav button--primary" type="submit" id="submitButton" disabled={isSubmitting || !isValid} onClick={handleSubmit}>   
 					Create Character
 				</button>

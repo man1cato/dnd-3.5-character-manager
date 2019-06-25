@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
 import { rollDice, calcAbilityMod, calcSkillPoints } from '../utils/utils'
@@ -6,16 +6,15 @@ import { abilities } from '../utils/staticData'
 
 const CreatorFormAbilities = ({
 	values,
-	races,
-	jobClasses,
+	selectedJobClass,
+	selectedRace,
 	setFieldValue, 
 	validateForm
 }) => {
-	const raceMods = races[values.race].abilityMods
-	const selectedJobClass = jobClasses[values.jobClass]
+	const raceMods = selectedRace.abilityMods
 
 	const setSkillPoints = (intScore) => {
-		let skillPoints = calcSkillPoints(jobClasses[values.jobClass].name, calcAbilityMod(intScore)) * 4
+		let skillPoints = calcSkillPoints(selectedJobClass.name, calcAbilityMod(intScore)) * 4
 		if (skillPoints < 1) { skillPoints = 1	} 
 		if (selectedJobClass.name === 'Human') { skillPoints += 4}			
 		setFieldValue('skillPoints', skillPoints, false)

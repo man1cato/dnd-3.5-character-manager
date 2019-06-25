@@ -5,20 +5,21 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import _ from 'lodash'
 
-import Page1 from './CreatorFormIdentity'
-import Page2 from './CreatorFormJobClass'
-import Page3 from './CreatorFormAbilities'
-import Page4 from './CreatorFormFeats'
-import Page5 from './CreatorFormSkills'
-import Page6 from './CreatorFormEquipment'
-import CreatorFormFooter from './CreatorFormFooter'
 import { history } from '../routers/AppRouter'
 import { startCreateProfile } from '../actions/profile'
 import { apiObjectToArray, calcAbilityMod, calSizeMod } from '../utils/utils'
 import { abilities } from '../utils/staticData'
 
+import CreatorFormIdentity from './CreatorFormIdentity'
+import CreatorFormJobClass from './CreatorFormJobClass'
+import CreatorFormAbilities from './CreatorFormAbilities'
+import CreatorFormFeats from './CreatorFormFeats'
+import CreatorFormSkills from './CreatorFormSkills'
+import CreatorFormEquipment from './CreatorFormEquipment'
+import CreatorFormFooter from './CreatorFormFooter'
 
-const pages = [Page1, Page2, Page3, Page4, Page5, Page6]
+
+const pages = [CreatorFormIdentity, CreatorFormJobClass, CreatorFormAbilities, CreatorFormFeats, CreatorFormSkills, CreatorFormEquipment]
 
 const abilityMessage = 'Enter an integer between 3 and 18'
 const abilityValidation = Yup.number().integer(abilityMessage).min(3, abilityMessage).max(18, abilityMessage).required('Required').typeError(abilityMessage)
@@ -57,6 +58,8 @@ const validationSchema = Yup.object().shape({
 
 export const CharacterCreationPage = (props) => {
 	const [page, setPage] = useState(1)
+	const [selectedRace, setSelectedRace] = useState(_.find(props.races, (race) => race.name === 'Human'))
+	const [selectedJobClass, setSelectedJobClass] = useState(_.find(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'))
 
 	const handleMultiSelect = (e, setFieldValue) => {
 		const name = e.target.name
@@ -80,7 +83,7 @@ export const CharacterCreationPage = (props) => {
 	}    
 	
 	return (
-		<div>
+		<>
 			<Header pageTitle="Character Creation" />
 			
 			<Formik
@@ -166,16 +169,19 @@ export const CharacterCreationPage = (props) => {
 					<Form >
 						<div className="container container--body">
 							{{
-								1: <Page1 
-									values={values}
+								1: <CreatorFormIdentity 
+									selectedRace={selectedRace}
+									setSelectedRace={setSelectedRace}
 									races={props.races}
 									jobClasses={props.jobClasses}
 									handleChange={handleChange} 
 									setFieldValue={setFieldValue}
 								/>,
-								2: <Page2
+								2: <CreatorFormJobClass
 									values={values}
-									races={props.races}
+									selectedRace={selectedRace}
+									selectedJobClass={selectedJobClass}
+									setSelectedJobClass={setSelectedJobClass}
 									jobClasses={props.jobClasses}
 									handleChange={handleChange}
 									handleMultiSelect={handleMultiSelect}
@@ -183,28 +189,28 @@ export const CharacterCreationPage = (props) => {
 									setFieldError={setFieldError}
 									validateForm={validateForm}
 								/>,
-								3: <Page3
+								3: <CreatorFormAbilities
 									values={values}
-									races={props.races} 
-									jobClasses={props.jobClasses}
+									selectedRace={selectedRace}
+									selectedJobClass={selectedJobClass}
 									handleChange={handleChange}
 									setFieldValue={setFieldValue}
 									setFieldError={setFieldError}		
 									validateForm={validateForm}								
 								/>,
-								4: <Page4
+								4: <CreatorFormFeats
 									values={values}
 									feats={props.feats}
 									setFieldValue={setFieldValue}
 									validateForm={validateForm}
 								/>,
-								5: <Page5
+								5: <CreatorFormSkills
 									values={values}
 									skills={props.skills}
 									setFieldValue={setFieldValue}
 									validateForm={validateForm}
 								/>,
-								6: <Page6
+								6: <CreatorFormEquipment
 									values={values}
 									items={props.items}
 									setFieldValue={setFieldValue}
@@ -215,7 +221,7 @@ export const CharacterCreationPage = (props) => {
 						
 						<CreatorFormFooter 
 							page={page}
-							pages={pages}
+							pageCount={pages.length}
 							handleBack={handleBack}
 							handleNext={handleNext}
 							handleSubmit={handleSubmit}
@@ -229,7 +235,7 @@ export const CharacterCreationPage = (props) => {
 				)}
 			</Formik>
 				
-		</div>
+		</>
 	)
 }
 
@@ -237,7 +243,7 @@ export const CharacterCreationPage = (props) => {
 const mapStateToProps = (state) => ({
 	races: state.races,
 	jobClasses: state.jobClasses,
-	feats: _.omitBy(state.feats, (feat) => feat.prerequisites || _.includes(feat.types, 'Epic')),
+	feats: _.omitBy(state.feats, (feat) => feat.prerequisites || _.includes(feat.types, 'Epic') || _.includes(feat.types, 'Creature')),
 	items: _.omitBy(state.items, (item) => item.weaponType === 'Natural' || item.category === 'Creature Part'),
 	skills: state.skills
 })

@@ -1,8 +1,7 @@
 export const schools = [
-   'Abjuration','Clairsentience', 'Conjuration', 'Divination', 
-   'Enchantment', 'Evocation', 'Illusion', 'Metacreativity', 
-   'Necromancy', 'Psychokinesis', 'Psychometabolism', 'Psychoportation', 
-   'Telepathy', 'Transmutation', 'Universal'
+   'Abjuration', 'Conjuration', 'Divination', 
+   'Enchantment', 'Evocation', 'Illusion',  
+   'Necromancy', 'Transmutation', 'Universal'
 ]
 
 export const alignments = [

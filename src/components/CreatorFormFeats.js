@@ -10,7 +10,7 @@ const CreatorFormFeats = ({
 	setFieldValue, 
 	validateForm
 }) => {
-	const [selectedFeatIds, setSelectedFeatIds] = useState([])
+	const [selectedFeatIds, setSelectedFeatIds] = useState(values.feats)
 	const [selected, setSelected] = useState(undefined)
 
 	useEffect(() => {
@@ -23,8 +23,8 @@ const CreatorFormFeats = ({
 
 	const Content = ({selected}) => (
 		<div>
-			<div>Description:</div> 
-			<p>{selected.description}</p>
+			<div className="form-group--35"><b>Type(s):</b> <div>{selected.types.join(", ")}</div></div>
+			<div className="form-group--35 align-top"><b>Description:</b> <div>{selected.description}</div></div>
 		</div>
 	)
 	

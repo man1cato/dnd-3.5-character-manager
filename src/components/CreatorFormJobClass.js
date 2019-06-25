@@ -6,30 +6,37 @@ import { apiObjectToArray } from '../utils/utils'
 
 
 const validateProhibitedSchools = (selectedSchool) => (value) => {
-	let error;
+	let error
 	if (selectedSchool === 'Divination') {
-		if (value.length !== 1) {
-			error = 'You must select one school whose magic use will be prohibited';
+		if (value.length < 1) {
+			error = 'You must select one school whose magic use will be prohibited'
+		}
+		if (value.length > 1) {
+			error = 'Select only one school whose magic use will be prohibited'
 		}
 	} else {
-		if (selectedSchool !== 'Universal' && value.length !== 2) {
-			error = 'You must select two schools whose magic use will be prohibited';
+		if (selectedSchool !== 'Universal' && value.length < 2) {
+			error = 'You must select two schools whose magic use will be prohibited'
+		}
+		if (selectedSchool !== 'Universal' && value.length > 2) {
+			error = 'Select only two schools whose magic use will be prohibited'
 		}
 	}
-	return error;
+	return error
 }
 
 const CreatorFormJobClass = ({
 	values, 
-	races,
+	selectedRace,
+	selectedJobClass, 
+	setSelectedJobClass,
 	jobClasses, 
 	handleChange, 
 	handleMultiSelect, 
 	setFieldValue, 
-	setFieldError,
-	validateForm
+	setFieldError
 }) => {
-	const [selectedJobClass, setSelectedJobClass] = useState(jobClasses[values.jobClass])
+	const { school } = values
 
 	useEffect(() => {
 		if (selectedJobClass.name === 'Paladin') {
@@ -107,7 +114,7 @@ const CreatorFormJobClass = ({
 				multiple 
 				onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
 			>
-				{_.orderBy(races[values.race].bonusLanguages).map((language) => (
+				{_.orderBy(selectedRace.bonusLanguages).map((language) => (
 					<option 
 						value={language} 
 						key={language}
@@ -154,7 +161,7 @@ const CreatorFormJobClass = ({
 			</div>
 		)}
 
-		{selectedJobClass.name === 'Wizard' && values.school !== 'Universal' && (
+		{selectedJobClass.name === 'Wizard' && school !== 'Universal' && (
 			<>
 				<div className="form-group--35 align-top">
 					<h4>Prohibited School(s):</h4>
@@ -163,10 +170,10 @@ const CreatorFormJobClass = ({
 						name="prohibitedSchools" 
 						component="select" 
 						multiple 
-						validate={validateProhibitedSchools(values.school)}
+						validate={validateProhibitedSchools(school)}
 						onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
 					>
-						{_.difference(schools, [values.school, 'Universal', 'Divination']).map((school, i) => (
+						{_.difference(schools, [school, 'Universal', 'Divination']).map((school, i) => (
 							<option 
 								value={school} 
 								key={`prohibited${i}`}

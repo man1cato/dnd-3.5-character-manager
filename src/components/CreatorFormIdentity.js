@@ -7,12 +7,12 @@ import { apiObjectToArray } from '../utils/utils'
 
 
 const CreatorFormIdentity = ({
-	values,
+	selectedRace, 
+	setSelectedRace,
 	races, 
 	jobClasses,
 	handleChange
 }) => {
-	const [selectedRace, setSelectedRace] = useState(races[values.race])
 
 	return (
 		<div>
@@ -118,9 +118,9 @@ const CreatorFormIdentity = ({
 
 			<div className="form-group--35 align-bottom">
 				<h4>Racial Modifiers:</h4>     
-				<div>
-					{Object.entries(selectedRace.abilityMods).filter((mod) => mod[1] !== 0).length > 0 ?
-						Object.entries(selectedRace.abilityMods).filter((mod) => mod[1] !== 0).map((mod) => (
+				<div className="input-group flex-wrap">
+					{_.filter(selectedRace.abilityMods, (mod) => mod !== 0).length > 0 ?
+						_.filter(_.toPairs(selectedRace.abilityMods), (mod) => mod[1] !== 0).map((mod) => (
 							<div key={mod}>{mod[0].toUpperCase()}: {mod[1]}</div>
 						))
 						:

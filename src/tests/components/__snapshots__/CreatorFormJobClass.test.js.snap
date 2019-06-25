@@ -252,84 +252,48 @@ exports[`should render CreatorFormJobClass 1`] = `
       </option>
       <option
         key="school1"
-        value="Clairsentience"
-      >
-        Clairsentience
-      </option>
-      <option
-        key="school2"
         value="Conjuration"
       >
         Conjuration
       </option>
       <option
-        key="school3"
+        key="school2"
         value="Divination"
       >
         Divination
       </option>
       <option
-        key="school4"
+        key="school3"
         value="Enchantment"
       >
         Enchantment
       </option>
       <option
-        key="school5"
+        key="school4"
         value="Evocation"
       >
         Evocation
       </option>
       <option
-        key="school6"
+        key="school5"
         value="Illusion"
       >
         Illusion
       </option>
       <option
-        key="school7"
-        value="Metacreativity"
-      >
-        Metacreativity
-      </option>
-      <option
-        key="school8"
+        key="school6"
         value="Necromancy"
       >
         Necromancy
       </option>
       <option
-        key="school9"
-        value="Psychokinesis"
-      >
-        Psychokinesis
-      </option>
-      <option
-        key="school10"
-        value="Psychometabolism"
-      >
-        Psychometabolism
-      </option>
-      <option
-        key="school11"
-        value="Psychoportation"
-      >
-        Psychoportation
-      </option>
-      <option
-        key="school12"
-        value="Telepathy"
-      >
-        Telepathy
-      </option>
-      <option
-        key="school13"
+        key="school7"
         value="Transmutation"
       >
         Transmutation
       </option>
       <option
-        key="school14"
+        key="school8"
         value="Universal"
       >
         Universal
@@ -358,75 +322,33 @@ exports[`should render CreatorFormJobClass 1`] = `
       </option>
       <option
         key="prohibited1"
-        value="Clairsentience"
-      >
-        Clairsentience
-      </option>
-      <option
-        key="prohibited2"
         value="Conjuration"
       >
         Conjuration
       </option>
       <option
-        key="prohibited3"
+        key="prohibited2"
         value="Enchantment"
       >
         Enchantment
       </option>
       <option
-        key="prohibited4"
+        key="prohibited3"
         value="Evocation"
       >
         Evocation
       </option>
       <option
-        key="prohibited5"
+        key="prohibited4"
         value="Illusion"
       >
         Illusion
       </option>
       <option
-        key="prohibited6"
-        value="Metacreativity"
-      >
-        Metacreativity
-      </option>
-      <option
-        key="prohibited7"
+        key="prohibited5"
         value="Necromancy"
       >
         Necromancy
-      </option>
-      <option
-        key="prohibited8"
-        value="Psychokinesis"
-      >
-        Psychokinesis
-      </option>
-      <option
-        key="prohibited9"
-        value="Psychometabolism"
-      >
-        Psychometabolism
-      </option>
-      <option
-        key="prohibited10"
-        value="Psychoportation"
-      >
-        Psychoportation
-      </option>
-      <option
-        key="prohibited11"
-        value="Telepathy"
-      >
-        Telepathy
-      </option>
-      <option
-        key="prohibited12"
-        value="Transmutation"
-      >
-        Transmutation
       </option>
     </FormikConnect(FieldInner)>
   </div>

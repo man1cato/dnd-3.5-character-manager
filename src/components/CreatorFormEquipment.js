@@ -16,14 +16,14 @@ const CreatorFormEquipment = ({
 }) => {
 	const [selectedItemIds, setSelectedItemIds] = useState([])
 	const [selected, setSelected] = useState(undefined)
-	const equipped = values.equipped
+	const { equipment, equipped } = values
 
 	useEffect(() => {
-		if (selectedItemIds.length > values.equipment.length) {
-			setFieldValue('equipment', [...values.equipment, { id: _.last(selectedItemIds), qty: 1 }])
+		if (selectedItemIds.length > equipment.length) {
+			setFieldValue('equipment', [...equipment, { id: _.last(selectedItemIds), qty: 1 }])
 		} else {
-			const idToRemove = _.difference(_.map(values.equipment, (item) => item.id), selectedItemIds)[0]
-			setFieldValue('equipment', _.filter(values.equipment, (item) => item.id !== idToRemove))
+			const idToRemove = _.difference(_.map(equipment, (item) => item.id), selectedItemIds)[0]
+			setFieldValue('equipment', _.filter(equipment, (item) => item.id !== idToRemove))
 			setFieldValue('equipped', {
 				armor: equipped.armor === idToRemove ? null : equipped.armor,
 				shield: equipped.shield === idToRemove ? null : equipped.shield,
@@ -50,7 +50,7 @@ const CreatorFormEquipment = ({
 	const handleQtyChange = (e) => {
 		const id = e.target.id
 		const value = e.target.value
-		const index = _.findIndex(values.equipment, {id})
+		const index = _.findIndex(equipment, {id})
 		setFieldValue(`equipment[${index}]`, { id, qty: value })
 	}
 
@@ -96,7 +96,7 @@ const CreatorFormEquipment = ({
 				<h5 className="grid__col1">Item</h5>
 				<h5 className="grid__col2">Qty</h5>
 
-				{_.map(values.equipment, (item) => {
+				{_.map(equipment, (item) => {
 					const id = item.id
 					item = { id, ...items[id] }
 					return (
@@ -113,14 +113,14 @@ const CreatorFormEquipment = ({
 							<input 
 								className="grid__col2 number-input"
 								id={id}
-								value={_.find(values.equipment, { id }).qty} 
+								value={_.find(equipment, { id }).qty} 
 								onChange={(e) => handleQtyChange(e)} 
 							/>
 							
 							<EquipButton
 								className="grid__col3"
 								item={item} 
-								equipped={values.equipped} 
+								equipped={equipped} 
 								handleEquip={handleEquip} 
 							/>
 							
@@ -138,7 +138,7 @@ const CreatorFormEquipment = ({
 
 			<ItemModal
 				selected={selected}
-				equipped={values.equipped}
+				equipped={equipped}
 				handleCloseModal={() => setSelected(undefined)}
 				handleEquip={handleEquip}
 			/>

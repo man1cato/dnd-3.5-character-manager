@@ -268,7 +268,9 @@ exports[`should render CreatorFormIdentity correctly 1`] = `
     <h4>
       Racial Modifiers:
     </h4>
-    <div>
+    <div
+      className="input-group flex-wrap"
+    >
       <div
         key="con,-2"
       >

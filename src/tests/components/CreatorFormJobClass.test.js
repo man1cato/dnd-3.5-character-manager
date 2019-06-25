@@ -13,11 +13,10 @@ beforeAll(async () => {
    const api = await apiData()
    
    props = {
-      values: { 
-         race: characterOne.race,
-         jobClass: characterOne.jobClass 
-      },
-      races: api.races,
+      values: { school: characterOne.school },
+      selectedRace: api.races[characterOne.race],
+      selectedJobClass: api.jobClasses[characterOne.jobClass],
+      setSelectedJobClass: jest.fn(),
       jobClasses: api.jobClasses
    }
 })

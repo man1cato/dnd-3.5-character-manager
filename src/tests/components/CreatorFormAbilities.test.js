@@ -13,18 +13,16 @@ let wrapper, props
 beforeAll(async () => {
    const api = await apiData()
    props = {
-      values: { 
-         abilities: _.mapValues(abilities, () => ({ score: '' })), 
-         race: characterOne.race,
-         jobClass: characterOne.jobClass
-      },
-      races: api.races,
-      jobClasses: api.jobClasses, 
+      values: { abilities: _.mapValues(abilities, () => ({ score: '' })) },
+      selectedJobClass: api.jobClasses[characterOne.jobClass],
+      selectedRace: api.races[characterOne.race],
       setFieldValue
    }
-   wrapper = shallow(<CreatorFormAbilities {...props} />)
 })
 
+beforeEach(() => {
+   wrapper = shallow(<CreatorFormAbilities {...props} />)
+})
 
 test('should render CreatorFormAbilities correctly', () => {
 	expect(wrapper).toMatchSnapshot()

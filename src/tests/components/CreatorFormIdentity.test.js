@@ -11,9 +11,11 @@ let wrapper, props
 beforeAll(async () => {
    const api = await apiData()
    props = {
-      values: { race: characterOne.race },
+      selectedRace: api.races[characterOne.race],
+      setSelectedRace: jest.fn(),
       races: api.races,
-      jobClasses: api.jobClasses
+      jobClasses: api.jobClasses,
+      handleChange: jest.fn()
    }
 })
 

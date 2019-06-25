@@ -12,15 +12,16 @@ const CreatorFormSkills = ({
 	setFieldValue, 
 	validateForm
 }) => { 
+	const { skillSet, skillPoints } = values
 	const [assignedSkillPoints, setAssignedSkillPoints] = useState(0)
 	const [selected, setSelected] = useState(undefined)
 
 	useEffect(() => {
-		setAssignedSkillPoints(_.sumBy(values.skillSet, skill => skill.ranks))
+		setAssignedSkillPoints(_.sumBy(skillSet, skill => skill.ranks))
 	})
 
 	useEffect(() => {
-		setFieldValue('remainingSkillPoints', values.skillPoints - assignedSkillPoints)
+		setFieldValue('remainingSkillPoints', skillPoints - assignedSkillPoints)
 	}, [assignedSkillPoints])
 
 	useEffect(() => {
@@ -30,7 +31,7 @@ const CreatorFormSkills = ({
 	return (
 		<div>
 			<h3 className="row--center">Assign Skill Points</h3>
-			<div className="row--center">{assignedSkillPoints}/{values.skillPoints}</div>
+			<div className="row--center">{assignedSkillPoints}/{skillPoints}</div>
 			<ErrorMessage className="row--center form-group--error" name="remainingSkillPoints" component="div" />
 			
 			<div className="form-grid--skills">
@@ -39,7 +40,7 @@ const CreatorFormSkills = ({
 
 				{apiObjectToArray(skills).map((skill, i) => {
 					const fieldName = `skillSet[${i}].ranks`
-					const ranks = values.skillSet[i].ranks
+					const ranks = skillSet[i].ranks
 					return (
 						<Fragment key={i}>
 							<button
