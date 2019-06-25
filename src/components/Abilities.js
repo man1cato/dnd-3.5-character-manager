@@ -1,5 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
+import { calcAbilityMod } from '../utils/utils'
 
 
 const Abilities = ({ abilities, handleChange }) => {
@@ -19,7 +20,7 @@ const Abilities = ({ abilities, handleChange }) => {
 	
 			<h5 className="grid__col3">Mod</h5>
 			{_.map(keys, (ability, i) =>
-				<div className="grid__col3" key={`mod${i}`}>{abilities[ability].mod}</div>
+				<div className="grid__col3" key={`mod${i}`}>{calcAbilityMod(abilities[ability].score)}</div>
 			)}
 	
 			<h5 className="grid__col4">Temp Score</h5>
@@ -37,7 +38,7 @@ const Abilities = ({ abilities, handleChange }) => {
 	
 			<h5 className="grid__col5">Temp Mod</h5>
 			{_.map(keys, (ability, i) =>
-				<div className="grid__col5" key={`tempMod${i}`}>{abilities[ability].tempMod}</div>
+				<div className="grid__col5" key={`tempMod${i}`}>{!!abilities[ability].tempScore && calcAbilityMod(abilities[ability].tempScore)}</div>
 			)}
 		</div>
 	)

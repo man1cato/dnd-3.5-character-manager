@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render CreatorFormPage1 correctly 1`] = `
+exports[`should render CreatorFormIdentity correctly 1`] = `
 <div>
   <div
     className="form-group--35"
@@ -30,7 +30,6 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
       className="select"
       component="select"
       name="gender"
-      onChange={[Function]}
     >
       <option
         value="Male"
@@ -62,6 +61,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
         <FormikConnect(FieldInner)
           className="text-input"
           name="age"
+          type="number"
         />
         <div>
            yrs
@@ -87,6 +87,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
         <FormikConnect(FieldInner)
           className="text-input"
           name="height.ft"
+          type="number"
         />
         <div>
           ft
@@ -94,6 +95,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
         <FormikConnect(FieldInner)
           className="text-input"
           name="height.in"
+          type="number"
         />
         <div>
           in
@@ -128,6 +130,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
         <FormikConnect(FieldInner)
           className="text-input"
           name="weight"
+          type="number"
         />
         <div>
           lbs
@@ -230,7 +233,7 @@ exports[`should render CreatorFormPage1 correctly 1`] = `
     </FormikConnect(FieldInner)>
   </div>
   <div
-    className="form-group--35  align-bottom"
+    className="form-group--35 align-bottom"
   >
     <h4>
       Favored Class:

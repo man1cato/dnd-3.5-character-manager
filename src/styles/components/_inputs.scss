@@ -6,6 +6,11 @@
     width: -webkit-fill-available;
 }
 
+.number-input {
+    @extend .text-input;
+    text-align: center;
+}
+
 .select {
     @extend .text-input;
 }

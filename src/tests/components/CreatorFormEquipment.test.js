@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import _ from 'lodash'
 import { apiData } from '../utils/utils'
-import CreatorFormPage5 from '../../components/CreatorFormPage5'
+import CreatorFormEquipment from '../../components/CreatorFormEquipment'
 
 
 let api, wrapper, props
@@ -13,10 +13,10 @@ beforeAll(async () => {
       items: api.items,
       values: { equipment: [] }
    }
-   wrapper = shallow(<CreatorFormPage5 {...props} />)
+   wrapper = shallow(<CreatorFormEquipment {...props} />)
 })
 
 
-test('should correctly render CreatorFormPage5', () => {
+test('should correctly render CreatorFormEquipment', () => {
 	expect(wrapper).toMatchSnapshot()
 })

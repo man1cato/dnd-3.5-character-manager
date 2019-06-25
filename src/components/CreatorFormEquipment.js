@@ -8,15 +8,15 @@ import Selector from './Selector'
 import EquipButton from './EquipButton'
 
 
-const CreatorFormPage5 = ({
+const CreatorFormEquipment = ({
 	values, 
 	items, 
 	setFieldValue, 
 	validateForm
 }) => {
 	const [selectedItemIds, setSelectedItemIds] = useState([])
-	const [equipped, setEquipped] = useState({ weapons: [],	armor: null, shield: null	})
 	const [selected, setSelected] = useState(undefined)
+	const equipped = values.equipped
 
 	useEffect(() => {
 		if (selectedItemIds.length > values.equipment.length) {
@@ -24,12 +24,13 @@ const CreatorFormPage5 = ({
 		} else {
 			const idToRemove = _.difference(_.map(values.equipment, (item) => item.id), selectedItemIds)[0]
 			setFieldValue('equipment', _.filter(values.equipment, (item) => item.id !== idToRemove))
+			setFieldValue('equipped', {
+				armor: equipped.armor === idToRemove ? null : equipped.armor,
+				shield: equipped.shield === idToRemove ? null : equipped.shield,
+				weapons: _.filter(equipped.weapons, (id) => id !== idToRemove)
+			})
 		}
 	}, [selectedItemIds])
-
-	useEffect(() => {
-		setFieldValue('equipped', equipped)
-	}, [equipped])
 
 	const handleEquip = (e) => {
 		const id = e.target.id
@@ -37,16 +38,16 @@ const CreatorFormPage5 = ({
 		const alreadyEquipped = _.includes(equipped[category], id) 
 		if(category === 'weapons') {
 			const weapons = alreadyEquipped ? _.without(equipped.weapons, id) : [...equipped.weapons, id]
-			return setEquipped(update(equipped, {
+			return setFieldValue('equipped', update(equipped, {
 				weapons: { $set: weapons }
 			}))
 		} 
-		return setEquipped(update(equipped, {
+		return setFieldValue('equipped', update(equipped, {
 			[category]: { $set: alreadyEquipped ? null : id }
 		}))			
 	}
 
-	const handleChange = (e) => {
+	const handleQtyChange = (e) => {
 		const id = e.target.id
 		const value = e.target.value
 		const index = _.findIndex(values.equipment, {id})
@@ -93,9 +94,7 @@ const CreatorFormPage5 = ({
 			<h4 className="row--left">Selected Equipment:</h4>
 			<div className="form-grid--equipment">
 				<h5 className="grid__col1">Item</h5>
-				<h5>Qty</h5>
-				<div></div>
-				<div></div>
+				<h5 className="grid__col2">Qty</h5>
 
 				{_.map(values.equipment, (item) => {
 					const id = item.id
@@ -103,7 +102,7 @@ const CreatorFormPage5 = ({
 					return (
 						<Fragment key={id}>
 							<button
-								className="button--link grid__col1"
+								className="grid__col1 button--link"
 								type="button"
 								id={id}
 								onClick={() => setSelected(item)}
@@ -112,10 +111,10 @@ const CreatorFormPage5 = ({
 							</button>
 
 							<input 
-								className="grid__col2 text-input"
+								className="grid__col2 number-input"
 								id={id}
 								value={_.find(values.equipment, { id }).qty} 
-								onChange={(e) => handleChange(e)} 
+								onChange={(e) => handleQtyChange(e)} 
 							/>
 							
 							<EquipButton
@@ -149,4 +148,4 @@ const CreatorFormPage5 = ({
 	)
 }
 
-export default CreatorFormPage5
+export default CreatorFormEquipment

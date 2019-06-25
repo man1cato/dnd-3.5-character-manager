@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render CreatorFormPage3 correctly 1`] = `
+exports[`should render CreatorFormAbilities correctly 1`] = `
 <div>
   <h3
     className="row--center"
@@ -39,10 +39,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </div>
     <FormikConnect(FieldInner)
-      className="grid__col2 text-input"
+      className="grid__col2 number-input"
       id="strInput"
       name="abilities.str.score"
       onChange={[Function]}
+      type="number"
       value=""
     />
     <div
@@ -67,10 +68,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </div>
     <FormikConnect(FieldInner)
-      className="grid__col2 text-input"
+      className="grid__col2 number-input"
       id="dexInput"
       name="abilities.dex.score"
       onChange={[Function]}
+      type="number"
       value=""
     />
     <div
@@ -95,10 +97,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </div>
     <FormikConnect(FieldInner)
-      className="grid__col2 text-input"
+      className="grid__col2 number-input"
       id="conInput"
       name="abilities.con.score"
       onChange={[Function]}
+      type="number"
       value=""
     />
     <div
@@ -123,10 +126,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </div>
     <FormikConnect(FieldInner)
-      className="grid__col2 text-input"
+      className="grid__col2 number-input"
       id="intInput"
       name="abilities.int.score"
       onChange={[Function]}
+      type="number"
       value=""
     />
     <div
@@ -151,10 +155,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </div>
     <FormikConnect(FieldInner)
-      className="grid__col2 text-input"
+      className="grid__col2 number-input"
       id="wisInput"
       name="abilities.wis.score"
       onChange={[Function]}
+      type="number"
       value=""
     />
     <div
@@ -179,10 +184,11 @@ exports[`should render CreatorFormPage3 correctly 1`] = `
       )
     </div>
     <FormikConnect(FieldInner)
-      className="grid__col2 text-input"
+      className="grid__col2 number-input"
       id="chaInput"
       name="abilities.cha.score"
       onChange={[Function]}
+      type="number"
       value=""
     />
     <div

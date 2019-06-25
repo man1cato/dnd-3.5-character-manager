@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should correctly render CreatorFormPage5 1`] = `
+exports[`should correctly render CreatorFormEquipment 1`] = `
 <div>
   <h3
     className="row--center"
@@ -1350,11 +1350,11 @@ exports[`should correctly render CreatorFormPage5 1`] = `
     >
       Item
     </h5>
-    <h5>
+    <h5
+      className="grid__col2"
+    >
       Qty
     </h5>
-    <div />
-    <div />
   </div>
   <ItemModal
     handleCloseModal={[Function]}

@@ -1,94 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render saves with profile data 1`] = `
-<div>
-  <h3
-    className="row--center"
+<div
+  className="grid grid--6col"
+>
+  <h5
+    className="grid__col1"
   >
-    Saving Throws
-  </h3>
+    Saves
+  </h5>
+  <h5>
+    Base
+  </h5>
+  <div />
+  <h5>
+    Mod
+  </h5>
+  <div />
+  <h5>
+    Total
+  </h5>
   <div
-    className="grid grid--6col"
+    className="grid__col1"
   >
-    <h5
-      className="grid__col1"
-    >
-      Saves
-    </h5>
-    <h5>
-      Base
-    </h5>
-    <div />
-    <h5>
-      Mod
-    </h5>
-    <div />
-    <h5>
-      Total
-    </h5>
-    <div
-      className="grid__col1"
-    >
-      Fortitude
-    </div>
-    <div>
-      1
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="fortitude"
-      name="saves"
-      onChange={[MockFunction]}
-      type="text"
-    />
-    <div>
-      =
-    </div>
-    <div />
-    <div
-      className="grid__col1"
-    >
-      Reflex
-    </div>
-    <div>
-      1
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="reflex"
-      name="saves"
-      onChange={[MockFunction]}
-      type="text"
-    />
-    <div>
-      =
-    </div>
-    <div />
-    <div
-      className="grid__col1"
-    >
-      Will
-    </div>
-    <div>
-      4
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="will"
-      name="saves"
-      onChange={[MockFunction]}
-      type="text"
-    />
-    <div>
-      =
-    </div>
-    <div />
+    Fortitude
   </div>
+  <div>
+    1
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    id="fortitude"
+    name="saves"
+    onChange={[MockFunction]}
+    type="text"
+  />
+  <div>
+    =
+  </div>
+  <div />
+  <div
+    className="grid__col1"
+  >
+    Reflex
+  </div>
+  <div>
+    1
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    id="reflex"
+    name="saves"
+    onChange={[MockFunction]}
+    type="text"
+  />
+  <div>
+    =
+  </div>
+  <div />
+  <div
+    className="grid__col1"
+  >
+    Will
+  </div>
+  <div>
+    4
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    id="will"
+    name="saves"
+    onChange={[MockFunction]}
+    type="text"
+  />
+  <div>
+    =
+  </div>
+  <div />
 </div>
 `;

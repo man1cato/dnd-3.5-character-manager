@@ -72,13 +72,13 @@ const setProfile = (uid) => {
   })
 }
 
-setRaces()
+// setRaces()
 setJobClasses()
 setFeats()
 setSpecialAbilities()
 setSkills()
-setItems()
-setSpells()
+// setItems()
+// setSpells()
 // setProfile(process.env.USER_ID)
 
 // Run the following in the powershell to set env var: 

@@ -22,7 +22,7 @@ export const Footer = ({profile}) => (
 				<FooterIcon svgFile={profileSVG} />
 			</Link>
 
-			<Link to={profile.attacks ? "/stats" : "/underconstruction"} >
+			<Link to={profile.ac ? "/stats" : "/underconstruction"} >
 				<FooterIcon svgFile={statsSVG} />
 			</Link>
 

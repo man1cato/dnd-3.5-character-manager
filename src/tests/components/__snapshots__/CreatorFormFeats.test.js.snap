@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should correctly render CreatorFormPage4 1`] = `
+exports[`should correctly render CreatorFormFeats 1`] = `
 <div>
   <h3
     className="row--center"

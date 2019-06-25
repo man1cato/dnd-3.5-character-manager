@@ -56,6 +56,7 @@ export default {
 			ranks: 9
 		}
 	],
+	skillPoints: 12,
 	saves: {
 		fortitude: {
 			base: 1

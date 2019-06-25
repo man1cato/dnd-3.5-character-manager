@@ -28,3 +28,18 @@ export const calSizeMod = (size) => ({
 	Small: 1,
 	TIny: 2
 }[size])
+
+export const calcSkillPoints = (jobClassName, intMod) => {
+	if (_.includes(['Cleric', 'Fighter', 'Paladin', 'Sorcerer', 'Wizard'], jobClassName)) {
+		return 2 + intMod
+	}
+	if (_.includes(['Barbarian', 'Druid', 'Monk'], jobClassName)) {
+		return 4 + intMod
+	}
+	if (_.includes(['Bard', 'Ranger'], jobClassName)) {
+		return 6 + intMod
+	}
+	if (jobClassName === 'Rogue') {
+		return 8 + intMod
+	}
+}

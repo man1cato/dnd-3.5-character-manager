@@ -1,21 +1,31 @@
-import React, { useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
-import { rollDice } from '../utils/utils'
+import { rollDice, calcAbilityMod, calcSkillPoints } from '../utils/utils'
 import { abilities } from '../utils/staticData'
 
-const CreatorFormPage3 = ({
+const CreatorFormAbilities = ({
 	values,
-	selectedRace,
-	handleChange, 
+	races,
+	jobClasses,
 	setFieldValue, 
 	validateForm
 }) => {
+	const raceMods = races[values.race].abilityMods
+	const selectedJobClass = jobClasses[values.jobClass]
+
+	const setSkillPoints = (intScore) => {
+		let skillPoints = calcSkillPoints(jobClasses[values.jobClass].name, calcAbilityMod(intScore)) * 4
+		if (skillPoints < 1) { skillPoints = 1	} 
+		if (selectedJobClass.name === 'Human') { skillPoints += 4}			
+		setFieldValue('skillPoints', skillPoints, false)
+		setFieldValue('remainingSkillPoints', skillPoints)
+	}
+
 	useEffect(() => {
 		validateForm()
+		if (!!values.abilities.int.final) { setSkillPoints(values.abilities.int.final) }
 	}, [])
-
-	const raceMods = selectedRace.abilityMods
 
 	return (
 		<div>
@@ -34,20 +44,18 @@ const CreatorFormPage3 = ({
 						<Fragment key={abbr}>
 							<div className="grid__col1">{abilities[abbr]} ({abbr.toUpperCase()})</div>
 							<Field 
-								className="grid__col2 text-input"
+								className="grid__col2 number-input"
+								type="number"
 								name={fieldName}
 								id={`${abbr}Input`}
-								value={values.abilities[abbr].score.toString()}
+								value={values.abilities[abbr].score}
 								onChange={(e) => {
 									const score = Number(e.target.value)
-									setFieldValue(`abilities.${abbr}.final`, score + raceMod, false)
-									handleChange({ 
-										target: { 
-											name: e.target.name,
-											id: e.target.id,
-											value: score
-										} 
-									})
+									const finalScore = score + raceMod
+									console.log(score, finalScore)
+									setFieldValue(`abilities.${abbr}.score`, score)
+									setFieldValue(`abilities.${abbr}.final`, finalScore, false)
+									if (abbr === 'int') { setSkillPoints(finalScore) }
 								}}
 							/>	
 							<div className="grid__col3">{raceMod}</div>
@@ -61,13 +69,15 @@ const CreatorFormPage3 = ({
 			<div className="row--center">
 				<button
 					className="button"
-					id={`abilitiesRollButton`}
+					id="abilitiesRollButton"
 					type='button'
 					onClick={() => {
 						_.keys(abilities).forEach((abbr) => {
 							const score = rollDice(6, 3)
+							const finalScore = score + raceMods[abbr]
 							setFieldValue(`abilities.${abbr}.score`, score)
-							setFieldValue(`abilities.${abbr}.final`, score + raceMods[abbr], false)							
+							setFieldValue(`abilities.${abbr}.final`, finalScore, false)
+							if (abbr === 'int') { setSkillPoints(finalScore) }
 						})
 					}}
 				>
@@ -80,4 +90,4 @@ const CreatorFormPage3 = ({
 	)
 }
 
-export default CreatorFormPage3
+export default CreatorFormAbilities

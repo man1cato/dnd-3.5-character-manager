@@ -4,7 +4,7 @@ import { ErrorMessage } from 'formik'
 import FeatModal from './FeatModal'
 import Selector from './Selector'
 
-const CreatorFormPage4 = ({
+const CreatorFormFeats = ({
 	values, 
 	feats, 
 	setFieldValue, 
@@ -70,4 +70,4 @@ const CreatorFormPage4 = ({
 		</div>
 	)
 }
-export default CreatorFormPage4
+export default CreatorFormFeats

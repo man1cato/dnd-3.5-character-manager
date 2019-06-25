@@ -709,6 +709,7 @@ exports[`should render ProfilePage with profile data 1`] = `
             }
           }
           school="Transmutation"
+          skillPoints={12}
           skillSet={
             Array [
               Object {
@@ -4833,6 +4834,7 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       },
                     },
                     "school": "Transmutation",
+                    "skillPoints": 12,
                     "skillSet": Array [
                       Object {
                         "id": "recfbplSsRmzNs68J",

@@ -94,27 +94,39 @@ exports[`should render Abilities with profile data 1`] = `
   <div
     className="grid__col3"
     key="mod0"
-  />
+  >
+    2
+  </div>
   <div
     className="grid__col3"
     key="mod1"
-  />
+  >
+    4
+  </div>
   <div
     className="grid__col3"
     key="mod2"
-  />
+  >
+    3
+  </div>
   <div
     className="grid__col3"
     key="mod3"
-  />
+  >
+    5
+  </div>
   <div
     className="grid__col3"
     key="mod4"
-  />
+  >
+    2
+  </div>
   <div
     className="grid__col3"
     key="mod5"
-  />
+  >
+    0
+  </div>
   <h5
     className="grid__col4"
   >
