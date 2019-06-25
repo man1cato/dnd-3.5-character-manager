@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from 'react';
+import React, { useEffect }  from 'react';
 import { Field, ErrorMessage } from 'formik';
 import _ from 'lodash'
 
@@ -11,11 +11,15 @@ const CreatorFormIdentity = ({
 	setSelectedRace,
 	races, 
 	jobClasses,
-	handleChange
+	handleChange,
+	setTouched
 }) => {
+	useEffect(() => {
+		setTouched({ remainingSkillPoints: true, feats: true, equipment: true })
+	},[])
 
 	return (
-		<div>
+		<>
 			<div className="form-group--35">
 				<h4>Name:</h4>
 				<div>
@@ -165,7 +169,7 @@ const CreatorFormIdentity = ({
 				</div>
 			</div>        
 			
-		</div>
+		</>
 	)
 }
 

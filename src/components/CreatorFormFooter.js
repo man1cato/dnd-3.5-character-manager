@@ -3,8 +3,7 @@ import React from 'react'
 const CreatorFormFooter = ({
 	page, 
 	pageCount, 
-	handleBack, 
-	handleNext, 
+	setPage,
 	handleSubmit, 
 	setErrors, 
 	isSubmitting, 
@@ -13,16 +12,33 @@ const CreatorFormFooter = ({
 	<footer className="footer--form">
 		<div className="container footer--form__content">
 			{page !== 1 && (
-					<button className="button--form-nav button--secondary" type="button" id="backButton" onClick={() => handleBack(setErrors)}>   
+				<button 
+					className="button--form-nav button--secondary" 
+					type="button" 
+					id="backButton" 
+					onClick={() => {setPage(page - 1); setErrors({})}}
+				>   
 					Back
 				</button>
 			)}
 			{page === pageCount ? (
-				<button className="button--form-nav button--primary" type="submit" id="submitButton" disabled={isSubmitting || !isValid} onClick={handleSubmit}>   
+				<button
+					className="button--form-nav button--primary" 
+					type="submit" 
+					id="submitButton"
+					disabled={isSubmitting || !isValid} 
+					onClick={handleSubmit}
+				>   
 					Create Character
 				</button>
 			) : (                                        
-				<button className="button--form-nav button--primary" type="button" id="nextButton" disabled={!isValid} onClick={() => handleNext()}>   
+				<button 
+					className="button--form-nav button--primary" 
+					type="button" 
+					id="nextButton" 
+					disabled={!isValid} 
+					onClick={() => setPage(page + 1)}
+				>   
 					Next
 				</button>
 			)}

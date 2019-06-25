@@ -12,7 +12,7 @@ const CreatorFormEquipment = ({
 	values, 
 	items, 
 	setFieldValue, 
-	validateForm
+	setFieldTouched
 }) => {
 	const [selectedItemIds, setSelectedItemIds] = useState([])
 	const [selected, setSelected] = useState(undefined)
@@ -54,9 +54,7 @@ const CreatorFormEquipment = ({
 		setFieldValue(`equipment[${index}]`, { id, qty: value })
 	}
 
-	useEffect(() => {
-		validateForm()
-	}, [])
+
 
 	const Content = ({selected}) => (
 		<div>
@@ -78,7 +76,7 @@ const CreatorFormEquipment = ({
 	)
 	
 	return (
-		<div>
+		<>
 			<h3 className="row--center">Select Equipment</h3>
 
 			<Selector
@@ -144,7 +142,7 @@ const CreatorFormEquipment = ({
 			/>
 
 			<ErrorMessage className="row--left form-group--error" name="equipment" component="div" />
-		</div>
+		</>
 	)
 }
 

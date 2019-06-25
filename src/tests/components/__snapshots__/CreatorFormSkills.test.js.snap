@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CreatorFormSkills correctly 1`] = `
-<div>
+<Fragment>
   <h3
     className="row--center"
   >
@@ -1872,5 +1872,5 @@ exports[`should render CreatorFormSkills correctly 1`] = `
   <SkillModal
     handleCloseModal={[Function]}
   />
-</div>
+</Fragment>
 `;

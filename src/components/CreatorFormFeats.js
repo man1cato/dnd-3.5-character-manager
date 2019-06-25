@@ -7,8 +7,7 @@ import Selector from './Selector'
 const CreatorFormFeats = ({
 	values, 
 	feats, 
-	setFieldValue, 
-	validateForm
+	setFieldValue 
 }) => {
 	const [selectedFeatIds, setSelectedFeatIds] = useState(values.feats)
 	const [selected, setSelected] = useState(undefined)
@@ -16,10 +15,6 @@ const CreatorFormFeats = ({
 	useEffect(() => {
 		setFieldValue('feats', selectedFeatIds)
 	}, [selectedFeatIds])
-
-	useEffect(() => {
-		validateForm()
-	}, [])
 
 	const Content = ({selected}) => (
 		<div>
@@ -29,7 +24,7 @@ const CreatorFormFeats = ({
 	)
 	
 	return (
-		<div>
+		<>
 			<h3 className="row--center">Select Feats</h3>
 
 			<Selector
@@ -67,7 +62,7 @@ const CreatorFormFeats = ({
 			/>
 
 			<ErrorMessage className="row--left form-group--error" name="feats" component="div" />
-		</div>
+		</>
 	)
 }
 export default CreatorFormFeats

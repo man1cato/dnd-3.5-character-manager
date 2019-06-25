@@ -9,8 +9,7 @@ import { apiObjectToArray } from '../utils/utils'
 const CreatorFormSkills = ({
 	values,
 	skills,
-	setFieldValue, 
-	validateForm
+	setFieldValue
 }) => { 
 	const { skillSet, skillPoints } = values
 	const [assignedSkillPoints, setAssignedSkillPoints] = useState(0)
@@ -23,13 +22,10 @@ const CreatorFormSkills = ({
 	useEffect(() => {
 		setFieldValue('remainingSkillPoints', skillPoints - assignedSkillPoints)
 	}, [assignedSkillPoints])
-
-	useEffect(() => {
-		validateForm()
-	}, [])
 	
+
 	return (
-		<div>
+		<>
 			<h3 className="row--center">Assign Skill Points</h3>
 			<div className="row--center">{assignedSkillPoints}/{skillPoints}</div>
 			<ErrorMessage className="row--center form-group--error" name="remainingSkillPoints" component="div" />
@@ -84,7 +80,7 @@ const CreatorFormSkills = ({
 				handleCloseModal={() => setSelected(undefined)}
 			/>
 
-		</div>
+		</>
 	)
 }
 export default CreatorFormSkills

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should correctly render CreatorFormEquipment 1`] = `
-<div>
+<Fragment>
   <h3
     className="row--center"
   >
@@ -1365,5 +1365,5 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
     component="div"
     name="equipment"
   />
-</div>
+</Fragment>
 `;

@@ -667,12 +667,6 @@ exports[`should render stats page with profile data 1`] = `
                         "name": "Escape Artist",
                         "notes": "",
                       },
-                      "recLWemjNw9SD1Aeo": Object {
-                        "description": "You possess knowledge in the field of psionics. ",
-                        "keyAbility": "INT",
-                        "name": "Knowledge (Psionics)",
-                        "notes": "",
-                      },
                       "recN8ol3EXZCtf6yN": Object {
                         "description": "Able to read and write.",
                         "name": "Literacy",

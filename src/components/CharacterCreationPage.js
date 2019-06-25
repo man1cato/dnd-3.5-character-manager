@@ -72,15 +72,6 @@ export const CharacterCreationPage = (props) => {
 		}
 		setFieldValue(name, value)
 	}
-
-	const handleBack = (setErrors) => {
-		setPage(page - 1)
-		setErrors({})
-	}
-
-	const handleNext = () => {
-		setPage(page + 1)		
-	}    
 	
 	return (
 		<>
@@ -110,8 +101,8 @@ export const CharacterCreationPage = (props) => {
 						weapons: []
 					},
 					skillSet: apiObjectToArray(props.skills).map(skill => ({id: skill.id, ranks: 0 })),
-					skillPoints: 4,
-					remainingSkillPoints: 4
+					skillPoints: 0,
+					remainingSkillPoints: 0
 				}}
 											
 				validationSchema={Yup.reach(validationSchema, `page${page}`)}
@@ -164,8 +155,7 @@ export const CharacterCreationPage = (props) => {
 					setSubmitting(false)
 				}}
 			>
-
-				{({ values, setFieldValue, handleChange, handleSubmit, isSubmitting, isValid, validateForm, setErrors, setFieldError}) => (
+				{({ values, setFieldValue, handleChange, handleSubmit, isSubmitting, isValid, validateForm, setErrors, setFieldError, setTouched}) => (
 					<Form >
 						<div className="container container--body">
 							{{
@@ -176,6 +166,7 @@ export const CharacterCreationPage = (props) => {
 									jobClasses={props.jobClasses}
 									handleChange={handleChange} 
 									setFieldValue={setFieldValue}
+									setTouched={setTouched}
 								/>,
 								2: <CreatorFormJobClass
 									values={values}
@@ -202,19 +193,16 @@ export const CharacterCreationPage = (props) => {
 									values={values}
 									feats={props.feats}
 									setFieldValue={setFieldValue}
-									validateForm={validateForm}
 								/>,
 								5: <CreatorFormSkills
 									values={values}
 									skills={props.skills}
 									setFieldValue={setFieldValue}
-									validateForm={validateForm}
 								/>,
 								6: <CreatorFormEquipment
 									values={values}
 									items={props.items}
 									setFieldValue={setFieldValue}
-									validateForm={validateForm}
 								/>
 							}[page]}
 						</div>
@@ -222,8 +210,7 @@ export const CharacterCreationPage = (props) => {
 						<CreatorFormFooter 
 							page={page}
 							pageCount={pages.length}
-							handleBack={handleBack}
-							handleNext={handleNext}
+							setPage={setPage}
 							handleSubmit={handleSubmit}
 							setErrors={setErrors}
 							isSubmitting={isSubmitting}

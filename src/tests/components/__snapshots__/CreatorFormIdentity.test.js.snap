@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CreatorFormIdentity correctly 1`] = `
-<div>
+<Fragment>
   <div
     className="form-group--35"
   >
@@ -363,5 +363,5 @@ exports[`should render CreatorFormIdentity correctly 1`] = `
       />
     </div>
   </div>
-</div>
+</Fragment>
 `;

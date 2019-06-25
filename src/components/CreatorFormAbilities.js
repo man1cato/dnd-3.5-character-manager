@@ -27,7 +27,7 @@ const CreatorFormAbilities = ({
 	}, [])
 
 	return (
-		<div>
+		<>
 			<h3 className="row--center">Ability Scores</h3>
 
 			<div className="section form-grid--abilities">
@@ -51,7 +51,6 @@ const CreatorFormAbilities = ({
 								onChange={(e) => {
 									const score = Number(e.target.value)
 									const finalScore = score + raceMod
-									console.log(score, finalScore)
 									setFieldValue(`abilities.${abbr}.score`, score)
 									setFieldValue(`abilities.${abbr}.final`, finalScore, false)
 									if (abbr === 'int') { setSkillPoints(finalScore) }
@@ -85,7 +84,7 @@ const CreatorFormAbilities = ({
 
 			</div>
 			
-		</div>
+		</>
 	)
 }
 
