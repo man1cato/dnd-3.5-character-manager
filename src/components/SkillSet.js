@@ -23,7 +23,7 @@ export class SkillSet extends React.Component{
 		const col2 = this.props.skillSet.slice(Math.ceil(skillCount / 2))
 		
 		return (
-			<div className="grid grid--skills">
+			<div className="grid--skills">
 				<h5 className="grid--skills__name">Skill</h5>
 				{col1.map((skill, i) => (        
 					<button 

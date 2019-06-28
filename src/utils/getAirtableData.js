@@ -84,7 +84,7 @@ const getLevels = async (jobClassId) => {
 					reflex: levelRecord['Reflex'],
 					will: levelRecord['Will']
 				},
-				baseAttackBonus: _.compact([ levelRecord['BAB 1'], levelRecord['BAB 2'], levelRecord['BAB 3'], levelRecord['BAB 4'] ]),
+				baseAttackBonuses: _.compact([ levelRecord['BAB 1'], levelRecord['BAB 2'], levelRecord['BAB 3'], levelRecord['BAB 4'] ]),
 				xp: levelRecord['XP Required'],
 				specialAbilities: !!levelRecord['Special Abilities'] ? levelRecord['Special Abilities'] : null,
 				spellsPerDay:  _.compact([ 

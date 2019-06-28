@@ -2,212 +2,159 @@
 
 exports[`should render Abilities with profile data 1`] = `
 <div
-  className="grid grid--abilities"
+  className="grid--abilities"
 >
   <h5
     className="grid__col1"
   >
     Ability
   </h5>
-  <div
-    className="grid__col1"
-    key="ability0"
-  >
-    STR
-  </div>
-  <div
-    className="grid__col1"
-    key="ability1"
-  >
-    DEX
-  </div>
-  <div
-    className="grid__col1"
-    key="ability2"
-  >
-    CON
-  </div>
-  <div
-    className="grid__col1"
-    key="ability3"
-  >
-    INT
-  </div>
-  <div
-    className="grid__col1"
-    key="ability4"
-  >
-    WIS
-  </div>
-  <div
-    className="grid__col1"
-    key="ability5"
-  >
-    CHA
-  </div>
   <h5
     className="grid__col2"
   >
     Score
   </h5>
-  <div
-    className="grid__col2"
-    key="score0"
-  >
-    14
-  </div>
-  <div
-    className="grid__col2"
-    key="score1"
-  >
-    18
-  </div>
-  <div
-    className="grid__col2"
-    key="score2"
-  >
-    16
-  </div>
-  <div
-    className="grid__col2"
-    key="score3"
-  >
-    20
-  </div>
-  <div
-    className="grid__col2"
-    key="score4"
-  >
-    14
-  </div>
-  <div
-    className="grid__col2"
-    key="score5"
-  >
-    11
-  </div>
   <h5
     className="grid__col3"
   >
-    Mod
+    Temp Score
+  </h5>
+  <h5
+    className="grid__col4"
+  >
+     Mod
   </h5>
   <div
+    className="grid__col1"
+  >
+    STR
+  </div>
+  <div
+    className="grid__col2"
+  >
+    14
+  </div>
+  <input
     className="grid__col3"
-    key="mod0"
+    id="str"
+    name="abilities"
+    onChange={[MockFunction]}
+    type="number"
+  />
+  <div
+    className="grid__col4"
   >
     2
   </div>
   <div
+    className="grid__col1"
+  >
+    DEX
+  </div>
+  <div
+    className="grid__col2"
+  >
+    18
+  </div>
+  <input
     className="grid__col3"
-    key="mod1"
+    id="dex"
+    name="abilities"
+    onChange={[MockFunction]}
+    type="number"
+  />
+  <div
+    className="grid__col4"
   >
     4
   </div>
   <div
+    className="grid__col1"
+  >
+    CON
+  </div>
+  <div
+    className="grid__col2"
+  >
+    16
+  </div>
+  <input
     className="grid__col3"
-    key="mod2"
+    id="con"
+    name="abilities"
+    onChange={[MockFunction]}
+    type="number"
+  />
+  <div
+    className="grid__col4"
   >
     3
   </div>
   <div
+    className="grid__col1"
+  >
+    INT
+  </div>
+  <div
+    className="grid__col2"
+  >
+    20
+  </div>
+  <input
     className="grid__col3"
-    key="mod3"
+    id="int"
+    name="abilities"
+    onChange={[MockFunction]}
+    type="number"
+  />
+  <div
+    className="grid__col4"
   >
     5
   </div>
   <div
+    className="grid__col1"
+  >
+    WIS
+  </div>
+  <div
+    className="grid__col2"
+  >
+    14
+  </div>
+  <input
     className="grid__col3"
-    key="mod4"
+    id="wis"
+    name="abilities"
+    onChange={[MockFunction]}
+    type="number"
+  />
+  <div
+    className="grid__col4"
   >
     2
   </div>
   <div
+    className="grid__col1"
+  >
+    CHA
+  </div>
+  <div
+    className="grid__col2"
+  >
+    11
+  </div>
+  <input
     className="grid__col3"
-    key="mod5"
+    id="cha"
+    name="abilities"
+    onChange={[MockFunction]}
+    type="number"
+  />
+  <div
+    className="grid__col4"
   >
     0
   </div>
-  <h5
-    className="grid__col4"
-  >
-    Temp Score
-  </h5>
-  <input
-    className="grid__col4"
-    id="str"
-    key="tempScore0"
-    name="abilities"
-    onChange={[MockFunction]}
-    type="text"
-  />
-  <input
-    className="grid__col4"
-    id="dex"
-    key="tempScore1"
-    name="abilities"
-    onChange={[MockFunction]}
-    type="text"
-  />
-  <input
-    className="grid__col4"
-    id="con"
-    key="tempScore2"
-    name="abilities"
-    onChange={[MockFunction]}
-    type="text"
-  />
-  <input
-    className="grid__col4"
-    id="int"
-    key="tempScore3"
-    name="abilities"
-    onChange={[MockFunction]}
-    type="text"
-  />
-  <input
-    className="grid__col4"
-    id="wis"
-    key="tempScore4"
-    name="abilities"
-    onChange={[MockFunction]}
-    type="text"
-  />
-  <input
-    className="grid__col4"
-    id="cha"
-    key="tempScore5"
-    name="abilities"
-    onChange={[MockFunction]}
-    type="text"
-  />
-  <h5
-    className="grid__col5"
-  >
-    Temp Mod
-  </h5>
-  <div
-    className="grid__col5"
-    key="tempMod0"
-  />
-  <div
-    className="grid__col5"
-    key="tempMod1"
-  />
-  <div
-    className="grid__col5"
-    key="tempMod2"
-  />
-  <div
-    className="grid__col5"
-    key="tempMod3"
-  />
-  <div
-    className="grid__col5"
-    key="tempMod4"
-  />
-  <div
-    className="grid__col5"
-    key="tempMod5"
-  />
 </div>
 `;

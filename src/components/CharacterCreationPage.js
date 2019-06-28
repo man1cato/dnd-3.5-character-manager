@@ -7,7 +7,7 @@ import _ from 'lodash'
 
 import { history } from '../routers/AppRouter'
 import { startCreateProfile } from '../actions/profile'
-import { apiObjectToArray, calcAbilityMod, calSizeMod } from '../utils/utils'
+import { apiObjectToArray, calcAbilityMod, calcSizeMod } from '../utils/utils'
 import { abilities } from '../utils/staticData'
 
 import CreatorFormIdentity from './CreatorFormIdentity'
@@ -118,7 +118,7 @@ export const CharacterCreationPage = (props) => {
 					let armorBonus = 0
 					if (values.equipped.armor) { armorBonus += props.items[values.equipped.armor].armorBonus }
 					if (values.equipped.shield) { armorBonus += props.items[values.equipped.shield].armorBonus }
-					const baseArmorClass = 10 + armorBonus + calSizeMod(selectedRace.size) + dexMod
+					const baseArmorClass = 10 + armorBonus + calcSizeMod(selectedRace.size) + dexMod
 					const profile = {
 						name: values.name,
 						gender: values.gender,

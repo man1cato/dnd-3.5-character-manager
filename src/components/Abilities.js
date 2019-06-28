@@ -1,47 +1,34 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import _ from 'lodash'
 import { calcAbilityMod } from '../utils/utils'
 
 
-const Abilities = ({ abilities, handleChange }) => {
-	const keys = _.keys(abilities)
+const Abilities = ({ abilities, handleChange }) => (
+	<div className="grid--abilities">
+		<h5 className="grid__col1">Ability</h5>
+		<h5 className="grid__col2">Score</h5>
+		<h5 className="grid__col3">Temp Score</h5>
+		<h5 className="grid__col4"> Mod</h5>
 
-	return (
-		<div className="grid grid--abilities">
-			<h5 className="grid__col1">Ability</h5>
-			{_.map(keys, (ability, i) =>
-				<div className="grid__col1" key={`ability${i}`}>{ability.toUpperCase()}</div>
-			)}
-	
-			<h5 className="grid__col2">Score</h5>
-			{_.map(keys, (ability, i) =>
-				<div className="grid__col2" key={`score${i}`}>{abilities[ability].score}</div>
-			)}
-	
-			<h5 className="grid__col3">Mod</h5>
-			{_.map(keys, (ability, i) =>
-				<div className="grid__col3" key={`mod${i}`}>{calcAbilityMod(abilities[ability].score)}</div>
-			)}
-	
-			<h5 className="grid__col4">Temp Score</h5>
-			{_.map(keys, (ability, i) =>
+		{_.map(_.keys(abilities), (ability, i) => (
+			<Fragment key={i}>
+				<div className="grid__col1">{ability.toUpperCase()}</div>
+				<div className="grid__col2">{abilities[ability].score}</div>
 				<input
-					className="grid__col4"
-					key={`tempScore${i}`}
+					className="grid__col3"
 					id={ability}
 					name="abilities"
-					type="text"
+					type="number"
 					value={abilities[ability].tempScore}
 					onChange={handleChange}
 				/>
-			)}
-	
-			<h5 className="grid__col5">Temp Mod</h5>
-			{_.map(keys, (ability, i) =>
-				<div className="grid__col5" key={`tempMod${i}`}>{!!abilities[ability].tempScore && calcAbilityMod(abilities[ability].tempScore)}</div>
-			)}
-		</div>
-	)
-} 
+				<div className="grid__col4">
+					{!!abilities[ability].tempScore ? calcAbilityMod(abilities[ability].tempScore) : calcAbilityMod(abilities[ability].score)}
+				</div>
+			</Fragment>
+		))}
+	</div>
+)
+
 
 export default Abilities

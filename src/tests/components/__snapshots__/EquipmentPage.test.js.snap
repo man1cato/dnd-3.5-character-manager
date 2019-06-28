@@ -12,7 +12,7 @@ exports[`should render equipment page with profile data 1`] = `
       className="section"
     >
       <div
-        className="grid grid--money"
+        className="grid--money"
       >
         <div
           className="grid--money__cell"
@@ -86,7 +86,7 @@ exports[`should render equipment page with profile data 1`] = `
       </div>
     </div>
     <div
-      className="grid grid--items"
+      className="grid--items"
     >
       <h5
         className="grid__col1"

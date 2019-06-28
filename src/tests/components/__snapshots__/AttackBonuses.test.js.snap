@@ -1,16 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render saves with profile data 1`] = `
-<Saves
+exports[`should render attacks with default profile data 1`] = `
+<AttackBonuses
+  abilities={
+    Object {
+      "cha": Object {
+        "score": 11,
+      },
+      "con": Object {
+        "score": 16,
+      },
+      "dex": Object {
+        "score": 18,
+      },
+      "int": Object {
+        "score": 20,
+      },
+      "str": Object {
+        "score": 14,
+      },
+      "wis": Object {
+        "score": 14,
+      },
+    }
+  }
+  baseAttackBonuses={
+    Array [
+      2,
+    ]
+  }
   handleUpdate={
     [MockFunction] {
       "calls": Array [
         Array [
           Object {
-            "saveMods": Object {
-              "fortitude": 1,
-              "reflex": -1,
-              "will": "",
+            "attackBonusMods": Object {
+              "grapple": 1,
+              "melee": 2,
+              "ranged": "",
             },
           },
         ],
@@ -23,20 +50,14 @@ exports[`should render saves with profile data 1`] = `
       ],
     }
   }
-  profileSaveMods={
+  profileAttackBonusMods={
     Object {
-      "fortitude": 1,
-      "reflex": -1,
-      "will": "",
+      "grapple": 1,
+      "melee": 2,
+      "ranged": "",
     }
   }
-  saveBases={
-    Object {
-      "fortitude": 1,
-      "reflex": 1,
-      "will": 4,
-    }
-  }
+  size="Medium"
 >
   <div
     className="grid--6col"
@@ -60,53 +81,7 @@ exports[`should render saves with profile data 1`] = `
     <div
       className="grid__col1"
     >
-      Fortitude
-    </div>
-    <div>
-      1
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="fortitude"
-      onChange={[Function]}
-      type="number"
-      value={1}
-    />
-    <div>
-      =
-    </div>
-    <div>
-      2
-    </div>
-    <div
-      className="grid__col1"
-    >
-      Reflex
-    </div>
-    <div>
-      1
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="reflex"
-      onChange={[Function]}
-      type="number"
-      value={-1}
-    />
-    <div>
-      =
-    </div>
-    <div>
-      0
-    </div>
-    <div
-      className="grid__col1"
-    >
-      Will
+      Melee
     </div>
     <div>
       4
@@ -115,7 +90,30 @@ exports[`should render saves with profile data 1`] = `
       +
     </div>
     <input
-      id="will"
+      id="melee"
+      onChange={[Function]}
+      type="number"
+      value={2}
+    />
+    <div>
+      =
+    </div>
+    <div>
+      6
+    </div>
+    <div
+      className="grid__col1"
+    >
+      Ranged
+    </div>
+    <div>
+      6
+    </div>
+    <div>
+      +
+    </div>
+    <input
+      id="ranged"
       onChange={[Function]}
       type="number"
       value=""
@@ -124,8 +122,31 @@ exports[`should render saves with profile data 1`] = `
       =
     </div>
     <div>
+      6
+    </div>
+    <div
+      className="grid__col1"
+    >
+      Grapple
+    </div>
+    <div>
       4
     </div>
+    <div>
+      +
+    </div>
+    <input
+      id="grapple"
+      onChange={[Function]}
+      type="number"
+      value={1}
+    />
+    <div>
+      =
+    </div>
+    <div>
+      5
+    </div>
   </div>
-</Saves>
+</AttackBonuses>
 `;

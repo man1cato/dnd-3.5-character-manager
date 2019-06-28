@@ -147,17 +147,6 @@ export default async (firebaseUID) => {
 			specialAbilities: fields["Special Abilities"],
 			abilities,
 			skillSet: characterSkillSet,
-			saves: {
-				fortitude: {
-					base: Number(fields["Fort Base"]) + abilities.con.mod
-				},
-				reflex: {
-					base: Number(fields["Ref Base"]) + abilities.dex.mod
-				},
-				will: {
-					base: Number(fields["Will Base"]) + abilities.wis.mod
-				}
-			},
 			attacks: {        
 				melee: {
 					base: fields.Melee

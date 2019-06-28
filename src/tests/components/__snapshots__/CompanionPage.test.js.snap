@@ -9,7 +9,7 @@ exports[`should render CompanionPage with profile data 1`] = `
     className="container container--body"
   >
     <div
-      className="section grid grid--companion"
+      className="section grid--companion"
     >
       <h3>
         Nyx
@@ -140,7 +140,7 @@ exports[`should render CompanionPage with profile data 1`] = `
       }
     />
     <div
-      className="grid grid--combat"
+      className="grid--combat"
     >
       <div
         className="row__title"

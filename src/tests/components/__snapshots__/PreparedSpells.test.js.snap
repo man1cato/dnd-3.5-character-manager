@@ -3,7 +3,7 @@
 exports[`should render PreparedSpells with profile data 1`] = `
 <Fragment>
   <div
-    className="grid grid--spells"
+    className="grid--spells"
   >
     <h5
       className="grid__col1"

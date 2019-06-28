@@ -148,7 +148,7 @@ export class EquipmentPage extends React.Component {
 				<div className="container container--body">
 					
 					<div className="section">
-						<div className="grid grid--money">
+						<div className="grid--money">
 							{denominations.map((denomination, i) => (
 								<div className="grid--money__cell" key={`denomination${i}`}>
 									<input
@@ -168,7 +168,7 @@ export class EquipmentPage extends React.Component {
 						</div>
 					</div>
 					
-					<div className="grid grid--items">
+					<div className="grid--items">
 						<h5 className="grid__col1">Item</h5>
 						<h5>Qty</h5>
 						<h5>Value</h5>

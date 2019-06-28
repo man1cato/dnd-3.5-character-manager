@@ -26,7 +26,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
         )
       </h3>
       <div
-        className="grid grid--spells"
+        className="grid--spells"
       >
         <h5
           className="grid__col1"
@@ -155,7 +155,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
         )
       </h3>
       <div
-        className="grid grid--spells"
+        className="grid--spells"
       >
         <h5
           className="grid__col1"

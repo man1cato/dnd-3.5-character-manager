@@ -69,6 +69,13 @@ exports[`should render ProfilePage with profile data 1`] = `
           }
           age={141}
           alignment="Lawful Evil"
+          attackBonusMods={
+            Object {
+              "grapple": 1,
+              "melee": 2,
+              "ranged": "",
+            }
+          }
           attacks={
             Object {
               "grapple": Object {
@@ -222,7 +229,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 0,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     1,
                   ],
                   "saves": Object {
@@ -237,7 +244,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 1000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     1,
                   ],
                   "saves": Object {
@@ -253,7 +260,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 3000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     2,
                   ],
                   "saves": Object {
@@ -269,7 +276,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 6000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     2,
                   ],
                   "saves": Object {
@@ -289,7 +296,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 10000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     3,
                   ],
                   "saves": Object {
@@ -306,7 +313,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 15000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     3,
                   ],
                   "saves": Object {
@@ -324,7 +331,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 21000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     4,
                   ],
                   "saves": Object {
@@ -342,7 +349,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 28000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     4,
                   ],
                   "saves": Object {
@@ -361,7 +368,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 36000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     5,
                   ],
                   "saves": Object {
@@ -383,7 +390,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 45000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     5,
                   ],
                   "saves": Object {
@@ -403,7 +410,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 55000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     6,
                     1,
                   ],
@@ -424,7 +431,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 66000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     6,
                     1,
                   ],
@@ -446,7 +453,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 78000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     7,
                     2,
                   ],
@@ -468,7 +475,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 91000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     7,
                     2,
                   ],
@@ -494,7 +501,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 105000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     8,
                     3,
                   ],
@@ -517,7 +524,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 120000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     8,
                     3,
                   ],
@@ -541,7 +548,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 136000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     9,
                     4,
                   ],
@@ -565,7 +572,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 153000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     9,
                     4,
                   ],
@@ -589,7 +596,7 @@ exports[`should render ProfilePage with profile data 1`] = `
                   "xp": 171000,
                 },
                 Object {
-                  "baseAttackBonus": Array [
+                  "baseAttackBonuses": Array [
                     10,
                     5,
                   ],
@@ -693,6 +700,13 @@ exports[`should render ProfilePage with profile data 1`] = `
                 "recoVjIceMNsVyiqI",
               ],
               "speed": 30,
+            }
+          }
+          saveMods={
+            Object {
+              "fortitude": 1,
+              "reflex": -1,
+              "will": "",
             }
           }
           saves={
@@ -910,7 +924,7 @@ exports[`should render ProfilePage with profile data 1`] = `
               className="container container--body"
             >
               <div
-                className="grid grid--profile"
+                className="grid--profile"
               >
                 <img
                   className="grid--profile__img"
@@ -4686,6 +4700,11 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     },
                     "age": 141,
                     "alignment": "Lawful Evil",
+                    "attackBonusMods": Object {
+                      "grapple": 1,
+                      "melee": 2,
+                      "ranged": "",
+                    },
                     "attacks": Object {
                       "grapple": Object {
                         "base": 4,
@@ -4822,6 +4841,11 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       "Illusion, Necromancy",
                     ],
                     "race": "recOadObhQKOMa7f2",
+                    "saveMods": Object {
+                      "fortitude": 1,
+                      "reflex": -1,
+                      "will": "",
+                    },
                     "saves": Object {
                       "fortitude": Object {
                         "base": 1,

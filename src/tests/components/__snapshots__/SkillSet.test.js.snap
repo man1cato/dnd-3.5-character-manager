@@ -2,7 +2,7 @@
 
 exports[`should render SkillSet with profile data 1`] = `
 <div
-  className="grid grid--skills"
+  className="grid--skills"
 >
   <h5
     className="grid--skills__name"

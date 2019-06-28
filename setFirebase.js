@@ -74,9 +74,9 @@ const setProfile = (uid) => {
 
 // setRaces()
 setJobClasses()
-setFeats()
-setSpecialAbilities()
-setSkills()
+// setFeats()
+// setSpecialAbilities()
+// setSkills()
 // setItems()
 // setSpells()
 // setProfile(process.env.USER_ID)

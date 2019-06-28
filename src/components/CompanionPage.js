@@ -103,7 +103,7 @@ export class CompanionPage extends React.Component {
 			<div >
 				<Header pageTitle="Companion" />
 				<div className="container container--body">
-					<div className="section grid grid--companion">
+					<div className="section grid--companion">
 						<h3>{this.props.companion.name}</h3>
 						<div>{this.props.companion.type}</div>
 
@@ -138,7 +138,7 @@ export class CompanionPage extends React.Component {
 						handleChange={this.handleChange}
 					/>
 
-					<div className="grid grid--combat">
+					<div className="grid--combat">
 						<div className="row__title">Attack</div>
 						<div className="row--left">            
 							{this.props.companion.attack}

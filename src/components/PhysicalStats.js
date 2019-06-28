@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
-    <div className="grid grid--combat">
+    <div className="grid--combat">
         <div className="row__title">Hit Points</div>
         <div className="row">
             <div className="row__item">
@@ -12,7 +12,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
             <div className="row__item">
                 <h5>Mod</h5>
                 <input
-                    type="text"
+                    type="number"
                     name="hp"
                     value={hp.mod}
                     onChange={handleChange}
@@ -22,7 +22,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
             <div className="row__item">
                 <h5>Dmg</h5>
                 <input
-                    type="text"
+                    type="number"
                     name="hp"
                     id="damage"
                     value={hp.damage}
@@ -62,7 +62,7 @@ const PhysicalStats = ({hp, ac, speed, initiative, handleChange}) => (
             <div className="row__item">
                 <h5>Mod</h5>
                 <input
-                    type="text"
+                    type="number"
                     name="initiative"
                     value={initiative.mod}
                     onChange={handleChange}

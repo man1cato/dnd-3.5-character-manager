@@ -106,7 +106,7 @@ export class SpellbookPage extends React.Component {
 						<div className="section" key={level}>
 							<h3 className="row--center">Level {level} Spells ({page.total}/{page.spellsPerDay})</h3>
 
-							<div className="grid grid--spells">
+							<div className="grid--spells">
 								<h5 className="grid__col1">Spell</h5>
 								<h5>Prep</h5>
 								<h5>Rmng</h5>

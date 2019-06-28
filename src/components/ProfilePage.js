@@ -12,7 +12,7 @@ export const ProfilePage = (props) => (
 		<Header pageTitle="Character Profile" />
 		<div className="container container--body">
 
-			<div className="grid grid--profile">
+			<div className="grid--profile">
 				<img className="grid--profile__img" src={props.iconUrl} />
 
 				<h4 className="grid--profile__name">{props.name}</h4>

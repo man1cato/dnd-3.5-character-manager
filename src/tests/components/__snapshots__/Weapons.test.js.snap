@@ -3,7 +3,7 @@
 exports[`should render weapons with profile data 1`] = `
 <Fragment>
   <div
-    className="grid grid--weapons"
+    className="grid--weapons"
     key="recOvuth9QArkI54l"
   >
     <h4
@@ -28,11 +28,6 @@ exports[`should render weapons with profile data 1`] = `
     <h5
       className="grid--weapons__track"
     >
-      Atk
-    </h5>
-    <h5
-      className="grid--weapons__track"
-    >
       Dmg
     </h5>
     <h5>
@@ -42,11 +37,6 @@ exports[`should render weapons with profile data 1`] = `
       className="grid--weapons__track"
     >
       —
-    </div>
-    <div
-      className="grid--weapons__track"
-    >
-      +
     </div>
     <div
       className="grid--weapons__track"

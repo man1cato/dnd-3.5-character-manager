@@ -84,7 +84,7 @@ export class PreparedSpells extends React.Component{
    render () { 
       return (
          <>
-            <div className="grid grid--spells">
+            <div className="grid--spells">
                <h5 className="grid__col1">Spell</h5>
                <h5>Rmng</h5>
                <div></div>

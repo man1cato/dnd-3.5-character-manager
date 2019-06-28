@@ -1,47 +1,36 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Saves from '../../components/Saves'
-import profile from '../fixtures/profile'
+import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
 
-const handleChange = jest.fn()
-
-let saves, wrapper
+const handleUpdate = jest.fn()
+const profileSaveMods = characterOne.saveMods
+let props, wrapper
 
 beforeAll(async () => {
 	const api = await apiData()
-	const jobClassLevel = api.jobClasses[profile.jobClass].levels[profile.level]
-	saves = {
-		fortitude: {
-			base: jobClassLevel.saves.fortitude,
-			mod: profile.saves.fortitude.mod
-		},
-		reflex: {
-			base: jobClassLevel.saves.reflex,
-			mod: profile.saves.fortitude.mod
-		},
-		will: {
-			base: jobClassLevel.saves.will,
-			mod: profile.saves.fortitude.mod
-		}
-	}	
+	props = {
+		profileSaveMods,
+		saveBases: api.jobClasses[characterOne.jobClass].levels[characterOne.level].saves,
+		handleUpdate
+	}
 })
 
 beforeEach(() => {
-	wrapper = shallow(<Saves saves={saves} handleChange={handleChange} />)
+	wrapper = mount(<Saves {...props} />)
 })
+
 
 test('should render saves with profile data', () => {
 	expect(wrapper).toMatchSnapshot()
 })
 
-test('should trigger handleChange when mod field changes', () => {
-	const value = 3 
-	wrapper.find('#fortitude').simulate('change', {
-		target: { value }
-	})
-	expect(handleChange).toHaveBeenCalledWith({
-		target: { value }
+test('should trigger handleUpdate when mod field changes', () => {
+	const value = 3
+	wrapper.find('#fortitude').simulate('change', {	target: { value }	})
+	expect(handleUpdate).toHaveBeenCalledWith({
+		saveMods: { ...profileSaveMods, fortitude: value }
 	})
 })

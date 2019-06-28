@@ -68,6 +68,11 @@ export default {
 			base: 4
 		}
 	},
+	saveMods: {
+		fortitude: 1,
+		reflex: -1,
+		will: ''
+	},
 	attacks: {
 		melee: {
 			base: 4
@@ -78,6 +83,11 @@ export default {
 		grapple: {
 			base: 4
 		}
+	},
+	attackBonusMods: {
+		melee: 2,
+		ranged: '',
+		grapple: 1
 	},
 	ac: {
 		base: 14,
