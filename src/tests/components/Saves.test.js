@@ -1,18 +1,18 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Saves from '../../components/Saves'
 import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
 
 const handleUpdate = jest.fn()
-const profileSaveMods = characterOne.saveMods
+const saveMods = characterOne.saveMods
 let props, wrapper
 
 beforeAll(async () => {
 	const api = await apiData()
 	props = {
-		profileSaveMods,
+		saveMods,
 		saveBases: api.jobClasses[characterOne.jobClass].levels[characterOne.level].saves,
 		handleUpdate
 	}
@@ -31,6 +31,6 @@ test('should trigger handleUpdate when mod field changes', () => {
 	const value = 3
 	wrapper.find('#fortitude').simulate('change', {	target: { value }	})
 	expect(handleUpdate).toHaveBeenCalledWith({
-		saveMods: { ...profileSaveMods, fortitude: value }
+		saveMods: { ...saveMods, fortitude: value }
 	})
 })

@@ -24,22 +24,16 @@ exports[`should render combat page with profile data 1`] = `
             "touch": 14,
           }
         }
-        handleChange={[Function]}
+        handleUpdate={[Function]}
         hp={
           Object {
             "base": 32,
             "damage": 10,
             "mod": 6,
-            "total": 32,
           }
         }
-        initiative={
-          Object {
-            "base": 4,
-            "mod": "",
-            "total": 4,
-          }
-        }
+        initBase={4}
+        initMod={2}
         speed={30}
       />
     </div>
@@ -53,18 +47,18 @@ exports[`should render combat page with profile data 1`] = `
       </h3>
       <Saves
         handleUpdate={[Function]}
-        profileSaveMods={
-          Object {
-            "fortitude": 1,
-            "reflex": -1,
-            "will": "",
-          }
-        }
         saveBases={
           Object {
             "fortitude": 1,
             "reflex": 1,
             "will": 4,
+          }
+        }
+        saveMods={
+          Object {
+            "fortitude": 1,
+            "reflex": -1,
+            "will": "",
           }
         }
       />
@@ -100,19 +94,19 @@ exports[`should render combat page with profile data 1`] = `
             },
           }
         }
-        baseAttackBonuses={
-          Array [
-            2,
-          ]
-        }
-        handleUpdate={[Function]}
-        profileAttackBonusMods={
+        attackBonusMods={
           Object {
             "grapple": 1,
             "melee": 2,
             "ranged": "",
           }
         }
+        baseAttackBonuses={
+          Array [
+            2,
+          ]
+        }
+        handleUpdate={[Function]}
         size="Medium"
       />
     </div>
@@ -7506,6 +7500,7 @@ exports[`should render combat page with profile data 1`] = `
             },
           }
         }
+        startEditProfile={[MockFunction]}
       />
     </div>
   </div>

@@ -98,6 +98,7 @@ export default {
 	initiative: {
 		base: 2
 	},
+	initMod: 2,
 	weaponSet: ["recOvuth9QArkI54l"],
 	money: {
 		pp: 0,
@@ -161,12 +162,12 @@ export default {
 			base: 16 
 		},
 		abilities: {
-			str: 1,
-			dex: 15,
-			con: 10,
-			int: 8,
-			wis: 14,
-			cha: 6
+			str: { score: 1 },
+			dex: { score: 15 },
+			con: { score: 10 },
+			int: { score: 8 },
+			wis: { score: 14 },
+			cha: { score: 6 }
 		},
 		skillSet: [{
 			name: "Hide",
@@ -187,9 +188,6 @@ export default {
 		speed: {
 			ground: 10,
 			flight: 40,
-		},
-		initiative: {
-			base: 2
 		},
 		ac: {
 			base: 14,

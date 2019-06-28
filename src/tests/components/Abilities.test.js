@@ -1,18 +1,18 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Abilities from '../../components/Abilities'
-import profile from '../fixtures/profile'
+import { characterOne } from '../utils/seedDatabase'
 
 
-const handleChange = jest.fn()
-
+const handleUpdate = jest.fn()
+const abilities = characterOne.abilities
 let wrapper
 beforeEach(() => {
-  wrapper = shallow(
+  wrapper = mount(
     <Abilities
-      handleChange={handleChange}
-      abilities={profile.abilities}
+      abilities={abilities}
+      handleUpdate={handleUpdate}
     />
   )
 })
@@ -23,10 +23,15 @@ test('should render Abilities with profile data', () => {
 
 test('should handle input change', () => {
   const value = 14
-  wrapper.find({ id: 'str' }).simulate('change', {
-    target: { value }
-  })
-  expect(handleChange).toHaveBeenCalledWith({
-    target: { value }
+  wrapper.find({ id: 'str' }).simulate('change', { target: { value } })
+  
+  expect(handleUpdate).toHaveBeenCalledWith({
+    abilities: { 
+      ...abilities, 
+      str: { 
+        score: abilities.str.score,
+        tempScore: value
+      } 
+    }
   })
 })

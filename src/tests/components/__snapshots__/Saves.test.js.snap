@@ -23,18 +23,18 @@ exports[`should render saves with profile data 1`] = `
       ],
     }
   }
-  profileSaveMods={
-    Object {
-      "fortitude": 1,
-      "reflex": -1,
-      "will": "",
-    }
-  }
   saveBases={
     Object {
       "fortitude": 1,
       "reflex": 1,
       "will": 4,
+    }
+  }
+  saveMods={
+    Object {
+      "fortitude": 1,
+      "reflex": -1,
+      "will": "",
     }
   }
 >

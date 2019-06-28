@@ -92,12 +92,24 @@ exports[`should render ProfilePage with profile data 1`] = `
           companion={
             Object {
               "abilities": Object {
-                "cha": 6,
-                "con": 10,
-                "dex": 15,
-                "int": 8,
-                "str": 1,
-                "wis": 14,
+                "cha": Object {
+                  "score": 6,
+                },
+                "con": Object {
+                  "score": 10,
+                },
+                "dex": Object {
+                  "score": 15,
+                },
+                "int": Object {
+                  "score": 8,
+                },
+                "str": Object {
+                  "score": 1,
+                },
+                "wis": Object {
+                  "score": 14,
+                },
               },
               "ac": Object {
                 "base": 14,
@@ -113,9 +125,6 @@ exports[`should render ProfilePage with profile data 1`] = `
               "features": "Empathic Link, Share Spells, Improved Evasion, Deliver Touch Spells, Speak with Master",
               "hp": Object {
                 "base": 16,
-              },
-              "initiative": Object {
-                "base": 2,
               },
               "name": "Nyx",
               "skillSet": Array [
@@ -202,6 +211,7 @@ exports[`should render ProfilePage with profile data 1`] = `
           }
           iconUrl="images/elf.svg"
           id="recnPKEA6sOWaOt57"
+          initMod={2}
           initiative={
             Object {
               "base": 2,
@@ -4718,12 +4728,24 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     },
                     "companion": Object {
                       "abilities": Object {
-                        "cha": 6,
-                        "con": 10,
-                        "dex": 15,
-                        "int": 8,
-                        "str": 1,
-                        "wis": 14,
+                        "cha": Object {
+                          "score": 6,
+                        },
+                        "con": Object {
+                          "score": 10,
+                        },
+                        "dex": Object {
+                          "score": 15,
+                        },
+                        "int": Object {
+                          "score": 8,
+                        },
+                        "str": Object {
+                          "score": 1,
+                        },
+                        "wis": Object {
+                          "score": 14,
+                        },
                       },
                       "ac": Object {
                         "base": 14,
@@ -4739,9 +4761,6 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                       "features": "Empathic Link, Share Spells, Improved Evasion, Deliver Touch Spells, Speak with Master",
                       "hp": Object {
                         "base": 16,
-                      },
-                      "initiative": Object {
-                        "base": 2,
                       },
                       "name": "Nyx",
                       "skillSet": Array [
@@ -4818,6 +4837,7 @@ A successful bardic knowledge check will not reveal the powers of a magic item b
                     },
                     "iconUrl": "images/elf.svg",
                     "id": "recnPKEA6sOWaOt57",
+                    "initMod": 2,
                     "initiative": Object {
                       "base": 2,
                     },

@@ -5,9 +5,10 @@ import update from 'immutability-helper'
 import { convertInputValue } from '../utils/utils'
 
 
-const Saves = ({ profileSaveMods, saveBases, handleUpdate }) => {
-    const [saveMods, setSaveMods] = useState(_.mapValues(profileSaveMods, (val) => val || ''))
-    const [saveTotals, setSaveTotals] = useState(_.mapValues(saveMods, (val, key) => saveBases[key] + Number(val)))
+const Saves = (props) => {
+    const { saveBases, handleUpdate } = props
+    const [saveMods, setSaveMods] = useState(props.saveMods || { fortitude: 0, reflex: 0, will: 0 })
+    const [saveTotals, setSaveTotals] = useState(_.mapValues(saveMods, (val, key) => saveBases[key] + val))
 
     useEffect(() => {
         setSaveTotals(_.mapValues(saveBases, (val, key) => val + saveMods[key]))
@@ -31,10 +32,10 @@ const Saves = ({ profileSaveMods, saveBases, handleUpdate }) => {
                     <input
                         type="number"
                         id={key}
-                        value={val}
+                        value={convertInputValue(val)}
                         onChange={(e) => {
                             setSaveMods(update(saveMods, {
-                                [key]: { $set: convertInputValue(e.target.value) }
+                                [key]: { $set: Number(e.target.value) }
                             }))
                         }}
                     />

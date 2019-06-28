@@ -1,15 +1,23 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import { CompanionPage } from '../../components/CompanionPage';
-import profile from '../fixtures/profile';
+import { CompanionPage } from '../../components/CompanionPage'
+import profile from '../fixtures/profile'
 
-const props = {
-    id: profile.id,
-    companion: profile.companion
-}
+
+const startEditProfile = jest.fn()
+let wrapper, props
+beforeEach(() => {
+    props = {
+        id: profile.id,
+        companion: profile.companion,
+        startEditProfile
+    }
+    
+    wrapper = shallow(<CompanionPage {...props} />)
+})
+
 
 test('should render CompanionPage with profile data', () => {
-    const wrapper = shallow(<CompanionPage {...props} />);
-    expect(wrapper).toMatchSnapshot();
-});
+    expect(wrapper).toMatchSnapshot()
+})

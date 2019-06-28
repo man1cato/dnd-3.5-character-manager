@@ -6,17 +6,18 @@ import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
  
 
+const startEditProfile = jest.fn()
 let props, wrapper
 
 beforeAll(async () => {
     const api = await apiData()
     const jobClasses = api.jobClasses
     props = {
-        ...characterOne,
-        jobClassLevel: jobClasses[characterOne.jobClass].levels[characterOne.level],
+        profile: characterOne,
         races: api.races,
         jobClasses,
-        spells: api.spells
+        spells: api.spells,
+        startEditProfile
     }
 })
 

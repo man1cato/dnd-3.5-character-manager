@@ -5,7 +5,9 @@ export const convertTextToArray = (string) => _.compact(string.split(/\n/))
 
 export const convertInputValue = (value) => {
 	value = Number(value)
-	return (value === 0 || isNaN(value)) ? "" : value
+	if (value === '' || isNaN(value)) { return 0 }
+	if (value === 0) { return '' }
+	return value
 }
 
 export const findItemById = (storeItemArray, itemId) => storeItemArray.find((item) => item.id === itemId)

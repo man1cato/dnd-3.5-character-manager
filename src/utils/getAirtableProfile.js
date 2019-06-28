@@ -6,20 +6,16 @@ const baseUrl = 'https://api.airtable.com/v0/appK7TZeddGqjGUDL'
 
 class Ability {
 	constructor(score) {
-		this.score = score
-		this.mod = Math.floor(score/2 - 5)
-		this.tempScore = ""
-		this.tempMod = ""
+		this.score = score		
+		this.tempScore = 0
 	}
 }
 
-const mapSkills = (skillset) => _.orderBy(
-	skillset.map((skill) => ({
-		id: skill.fields["Skill ID"][0],
-		ranks: skill.fields["Total Ranks"] || 0
-	})),
-['name'], ['asc'])
-
+const mapSkills = (skillset) => _.sortBy(skillset.map((skill) => ({
+	id: skill.fields["Skill ID"][0],
+	name: skill.fields.Name,
+	ranks: skill.fields["Total Ranks"] || 0
+})), ['name'])
 
 
 export default async (firebaseUID) => {
@@ -44,25 +40,27 @@ export default async (firebaseUID) => {
 	}
 	
 	const equipmentResponse = await axios.get(`${baseUrl}/Equipment?api_key=${apiKey}&filterByFormula=${ownerFilter}`)
-	const equipment = _.orderBy(equipmentResponse.data.records.map((item) => ({
+	const equipment = _.sortBy(equipmentResponse.data.records.map((item) => ({
 		id: item.fields["Item ID"][0],
-		qty
-	})),['name'], ['asc'])
-
+		name: item.fields.Name,
+		category: item.fields.Category[0],
+		qty: item.fields.Qty
+	})), ['name'])
 
 	const spellbookResponse = await axios.get(`${baseUrl}/Spellbooks?api_key=${apiKey}&filterByFormula=${ownerFilter}`)
-	const spells = _.orderBy(spellbookResponse.data.records.map((spell) => {
+	const spells = _.sortBy(spellbookResponse.data.records.map((spell) => {
 		const prepared = spell.fields.Prepared || 0;
 		const used = spell.fields.Used || 0;
 		return {
 			id: spell.fields["Spell ID"][0],
+			name: spell.fields.Name,
 			level: Number(spell.fields.Level),
 			mastered: spell.fields["Mastered?"] || false,
 			prepared,
 			used,
 			remaining: prepared - used
 		}
-	}),['name'], ['asc'])
+	}), ['name'])
 	let spellsPerDay = [ fields["SPD 0"][0], fields["SPD 1"][0], fields["SPD 2"][0], fields["SPD 3"][0], fields["SPD 4"][0], fields["SPD 5"][0], fields["SPD 6"][0], fields["SPD 7"][0], fields["SPD 8"][0], fields["SPD 9"][0] ]
 	spellsPerDay = spellsPerDay.filter((spd) => spd > 0)
 	let spellbook = spellsPerDay.map((spd, level) => ({
@@ -89,7 +87,7 @@ export default async (firebaseUID) => {
 		name: companionFields.Name,
 		type: companionFields['Animal Type'][0],
 		hp: { 
-			base: companionFields.HP 
+			base: companionFields.HP
 		},
 		abilities: companionAbilities,
 		skillSet: companionSkillSet,
@@ -104,17 +102,6 @@ export default async (firebaseUID) => {
 			base: companionFields['AC Base'][0],
 			touch: companionFields['AC Touch'][0],
 			flat: companionFields['AC Flat'][0]
-		},
-		saves: {
-			fortitude: {
-				base: Number(companionFields["Fort Base"]) + companionAbilities.con.mod
-			},
-			reflex: {
-				base: Number(companionFields["Ref Base"]) + companionAbilities.dex.mod
-			},
-			will: {
-				base: Number(companionFields["Will Base"]) + companionAbilities.wis.mod
-			}
 		},
 		attack: companionFields.Attack[0],
 		feats: companionFields.Feats,
@@ -131,8 +118,8 @@ export default async (firebaseUID) => {
 			height: fields.Height,
 			weight: fields["Weight (lbs)"],
 			gender: fields.Gender,
-			race: fields["Race ID"],
-			jobClass: fields["Class ID"],
+			race: fields["Race ID"][0],
+			jobClass: fields["Class ID"][0],
 			deity: fields.Deity || "None",
 			alignment: fields.Alignment,
 			school: fields["School/Discipline"] || null,
@@ -147,27 +134,11 @@ export default async (firebaseUID) => {
 			specialAbilities: fields["Special Abilities"],
 			abilities,
 			skillSet: characterSkillSet,
-			attacks: {        
-				melee: {
-					base: fields.Melee
-				},
-				ranged: {
-					base: fields.Ranged
-				},
-				grapple: {
-					base: fields.Grapple
-				}
-			},
 			ac: {
 				base: fields["AC - Base"],
 				flat: fields["AC - Flat"],
 				touch: fields["AC - Touch"]
 			},
-			speed: fields.Speed[0],
-			initiative: {
-				base: fields["STR Mod"]
-			},      
-			weaponSet: equipment.filter((item) => item.category === "Weapon").map((weapon) => weapon.id),
 			money: {
 				pp: equipment.find((item) => item.name === "Platinum Piece") ? equipment.find((item) => item.name === "Platinum Piece").qty : 0,
 				gp: equipment.find((item) => item.name === "Gold Piece") ? equipment.find((item) => item.name === "Gold Piece").qty : 0,
@@ -178,6 +149,11 @@ export default async (firebaseUID) => {
 				id: item.id,
 				qty: item.qty
 			})),
+			equipped: {
+				armor: null,
+				shield: equipment.filter((item) => item.category === "Shield")[0].id,
+				weapons: equipment.filter((item) => item.category === "Weapon").map((weapon) => weapon.id)
+			},
 			spellbook,
 			companion
 		}

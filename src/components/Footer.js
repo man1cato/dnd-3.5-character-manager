@@ -26,7 +26,7 @@ export const Footer = ({profile}) => (
 				<FooterIcon svgFile={statsSVG} />
 			</Link>
 
-			<Link to={profile.attacks ? "/combat" : "/underconstruction"} >
+			<Link to={profile.hp ? "/combat" : "/underconstruction"} >
 				<FooterIcon svgFile={combatSVG} />
 			</Link>
 

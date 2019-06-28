@@ -24,6 +24,13 @@ exports[`should render attacks with default profile data 1`] = `
       },
     }
   }
+  attackBonusMods={
+    Object {
+      "grapple": 1,
+      "melee": 2,
+      "ranged": "",
+    }
+  }
   baseAttackBonuses={
     Array [
       2,
@@ -48,13 +55,6 @@ exports[`should render attacks with default profile data 1`] = `
           "value": undefined,
         },
       ],
-    }
-  }
-  profileAttackBonusMods={
-    Object {
-      "grapple": 1,
-      "melee": 2,
-      "ranged": "",
     }
   }
   size="Medium"

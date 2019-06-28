@@ -5,19 +5,20 @@ import update from 'immutability-helper'
 import { calcBaseMeleeBonus, calcBaseRangedBonus, calcBaseGrappleBonus, convertInputValue } from '../utils/utils'
 
 
-const AttackBonuses = ({ profileAttackBonusMods, abilities, baseAttackBonuses, size, handleUpdate }) => {  
+const AttackBonuses = (props) => {  
+    const { abilities, baseAttackBonuses, size, handleUpdate } = props
     const attackBonusBases = {
         melee: _.map(baseAttackBonuses, (bab) => calcBaseMeleeBonus(bab, abilities.str.score, size)),
         ranged: _.map(baseAttackBonuses, (bab) => calcBaseRangedBonus(bab, abilities.dex.score, size)),
         grapple: _.map(baseAttackBonuses, (bab) => calcBaseGrappleBonus(bab, abilities.str.score, size))
     }
-    const [attackBonusMods, setAttackBonusMods] = useState(_.mapValues(profileAttackBonusMods, (val) => val || '')) 
+    const [attackBonusMods, setAttackBonusMods] = useState(props.attackBonusMods || { melee: 0, ranged: 0, grapple: 0 }) 
     const [attackBonusTotals, setAttackBonusTotals] = useState(
-        _.mapValues(attackBonusMods, (mod, key) => _.map(attackBonusBases[key], (val) => Number(mod) + val ))
+        _.mapValues(attackBonusMods, (mod, key) => _.map(attackBonusBases[key], (val) => mod + val ))
     ) 
     
     useEffect(() => {
-        setAttackBonusTotals(_.mapValues(attackBonusMods, (mod, key) => _.map(attackBonusBases[key], (val) => Number(mod) + val)))
+        setAttackBonusTotals(_.mapValues(attackBonusMods, (mod, key) => _.map(attackBonusBases[key], (val) => mod + val)))
         handleUpdate({ attackBonusMods })
     }, [attackBonusMods])
 
@@ -38,13 +39,11 @@ const AttackBonuses = ({ profileAttackBonusMods, abilities, baseAttackBonuses, s
                     <input
                         type="number"
                         id={key}
-                        value={attackBonusMods[key]}
+                        value={convertInputValue(attackBonusMods[key])}
                         onChange={(e) => {
-                            setAttackBonusMods(
-                                update(attackBonusMods, {
-                                    [key]: { $set: convertInputValue(e.target.value) }
-                                })
-                            )
+                            setAttackBonusMods(update(attackBonusMods, {
+                                [key]: { $set: Number(e.target.value) }
+                            }))
                         }}
                     />
                     <div>=</div>

@@ -1,53 +1,39 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import _ from 'lodash';
-import SpecialAbilityModal from './SpecialAbilityModal';
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import _ from 'lodash'
 
-export class SpecialAbilities extends React.Component{
-	state = {
-		selected: undefined
-	}  
+import SpecialAbilityModal from './SpecialAbilityModal'
 
-	handleOpenModal = (e) => {
-		const id = e.target.id
-		const selected = this.props.specialAbilities[id]
-		this.setState({selected})
-	}
 
-	handleCloseModal = () => {
-		this.setState({selected: undefined})
-	}
-	
-	render () {    
-		const specialAbilities = _.orderBy(this.props.specialAbilityIds.map((id) => {
-			return {
-				...this.props.specialAbilities[id],
-				id
-			}
-		}), ['name'], ['asc'])
+export const SpecialAbilities = (props) => {
+	const [selected, setSelected] = useState(undefined)	 
+	const specialAbilities = _.sortBy(props.specialAbilityIds.map((id) => {
+		return {
+			...props.specialAbilities[id],
+			id
+		}
+	}), ['name'])
 
-		return (
-			<div>
-				{specialAbilities.map((specialAbility, i) => (
-					<button
-						className="button--link"
-						id={specialAbility.id}
-						key={`specialAbility${i}`}
-						onClick={this.handleOpenModal}
-					>
-						{specialAbility.name}
-					</button>
-				))}
+	return (
+		<div>
+			{specialAbilities.map((specialAbility, i) => (
+				<button
+					className="button--link"
+					id={specialAbility.id}
+					key={`specialAbility${i}`}
+					onClick={() => setSelected(specialAbility)}
+				>
+					{specialAbility.name}
+				</button>
+			))}
 
-				<SpecialAbilityModal 
-					selected={this.state.selected}
-					handleCloseModal={this.handleCloseModal}
-				/>
-			</div>
-		)
-	}
+			<SpecialAbilityModal 
+				selected={selected}
+				handleCloseModal={() => setSelected(undefined)}
+			/>
+		</div>
+	)	
 }
-
 
 const mapStateToProps = (state) => ({
   	specialAbilities: state.specialAbilities

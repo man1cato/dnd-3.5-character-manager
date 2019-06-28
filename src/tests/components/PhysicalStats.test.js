@@ -1,28 +1,28 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import AttackBonuses from '../../components/AttackBonuses'
+import PhysicalStats from '../../components/PhysicalStats'
 import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
 
-
+const hp = characterOne.hp
 const handleUpdate = jest.fn()
-const attackBonusMods = characterOne.attackBonusMods
 let props, wrapper
 
 beforeAll(async () => {
     const api = await apiData()
     props = {
-        attackBonusMods,
-        abilities: characterOne.abilities,
-        baseAttackBonuses: api.jobClasses[characterOne.jobClass].levels[characterOne.level].baseAttackBonuses,
-        size: api.races[characterOne.race].size,
+        hp,
+        ac: characterOne.ac,
+        initBase: 4,
+        initMod: characterOne.initMod,
+        speed: api.races[characterOne.race].speed,
         handleUpdate
     }
 })
 
 beforeEach(() => {
-    wrapper = mount(<AttackBonuses {...props} />)
+    wrapper = mount(<PhysicalStats {...props} />)
 })
 
 test('should render attacks with default profile data', () => {
@@ -31,8 +31,8 @@ test('should render attacks with default profile data', () => {
 
 test('should trigger handleUpdate when input changes', () => {
     const value = 2
-	wrapper.find('#melee').simulate('change', { target: { value } })
+	wrapper.find('#hpMod').simulate('change', { target: { value } })
     expect(handleUpdate).toHaveBeenCalledWith({
-        attackBonusMods: { ...attackBonusMods, melee: value }
+        hp: { ...hp, mod: value }
     })
 })

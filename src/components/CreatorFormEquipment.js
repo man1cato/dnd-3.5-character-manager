@@ -11,8 +11,7 @@ import EquipButton from './EquipButton'
 const CreatorFormEquipment = ({
 	values, 
 	items, 
-	setFieldValue, 
-	setFieldTouched
+	setFieldValue
 }) => {
 	const [selectedItemIds, setSelectedItemIds] = useState([])
 	const [selected, setSelected] = useState(undefined)

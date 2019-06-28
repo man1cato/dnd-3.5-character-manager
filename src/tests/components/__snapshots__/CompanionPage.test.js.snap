@@ -57,15 +57,27 @@ exports[`should render CompanionPage with profile data 1`] = `
       <Abilities
         abilities={
           Object {
-            "cha": 6,
-            "con": 10,
-            "dex": 15,
-            "int": 8,
-            "str": 1,
-            "wis": 14,
+            "cha": Object {
+              "score": 6,
+            },
+            "con": Object {
+              "score": 10,
+            },
+            "dex": Object {
+              "score": 15,
+            },
+            "int": Object {
+              "score": 8,
+            },
+            "str": Object {
+              "score": 1,
+            },
+            "wis": Object {
+              "score": 14,
+            },
           }
         }
-        handleChange={[Function]}
+        handleUpdate={[Function]}
       />
     </div>
     <div
@@ -116,22 +128,13 @@ exports[`should render CompanionPage with profile data 1`] = `
           "touch": 14,
         }
       }
-      handleChange={[Function]}
+      handleUpdate={[Function]}
       hp={
         Object {
           "base": 16,
-          "damage": "",
-          "mod": "",
-          "total": 16,
         }
       }
-      initiative={
-        Object {
-          "base": 2,
-          "mod": "",
-          "total": 2,
-        }
-      }
+      initBase={2}
       speed={
         Object {
           "flight": 40,

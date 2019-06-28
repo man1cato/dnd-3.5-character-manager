@@ -1,21 +1,27 @@
 import React from 'react'
-import ConnectedStatsPage from '../../components/StatsPage'
-import profile from '../fixtures/profile'
-import { apiData, createConnectedWrapper } from '../utils/utils'
+import { shallow } from 'enzyme'
+
+import { StatsPage } from '../../components/StatsPage'
+import { apiData } from '../utils/utils'
+import { characterOne } from '../utils/seedDatabase'
  
 
-let wrapper
+const startEditProfile = jest.fn() 
+let wrapper, props
 
 beforeAll(async () => {
 	const api = await apiData()
-	wrapper = createConnectedWrapper(ConnectedStatsPage,
-		{
-			profile,
-			jobClasses: api.jobClasses,
-			skills: api.skills
-		}
-	)
+	props = {
+		profile: characterOne, 
+		jobClasses: api.jobClasses,
+		startEditProfile
+	}
 })
+
+beforeEach(() => {
+	wrapper = shallow(<StatsPage {...props}/>)
+})
+
 
 test('should render stats page with profile data', () => {
   	expect(wrapper).toMatchSnapshot()
