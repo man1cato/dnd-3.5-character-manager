@@ -1,8 +1,8 @@
-import React, { useEffect }  from 'react';
-import { Field, ErrorMessage } from 'formik';
+import React, { useEffect }  from 'react'
+import { Field, ErrorMessage } from 'formik'
 import _ from 'lodash'
 
-import SpecialAbilities from './SpecialAbilities';
+import SpecialAbilities from './SpecialAbilities'
 import { apiObjectToArray } from '../utils/utils'
 
 

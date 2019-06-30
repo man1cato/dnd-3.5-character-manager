@@ -1,49 +1,35 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import _ from 'lodash'
 import FeatModal from './FeatModal'
 
-export class Feats extends React.Component{
-	state = {
-		selected: undefined
-	}  
+export const Feats = (props) => { 
+	const [selected, setSelected] = useState(undefined)
 
-	handleOpenModal = (e) => {
-		const featId = e.target.id
-		const selected = this.props.feats[featId]
-		this.setState({selected})
-	}
+	const feats = _.sortBy(props.featIds.map((featId) => ({
+		...props.feats[featId],
+		id: featId
+	})), ['name'])
 
-	handleCloseModal = () => {
-		this.setState({selected: undefined})
-	}
-	
-	render () {    
-		const feats = _.orderBy(this.props.featIds.map((featId) => ({
-			...this.props.feats[featId],
-			id: featId
-		})), ['name'], ['asc'])
+	return (
+		<div>
+			{feats.map((feat, i) => (
+				<button
+					className="button--link"
+					id={feat.id}
+					key={`feat${i}`}
+					onClick={() => setSelected(feat)}
+				>
+					{feat.name}
+				</button>
+			))}
 
-		return (
-			<div>
-				{feats.map((feat, i) => (
-					<button
-						className="button--link"
-						id={feat.id}
-						key={`feat${i}`}
-						onClick={this.handleOpenModal}
-					>
-						{feat.name}
-					</button>
-				))}
-
-				<FeatModal 
-					selected={this.state.selected}
-					handleCloseModal={this.handleCloseModal}
-				/>
-			</div>
-		)
-	}
+			<FeatModal 
+				selected={selected}
+				handleCloseModal={() => setSelected(undefined)}
+			/>
+		</div>
+	)
 }
 
 

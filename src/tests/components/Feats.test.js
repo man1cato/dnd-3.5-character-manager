@@ -1,32 +1,34 @@
 import React from 'react'
-import {shallow} from 'enzyme'
-import fs from 'fs'
+import {	render, fireEvent } from '@testing-library/react'
 
 import { Feats } from '../../components/Feats'
-import profile from '../fixtures/profile'
-import { apiData } from '../utils/utils';
+import { apiData } from '../utils/utils'
+import { characterOne } from '../utils/seedDatabase'
 
 
-let props, wrapper
+const featIds = characterOne.feats
+let props
 beforeAll(async () => {
 	const api = await apiData()
-	const feats = api.feats
 	props = {
-		featIds: profile.feats,
-		feats
+		featIds,
+		feats: api.feats
 	}
-	wrapper = shallow(<Feats {...props} />)
 })
 
 
 test('should render Feats with profile data', () => {
-	expect(wrapper).toMatchSnapshot()
+	const { container } = render(<Feats {...props} />)
+	expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should update state.selected on feat button click', () => {
-	const id = props.featIds[0] 
-	wrapper.find(`#${id}`).simulate('click', {
-		target: { id }
-	})
-	expect(wrapper.state('selected')).toBe(props.feats[id])
+test('should launch FeatModal on feat button click', async () => {
+	const { getByText, queryByLabelText, findByLabelText } = render(<Feats {...props} />)
+	expect(queryByLabelText('Selected Feat')).toBe(null)
+
+	const textMatch = props.feats[featIds[0]].name
+	fireEvent.click(getByText(textMatch))
+
+	const modal = await findByLabelText('Selected Feat')
+	expect(modal).toBeDefined()
 })

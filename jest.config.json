@@ -3,6 +3,9 @@
         "raf/polyfill",
         "<rootDir>/src/tests/setupTests.js"
     ],
+    "setupFilesAfterEnv": [
+        "@testing-library/react/cleanup-after-each"
+    ],
     "snapshotSerializers": [
         "enzyme-to-json/serializer"    
     ],

@@ -3,31 +3,22 @@
 exports[`should render Feats with profile data 1`] = `
 <div>
   <button
-    className="button--link"
+    class="button--link"
     id="recRjuAWe7oy6a7wY"
-    key="feat0"
-    onClick={[Function]}
   >
     Craft Wondrous Item
   </button>
   <button
-    className="button--link"
+    class="button--link"
     id="recGkxwkqppy7EYmI"
-    key="feat1"
-    onClick={[Function]}
   >
     Scribe Scroll
   </button>
   <button
-    className="button--link"
+    class="button--link"
     id="rec4KkfhKpetKIDqj"
-    key="feat2"
-    onClick={[Function]}
   >
     Spell Mastery
   </button>
-  <FeatModal
-    handleCloseModal={[Function]}
-  />
 </div>
 `;
