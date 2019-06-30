@@ -2,82 +2,67 @@
 
 exports[`should render SkillSet with profile data 1`] = `
 <div
-  className="grid--skills"
+  class="grid--skills"
 >
   <h5
-    className="grid--skills__name"
+    class="grid--skills__name"
   >
     Skill
   </h5>
+  <h5>
+    Ranks
+  </h5>
+  <h5
+    class="grid--skills__name"
+  >
+    Skill
+  </h5>
+  <h5>
+    Ranks
+  </h5>
   <button
-    className="grid__col1 grid--skills__name button--link"
+    class="grid__col1 button--link"
     id="recfbplSsRmzNs68J"
-    key="0"
-    onClick={[Function]}
   >
     Appraise
   </button>
-  <button
-    className="grid__col1 grid--skills__name button--link"
-    id="recoJ7dkAWtHAkj3v"
-    key="1"
-    onClick={[Function]}
-  >
-    Balance
-  </button>
-  <h5>
-    Ranks
-  </h5>
   <div
-    className="grid__col2"
-    key="0"
+    class="grid__col2"
   >
     4
   </div>
+  <button
+    class="grid__col1 button--link"
+    id="recoJ7dkAWtHAkj3v"
+  >
+    Balance
+  </button>
   <div
-    className="grid__col2"
-    key="1"
+    class="grid__col2"
   >
     3
   </div>
-  <h5
-    className="grid--skills__name"
-  >
-    Skill
-  </h5>
   <button
-    className="grid__col3 grid--skills__name button--link"
+    class="grid__col3 justify-self-left button--link"
     id="recHCeKVn3CB0HcNA"
-    key="0"
-    onClick={[Function]}
   >
     Climb
   </button>
-  <button
-    className="grid__col3 grid--skills__name button--link"
-    id="recs2EXcqiCIfwO0w"
-    key="1"
-    onClick={[Function]}
-  >
-    Concentration
-  </button>
-  <h5>
-    Ranks
-  </h5>
   <div
-    className="grid__col4"
-    key="0"
+    class="grid__col4"
   >
     5
   </div>
+  <button
+    class="grid__col3 justify-self-left button--link"
+    id="recs2EXcqiCIfwO0w"
+  >
+    Concentration
+  </button>
   <div
-    className="grid__col4"
-    key="1"
+    class="grid__col4"
   >
     9
   </div>
-  <SkillModal
-    handleCloseModal={[Function]}
-  />
 </div>
 `;

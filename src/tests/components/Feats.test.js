@@ -24,11 +24,13 @@ test('should render Feats with profile data', () => {
 
 test('should launch FeatModal on feat button click', async () => {
 	const { getByText, queryByLabelText, findByLabelText } = render(<Feats {...props} />)
-	expect(queryByLabelText('Selected Feat')).toBe(null)
+	const labelMatch = 'Selected Feat'
+	
+	expect(queryByLabelText(labelMatch)).toBe(null)
 
 	const textMatch = props.feats[featIds[0]].name
 	fireEvent.click(getByText(textMatch))
 
-	const modal = await findByLabelText('Selected Feat')
+	const modal = await findByLabelText(labelMatch)
 	expect(modal).toBeDefined()
 })

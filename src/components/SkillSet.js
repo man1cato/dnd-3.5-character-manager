@@ -1,70 +1,55 @@
-import React from 'react'
+import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
+import _ from 'lodash'
+
 import SkillModal from './SkillModal'
 
-export class SkillSet extends React.Component{
-	state = {
-		selected: undefined
-	}  
+export const SkillSet = (props) => {
+	const[selected, setSelected] = useState(undefined)
 
-	handlePick = (e) => {
-		const id = e.target.id
-		const selected = this.props.skills[id]
-		this.setState({selected})
-	}
-
-	handleCloseModal = () => {
-		this.setState({selected: undefined})
-	}
+	const skillCount = props.skillSet.length
+	const col1 = props.skillSet.slice(0, Math.ceil(skillCount / 2))
+	const col2 = props.skillSet.slice(Math.ceil(skillCount / 2))
 	
-	render () {
-		const skillCount = this.props.skillSet.length
-		const col1 = this.props.skillSet.slice(0, Math.ceil(skillCount / 2))
-		const col2 = this.props.skillSet.slice(Math.ceil(skillCount / 2))
-		
-		return (
-			<div className="grid--skills">
-				<h5 className="grid--skills__name">Skill</h5>
-				{col1.map((skill, i) => (        
-					<button 
-						className="grid__col1 grid--skills__name button--link" 
-						id={skill.id}
-						key={i}
-						onClick={this.handlePick}
-					>
-						{this.props.skills[skill.id].name}
-					</button>
-				))}
+	return (
+		<div className="grid--skills">
+			<h5 className="grid--skills__name">Skill</h5>
+			<h5>Ranks</h5>
+			<h5 className="grid--skills__name">Skill</h5>
+			<h5>Ranks</h5>        
 
-				<h5>Ranks</h5>
-				{col1.map((skill, i) => (
-					<div className="grid__col2" key={i}>{skill.ranks}</div>
-				))}
-				
-				<h5 className="grid--skills__name">Skill</h5>
-				{col2.map((skill, i) => (
+			{col1.map((skill) => ( 
+				<Fragment key={skill.id}>       
 					<button 
-						className="grid__col3 grid--skills__name button--link" 
+						className="grid__col1 button--link" 
 						id={skill.id}
-						key={i}
-						onClick={this.handlePick}
+						onClick={() => setSelected(props.skills[skill.id])}
 					>
-						{this.props.skills[skill.id].name}
+						{props.skills[skill.id].name}
 					</button>
-				))}
-				
-				<h5>Ranks</h5>        
-				{col2.map((skill, i) => (
-					<div className="grid__col4" key={i}>{skill.ranks}</div>
-				))}
+					<div className="grid__col2">{skill.ranks}</div>
+				</Fragment>
+			))}
 
-				<SkillModal 
-					selected={this.state.selected}
-					handleCloseModal={this.handleCloseModal}
-				/>
-			</div>
-		)
-	}
+			{col2.map((skill) => (
+				<Fragment key={skill.id}>
+					<button 
+						className="grid__col3 justify-self-left button--link" 
+						id={skill.id}
+						onClick={() => setSelected(props.skills[skill.id])}
+					>
+						{props.skills[skill.id].name}
+					</button>
+					<div className="grid__col4">{skill.ranks}</div>
+				</Fragment>
+			))}
+			
+			<SkillModal 
+				selected={selected}
+				handleCloseModal={() => setSelected()}
+			/>
+		</div>
+	)
 }
 
 

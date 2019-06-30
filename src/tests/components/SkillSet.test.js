@@ -1,33 +1,36 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 
 import { SkillSet } from '../../components/SkillSet'
-import profile from '../fixtures/profile'
 import { apiData } from '../utils/utils'
+import { characterOne } from '../utils/seedDatabase'
 
 
-let  props, wrapper, api
-
+const skillSet = characterOne.skillSet
+let props
 beforeAll(async () => {
-	api = await apiData()
-
+	const api = await apiData()
 	props = {
-		skillSet: profile.skillSet,
+		skillSet,
 		skills: api.skills
 	}
-	
-	wrapper = shallow(<SkillSet {...props} />)
 })
 
 
 test('should render SkillSet with profile data', () => {
-	expect(wrapper).toMatchSnapshot()
+	const { container } = render(<SkillSet {...props} />)
+	expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should update selected in state on skill button click', () => {
-	const id = props.skillSet[0].id
-	wrapper.find(`#${id}`).simulate('click', {
-		target: { id }
-	})
-	expect(wrapper.state('selected')).toBe(props.skills[id])
+test('should update selected in state on skill button click', async () => {
+	const { getByText, queryByLabelText, findByLabelText } = render(<SkillSet {...props} />)
+	const labelMatch = 'Selected Skill'
+	
+	expect(queryByLabelText(labelMatch)).toBe(null)
+
+	const textMatch = props.skills[skillSet[0].id].name
+	fireEvent.click(getByText(textMatch))
+
+	const modal = await findByLabelText(labelMatch)
+	expect(modal).toBeDefined()
 })
