@@ -1,148 +1,110 @@
-import React, {Fragment} from 'react'
-import {connect} from 'react-redux'
+import React, { Fragment, useState, useEffect } from 'react'
 import update from 'immutability-helper'
 
 import SpellModal from './SpellModal'
 
 
 const listPreparedSpells = (spellbook) => {
-   let preparedSpells = []
-   spellbook.forEach((page) => {
-      const filteredSpells = page.spells.filter((spell) => spell.prepared > 0)
-      filteredSpells.forEach((spell) => preparedSpells.push(spell))         
-   })
-   return preparedSpells
+	let preparedSpells = []
+	spellbook.forEach((page) => {
+		const filteredSpells = page.spells.filter((spell) => spell.prepared > 0)
+		filteredSpells.forEach((spell) => preparedSpells.push(spell))         
+	})
+	return preparedSpells
 }
 
-export class PreparedSpells extends React.Component{
-   state = {
-      preparedSpells: listPreparedSpells(this.props.spellbook),
-      spellbook: this.props.spellbook,
-      castSpells: [],
-      selected: undefined
-   }     
+export const PreparedSpells = (props) => {
+	const [spellbook, setSpellbook] = useState(props.spellbook)
+	const [preparedSpells, setPreparedSpells] = useState(listPreparedSpells(spellbook))
+	const [castSpells, setCastSpells] = useState([])
+	const [selected, setSelected] = useState(undefined)
 
-   handleOpenModal = (e) => {
-      const id = e.target.id
-      const selected = this.props.spells[id]
-      this.setState({selected})
-   }
+	useEffect(() => {
+		setPreparedSpells(listPreparedSpells(spellbook))
+		props.handleUpdate({ spellbook })
+	}, [spellbook])
 
-   handleCloseModal = () => {
-      this.setState({selected: undefined})
-   }
+	const handleChange = (e) => {
+		const level = e.target.getAttribute("level")
+		const spellId = e.target.getAttribute("spellid")
+		const index = props.spellbook[level].spells.findIndex((spell) => spell.id === spellId)
+		const valueChange = Number(e.target.getAttribute("change"))
+		
+		const spell = spellbook[level].spells[index]
+		const used = spell.used + valueChange
+		const remaining = spell.prepared - used
+		
+		if (valueChange > 0) {
+			setCastSpells([...castSpells, spellId])
+		} else {
+			setCastSpells(castSpells.filter((id) => id !== spellId))
+		}
 
-   handleChange = (e) => {
-      const level = e.target.getAttribute("level")
-      const spellId = e.target.getAttribute("spellid")
-      const index = this.props.spellbook[level].spells.findIndex((spell) => spell.id === spellId)
-      const attribute = e.target.getAttribute("attribute")
-      const valueChange = Number(e.target.getAttribute("change"))
-      
-      this.setState((prevState) => {
-         const spell = prevState.spellbook[level].spells[index]
-         const value = prevState.spellbook[level].spells[index][attribute] + valueChange
-         const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value
-         let castSpells = prevState.castSpells
-         if (valueChange > 0) {
-            castSpells.push(spellId)
-         } else {
-            castSpells = castSpells.filter((id) => id !== spellId)
-         }
-
-         return {
-            spellbook: update(prevState.spellbook, {
-               [level]: {
-                  spells: {
-                     [index]: {
-                        [attribute]: { $set: value },
-                        remaining: { $set: remaining }
-                     }
-                  }
-               }
-            }),
-            castSpells
-         }
-      }, () => {
-         this.setState((prevState) => {
-            const total = prevState.spellbook[level].spells.map((spell) => spell.prepared).reduce((total, num) => total + num)
-            const preparedSpells = listPreparedSpells(prevState.spellbook)
-            return {
-               spellbook: update(prevState.spellbook, {
-                  [level]: {
-                     total: { $set: total }
-                  }
-               }),
-               preparedSpells               
-            }
-         }, () => {
-            this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook})
-         })
-      })
-   }
+		setSpellbook(update(spellbook, {
+			[level]: {
+				spells: {
+					[index]: {
+						used: { $set: used },
+						remaining: { $set: remaining }
+					}
+				}
+			}
+		}))
+	}
   
-   render () { 
-      return (
-         <>
-            <div className="grid--spells">
-               <h5 className="grid__col1">Spell</h5>
-               <h5>Rmng</h5>
-               <div></div>
-               <div></div>
+	return (
+		<>
+			<div className="grid--spells">
+				<h5 className="grid__col1">Spell</h5>
+				<h5 className="grid__col2">Rmng</h5>
 
-               {this.state.preparedSpells.map((spell, i) => (
-                  <Fragment key={i}>						
-                     <button 
-                        className="grid__col1 button--link"                         
-                        id={spell.id}
-                        onClick={this.handleOpenModal}
-                     >
-                        {this.props.spells[spell.id].name}
-                     </button>
-            
-                     <div>{spell.remaining}</div>
+				{preparedSpells.map((spell, i) => (
+					<Fragment key={i}>						
+						<button 
+							className="grid__col1 button--link"                         
+							id={spell.id}
+							onClick={() => setSelected(props.spells[spell.id])}
+						>
+							{props.spells[spell.id].name}
+						</button>
+			
+						<div className="grid__col2" id={`${spell.id}Remaining`}>{spell.remaining}</div>
 
-                     {this.state.castSpells.includes(spell.id) ?
-                        <button 
-                           spellid={spell.id}
-                           level={spell.level}
-                           attribute="used"
-                           change={-1}
-                           onClick={this.handleChange}
-                        >
-                           Undo
-                        </button>
-                        :
-                        <div></div>
-                     }
-                     
-                     {spell.remaining > 0 ?
-                        <button 
-                           id={`cast${spell.level}${i}`}
-                           spellid={spell.id}
-                           level={spell.level}
-                           attribute="used"
-                           change={1}
-                           onClick={this.handleChange}
-                        >
-                           Cast
-                        </button>
-                        :
-                        <div></div>
-                     }
+						{castSpells.includes(spell.id) && (
+							<button 
+								className="grid__col3"
+								id={`${spell.id}UndoButton`}
+								spellid={spell.id}
+								level={spell.level}
+								change={-1}
+								onClick={(e) => handleChange(e)}
+							>
+								Undo
+							</button>
+						)}
+						
+						{spell.remaining > 0 && (
+							<button 
+								className="grid__col4"
+								id={`${spell.id}CastButton`}
+								spellid={spell.id}
+								level={spell.level}
+								change={1}
+								onClick={(e) => handleChange(e)}
+							>
+								Cast
+							</button>
+						)}                     
+					</Fragment>
+				))}
+			</div>
 
-                     
-                  </Fragment>
-               ))}
-            </div>
-
-            <SpellModal 
-               selected={this.state.selected}
-               handleCloseModal={this.handleCloseModal}
-            />   
-         </>
-      )
-   }
+			<SpellModal 
+				selected={selected}
+				handleCloseModal={() => setSelected(undefined)}
+			/>   
+		</>
+	)
 }
 
 

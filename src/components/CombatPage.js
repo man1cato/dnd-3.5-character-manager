@@ -74,10 +74,9 @@ export const CombatPage = ({ profile, races, jobClasses, spells, startEditProfil
 					<div className="section">
 						<h3 className="section__title">Prepared Spells</h3>
 						<PreparedSpells 
-							id={profile.id}
 							spellbook={profile.spellbook}
 							spells={spells}
-							startEditProfile={startEditProfile}
+							handleUpdate={handleUpdate}
 						/>
 					</div>
 				)}

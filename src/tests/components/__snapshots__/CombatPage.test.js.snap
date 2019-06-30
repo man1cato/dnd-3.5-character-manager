@@ -137,6 +137,7 @@ exports[`should render combat page with profile data 1`] = `
         Prepared Spells
       </h3>
       <PreparedSpells
+        handleUpdate={[Function]}
         spellbook={
           Array [
             Object {
@@ -7500,7 +7501,6 @@ exports[`should render combat page with profile data 1`] = `
             },
           }
         }
-        startEditProfile={[MockFunction]}
       />
     </div>
   </div>

@@ -1,77 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render PreparedSpells with profile data 1`] = `
-<Fragment>
-  <div
-    className="grid--spells"
+<div
+  class="grid--spells"
+>
+  <h5
+    class="grid__col1"
   >
-    <h5
-      className="grid__col1"
-    >
-      Spell
-    </h5>
-    <h5>
-      Rmng
-    </h5>
-    <div />
-    <div />
-    <button
-      className="grid__col1 button--link"
-      id="rec8IQeYmBr3f1BMC"
-      onClick={[Function]}
-    >
-      Acid Splash
-    </button>
-    <div>
-      1
-    </div>
-    <div />
-    <button
-      attribute="used"
-      change={1}
-      id="cast00"
-      level={0}
-      onClick={[Function]}
-      spellid="rec8IQeYmBr3f1BMC"
-    >
-      Cast
-    </button>
-    <button
-      className="grid__col1 button--link"
-      id="recwpeRoCsea4vidW"
-      onClick={[Function]}
-    >
-      Arcane Mark
-    </button>
-    <div>
-      1
-    </div>
-    <div />
-    <button
-      attribute="used"
-      change={1}
-      id="cast01"
-      level={0}
-      onClick={[Function]}
-      spellid="recwpeRoCsea4vidW"
-    >
-      Cast
-    </button>
-    <button
-      className="grid__col1 button--link"
-      id="recRhVs0ahtQZpbXx"
-      onClick={[Function]}
-    >
-      Charm Person
-    </button>
-    <div>
-      0
-    </div>
-    <div />
-    <div />
+    Spell
+  </h5>
+  <h5
+    class="grid__col2"
+  >
+    Rmng
+  </h5>
+  <button
+    class="grid__col1 button--link"
+    id="rec8IQeYmBr3f1BMC"
+  >
+    Acid Splash
+  </button>
+  <div
+    class="grid__col2"
+    id="rec8IQeYmBr3f1BMCRemaining"
+  >
+    1
   </div>
-  <SpellModal
-    handleCloseModal={[Function]}
-  />
-</Fragment>
+  <button
+    change="1"
+    class="grid__col4"
+    id="rec8IQeYmBr3f1BMCCastButton"
+    level="0"
+    spellid="rec8IQeYmBr3f1BMC"
+  >
+    Cast
+  </button>
+  <button
+    class="grid__col1 button--link"
+    id="recwpeRoCsea4vidW"
+  >
+    Arcane Mark
+  </button>
+  <div
+    class="grid__col2"
+    id="recwpeRoCsea4vidWRemaining"
+  >
+    1
+  </div>
+  <button
+    change="1"
+    class="grid__col4"
+    id="recwpeRoCsea4vidWCastButton"
+    level="0"
+    spellid="recwpeRoCsea4vidW"
+  >
+    Cast
+  </button>
+  <button
+    class="grid__col1 button--link"
+    id="recRhVs0ahtQZpbXx"
+  >
+    Charm Person
+  </button>
+  <div
+    class="grid__col2"
+    id="recRhVs0ahtQZpbXxRemaining"
+  >
+    0
+  </div>
+</div>
 `;
