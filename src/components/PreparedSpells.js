@@ -7,7 +7,7 @@ import SpellModal from './SpellModal'
 const listPreparedSpells = (spellbook) => {
 	let preparedSpells = []
 	spellbook.forEach((page) => {
-		const filteredSpells = page.spells.filter((spell) => spell.prepared > 0)
+		const filteredSpells = page.filter((spell) => spell.prepared > 0)
 		filteredSpells.forEach((spell) => preparedSpells.push(spell))         
 	})
 	return preparedSpells
@@ -27,10 +27,10 @@ export const PreparedSpells = (props) => {
 	const handleChange = (e) => {
 		const level = e.target.getAttribute("level")
 		const spellId = e.target.getAttribute("spellid")
-		const index = props.spellbook[level].spells.findIndex((spell) => spell.id === spellId)
+		const index = props.spellbook[level].findIndex((spell) => spell.id === spellId)
 		const valueChange = Number(e.target.getAttribute("change"))
 		
-		const spell = spellbook[level].spells[index]
+		const spell = spellbook[level][index]
 		const used = spell.used + valueChange
 		const remaining = spell.prepared - used
 		
@@ -42,12 +42,10 @@ export const PreparedSpells = (props) => {
 
 		setSpellbook(update(spellbook, {
 			[level]: {
-				spells: {
-					[index]: {
-						used: { $set: used },
-						remaining: { $set: remaining }
-					}
-				}
+				[index]: {
+					used: { $set: used },
+					remaining: { $set: remaining }
+				}			
 			}
 		}))
 	}

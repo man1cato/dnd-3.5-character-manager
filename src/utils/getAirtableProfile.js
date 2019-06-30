@@ -61,15 +61,8 @@ export default async (firebaseUID) => {
 			remaining: prepared - used
 		}
 	}), ['name'])
-	let spellsPerDay = [ fields["SPD 0"][0], fields["SPD 1"][0], fields["SPD 2"][0], fields["SPD 3"][0], fields["SPD 4"][0], fields["SPD 5"][0], fields["SPD 6"][0], fields["SPD 7"][0], fields["SPD 8"][0], fields["SPD 9"][0] ]
-	spellsPerDay = spellsPerDay.filter((spd) => spd > 0)
-	let spellbook = spellsPerDay.map((spd, level) => ({
-		spells: spells.filter((spell) => spell.level == level),
-		spellsPerDay: fields[`SPD ${level}`][0]
-	}))
-	for (let i = 0; i < spellbook.length; i++) {
-		spellbook[i].total = spellbook[i].spells.map((spell) => spell.prepared).reduce((total, num) => total + num)
-	}
+	
+	const spellbook = _.map(Array(level + 1), (val, level) => spells.filter((spell) => spell.level === level)) 
 
 	const companionResponse = await axios.get(`${baseUrl}/Companions?api_key=${apiKey}&filterByFormula=${ownerFilter}`)
 	const companionFields = companionResponse.data.records[0].fields;

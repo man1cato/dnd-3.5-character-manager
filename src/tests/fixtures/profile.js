@@ -127,8 +127,8 @@ export default {
 			'recWQ2ml4RhoLtvik'
 		]
 	},
-	spellbook: [{
-		spells: [{
+	spellbook: [
+		[{
 			id: "rec8IQeYmBr3f1BMC",
 			level: 0,
 			mastered: false,
@@ -143,18 +143,15 @@ export default {
 			used: 1,
 			remaining: 1
 		}],
-		spellsPerDay: 4
-	},{
-		spells: [{
+		[{
 			id: "recRhVs0ahtQZpbXx",
 			level: 1,
 			mastered: false,
 			prepared: 1,
 			used: 1,
 			remaining: 0
-		}],
-		spellsPerDay: 3
-	}],
+		}]
+	],
 	companion: {
 		name: "Nyx",
 		type: "Raven",

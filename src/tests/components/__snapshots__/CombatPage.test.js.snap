@@ -140,40 +140,34 @@ exports[`should render combat page with profile data 1`] = `
         handleUpdate={[Function]}
         spellbook={
           Array [
-            Object {
-              "spells": Array [
-                Object {
-                  "id": "rec8IQeYmBr3f1BMC",
-                  "level": 0,
-                  "mastered": false,
-                  "prepared": 1,
-                  "remaining": 1,
-                  "used": 0,
-                },
-                Object {
-                  "id": "recwpeRoCsea4vidW",
-                  "level": 0,
-                  "mastered": true,
-                  "prepared": 2,
-                  "remaining": 1,
-                  "used": 1,
-                },
-              ],
-              "spellsPerDay": 4,
-            },
-            Object {
-              "spells": Array [
-                Object {
-                  "id": "recRhVs0ahtQZpbXx",
-                  "level": 1,
-                  "mastered": false,
-                  "prepared": 1,
-                  "remaining": 0,
-                  "used": 1,
-                },
-              ],
-              "spellsPerDay": 3,
-            },
+            Array [
+              Object {
+                "id": "rec8IQeYmBr3f1BMC",
+                "level": 0,
+                "mastered": false,
+                "prepared": 1,
+                "remaining": 1,
+                "used": 0,
+              },
+              Object {
+                "id": "recwpeRoCsea4vidW",
+                "level": 0,
+                "mastered": true,
+                "prepared": 2,
+                "remaining": 1,
+                "used": 1,
+              },
+            ],
+            Array [
+              Object {
+                "id": "recRhVs0ahtQZpbXx",
+                "level": 1,
+                "mastered": false,
+                "prepared": 1,
+                "remaining": 0,
+                "used": 1,
+              },
+            ],
           ]
         }
         spells={

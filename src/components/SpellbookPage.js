@@ -1,184 +1,130 @@
-import React, {Fragment} from 'react';
+import React, { Fragment, useState, useEffect } from 'react'
+import { connect } from 'react-redux'
+import update from 'immutability-helper'
+import _ from 'lodash'
 
-import { connect } from 'react-redux';
-import update from 'immutability-helper';
-
-import Header from './Header';
-import Footer from './Footer';
-import SpellModal from './SpellModal';
-import { startEditProfile } from '../actions/profile';
+import Header from './Header'
+import Footer from './Footer'
+import SpellModal from './SpellModal'
+import { startEditProfile } from '../actions/profile'
 
 
-export class SpellbookPage extends React.Component {
-	state = {
-		spellbook: this.props.spellbook,
-		preparedSpells: [],
-		selected: undefined
-	}
+const calcPreparedTotals = (spellbook) => _.map(spellbook, (level) => _.reduce(level, (total, spell) => total + spell.prepared, 0))
 
-	handleOpenModal = (e) => {
-		const id = e.target.id
-		const selected = this.props.spells[id]
-		this.setState({selected})
-	}
+export const SpellbookPage = (props) => {
+	const [spellbook, setSpellbook] = useState(props.profile.spellbook)
+	const [preparedTotals, setPreparedTotals] = useState(calcPreparedTotals(spellbook))
+	const [selected, setSelected] = useState(undefined)
+	const spellsPerDay = props.jobClasses[props.profile.jobClass].levels[props.profile.level].spellsPerDay
 
-	handleCloseModal = () => {
-		this.setState({selected: undefined})
-	}
+	useEffect(() => {
+		setPreparedTotals(calcPreparedTotals(spellbook))
+		props.startEditProfile(props.profile.id, { spellbook })
+	}, [spellbook])
 
-	handleChange = (e) => {
-		const spellId = e.target.getAttribute("spellid")
+	const handleChange = (e) => {
 		const level = e.target.getAttribute("level")
 		const index = e.target.getAttribute("index")
-		const attribute = e.target.getAttribute("attribute")
 		const valueChange = Number(e.target.getAttribute("change"))
-		const name = e.target.name
 
-		this.setState((prevState) => {
-			const spell = prevState.spellbook[level].spells[index]
-			const value = prevState.spellbook[level].spells[index][attribute] + valueChange
-			const remaining = attribute === "prepared" ? value - spell.used : spell.prepared - value
-			let preparedSpells = prevState.preparedSpells;
-         if (value > 0 && !preparedSpells.includes(spellId)) {
-            preparedSpells.push(spellId)
-			}
-			if (value === 0 || name === "clear") {
-            preparedSpells = preparedSpells.filter((id) => id !== spellId)
-			}
-			
-			if (name === "clear") {
-				return {
-					spellbook: update(prevState.spellbook, {
-						[level]: {
-							spells: {
-								[index]: {
-									prepared: { $set: 0 },
-									used: { $set: 0 },
-									remaining: { $set: 0 }
-								}
-							}
-						}
-					}),
-					preparedSpells
+		const spell = spellbook[level][index]
+		const value = spell.prepared + valueChange
+		const remaining = value - spell.used
+
+		setSpellbook(update(spellbook, {
+			[level]: {
+				[index]: {
+					prepared: { $set: value },
+					remaining: { $set: remaining }
 				}
 			}
-
-			return {
-				spellbook: update(prevState.spellbook, {
-					[level]: {
-						spells: {
-							[index]: {
-								[attribute]: { $set: value },
-								remaining: { $set: remaining }
-							}
-						}
-					}
-				}),
-				preparedSpells
-			}
-		}, () => {
-			this.setState((prevState) => {
-				const total = prevState.spellbook[level].spells.map((spell) => spell.prepared).reduce((total, num) => total + num);
-				return {
-					spellbook: update(prevState.spellbook, {
-						[level]: {
-							total: { $set: total }
-						}
-					})
-				}
-			}, () => {
-				this.props.startEditProfile(this.props.id, {spellbook: this.state.spellbook});
-			})
-		})
+		}))
 	}
 	
-	render() {
-		return (
-			<div >
-				<Header pageTitle="Spellbook" />
-				<SpellModal 
-					selected={this.state.selected}
-					handleCloseModal={this.handleCloseModal}
-				/>
-				<div className="container container--body">
+	return (
+		<div >
+			<Header pageTitle="Spellbook" />
+			
+			<div className="container container--body">
+				{spellbook.map((page, level) => (
+					<div className="section" key={level}>
+						<h3 className="row--center">Level {level} Spells ({preparedTotals[level]}/{spellsPerDay[level]})</h3>
 
-					{this.state.spellbook.map((page, level) => (
-						<div className="section" key={level}>
-							<h3 className="row--center">Level {level} Spells ({page.total}/{page.spellsPerDay})</h3>
+						<div className="grid--spells">
+							<h5 className="grid__col1">Spell</h5>
+							<h5 className="grid__col2">Prep</h5>
+							<h5 className="grid__col3">Rmng</h5>
 
-							<div className="grid--spells">
-								<h5 className="grid__col1">Spell</h5>
-								<h5>Prep</h5>
-								<h5>Rmng</h5>
-								<div></div>
+							{page.map((spell, index) => (
+								<Fragment key={index}>
+									<button 
+										className="grid__col1 button--link" 
+										id={spell.id}
+										onClick={() => setSelected(props.spells[spell.id])}
+									>
+										{props.spells[spell.id].name}
+									</button>
 
-								{page.spells.map((spell, i) => (
-									<Fragment key={i}>
+									<div className="grid__col2 grid--spells__attribute" >
+										<button
+											change={1}
+											level={level}
+											index={index}
+											onClick={(e) => handleChange(e)}
+										>+</button>
+										<div>{spell.prepared}</div>
+										<button
+											change={-1}
+											level={level}
+											index={index}
+											onClick={(e) => handleChange(e)}
+										>-</button>
+									</div>
+									
+									<div className="grid__col3">{spell.remaining}</div>
+
+									{(spell.prepared !== 0 || spell.remaining !== 0 || spell.used !== 0) && (
 										<button 
-											className="grid__col1 button--link" 
-											id={spell.id}
-											onClick={this.handleOpenModal}
+											className="grid__col4" 
+											onClick={() => setSpellbook(update(spellbook, {
+												[level]: {
+													[index]: {
+														prepared: { $set: 0 },
+														used: { $set: 0 },
+														remaining: { $set: 0 }
+													}
+												}
+											}))}
 										>
-											{this.props.spells[spell.id].name}
+											x
 										</button>
+									)}
+								</Fragment>
+							))}                        
 
-										<div className="grid__col2 grid--spells__attribute" >
-											<button
-												change={1}
-												spellid={spell.id}
-												index={i}
-												attribute="prepared"
-												level={level}
-												onClick={this.handleChange}
-											>+</button>
-											<div>{spell.prepared}</div>
-											<button
-												change={-1}
-												spellid={spell.id}
-												index={i}
-												attribute="prepared"
-												level={level}
-												onClick={this.handleChange}
-											>-</button>
-										</div>
-										
-										<div className="grid__col3">{spell.remaining}</div>
-
-										{spell.prepared !== 0 || spell.remaining !== 0 || spell.used !== 0 ?
-											<button 
-												className="grid__col4" 
-												name="clear"
-												spellid={spell.id}
-												index={i}
-												level={level}
-												onClick={this.handleChange}
-											>
-												x
-											</button>
-											:
-											<div></div>
-										}
-									</Fragment>
-								))}                        
-
-							</div>
 						</div>
-					))}
+					</div>
+				))}
 
-				</div>
-				<Footer />
+				<SpellModal
+					selected={selected}
+					handleCloseModal={() => setSelected(undefined)}
+				/>
+
 			</div>
-		)
-	}
+			<Footer />
+		</div>
+	)
+	
 }
 
 const mapStateToProps = (state) => ({
-	id: state.profile.id,
-	spellbook: state.profile.spellbook,
-	spells: state.spells
+	profile: state.profile,
+	spells: state.spells,
+	jobClasses: state.jobClasses
 })
 
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch) => ({
 	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 })
 

@@ -5,9 +5,6 @@ exports[`should render SpellbookPage with profile data 1`] = `
   <Connect(Header)
     pageTitle="Spellbook"
   />
-  <SpellModal
-    handleCloseModal={[Function]}
-  />
   <div
     className="container container--body"
   >
@@ -21,6 +18,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Level 
         0
          Spells (
+        3
         /
         4
         )
@@ -33,13 +31,16 @@ exports[`should render SpellbookPage with profile data 1`] = `
         >
           Spell
         </h5>
-        <h5>
+        <h5
+          className="grid__col2"
+        >
           Prep
         </h5>
-        <h5>
+        <h5
+          className="grid__col3"
+        >
           Rmng
         </h5>
-        <div />
         <button
           className="grid__col1 button--link"
           id="rec8IQeYmBr3f1BMC"
@@ -51,12 +52,10 @@ exports[`should render SpellbookPage with profile data 1`] = `
           className="grid__col2 grid--spells__attribute"
         >
           <button
-            attribute="prepared"
             change={1}
             index={0}
             level={0}
             onClick={[Function]}
-            spellid="rec8IQeYmBr3f1BMC"
           >
             +
           </button>
@@ -64,12 +63,10 @@ exports[`should render SpellbookPage with profile data 1`] = `
             1
           </div>
           <button
-            attribute="prepared"
             change={-1}
             index={0}
             level={0}
             onClick={[Function]}
-            spellid="rec8IQeYmBr3f1BMC"
           >
             -
           </button>
@@ -81,11 +78,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
         </div>
         <button
           className="grid__col4"
-          index={0}
-          level={0}
-          name="clear"
           onClick={[Function]}
-          spellid="rec8IQeYmBr3f1BMC"
         >
           x
         </button>
@@ -100,12 +93,10 @@ exports[`should render SpellbookPage with profile data 1`] = `
           className="grid__col2 grid--spells__attribute"
         >
           <button
-            attribute="prepared"
             change={1}
             index={1}
             level={0}
             onClick={[Function]}
-            spellid="recwpeRoCsea4vidW"
           >
             +
           </button>
@@ -113,12 +104,10 @@ exports[`should render SpellbookPage with profile data 1`] = `
             2
           </div>
           <button
-            attribute="prepared"
             change={-1}
             index={1}
             level={0}
             onClick={[Function]}
-            spellid="recwpeRoCsea4vidW"
           >
             -
           </button>
@@ -130,11 +119,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
         </div>
         <button
           className="grid__col4"
-          index={1}
-          level={0}
-          name="clear"
           onClick={[Function]}
-          spellid="recwpeRoCsea4vidW"
         >
           x
         </button>
@@ -150,6 +135,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Level 
         1
          Spells (
+        1
         /
         3
         )
@@ -162,13 +148,16 @@ exports[`should render SpellbookPage with profile data 1`] = `
         >
           Spell
         </h5>
-        <h5>
+        <h5
+          className="grid__col2"
+        >
           Prep
         </h5>
-        <h5>
+        <h5
+          className="grid__col3"
+        >
           Rmng
         </h5>
-        <div />
         <button
           className="grid__col1 button--link"
           id="recRhVs0ahtQZpbXx"
@@ -180,12 +169,10 @@ exports[`should render SpellbookPage with profile data 1`] = `
           className="grid__col2 grid--spells__attribute"
         >
           <button
-            attribute="prepared"
             change={1}
             index={0}
             level={1}
             onClick={[Function]}
-            spellid="recRhVs0ahtQZpbXx"
           >
             +
           </button>
@@ -193,12 +180,10 @@ exports[`should render SpellbookPage with profile data 1`] = `
             1
           </div>
           <button
-            attribute="prepared"
             change={-1}
             index={0}
             level={1}
             onClick={[Function]}
-            spellid="recRhVs0ahtQZpbXx"
           >
             -
           </button>
@@ -210,16 +195,15 @@ exports[`should render SpellbookPage with profile data 1`] = `
         </div>
         <button
           className="grid__col4"
-          index={0}
-          level={1}
-          name="clear"
           onClick={[Function]}
-          spellid="recRhVs0ahtQZpbXx"
         >
           x
         </button>
       </div>
     </div>
+    <SpellModal
+      handleCloseModal={[Function]}
+    />
   </div>
   <Connect(Footer) />
 </div>

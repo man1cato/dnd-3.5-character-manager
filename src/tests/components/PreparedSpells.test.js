@@ -27,13 +27,13 @@ test('should render PreparedSpells with profile data', () => {
     expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should launch SpellModal on feat button click', async () => {
+test('should launch SpellModal on spell button click', async () => {
     const { getByText, queryByLabelText, findByLabelText } = render(<PreparedSpells {...props} />)
     const labelMatch = 'Selected Spell'
 
     expect(queryByLabelText(labelMatch)).toBe(null)
 
-    const textMatch = props.spells[spellbook[0].spells[0].id].name
+    const textMatch = props.spells[spellbook[0][0].id].name
     fireEvent.click(getByText(textMatch))
 
     const modal = await findByLabelText(labelMatch)
@@ -42,7 +42,7 @@ test('should launch SpellModal on feat button click', async () => {
 
 test('should reduce remaining value for spell when Cast button clicked', () => {
     const wrapper = mount(<PreparedSpells {...props} />)
-    const { id, remaining } = characterOne.spellbook[0].spells[0]
+    const { id, remaining } = characterOne.spellbook[0][0]
 
     expect(wrapper.find(`#${id}Remaining`).text()).toEqual(`${remaining}`)
     expect(wrapper.find(`#${id}UndoButton`)).toHaveLength(0)
