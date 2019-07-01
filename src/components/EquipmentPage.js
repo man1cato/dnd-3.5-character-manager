@@ -2,12 +2,10 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import update from 'immutability-helper'
 
-import Header from './Header'
-import Footer from './Footer'
 import ItemModal from './ItemModal'
-
 import { startEditProfile } from '../actions/profile'
 import { findItemById } from '../utils/utils'
+
 
 const totalMoney = (pp, gp, sp, cp) => Number((pp*10 + gp + sp/10 + cp/100).toFixed(2))
 const totalItemValue = (item, qty) => {
@@ -143,76 +141,72 @@ export class EquipmentPage extends React.Component {
 
 	render () {
 		return (
-			<div>
-				<Header pageTitle="Equipment" />
-				<div className="container container--body">
-					
-					<div className="section">
-						<div className="grid--money">
-							{denominations.map((denomination, i) => (
-								<div className="grid--money__cell" key={`denomination${i}`}>
-									<input
-										type="text"
-										name="money"
-										id={denomination}
-										value={this.state.money[denomination]}
-										onChange={this.handleChange}
-									/>  
-									<div>{denomination}</div>
-								</div>
-							))}
-						</div>
-
-						<div className="row--right">
-							<h4>Total money: {this.state.money.total} gp</h4> 
-						</div>
-					</div>
-					
-					<div className="grid--items">
-						<h5 className="grid__col1">Item</h5>
-						<h5>Qty</h5>
-						<h5>Value</h5>
-						<h5>Weight</h5>  
-
-						{this.state.equipment.map((item, i) => (
-							<Fragment key={i}>
-								<button 
-									className="grid__col1 button--link" 
-									id={item.id}
-									onClick={this.handleOpenModal}
-								>
-									{this.props.items[item.id].name}
-								</button>                                
-								<input 
-									className="grid__col2" 
-									id={item.id}
-									index={i}
-									name="equipment"
-									value={item.qty}
+			<div className="container container--body">
+				
+				<div className="section">
+					<div className="grid--money">
+						{denominations.map((denomination, i) => (
+							<div className="grid--money__cell" key={`denomination${i}`}>
+								<input
+									type="text"
+									name="money"
+									id={denomination}
+									value={this.state.money[denomination]}
 									onChange={this.handleChange}
-								/>                                
-								<div className="grid__col3">{item.totalValue} gp</div>
-								<div className="grid__col4">{item.totalWeight} lbs</div> 
-							</Fragment>
+								/>  
+								<div>{denomination}</div>
+							</div>
 						))}
-
-						<div className="grid__col1 grid--items__totals">Totals</div>
-						<div className="grid__col3 grid--items__totals">{this.state.equipmentTotalValue} gp</div>
-						<div className="grid__col4 grid--items__totals">{this.state.equipmentTotalWeight} lbs</div>
-
 					</div>
 
-					{/* <button>Add New Item</button> */}
+					<div className="row--right">
+						<h4>Total money: {this.state.money.total} gp</h4> 
+					</div>
+				</div>
+				
+				<div className="grid--items">
+					<h5 className="grid__col1">Item</h5>
+					<h5>Qty</h5>
+					<h5>Value</h5>
+					<h5>Weight</h5>  
 
-					<ItemModal 
-						selected={this.state.selected} 
-						equipped={this.state.equipped}
-						handleEquip={this.handleEquip}
-						handleCloseModal={this.handleCloseModal}
-						/>
+					{this.state.equipment.map((item, i) => (
+						<Fragment key={i}>
+							<button 
+								className="grid__col1 button--link" 
+								id={item.id}
+								onClick={this.handleOpenModal}
+							>
+								{this.props.items[item.id].name}
+							</button>                                
+							<input 
+								className="grid__col2" 
+								id={item.id}
+								index={i}
+								name="equipment"
+								value={item.qty}
+								onChange={this.handleChange}
+							/>                                
+							<div className="grid__col3">{item.totalValue} gp</div>
+							<div className="grid__col4">{item.totalWeight} lbs</div> 
+						</Fragment>
+					))}
+
+					<div className="grid__col1 grid--items__totals">Totals</div>
+					<div className="grid__col3 grid--items__totals">{this.state.equipmentTotalValue} gp</div>
+					<div className="grid__col4 grid--items__totals">{this.state.equipmentTotalWeight} lbs</div>
 
 				</div>
-				<Footer />
+
+				{/* <button>Add New Item</button> */}
+
+				<ItemModal 
+					selected={this.state.selected} 
+					equipped={this.state.equipped}
+					handleEquip={this.handleEquip}
+					handleCloseModal={this.handleCloseModal}
+				/>
+
 			</div>
 		)
 	}

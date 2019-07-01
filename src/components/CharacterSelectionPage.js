@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import Header from './Header'
 import { startSetProfile } from '../actions/profile'
 import { history } from '../routers/AppRouter'
 
@@ -23,32 +22,27 @@ export class CharacterSelectionPage extends React.Component {
 
    render() {
       return (
-         <div >
-            <Header pageTitle="Character Selection" />
+         <div className="container container--body">
+            <h3>Select your character:</h3>
+            {this.props.profiles.map((profile, i) => (
 
-            <div className="container container--body">
-               <h3>Select your character:</h3>
-               {this.props.profiles.map((profile, i) => (
-
-                  <button 
-                     key={i}
-                     className="button-profile"
-                     id={profile.id}   
-                     disabled={this.state.disabled}
-                     onClick={this.handleClick}
-                  >
-                     <img src={profile.iconUrl} />
-                     <div>
-                        <h3>{profile.name}</h3>
-                        <div>{profile.gender} {this.props.races[profile.race].name}</div>
-                        <div>{this.props.jobClasses[profile.jobClass].name}</div>
-                        <div>{profile.alignment}</div>
-                        <div>{`Level ${profile.level}`}</div>
-                     </div>
-                  </button>
-               ))}
-
-            </div>
+               <button 
+                  key={i}
+                  className="button-profile"
+                  id={profile.id}   
+                  disabled={this.state.disabled}
+                  onClick={this.handleClick}
+               >
+                  <img src={profile.iconUrl} />
+                  <div>
+                     <h3>{profile.name}</h3>
+                     <div>{profile.gender} {this.props.races[profile.race].name}</div>
+                     <div>{this.props.jobClasses[profile.jobClass].name}</div>
+                     <div>{profile.alignment}</div>
+                     <div>{`Level ${profile.level}`}</div>
+                  </div>
+               </button>
+            ))}
          </div>
       )
    }

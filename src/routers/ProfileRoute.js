@@ -1,18 +1,26 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {Route, Redirect} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { Route, Redirect } from 'react-router-dom'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+
 
 export const ProfileRoute = ({
    isAuthenticated,
    hasProfile,
    hasProfiles,
-   component: Component,
+	component: Component,
+	pageTitle,
    ...rest
 }) => (
    <Route {...rest} component={(props) => (
 		isAuthenticated ? (
 			hasProfile ? (
-				<Component {...props} />    
+				<>
+					<Header pageTitle={pageTitle}/>
+					<Component {...props} />
+					<Footer />
+				</>
 			) : (
 				hasProfiles ? (
 					<Redirect to="/select" />    

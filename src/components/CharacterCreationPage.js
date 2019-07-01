@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import Header from './Header'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import _ from 'lodash'
@@ -74,155 +73,150 @@ export const CharacterCreationPage = (props) => {
 	}
 	
 	return (
-		<>
-			<Header pageTitle="Character Creation" />
-			
-			<Formik
-				initialValues={{
-					name: '',
-					gender: 'Male',
-					age: '',
-					height: {
-						ft: '',
-						in: ''
-					},
-					weight: '',
-					alignment: 'Lawful Good',
-					race: _.findKey(props.races, (race) => race.name === 'Human'),
-					jobClass: _.findKey(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'),
-					bonusLanguages: [],
-					deity: '',
-					abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
-					feats: [],
-					equipment: [],
-					equipped: {
-						armor: null,
-						shield: null,
-						weapons: []
-					},
-					skillSet: apiObjectToArray(props.skills).map(skill => ({id: skill.id, ranks: 0 })),
-					skillPoints: 0,
-					remainingSkillPoints: 0
-				}}
-											
-				validationSchema={Yup.reach(validationSchema, `page${page}`)}
+		<Formik
+			initialValues={{
+				name: '',
+				gender: 'Male',
+				age: '',
+				height: {
+					ft: '',
+					in: ''
+				},
+				weight: '',
+				alignment: 'Lawful Good',
+				race: _.findKey(props.races, (race) => race.name === 'Human'),
+				jobClass: _.findKey(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'),
+				bonusLanguages: [],
+				deity: '',
+				abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
+				feats: [],
+				equipment: [],
+				equipped: {
+					armor: null,
+					shield: null,
+					weapons: []
+				},
+				skillSet: apiObjectToArray(props.skills).map(skill => ({id: skill.id, ranks: 0 })),
+				skillPoints: 0,
+				remainingSkillPoints: 0
+			}}
+										
+			validationSchema={Yup.reach(validationSchema, `page${page}`)}
 
-				onSubmit={(values, {setErrors, setSubmitting}) => {
-					const selectedJobClass = props.jobClasses[values.jobClass]
-					const selectedRace = props.races[values.race]
-					const abilities = _.mapValues(values.abilities, (ability) => ({ 
-						score: ability.final,
-						tempScore: ''
-					}))
-					const dexMod = calcAbilityMod(abilities.dex.score)
-					let armorBonus = 0
-					if (values.equipped.armor) { armorBonus += props.items[values.equipped.armor].armorBonus }
-					if (values.equipped.shield) { armorBonus += props.items[values.equipped.shield].armorBonus }
-					const baseArmorClass = 10 + armorBonus + calcSizeMod(selectedRace.size) + dexMod
-					const profile = {
-						name: values.name,
-						gender: values.gender,
-						age: values.age,
-						height: `${values.height.ft}'${values.height.in}"`,
-						weight: values.weight,
-						race: values.race,
-						alignment: values.alignment,
-						jobClass: values.jobClass,
-						languages: _.orderBy(selectedRace.defaultLanguages.concat(values.bonusLanguages)),
-						specialAbilities: selectedJobClass.levels["1"].specialAbilities,
-						deity: !!values.deity ? values.deity : "None",
-						abilities,
-						feats: values.feats,
-						skillSet: _.filter(values.skillSet, skill => skill.ranks > 0),
-						equipment: values.equipment,
-						equipped: values.equipped,
-						ac: {
-							base: baseArmorClass,
-							flat: baseArmorClass - dexMod,
-							touch: baseArmorClass - armorBonus
-						},
-						level: 1,
-						xp: 0,
-						iconUrl: selectedRace.iconUrl
-					}
-					if(!!values.school) {
-						profile.school = values.school 
-						profile.prohibitedSchools = values.prohibitedSchools
-					}
-					props.startCreateProfile(profile)
-					
-					setTimeout(() => { history.push('/profile') }, 1500)
-					setSubmitting(false)
-				}}
-			>
-				{({ values, setFieldValue, handleChange, handleSubmit, isSubmitting, isValid, validateForm, setErrors, setFieldError, setTouched}) => (
-					<Form >
-						<div className="container container--body">
-							{{
-								1: <CreatorFormIdentity 
-									selectedRace={selectedRace}
-									setSelectedRace={setSelectedRace}
-									races={props.races}
-									jobClasses={props.jobClasses}
-									handleChange={handleChange} 
-									setFieldValue={setFieldValue}
-									setTouched={setTouched}
-								/>,
-								2: <CreatorFormJobClass
-									values={values}
-									selectedRace={selectedRace}
-									selectedJobClass={selectedJobClass}
-									setSelectedJobClass={setSelectedJobClass}
-									jobClasses={props.jobClasses}
-									handleChange={handleChange}
-									handleMultiSelect={handleMultiSelect}
-									setFieldValue={setFieldValue}
-									setFieldError={setFieldError}
-									validateForm={validateForm}
-								/>,
-								3: <CreatorFormAbilities
-									values={values}
-									selectedRace={selectedRace}
-									selectedJobClass={selectedJobClass}
-									handleChange={handleChange}
-									setFieldValue={setFieldValue}
-									setFieldError={setFieldError}		
-									validateForm={validateForm}								
-								/>,
-								4: <CreatorFormFeats
-									values={values}
-									feats={props.feats}
-									setFieldValue={setFieldValue}
-								/>,
-								5: <CreatorFormSkills
-									values={values}
-									skills={props.skills}
-									setFieldValue={setFieldValue}
-								/>,
-								6: <CreatorFormEquipment
-									values={values}
-									items={props.items}
-									setFieldValue={setFieldValue}
-								/>
-							}[page]}
-						</div>
-						
-						<CreatorFormFooter 
-							page={page}
-							pageCount={pages.length}
-							setPage={setPage}
-							handleSubmit={handleSubmit}
-							setErrors={setErrors}
-							isSubmitting={isSubmitting}
-							isValid={isValid}
-							validateForm={validateForm}
-						/>
-
-					</Form>
-				)}
-			</Formik>
+			onSubmit={(values, {setErrors, setSubmitting}) => {
+				const selectedJobClass = props.jobClasses[values.jobClass]
+				const selectedRace = props.races[values.race]
+				const abilities = _.mapValues(values.abilities, (ability) => ({ 
+					score: ability.final,
+					tempScore: ''
+				}))
+				const dexMod = calcAbilityMod(abilities.dex.score)
+				let armorBonus = 0
+				if (values.equipped.armor) { armorBonus += props.items[values.equipped.armor].armorBonus }
+				if (values.equipped.shield) { armorBonus += props.items[values.equipped.shield].armorBonus }
+				const baseArmorClass = 10 + armorBonus + calcSizeMod(selectedRace.size) + dexMod
+				const profile = {
+					name: values.name,
+					gender: values.gender,
+					age: values.age,
+					height: `${values.height.ft}'${values.height.in}"`,
+					weight: values.weight,
+					race: values.race,
+					alignment: values.alignment,
+					jobClass: values.jobClass,
+					languages: _.orderBy(selectedRace.defaultLanguages.concat(values.bonusLanguages)),
+					specialAbilities: selectedJobClass.levels["1"].specialAbilities,
+					deity: !!values.deity ? values.deity : "None",
+					abilities,
+					feats: values.feats,
+					skillSet: _.filter(values.skillSet, skill => skill.ranks > 0),
+					equipment: values.equipment,
+					equipped: values.equipped,
+					ac: {
+						base: baseArmorClass,
+						flat: baseArmorClass - dexMod,
+						touch: baseArmorClass - armorBonus
+					},
+					level: 1,
+					xp: 0,
+					iconUrl: selectedRace.iconUrl
+				}
+				if(!!values.school) {
+					profile.school = values.school 
+					profile.prohibitedSchools = values.prohibitedSchools
+				}
+				props.startCreateProfile(profile)
 				
-		</>
+				setTimeout(() => { history.push('/profile') }, 1500)
+				setSubmitting(false)
+			}}
+		>
+			{({ values, setFieldValue, handleChange, handleSubmit, isSubmitting, isValid, validateForm, setErrors, setFieldError, setTouched}) => (
+				<Form >
+					<div className="container container--body">
+						{{
+							1: <CreatorFormIdentity 
+								selectedRace={selectedRace}
+								setSelectedRace={setSelectedRace}
+								races={props.races}
+								jobClasses={props.jobClasses}
+								handleChange={handleChange} 
+								setFieldValue={setFieldValue}
+								setTouched={setTouched}
+							/>,
+							2: <CreatorFormJobClass
+								values={values}
+								selectedRace={selectedRace}
+								selectedJobClass={selectedJobClass}
+								setSelectedJobClass={setSelectedJobClass}
+								jobClasses={props.jobClasses}
+								handleChange={handleChange}
+								handleMultiSelect={handleMultiSelect}
+								setFieldValue={setFieldValue}
+								setFieldError={setFieldError}
+								validateForm={validateForm}
+							/>,
+							3: <CreatorFormAbilities
+								values={values}
+								selectedRace={selectedRace}
+								selectedJobClass={selectedJobClass}
+								handleChange={handleChange}
+								setFieldValue={setFieldValue}
+								setFieldError={setFieldError}		
+								validateForm={validateForm}								
+							/>,
+							4: <CreatorFormFeats
+								values={values}
+								feats={props.feats}
+								setFieldValue={setFieldValue}
+							/>,
+							5: <CreatorFormSkills
+								values={values}
+								skills={props.skills}
+								setFieldValue={setFieldValue}
+							/>,
+							6: <CreatorFormEquipment
+								values={values}
+								items={props.items}
+								setFieldValue={setFieldValue}
+							/>
+						}[page]}
+					</div>
+					
+					<CreatorFormFooter 
+						page={page}
+						pageCount={pages.length}
+						setPage={setPage}
+						handleSubmit={handleSubmit}
+						setErrors={setErrors}
+						isSubmitting={isSubmitting}
+						isValid={isValid}
+						validateForm={validateForm}
+					/>
+
+				</Form>
+			)}
+		</Formik>				
 	)
 }
 

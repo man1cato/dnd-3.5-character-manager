@@ -21,19 +21,20 @@ import UnderConstructionPage from '../components/UnderConstructionPage'
 
 export const history = createBrowserHistory()
 
+
 const AppRouter = () => (
 	<Router history={history}>
 		<Switch>
 			<PublicRoute path="/" component={LoginPage} exact={true}/>
-			<PrivateRoute path="/create" component={CharacterCreationPage} />
-			<ProfilesRoute path="/select" component={CharacterSelectionPage} />
-			<ProfileRoute path="/profile" component={ProfilePage} />
-			<ProfileRoute path="/stats" component={StatsPage} />
-			<ProfileRoute path="/combat" component={CombatPage} />
-			<ProfileRoute path="/equipment" component={EquipmentPage} />
-			<ProfileRoute path="/spellbook" component={SpellbookPage} />
-			<ProfileRoute path="/companion" component={CompanionPage} />
-			<ProfileRoute path="/underconstruction" component={UnderConstructionPage} />
+			<PrivateRoute path="/create" pageTitle="Character Creation" component={CharacterCreationPage} />
+			<ProfilesRoute path="/select" pageTitle="Character Selection" component={CharacterSelectionPage} />
+			<ProfileRoute path="/profile" pageTitle="Character Profile" component={ProfilePage} />
+			<ProfileRoute path="/stats" pageTitle="Character Stats" component={StatsPage} />
+			<ProfileRoute path="/combat" pageTitle="Combat" component={CombatPage} />
+			<ProfileRoute path="/equipment" pageTitle="Equipment" component={EquipmentPage} />
+			<ProfileRoute path="/spellbook" pageTitle="Spellbook" component={SpellbookPage} />
+			<ProfileRoute path="/companion" pageTitle="Companion" component={CompanionPage} />
+			<ProfileRoute path="/underconstruction" pageTitle="Under Construction" component={UnderConstructionPage} />
 			<Route component={NotFoundPage} />
 		</Switch>
 	</Router>
