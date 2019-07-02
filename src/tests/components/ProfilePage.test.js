@@ -1,24 +1,25 @@
 import React from 'react'
-import ConnectedProfilePage from '../../components/ProfilePage'
-import profile from '../fixtures/profile'
-import { apiData, createConnectedWrapper } from '../utils/utils'
+import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
+
+import { characterOne } from '../utils/seedDatabase'
+import { apiData } from '../utils/utils'
+import { ProfilePage } from '../../components/ProfilePage';
 
 
-let wrapper
+let props
 
 beforeAll(async () => {
 	const api = await apiData()
-	wrapper = createConnectedWrapper(ConnectedProfilePage,
-		{
-			profile,
-			jobClasses: api.jobClasses,
-			races: api.races,
-			feats: api.feats,
-			specialAbilities: api.specialAbilities 
-		}	
-	)
+	props = {
+		...characterOne,
+		race: api.races[characterOne.race],
+		jobClass: api.jobClasses[characterOne.jobClass]
+	}	
+	
 })
 
 test('should render ProfilePage with profile data', () => {
+	const wrapper = shallow(<ProfilePage {...props}/>)
 	expect(wrapper).toMatchSnapshot()
 })

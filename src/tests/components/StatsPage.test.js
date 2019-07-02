@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 
 import { StatsPage } from '../../components/StatsPage'
 import { apiData } from '../utils/utils'
@@ -7,7 +8,7 @@ import { characterOne } from '../utils/seedDatabase'
  
 
 const startEditProfile = jest.fn() 
-let wrapper, props
+let props
 
 beforeAll(async () => {
 	const api = await apiData()
@@ -18,11 +19,8 @@ beforeAll(async () => {
 	}
 })
 
-beforeEach(() => {
-	wrapper = shallow(<StatsPage {...props}/>)
-})
-
 
 test('should render stats page with profile data', () => {
-  	expect(wrapper).toMatchSnapshot()
+	const wrapper = shallow(<StatsPage {...props} />)
+	expect(wrapper).toMatchSnapshot()
 })

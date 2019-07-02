@@ -1,76 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CharacterSelectionPage with profiles data 1`] = `
-<div>
-  <Connect(Header)
-    pageTitle="Character Selection"
-  />
-  <div
-    className="container container--body"
+<div
+  className="container container--body"
+>
+  <h3>
+    Select your character:
+  </h3>
+  <button
+    className="button-profile"
+    disabled={false}
+    id="recnPKEA6sOWaOt57"
+    key="0"
+    onClick={[Function]}
   >
-    <h3>
-      Select your character:
-    </h3>
-    <button
-      className="button-profile"
-      disabled={false}
-      id="recnPKEA6sOWaOt57"
-      key="0"
-      onClick={[Function]}
-    >
-      <img
-        src="images/elf.svg"
-      />
+    <img
+      src="images/elf.svg"
+    />
+    <div>
+      <h3>
+        Istvyll Bannianea
+      </h3>
       <div>
-        <h3>
-          Istvyll Bannianea
-        </h3>
-        <div>
-          Male
-           
-          Gray Elf
-        </div>
-        <div>
-          Wizard
-        </div>
-        <div>
-          Lawful Evil
-        </div>
-        <div>
-          Level 5
-        </div>
+        Male
+         
+        Gray Elf
       </div>
-    </button>
-    <button
-      className="button-profile"
-      disabled={false}
-      id="-LfeNscfMYgOyQV11vXY"
-      key="1"
-      onClick={[Function]}
-    >
-      <img
-        src="images/orc.svg"
-      />
       <div>
-        <h3>
-          Korg
-        </h3>
-        <div>
-          Male
-           
-          Orc
-        </div>
-        <div>
-          Barbarian
-        </div>
-        <div>
-          Lawful Evil
-        </div>
-        <div>
-          Level 5
-        </div>
+        Wizard
       </div>
-    </button>
-  </div>
+      <div>
+        Lawful Evil
+      </div>
+      <div>
+        Level 5
+      </div>
+    </div>
+  </button>
+  <button
+    className="button-profile"
+    disabled={false}
+    id="-LfeNscfMYgOyQV11vXY"
+    key="1"
+    onClick={[Function]}
+  >
+    <img
+      src="images/orc.svg"
+    />
+    <div>
+      <h3>
+        Korg
+      </h3>
+      <div>
+        Male
+         
+        Orc
+      </div>
+      <div>
+        Barbarian
+      </div>
+      <div>
+        Lawful Evil
+      </div>
+      <div>
+        Level 5
+      </div>
+    </div>
+  </button>
 </div>
 `;

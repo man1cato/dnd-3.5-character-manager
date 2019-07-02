@@ -1,249 +1,226 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render equipment page with profile data 1`] = `
-<div>
-  <Connect(Header)
-    pageTitle="Equipment"
-  />
+<div
+  class="container container--body"
+>
   <div
-    className="container container--body"
+    class="section"
   >
     <div
-      className="section"
+      class="grid--money"
     >
       <div
-        className="grid--money"
+        class="grid--money__cell"
       >
-        <div
-          className="grid--money__cell"
-          key="denomination0"
-        >
-          <input
-            id="pp"
-            name="money"
-            onChange={[Function]}
-            type="text"
-            value={0}
-          />
-          <div>
-            pp
-          </div>
-        </div>
-        <div
-          className="grid--money__cell"
-          key="denomination1"
-        >
-          <input
-            id="gp"
-            name="money"
-            onChange={[Function]}
-            type="text"
-            value={1200}
-          />
-          <div>
-            gp
-          </div>
-        </div>
-        <div
-          className="grid--money__cell"
-          key="denomination2"
-        >
-          <input
-            id="sp"
-            name="money"
-            onChange={[Function]}
-            type="text"
-            value={350}
-          />
-          <div>
-            sp
-          </div>
-        </div>
-        <div
-          className="grid--money__cell"
-          key="denomination3"
-        >
-          <input
-            id="cp"
-            name="money"
-            onChange={[Function]}
-            type="text"
-            value={80}
-          />
-          <div>
-            cp
-          </div>
+        <input
+          data-testid="pp"
+          id="pp"
+          type="number"
+          value="0"
+        />
+        <div>
+          pp
         </div>
       </div>
       <div
-        className="row--right"
+        class="grid--money__cell"
       >
-        <h4>
-          Total money: 
-          1235.8
-           gp
-        </h4>
+        <input
+          data-testid="gp"
+          id="gp"
+          type="number"
+          value="1200"
+        />
+        <div>
+          gp
+        </div>
+      </div>
+      <div
+        class="grid--money__cell"
+      >
+        <input
+          data-testid="sp"
+          id="sp"
+          type="number"
+          value="350"
+        />
+        <div>
+          sp
+        </div>
+      </div>
+      <div
+        class="grid--money__cell"
+      >
+        <input
+          data-testid="cp"
+          id="cp"
+          type="number"
+          value="80"
+        />
+        <div>
+          cp
+        </div>
       </div>
     </div>
     <div
-      className="grid--items"
+      class="row--right"
     >
-      <h5
-        className="grid__col1"
+      <h4
+        data-testid="totalMoney"
       >
-        Item
-      </h5>
-      <h5>
-        Qty
-      </h5>
-      <h5>
-        Value
-      </h5>
-      <h5>
-        Weight
-      </h5>
-      <button
-        className="grid__col1 button--link"
-        id="recOvuth9QArkI54l"
-        onClick={[Function]}
-      >
-        Bastard Sword
-      </button>
-      <input
-        className="grid__col2"
-        id="recOvuth9QArkI54l"
-        index={0}
-        name="equipment"
-        onChange={[Function]}
-        value={1}
-      />
-      <div
-        className="grid__col3"
-      >
-        35
+        Total money: 
+        1235.8
          gp
-      </div>
-      <div
-        className="grid__col4"
-      >
-        6
-         lbs
-      </div>
-      <button
-        className="grid__col1 button--link"
-        id="recuMZnz4kks14Yku"
-        onClick={[Function]}
-      >
-        Chainmail
-      </button>
-      <input
-        className="grid__col2"
-        id="recuMZnz4kks14Yku"
-        index={1}
-        name="equipment"
-        onChange={[Function]}
-        value={1}
-      />
-      <div
-        className="grid__col3"
-      >
-        150
-         gp
-      </div>
-      <div
-        className="grid__col4"
-      >
-        0
-         lbs
-      </div>
-      <button
-        className="grid__col1 button--link"
-        id="recSYqEwn9Uzr4mec"
-        onClick={[Function]}
-      >
-        Bolt (Repeating Crossbow)
-      </button>
-      <input
-        className="grid__col2"
-        id="recSYqEwn9Uzr4mec"
-        index={2}
-        name="equipment"
-        onChange={[Function]}
-        value={30}
-      />
-      <div
-        className="grid__col3"
-      >
-        6
-         gp
-      </div>
-      <div
-        className="grid__col4"
-      >
-        6
-         lbs
-      </div>
-      <button
-        className="grid__col1 button--link"
-        id="rec35ieQLel7fW2Mo"
-        onClick={[Function]}
-      >
-        Bedroll
-      </button>
-      <input
-        className="grid__col2"
-        id="rec35ieQLel7fW2Mo"
-        index={3}
-        name="equipment"
-        onChange={[Function]}
-        value={2}
-      />
-      <div
-        className="grid__col3"
-      >
-        0
-         gp
-      </div>
-      <div
-        className="grid__col4"
-      >
-        0
-         lbs
-      </div>
-      <div
-        className="grid__col1 grid--items__totals"
-      >
-        Totals
-      </div>
-      <div
-        className="grid__col3 grid--items__totals"
-      >
-        191
-         gp
-      </div>
-      <div
-        className="grid__col4 grid--items__totals"
-      >
-        12
-         lbs
-      </div>
+      </h4>
     </div>
-    <ItemModal
-      equipped={
-        Object {
-          "armor": null,
-          "shield": "recZBZ5DTJuo8Uaea",
-          "weapons": Array [
-            "recAaHr4qEcbytOpu",
-            "rec0JezjbAvUiWr8A",
-            "recWQ2ml4RhoLtvik",
-          ],
-        }
-      }
-      handleCloseModal={[Function]}
-      handleEquip={[Function]}
-    />
   </div>
-  <Connect(Footer) />
+  <div
+    class="grid--items"
+  >
+    <h5
+      class="grid__col1"
+    >
+      Item
+    </h5>
+    <h5>
+      Qty
+    </h5>
+    <h5>
+      Value
+    </h5>
+    <h5>
+      Weight
+    </h5>
+    <button
+      class="grid__col1 button--link"
+      id="recOvuth9QArkI54l"
+    >
+      Bastard Sword
+    </button>
+    <input
+      class="grid__col2"
+      data-testid="recOvuth9QArkI54l"
+      id="recOvuth9QArkI54l"
+      index="0"
+      type="number"
+      value="1"
+    />
+    <div
+      class="grid__col3"
+      data-testid="recOvuth9QArkI54lTotalValue"
+    >
+      35
+       gp
+    </div>
+    <div
+      class="grid__col4"
+      data-testid="recOvuth9QArkI54lTotalWeight"
+    >
+      6
+       lbs
+    </div>
+    <button
+      class="grid__col1 button--link"
+      id="recuMZnz4kks14Yku"
+    >
+      Chainmail
+    </button>
+    <input
+      class="grid__col2"
+      data-testid="recuMZnz4kks14Yku"
+      id="recuMZnz4kks14Yku"
+      index="1"
+      type="number"
+      value="1"
+    />
+    <div
+      class="grid__col3"
+      data-testid="recuMZnz4kks14YkuTotalValue"
+    >
+      150
+       gp
+    </div>
+    <div
+      class="grid__col4"
+      data-testid="recuMZnz4kks14YkuTotalWeight"
+    >
+      0
+       lbs
+    </div>
+    <button
+      class="grid__col1 button--link"
+      id="recSYqEwn9Uzr4mec"
+    >
+      Bolt (Repeating Crossbow)
+    </button>
+    <input
+      class="grid__col2"
+      data-testid="recSYqEwn9Uzr4mec"
+      id="recSYqEwn9Uzr4mec"
+      index="2"
+      type="number"
+      value="30"
+    />
+    <div
+      class="grid__col3"
+      data-testid="recSYqEwn9Uzr4mecTotalValue"
+    >
+      6
+       gp
+    </div>
+    <div
+      class="grid__col4"
+      data-testid="recSYqEwn9Uzr4mecTotalWeight"
+    >
+      6
+       lbs
+    </div>
+    <button
+      class="grid__col1 button--link"
+      id="rec35ieQLel7fW2Mo"
+    >
+      Bedroll
+    </button>
+    <input
+      class="grid__col2"
+      data-testid="rec35ieQLel7fW2Mo"
+      id="rec35ieQLel7fW2Mo"
+      index="3"
+      type="number"
+      value="2"
+    />
+    <div
+      class="grid__col3"
+      data-testid="rec35ieQLel7fW2MoTotalValue"
+    >
+      0
+       gp
+    </div>
+    <div
+      class="grid__col4"
+      data-testid="rec35ieQLel7fW2MoTotalWeight"
+    >
+      0
+       lbs
+    </div>
+    <div
+      class="grid__col1 grid--items__totals"
+    >
+      Totals
+    </div>
+    <div
+      class="grid__col3 grid--items__totals"
+    >
+      191
+       gp
+    </div>
+    <div
+      class="grid__col4 grid--items__totals"
+    >
+      12
+       lbs
+    </div>
+  </div>
 </div>
 `;

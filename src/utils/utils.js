@@ -71,3 +71,5 @@ export const calcBaseGrappleBonus = (baseAttackBonus, strScore, size) => {
 	}[size]
 	return baseAttackBonus + calcAbilityMod(strScore) + specialSizeMod
 } 
+
+export const calcTotalMoney = ({ pp, gp, sp, cp }) => Number((pp * 10 + gp + sp / 10 + cp / 100).toFixed(2))

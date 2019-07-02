@@ -1,226 +1,169 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import update from 'immutability-helper'
+import _ from 'lodash'
 
 import ItemModal from './ItemModal'
 import { startEditProfile } from '../actions/profile'
-import { findItemById } from '../utils/utils'
+import { calcTotalMoney } from '../utils/utils'
 
 
-const totalMoney = (pp, gp, sp, cp) => Number((pp*10 + gp + sp/10 + cp/100).toFixed(2))
-const totalItemValue = (item, qty) => {
+const calcItemTotalValue = (item, qty) => {
 	const totalValue = item.value * qty
 	return isNaN(totalValue) ? 0 : Number(totalValue.toFixed(1))
 }
-const totalItemWeight = (item, qty) => {
+const calcItemTotalWeight = (item, qty) => {
 	const totalWeight = item.weight * qty
 	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
 }
-const totalEquipmentValue = (items) => items.map((item) => item.totalValue).reduce((total, num) => total + num)
-const totalEquipmentWeight = (items) => items.map((item) => item.totalWeight).reduce((total, num) => total + num)
+const calcEquipmentTotalValue = (items) => items.map((item) => item.totalValue).reduce((total, num) => total + num)
+const calEquipmentTotalWeight = (items) => items.map((item) => item.totalWeight).reduce((total, num) => total + num)
 
 const denominations = ['pp', 'gp', 'sp', 'cp']
 
-export class EquipmentPage extends React.Component {
-	constructor(props) {
-		super(props)
+export const EquipmentPage = (props) => {
+	const [money, setMoney] = useState(props.money)
+	const [totalMoney, setTotalMoney] = useState(calcTotalMoney(money))
+	
+	const [equipment, setEquipment] = useState(props.equipment.map((item) => ({
+		...item,
+		totalValue: calcItemTotalValue(props.items[item.id], item.qty),
+		totalWeight: calcItemTotalWeight(props.items[item.id], item.qty)
+	})) || [])
 
-		const equipment = this.props.equipment.map((item) => ({
-			...item,
-			totalValue: totalItemValue(this.props.items[item.id], item.qty),
-			totalWeight: totalItemWeight(this.props.items[item.id], item.qty)
-		})) || []
+	const [equipmentTotalValue, setEquipmentTotalValue] = useState(calcEquipmentTotalValue(equipment) || 0)
+	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calEquipmentTotalWeight(equipment) || 0)
 
-		const equipmentTotalValue = totalEquipmentValue(equipment) || 0
-		const	equipmentTotalWeight = totalEquipmentWeight(equipment) || 0
+	const [equipped, setEquipped] = useState({
+		weapons: props.equipped.weapons || [],
+		armor: props.equipped.armor || null,
+		shield: props.equipped.shield || null
+	})
+	
+	const [selected, setSelected] = useState(undefined)
 
-		this.state = {
-			money: {
-				...this.props.money,
-				total: totalMoney(this.props.money.pp, this.props.money.gp, this.props.money.sp, this.props.money.cp)
-			},
-			equipment,
-			equipmentTotalValue,
-			equipmentTotalWeight,
-			selected: undefined,
-			equipped: {
-				weapons: this.props.equipped.weapons || [],
-				armor: this.props.equipped.armor || null,
-				shield: this.props.equipped.shield || null
+	useEffect(() => {
+		setTotalMoney(calcTotalMoney(money))
+		props.startEditProfile(props.id, { money })
+	}, [money])
+
+	useEffect(() => {
+		setEquipmentTotalValue(calcEquipmentTotalValue(equipment))
+		setEquipmentTotalWeight(calEquipmentTotalWeight(equipment))
+		props.startEditProfile(props.id, { equipment: _.map(equipment, (item) => ({ id: item.id, qty: item.qty })) })
+	}, [equipment])
+	
+
+	const handleChange = (e) => {
+		const id = e.target.id
+		const index = e.target.getAttribute('index')
+		const value = Number(e.target.value)
+		const qty = isNaN(value) ? equipment[index].qty : value
+		setEquipment(update(equipment, {
+			[index]: {
+				qty: { $set: qty },
+				totalValue: { $set: calcItemTotalValue(props.items[id], qty) },
+				totalWeight: { $set: calcItemTotalWeight(props.items[id], qty) }
 			}
+		}))
+	}
+
+	const handleEquip = (e) => {
+		const id = e.target.id
+		const category = e.target.name
+		const alreadyEquipped = _.includes(equipped[category], id)
+		if (category === 'weapons') {
+			const weapons = alreadyEquipped ? _.without(equipped.weapons, id) : [...equipped.weapons, id]
+			setEquipped(update(equipped, {
+				weapons: { $set: weapons }
+			}))
+		} else {
+			setEquipped(update(equipped, {
+				[category]: { $set: alreadyEquipped ? null : id }
+			}))
 		}
 	}
 
-	handleChange = (e) => {
-		const id = e.target.id
-		const name = e.target.name
-		const index = e.target.getAttribute('index')
-		let value = Number(e.target.value)
-
-		this.setState((prevState) => {
-			if (name === 'money') {
-				value = isNaN(value) ? prevState.money[id] : value;
-				return {
-					money: update(prevState.money, {
-						[id]: {$set: value}
-					})            
-				}
-			}
-
-			const qty = isNaN(value) ? prevState.equipment[index].qty : value
-			let equipment = prevState.equipment
-			equipment[index].qty = qty
-			equipment[index].totalValue = totalItemValue(this.props.items[id], qty)
-			equipment[index].totalWeight = totalItemWeight(this.props.items[id], qty)
-			return { equipment }
-		}, () => {
-			this.setState((prevState) => {
-				if (name === 'money') {
-					const total = totalMoney(prevState.money.pp, prevState.money.gp, prevState.money.sp, prevState.money.cp)
-					return {
-						money: update(prevState.money, {
-							total: {$set: total}
-						})
-					}
-				}
-
-				return {
-					equipmentTotalValue: totalEquipmentValue(prevState.equipment),
-					equipmentTotalWeight: totalEquipmentWeight(prevState.equipment)
-				}
-			}, () => {
-				if (name === 'money') {
-					this.props.startEditProfile(this.props.id, { money: this.state.money })
-				}
-
-				this.props.startEditProfile(this.props.id, { 
-					equipment: this.state.equipment.map((item) => ({
-						id: item.id,
-						qty: item.qty
-					}))
-				})
-			})
-		})
-	}
-
-	handleEquip = (e) => {
-		const id = e.target.id
-		const category = e.target.name
-		this.setState((prevState) => {
-			const alreadyEquipped = _.includes(prevState.equipped[category], id) 
-			if(category === 'weapons') {
-				const weapons = alreadyEquipped ? _.without(prevState.equipped.weapons, id) : [...prevState.equipped.weapons, id]
-				return {
-					equipped: update(prevState.equipped, {
-						weapons: { $set: weapons }
-					})
-				}
-			} 
-			return {
-				equipped: update(prevState.equipped, {
-					[category]: { $set: alreadyEquipped ? null : id }
-				})
-			}
-			
-		}, () => {
-			this.props.startEditProfile(this.props.id, {
-				equipped: this.state.equipped
-			})
-		})
-	}
-
-	handleOpenModal = (e) => {
-		const id = e.target.id
-		const selected = { id, ...this.props.items[id] }
-		this.setState({selected})
-	}
-
-	handleCloseModal = () => {
-		this.setState({selected: undefined})
-	}
-
-	render () {
-		return (
-			<div className="container container--body">
-				
-				<div className="section">
-					<div className="grid--money">
-						{denominations.map((denomination, i) => (
-							<div className="grid--money__cell" key={`denomination${i}`}>
-								<input
-									type="text"
-									name="money"
-									id={denomination}
-									value={this.state.money[denomination]}
-									onChange={this.handleChange}
-								/>  
-								<div>{denomination}</div>
-							</div>
-						))}
-					</div>
-
-					<div className="row--right">
-						<h4>Total money: {this.state.money.total} gp</h4> 
-					</div>
-				</div>
-				
-				<div className="grid--items">
-					<h5 className="grid__col1">Item</h5>
-					<h5>Qty</h5>
-					<h5>Value</h5>
-					<h5>Weight</h5>  
-
-					{this.state.equipment.map((item, i) => (
-						<Fragment key={i}>
-							<button 
-								className="grid__col1 button--link" 
-								id={item.id}
-								onClick={this.handleOpenModal}
-							>
-								{this.props.items[item.id].name}
-							</button>                                
-							<input 
-								className="grid__col2" 
-								id={item.id}
-								index={i}
-								name="equipment"
-								value={item.qty}
-								onChange={this.handleChange}
-							/>                                
-							<div className="grid__col3">{item.totalValue} gp</div>
-							<div className="grid__col4">{item.totalWeight} lbs</div> 
-						</Fragment>
+	return (
+		<div className="container container--body">			
+			<div className="section">
+				<div className="grid--money">
+					{denominations.map((denomination, i) => (
+						<div className="grid--money__cell" key={`denomination${i}`}>
+							<input
+								type="number"
+								id={denomination}
+								data-testid={denomination}
+								value={money[denomination]}
+								onChange={(e) => setMoney({ ...money, [denomination]: Number(e.target.value) })}
+							/>  
+							<div>{denomination}</div>
+						</div>
 					))}
-
-					<div className="grid__col1 grid--items__totals">Totals</div>
-					<div className="grid__col3 grid--items__totals">{this.state.equipmentTotalValue} gp</div>
-					<div className="grid__col4 grid--items__totals">{this.state.equipmentTotalWeight} lbs</div>
-
 				</div>
 
-				{/* <button>Add New Item</button> */}
+				<div className="row--right">
+					<h4 data-testid="totalMoney">Total money: {totalMoney} gp</h4> 
+				</div>
+			</div>
+			
+			<div className="grid--items">
+				<h5 className="grid__col1">Item</h5>
+				<h5>Qty</h5>
+				<h5>Value</h5>
+				<h5>Weight</h5>  
 
-				<ItemModal 
-					selected={this.state.selected} 
-					equipped={this.state.equipped}
-					handleEquip={this.handleEquip}
-					handleCloseModal={this.handleCloseModal}
-				/>
+				{equipment.map((item, i) => (
+					<Fragment key={i}>
+						<button 
+							className="grid__col1 button--link" 
+							id={item.id}
+							onClick={() => setSelected({ id: item.id, ...props.items[item.id] })}
+						>
+							{props.items[item.id].name}
+						</button>                                
+						<input 
+							className="grid__col2" 
+							type="number"
+							id={item.id}
+							data-testid={item.id}
+							index={i}
+							value={item.qty}
+							onChange={(e) => handleChange(e)}
+						/>                                
+						<div className="grid__col3" data-testid={`${item.id}TotalValue`}>{item.totalValue} gp</div>
+						<div className="grid__col4" data-testid={`${item.id}TotalWeight`}>{item.totalWeight} lbs</div> 
+					</Fragment>
+				))}
+
+				<div className="grid__col1 grid--items__totals">Totals</div>
+				<div className="grid__col3 grid--items__totals">{equipmentTotalValue} gp</div>
+				<div className="grid__col4 grid--items__totals">{equipmentTotalWeight} lbs</div>
 
 			</div>
-		)
-	}
+
+			{/* <button>Add New Item</button> */}
+
+			<ItemModal 
+				selected={selected} 
+				equipped={equipped}
+				handleEquip={handleEquip}
+				handleCloseModal={() => setSelected(undefined)}
+			/>
+
+		</div>
+	)
 }
 
-const mapStateToProps = (state) => ({
-	id: state.profile.id,
-	money: state.profile.money,
-	equipment: state.profile.equipment,
-	equipped: state.profile.equipped,
-	items: state.items
+const mapStateToProps = ({ profile, items }) => ({
+	id: profile.id,
+	money: profile.money,
+	equipment: profile.equipment,
+	equipped: profile.equipped,
+	items
 })
   
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch) => ({
 	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 })
   

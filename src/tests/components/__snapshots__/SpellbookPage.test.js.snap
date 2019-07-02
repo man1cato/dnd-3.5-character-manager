@@ -1,210 +1,202 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SpellbookPage with profile data 1`] = `
-<div>
-  <Connect(Header)
-    pageTitle="Spellbook"
-  />
+<div
+  class="container container--body"
+>
   <div
-    className="container container--body"
+    class="section"
   >
-    <div
-      className="section"
-      key="0"
+    <h3
+      class="row--center"
     >
-      <h3
-        className="row--center"
+      Level 
+      0
+       Spells (
+      3
+      /
+      4
+      )
+    </h3>
+    <div
+      class="grid--spells"
+    >
+      <h5
+        class="grid__col1"
       >
-        Level 
-        0
-         Spells (
-        3
-        /
-        4
-        )
-      </h3>
+        Spell
+      </h5>
+      <h5
+        class="grid__col2"
+      >
+        Prep
+      </h5>
+      <h5
+        class="grid__col3"
+      >
+        Rmng
+      </h5>
+      <button
+        class="grid__col1 button--link"
+        id="rec8IQeYmBr3f1BMC"
+      >
+        Acid Splash
+      </button>
       <div
-        className="grid--spells"
+        class="grid__col2 grid--spells__attribute"
       >
-        <h5
-          className="grid__col1"
-        >
-          Spell
-        </h5>
-        <h5
-          className="grid__col2"
-        >
-          Prep
-        </h5>
-        <h5
-          className="grid__col3"
-        >
-          Rmng
-        </h5>
         <button
-          className="grid__col1 button--link"
-          id="rec8IQeYmBr3f1BMC"
-          onClick={[Function]}
+          change="1"
+          id="rec8IQeYmBr3f1BMCPlus"
+          index="0"
+          level="0"
         >
-          Acid Splash
+          +
         </button>
         <div
-          className="grid__col2 grid--spells__attribute"
-        >
-          <button
-            change={1}
-            index={0}
-            level={0}
-            onClick={[Function]}
-          >
-            +
-          </button>
-          <div>
-            1
-          </div>
-          <button
-            change={-1}
-            index={0}
-            level={0}
-            onClick={[Function]}
-          >
-            -
-          </button>
-        </div>
-        <div
-          className="grid__col3"
+          id="rec8IQeYmBr3f1BMCPrepared"
         >
           1
         </div>
         <button
-          className="grid__col4"
-          onClick={[Function]}
+          change="-1"
+          id="rec8IQeYmBr3f1BMCMinus"
+          index="0"
+          level="0"
         >
-          x
-        </button>
-        <button
-          className="grid__col1 button--link"
-          id="recwpeRoCsea4vidW"
-          onClick={[Function]}
-        >
-          Arcane Mark
-        </button>
-        <div
-          className="grid__col2 grid--spells__attribute"
-        >
-          <button
-            change={1}
-            index={1}
-            level={0}
-            onClick={[Function]}
-          >
-            +
-          </button>
-          <div>
-            2
-          </div>
-          <button
-            change={-1}
-            index={1}
-            level={0}
-            onClick={[Function]}
-          >
-            -
-          </button>
-        </div>
-        <div
-          className="grid__col3"
-        >
-          1
-        </div>
-        <button
-          className="grid__col4"
-          onClick={[Function]}
-        >
-          x
+          -
         </button>
       </div>
-    </div>
-    <div
-      className="section"
-      key="1"
-    >
-      <h3
-        className="row--center"
-      >
-        Level 
-        1
-         Spells (
-        1
-        /
-        3
-        )
-      </h3>
       <div
-        className="grid--spells"
+        class="grid__col3"
+        id="rec8IQeYmBr3f1BMCRemaining"
       >
-        <h5
-          className="grid__col1"
-        >
-          Spell
-        </h5>
-        <h5
-          className="grid__col2"
-        >
-          Prep
-        </h5>
-        <h5
-          className="grid__col3"
-        >
-          Rmng
-        </h5>
+        1
+      </div>
+      <button
+        class="grid__col4"
+      >
+        x
+      </button>
+      <button
+        class="grid__col1 button--link"
+        id="recwpeRoCsea4vidW"
+      >
+        Arcane Mark
+      </button>
+      <div
+        class="grid__col2 grid--spells__attribute"
+      >
         <button
-          className="grid__col1 button--link"
-          id="recRhVs0ahtQZpbXx"
-          onClick={[Function]}
+          change="1"
+          id="recwpeRoCsea4vidWPlus"
+          index="1"
+          level="0"
         >
-          Charm Person
+          +
         </button>
         <div
-          className="grid__col2 grid--spells__attribute"
+          id="recwpeRoCsea4vidWPrepared"
         >
-          <button
-            change={1}
-            index={0}
-            level={1}
-            onClick={[Function]}
-          >
-            +
-          </button>
-          <div>
-            1
-          </div>
-          <button
-            change={-1}
-            index={0}
-            level={1}
-            onClick={[Function]}
-          >
-            -
-          </button>
-        </div>
-        <div
-          className="grid__col3"
-        >
-          0
+          2
         </div>
         <button
-          className="grid__col4"
-          onClick={[Function]}
+          change="-1"
+          id="recwpeRoCsea4vidWMinus"
+          index="1"
+          level="0"
         >
-          x
+          -
         </button>
       </div>
+      <div
+        class="grid__col3"
+        id="recwpeRoCsea4vidWRemaining"
+      >
+        1
+      </div>
+      <button
+        class="grid__col4"
+      >
+        x
+      </button>
     </div>
-    <SpellModal
-      handleCloseModal={[Function]}
-    />
   </div>
-  <Connect(Footer) />
+  <div
+    class="section"
+  >
+    <h3
+      class="row--center"
+    >
+      Level 
+      1
+       Spells (
+      1
+      /
+      3
+      )
+    </h3>
+    <div
+      class="grid--spells"
+    >
+      <h5
+        class="grid__col1"
+      >
+        Spell
+      </h5>
+      <h5
+        class="grid__col2"
+      >
+        Prep
+      </h5>
+      <h5
+        class="grid__col3"
+      >
+        Rmng
+      </h5>
+      <button
+        class="grid__col1 button--link"
+        id="recRhVs0ahtQZpbXx"
+      >
+        Charm Person
+      </button>
+      <div
+        class="grid__col2 grid--spells__attribute"
+      >
+        <button
+          change="1"
+          id="recRhVs0ahtQZpbXxPlus"
+          index="0"
+          level="1"
+        >
+          +
+        </button>
+        <div
+          id="recRhVs0ahtQZpbXxPrepared"
+        >
+          1
+        </div>
+        <button
+          change="-1"
+          id="recRhVs0ahtQZpbXxMinus"
+          index="0"
+          level="1"
+        >
+          -
+        </button>
+      </div>
+      <div
+        class="grid__col3"
+        id="recRhVs0ahtQZpbXxRemaining"
+      >
+        0
+      </div>
+      <button
+        class="grid__col4"
+      >
+        x
+      </button>
+    </div>
+  </div>
 </div>
 `;

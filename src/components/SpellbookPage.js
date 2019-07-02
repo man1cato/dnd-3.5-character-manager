@@ -62,13 +62,15 @@ export const SpellbookPage = (props) => {
 
 								<div className="grid__col2 grid--spells__attribute" >
 									<button
+										id={`${spell.id}Plus`}
 										change={1}
 										level={level}
 										index={index}
 										onClick={(e) => handleChange(e)}
 									>+</button>
-									<div>{spell.prepared}</div>
+									<div id={`${spell.id}Prepared`}>{spell.prepared}</div>
 									<button
+										id={`${spell.id}Minus`}
 										change={-1}
 										level={level}
 										index={index}
@@ -76,7 +78,7 @@ export const SpellbookPage = (props) => {
 									>-</button>
 								</div>
 								
-								<div className="grid__col3">{spell.remaining}</div>
+								<div className="grid__col3" id={`${spell.id}Remaining`}>{spell.remaining}</div>
 
 								{(spell.prepared !== 0 || spell.remaining !== 0 || spell.used !== 0) && (
 									<button 
