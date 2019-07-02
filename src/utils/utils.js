@@ -102,3 +102,6 @@ export const calcItemTotalWeight = (item, qty) => {
 	const totalWeight = item.weight * qty
 	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
 }
+
+export const calcEquipmentTotalValue = (equipment, items) => _.reduce(_.map(equipment, (item) => items[item.id].value * item.qty), (total, num) => total + num, 0)
+export const calcEquipmentTotalWeight = (equipment, items) => _.reduce(_.map(equipment, (item) => items[item.id].weight * item.qty), (total, num) => total + num, 0)

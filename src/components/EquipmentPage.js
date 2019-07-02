@@ -5,11 +5,14 @@ import _ from 'lodash'
 
 import ItemModal from './ItemModal'
 import { startEditProfile } from '../actions/profile'
-import { calcTotalMoney, calcItemTotalValue, calcItemTotalWeight } from '../utils/utils'
+import { 
+	calcTotalMoney, calcItemTotalValue, calcItemTotalWeight, 
+	calcEquipmentTotalValue, calcEquipmentTotalWeight 
+} from '../utils/utils'
 
 
-const calcEquipmentTotalValue = (equipment) => equipment.map((item) => item.totalValue).reduce((total, num) => total + num)
-const calcEquipmentTotalWeight = (equipment) => equipment.map((item) => item.totalWeight).reduce((total, num) => total + num)
+// const calcEquipmentTotalValue = (equipment) => equipment.map((item) => item.totalValue).reduce((total, num) => total + num)
+// const calcEquipmentTotalWeight = (equipment) => equipment.map((item) => item.totalWeight).reduce((total, num) => total + num)
 
 const denominations = ['pp', 'gp', 'sp', 'cp']
 
@@ -23,8 +26,8 @@ export const EquipmentPage = (props) => {
 		totalWeight: calcItemTotalWeight(props.items[item.id], item.qty)
 	})) || [])
 
-	const [equipmentTotalValue, setEquipmentTotalValue] = useState(calcEquipmentTotalValue(equipment) || 0)
-	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calcEquipmentTotalWeight(equipment) || 0)
+	const [equipmentTotalValue, setEquipmentTotalValue] = useState(calcEquipmentTotalValue(equipment, props.items) || 0)
+	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calcEquipmentTotalWeight(equipment, props.items) || 0)
 
 	const [equipped, setEquipped] = useState({
 		weapons: props.equipped.weapons || [],
@@ -40,8 +43,8 @@ export const EquipmentPage = (props) => {
 	}, [money])
 
 	useEffect(() => {
-		setEquipmentTotalValue(calcEquipmentTotalValue(equipment))
-		setEquipmentTotalWeight(calcEquipmentTotalWeight(equipment))
+		setEquipmentTotalValue(calcEquipmentTotalValue(equipment, props.items))
+		setEquipmentTotalWeight(calcEquipmentTotalWeight(equipment, props.items))
 		props.startEditProfile(props.id, { equipment: _.map(equipment, (item) => ({ id: item.id, qty: item.qty })) })
 	}, [equipment])
 

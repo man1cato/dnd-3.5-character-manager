@@ -1337,18 +1337,9 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
   <div
     className="divider"
   />
-  <div
-    className="form-group"
-  >
-    <h4>
-      Selected Equipment:
-    </h4>
-    <span>
-      0
-       gp / 
-       gp
-    </span>
-  </div>
+  <h4>
+    Selected Equipment:
+  </h4>
   <div
     className="section form-grid--equipment"
   >
@@ -1368,12 +1359,8 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
       Cost (gp)
     </h5>
   </div>
-  <ItemModal
-    handleCloseModal={[Function]}
-    handleEquip={[Function]}
-  />
   <FormikConnect(ErrorMessageImpl)
-    className="row--left form-group--error"
+    className="form-group--error"
     component="div"
     name="equipment"
   />
@@ -1381,6 +1368,23 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
     className="form-group--error"
     component="div"
     name="remainingGold"
+  />
+  <div
+    className="form-group"
+  >
+    <div>
+      Total weight: 
+      0
+       lbs
+    </div>
+    <div>
+      Remaining gold: 
+       gp
+    </div>
+  </div>
+  <ItemModal
+    handleCloseModal={[Function]}
+    handleEquip={[Function]}
   />
 </Fragment>
 `;

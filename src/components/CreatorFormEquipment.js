@@ -6,10 +6,8 @@ import { ErrorMessage } from 'formik'
 import ItemModal from './ItemModal'
 import Selector from './Selector'
 import EquipButton from './EquipButton'
-import { calcItemTotalValue, calcItemTotalWeight } from '../utils/utils'
+import { calcItemTotalValue, calcEquipmentTotalValue, calcEquipmentTotalWeight } from '../utils/utils'
 
-
-const calcEquipmentTotalValue = (equipment, items) => _.reduce(_.map(equipment, (item) => items[item.id].value * item.qty), (total, num) => total + num, 0)
 
 const CreatorFormEquipment = ({
 	values, 
@@ -21,6 +19,7 @@ const CreatorFormEquipment = ({
 	const [selectedItemIds, setSelectedItemIds] = useState([])
 	const [selected, setSelected] = useState(undefined)
 	const [totalCost, setTotalCost] = useState(0)
+	const [totalWeight, setTotalWeight] = useState(0)
 
 	const updateEquipment = (equipment) => {
 		setFieldValue('equipment', equipment)
@@ -43,10 +42,11 @@ const CreatorFormEquipment = ({
 	
 	useEffect(() => {
 		setTotalCost(calcEquipmentTotalValue(equipment, items))
+		setTotalWeight(calcEquipmentTotalWeight(equipment, items))
 	}, [equipment])
 
 	useEffect(() => {
-		setFieldValue('remainingGold', values.gp - totalCost)
+		setFieldValue('remainingGold', values.startingGold - totalCost)
 	}, [totalCost])
 
 	const handleEquip = (e) => {
@@ -97,10 +97,7 @@ const CreatorFormEquipment = ({
 
 			<div className="divider"></div>
 
-			<div className="form-group">
-				<h4>Selected Equipment:</h4>
-				<span>{totalCost} gp / {values.gp} gp</span>
-			</div>
+			<h4>Selected Equipment:</h4>
 
 			<div className="section form-grid--equipment">
 				<h5 className="grid__col1">Item</h5>
@@ -156,6 +153,14 @@ const CreatorFormEquipment = ({
 				})}
 			</div>
 
+			<ErrorMessage className="form-group--error" name="equipment" component="div" />
+			<ErrorMessage className="form-group--error" name="remainingGold" component="div" />
+			
+			<div className="form-group">
+				<div>Total weight: {totalWeight} lbs</div>
+				<div>Remaining gold: {values.remainingGold} gp</div>
+			</div>
+
 			<ItemModal
 				selected={selected}
 				equipped={equipped}
@@ -163,8 +168,6 @@ const CreatorFormEquipment = ({
 				handleEquip={handleEquip}
 			/>
 
-			<ErrorMessage className="row--left form-group--error" name="equipment" component="div" />
-			<ErrorMessage className="form-group--error" name="remainingGold" component="div" />
 		</>
 	)
 }

@@ -89,7 +89,6 @@ export const CharacterCreationPage = (props) => {
 				alignment: 'Lawful Good',
 				race: _.findKey(props.races, (race) => race.name === 'Human'),
 				jobClass: _.findKey(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'),
-				gp: 0,
 				bonusLanguages: [],
 				deity: '',
 				abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
@@ -103,6 +102,7 @@ export const CharacterCreationPage = (props) => {
 				skillSet: apiObjectToArray(props.skills).map(skill => ({id: skill.id, ranks: 0 })),
 				skillPoints: 0,
 				remainingSkillPoints: 0,
+				startingGold: 0,
 				remainingGold: 0
 			}}
 										
@@ -129,7 +129,7 @@ export const CharacterCreationPage = (props) => {
 					race: values.race,
 					alignment: values.alignment,
 					jobClass: values.jobClass,
-					money: { pp: 0, gp: values.gp, sp: 0, cp: 0 },
+					money: { pp: 0, gp: values.remainingGold, sp: 0, cp: 0 },
 					languages: _.orderBy(selectedRace.defaultLanguages.concat(values.bonusLanguages)),
 					specialAbilities: selectedJobClass.levels["1"].specialAbilities,
 					deity: !!values.deity ? values.deity : "None",
@@ -230,7 +230,7 @@ const mapStateToProps = (state) => ({
 	races: state.races,
 	jobClasses: state.jobClasses,
 	feats: _.omitBy(state.feats, (feat) => feat.prerequisites || _.includes(feat.types, 'Epic') || _.includes(feat.types, 'Creature')),
-	items: _.omitBy(state.items, (item) => item.weaponType === 'Natural' || item.category === 'Creature Part'),
+	items: _.omitBy(state.items, (item) => item.weaponType === 'Natural' || _.includes(['Creature Part', 'Money'], item.category)),
 	skills: state.skills
 })
 

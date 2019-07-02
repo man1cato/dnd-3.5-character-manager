@@ -747,12 +747,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "weaponType": "Simple",
                 "weight": 1,
               },
-              "recABkU6F0DFvkERT": Object {
-                "category": "Money",
-                "name": "Platinum Piece",
-                "value": 10,
-                "weight": 0.02,
-              },
               "recAaHr4qEcbytOpu": Object {
                 "category": "Weapon",
                 "critical": "19–20/×2",
@@ -1212,12 +1206,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "value": 1,
                 "weight": 4,
               },
-              "recTxp2NBlNb2QC37": Object {
-                "category": "Money",
-                "name": "Copper Piece",
-                "value": 0.01,
-                "weight": 0.02,
-              },
               "recUwzNk9na7jSQxQ": Object {
                 "category": "Misc",
                 "name": "Spell component pouch",
@@ -1394,12 +1382,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "value": "",
                 "weaponType": "Simple",
                 "weight": "",
-              },
-              "recdok7uDkyJPg6og": Object {
-                "category": "Money",
-                "name": "Gold Piece",
-                "value": 1,
-                "weight": 0.02,
               },
               "receOmkviWX3nGzuV": Object {
                 "armorBonus": 3,
@@ -1725,12 +1707,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "value": 5,
                 "weaponType": "Martial",
                 "weight": 8,
-              },
-              "rectXokKb6CNfiL9w": Object {
-                "category": "Money",
-                "name": "Silver Piece",
-                "value": 0.1,
-                "weight": 0.02,
               },
               "rectukONY5k2HfJu2": Object {
                 "category": "Misc",
@@ -6974,7 +6950,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 },
                 "feats": Array [],
                 "gender": "Male",
-                "gp": 0,
                 "height": Object {
                   "ft": "",
                   "in": "",
@@ -7259,6 +7234,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "ranks": 0,
                   },
                 ],
+                "startingGold": 0,
                 "weight": "",
               }
             }
@@ -7544,7 +7520,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       },
                       "feats": Array [],
                       "gender": "Male",
-                      "gp": 0,
                       "height": Object {
                         "ft": "",
                         "in": "",
@@ -7829,6 +7804,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                           "ranks": 0,
                         },
                       ],
+                      "startingGold": 0,
                       "weight": "",
                     },
                     "isSubmitting": false,
@@ -8126,7 +8102,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       },
                       "feats": Array [],
                       "gender": "Male",
-                      "gp": 0,
                       "height": Object {
                         "ft": "",
                         "in": "",
@@ -8411,6 +8386,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                           "ranks": 0,
                         },
                       ],
+                      "startingGold": 0,
                       "weight": "",
                     },
                   }
@@ -13224,7 +13200,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -13509,6 +13484,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                   "isSubmitting": false,
@@ -13806,7 +13782,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -14091,6 +14066,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                 }
@@ -14161,7 +14137,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -14446,6 +14421,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                   "isSubmitting": false,
@@ -14743,7 +14719,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -15028,6 +15003,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                 }
@@ -15098,7 +15074,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
-                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -15383,6 +15358,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "ranks": 0,
                                     },
                                   ],
+                                  "startingGold": 0,
                                   "weight": "",
                                 },
                                 "isSubmitting": false,
@@ -15680,7 +15656,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
-                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -15965,6 +15940,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "ranks": 0,
                                     },
                                   ],
+                                  "startingGold": 0,
                                   "weight": "",
                                 },
                               }
@@ -16061,7 +16037,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -16346,6 +16321,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
@@ -16643,7 +16619,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -16928,6 +16903,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                   }
@@ -17004,7 +16980,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -17289,6 +17264,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                   "isSubmitting": false,
@@ -17586,7 +17562,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -17871,6 +17846,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                 }
@@ -17944,7 +17920,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -18229,6 +18204,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
@@ -18526,7 +18502,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -18811,6 +18786,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                   }
@@ -18885,7 +18861,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -19170,6 +19145,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
@@ -19467,7 +19443,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -19752,6 +19727,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                   }
@@ -19831,7 +19807,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -20116,6 +20091,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
@@ -20413,7 +20389,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -20698,6 +20673,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                   }
@@ -20760,7 +20736,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -21045,6 +21020,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
@@ -21342,7 +21318,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -21627,6 +21602,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                   }
@@ -21701,7 +21677,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -21986,6 +21961,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                     "isSubmitting": false,
@@ -22283,7 +22259,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
-                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -22568,6 +22543,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                           "ranks": 0,
                                         },
                                       ],
+                                      "startingGold": 0,
                                       "weight": "",
                                     },
                                   }
@@ -22644,7 +22620,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -22929,6 +22904,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                   "isSubmitting": false,
@@ -23226,7 +23202,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
-                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -23511,6 +23486,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                         "ranks": 0,
                                       },
                                     ],
+                                    "startingGold": 0,
                                     "weight": "",
                                   },
                                 }
@@ -23585,7 +23561,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
-                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -23870,6 +23845,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "ranks": 0,
                                     },
                                   ],
+                                  "startingGold": 0,
                                   "weight": "",
                                 },
                                 "isSubmitting": false,
@@ -24167,7 +24143,6 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
-                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -24452,6 +24427,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "ranks": 0,
                                     },
                                   ],
+                                  "startingGold": 0,
                                   "weight": "",
                                 },
                               }

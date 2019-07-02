@@ -59,7 +59,7 @@ const CreatorFormJobClass = ({
 				component="select"
 				onChange={(e) => {
 					setSelectedJobClass(jobClasses[e.target.value])
-					setFieldValue('gp', 0)
+					setFieldValue('startingGold', 0)
 					handleChange(e)
 				}}
 			>
@@ -107,14 +107,14 @@ const CreatorFormJobClass = ({
 				<input
 					className="number-input"
 					type="number"
-					value={values.gp}
-					onChange={(e) => setFieldValue('gp', e.target.value)}
+					value={values.startingGold}
+					onChange={(e) => setFieldValue('startingGold', e.target.value)}
 				/>
 				<div> gp</div>
 				<button
 					className="button"
 					type="button"
-					onClick={() => setFieldValue('gp', calcStartingGold(selectedJobClass.name))}
+					onClick={() => setFieldValue('startingGold', calcStartingGold(selectedJobClass.name))}
 				>
 					Roll
 				</button>
