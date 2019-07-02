@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
 import { schools, alignments } from '../utils/staticData'
-import { apiObjectToArray } from '../utils/utils'
+import { apiObjectToArray, calcStartingGold } from '../utils/utils'
 
 
 const validateProhibitedSchools = (selectedSchool) => (value) => {
@@ -59,6 +59,7 @@ const CreatorFormJobClass = ({
 				component="select"
 				onChange={(e) => {
 					setSelectedJobClass(jobClasses[e.target.value])
+					setFieldValue('gp', 0)
 					handleChange(e)
 				}}
 			>
@@ -98,6 +99,26 @@ const CreatorFormJobClass = ({
 		<div className="form-group--35 align-top">
 			<h4>Hit Die:</h4>
 			<div>{selectedJobClass.hitDie}</div>
+		</div>
+
+		<div className="form-group--35">
+			<h4>Starting Gold:</h4>
+			<div className="input-group">
+				<input
+					className="number-input"
+					type="number"
+					value={values.gp}
+					onChange={(e) => setFieldValue('gp', e.target.value)}
+				/>
+				<div> gp</div>
+				<button
+					className="button"
+					type="button"
+					onClick={() => setFieldValue('gp', calcStartingGold(selectedJobClass.name))}
+				>
+					Roll
+				</button>
+			</div>
 		</div>
 
 		<div className="form-group--35 align-top">

@@ -6974,6 +6974,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 },
                 "feats": Array [],
                 "gender": "Male",
+                "gp": 0,
                 "height": Object {
                   "ft": "",
                   "in": "",
@@ -7542,6 +7543,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       },
                       "feats": Array [],
                       "gender": "Male",
+                      "gp": 0,
                       "height": Object {
                         "ft": "",
                         "in": "",
@@ -8121,6 +8123,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       },
                       "feats": Array [],
                       "gender": "Male",
+                      "gp": 0,
                       "height": Object {
                         "ft": "",
                         "in": "",
@@ -13217,6 +13220,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -13796,6 +13800,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -14149,6 +14154,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -14728,6 +14734,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -15081,6 +15088,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
+                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -15660,6 +15668,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
+                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -16039,6 +16048,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -16618,6 +16628,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -16977,6 +16988,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -17556,6 +17568,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -17912,6 +17925,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -18491,6 +18505,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -18848,6 +18863,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -19427,6 +19443,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -19789,6 +19806,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -20368,6 +20386,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -20713,6 +20732,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -21292,6 +21312,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -21649,6 +21670,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -22228,6 +22250,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       },
                                       "feats": Array [],
                                       "gender": "Male",
+                                      "gp": 0,
                                       "height": Object {
                                         "ft": "",
                                         "in": "",
@@ -22587,6 +22610,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -23166,6 +23190,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     },
                                     "feats": Array [],
                                     "gender": "Male",
+                                    "gp": 0,
                                     "height": Object {
                                       "ft": "",
                                       "in": "",
@@ -23523,6 +23548,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
+                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",
@@ -24102,6 +24128,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   },
                                   "feats": Array [],
                                   "gender": "Male",
+                                  "gp": 0,
                                   "height": Object {
                                     "ft": "",
                                     "in": "",

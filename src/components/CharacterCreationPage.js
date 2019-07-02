@@ -32,7 +32,9 @@ const validationSchema = Yup.object().shape({
 		}),
 		weight: Yup.number().positive('Enter a positive integer').integer('Enter a positive integer').required('Required').typeError('Enter a number')
 	}),
-	page2: undefined,
+	page2: Yup.object().shape({
+		gp: Yup.number().positive('Cannot be negative').integer('Enter an integer')
+	}),
 	page3: Yup.object().shape({
 		abilities: Yup.object().shape({
 			str: Yup.object().shape({ score: abilityValidation	}),
@@ -86,6 +88,7 @@ export const CharacterCreationPage = (props) => {
 				alignment: 'Lawful Good',
 				race: _.findKey(props.races, (race) => race.name === 'Human'),
 				jobClass: _.findKey(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'),
+				gp: 0,
 				bonusLanguages: [],
 				deity: '',
 				abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
@@ -124,6 +127,7 @@ export const CharacterCreationPage = (props) => {
 					race: values.race,
 					alignment: values.alignment,
 					jobClass: values.jobClass,
+					money: { pp: 0, gp: values.gp, sp: 0, cp: 0 },
 					languages: _.orderBy(selectedRace.defaultLanguages.concat(values.bonusLanguages)),
 					specialAbilities: selectedJobClass.levels["1"].specialAbilities,
 					deity: !!values.deity ? values.deity : "None",

@@ -52,7 +52,6 @@ export const EquipmentPage = (props) => {
 		setEquipmentTotalWeight(calEquipmentTotalWeight(equipment))
 		props.startEditProfile(props.id, { equipment: _.map(equipment, (item) => ({ id: item.id, qty: item.qty })) })
 	}, [equipment])
-	
 
 	const handleChange = (e) => {
 		const id = e.target.id

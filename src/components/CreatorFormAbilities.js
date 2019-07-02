@@ -71,7 +71,7 @@ const CreatorFormAbilities = ({
 					type='button'
 					onClick={() => {
 						_.keys(abilities).forEach((abbr) => {
-							const score = rollDice(6, 3)
+							const score = rollDice(3, 6)
 							const finalScore = score + raceMods[abbr]
 							setFieldValue(`abilities.${abbr}.score`, score)
 							setFieldValue(`abilities.${abbr}.final`, finalScore, false)

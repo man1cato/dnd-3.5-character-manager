@@ -160,6 +160,32 @@ exports[`should render CreatorFormJobClass 1`] = `
     </div>
   </div>
   <div
+    className="form-group--35"
+  >
+    <h4>
+      Starting Gold:
+    </h4>
+    <div
+      className="input-group"
+    >
+      <input
+        className="number-input"
+        onChange={[Function]}
+        type="number"
+      />
+      <div>
+         gp
+      </div>
+      <button
+        className="button"
+        onClick={[Function]}
+        type="button"
+      >
+        Roll
+      </button>
+    </div>
+  </div>
+  <div
     className="form-group--35 align-top"
   >
     <h4>
