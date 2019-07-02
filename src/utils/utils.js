@@ -92,3 +92,13 @@ export const calcBaseGrappleBonus = (baseAttackBonus, strScore, size) => {
 } 
 
 export const calcTotalMoney = ({ pp, gp, sp, cp }) => Number((pp * 10 + gp + sp / 10 + cp / 100).toFixed(2))
+
+export const calcItemTotalValue = (item, qty) => {
+	const totalValue = item.value * qty
+	return isNaN(totalValue) ? 0 : Number(totalValue.toFixed(1))
+}
+
+export const calcItemTotalWeight = (item, qty) => {
+	const totalWeight = item.weight * qty
+	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
+}

@@ -5,7 +5,7 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
   <h3
     className="row--center"
   >
-    Select Equipment
+    Purchase Equipment
   </h3>
   <Selector
     Content={[Function]}
@@ -20,7 +20,7 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
           "encumbrance": "Two-Handed",
           "name": "Quarterstaff",
           "range": "—",
-          "value": "",
+          "value": 0,
           "weaponType": "Simple",
           "weight": 4,
         },
@@ -1337,13 +1337,20 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
   <div
     className="divider"
   />
-  <h4
-    className="row--left"
-  >
-    Selected Equipment:
-  </h4>
   <div
-    className="form-grid--equipment"
+    className="form-group"
+  >
+    <h4>
+      Selected Equipment:
+    </h4>
+    <span>
+      0
+       gp / 
+       gp
+    </span>
+  </div>
+  <div
+    className="section form-grid--equipment"
   >
     <h5
       className="grid__col1"
@@ -1355,6 +1362,11 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
     >
       Qty
     </h5>
+    <h5
+      className="grid__col3"
+    >
+      Cost (gp)
+    </h5>
   </div>
   <ItemModal
     handleCloseModal={[Function]}
@@ -1364,6 +1376,11 @@ exports[`should correctly render CreatorFormEquipment 1`] = `
     className="row--left form-group--error"
     component="div"
     name="equipment"
+  />
+  <FormikConnect(ErrorMessageImpl)
+    className="form-group--error"
+    component="div"
+    name="remainingGold"
   />
 </Fragment>
 `;

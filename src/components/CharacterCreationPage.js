@@ -52,7 +52,8 @@ const validationSchema = Yup.object().shape({
 		remainingSkillPoints: Yup.number().moreThan(-1, 'Too many skill points assigned').lessThan(1, 'Assign all skill points')
 	}),
 	page6: Yup.object().shape({
-		equipment: Yup.array().required('Select at least one equipment')
+		equipment: Yup.array().required('Select at least one equipment'),
+		remainingGold: Yup.number().moreThan(-1, 'Purchases must not exceed available money')
 	})
 })
 
@@ -101,7 +102,8 @@ export const CharacterCreationPage = (props) => {
 				},
 				skillSet: apiObjectToArray(props.skills).map(skill => ({id: skill.id, ranks: 0 })),
 				skillPoints: 0,
-				remainingSkillPoints: 0
+				remainingSkillPoints: 0,
+				remainingGold: 0
 			}}
 										
 			validationSchema={Yup.reach(validationSchema, `page${page}`)}
@@ -186,7 +188,6 @@ export const CharacterCreationPage = (props) => {
 								selectedJobClass={selectedJobClass}
 								handleChange={handleChange}
 								setFieldValue={setFieldValue}
-								setFieldError={setFieldError}		
 								validateForm={validateForm}								
 							/>,
 							4: <CreatorFormFeats

@@ -613,7 +613,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "encumbrance": "Two-Handed",
                 "name": "Quarterstaff",
                 "range": "—",
-                "value": "",
+                "value": 0,
                 "weaponType": "Simple",
                 "weight": 4,
               },
@@ -6982,6 +6982,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                 "jobClass": "reckjdfZ5f86z4Rtz",
                 "name": "",
                 "race": "recxyRHegDBrFYJP5",
+                "remainingGold": 0,
                 "remainingSkillPoints": 0,
                 "skillPoints": 0,
                 "skillSet": Array [
@@ -7551,6 +7552,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       "jobClass": "reckjdfZ5f86z4Rtz",
                       "name": "",
                       "race": "recxyRHegDBrFYJP5",
+                      "remainingGold": 0,
                       "remainingSkillPoints": 0,
                       "skillPoints": 0,
                       "skillSet": Array [
@@ -7850,6 +7852,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                     "touched": Object {
                       "equipment": true,
                       "feats": true,
+                      "remainingGold": true,
                       "remainingSkillPoints": true,
                     },
                     "unregisterField": [Function],
@@ -8131,6 +8134,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       "jobClass": "reckjdfZ5f86z4Rtz",
                       "name": "",
                       "race": "recxyRHegDBrFYJP5",
+                      "remainingGold": 0,
                       "remainingSkillPoints": 0,
                       "skillPoints": 0,
                       "skillSet": Array [
@@ -13228,6 +13232,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -13527,6 +13532,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "touched": Object {
                                     "equipment": true,
                                     "feats": true,
+                                    "remainingGold": true,
                                     "remainingSkillPoints": true,
                                   },
                                   "unregisterField": [Function],
@@ -13808,6 +13814,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -14162,6 +14169,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -14461,6 +14469,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "touched": Object {
                                     "equipment": true,
                                     "feats": true,
+                                    "remainingGold": true,
                                     "remainingSkillPoints": true,
                                   },
                                   "unregisterField": [Function],
@@ -14742,6 +14751,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -15096,6 +15106,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "jobClass": "reckjdfZ5f86z4Rtz",
                                   "name": "",
                                   "race": "recxyRHegDBrFYJP5",
+                                  "remainingGold": 0,
                                   "remainingSkillPoints": 0,
                                   "skillPoints": 0,
                                   "skillSet": Array [
@@ -15395,6 +15406,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                 "touched": Object {
                                   "equipment": true,
                                   "feats": true,
+                                  "remainingGold": true,
                                   "remainingSkillPoints": true,
                                 },
                                 "unregisterField": [Function],
@@ -15676,6 +15688,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "jobClass": "reckjdfZ5f86z4Rtz",
                                   "name": "",
                                   "race": "recxyRHegDBrFYJP5",
+                                  "remainingGold": 0,
                                   "remainingSkillPoints": 0,
                                   "skillPoints": 0,
                                   "skillSet": Array [
@@ -16056,6 +16069,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -16355,6 +16369,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "touched": Object {
                                       "equipment": true,
                                       "feats": true,
+                                      "remainingGold": true,
                                       "remainingSkillPoints": true,
                                     },
                                     "unregisterField": [Function],
@@ -16636,6 +16651,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -16996,6 +17012,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -17295,6 +17312,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "touched": Object {
                                     "equipment": true,
                                     "feats": true,
+                                    "remainingGold": true,
                                     "remainingSkillPoints": true,
                                   },
                                   "unregisterField": [Function],
@@ -17576,6 +17594,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -17933,6 +17952,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -18232,6 +18252,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "touched": Object {
                                       "equipment": true,
                                       "feats": true,
+                                      "remainingGold": true,
                                       "remainingSkillPoints": true,
                                     },
                                     "unregisterField": [Function],
@@ -18513,6 +18534,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -18871,6 +18893,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -19170,6 +19193,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "touched": Object {
                                       "equipment": true,
                                       "feats": true,
+                                      "remainingGold": true,
                                       "remainingSkillPoints": true,
                                     },
                                     "unregisterField": [Function],
@@ -19451,6 +19475,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -19814,6 +19839,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -20113,6 +20139,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "touched": Object {
                                       "equipment": true,
                                       "feats": true,
+                                      "remainingGold": true,
                                       "remainingSkillPoints": true,
                                     },
                                     "unregisterField": [Function],
@@ -20394,6 +20421,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -20740,6 +20768,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -21039,6 +21068,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "touched": Object {
                                       "equipment": true,
                                       "feats": true,
+                                      "remainingGold": true,
                                       "remainingSkillPoints": true,
                                     },
                                     "unregisterField": [Function],
@@ -21320,6 +21350,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -21678,6 +21709,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -21977,6 +22009,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "touched": Object {
                                       "equipment": true,
                                       "feats": true,
+                                      "remainingGold": true,
                                       "remainingSkillPoints": true,
                                     },
                                     "unregisterField": [Function],
@@ -22258,6 +22291,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                       "jobClass": "reckjdfZ5f86z4Rtz",
                                       "name": "",
                                       "race": "recxyRHegDBrFYJP5",
+                                      "remainingGold": 0,
                                       "remainingSkillPoints": 0,
                                       "skillPoints": 0,
                                       "skillSet": Array [
@@ -22618,6 +22652,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -22917,6 +22952,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "touched": Object {
                                     "equipment": true,
                                     "feats": true,
+                                    "remainingGold": true,
                                     "remainingSkillPoints": true,
                                   },
                                   "unregisterField": [Function],
@@ -23198,6 +23234,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                     "jobClass": "reckjdfZ5f86z4Rtz",
                                     "name": "",
                                     "race": "recxyRHegDBrFYJP5",
+                                    "remainingGold": 0,
                                     "remainingSkillPoints": 0,
                                     "skillPoints": 0,
                                     "skillSet": Array [
@@ -23556,6 +23593,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "jobClass": "reckjdfZ5f86z4Rtz",
                                   "name": "",
                                   "race": "recxyRHegDBrFYJP5",
+                                  "remainingGold": 0,
                                   "remainingSkillPoints": 0,
                                   "skillPoints": 0,
                                   "skillSet": Array [
@@ -23855,6 +23893,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                 "touched": Object {
                                   "equipment": true,
                                   "feats": true,
+                                  "remainingGold": true,
                                   "remainingSkillPoints": true,
                                 },
                                 "unregisterField": [Function],
@@ -24136,6 +24175,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                                   "jobClass": "reckjdfZ5f86z4Rtz",
                                   "name": "",
                                   "race": "recxyRHegDBrFYJP5",
+                                  "remainingGold": 0,
                                   "remainingSkillPoints": 0,
                                   "skillPoints": 0,
                                   "skillSet": Array [

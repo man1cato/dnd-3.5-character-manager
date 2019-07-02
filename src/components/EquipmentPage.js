@@ -5,19 +5,11 @@ import _ from 'lodash'
 
 import ItemModal from './ItemModal'
 import { startEditProfile } from '../actions/profile'
-import { calcTotalMoney } from '../utils/utils'
+import { calcTotalMoney, calcItemTotalValue, calcItemTotalWeight } from '../utils/utils'
 
 
-const calcItemTotalValue = (item, qty) => {
-	const totalValue = item.value * qty
-	return isNaN(totalValue) ? 0 : Number(totalValue.toFixed(1))
-}
-const calcItemTotalWeight = (item, qty) => {
-	const totalWeight = item.weight * qty
-	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
-}
-const calcEquipmentTotalValue = (items) => items.map((item) => item.totalValue).reduce((total, num) => total + num)
-const calEquipmentTotalWeight = (items) => items.map((item) => item.totalWeight).reduce((total, num) => total + num)
+const calcEquipmentTotalValue = (equipment) => equipment.map((item) => item.totalValue).reduce((total, num) => total + num)
+const calcEquipmentTotalWeight = (equipment) => equipment.map((item) => item.totalWeight).reduce((total, num) => total + num)
 
 const denominations = ['pp', 'gp', 'sp', 'cp']
 
@@ -32,7 +24,7 @@ export const EquipmentPage = (props) => {
 	})) || [])
 
 	const [equipmentTotalValue, setEquipmentTotalValue] = useState(calcEquipmentTotalValue(equipment) || 0)
-	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calEquipmentTotalWeight(equipment) || 0)
+	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calcEquipmentTotalWeight(equipment) || 0)
 
 	const [equipped, setEquipped] = useState({
 		weapons: props.equipped.weapons || [],
@@ -49,7 +41,7 @@ export const EquipmentPage = (props) => {
 
 	useEffect(() => {
 		setEquipmentTotalValue(calcEquipmentTotalValue(equipment))
-		setEquipmentTotalWeight(calEquipmentTotalWeight(equipment))
+		setEquipmentTotalWeight(calcEquipmentTotalWeight(equipment))
 		props.startEditProfile(props.id, { equipment: _.map(equipment, (item) => ({ id: item.id, qty: item.qty })) })
 	}, [equipment])
 

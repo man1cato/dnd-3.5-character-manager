@@ -6,23 +6,33 @@ import { ErrorMessage } from 'formik'
 import ItemModal from './ItemModal'
 import Selector from './Selector'
 import EquipButton from './EquipButton'
+import { calcItemTotalValue, calcItemTotalWeight } from '../utils/utils'
 
+
+const calcEquipmentTotalValue = (equipment, items) => _.reduce(_.map(equipment, (item) => items[item.id].value * item.qty), (total, num) => total + num, 0)
 
 const CreatorFormEquipment = ({
 	values, 
 	items, 
 	setFieldValue
 }) => {
+	const { equipped } = values
+	const [equipment, setEquipment] = useState(values.equipment)
 	const [selectedItemIds, setSelectedItemIds] = useState([])
 	const [selected, setSelected] = useState(undefined)
-	const { equipment, equipped } = values
+	const [totalCost, setTotalCost] = useState(0)
+
+	const updateEquipment = (equipment) => {
+		setFieldValue('equipment', equipment)
+		setEquipment(equipment)
+	}
 
 	useEffect(() => {
 		if (selectedItemIds.length > equipment.length) {
-			setFieldValue('equipment', [...equipment, { id: _.last(selectedItemIds), qty: 1 }])
+			updateEquipment([...equipment, { id: _.last(selectedItemIds), qty: 1 }])
 		} else {
 			const idToRemove = _.difference(_.map(equipment, (item) => item.id), selectedItemIds)[0]
-			setFieldValue('equipment', _.filter(equipment, (item) => item.id !== idToRemove))
+			updateEquipment(_.filter(equipment, (item) => item.id !== idToRemove))
 			setFieldValue('equipped', {
 				armor: equipped.armor === idToRemove ? null : equipped.armor,
 				shield: equipped.shield === idToRemove ? null : equipped.shield,
@@ -30,6 +40,14 @@ const CreatorFormEquipment = ({
 			})
 		}
 	}, [selectedItemIds])
+	
+	useEffect(() => {
+		setTotalCost(calcEquipmentTotalValue(equipment, items))
+	}, [equipment])
+
+	useEffect(() => {
+		setFieldValue('remainingGold', values.gp - totalCost)
+	}, [totalCost])
 
 	const handleEquip = (e) => {
 		const id = e.target.id
@@ -45,15 +63,6 @@ const CreatorFormEquipment = ({
 			[category]: { $set: alreadyEquipped ? null : id }
 		}))			
 	}
-
-	const handleQtyChange = (e) => {
-		const id = e.target.id
-		const value = e.target.value
-		const index = _.findIndex(equipment, {id})
-		setFieldValue(`equipment[${index}]`, { id, qty: value })
-	}
-
-
 
 	const Content = ({selected}) => (
 		<div>
@@ -76,7 +85,7 @@ const CreatorFormEquipment = ({
 	
 	return (
 		<>
-			<h3 className="row--center">Select Equipment</h3>
+			<h3 className="row--center">Purchase Equipment</h3>
 
 			<Selector
 				apiObject={items} 
@@ -88,16 +97,22 @@ const CreatorFormEquipment = ({
 
 			<div className="divider"></div>
 
-			<h4 className="row--left">Selected Equipment:</h4>
-			<div className="form-grid--equipment">
+			<div className="form-group">
+				<h4>Selected Equipment:</h4>
+				<span>{totalCost} gp / {values.gp} gp</span>
+			</div>
+
+			<div className="section form-grid--equipment">
 				<h5 className="grid__col1">Item</h5>
 				<h5 className="grid__col2">Qty</h5>
+				<h5 className="grid__col3">Cost (gp)</h5>
 
 				{_.map(equipment, (item) => {
 					const id = item.id
 					item = { id, ...items[id] }
+					const qty = _.find(equipment, { id }).qty
 					return (
-						<Fragment key={id}>
+						<Fragment key={`${id}Equipment`}>
 							<button
 								className="grid__col1 button--link"
 								type="button"
@@ -109,20 +124,28 @@ const CreatorFormEquipment = ({
 
 							<input 
 								className="grid__col2 number-input"
+								type="number"
 								id={id}
-								value={_.find(equipment, { id }).qty} 
-								onChange={(e) => handleQtyChange(e)} 
+								value={qty} 
+								onChange={(e) => {
+									const id = e.target.id
+									const index = _.findIndex(equipment, { id })
+									updateEquipment(update(equipment, {
+										[index]: { $set: { id, qty: e.target.value } }
+									}))
+								}} 
 							/>
+							<div className="grid__col3">{calcItemTotalValue(item, qty)}</div>
 							
 							<EquipButton
-								className="grid__col3"
+								className="grid__col4"
 								item={item} 
 								equipped={equipped} 
 								handleEquip={handleEquip} 
 							/>
 							
 							<button 
-								className="grid__col4 button"
+								className="grid__col5 button"
 								type="button" 
 								onClick={() => setSelectedItemIds(_.without(selectedItemIds, id))}
 							>
@@ -141,6 +164,7 @@ const CreatorFormEquipment = ({
 			/>
 
 			<ErrorMessage className="row--left form-group--error" name="equipment" component="div" />
+			<ErrorMessage className="form-group--error" name="remainingGold" component="div" />
 		</>
 	)
 }

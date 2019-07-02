@@ -15,7 +15,7 @@ const CreatorFormIdentity = ({
 	setTouched
 }) => {
 	useEffect(() => {
-		setTouched({ remainingSkillPoints: true, feats: true, equipment: true })
+		setTouched({ remainingSkillPoints: true, feats: true, equipment: true, remainingGold: true })
 	},[])
 
 	return (
