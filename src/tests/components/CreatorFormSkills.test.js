@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import _ from 'lodash'
 
-import CreatorFormSkills from '../../components/CreatorFormSkills'
+import CreatorFormSkills from '../../components/CreatorForm/CreatorFormSkills'
 import { apiData } from '../utils/utils'
 import { characterOne } from '../utils/seedDatabase'
 import { apiObjectToArray } from '../../utils/utils'

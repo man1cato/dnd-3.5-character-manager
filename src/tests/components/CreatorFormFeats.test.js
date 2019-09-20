@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import _ from 'lodash'
 import { apiData } from '../utils/utils'
-import CreatorFormFeats from '../../components/CreatorFormFeats'
+import CreatorFormFeats from '../../components/CreatorForm/CreatorFormFeats'
 
 
 let api, wrapper, props

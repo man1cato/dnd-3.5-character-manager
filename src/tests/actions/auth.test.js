@@ -1,4 +1,4 @@
-import {login, logout} from '../../actions/auth'
+import { login, logout } from '../../store/actions/auth'
 
 
 test('should generate login action object', () => {

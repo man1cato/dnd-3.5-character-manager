@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import _ from 'lodash'
 
 import database from '../../firebase/firebase'
-import { setProfile, editProfile, removeProfile, startSetProfile, startCreateProfile, startEditProfile } from '../../actions/profile'
+import { setProfile, editProfile, removeProfile, startSetProfile, startCreateProfile, startEditProfile } from '../../store/actions/profile'
 import seedDatabase, { userOne, userTwo, characterOne } from '../utils/seedDatabase'
 
 

@@ -1,4 +1,4 @@
-import profileReducer from '../../reducers/profile'
+import profileReducer from '../../store/reducers/profile'
 import profile from '../fixtures/profile'
 import update from 'immutability-helper'
 import _ from 'lodash'

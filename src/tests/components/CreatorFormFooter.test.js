@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import CreatorFormFooter from '../../components/CreatorFormFooter'
+import CreatorFormFooter from '../../components/CreatorForm/CreatorFormFooter'
 
 
 const handleBack = jest.fn() 

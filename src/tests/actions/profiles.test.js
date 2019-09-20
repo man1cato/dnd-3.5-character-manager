@@ -1,4 +1,4 @@
-import { setProfiles, removeProfiles } from '../../actions/profiles'
+import { setProfiles, removeProfiles } from '../../store/actions/profiles'
 import profiles from '../fixtures/profiles'
 
 

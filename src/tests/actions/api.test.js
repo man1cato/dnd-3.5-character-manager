@@ -1,4 +1,4 @@
-import * as actions from '../../actions/api'
+import * as actions from '../../store/actions/api'
 import fs from 'fs'
 
 

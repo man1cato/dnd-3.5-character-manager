@@ -1,4 +1,4 @@
-import authReducer from '../../reducers/auth'
+import authReducer from '../../store/reducers/auth'
 
 
 test('should set uid for login', () => {

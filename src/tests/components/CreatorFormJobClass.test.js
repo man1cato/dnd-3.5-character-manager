@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import _ from 'lodash'
 
-import CreatorFormJobClass from '../../components/CreatorFormJobClass'
+import CreatorFormJobClass from '../../components/CreatorForm/CreatorFormJobClass'
 import { apiData } from '../utils/utils'
 import { characterOne } from '../utils/seedDatabase'
 

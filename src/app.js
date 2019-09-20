@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
-import { login, logout } from './actions/auth'
-import { startSetProfile, removeProfile } from './actions/profile'
-import { startGetProfiles, removeProfiles } from './actions/profiles'
-import setApi from './actions/api'
+import { login, logout } from './store/actions/auth'
+import { startSetProfile, removeProfile } from './store/actions/profile'
+import { startGetProfiles, removeProfiles } from './store/actions/profiles'
+import setApi from './store/actions/api'
 
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 import { firebase } from './firebase/firebase'
-import LoadingPage from './components/LoadingPage'
+import LoadingPage from './pages/LoadingPage'
 
 
 const store = configureStore()

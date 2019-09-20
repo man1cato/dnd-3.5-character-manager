@@ -1,4 +1,4 @@
-import * as reducers from '../../reducers/api'
+import * as reducers from '../../store/reducers/api'
 import fs from 'fs'
 
 

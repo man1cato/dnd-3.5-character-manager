@@ -1,4 +1,4 @@
-import profilesReducer from '../../reducers/profiles'
+import profilesReducer from '../../store/reducers/profiles'
 import profiles from '../fixtures/profiles'
 
 test('should set profiles', () => {

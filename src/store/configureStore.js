@@ -1,8 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import authReducer from '../reducers/auth'
-import profileReducer from '../reducers/profile'
-import profilesReducer from '../reducers/profiles'
+import authReducer from './reducers/auth'
+import profileReducer from './reducers/profile'
+import profilesReducer from './reducers/profiles'
 import {
 	racesReducer, 
 	jobClassesReducer, 
@@ -11,7 +11,7 @@ import {
 	spellsReducer, 
 	skillsReducer, 
 	itemsReducer
-} from '../reducers/api'
+} from './reducers/api'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

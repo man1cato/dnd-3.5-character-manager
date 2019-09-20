@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { startLogout } from '../actions/auth'
+import { startLogout } from '../store/actions/auth'
 import { NavLink } from 'react-router-dom'
 import SVGInline from 'react-svg-inline'
 

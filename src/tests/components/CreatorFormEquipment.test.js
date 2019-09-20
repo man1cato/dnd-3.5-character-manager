@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import _ from 'lodash'
 import { apiData } from '../utils/utils'
-import CreatorFormEquipment from '../../components/CreatorFormEquipment'
+import CreatorFormEquipment from '../../components/CreatorForm/CreatorFormEquipment'
 
 
 let api, wrapper, props

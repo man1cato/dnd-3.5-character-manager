@@ -6,15 +6,17 @@ import configureStore from 'redux-mock-store'
 
 import profile from '../fixtures/profile'
 import profiles from '../fixtures/profiles'
+
 import PublicRoute from '../../routers/PublicRoute'
 import PrivateRoute from '../../routers/PrivateRoute'
 import ProfileRoute from '../../routers/ProfileRoute'
 import ProfilesRoute from '../../routers/ProfilesRoute'
-import LoginPage from '../../components/LoginPage'
-import ProfilePage from '../../components/ProfilePage'
-import CharacterCreationPage from '../../components/CharacterCreationPage'
-import CharacterSelectionPage from '../../components/CharacterSelectionPage'
-import NotFoundPage from '../../components/NotFoundPage'
+
+import LoginPage from '../../pages/LoginPage'
+import ProfilePage from '../../pages/ProfilePage'
+import CharacterCreationPage from '../../pages/CharacterCreationPage'
+import CharacterSelectionPage from '../../pages/CharacterSelectionPage'
+import NotFoundPage from '../../pages/NotFoundPage'
 import { apiData } from '../utils/utils'
 
 
