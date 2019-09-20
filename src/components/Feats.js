@@ -18,6 +18,7 @@ export const Feats = (props) => {
 					className="button--link"
 					id={feat.id}
 					key={`feat${i}`}
+					type='button'
 					onClick={() => setSelected(feat)}
 				>
 					{feat.name}

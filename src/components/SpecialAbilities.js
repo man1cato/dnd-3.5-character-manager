@@ -21,6 +21,7 @@ export const SpecialAbilities = (props) => {
 					className="button--link"
 					id={specialAbility.id}
 					key={`specialAbility${i}`}
+					type='button'
 					onClick={() => setSelected(specialAbility)}
 				>
 					{specialAbility.name}

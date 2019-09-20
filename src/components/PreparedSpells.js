@@ -61,6 +61,7 @@ export const PreparedSpells = (props) => {
 						<button 
 							className="grid__col1 button--link"                         
 							id={spell.id}
+							type='button'
 							onClick={() => setSelected(props.spells[spell.id])}
 						>
 							{props.spells[spell.id].name}

@@ -23,6 +23,7 @@ export const SkillSet = (props) => {
 					<button 
 						className="grid__col1 button--link" 
 						id={skill.id}
+						type='button'
 						onClick={() => setSelected(props.skills[skill.id])}
 					>
 						{props.skills[skill.id].name}
@@ -36,6 +37,7 @@ export const SkillSet = (props) => {
 					<button 
 						className="grid__col3 justify-self-left button--link" 
 						id={skill.id}
+						type='button'
 						onClick={() => setSelected(props.skills[skill.id])}
 					>
 						{props.skills[skill.id].name}
