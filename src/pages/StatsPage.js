@@ -24,7 +24,7 @@ export const StatsPage = ({ profile, jobClasses, startEditProfile }) => {
 			</div>
 
 			<div className="row">
-				<span>Hit Die: {profile.hitDie}</span>
+				<span>Hit Die: {jobClass.hitDie}</span>
 				<span>To next level: {nextLevelXp - xp}</span>
 			</div>
 

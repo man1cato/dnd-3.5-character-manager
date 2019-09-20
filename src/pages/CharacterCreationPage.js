@@ -115,6 +115,7 @@ export const CharacterCreationPage = (props) => {
 				if (values.equipped.armor) { armorBonus += props.items[values.equipped.armor].armorBonus }
 				if (values.equipped.shield) { armorBonus += props.items[values.equipped.shield].armorBonus }
 				const baseArmorClass = 10 + armorBonus + calcSizeMod(selectedRace.size) + dexMod
+				
 				const profile = {
 					name: values.name,
 					gender: values.gender,
@@ -139,6 +140,9 @@ export const CharacterCreationPage = (props) => {
 						touch: baseArmorClass - armorBonus
 					},
 					level: 1,
+					hp: {
+						base: Number(selectedJobClass.hitDie.slice(1)) + calcAbilityMod(abilities.con.score)
+					},
 					xp: 0,
 					iconUrl: selectedRace.iconUrl
 				}
@@ -149,7 +153,7 @@ export const CharacterCreationPage = (props) => {
 				props.startCreateProfile(profile)
 				
 				setTimeout(() => { history.push('/profile') }, 1500)
-				setSubmitting(false)
+				setSubmitting(true)
 			}}
 		>
 			{({ values, setFieldValue, handleChange, handleSubmit, isSubmitting, isValid, validateForm, setErrors, setFieldError, setTouched}) => (

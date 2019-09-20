@@ -11,9 +11,6 @@ import {
 } from '../utils/utils'
 
 
-// const calcEquipmentTotalValue = (equipment) => equipment.map((item) => item.totalValue).reduce((total, num) => total + num)
-// const calcEquipmentTotalWeight = (equipment) => equipment.map((item) => item.totalWeight).reduce((total, num) => total + num)
-
 const denominations = ['pp', 'gp', 'sp', 'cp']
 
 export const EquipmentPage = (props) => {
