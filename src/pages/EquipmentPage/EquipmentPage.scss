@@ -1,0 +1,83 @@
+@import '../../styles/styles.scss';
+
+.equipment-container {
+   @extend .container--body;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   overflow: hidden;
+}
+
+.money-row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: $s-size;
+}
+
+.money-group {
+   display: flex;
+   justify-content: space-between;
+   flex: 0 1 24%;
+   > input {
+      text-align: right;
+      width: 80%;
+      margin-right: .6rem;
+   }
+}
+
+.items-container {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   margin-bottom: $m-size;
+}
+
+.items-list {
+   flex-grow: 1;
+   padding-top: $xs-size;
+   overflow-y: auto;
+   &::-webkit-scrollbar { width: 0 }
+}
+
+.item-row {
+   display: flex;
+   margin-bottom: $xs-size;
+   align-items: center;
+   > :first-child {
+      flex: 0 1 50%;
+   }
+   > :not(:first-child) {
+      flex: 1 0 15%;
+      text-align: end;
+   }
+   & input {
+      max-width: 50px;
+      text-align: right;
+   }
+}
+
+.item-row--header {
+   @extend .item-row;
+   padding-bottom: 0.5rem;
+   border-bottom: 1px solid $grey;
+   box-shadow: 0 0 10px -5px grey;
+}
+
+.item-row--footer {
+   @extend .item-row;
+   padding-top: 0.5rem;
+   border-top: 1px solid $grey;
+   box-shadow: 0 0 10px -5px grey;
+}
+
+.add-item-container {
+   @extend .form-group--70;
+   margin: 0;
+}
+
+.remove-button {
+   background: none;  
+   border: none;
+}

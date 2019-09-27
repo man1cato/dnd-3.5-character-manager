@@ -19,9 +19,11 @@ import LoadingPage from './pages/LoadingPage'
 const store = configureStore()
 
 const jsx = (
-	<Provider store={store}>
-		<AppRouter />
-	</Provider>
+	<div className="app-container">
+		<Provider store={store}>
+			<AppRouter />
+		</Provider>
+	</div>
 )
 
 let hasRendered = false

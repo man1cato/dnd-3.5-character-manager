@@ -143,46 +143,6 @@
   border-right: solid 1px $dark-grey;
 }
 
-//ITEMS
-.grid--items {
-  @extend .grid--columns;
-  grid-template-columns: 3fr repeat(3, 1fr);
-  grid-column-gap: $s-size;
-  justify-items: end;
-  text-align: right;
-  > input {
-    text-align: right;
-  }
-}
-.grid--items__totals {
-  align-self: start;
-  border-top: solid 1px $dark-grey; 
-  padding-top: .6rem;
-  width: 100%;
-  font-size: $font-size-s;
-  font-weight: bolder;
-}
-
-//MONEY
-.grid--money {
-  @extend .grid--4col;
-  max-width: 100%;
-  grid-column-gap: $s-size;
-  margin-bottom: $s-size;
-}
-.grid--money__cell {
-  display: flex;
-  justify-content: space-between;
-  > input {
-    text-align: right;
-    width: 80%;
-    margin-right: .6rem;
-  }
-  > div {
-    width: 20%;
-  }
-}
-
 //SPELLS
 .grid--spells {
   @extend .grid--columns;

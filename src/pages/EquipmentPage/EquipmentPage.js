@@ -1,14 +1,15 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import update from 'immutability-helper'
 import _ from 'lodash'
 
-import ItemModal from '../components/ItemModal'
-import { startEditProfile } from '../store/actions/profile'
+import ItemModal from '../../components/ItemModal'
+import { startEditProfile } from '../../store/actions/profile'
 import { 
 	calcTotalMoney, calcItemTotalValue, calcItemTotalWeight, 
 	calcEquipmentTotalValue, calcEquipmentTotalWeight 
-} from '../utils/utils'
+} from '../../utils/utils'
+import './EquipmentPage.scss'
 
 
 const denominations = ['pp', 'gp', 'sp', 'cp']
@@ -16,13 +17,17 @@ const denominations = ['pp', 'gp', 'sp', 'cp']
 export const EquipmentPage = (props) => {
 	const [money, setMoney] = useState(props.money)
 	const [totalMoney, setTotalMoney] = useState(calcTotalMoney(money))
+	useEffect(() => {
+		setTotalMoney(calcTotalMoney(money))
+		props.startEditProfile(props.id, { money })
+	}, [money])
 	
 	const [equipment, setEquipment] = useState(props.equipment.map((item) => ({
 		...item,
+		name: props.items[item.id].name,
 		totalValue: calcItemTotalValue(props.items[item.id], item.qty),
 		totalWeight: calcItemTotalWeight(props.items[item.id], item.qty)
 	})) || [])
-
 	const [equipmentTotalValue, setEquipmentTotalValue] = useState(calcEquipmentTotalValue(equipment, props.items) || 0)
 	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calcEquipmentTotalWeight(equipment, props.items) || 0)
 
@@ -32,18 +37,22 @@ export const EquipmentPage = (props) => {
 		shield: props.equipped.shield || null
 	})
 	
-	const [selected, setSelected] = useState(undefined)
+	const [newItemId, setNewItemId] = useState(0)
+
+	const [availableItems, setAvailableItems] = useState(
+		_.filter(props.items, (item, key) => !_.some(equipment, eq => eq.id === key))
+	)
 
 	useEffect(() => {
-		setTotalMoney(calcTotalMoney(money))
-		props.startEditProfile(props.id, { money })
-	}, [money])
-
-	useEffect(() => {
+		setAvailableItems(
+			_.filter(props.items, (item, key) => !_.some(equipment, eq => eq.id === key))			
+		)
 		setEquipmentTotalValue(calcEquipmentTotalValue(equipment, props.items))
 		setEquipmentTotalWeight(calcEquipmentTotalWeight(equipment, props.items))
 		props.startEditProfile(props.id, { equipment: _.map(equipment, (item) => ({ id: item.id, qty: item.qty })) })
 	}, [equipment])
+
+	const [selected, setSelected] = useState(undefined)
 
 	const handleChange = (e) => {
 		const id = e.target.id
@@ -75,12 +84,26 @@ export const EquipmentPage = (props) => {
 		}
 	}
 
+	const handleAddEquipment = () => {
+		setEquipment([...equipment, {
+			id: newItemId,
+			name: props.items[newItemId].name,
+			qty: 1,
+			totalValue: calcItemTotalValue(props.items[newItemId], 1),
+			totalWeight: calcItemTotalWeight(props.items[newItemId], 1)
+		}])
+	}
+
+	const handleRemoveEquipment = itemId => {
+		setEquipment(_.filter(equipment, item => item.id !== itemId))
+	}
+
 	return (
-		<div className="container container--body">			
-			<div className="section">
-				<div className="grid--money">
+		<div className="equipment-container">
+			<div className="money-container">
+				<div className="money-row">
 					{denominations.map((denomination, i) => (
-						<div className="grid--money__cell" key={`denomination${i}`}>
+						<div className="money-group" key={`denomination${i}`}>
 							<input
 								type="number"
 								id={denomination}
@@ -97,43 +120,85 @@ export const EquipmentPage = (props) => {
 					<h4 data-testid="totalMoney">Total money: {totalMoney} gp</h4> 
 				</div>
 			</div>
-			
-			<div className="grid--items">
-				<h5 className="grid__col1">Item</h5>
-				<h5>Qty</h5>
-				<h5>Value</h5>
-				<h5>Weight</h5>  
 
-				{equipment.map((item, i) => (
-					<Fragment key={i}>
-						<button 
-							className="grid__col1 button--link" 
-							id={item.id}
-							onClick={() => setSelected({ id: item.id, ...props.items[item.id] })}
-						>
-							{props.items[item.id].name}
-						</button>                                
-						<input 
-							className="grid__col2" 
-							type="number"
-							id={item.id}
-							data-testid={item.id}
-							index={i}
-							value={item.qty}
-							onChange={(e) => handleChange(e)}
-						/>                                
-						<div className="grid__col3" data-testid={`${item.id}TotalValue`}>{item.totalValue} gp</div>
-						<div className="grid__col4" data-testid={`${item.id}TotalWeight`}>{item.totalWeight} lbs</div> 
-					</Fragment>
-				))}
-
-				<div className="grid__col1 grid--items__totals">Totals</div>
-				<div className="grid__col3 grid--items__totals">{equipmentTotalValue} gp</div>
-				<div className="grid__col4 grid--items__totals">{equipmentTotalWeight} lbs</div>
-
+			<div className="items-container">
+				<div className="item-row--header">
+					<h5>Item</h5>
+					<div></div>
+					<h5>Qty</h5>
+					<h5>Value</h5>
+					<h5>Weight</h5>
+				</div>
+				<div className="items-list">
+					{_.map(_.sortBy(equipment, ['name']), (item, i) => (
+						<div key={i} className="item-row">
+							<button 
+								className="button--link" 
+								id={item.id}
+								onClick={() => setSelected({ id: item.id, ...props.items[item.id] })}
+							>
+								{props.items[item.id].name}
+							</button>
+							<button
+								className="remove-button"
+								onClick={() => handleRemoveEquipment(item.id)}
+							>
+								<ion-icon name="trash" size="small"></ion-icon>
+							</button>
+							<div>
+								<input 
+									type="number"
+									id={item.id}
+									data-testid={item.id}
+									index={i}
+									value={item.qty}
+									onChange={(e) => handleChange(e)}
+								/>   
+							</div>
+							<div data-testid={`${item.id}TotalValue`}>{item.totalValue} gp</div>
+							<div data-testid={`${item.id}TotalWeight`}>{item.totalWeight} lbs</div> 
+						</div>
+					))}
+				</div>
+				<div className="item-row--footer">
+					<h5>Totals</h5>
+					<h5></h5>
+					<h5>{equipmentTotalValue} gp</h5>
+					<h5>{equipmentTotalWeight} lbs</h5>
+				</div>
 			</div>
 
-			{/* <button>Add New Item</button> */}
+			<div className="add-item-container">
+				<select
+					className="select"
+					value={newItemId}
+					onChange={(e) => setNewItemId(e.target.value)}
+				>
+					<option value={0}>
+						Add a new item
+					</option>
+					{_.map(_.sortBy(availableItems, ['name']), (item, i) => {
+						const itemId = _.findKey(props.items, item) 
+						return (
+							<option
+								value={itemId}
+								key={itemId}
+							>
+								{props.items[itemId].name}
+							</option>
+						)
+					})}
+				</select>
+
+				<button
+					className="button"
+					type="button"
+					onClick={() => handleAddEquipment()}
+				>
+					Add Item
+				</button>
+			</div>
+			
 
 			<ItemModal 
 				selected={selected} 
