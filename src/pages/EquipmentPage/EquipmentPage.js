@@ -4,6 +4,7 @@ import update from 'immutability-helper'
 import _ from 'lodash'
 
 import ItemModal from '../../components/ItemModal'
+import ConfirmationModal from '../../components/ConfirmationModal/ConfirmationModal'
 import { startEditProfile } from '../../store/actions/profile'
 import { 
 	calcTotalMoney, calcItemTotalValue, calcItemTotalWeight, 
@@ -94,6 +95,7 @@ export const EquipmentPage = (props) => {
 		}], ['name']))
 	}
 
+	const [equipmentToRemove, setEquipmentToRemove] = useState(null)
 	const handleRemoveEquipment = itemId => {
 		setEquipment(_.filter(equipment, item => item.id !== itemId))
 	}
@@ -141,7 +143,7 @@ export const EquipmentPage = (props) => {
 							</button>
 							<button
 								className="remove-button"
-								onClick={() => handleRemoveEquipment(item.id)}
+								onClick={() => setEquipmentToRemove(item)}
 							>
 								<ion-icon name="trash" size="small"></ion-icon>
 							</button>
@@ -205,6 +207,13 @@ export const EquipmentPage = (props) => {
 				equipped={equipped}
 				handleEquip={handleEquip}
 				handleCloseModal={() => setSelected(undefined)}
+			/>
+
+			<ConfirmationModal
+				isOpen={!!equipmentToRemove}
+				message={`Remove ${equipmentToRemove && equipmentToRemove.name} from equipment?`}
+				handleConfirm={() => handleRemoveEquipment(equipmentToRemove.id)}
+				handleCloseModal={() => setEquipmentToRemove(null)}
 			/>
 
 		</div>

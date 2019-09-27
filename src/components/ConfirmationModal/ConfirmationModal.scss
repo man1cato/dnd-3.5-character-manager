@@ -1,0 +1,14 @@
+@import '../../styles/styles.scss';
+
+.modal-header {
+   text-align: center;
+   margin-bottom: $m-size;
+}
+
+.button-container {
+   display: flex;
+   justify-content: center;
+   > :first-child {
+      margin-right: $s-size;
+   }
+}
