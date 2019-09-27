@@ -22,12 +22,12 @@ export const EquipmentPage = (props) => {
 		props.startEditProfile(props.id, { money })
 	}, [money])
 	
-	const [equipment, setEquipment] = useState(props.equipment.map((item) => ({
+	const [equipment, setEquipment] = useState(_.sortBy(props.equipment.map((item) => ({
 		...item,
 		name: props.items[item.id].name,
 		totalValue: calcItemTotalValue(props.items[item.id], item.qty),
 		totalWeight: calcItemTotalWeight(props.items[item.id], item.qty)
-	})) || [])
+	})), ['name']) || [])
 	const [equipmentTotalValue, setEquipmentTotalValue] = useState(calcEquipmentTotalValue(equipment, props.items) || 0)
 	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calcEquipmentTotalWeight(equipment, props.items) || 0)
 
@@ -85,13 +85,13 @@ export const EquipmentPage = (props) => {
 	}
 
 	const handleAddEquipment = () => {
-		setEquipment([...equipment, {
+		setEquipment(_.sortBy([...equipment, {
 			id: newItemId,
 			name: props.items[newItemId].name,
 			qty: 1,
 			totalValue: calcItemTotalValue(props.items[newItemId], 1),
 			totalWeight: calcItemTotalWeight(props.items[newItemId], 1)
-		}])
+		}], ['name']))
 	}
 
 	const handleRemoveEquipment = itemId => {
