@@ -1,0 +1,11 @@
+@import '../../styles/styles.scss';
+
+.CounterInput {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   > button {
+      display: flex;
+      padding: 1px;
+   }
+}

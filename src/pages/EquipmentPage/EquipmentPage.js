@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import update from 'immutability-helper'
 import _ from 'lodash'
 
+import CounterInput from '../../components/CounterInput/CounterInput'
 import ItemModal from '../../components/ItemModal'
 import ConfirmationModal from '../../components/ConfirmationModal/ConfirmationModal'
 import { startEditProfile } from '../../store/actions/profile'
@@ -55,16 +56,13 @@ export const EquipmentPage = (props) => {
 
 	const [selected, setSelected] = useState(undefined)
 
-	const handleChange = (e) => {
-		const id = e.target.id
-		const index = e.target.getAttribute('index')
-		const value = Number(e.target.value)
-		const qty = isNaN(value) ? equipment[index].qty : value
+	const handleQtyChange = (itemId, index, value) => {
+		const qty = value < 1 ? 1 : value
 		setEquipment(update(equipment, {
 			[index]: {
 				qty: { $set: qty },
-				totalValue: { $set: calcItemTotalValue(props.items[id], qty) },
-				totalWeight: { $set: calcItemTotalWeight(props.items[id], qty) }
+				totalValue: { $set: calcItemTotalValue(props.items[itemId], qty) },
+				totalWeight: { $set: calcItemTotalWeight(props.items[itemId], qty) }
 			}
 		}))
 	}
@@ -127,9 +125,9 @@ export const EquipmentPage = (props) => {
 				<div className="item-row--header">
 					<h5>Item</h5>
 					<div></div>
-					<h5>Qty</h5>
-					<h5>Value</h5>
-					<h5>Weight</h5>
+					<h5 style={{ textAlign: 'center' }}>Qty</h5>
+					<h5>Val (gp)</h5>
+					<h5>Wgt (lbs)</h5>
 				</div>
 				<div className="items-list">
 					{_.map(_.sortBy(equipment, ['name']), (item, i) => (
@@ -141,24 +139,23 @@ export const EquipmentPage = (props) => {
 							>
 								{props.items[item.id].name}
 							</button>
-							<button
-								className="remove-button"
-								onClick={() => setEquipmentToRemove(item)}
-							>
-								<ion-icon name="trash" size="small"></ion-icon>
-							</button>
+
 							<div>
-								<input 
-									type="number"
-									id={item.id}
-									data-testid={item.id}
-									index={i}
-									value={item.qty}
-									onChange={(e) => handleChange(e)}
-								/>   
+								<button
+									className="remove-button"
+									onClick={() => setEquipmentToRemove(item)}
+								>
+									<ion-icon name="trash" size="small" />
+								</button>
 							</div>
-							<div data-testid={`${item.id}TotalValue`}>{item.totalValue} gp</div>
-							<div data-testid={`${item.id}TotalWeight`}>{item.totalWeight} lbs</div> 
+
+							<CounterInput
+								value={Number(item.qty)}
+								updateValue={value => handleQtyChange(item.id, i, value)}
+							/>
+
+							<div data-testid={`${item.id}TotalValue`}>{item.totalValue}</div>
+							<div data-testid={`${item.id}TotalWeight`}>{item.totalWeight}</div> 
 						</div>
 					))}
 				</div>

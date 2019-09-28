@@ -46,10 +46,10 @@
    margin-bottom: $xs-size;
    align-items: center;
    > :first-child {
-      flex: 0 1 50%;
+      flex: 0 2 50%;
    }
    > :not(:first-child) {
-      flex: 1 0 15%;
+      flex: 1 0 10%;
       text-align: end;
    }
    & input {
@@ -62,14 +62,12 @@
    @extend .item-row;
    padding-bottom: 0.5rem;
    border-bottom: 1px solid $grey;
-   box-shadow: 0 0 10px -5px grey;
 }
 
 .item-row--footer {
    @extend .item-row;
    padding-top: 0.5rem;
    border-top: 1px solid $grey;
-   box-shadow: 0 0 10px -5px grey;
 }
 
 .add-item-container {
@@ -78,6 +76,8 @@
 }
 
 .remove-button {
+   display: flex;
+   justify-content: center;
    background: none;  
    border: none;
 }
