@@ -1,6 +1,4 @@
-@import '../../styles/styles.scss';
-
-.CounterInput {
+.Counter {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -8,4 +6,9 @@
       display: flex;
       padding: 1px;
    }
+}
+
+.counter-value {
+   width: 3rem;
+   text-align: center;
 }

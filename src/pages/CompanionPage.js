@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import Abilities from '../components/Abilities'
+import Abilities from '../components/Abilities/Abilities'
 import Feats from '../components/Feats'
 import SpecialAbilities from '../components/SpecialAbilities'
 import SkillSet from '../components/SkillSet'

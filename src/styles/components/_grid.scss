@@ -94,16 +94,6 @@
   padding-bottom: $xs-size;
 }
 
-//ABILITIES
-.grid--abilities {  
-  @extend .grid--columns;
-  grid-template-columns: repeat(4 1fr);
-  > input {
-    max-width: 80px;
-    text-align: center;
-  }
-}
-
 //SKILLS
 .grid--skills {
   @extend .grid--columns;

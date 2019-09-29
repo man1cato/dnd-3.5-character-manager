@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { connect } from 'react-redux'
 import update from 'immutability-helper'
 import _ from 'lodash'
 
-import CounterInput from '../../components/CounterInput/CounterInput'
+import Counter from '../../components/Counter/Counter'
 import ItemModal from '../../components/ItemModal'
 import ConfirmationModal from '../../components/ConfirmationModal/ConfirmationModal'
 import { startEditProfile } from '../../store/actions/profile'
@@ -57,6 +57,7 @@ export const EquipmentPage = (props) => {
 	const [selected, setSelected] = useState(undefined)
 
 	const handleQtyChange = (itemId, index, value) => {
+		console.log(value)
 		const qty = value < 1 ? 1 : value
 		setEquipment(update(equipment, {
 			[index]: {
@@ -99,7 +100,7 @@ export const EquipmentPage = (props) => {
 	}
 
 	return (
-		<div className="equipment-container">
+		<div className="EquipmentPage">
 			<div className="money-container">
 				<div className="money-row">
 					{denominations.map((denomination, i) => (
@@ -122,46 +123,47 @@ export const EquipmentPage = (props) => {
 			</div>
 
 			<div className="items-container">
-				<div className="item-row--header">
-					<h5>Item</h5>
+				<div className="items-grid--header">
+					<h5 className="grid__col1">Item</h5>
 					<div></div>
 					<h5 style={{ textAlign: 'center' }}>Qty</h5>
 					<h5>Val (gp)</h5>
 					<h5>Wgt (lbs)</h5>
 				</div>
 				<div className="items-list">
-					{_.map(_.sortBy(equipment, ['name']), (item, i) => (
-						<div key={i} className="item-row">
-							<button 
-								className="button--link" 
-								id={item.id}
-								onClick={() => setSelected({ id: item.id, ...props.items[item.id] })}
-							>
-								{props.items[item.id].name}
-							</button>
+					<div className="items-grid">
+						{_.map(_.sortBy(equipment, ['name']), (item, i) => (
+							<Fragment key={i}>
+								<button 
+									className="grid__col1 button--link" 
+									id={item.id}
+									onClick={() => setSelected({ id: item.id, ...props.items[item.id] })}
+								>
+									{props.items[item.id].name}
+								</button>
 
-							<div>
 								<button
 									className="remove-button"
 									onClick={() => setEquipmentToRemove(item)}
 								>
 									<ion-icon name="trash" size="small" />
 								</button>
-							</div>
 
-							<CounterInput
-								value={Number(item.qty)}
-								updateValue={value => handleQtyChange(item.id, i, value)}
-							/>
+								<Counter
+									value={Number(item.qty)}
+									updateValue={value => handleQtyChange(item.id, i, value)}
+								/>
 
-							<div data-testid={`${item.id}TotalValue`}>{item.totalValue}</div>
-							<div data-testid={`${item.id}TotalWeight`}>{item.totalWeight}</div> 
-						</div>
-					))}
+								<div data-testid={`${item.id}TotalValue`}>{item.totalValue}</div>
+								<div data-testid={`${item.id}TotalWeight`}>{item.totalWeight}</div> 
+							</Fragment>
+						))}
+					</div>
 				</div>
-				<div className="item-row--footer">
-					<h5>Totals</h5>
-					<h5></h5>
+				<div className="items-grid--footer">
+					<h5 className="grid__col1">Totals</h5>
+					<div></div>
+					<div></div>
 					<h5>{equipmentTotalValue} gp</h5>
 					<h5>{equipmentTotalWeight} lbs</h5>
 				</div>
@@ -197,7 +199,6 @@ export const EquipmentPage = (props) => {
 					Add Item
 				</button>
 			</div>
-			
 
 			<ItemModal 
 				selected={selected} 

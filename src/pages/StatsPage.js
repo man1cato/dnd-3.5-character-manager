@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { startEditProfile } from '../store/actions/profile'
 
-import Abilities from '../components/Abilities'
+import Abilities from '../components/Abilities/Abilities'
 import SkillSet from '../components/SkillSet'
 
 

@@ -1,6 +1,6 @@
 @import '../../styles/styles.scss';
 
-.equipment-container {
+.EquipmentPage {
    @extend .container--body;
    display: flex;
    flex-direction: column;
@@ -41,33 +41,34 @@
    &::-webkit-scrollbar { width: 0 }
 }
 
-.item-row {
-   display: flex;
-   margin-bottom: $xs-size;
+.items-grid {
+   display: grid;
+   grid-template-columns: 3fr repeat(4, 1fr);
+   grid-auto-flow: dense;
+   grid-row-gap: $xs-size; 
+   grid-column-gap: $s-size;
    align-items: center;
+   text-align: right;
    > :first-child {
-      flex: 0 2 50%;
-   }
-   > :not(:first-child) {
-      flex: 1 0 10%;
-      text-align: end;
+      text-align: left;
    }
    & input {
-      max-width: 50px;
       text-align: right;
    }
 }
 
-.item-row--header {
-   @extend .item-row;
+.items-grid--header {
+   @extend .items-grid;
+   font-weight: bolder;
    padding-bottom: 0.5rem;
-   border-bottom: 1px solid $grey;
+   border-bottom: 1px solid $dark-grey;
 }
 
-.item-row--footer {
-   @extend .item-row;
+.items-grid--footer {
+   @extend .items-grid;
+   font-weight: bolder;
    padding-top: 0.5rem;
-   border-top: 1px solid $grey;
+   border-top: 1px solid $dark-grey;
 }
 
 .add-item-container {
