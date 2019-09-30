@@ -2,16 +2,16 @@
 
 exports[`should render equipment page with profile data 1`] = `
 <div
-  class="container container--body"
+  class="EquipmentPage"
 >
   <div
-    class="section"
+    class="money-container"
   >
     <div
-      class="grid--money"
+      class="money-row"
     >
       <div
-        class="grid--money__cell"
+        class="money-group"
       >
         <input
           data-testid="pp"
@@ -24,7 +24,7 @@ exports[`should render equipment page with profile data 1`] = `
         </div>
       </div>
       <div
-        class="grid--money__cell"
+        class="money-group"
       >
         <input
           data-testid="gp"
@@ -37,7 +37,7 @@ exports[`should render equipment page with profile data 1`] = `
         </div>
       </div>
       <div
-        class="grid--money__cell"
+        class="money-group"
       >
         <input
           data-testid="sp"
@@ -50,7 +50,7 @@ exports[`should render equipment page with profile data 1`] = `
         </div>
       </div>
       <div
-        class="grid--money__cell"
+        class="money-group"
       >
         <input
           data-testid="cp"
@@ -76,151 +76,830 @@ exports[`should render equipment page with profile data 1`] = `
     </div>
   </div>
   <div
-    class="grid--items"
+    class="items-container"
   >
-    <h5
-      class="grid__col1"
+    <div
+      class="items-grid--header"
     >
-      Item
-    </h5>
-    <h5>
-      Qty
-    </h5>
-    <h5>
-      Value
-    </h5>
-    <h5>
-      Weight
-    </h5>
+      <h5
+        class="grid__col1"
+      >
+        Item
+      </h5>
+      <div />
+      <h5
+        style="text-align: center;"
+      >
+        Qty
+      </h5>
+      <h5>
+        Val (gp)
+      </h5>
+      <h5>
+        Wgt (lbs)
+      </h5>
+    </div>
+    <div
+      class="items-list"
+    >
+      <div
+        class="items-grid"
+      >
+        <button
+          class="grid__col1 button--link"
+          id="recOvuth9QArkI54l"
+        >
+          Bastard Sword
+        </button>
+        <button
+          class="remove-button"
+        >
+          <ion-icon
+            name="trash"
+            size="small"
+          />
+        </button>
+        <div
+          class="Counter"
+        >
+          <button>
+            <ion-icon
+              name="remove"
+              size="small"
+            />
+          </button>
+          <input
+            class="counter-value"
+            size="3"
+            value="1"
+          />
+          <button>
+            <ion-icon
+              name="add"
+              size="small"
+            />
+          </button>
+        </div>
+        <div
+          data-testid="recOvuth9QArkI54lTotalValue"
+        >
+          35
+        </div>
+        <div
+          data-testid="recOvuth9QArkI54lTotalWeight"
+        >
+          6
+        </div>
+        <button
+          class="grid__col1 button--link"
+          id="rec35ieQLel7fW2Mo"
+        >
+          Bedroll
+        </button>
+        <button
+          class="remove-button"
+        >
+          <ion-icon
+            name="trash"
+            size="small"
+          />
+        </button>
+        <div
+          class="Counter"
+        >
+          <button>
+            <ion-icon
+              name="remove"
+              size="small"
+            />
+          </button>
+          <input
+            class="counter-value"
+            size="3"
+            value="2"
+          />
+          <button>
+            <ion-icon
+              name="add"
+              size="small"
+            />
+          </button>
+        </div>
+        <div
+          data-testid="rec35ieQLel7fW2MoTotalValue"
+        >
+          0
+        </div>
+        <div
+          data-testid="rec35ieQLel7fW2MoTotalWeight"
+        >
+          0
+        </div>
+        <button
+          class="grid__col1 button--link"
+          id="recSYqEwn9Uzr4mec"
+        >
+          Bolt (Repeating Crossbow)
+        </button>
+        <button
+          class="remove-button"
+        >
+          <ion-icon
+            name="trash"
+            size="small"
+          />
+        </button>
+        <div
+          class="Counter"
+        >
+          <button>
+            <ion-icon
+              name="remove"
+              size="small"
+            />
+          </button>
+          <input
+            class="counter-value"
+            size="3"
+            value="30"
+          />
+          <button>
+            <ion-icon
+              name="add"
+              size="small"
+            />
+          </button>
+        </div>
+        <div
+          data-testid="recSYqEwn9Uzr4mecTotalValue"
+        >
+          6
+        </div>
+        <div
+          data-testid="recSYqEwn9Uzr4mecTotalWeight"
+        >
+          6
+        </div>
+        <button
+          class="grid__col1 button--link"
+          id="recuMZnz4kks14Yku"
+        >
+          Chainmail
+        </button>
+        <button
+          class="remove-button"
+        >
+          <ion-icon
+            name="trash"
+            size="small"
+          />
+        </button>
+        <div
+          class="Counter"
+        >
+          <button>
+            <ion-icon
+              name="remove"
+              size="small"
+            />
+          </button>
+          <input
+            class="counter-value"
+            size="3"
+            value="1"
+          />
+          <button>
+            <ion-icon
+              name="add"
+              size="small"
+            />
+          </button>
+        </div>
+        <div
+          data-testid="recuMZnz4kks14YkuTotalValue"
+        >
+          150
+        </div>
+        <div
+          data-testid="recuMZnz4kks14YkuTotalWeight"
+        >
+          0
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-grid--footer"
+    >
+      <h5
+        class="grid__col1"
+      >
+        Totals
+      </h5>
+      <div />
+      <div />
+      <h5>
+        191
+         gp
+      </h5>
+      <h5>
+        12
+         lbs
+      </h5>
+    </div>
+  </div>
+  <div
+    class="add-item-container"
+  >
+    <select
+      class="select"
+    >
+      <option
+        value="0"
+      >
+        Add a new item
+      </option>
+      <option
+        value="recvNcEk3PNoStz2Z"
+      >
+        Arrow
+      </option>
+      <option
+        value="reczHJRu1GImUfB8d"
+      >
+        Backpack
+      </option>
+      <option
+        value="recCOaodcn8UZNc5y"
+      >
+        Banded mail
+      </option>
+      <option
+        value="recFAVnJfZ9TG5X29"
+      >
+        Battleaxe
+      </option>
+      <option
+        value="recwC6fYdv3dGEbmX"
+      >
+        Bite
+      </option>
+      <option
+        value="recxH2pD5DK23RSPb"
+      >
+        Boar tusk
+      </option>
+      <option
+        value="recgILJu3DU1KVSh8"
+      >
+        Bolas
+      </option>
+      <option
+        value="recLA2TYeoO7FSYM7"
+      >
+        Bolt (Crossbow)
+      </option>
+      <option
+        value="rec3QuwY0QShwfije"
+      >
+        Breastplate
+      </option>
+      <option
+        value="rec2zYSncfJJAb3iO"
+      >
+        Buckler
+      </option>
+      <option
+        value="recYISSCN8m337WCk"
+      >
+        Bullet
+      </option>
+      <option
+        value="recXSxRJI2r6eZ77y"
+      >
+        Chain shirt
+      </option>
+      <option
+        value="receFFMKpxA8xLcez"
+      >
+        Claws
+      </option>
+      <option
+        value="recq504GUQ9cVjYrZ"
+      >
+        Club
+      </option>
+      <option
+        value="recZ0cPuaD6obmPt6"
+      >
+        Composite  Shortbow
+      </option>
+      <option
+        value="recrwMqSymePn4K1u"
+      >
+        Composite Longbow
+      </option>
+      <option
+        value="recTxp2NBlNb2QC37"
+      >
+        Copper Piece
+      </option>
+      <option
+        value="reckinAA8j0zE1qYG"
+      >
+        Dagger
+      </option>
+      <option
+        value="recQCWmEjsPEAoF0c"
+      >
+        Dart
+      </option>
+      <option
+        value="recyQ6dGLHiby0auM"
+      >
+        Dire Flail
+      </option>
+      <option
+        value="recdauUcanZYERAL0"
+      >
+        Displacer hide
+      </option>
+      <option
+        value="recjSV9JrWX3jestd"
+      >
+        Displacer tentacle
+      </option>
+      <option
+        value="reckMbImkYd1d2ZmH"
+      >
+        Dwarven Urgosh
+      </option>
+      <option
+        value="recLjsCOMiz7Gp1Pg"
+      >
+        Dwarven Waraxe
+      </option>
+      <option
+        value="rec5rr8NvisUanp0q"
+      >
+        Falchion
+      </option>
+      <option
+        value="recZBZ5DTJuo8Uaea"
+      >
+        Farsky's Elemental Shield
+      </option>
+      <option
+        value="recVp9qZsA0E1MUr3"
+      >
+        Flail
+      </option>
+      <option
+        value="rec1LVNOO5AqBGbRn"
+      >
+        Flint & steel
+      </option>
+      <option
+        value="recgMQNb7xQdJc2Wo"
+      >
+        Full plate
+      </option>
+      <option
+        value="recGlWG6qM0tD8JHx"
+      >
+        Gauntlet
+      </option>
+      <option
+        value="reckaU5QIgjZbVC1y"
+      >
+        Glaive
+      </option>
+      <option
+        value="recsazWObkJ7lKpfy"
+      >
+        Gnome Hooked Hammer
+      </option>
+      <option
+        value="recdok7uDkyJPg6og"
+      >
+        Gold Piece
+      </option>
+      <option
+        value="reclzkJslpRPe3BuH"
+      >
+        Gore
+      </option>
+      <option
+        value="rec2oW1AeM9O03Qho"
+      >
+        Grappling hook
+      </option>
+      <option
+        value="rec45mQ7GezQapeUK"
+      >
+        Greataxe
+      </option>
+      <option
+        value="rectS2LFuBF2blTDs"
+      >
+        Greatclub
+      </option>
+      <option
+        value="recOzNLJJONfYsYGz"
+      >
+        Greatsword
+      </option>
+      <option
+        value="recEvB3sNR0ywy0eu"
+      >
+        Guisarme
+      </option>
+      <option
+        value="recoEnfL2wwNnyS8v"
+      >
+        Halberd
+      </option>
+      <option
+        value="recW8flYHrD72BAk7"
+      >
+        Half-plate
+      </option>
+      <option
+        value="rec2OeTGGSrzGVMMG"
+      >
+        Hand Crossbow
+      </option>
+      <option
+        value="reckrpTDGo1Z13XQu"
+      >
+        Handaxe
+      </option>
+      <option
+        value="recKogDI571sIGJe8"
+      >
+        Heavy Crossbow
+      </option>
+      <option
+        value="recYbCE2i7AyxzHJz"
+      >
+        Heavy Flail
+      </option>
+      <option
+        value="recRrV57TGLtJi1dV"
+      >
+        Heavy Mace
+      </option>
+      <option
+        value="recHD8oBfQaeBHb81"
+      >
+        Heavy Pick
+      </option>
+      <option
+        value="recSadi8CZ8meVUe1"
+      >
+        Heavy Spiked Shield
+      </option>
+      <option
+        value="recqJk1Xl657lul1U"
+      >
+        Heavy Wooden Shield
+      </option>
+      <option
+        value="recz1UKhXvjxrG1cV"
+      >
+        Hide
+      </option>
+      <option
+        value="recXzUW8Zh4kft34c"
+      >
+        Ivory tusk
+      </option>
+      <option
+        value="recScg32IO6QTPViT"
+      >
+        Javelin
+      </option>
+      <option
+        value="recLfMudQe4kgFhFH"
+      >
+        Kama
+      </option>
+      <option
+        value="recMbCmpxjotB0VV7"
+      >
+        Kukri
+      </option>
+      <option
+        value="recclEquKaEmbsVlx"
+      >
+        Lance
+      </option>
+      <option
+        value="recqzAzbZksnBvBl3"
+      >
+        Leather
+      </option>
+      <option
+        value="recWQ2ml4RhoLtvik"
+      >
+        Light Crossbow
+      </option>
+      <option
+        value="recNpXB1tw0qzel1M"
+      >
+        Light Hammer
+      </option>
+      <option
+        value="recNfkmUh5SEFUesV"
+      >
+        Light Mace
+      </option>
+      <option
+        value="recmN3FqHCd5v6cOP"
+      >
+        Light Pick
+      </option>
+      <option
+        value="rechNRpsAvDuJu3zu"
+      >
+        Light Shield
+      </option>
+      <option
+        value="recbS5UzFUWtUqkPo"
+      >
+        Light Spiked Shield
+      </option>
+      <option
+        value="receolEOHvI7Gxxs5"
+      >
+        Longbow
+      </option>
+      <option
+        value="recNbhiub65qBJh76"
+      >
+        Longspear
+      </option>
+      <option
+        value="recWrjoatwOuaSayt"
+      >
+        Longsword
+      </option>
+      <option
+        value="recLRqDjOPFzbQOjq"
+      >
+        Morningstar
+      </option>
+      <option
+        value="recLCWZUrzv9vXDUa"
+      >
+        Net
+      </option>
+      <option
+        value="recPvSRFFsWx1LbP7"
+      >
+        Nunchaku
+      </option>
+      <option
+        value="recSR6gCiAukUT92P"
+      >
+        Orc Double Axe
+      </option>
+      <option
+        value="recCScbmMjzGHAyAB"
+      >
+        Padded
+      </option>
+      <option
+        value="recABkU6F0DFvkERT"
+      >
+        Platinum Piece
+      </option>
+      <option
+        value="reclm7rkhfFy5fwH8"
+      >
+        Punching Dagger
+      </option>
+      <option
+        value="rec0JezjbAvUiWr8A"
+      >
+        Quarterstaff
+      </option>
+      <option
+        value="recTZljdQNmdT0tfE"
+      >
+        Ranseur
+      </option>
+      <option
+        value="recLpRWzprhOXDwrU"
+      >
+        Rapier
+      </option>
+      <option
+        value="rectukONY5k2HfJu2"
+      >
+        Rations
+      </option>
+      <option
+        value="recCnIhAdgFLDiBK8"
+      >
+        Repeating Heavy Crossbow
+      </option>
+      <option
+        value="recAaHr4qEcbytOpu"
+      >
+        Repeating Light Crossbow
+      </option>
+      <option
+        value="recYxygXLa4JSCOrl"
+      >
+        Rope, hemp
+      </option>
+      <option
+        value="recParpRbpmkp9Wod"
+      >
+        Sai
+      </option>
+      <option
+        value="recg3hmuoYeY6Vd22"
+      >
+        Sap
+      </option>
+      <option
+        value="recCMz646OTItRZNF"
+      >
+        Scale mail
+      </option>
+      <option
+        value="recpb8WlBeCJbUryB"
+      >
+        Scimitar
+      </option>
+      <option
+        value="recnrbjHjcF6Zw3nM"
+      >
+        Scythe
+      </option>
+      <option
+        value="reczq2bvbYUKzykGa"
+      >
+        Shortbow
+      </option>
+      <option
+        value="recKW7AEx35ZzDDgj"
+      >
+        Shortspear
+      </option>
+      <option
+        value="recnIPKR672TnSnYl"
+      >
+        Shortsword
+      </option>
+      <option
+        value="reccpQwnC44OsrGBE"
+      >
+        Shuriken
+      </option>
+      <option
+        value="recXOLsAZLyI0PAeT"
+      >
+        Siangham
+      </option>
+      <option
+        value="rec2q1Tae0EA9ppx1"
+      >
+        Sickle
+      </option>
+      <option
+        value="recThYVmRyKPtBVTv"
+      >
+        Silk robe
+      </option>
+      <option
+        value="rectXokKb6CNfiL9w"
+      >
+        Silver Piece
+      </option>
+      <option
+        value="recgl5p6sMpgzwWo9"
+      >
+        Slap/Slam
+      </option>
+      <option
+        value="reckm5B8oTdvUJjzI"
+      >
+        Sling
+      </option>
+      <option
+        value="recqrC4ryQIqntqvi"
+      >
+        Spear
+      </option>
+      <option
+        value="recUwzNk9na7jSQxQ"
+      >
+        Spell component pouch
+      </option>
+      <option
+        value="recl8vnhb1u28ROye"
+      >
+        Spiked Armor
+      </option>
+      <option
+        value="recJB7Jom5jyJfqwg"
+      >
+        Spiked Chain
+      </option>
+      <option
+        value="rec6MscBvV6I6fDsI"
+      >
+        Spiked Gauntlet
+      </option>
+      <option
+        value="recqlsMONgIQXwWbS"
+      >
+        Splint mail
+      </option>
+      <option
+        value="rectaWcLJh5xbEyBf"
+      >
+        Sting
+      </option>
+      <option
+        value="receOmkviWX3nGzuV"
+      >
+        Studded leather
+      </option>
+      <option
+        value="recDAXHjNpPpBuFsn"
+      >
+        Talons
+      </option>
+      <option
+        value="recHYmG2tmeSsKInk"
+      >
+        Tentacle
+      </option>
+      <option
+        value="rec4LnENouXd7XUiE"
+      >
+        Thieves' tools
+      </option>
+      <option
+        value="recuOEI8Mv3a4wKSG"
+      >
+        Throwing Axe
+      </option>
+      <option
+        value="recvMMCsdSJEpZmcK"
+      >
+        Tower Shield
+      </option>
+      <option
+        value="recRnQZ4tD1CSdVtl"
+      >
+        Traveler's outfit
+      </option>
+      <option
+        value="rec4gBxMabAvBRNEm"
+      >
+        Trident
+      </option>
+      <option
+        value="recQVTxj40pWDtm8Y"
+      >
+        Two-Bladed Sword
+      </option>
+      <option
+        value="recd96petEetM5NdO"
+      >
+        Unarmed Strike
+      </option>
+      <option
+        value="rec6LbpVzZCv5DdR4"
+      >
+        Warhammer
+      </option>
+      <option
+        value="recTnEbBAzGtBfdbJ"
+      >
+        Waterskin
+      </option>
+      <option
+        value="recCg6CEUBzMwye5w"
+      >
+        Whip
+      </option>
+      <option
+        value="reckwALiYfzmuSB3v"
+      >
+        Wizard's spellbook
+      </option>
+    </select>
     <button
-      class="grid__col1 button--link"
-      id="recOvuth9QArkI54l"
+      class="button"
+      type="button"
     >
-      Bastard Sword
+      Add Item
     </button>
-    <input
-      class="grid__col2"
-      data-testid="recOvuth9QArkI54l"
-      id="recOvuth9QArkI54l"
-      index="0"
-      type="number"
-      value="1"
-    />
-    <div
-      class="grid__col3"
-      data-testid="recOvuth9QArkI54lTotalValue"
-    >
-      35
-       gp
-    </div>
-    <div
-      class="grid__col4"
-      data-testid="recOvuth9QArkI54lTotalWeight"
-    >
-      6
-       lbs
-    </div>
-    <button
-      class="grid__col1 button--link"
-      id="recuMZnz4kks14Yku"
-    >
-      Chainmail
-    </button>
-    <input
-      class="grid__col2"
-      data-testid="recuMZnz4kks14Yku"
-      id="recuMZnz4kks14Yku"
-      index="1"
-      type="number"
-      value="1"
-    />
-    <div
-      class="grid__col3"
-      data-testid="recuMZnz4kks14YkuTotalValue"
-    >
-      150
-       gp
-    </div>
-    <div
-      class="grid__col4"
-      data-testid="recuMZnz4kks14YkuTotalWeight"
-    >
-      0
-       lbs
-    </div>
-    <button
-      class="grid__col1 button--link"
-      id="recSYqEwn9Uzr4mec"
-    >
-      Bolt (Repeating Crossbow)
-    </button>
-    <input
-      class="grid__col2"
-      data-testid="recSYqEwn9Uzr4mec"
-      id="recSYqEwn9Uzr4mec"
-      index="2"
-      type="number"
-      value="30"
-    />
-    <div
-      class="grid__col3"
-      data-testid="recSYqEwn9Uzr4mecTotalValue"
-    >
-      6
-       gp
-    </div>
-    <div
-      class="grid__col4"
-      data-testid="recSYqEwn9Uzr4mecTotalWeight"
-    >
-      6
-       lbs
-    </div>
-    <button
-      class="grid__col1 button--link"
-      id="rec35ieQLel7fW2Mo"
-    >
-      Bedroll
-    </button>
-    <input
-      class="grid__col2"
-      data-testid="rec35ieQLel7fW2Mo"
-      id="rec35ieQLel7fW2Mo"
-      index="3"
-      type="number"
-      value="2"
-    />
-    <div
-      class="grid__col3"
-      data-testid="rec35ieQLel7fW2MoTotalValue"
-    >
-      0
-       gp
-    </div>
-    <div
-      class="grid__col4"
-      data-testid="rec35ieQLel7fW2MoTotalWeight"
-    >
-      0
-       lbs
-    </div>
-    <div
-      class="grid__col1 grid--items__totals"
-    >
-      Totals
-    </div>
-    <div
-      class="grid__col3 grid--items__totals"
-    >
-      191
-       gp
-    </div>
-    <div
-      class="grid__col4 grid--items__totals"
-    >
-      12
-       lbs
-    </div>
   </div>
 </div>
 `;

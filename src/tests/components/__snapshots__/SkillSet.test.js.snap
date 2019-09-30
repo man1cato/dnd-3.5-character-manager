@@ -23,6 +23,7 @@ exports[`should render SkillSet with profile data 1`] = `
   <button
     class="grid__col1 button--link"
     id="recfbplSsRmzNs68J"
+    type="button"
   >
     Appraise
   </button>
@@ -34,6 +35,7 @@ exports[`should render SkillSet with profile data 1`] = `
   <button
     class="grid__col1 button--link"
     id="recoJ7dkAWtHAkj3v"
+    type="button"
   >
     Balance
   </button>
@@ -45,6 +47,7 @@ exports[`should render SkillSet with profile data 1`] = `
   <button
     class="grid__col3 justify-self-left button--link"
     id="recHCeKVn3CB0HcNA"
+    type="button"
   >
     Climb
   </button>
@@ -56,6 +59,7 @@ exports[`should render SkillSet with profile data 1`] = `
   <button
     class="grid__col3 justify-self-left button--link"
     id="recs2EXcqiCIfwO0w"
+    type="button"
   >
     Concentration
   </button>

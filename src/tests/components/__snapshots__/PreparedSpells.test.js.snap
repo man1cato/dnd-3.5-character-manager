@@ -17,6 +17,7 @@ exports[`should render PreparedSpells with profile data 1`] = `
   <button
     class="grid__col1 button--link"
     id="rec8IQeYmBr3f1BMC"
+    type="button"
   >
     Acid Splash
   </button>
@@ -38,6 +39,7 @@ exports[`should render PreparedSpells with profile data 1`] = `
   <button
     class="grid__col1 button--link"
     id="recwpeRoCsea4vidW"
+    type="button"
   >
     Arcane Mark
   </button>
@@ -59,6 +61,7 @@ exports[`should render PreparedSpells with profile data 1`] = `
   <button
     class="grid__col1 button--link"
     id="recRhVs0ahtQZpbXx"
+    type="button"
   >
     Charm Person
   </button>

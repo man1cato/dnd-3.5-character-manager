@@ -60,7 +60,7 @@ exports[`should render attacks with default profile data 1`] = `
   size="Medium"
 >
   <div
-    className="grid--6col"
+    className="AttackBonuses"
   >
     <h5
       className="grid__col1"

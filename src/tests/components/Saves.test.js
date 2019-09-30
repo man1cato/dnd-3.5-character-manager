@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Saves from '../../components/Saves'
+import Saves from '../../components/Saves/Saves'
 import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
 

@@ -5,7 +5,7 @@ import { shallow, mount } from 'enzyme'
 import configureStore from 'redux-mock-store'
 
 import profiles from '../fixtures/profiles'
-import ConnectedHeader, { Header } from '../../components/Header'
+import ConnectedHeader, { Header } from '../../components/Header/Header'
 
 const mockStore = configureStore()
 const createConnectedWrapper = (state) => mount(

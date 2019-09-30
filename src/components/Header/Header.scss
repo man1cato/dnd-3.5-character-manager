@@ -1,3 +1,6 @@
+@import '../../styles/base/settings';
+
+
 header {
     background: $dark-grey;
     position: fixed;
@@ -35,8 +38,9 @@ header {
     max-width: 60%;
 }
 
-.header__icon {
-    height: 130%;
-    max-width: 30px ;
-    margin: 0 $xs-size;
+.header__button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: $s-size;
 }

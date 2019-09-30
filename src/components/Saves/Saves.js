@@ -2,7 +2,8 @@ import React, { Fragment, useState, useEffect } from 'react'
 import _ from 'lodash'
 import update from 'immutability-helper'
 
-import { convertInputValue } from '../utils/utils'
+import { convertInputValue } from '../../utils/utils'
+import './Saves.scss'
 
 
 const Saves = (props) => {
@@ -16,7 +17,7 @@ const Saves = (props) => {
     }, [saveMods])
 
     return (
-        <div className="grid--6col">
+        <div className="Saves">
             <h5 className="grid__col1">Type</h5>
             <h5>Base</h5>
             <div></div>

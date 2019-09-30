@@ -2,10 +2,11 @@ import React, { useState, useEffect, Fragment } from 'react'
 import _ from 'lodash'
 import update from 'immutability-helper'
 
-import { calcBaseMeleeBonus, calcBaseRangedBonus, calcBaseGrappleBonus, convertInputValue } from '../utils/utils'
+import { calcBaseMeleeBonus, calcBaseRangedBonus, calcBaseGrappleBonus, convertInputValue } from '../../utils/utils'
+import './AttackBonuses.scss'
 
 
-const AttackBonuses = (props) => {  
+const AttackBonuses = props => {  
     const { abilities, baseAttackBonuses, size, handleUpdate } = props
     const attackBonusBases = {
         melee: _.map(baseAttackBonuses, (bab) => calcBaseMeleeBonus(bab, abilities.str.score, size)),
@@ -23,7 +24,7 @@ const AttackBonuses = (props) => {
     }, [attackBonusMods])
 
     return (    
-        <div className="grid--6col">
+        <div className="AttackBonuses">
             <h5 className="grid__col1">Type</h5>
             <h5>Base</h5>
             <div></div>

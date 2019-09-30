@@ -12,26 +12,32 @@ exports[`should render Header correctly 1`] = `
       className="header__nav"
     >
       <NavLink
-        className="header__icon"
+        className="header__button"
         to="/create"
       >
-        <HeaderIcon
-          svgFile="test-file-stub"
+        <ion-icon
+          name="add-circle-outline"
+          size="large"
         />
       </NavLink>
       <NavLink
-        className="header__icon"
+        className="header__button"
         hidden={true}
         to="/select"
       >
-        <HeaderIcon
-          svgFile="test-file-stub"
+        <ion-icon
+          name="swap"
+          size="large"
         />
       </NavLink>
       <button
+        className="header__button"
         onClick={[Function]}
       >
-        Logout
+        <ion-icon
+          name="log-out"
+          size="large"
+        />
       </button>
     </div>
   </div>

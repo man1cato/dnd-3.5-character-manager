@@ -2,13 +2,13 @@
 
 exports[`should render SpellbookPage with profile data 1`] = `
 <div
-  class="container container--body"
+  class="container--body"
 >
   <div
     class="section"
   >
     <h3
-      class="row--center"
+      class="section__title"
     >
       Level 
       0
@@ -19,21 +19,17 @@ exports[`should render SpellbookPage with profile data 1`] = `
       )
     </h3>
     <div
-      class="grid--spells"
+      class="spells-grid"
     >
       <h5
         class="grid__col1"
       >
         Spell
       </h5>
-      <h5
-        class="grid__col2"
-      >
-        Prep
+      <h5>
+        Prepared
       </h5>
-      <h5
-        class="grid__col3"
-      >
+      <h5>
         Rmng
       </h5>
       <button
@@ -43,40 +39,38 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Acid Splash
       </button>
       <div
-        class="grid__col2 grid--spells__attribute"
+        class="Counter"
       >
-        <button
-          change="1"
-          id="rec8IQeYmBr3f1BMCPlus"
-          index="0"
-          level="0"
-        >
-          +
+        <button>
+          <ion-icon
+            name="remove"
+            size="small"
+          />
         </button>
         <div
-          id="rec8IQeYmBr3f1BMCPrepared"
+          class="counter-value"
         >
           1
         </div>
-        <button
-          change="-1"
-          id="rec8IQeYmBr3f1BMCMinus"
-          index="0"
-          level="0"
-        >
-          -
+        <button>
+          <ion-icon
+            name="add"
+            size="small"
+          />
         </button>
       </div>
       <div
-        class="grid__col3"
         id="rec8IQeYmBr3f1BMCRemaining"
       >
         1
       </div>
       <button
-        class="grid__col4"
+        class="clear-button"
       >
-        x
+        <ion-icon
+          name="close-circle"
+          size="small"
+        />
       </button>
       <button
         class="grid__col1 button--link"
@@ -85,40 +79,38 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Arcane Mark
       </button>
       <div
-        class="grid__col2 grid--spells__attribute"
+        class="Counter"
       >
-        <button
-          change="1"
-          id="recwpeRoCsea4vidWPlus"
-          index="1"
-          level="0"
-        >
-          +
+        <button>
+          <ion-icon
+            name="remove"
+            size="small"
+          />
         </button>
         <div
-          id="recwpeRoCsea4vidWPrepared"
+          class="counter-value"
         >
           2
         </div>
-        <button
-          change="-1"
-          id="recwpeRoCsea4vidWMinus"
-          index="1"
-          level="0"
-        >
-          -
+        <button>
+          <ion-icon
+            name="add"
+            size="small"
+          />
         </button>
       </div>
       <div
-        class="grid__col3"
         id="recwpeRoCsea4vidWRemaining"
       >
         1
       </div>
       <button
-        class="grid__col4"
+        class="clear-button"
       >
-        x
+        <ion-icon
+          name="close-circle"
+          size="small"
+        />
       </button>
     </div>
   </div>
@@ -126,7 +118,7 @@ exports[`should render SpellbookPage with profile data 1`] = `
     class="section"
   >
     <h3
-      class="row--center"
+      class="section__title"
     >
       Level 
       1
@@ -137,21 +129,17 @@ exports[`should render SpellbookPage with profile data 1`] = `
       )
     </h3>
     <div
-      class="grid--spells"
+      class="spells-grid"
     >
       <h5
         class="grid__col1"
       >
         Spell
       </h5>
-      <h5
-        class="grid__col2"
-      >
-        Prep
+      <h5>
+        Prepared
       </h5>
-      <h5
-        class="grid__col3"
-      >
+      <h5>
         Rmng
       </h5>
       <button
@@ -161,40 +149,38 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Charm Person
       </button>
       <div
-        class="grid__col2 grid--spells__attribute"
+        class="Counter"
       >
-        <button
-          change="1"
-          id="recRhVs0ahtQZpbXxPlus"
-          index="0"
-          level="1"
-        >
-          +
+        <button>
+          <ion-icon
+            name="remove"
+            size="small"
+          />
         </button>
         <div
-          id="recRhVs0ahtQZpbXxPrepared"
+          class="counter-value"
         >
           1
         </div>
-        <button
-          change="-1"
-          id="recRhVs0ahtQZpbXxMinus"
-          index="0"
-          level="1"
-        >
-          -
+        <button>
+          <ion-icon
+            name="add"
+            size="small"
+          />
         </button>
       </div>
       <div
-        class="grid__col3"
         id="recRhVs0ahtQZpbXxRemaining"
       >
         0
       </div>
       <button
-        class="grid__col4"
+        class="clear-button"
       >
-        x
+        <ion-icon
+          name="close-circle"
+          size="small"
+        />
       </button>
     </div>
   </div>

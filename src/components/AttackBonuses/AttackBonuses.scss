@@ -1,0 +1,15 @@
+@import '../../styles/base/settings';
+
+.AttackBonuses {
+   display: grid;
+   grid-template-columns: 2fr repeat(5, 1fr);
+   grid-auto-flow: dense;
+   grid-row-gap: $xs-size; 
+   justify-items: center;
+   align-items: end;
+   text-align: center; 
+   > input {
+      max-width: 50px;
+      text-align: center;
+   }
+}

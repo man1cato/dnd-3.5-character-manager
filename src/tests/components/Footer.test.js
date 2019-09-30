@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {Footer} from '../../components/Footer'
+import {Footer} from '../../components/Footer/Footer'
 import profile from '../fixtures/profile'
 
 

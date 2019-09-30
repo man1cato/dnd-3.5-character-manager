@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Abilities from '../../components/Abilities'
+import Abilities from '../../components/Abilities/Abilities'
 import { characterOne } from '../utils/seedDatabase'
 
 
@@ -19,19 +19,4 @@ beforeEach(() => {
 
 test('should render Abilities with profile data', () => {
   expect(wrapper).toMatchSnapshot()
-})
-
-test('should handle input change', () => {
-  const value = 14
-  wrapper.find({ id: 'str' }).simulate('change', { target: { value } })
-  
-  expect(handleUpdate).toHaveBeenCalledWith({
-    abilities: { 
-      ...abilities, 
-      str: { 
-        score: abilities.str.score,
-        tempScore: value
-      } 
-    }
-  })
 })

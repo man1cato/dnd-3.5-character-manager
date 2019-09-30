@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import AttackBonuses from '../../components/AttackBonuses'
+import AttackBonuses from '../../components/AttackBonuses/AttackBonuses'
 import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
 

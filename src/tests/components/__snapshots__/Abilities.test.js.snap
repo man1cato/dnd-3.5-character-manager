@@ -68,7 +68,7 @@ exports[`should render Abilities with profile data 1`] = `
   }
 >
   <div
-    className="grid--abilities"
+    className="Abilities"
   >
     <h5
       className="grid__col1"
@@ -100,14 +100,38 @@ exports[`should render Abilities with profile data 1`] = `
     >
       14
     </div>
-    <input
+    <Counter
       className="grid__col3"
-      id="str"
-      name="abilities"
-      onChange={[Function]}
-      type="number"
+      updateValue={[Function]}
       value={0}
-    />
+    >
+      <div
+        className="Counter"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          className="counter-value"
+          onChange={[Function]}
+          size={3}
+          value={0}
+        />
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+    </Counter>
     <div
       className="grid__col4"
     >
@@ -123,14 +147,38 @@ exports[`should render Abilities with profile data 1`] = `
     >
       18
     </div>
-    <input
+    <Counter
       className="grid__col3"
-      id="dex"
-      name="abilities"
-      onChange={[Function]}
-      type="number"
+      updateValue={[Function]}
       value={0}
-    />
+    >
+      <div
+        className="Counter"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          className="counter-value"
+          onChange={[Function]}
+          size={3}
+          value={0}
+        />
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+    </Counter>
     <div
       className="grid__col4"
     >
@@ -146,14 +194,38 @@ exports[`should render Abilities with profile data 1`] = `
     >
       16
     </div>
-    <input
+    <Counter
       className="grid__col3"
-      id="con"
-      name="abilities"
-      onChange={[Function]}
-      type="number"
+      updateValue={[Function]}
       value={0}
-    />
+    >
+      <div
+        className="Counter"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          className="counter-value"
+          onChange={[Function]}
+          size={3}
+          value={0}
+        />
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+    </Counter>
     <div
       className="grid__col4"
     >
@@ -169,14 +241,38 @@ exports[`should render Abilities with profile data 1`] = `
     >
       20
     </div>
-    <input
+    <Counter
       className="grid__col3"
-      id="int"
-      name="abilities"
-      onChange={[Function]}
-      type="number"
+      updateValue={[Function]}
       value={0}
-    />
+    >
+      <div
+        className="Counter"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          className="counter-value"
+          onChange={[Function]}
+          size={3}
+          value={0}
+        />
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+    </Counter>
     <div
       className="grid__col4"
     >
@@ -192,14 +288,38 @@ exports[`should render Abilities with profile data 1`] = `
     >
       14
     </div>
-    <input
+    <Counter
       className="grid__col3"
-      id="wis"
-      name="abilities"
-      onChange={[Function]}
-      type="number"
+      updateValue={[Function]}
       value={0}
-    />
+    >
+      <div
+        className="Counter"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          className="counter-value"
+          onChange={[Function]}
+          size={3}
+          value={0}
+        />
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+    </Counter>
     <div
       className="grid__col4"
     >
@@ -215,14 +335,38 @@ exports[`should render Abilities with profile data 1`] = `
     >
       11
     </div>
-    <input
+    <Counter
       className="grid__col3"
-      id="cha"
-      name="abilities"
-      onChange={[Function]}
-      type="number"
+      updateValue={[Function]}
       value={0}
-    />
+    >
+      <div
+        className="Counter"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          className="counter-value"
+          onChange={[Function]}
+          size={3}
+          value={0}
+        />
+        <button
+          onClick={[Function]}
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+    </Counter>
     <div
       className="grid__col4"
     >

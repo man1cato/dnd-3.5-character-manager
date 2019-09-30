@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Route, Redirect } from 'react-router-dom'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 
 
 export const ProfileRoute = ({

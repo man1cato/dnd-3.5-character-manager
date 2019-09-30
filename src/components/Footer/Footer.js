@@ -3,12 +3,13 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import SVGInline from 'react-svg-inline'
 
-import profileSVG from "../../public/images/profile.svg"
-import statsSVG from "../../public/images/stats.svg"
-import combatSVG from "../../public/images/combat.svg"
-import equipmentSVG from "../../public/images/equipment.svg"
-import spellbookSVG from "../../public/images/spellbook.svg"
-import companionSVG from "../../public/images/companion.svg"
+import profileSVG from "../../../public/images/profile.svg"
+import statsSVG from "../../../public/images/stats.svg"
+import combatSVG from "../../../public/images/combat.svg"
+import equipmentSVG from "../../../public/images/equipment.svg"
+import spellbookSVG from "../../../public/images/spellbook.svg"
+import companionSVG from "../../../public/images/companion.svg"
+import './Footer.scss'
 
 
 const FooterIcon = ({svgFile}) => (
@@ -22,15 +23,15 @@ export const Footer = ({profile}) => (
 				<FooterIcon svgFile={profileSVG} />
 			</Link>
 
-			<Link to={profile.ac ? "/stats" : "/underconstruction"} >
+			<Link to="/stats" >
 				<FooterIcon svgFile={statsSVG} />
 			</Link>
 
-			<Link to={profile.hp ? "/combat" : "/underconstruction"} >
+			<Link to="/combat" >
 				<FooterIcon svgFile={combatSVG} />
 			</Link>
 
-			<Link to={profile.equipment ? "/equipment" : "/underconstruction"} >
+			<Link to="/equipment" >
 				<FooterIcon svgFile={equipmentSVG} />
 			</Link>
 

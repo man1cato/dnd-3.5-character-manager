@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import { render, fireEvent } from '@testing-library/react'
 
-import { SpellbookPage } from '../../pages/SpellbookPage'
+import { SpellbookPage } from '../../pages/SpellbookPage/SpellbookPage'
 import { characterOne } from '../utils/seedDatabase'
 import { apiData } from '../utils/utils'
 
@@ -39,17 +39,4 @@ test('should launch SpellModal on spell button click', async () => {
 
     const modal = await findByLabelText(labelMatch)
     expect(modal).toBeDefined()
-})
-
-test('should increase prepared and remaining value for spell when + button clicked', () => {
-    const wrapper = mount(<SpellbookPage {...props} />)
-    const { id, prepared, remaining } = spellbook[0][0]
-
-    expect(wrapper.find(`#${id}Prepared`).text()).toEqual(`${prepared}`)
-    expect(wrapper.find(`#${id}Remaining`).text()).toEqual(`${remaining}`)
-
-    wrapper.find(`#${id}Plus`).simulate('click')
-
-    expect(wrapper.find(`#${id}Prepared`).text()).toEqual(`${prepared + 1}`)
-    expect(wrapper.find(`#${id}Remaining`).text()).toEqual(`${remaining + 1}`)
 })

@@ -21,6 +21,7 @@ exports[`should render stats page with profile data 1`] = `
   >
     <span>
       Hit Die: 
+      D4
     </span>
     <span>
       To next level: 
