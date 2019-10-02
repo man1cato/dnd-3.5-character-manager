@@ -100,7 +100,7 @@ export const EquipmentPage = (props) => {
 	}
 
 	return (
-		<div className="EquipmentPage">
+		<div className="container--body EquipmentPage">
 			<div className="money-container">
 				<div className="money-row">
 					{denominations.map((denomination, i) => (

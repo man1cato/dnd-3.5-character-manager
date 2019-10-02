@@ -1,0 +1,19 @@
+@import '../../styles/base/settings';
+
+
+.Selector__row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 4rem;
+   margin-bottom: $m-size;
+}
+
+.Selector__dropdown {
+   flex: 1 1 75%;
+   margin-right: $s-size;
+}
+
+.Selector__button {
+   flex: 1 0 100px;
+}

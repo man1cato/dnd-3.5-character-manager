@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import { startSetProfile } from '../store/actions/profile'
-import { history } from '../routers/AppRouter'
+import { startSetProfile } from '../../store/actions/profile'
+import { history } from '../../routers/AppRouter'
+import './CharacterSelectionPage.scss'
 
 
 export class CharacterSelectionPage extends React.Component {
@@ -22,13 +23,11 @@ export class CharacterSelectionPage extends React.Component {
 
    render() {
       return (
-         <div className="container container--body">
-            <h3>Select your character:</h3>
+         <div className="container--body CharacterSelectionPage">
             {this.props.profiles.map((profile, i) => (
-
                <button 
                   key={i}
-                  className="button-profile"
+                  className="profile-button"
                   id={profile.id}   
                   disabled={this.state.disabled}
                   onClick={this.handleClick}

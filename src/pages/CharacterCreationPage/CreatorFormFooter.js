@@ -9,8 +9,8 @@ const CreatorFormFooter = ({
 	isSubmitting, 
 	isValid
 }) => (
-	<footer className="footer--form">
-		<div className="container footer--form__content">
+	<footer className="CreatorFormFooter">
+		<div className="container CreatorFormFooter__content">
 			{page !== 1 && (
 				<button 
 					className="button--form-nav button--secondary" 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import AttackBonuses from '../../components/AttackBonuses/AttackBonuses'
-import { characterOne } from '../utils/seedDatabase'
-import { apiData } from '../utils/utils'
+import AttackBonuses from './AttackBonuses'
+import { characterOne } from '../../tests/utils/seedDatabase'
+import { apiData } from '../../tests/utils/utils'
 
 
 const handleUpdate = jest.fn()

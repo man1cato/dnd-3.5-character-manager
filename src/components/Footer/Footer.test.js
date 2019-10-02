@@ -1,7 +1,7 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {Footer} from '../../components/Footer/Footer'
-import profile from '../fixtures/profile'
+import {Footer} from './Footer'
+import profile from '../../tests/fixtures/profile'
 
 
 test('should render footer correctly', () => {

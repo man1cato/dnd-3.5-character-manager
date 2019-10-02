@@ -2,7 +2,7 @@ import React from 'react'
 
 
 export const UnderConstructionPage = () => (
-   <div className="container container--body">
+   <div className="container--body">
       <h2>Page Under Construction</h2>
    </div>
 )

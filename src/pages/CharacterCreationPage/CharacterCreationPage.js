@@ -4,18 +4,18 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import _ from 'lodash'
 
-import { history } from '../routers/AppRouter'
-import { startCreateProfile } from '../store/actions/profile'
-import { apiObjectToArray, calcAbilityMod, calcSizeMod } from '../utils/utils'
-import { abilities } from '../utils/staticData'
+import { history } from '../../routers/AppRouter'
+import { startCreateProfile } from '../../store/actions/profile'
+import { apiObjectToArray, calcAbilityMod, calcSizeMod } from '../../utils/utils'
+import { abilities } from '../../utils/staticData'
 
-import CreatorFormIdentity from '../components/CreatorForm/CreatorFormIdentity'
-import CreatorFormJobClass from '../components/CreatorForm/CreatorFormJobClass'
-import CreatorFormAbilities from '../components/CreatorForm/CreatorFormAbilities'
-import CreatorFormFeats from '../components/CreatorForm/CreatorFormFeats'
-import CreatorFormSkills from '../components/CreatorForm/CreatorFormSkills'
-import CreatorFormEquipment from '../components/CreatorForm/CreatorFormEquipment'
-import CreatorFormFooter from '../components/CreatorForm/CreatorFormFooter'
+import CreatorFormIdentity from './CreatorFormIdentity'
+import CreatorFormJobClass from './CreatorFormJobClass'
+import CreatorFormAbilities from './CreatorFormAbilities'
+import CreatorFormFeats from './CreatorFormFeats'
+import CreatorFormSkills from './CreatorFormSkills'
+import CreatorFormEquipment from './CreatorFormEquipment'
+import CreatorFormFooter from './CreatorFormFooter'
 
 
 const pages = [CreatorFormIdentity, CreatorFormJobClass, CreatorFormAbilities, CreatorFormFeats, CreatorFormSkills, CreatorFormEquipment]
@@ -157,56 +157,54 @@ export const CharacterCreationPage = (props) => {
 			}}
 		>
 			{({ values, setFieldValue, handleChange, handleSubmit, isSubmitting, isValid, validateForm, setErrors, setFieldError, setTouched}) => (
-				<Form >
-					<div className="container container--body">
-						{{
-							1: <CreatorFormIdentity 
-								selectedRace={selectedRace}
-								setSelectedRace={setSelectedRace}
-								races={props.races}
-								jobClasses={props.jobClasses}
-								handleChange={handleChange} 
-								setFieldValue={setFieldValue}
-								setTouched={setTouched}
-							/>,
-							2: <CreatorFormJobClass
-								values={values}
-								selectedRace={selectedRace}
-								selectedJobClass={selectedJobClass}
-								setSelectedJobClass={setSelectedJobClass}
-								jobClasses={props.jobClasses}
-								handleChange={handleChange}
-								handleMultiSelect={handleMultiSelect}
-								setFieldValue={setFieldValue}
-								setFieldError={setFieldError}
-								validateForm={validateForm}
-							/>,
-							3: <CreatorFormAbilities
-								values={values}
-								selectedRace={selectedRace}
-								selectedJobClass={selectedJobClass}
-								handleChange={handleChange}
-								setFieldValue={setFieldValue}
-								validateForm={validateForm}								
-							/>,
-							4: <CreatorFormFeats
-								values={values}
-								feats={props.feats}
-								setFieldValue={setFieldValue}
-							/>,
-							5: <CreatorFormSkills
-								values={values}
-								skills={props.skills}
-								setFieldValue={setFieldValue}
-							/>,
-							6: <CreatorFormEquipment
-								values={values}
-								items={props.items}
-								setFieldValue={setFieldValue}
-							/>
-						}[page]}
-					</div>
-					
+				<Form className="CreatorForm">
+					{{
+						1: <CreatorFormIdentity 
+							selectedRace={selectedRace}
+							setSelectedRace={setSelectedRace}
+							races={props.races}
+							jobClasses={props.jobClasses}
+							handleChange={handleChange} 
+							setFieldValue={setFieldValue}
+							setTouched={setTouched}
+						/>,
+						2: <CreatorFormJobClass
+							values={values}
+							selectedRace={selectedRace}
+							selectedJobClass={selectedJobClass}
+							setSelectedJobClass={setSelectedJobClass}
+							jobClasses={props.jobClasses}
+							handleChange={handleChange}
+							handleMultiSelect={handleMultiSelect}
+							setFieldValue={setFieldValue}
+							setFieldError={setFieldError}
+							validateForm={validateForm}
+						/>,
+						3: <CreatorFormAbilities
+							values={values}
+							selectedRace={selectedRace}
+							selectedJobClass={selectedJobClass}
+							handleChange={handleChange}
+							setFieldValue={setFieldValue}
+							validateForm={validateForm}								
+						/>,
+						4: <CreatorFormFeats
+							values={values}
+							feats={props.feats}
+							setFieldValue={setFieldValue}
+						/>,
+						5: <CreatorFormSkills
+							values={values}
+							skills={props.skills}
+							setFieldValue={setFieldValue}
+						/>,
+						6: <CreatorFormEquipment
+							values={values}
+							items={props.items}
+							setFieldValue={setFieldValue}
+						/>
+					}[page]}
+
 					<CreatorFormFooter 
 						page={page}
 						pageCount={pages.length}
@@ -225,16 +223,16 @@ export const CharacterCreationPage = (props) => {
 }
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 	races: state.races,
 	jobClasses: state.jobClasses,
-	feats: _.omitBy(state.feats, (feat) => feat.prerequisites || _.includes(feat.types, 'Epic') || _.includes(feat.types, 'Creature')),
-	items: _.omitBy(state.items, (item) => item.weaponType === 'Natural' || _.includes(['Creature Part', 'Money'], item.category)),
+	feats: _.omitBy(state.feats, feat => feat.prerequisites || _.includes(feat.types, 'Epic') || _.includes(feat.types, 'Creature')),
+	items: _.omitBy(state.items, item => item.weaponType === 'Natural' || _.includes(['Creature Part', 'Money'], item.category)),
 	skills: state.skills
 })
 
-const mapDispatchToProps = (dispatch, props) => ({
-	startCreateProfile: (profile) => dispatch(startCreateProfile(profile))
+const mapDispatchToProps = dispatch => ({
+	startCreateProfile: profile => dispatch(startCreateProfile(profile))
 })
 
 

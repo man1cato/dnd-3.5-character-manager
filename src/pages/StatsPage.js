@@ -16,7 +16,7 @@ export const StatsPage = ({ profile, jobClasses, startEditProfile }) => {
 	}
 
 	return (
-		<div className="container container--body">
+		<div className="container--body">
 
 			<div className="row">
 				<h3>Level {profile.level}</h3>

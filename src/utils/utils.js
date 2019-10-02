@@ -10,10 +10,10 @@ export const convertInputValue = (value) => {
 	return value
 }
 
-export const apiObjectToArray = (obj) => _.orderBy(_.keys(obj).map((id) => ({
-	id,
-	...obj[id]
-})), ['name'], ['asc'])
+export const apiObjectToArray = obj => _.sortBy(
+	_.map(obj, (val, key) => ({ id: key, ...val })), 
+	['name']
+)
 
 
 export const rollDice = (countDice = 1, dieFaces = 6) => {
@@ -103,5 +103,19 @@ export const calcItemTotalWeight = (item, qty) => {
 	return isNaN(totalWeight) ? 0 : Number(totalWeight.toFixed(1))
 }
 
-export const calcEquipmentTotalValue = (equipment, items) => _.reduce(_.map(equipment, (item) => items[item.id].value * item.qty), (total, num) => total + num, 0)
-export const calcEquipmentTotalWeight = (equipment, items) => _.reduce(_.map(equipment, (item) => items[item.id].weight * item.qty), (total, num) => total + num, 0)
+export const calcEquipmentTotalValue = (equipment, items) => {
+	const res = _.reduce(
+		_.map(equipment, (item) => items[item.id].value * item.qty), 
+		(total, num) => total + num, 
+		0
+	)
+	return res.toFixed(2)
+}
+export const calcEquipmentTotalWeight = (equipment, items) => {
+	const res = _.reduce(
+		_.map(equipment, (item) => items[item.id].weight * item.qty), 
+		(total, num) => total + num, 
+		0
+	)
+	return res.toFixed(2)
+}

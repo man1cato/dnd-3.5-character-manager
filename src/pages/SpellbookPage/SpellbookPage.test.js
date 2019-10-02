@@ -2,9 +2,9 @@ import React from 'react'
 import { mount } from 'enzyme'
 import { render, fireEvent } from '@testing-library/react'
 
-import { SpellbookPage } from '../../pages/SpellbookPage/SpellbookPage'
-import { characterOne } from '../utils/seedDatabase'
-import { apiData } from '../utils/utils'
+import { SpellbookPage } from './SpellbookPage'
+import { characterOne } from '../../tests/utils/seedDatabase'
+import { apiData } from '../../tests/utils/utils'
 
 
 const startEditProfile = jest.fn()

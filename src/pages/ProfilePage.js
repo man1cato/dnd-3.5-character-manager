@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 
-import Feats from '../components/Feats'
+import Feats from '../components/Feats/Feats'
 import SpecialAbilities from '../components/SpecialAbilities'
 
 
 export const ProfilePage = (props) => (
-	<div className="container container--body">
+	<div className="container--body">
 		<div className="grid--profile">
 			<img className="grid--profile__img" src={props.iconUrl} />
 

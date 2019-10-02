@@ -12,11 +12,13 @@
   margin-bottom: 10vh;
   padding-top: $m-size;
   padding-bottom: $m-size;
-  overflow: auto;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .app-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }

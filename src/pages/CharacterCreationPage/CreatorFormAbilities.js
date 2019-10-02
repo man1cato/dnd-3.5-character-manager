@@ -1,8 +1,10 @@
 import React, { useEffect, Fragment } from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
+
 import { rollDice, calcAbilityMod, calcSkillPoints } from '../../utils/utils'
 import { abilities } from '../../utils/staticData'
+
 
 const CreatorFormAbilities = ({
 	values,
@@ -27,7 +29,7 @@ const CreatorFormAbilities = ({
 	}, [])
 
 	return (
-		<>
+		<div className="container--body">					
 			<h3 className="row--center">Ability Scores</h3>
 
 			<div className="section form-grid--abilities">
@@ -84,7 +86,7 @@ const CreatorFormAbilities = ({
 
 			</div>
 			
-		</>
+		</div>
 	)
 }
 

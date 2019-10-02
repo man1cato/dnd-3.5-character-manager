@@ -3,10 +3,10 @@ import _ from 'lodash'
 import update from 'immutability-helper'
 import { ErrorMessage } from 'formik'
 
-import ItemModal from '../ItemModal'
-import Selector from '../Selector'
-import EquipButton from '../EquipButton'
-import { calcItemTotalValue, calcEquipmentTotalValue, calcEquipmentTotalWeight } from '../../utils/utils'
+import ItemModal from '../../components/ItemModal'
+import Selector from '../../components/Selector/Selector'
+import EquipButton from '../../components/EquipButton'
+import { apiObjectToArray, calcItemTotalValue, calcEquipmentTotalValue, calcEquipmentTotalWeight } from '../../utils/utils'
 
 
 const CreatorFormEquipment = ({
@@ -15,9 +15,12 @@ const CreatorFormEquipment = ({
 	setFieldValue
 }) => {
 	const { equipped } = values
+	const itemsArray = apiObjectToArray(items)
+
 	const [equipment, setEquipment] = useState(values.equipment)
+	const [availableItems, setAvailableItems] = useState(itemsArray)
 	const [selectedItemIds, setSelectedItemIds] = useState([])
-	const [selected, setSelected] = useState(undefined)
+	const [clickedItem, setClickedItem] = useState(undefined)
 	const [totalCost, setTotalCost] = useState(0)
 	const [totalWeight, setTotalWeight] = useState(0)
 
@@ -27,6 +30,9 @@ const CreatorFormEquipment = ({
 	}
 
 	useEffect(() => {
+		setAvailableItems(_.filter(itemsArray, item =>
+			!_.includes(selectedItemIds, item.id)
+		))
 		if (selectedItemIds.length > equipment.length) {
 			updateEquipment([...equipment, { id: _.last(selectedItemIds), qty: 1 }])
 		} else {
@@ -46,8 +52,12 @@ const CreatorFormEquipment = ({
 	}, [equipment])
 
 	useEffect(() => {
-		setFieldValue('remainingGold', values.startingGold - totalCost)
+		setFieldValue('remainingGold', (values.startingGold - totalCost).toFixed(2))
 	}, [totalCost])
+
+	const handleSelect = selectedItemId => {
+		setSelectedItemIds([...selectedItemIds, selectedItemId])
+	}
 
 	const handleEquip = (e) => {
 		const id = e.target.id
@@ -64,47 +74,48 @@ const CreatorFormEquipment = ({
 		}))			
 	}
 
-	const Content = ({selected}) => (
-		<div>
-			<div className="form-group--35"><b>Category:</b> <div>{selected.category}</div></div>
+	const SelectorContent = ({ currentItemId }) => {
+		const currentItem = items[currentItemId]
+		return (
+			<div>
+				<p><b>Category:</b> {currentItem.category}</p>
 
-			{selected.weaponType && (
-				<>
-					<div className="form-group--35"><b>Type:</b> <div>{selected.weaponType} / {selected.encumbrance} / {selected.damageType}</div></div>
-					<div className="form-group--35"><b>Range:</b> <div>{selected.range}</div></div>
-					<div className="form-group--35"><b>Damage (M):</b> <div>{selected.damageM}</div></div>
-					<div className="form-group--35"><b>Damage (S):</b> <div>{selected.damageS}</div></div>
-					<div className="form-group--35"><b>Critical:</b> <div>{selected.critical}</div></div>
-				</>
-			)}
+				{currentItem.weaponType && (
+					<>
+						<p><b>Type:</b> {currentItem.weaponType} / {currentItem.encumbrance} / {currentItem.damageType}</p>
+						<p><b>Range:</b> {currentItem.range}</p>
+						<p><b>Damage (M):</b> {currentItem.damageM}</p>
+						<p><b>Damage (S):</b> {currentItem.damageS}</p>
+						<p><b>Critical:</b> {currentItem.critical}</p>
+					</>
+				)}
 
-			<div className="form-group--35"><b>Value:</b> <div>{selected.value} gp</div></div>
-			<div className="form-group--35"><b>Weight:</b> <div>{selected.weight} lbs</div></div>
-		</div>
-	)
+				<p><b>Value:</b> {currentItem.value} gp</p>
+				<p><b>Weight:</b> {currentItem.weight} lbs</p>
+			</div>
+		)
+	}
 	
 	return (
-		<>
+		<div className="container--body">						
 			<h3 className="row--center">Purchase Equipment</h3>
 
 			<Selector
-				apiObject={items} 
-				fieldName="equipment"
-				Content={Content}
-				selectedObjIds={selectedItemIds}
-				setSelectedObjIds={setSelectedItemIds}
+				items={availableItems} 
+				Content={SelectorContent}
+				handleSelect={handleSelect}
 			/>
 
 			<div className="divider"></div>
 
 			<h4>Selected Equipment:</h4>
 
-			<div className="section form-grid--equipment">
+			<div className="section CreatorFormEquipment__grid">
 				<h5 className="grid__col1">Item</h5>
 				<h5 className="grid__col2">Qty</h5>
 				<h5 className="grid__col3">Cost (gp)</h5>
 
-				{_.map(equipment, (item) => {
+				{_.map(equipment, item => {
 					const id = item.id
 					item = { id, ...items[id] }
 					const qty = _.find(equipment, { id }).qty
@@ -114,7 +125,7 @@ const CreatorFormEquipment = ({
 								className="grid__col1 button--link"
 								type="button"
 								id={id}
-								onClick={() => setSelected(item)}
+								onClick={() => setClickedItem(item)}
 							>
 								{items[id].name}
 							</button>
@@ -146,29 +157,28 @@ const CreatorFormEquipment = ({
 								type="button" 
 								onClick={() => setSelectedItemIds(_.without(selectedItemIds, id))}
 							>
-								x
+								<ion-icon name="close" size="small" />
 							</button>
 						</Fragment>
 					)
 				})}
 			</div>
-
-			<ErrorMessage className="form-group--error" name="equipment" component="div" />
-			<ErrorMessage className="form-group--error" name="remainingGold" component="div" />
+			<ErrorMessage className="CreatorForm__error" name="equipment" component="div" />
 			
 			<div className="form-group">
 				<div>Total weight: {totalWeight} lbs</div>
-				<div>Remaining gold: {values.remainingGold} gp</div>
+				<div>Remaining money: <span style={values.remainingGold < 0 ? { color: "red" } : null}>{values.remainingGold} gp</span></div>
 			</div>
+			<ErrorMessage className="CreatorForm__error--right" name="remainingGold" component="div" />
 
 			<ItemModal
-				selected={selected}
+				selected={clickedItem}
 				equipped={equipped}
-				handleCloseModal={() => setSelected(undefined)}
+				handleCloseModal={() => setClickedItem(undefined)}
 				handleEquip={handleEquip}
 			/>
 
-		</>
+		</div>
 	)
 }
 

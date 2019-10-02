@@ -1,8 +1,8 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Abilities from '../../components/Abilities/Abilities'
-import { characterOne } from '../utils/seedDatabase'
+import Abilities from './Abilities'
+import { characterOne } from '../../tests/utils/seedDatabase'
 
 
 const handleUpdate = jest.fn()

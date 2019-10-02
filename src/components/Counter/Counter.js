@@ -2,10 +2,11 @@ import React from 'react'
 import './Counter.scss'
 
 
-const Counter = ({ value, updateValue, noInput }) => {
+const Counter = ({ value, updateValue, noInput, className }) => {
    return (
-      <div className="Counter">
+      <div className={`Counter ${className}`}>
          <button
+            type="button"
             onClick={() => updateValue(value - 1)}
          >
             <ion-icon name="remove" size="small" />
@@ -23,6 +24,7 @@ const Counter = ({ value, updateValue, noInput }) => {
          )}
          
          <button
+            type="button"
             onClick={() => updateValue(value + 1)}
          >
             <ion-icon name="add" size="small" />

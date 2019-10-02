@@ -4,8 +4,8 @@ import { StaticRouter, NavLink } from 'react-router-dom'
 import { shallow, mount } from 'enzyme'
 import configureStore from 'redux-mock-store'
 
-import profiles from '../fixtures/profiles'
-import ConnectedHeader, { Header } from '../../components/Header/Header'
+import profiles from '../../tests/fixtures/profiles'
+import ConnectedHeader, { Header } from './Header'
 
 const mockStore = configureStore()
 const createConnectedWrapper = (state) => mount(

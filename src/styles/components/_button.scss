@@ -54,28 +54,3 @@
     padding: $xs-size $s-size;
     white-space: nowrap;
 }
-
-.button-profile {
-    display: flex;
-    width: 100%;
-    padding: $s-size;
-    margin-top: $m-size;
-    background: $off-white;
-    border: 1px solid $light-grey;
-    border-radius: $s-size;
-    > img {
-        width: 30%;
-        max-height: 100px;
-        margin-right: $s-size; 
-    }
-    :last-child {
-        width: -webkit-fill-available;
-        text-align: left;
-        line-height: 2rem;
-    }
-}
-
-button.button-profile:hover {
-    box-shadow: 0 0 5px $light-grey;
-}
-

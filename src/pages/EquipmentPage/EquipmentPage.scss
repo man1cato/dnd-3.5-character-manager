@@ -1,7 +1,7 @@
-@import '../../styles/styles.scss';
+@import '../../styles/base/settings';
+
 
 .EquipmentPage {
-   @extend .container--body;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -72,8 +72,17 @@
 }
 
 .add-item-container {
-   @extend .form-group--70;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    margin: 0;
+   > :first-child {
+      width: 70%;
+      margin-right: $s-size;
+   }
+   > :last-child {
+      width: 30%;
+   }
 }
 
 .remove-button {

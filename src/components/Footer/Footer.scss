@@ -35,18 +35,4 @@
     }
 }
 
-.footer--form {
-    @extend .footer;
-    padding: $s-size 0;
-}
 
-.footer--form__content {
-    display: flex;
-    justify-content: space-between;
-    > * {
-        width: -webkit-fill-available;
-    }
-    :nth-child(2) {
-        margin-left: $s-size;
-    }
-}

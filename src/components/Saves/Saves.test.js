@@ -1,9 +1,9 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Saves from '../../components/Saves/Saves'
-import { characterOne } from '../utils/seedDatabase'
-import { apiData } from '../utils/utils'
+import Saves from './Saves'
+import { characterOne } from '../../tests/utils/seedDatabase'
+import { apiData } from '../../tests/utils/utils'
 
 const handleUpdate = jest.fn()
 const saveMods = characterOne.saveMods

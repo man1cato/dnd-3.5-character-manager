@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Abilities from '../components/Abilities/Abilities'
-import Feats from '../components/Feats'
+import Feats from '../components/Feats/Feats'
 import SpecialAbilities from '../components/SpecialAbilities'
 import SkillSet from '../components/SkillSet'
 import PhysicalStats from '../components/PhysicalStats'
@@ -21,7 +21,7 @@ export const CompanionPage = ({ id, companion, startEditProfile }) => {
 	}
 
 	return (
-		<div className="container container--body">
+		<div className="container--body">
 			<div className="section grid--companion">
 				<h3>{companion.name}</h3>
 				<div>{companion.type}</div>

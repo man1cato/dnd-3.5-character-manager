@@ -2,7 +2,7 @@ import React, { useEffect }  from 'react'
 import { Field, ErrorMessage } from 'formik'
 import _ from 'lodash'
 
-import SpecialAbilities from '../SpecialAbilities'
+import SpecialAbilities from '../../components/SpecialAbilities'
 import { apiObjectToArray } from '../../utils/utils'
 
 
@@ -19,7 +19,7 @@ const CreatorFormIdentity = ({
 	},[])
 
 	return (
-		<>
+		<div className="container--body">		
 			<div className="form-group--35">
 				<h4>Name:</h4>
 				<div>
@@ -169,7 +169,7 @@ const CreatorFormIdentity = ({
 				</div>
 			</div>        
 			
-		</>
+		</div>
 	)
 }
 

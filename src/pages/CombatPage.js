@@ -17,7 +17,7 @@ export const CombatPage = ({ profile, races, jobClasses, spells, startEditProfil
 	const handleUpdate = (updates) => {	startEditProfile(profile.id, updates) }
 
 	return (
-		<div className="container container--body">
+		<div className="container--body">
 			<div className="section">
 				<h3 className="section__title">Physical Stats</h3>
 				<PhysicalStats

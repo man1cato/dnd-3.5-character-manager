@@ -1,0 +1,30 @@
+@import '../../styles/base/settings';
+
+
+.CharacterSelectionPage {
+   margin-bottom: 0 !important;
+}
+
+.profile-button {
+   display: flex;
+   width: 100%;
+   padding: $s-size;
+   margin-bottom: $m-size;
+   background: $off-white;
+   border: 1px solid $light-grey;
+   border-radius: $s-size;
+   > img {
+      width: 30%;
+      max-height: 100px;
+      margin-right: $s-size; 
+   }
+   :last-child {
+      width: -webkit-fill-available;
+      text-align: left;
+      line-height: 2rem;
+   }
+}
+
+button.profile-button:hover {
+   box-shadow: 0 0 5px $light-grey;
+}

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
-import FeatModal from './FeatModal'
+
+import FeatModal from '../FeatModal'
+
 
 export const Feats = (props) => { 
 	const [selected, setSelected] = useState(undefined)
