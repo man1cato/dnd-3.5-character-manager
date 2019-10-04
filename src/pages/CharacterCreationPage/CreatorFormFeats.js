@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import _ from 'lodash'
 import { ErrorMessage } from 'formik'
 
-import FeatModal from '../../components/FeatModal'
+import FeatModal from '../../components/Modals/FeatModal'
 import Selector from '../../components/Selector/Selector'
 import { apiObjectToArray } from '../../utils/utils'
 import './CreatorForm.scss'

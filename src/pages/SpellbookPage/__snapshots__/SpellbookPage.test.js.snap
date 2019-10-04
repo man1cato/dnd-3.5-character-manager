@@ -39,9 +39,11 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Acid Splash
       </button>
       <div
-        class="Counter"
+        class="Counter undefined"
       >
-        <button>
+        <button
+          type="button"
+        >
           <ion-icon
             name="remove"
             size="small"
@@ -52,7 +54,9 @@ exports[`should render SpellbookPage with profile data 1`] = `
         >
           1
         </div>
-        <button>
+        <button
+          type="button"
+        >
           <ion-icon
             name="add"
             size="small"
@@ -79,9 +83,11 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Arcane Mark
       </button>
       <div
-        class="Counter"
+        class="Counter undefined"
       >
-        <button>
+        <button
+          type="button"
+        >
           <ion-icon
             name="remove"
             size="small"
@@ -92,7 +98,9 @@ exports[`should render SpellbookPage with profile data 1`] = `
         >
           2
         </div>
-        <button>
+        <button
+          type="button"
+        >
           <ion-icon
             name="add"
             size="small"
@@ -149,9 +157,11 @@ exports[`should render SpellbookPage with profile data 1`] = `
         Charm Person
       </button>
       <div
-        class="Counter"
+        class="Counter undefined"
       >
-        <button>
+        <button
+          type="button"
+        >
           <ion-icon
             name="remove"
             size="small"
@@ -162,7 +172,9 @@ exports[`should render SpellbookPage with profile data 1`] = `
         >
           1
         </div>
-        <button>
+        <button
+          type="button"
+        >
           <ion-icon
             name="add"
             size="small"

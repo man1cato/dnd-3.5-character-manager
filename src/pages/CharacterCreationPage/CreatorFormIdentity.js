@@ -2,7 +2,7 @@ import React, { useEffect }  from 'react'
 import { Field, ErrorMessage } from 'formik'
 import _ from 'lodash'
 
-import SpecialAbilities from '../../components/SpecialAbilities'
+import SpecialAbilities from '../../components/SpecialAbilities/SpecialAbilities'
 import { apiObjectToArray } from '../../utils/utils'
 
 

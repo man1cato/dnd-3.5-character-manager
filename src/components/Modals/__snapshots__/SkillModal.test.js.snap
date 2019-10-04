@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SkillModal 1`] = `
+<DefaultModal
+  clickedItem={
+    Object {
+      "description": "You possess knowledge of local customs and events. ",
+      "keyAbility": "INT",
+      "name": "Knowledge (Local)",
+      "notes": "",
+    }
+  }
+  contentLabel="Selected Skill"
+>
+  <h4>
+    Knowledge (Local)
+  </h4>
+  <h5>
+    INT
+  </h5>
+  <p
+    key="0"
+  >
+    You possess knowledge of local customs and events. 
+  </p>
+</DefaultModal>
+`;

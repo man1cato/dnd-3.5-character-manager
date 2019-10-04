@@ -106,10 +106,11 @@ exports[`should render Abilities with profile data 1`] = `
       value={0}
     >
       <div
-        className="Counter"
+        className="Counter grid__col3"
       >
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="remove"
@@ -124,6 +125,7 @@ exports[`should render Abilities with profile data 1`] = `
         />
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="add"
@@ -153,10 +155,11 @@ exports[`should render Abilities with profile data 1`] = `
       value={0}
     >
       <div
-        className="Counter"
+        className="Counter grid__col3"
       >
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="remove"
@@ -171,6 +174,7 @@ exports[`should render Abilities with profile data 1`] = `
         />
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="add"
@@ -200,10 +204,11 @@ exports[`should render Abilities with profile data 1`] = `
       value={0}
     >
       <div
-        className="Counter"
+        className="Counter grid__col3"
       >
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="remove"
@@ -218,6 +223,7 @@ exports[`should render Abilities with profile data 1`] = `
         />
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="add"
@@ -247,10 +253,11 @@ exports[`should render Abilities with profile data 1`] = `
       value={0}
     >
       <div
-        className="Counter"
+        className="Counter grid__col3"
       >
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="remove"
@@ -265,6 +272,7 @@ exports[`should render Abilities with profile data 1`] = `
         />
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="add"
@@ -294,10 +302,11 @@ exports[`should render Abilities with profile data 1`] = `
       value={0}
     >
       <div
-        className="Counter"
+        className="Counter grid__col3"
       >
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="remove"
@@ -312,6 +321,7 @@ exports[`should render Abilities with profile data 1`] = `
         />
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="add"
@@ -341,10 +351,11 @@ exports[`should render Abilities with profile data 1`] = `
       value={0}
     >
       <div
-        className="Counter"
+        className="Counter grid__col3"
       >
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="remove"
@@ -359,6 +370,7 @@ exports[`should render Abilities with profile data 1`] = `
         />
         <button
           onClick={[Function]}
+          type="button"
         >
           <ion-icon
             name="add"

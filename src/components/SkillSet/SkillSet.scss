@@ -1,0 +1,27 @@
+@import '../../styles/base/settings';
+
+
+.SkillSet {
+   display: grid;
+   grid-template-columns: 3fr 1fr 3fr 1fr;
+   grid-auto-flow: dense;
+   grid-row-gap: $xs-size; 
+   grid-column-gap: $s-size;
+   justify-items: center;
+   text-align: center; 
+   align-items: start;
+   > input {
+      max-width: 50px;
+      text-align: center;
+   }  
+}
+
+.SkillSet__name-header {
+  justify-self: start;
+  text-align: left;
+}
+
+.SkillSet__col3 {
+   grid-column: 3;
+   justify-self: self-start;
+}

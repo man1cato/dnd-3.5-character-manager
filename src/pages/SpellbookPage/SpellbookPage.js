@@ -4,7 +4,7 @@ import update from 'immutability-helper'
 import _ from 'lodash'
 
 import Counter from '../../components/Counter/Counter'
-import SpellModal from '../../components/SpellModal'
+import SpellModal from '../../components/Modals/SpellModal'
 import { startEditProfile } from '../../store/actions/profile'
 import './SpellbookPage.scss'
 
@@ -14,7 +14,7 @@ const calcPreparedTotals = (spellbook) => _.map(spellbook, (level) => _.reduce(l
 export const SpellbookPage = (props) => {
 	const [spellbook, setSpellbook] = useState(props.profile.spellbook)
 	const [preparedTotals, setPreparedTotals] = useState(calcPreparedTotals(spellbook))
-	const [selected, setSelected] = useState(undefined)
+	const [clickedSpell, setClickedSpell] = useState(null)
 	const spellsPerDay = props.jobClasses[props.profile.jobClass].levels[props.profile.level].spellsPerDay
 
 	useEffect(() => {
@@ -51,7 +51,7 @@ export const SpellbookPage = (props) => {
 								<button 
 									className="grid__col1 button--link" 
 									id={spell.id}
-									onClick={() => setSelected(props.spells[spell.id])}
+									onClick={() => setClickedSpell(props.spells[spell.id])}
 								>
 									{props.spells[spell.id].name}
 								</button>
@@ -88,8 +88,8 @@ export const SpellbookPage = (props) => {
 			))}
 
 			<SpellModal
-				selected={selected}
-				handleCloseModal={() => setSelected(undefined)}
+				clickedSpell={clickedSpell}
+				handleCloseModal={() => setClickedSpell(undefined)}
 			/>
 
 		</div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import _ from 'lodash'
-import { Field, ErrorMessage } from 'formik'
+import { ErrorMessage } from 'formik'
 
 import Counter from '../../components/Counter/Counter'
-import SkillModal from '../../components/SkillModal'
+import SkillModal from '../../components/Modals/SkillModal'
 import { apiObjectToArray } from '../../utils/utils'
 import './CreatorForm.scss'
 

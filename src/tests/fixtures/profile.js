@@ -99,7 +99,6 @@ export default {
 		base: 2
 	},
 	initMod: 2,
-	weaponSet: ["recOvuth9QArkI54l"],
 	money: {
 		pp: 0,
 		gp: 1200,

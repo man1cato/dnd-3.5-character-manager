@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render attacks with default profile data 1`] = `
+<PhysicalStats
+  ac={
+    Object {
+      "base": 14,
+      "flat": 10,
+      "touch": 14,
+    }
+  }
+  handleUpdate={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "hp": Object {
+              "base": 32,
+              "damage": 10,
+              "mod": 6,
+            },
+          },
+        ],
+        Array [
+          Object {
+            "initiativeMod": 2,
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  hp={
+    Object {
+      "base": 32,
+      "damage": 10,
+      "mod": 6,
+    }
+  }
+  initBase={4}
+  initMod={2}
+  speed={30}
+>
+  <div
+    className="stat-row"
+  >
+    <div>
+      Hit Points
+    </div>
+    <div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          32
+        </div>
+      </div>
+      <div
+        className="stat-row__item--bottom"
+      >
+        +
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Mod
+        </h5>
+        <input
+          id="hpMod"
+          onChange={[Function]}
+          type="number"
+          value={6}
+        />
+      </div>
+      <div
+        className="stat-row__item--bottom"
+      >
+        -
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Dmg
+        </h5>
+        <input
+          id="hpDamage"
+          onChange={[Function]}
+          type="number"
+          value={10}
+        />
+      </div>
+      <div
+        className="stat-row__item--bottom"
+      >
+        =
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Curr
+        </h5>
+        <div>
+          28
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="stat-row"
+  >
+    <div>
+      Armor Class
+    </div>
+    <div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          14
+        </div>
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Flat
+        </h5>
+        <div>
+          10
+        </div>
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Touch
+        </h5>
+        <div>
+          14
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="stat-row"
+  >
+    <div>
+      Initiative
+    </div>
+    <div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          4
+        </div>
+      </div>
+      <div
+        className="stat-row__item--bottom"
+      >
+        +
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Mod
+        </h5>
+        <input
+          id="initMod"
+          onChange={[Function]}
+          type="number"
+          value={2}
+        />
+      </div>
+      <div
+        className="stat-row__item--bottom"
+      >
+        =
+      </div>
+      <div
+        className="stat-row__item"
+      >
+        <h5>
+          Total
+        </h5>
+        <div>
+          6
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="stat-row"
+  >
+    <div>
+      Speed
+    </div>
+    <div>
+      30
+       ft/round
+    </div>
+  </div>
+</PhysicalStats>
+`;

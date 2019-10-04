@@ -1,0 +1,1952 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Selector correctly with feats data 1`] = `
+<Fragment>
+  <div
+    className="Selector__row"
+  >
+    <select
+      className="Selector__dropdown select"
+      onChange={[Function]}
+      value="recdmotqOlGgN2otb"
+    >
+      <option
+        key="recdmotqOlGgN2otb"
+        value="recdmotqOlGgN2otb"
+      >
+        Ability Focus
+      </option>
+      <option
+        key="recoTlzPQ37bNLFsm"
+        value="recoTlzPQ37bNLFsm"
+      >
+        Acrobatic
+      </option>
+      <option
+        key="recat3oy3R6kW5Uts"
+        value="recat3oy3R6kW5Uts"
+      >
+        Additional Magic Item Space
+      </option>
+      <option
+        key="rec8uIUF1rFAa2VuG"
+        value="rec8uIUF1rFAa2VuG"
+      >
+        Agile
+      </option>
+      <option
+        key="recvzMqdCBIzd7z9n"
+        value="recvzMqdCBIzd7z9n"
+      >
+        Alertness
+      </option>
+      <option
+        key="recnrQnRgUIJQkJOz"
+        value="recnrQnRgUIJQkJOz"
+      >
+        Animal Affinity
+      </option>
+      <option
+        key="recST2D4Kyaknrsg3"
+        value="recST2D4Kyaknrsg3"
+      >
+        Armor Proficiency (Heavy)
+      </option>
+      <option
+        key="recRXzmlbn1MzfoKr"
+        value="recRXzmlbn1MzfoKr"
+      >
+        Armor Proficiency (Light)
+      </option>
+      <option
+        key="recIucb9yIBFfwadA"
+        value="recIucb9yIBFfwadA"
+      >
+        Armor Proficiency (Medium)
+      </option>
+      <option
+        key="recTjM3xaRKY5Kzxv"
+        value="recTjM3xaRKY5Kzxv"
+      >
+        Armor Skin
+      </option>
+      <option
+        key="recOCyJT5oWscbchC"
+        value="recOCyJT5oWscbchC"
+      >
+        Athletic
+      </option>
+      <option
+        key="recOm8zpuXUjChQZH"
+        value="recOm8zpuXUjChQZH"
+      >
+        Augment Summoning
+      </option>
+      <option
+        key="recBbahLUMGxoCyFF"
+        value="recBbahLUMGxoCyFF"
+      >
+        Augmented Alchemy
+      </option>
+      <option
+        key="recEjwHNjDZrJG5mP"
+        value="recEjwHNjDZrJG5mP"
+      >
+        Automatic Quicken Spell
+      </option>
+      <option
+        key="recVKDhL94EQG8Bhm"
+        value="recVKDhL94EQG8Bhm"
+      >
+        Automatic Silent Spell
+      </option>
+      <option
+        key="recMYg4ohuZoVhHg3"
+        value="recMYg4ohuZoVhHg3"
+      >
+        Automatic Still Spell
+      </option>
+      <option
+        key="recQyW6ByR4ClPt80"
+        value="recQyW6ByR4ClPt80"
+      >
+        Autonomous
+      </option>
+      <option
+        key="recwouXSFSvKDipwo"
+        value="recwouXSFSvKDipwo"
+      >
+        Awesome Blow
+      </option>
+      <option
+        key="reckdrHwbucszWlx3"
+        value="reckdrHwbucszWlx3"
+      >
+        Bane of Enemies
+      </option>
+      <option
+        key="recjk6hkPLOgMt6eb"
+        value="recjk6hkPLOgMt6eb"
+      >
+        Blind-Fight
+      </option>
+      <option
+        key="recX0vHtJoi5E4lcm"
+        value="recX0vHtJoi5E4lcm"
+      >
+        Blinding Speed
+      </option>
+      <option
+        key="recDGl9s66lwqKgCb"
+        value="recDGl9s66lwqKgCb"
+      >
+        Blindsight, 5-ft. Radius
+      </option>
+      <option
+        key="recZkUp3LzpK7Yl5e"
+        value="recZkUp3LzpK7Yl5e"
+      >
+        Bonus Domain
+      </option>
+      <option
+        key="recnxtKAeEeCyobZv"
+        value="recnxtKAeEeCyobZv"
+      >
+        Brew Potion
+      </option>
+      <option
+        key="recLqr9Z8dkls4ZO1"
+        value="recLqr9Z8dkls4ZO1"
+      >
+        Bulwark of Defense
+      </option>
+      <option
+        key="recoGrm1vruan9LwF"
+        value="recoGrm1vruan9LwF"
+      >
+        Chaotic Rage
+      </option>
+      <option
+        key="recBl7E7mkej8Kh4a"
+        value="recBl7E7mkej8Kh4a"
+      >
+        Cleave
+      </option>
+      <option
+        key="rec6j8vDL2r3twF8o"
+        value="rec6j8vDL2r3twF8o"
+      >
+        Cloak Dance
+      </option>
+      <option
+        key="reclpbMRlP2bTvA8K"
+        value="reclpbMRlP2bTvA8K"
+      >
+        Colossal Wild Shape
+      </option>
+      <option
+        key="recKz8Kl8cTQvocaG"
+        value="recKz8Kl8cTQvocaG"
+      >
+        Combat Archery
+      </option>
+      <option
+        key="recdR990pCoRoCtHN"
+        value="recdR990pCoRoCtHN"
+      >
+        Combat Casting
+      </option>
+      <option
+        key="recrc1dWL5N3RPKd6"
+        value="recrc1dWL5N3RPKd6"
+      >
+        Combat Expertise
+      </option>
+      <option
+        key="recXnkMszr2a4cMG2"
+        value="recXnkMszr2a4cMG2"
+      >
+        Combat Reflexes
+      </option>
+      <option
+        key="recVBmMvMyOEvRtJs"
+        value="recVBmMvMyOEvRtJs"
+      >
+        Craft Cognizance Crystal
+      </option>
+      <option
+        key="rec2DWXl3MtnjXqRQ"
+        value="rec2DWXl3MtnjXqRQ"
+      >
+        Craft Construct
+      </option>
+      <option
+        key="recSUUSgdqMnZhJnH"
+        value="recSUUSgdqMnZhJnH"
+      >
+        Craft Dorje
+      </option>
+      <option
+        key="recaofYxttizBhOSa"
+        value="recaofYxttizBhOSa"
+      >
+        Craft Epic Magic Arms and Armor
+      </option>
+      <option
+        key="recxra1jpE6L3EIU4"
+        value="recxra1jpE6L3EIU4"
+      >
+        Craft Epic Rod
+      </option>
+      <option
+        key="recB1ADsi6OGKayaa"
+        value="recB1ADsi6OGKayaa"
+      >
+        Craft Epic Staff
+      </option>
+      <option
+        key="recXxMDo6R93rlTxl"
+        value="recXxMDo6R93rlTxl"
+      >
+        Craft Epic Wondrous Item
+      </option>
+      <option
+        key="recXP8I7doU9uFI0W"
+        value="recXP8I7doU9uFI0W"
+      >
+        Craft Magic Arms and Armor
+      </option>
+      <option
+        key="recUprO478F0lrfWL"
+        value="recUprO478F0lrfWL"
+      >
+        Craft Psicrown
+      </option>
+      <option
+        key="recfSnDJwFVsQAdyB"
+        value="recfSnDJwFVsQAdyB"
+      >
+        Craft Psionic Arms and Armor
+      </option>
+      <option
+        key="recOEPO2WXGIKsXqc"
+        value="recOEPO2WXGIKsXqc"
+      >
+        Craft Psionic Construct
+      </option>
+      <option
+        key="recXKTZ8KtdrXujgn"
+        value="recXKTZ8KtdrXujgn"
+      >
+        Craft Rod
+      </option>
+      <option
+        key="recxQ92YDwvBv8JJy"
+        value="recxQ92YDwvBv8JJy"
+      >
+        Craft Staff
+      </option>
+      <option
+        key="recyMC6cyMOMLHIws"
+        value="recyMC6cyMOMLHIws"
+      >
+        Craft Universal Item
+      </option>
+      <option
+        key="rec8F85455BwZqMwF"
+        value="rec8F85455BwZqMwF"
+      >
+        Craft Wand
+      </option>
+      <option
+        key="recRjuAWe7oy6a7wY"
+        value="recRjuAWe7oy6a7wY"
+      >
+        Craft Wondrous Item
+      </option>
+      <option
+        key="rechTdfI8DKVXUOuJ"
+        value="rechTdfI8DKVXUOuJ"
+      >
+        Damage Reduction
+      </option>
+      <option
+        key="recI7IQe71f44n0qs"
+        value="recI7IQe71f44n0qs"
+      >
+        Deadly Precision
+      </option>
+      <option
+        key="recUuhHOIgnt9V7tt"
+        value="recUuhHOIgnt9V7tt"
+      >
+        Deafening Song
+      </option>
+      <option
+        key="recg1OIceV2bKe80O"
+        value="recg1OIceV2bKe80O"
+      >
+        Death of Enemies
+      </option>
+      <option
+        key="recFrheLpwNhWFzS3"
+        value="recFrheLpwNhWFzS3"
+      >
+        Deceitful
+      </option>
+      <option
+        key="reciyf1VerwnZ0ARP"
+        value="reciyf1VerwnZ0ARP"
+      >
+        Deflect Arrows
+      </option>
+      <option
+        key="recPlnmL0xLwCkhqW"
+        value="recPlnmL0xLwCkhqW"
+      >
+        Deft Hands
+      </option>
+      <option
+        key="recPBNJBz2lwwuRyy"
+        value="recPBNJBz2lwwuRyy"
+      >
+        Devastating Critical
+      </option>
+      <option
+        key="recIZdOr3DGPdpbc8"
+        value="recIZdOr3DGPdpbc8"
+      >
+        Dexterous Fortitude
+      </option>
+      <option
+        key="recfjtRjVXdn3xLDZ"
+        value="recfjtRjVXdn3xLDZ"
+      >
+        Dexterous Will
+      </option>
+      <option
+        key="rec2vFKZkwMh178E7"
+        value="rec2vFKZkwMh178E7"
+      >
+        Diehard
+      </option>
+      <option
+        key="rec83JXxeqFaq13F1"
+        value="rec83JXxeqFaq13F1"
+      >
+        Diligent
+      </option>
+      <option
+        key="rechBgTFWqu5YnOc1"
+        value="rechBgTFWqu5YnOc1"
+      >
+        Diminutive Wild Shape
+      </option>
+      <option
+        key="recP76MPxeKkTmFDW"
+        value="recP76MPxeKkTmFDW"
+      >
+        Dire Charge
+      </option>
+      <option
+        key="recsvpX6XhsOvLE4O"
+        value="recsvpX6XhsOvLE4O"
+      >
+        Disguise Spell
+      </option>
+      <option
+        key="rec7EdrAu7sixASam"
+        value="rec7EdrAu7sixASam"
+      >
+        Distant Shot
+      </option>
+      <option
+        key="reccKhXP1P03au3WT"
+        value="reccKhXP1P03au3WT"
+      >
+        Divine Might
+      </option>
+      <option
+        key="recrA225bMNGuLGF2"
+        value="recrA225bMNGuLGF2"
+      >
+        Divine Vengeance
+      </option>
+      <option
+        key="recyqJvG85XCUZG4x"
+        value="recyqJvG85XCUZG4x"
+      >
+        Dodge
+      </option>
+      <option
+        key="rec35lBICs5ipkw7m"
+        value="rec35lBICs5ipkw7m"
+      >
+        Dragon Wild Shape
+      </option>
+      <option
+        key="recCT1vB6wSaLMWxi"
+        value="recCT1vB6wSaLMWxi"
+      >
+        Efficient Item Creation
+      </option>
+      <option
+        key="recKYm3IPVLJ115Bb"
+        value="recKYm3IPVLJ115Bb"
+      >
+        Empower Spell
+      </option>
+      <option
+        key="recHnrZHpmp7psvj2"
+        value="recHnrZHpmp7psvj2"
+      >
+        Empower Spell-Like Ability
+      </option>
+      <option
+        key="recVCgn24xVSXigbM"
+        value="recVCgn24xVSXigbM"
+      >
+        Endurance
+      </option>
+      <option
+        key="reclmfhLdJV7LOrS2"
+        value="reclmfhLdJV7LOrS2"
+      >
+        Energy Resistance
+      </option>
+      <option
+        key="recYUF3ddygflrQ8w"
+        value="recYUF3ddygflrQ8w"
+      >
+        Energy Substitution
+      </option>
+      <option
+        key="recnrsa2FZ2yaKVXn"
+        value="recnrsa2FZ2yaKVXn"
+      >
+        Enhance Spell
+      </option>
+      <option
+        key="recmf4osOlKrZtp6W"
+        value="recmf4osOlKrZtp6W"
+      >
+        Enlarge Spell
+      </option>
+      <option
+        key="recTHyYmqyReN98vw"
+        value="recTHyYmqyReN98vw"
+      >
+        Epic Dodge
+      </option>
+      <option
+        key="recbfQSkxH5dfDswW"
+        value="recbfQSkxH5dfDswW"
+      >
+        Epic Endurance
+      </option>
+      <option
+        key="reckenqb745nxu31H"
+        value="reckenqb745nxu31H"
+      >
+        Epic Fortitude
+      </option>
+      <option
+        key="recAT8p4Gs8rj67Rf"
+        value="recAT8p4Gs8rj67Rf"
+      >
+        Epic Inspiration
+      </option>
+      <option
+        key="recBSUl9GE1MUb6YH"
+        value="recBSUl9GE1MUb6YH"
+      >
+        Epic Leadership
+      </option>
+      <option
+        key="recPEtaL0j3Ooo8Mj"
+        value="recPEtaL0j3Ooo8Mj"
+      >
+        Epic Manifestation
+      </option>
+      <option
+        key="reclI3nmYiSQAFp9T"
+        value="reclI3nmYiSQAFp9T"
+      >
+        Epic Prowess
+      </option>
+      <option
+        key="rec2mAkEGs7m5RoNr"
+        value="rec2mAkEGs7m5RoNr"
+      >
+        Epic Reflexes
+      </option>
+      <option
+        key="rec1xvVMTsxgPGHpY"
+        value="rec1xvVMTsxgPGHpY"
+      >
+        Epic Reputation
+      </option>
+      <option
+        key="reccuF0PtktDswV4T"
+        value="reccuF0PtktDswV4T"
+      >
+        Epic Skill Focus
+      </option>
+      <option
+        key="recaqg6GFLvmQKzJW"
+        value="recaqg6GFLvmQKzJW"
+      >
+        Epic Speed
+      </option>
+      <option
+        key="reciXQdgT1ysY46vz"
+        value="reciXQdgT1ysY46vz"
+      >
+        Epic Spell Focus
+      </option>
+      <option
+        key="recKVzySxSc8PjyuG"
+        value="recKVzySxSc8PjyuG"
+      >
+        Epic Spell Penetration
+      </option>
+      <option
+        key="rec36m2Rxdw3ffRjC"
+        value="rec36m2Rxdw3ffRjC"
+      >
+        Epic Spellcasting
+      </option>
+      <option
+        key="rec74fL73E22QlwJB"
+        value="rec74fL73E22QlwJB"
+      >
+        Epic Toughness
+      </option>
+      <option
+        key="recYH63fal3NkDHgm"
+        value="recYH63fal3NkDHgm"
+      >
+        Epic Weapon Focus
+      </option>
+      <option
+        key="recwJazo0cOaHVN82"
+        value="recwJazo0cOaHVN82"
+      >
+        Epic Weapon Specialization
+      </option>
+      <option
+        key="recSDxh2UD49CVRyh"
+        value="recSDxh2UD49CVRyh"
+      >
+        Epic Will
+      </option>
+      <option
+        key="rec1UNqoxirOSxnno"
+        value="rec1UNqoxirOSxnno"
+      >
+        Eschew Materials
+      </option>
+      <option
+        key="recmjqppdD8oDAHp6"
+        value="recmjqppdD8oDAHp6"
+      >
+        Exceptional Deflection
+      </option>
+      <option
+        key="recfeBOXTX2up9aUs"
+        value="recfeBOXTX2up9aUs"
+      >
+        Exotic Weapon Proficiency
+      </option>
+      <option
+        key="recnVpaSB379EQSI0"
+        value="recnVpaSB379EQSI0"
+      >
+        Extend Spell
+      </option>
+      <option
+        key="recNPOssjXXPtbKbb"
+        value="recNPOssjXXPtbKbb"
+      >
+        Extended Life Span
+      </option>
+      <option
+        key="recGByPLOPCGQZEW1"
+        value="recGByPLOPCGQZEW1"
+      >
+        Extra Music
+      </option>
+      <option
+        key="recMrrf3flxHUSgMR"
+        value="recMrrf3flxHUSgMR"
+      >
+        Extra Turning
+      </option>
+      <option
+        key="recuXAYNPNco1uMdG"
+        value="recuXAYNPNco1uMdG"
+      >
+        Eyes in the Back of Your Head
+      </option>
+      <option
+        key="recHRtjo6zEHSw7aL"
+        value="recHRtjo6zEHSw7aL"
+      >
+        Familiar Spell
+      </option>
+      <option
+        key="recVXoEU44zDtbech"
+        value="recVXoEU44zDtbech"
+      >
+        Far Shot
+      </option>
+      <option
+        key="recHkaFWSLu7SI1ee"
+        value="recHkaFWSLu7SI1ee"
+      >
+        Fast Healing
+      </option>
+      <option
+        key="recjTsJRbGi8Lptpa"
+        value="recjTsJRbGi8Lptpa"
+      >
+        Fine Wild Shape
+      </option>
+      <option
+        key="rec8icuDiUWvX1Yry"
+        value="rec8icuDiUWvX1Yry"
+      >
+        Fleet of Foot
+      </option>
+      <option
+        key="recw2WZMbQ3gonDew"
+        value="recw2WZMbQ3gonDew"
+      >
+        Flyby Attack
+      </option>
+      <option
+        key="reczzAAR51o1WRmdB"
+        value="reczzAAR51o1WRmdB"
+      >
+        Forge Epic Ring
+      </option>
+      <option
+        key="recohPSgPy9lyD80w"
+        value="recohPSgPy9lyD80w"
+      >
+        Forge Ring
+      </option>
+      <option
+        key="rectdd0HKAYm9SmIx"
+        value="rectdd0HKAYm9SmIx"
+      >
+        Gargantuan Wild Shape
+      </option>
+      <option
+        key="recCcqyJ5GL9nrx7G"
+        value="recCcqyJ5GL9nrx7G"
+      >
+        Great Charisma
+      </option>
+      <option
+        key="reclT78Am0M14ogH9"
+        value="reclT78Am0M14ogH9"
+      >
+        Great Cleave
+      </option>
+      <option
+        key="recG6zBgLZVpCVJ5Y"
+        value="recG6zBgLZVpCVJ5Y"
+      >
+        Great Constitution
+      </option>
+      <option
+        key="recVCGoQYyuB3ywo9"
+        value="recVCGoQYyuB3ywo9"
+      >
+        Great Dexterity
+      </option>
+      <option
+        key="recboOAfWHQTIZGfr"
+        value="recboOAfWHQTIZGfr"
+      >
+        Great Fortitude
+      </option>
+      <option
+        key="recIo1dWJeopo2HWe"
+        value="recIo1dWJeopo2HWe"
+      >
+        Great Intelligence
+      </option>
+      <option
+        key="recX34PyAdbEQghsb"
+        value="recX34PyAdbEQghsb"
+      >
+        Great Smiting
+      </option>
+      <option
+        key="recDgjKlw3qhC6Caz"
+        value="recDgjKlw3qhC6Caz"
+      >
+        Great Strength
+      </option>
+      <option
+        key="reckTAO6zjLWF7qZm"
+        value="reckTAO6zjLWF7qZm"
+      >
+        Great Wisdom
+      </option>
+      <option
+        key="recngsilwkNCpwJ1w"
+        value="recngsilwkNCpwJ1w"
+      >
+        Greater Manyshot
+      </option>
+      <option
+        key="recLKX0TNjlgzGUOx"
+        value="recLKX0TNjlgzGUOx"
+      >
+        Greater Multiweapon Fighting
+      </option>
+      <option
+        key="recfy4jWSGtP77EQv"
+        value="recfy4jWSGtP77EQv"
+      >
+        Greater Spell Focus
+      </option>
+      <option
+        key="recyUNLnXQEp7Qams"
+        value="recyUNLnXQEp7Qams"
+      >
+        Greater Spell Penetration
+      </option>
+      <option
+        key="recyONl4n3KUvcZMu"
+        value="recyONl4n3KUvcZMu"
+      >
+        Greater Two-Weapon Fighting
+      </option>
+      <option
+        key="recvX8MNxV9RUcIHx"
+        value="recvX8MNxV9RUcIHx"
+      >
+        Greater Weapon Focus
+      </option>
+      <option
+        key="recgDuc3CRemo6gop"
+        value="recgDuc3CRemo6gop"
+      >
+        Greater Weapon Specialization
+      </option>
+      <option
+        key="rec0o0ZQvthxaPWsK"
+        value="rec0o0ZQvthxaPWsK"
+      >
+        Group Inspiration
+      </option>
+      <option
+        key="recDanI1EtcjYcvaT"
+        value="recDanI1EtcjYcvaT"
+      >
+        Heighten Spell
+      </option>
+      <option
+        key="recFR8hcOZ1VWJeSB"
+        value="recFR8hcOZ1VWJeSB"
+      >
+        Hindering Song
+      </option>
+      <option
+        key="recKZ213PbqbXUlZE"
+        value="recKZ213PbqbXUlZE"
+      >
+        Hold the Line
+      </option>
+      <option
+        key="reczLPssqes9Allcm"
+        value="reczLPssqes9Allcm"
+      >
+        Holy Strike
+      </option>
+      <option
+        key="recEepS7K6IXvQOQU"
+        value="recEepS7K6IXvQOQU"
+      >
+        Hover
+      </option>
+      <option
+        key="recRflwPRNsV8Mikq"
+        value="recRflwPRNsV8Mikq"
+      >
+        Ignore Material Components
+      </option>
+      <option
+        key="recB5m8zpzGVdfA47"
+        value="recB5m8zpzGVdfA47"
+      >
+        Imprint Stone
+      </option>
+      <option
+        key="recH0yaYZUkBoX9Ts"
+        value="recH0yaYZUkBoX9Ts"
+      >
+        Improved Alignment-Based Casting
+      </option>
+      <option
+        key="recH507n9eFXFuMtT"
+        value="recH507n9eFXFuMtT"
+      >
+        Improved Arrow of Death
+      </option>
+      <option
+        key="recfGJQ6pkNUqa9MX"
+        value="recfGJQ6pkNUqa9MX"
+      >
+        Improved Aura of Courage
+      </option>
+      <option
+        key="recgOxsvTHb6WuRpx"
+        value="recgOxsvTHb6WuRpx"
+      >
+        Improved Aura of Despair
+      </option>
+      <option
+        key="recdPR3fvAC3RKGZV"
+        value="recdPR3fvAC3RKGZV"
+      >
+        Improved Bull Rush
+      </option>
+      <option
+        key="recQwtCq32BVgmIpa"
+        value="recQwtCq32BVgmIpa"
+      >
+        Improved Combat Casting
+      </option>
+      <option
+        key="recIGMapWpvesoRZd"
+        value="recIGMapWpvesoRZd"
+      >
+        Improved Combat Reflexes
+      </option>
+      <option
+        key="recEpNvwwJ71UvJm5"
+        value="recEpNvwwJ71UvJm5"
+      >
+        Improved Counterspell
+      </option>
+      <option
+        key="rec5slnNRWWJC8fb2"
+        value="rec5slnNRWWJC8fb2"
+      >
+        Improved Critical
+      </option>
+      <option
+        key="recOw2MnHi1Umie9f"
+        value="recOw2MnHi1Umie9f"
+      >
+        Improved Darkvision
+      </option>
+      <option
+        key="recQc3GpnKelT57Gs"
+        value="recQc3GpnKelT57Gs"
+      >
+        Improved Death Attack
+      </option>
+      <option
+        key="recFWf1n5dhhmR308"
+        value="recFWf1n5dhhmR308"
+      >
+        Improved Disarm
+      </option>
+      <option
+        key="recPwR8YqatQuJqXS"
+        value="recPwR8YqatQuJqXS"
+      >
+        Improved Elemental Wild Shape
+      </option>
+      <option
+        key="recQDaucsIOGOt9hp"
+        value="recQDaucsIOGOt9hp"
+      >
+        Improved Familiar
+      </option>
+      <option
+        key="recm090Df8faJMFly"
+        value="recm090Df8faJMFly"
+      >
+        Improved Favored Enemy
+      </option>
+      <option
+        key="recJrvSJJCUuc6mhl"
+        value="recJrvSJJCUuc6mhl"
+      >
+        Improved Feint
+      </option>
+      <option
+        key="recZtJj4tIw5XDZbC"
+        value="recZtJj4tIw5XDZbC"
+      >
+        Improved Flyby Attack
+      </option>
+      <option
+        key="reczT5FbnHSASKG1t"
+        value="reczT5FbnHSASKG1t"
+      >
+        Improved Grapple
+      </option>
+      <option
+        key="recmAqqlY2XXd6vQp"
+        value="recmAqqlY2XXd6vQp"
+      >
+        Improved Heighten Spell
+      </option>
+      <option
+        key="reciazjHVWQmiq1jP"
+        value="reciazjHVWQmiq1jP"
+      >
+        Improved Initiative
+      </option>
+      <option
+        key="recReZmh5AR841RDE"
+        value="recReZmh5AR841RDE"
+      >
+        Improved Ki Strike
+      </option>
+      <option
+        key="recIgfqdlPFEQaYpG"
+        value="recIgfqdlPFEQaYpG"
+      >
+        Improved Low-Light Vision
+      </option>
+      <option
+        key="recbK0MkITKWaBVvR"
+        value="recbK0MkITKWaBVvR"
+      >
+        Improved Manyshot
+      </option>
+      <option
+        key="recRctlW1vIRg7aJE"
+        value="recRctlW1vIRg7aJE"
+      >
+        Improved Metamagic
+      </option>
+      <option
+        key="rec7w1n3zWvQgybB5"
+        value="rec7w1n3zWvQgybB5"
+      >
+        Improved Multiattack
+      </option>
+      <option
+        key="recpqEOvW44yc6IG5"
+        value="recpqEOvW44yc6IG5"
+      >
+        Improved Multiweapon Fighting
+      </option>
+      <option
+        key="recJSbPjUKOTWNe6m"
+        value="recJSbPjUKOTWNe6m"
+      >
+        Improved Natural Armor
+      </option>
+      <option
+        key="recNxmdwGsIHTAPxj"
+        value="recNxmdwGsIHTAPxj"
+      >
+        Improved Natural Attack
+      </option>
+      <option
+        key="recrcXqW0aKN7CRNg"
+        value="recrcXqW0aKN7CRNg"
+      >
+        Improved Overrun
+      </option>
+      <option
+        key="recMPvjjsCrx8n3MH"
+        value="recMPvjjsCrx8n3MH"
+      >
+        Improved Precise Shot
+      </option>
+      <option
+        key="recEqV253RXFXXTeO"
+        value="recEqV253RXFXXTeO"
+      >
+        Improved Shield Bash
+      </option>
+      <option
+        key="recLvwm9VX1l0QOAF"
+        value="recLvwm9VX1l0QOAF"
+      >
+        Improved Sneak Attack
+      </option>
+      <option
+        key="rec8SML7edkgm8Daa"
+        value="rec8SML7edkgm8Daa"
+      >
+        Improved Spell Capacity
+      </option>
+      <option
+        key="recZ7I3tsw8Wglevc"
+        value="recZ7I3tsw8Wglevc"
+      >
+        Improved Spell Resistance
+      </option>
+      <option
+        key="recBIq6dCa2hCQdXi"
+        value="recBIq6dCa2hCQdXi"
+      >
+        Improved Stunning Fist
+      </option>
+      <option
+        key="rec4xrHW8QTf6eTe3"
+        value="rec4xrHW8QTf6eTe3"
+      >
+        Improved Sunder
+      </option>
+      <option
+        key="recv8vlK0if2wVkM2"
+        value="recv8vlK0if2wVkM2"
+      >
+        Improved Trip
+      </option>
+      <option
+        key="recuEsiEZ1O2huYCr"
+        value="recuEsiEZ1O2huYCr"
+      >
+        Improved Turning
+      </option>
+      <option
+        key="recspc34ofcNegBbe"
+        value="recspc34ofcNegBbe"
+      >
+        Improved Two-Weapon Fighting
+      </option>
+      <option
+        key="recCmnimojxd0MNLS"
+        value="recCmnimojxd0MNLS"
+      >
+        Improved Unarmed Strike
+      </option>
+      <option
+        key="recFLUTUFiAZrtWc8"
+        value="recFLUTUFiAZrtWc8"
+      >
+        Improved Whirlwind Attack
+      </option>
+      <option
+        key="rec1XRG78wqr7t77E"
+        value="rec1XRG78wqr7t77E"
+      >
+        Incite Rage
+      </option>
+      <option
+        key="recopIF1mvoCADeqG"
+        value="recopIF1mvoCADeqG"
+      >
+        Infinite Deflection
+      </option>
+      <option
+        key="recSsoZCkJeVaJa2j"
+        value="recSsoZCkJeVaJa2j"
+      >
+        Inspire Excellence
+      </option>
+      <option
+        key="recEQuzMOnWrYWbWM"
+        value="recEQuzMOnWrYWbWM"
+      >
+        Instant Reload
+      </option>
+      <option
+        key="recCqxdMJjuhG8R7d"
+        value="recCqxdMJjuhG8R7d"
+      >
+        Intensify Spell
+      </option>
+      <option
+        key="rec3uAWs5IilEadt9"
+        value="rec3uAWs5IilEadt9"
+      >
+        Intuitive Trapfinding
+      </option>
+      <option
+        key="recs5pgQMU6zotYqL"
+        value="recs5pgQMU6zotYqL"
+      >
+        Investigator
+      </option>
+      <option
+        key="rec0Rmpc0o4zr5KQZ"
+        value="rec0Rmpc0o4zr5KQZ"
+      >
+        Iron Will
+      </option>
+      <option
+        key="recBS1Vlwp32LWNNe"
+        value="recBS1Vlwp32LWNNe"
+      >
+        Jack of All Trades
+      </option>
+      <option
+        key="recAeGlhBNBh7upAs"
+        value="recAeGlhBNBh7upAs"
+      >
+        Keen Strike
+      </option>
+      <option
+        key="recCxUg2DPCVGd5wQ"
+        value="recCxUg2DPCVGd5wQ"
+      >
+        Knock-Down
+      </option>
+      <option
+        key="recF1jiy7Z3atlHDa"
+        value="recF1jiy7Z3atlHDa"
+      >
+        Lasting Inspiration
+      </option>
+      <option
+        key="recaVxDe7IV4Ibppd"
+        value="recaVxDe7IV4Ibppd"
+      >
+        Leadership
+      </option>
+      <option
+        key="rec37Jez2aiDnkjqE"
+        value="rec37Jez2aiDnkjqE"
+      >
+        Legendary Climber
+      </option>
+      <option
+        key="rec5gS9hXRPNT4kuC"
+        value="rec5gS9hXRPNT4kuC"
+      >
+        Legendary Commander
+      </option>
+      <option
+        key="recbVb12m3xhnyaHT"
+        value="recbVb12m3xhnyaHT"
+      >
+        Legendary Leaper
+      </option>
+      <option
+        key="recd9irRuDR82SnIL"
+        value="recd9irRuDR82SnIL"
+      >
+        Legendary Rider
+      </option>
+      <option
+        key="recbTWNXoiYl9oMVA"
+        value="recbTWNXoiYl9oMVA"
+      >
+        Legendary Tracker
+      </option>
+      <option
+        key="rec0IcSNwYsg80Ldu"
+        value="rec0IcSNwYsg80Ldu"
+      >
+        Legendary Wrestler
+      </option>
+      <option
+        key="recHPtIzQdLipkdLi"
+        value="recHPtIzQdLipkdLi"
+      >
+        Lightning Reflexes
+      </option>
+      <option
+        key="rec3TmlD78AdiPphf"
+        value="rec3TmlD78AdiPphf"
+      >
+        Lingering Damage
+      </option>
+      <option
+        key="rec43FVgR2bo1YDR6"
+        value="rec43FVgR2bo1YDR6"
+      >
+        Magical Aptitude
+      </option>
+      <option
+        key="recExtvt4xN6i7AiO"
+        value="recExtvt4xN6i7AiO"
+      >
+        Magical Beast Companion
+      </option>
+      <option
+        key="recq2EZvZ93PkGmh4"
+        value="recq2EZvZ93PkGmh4"
+      >
+        Magical Beast Wild Shape
+      </option>
+      <option
+        key="rec0Ga2RlLe6NZbhu"
+        value="rec0Ga2RlLe6NZbhu"
+      >
+        Manyshot
+      </option>
+      <option
+        key="recu6KSoLrL5T47wp"
+        value="recu6KSoLrL5T47wp"
+      >
+        Martial Weapon Proficiency
+      </option>
+      <option
+        key="recXrpfxPke8r5kvy"
+        value="recXrpfxPke8r5kvy"
+      >
+        Master Staff
+      </option>
+      <option
+        key="recd4WdR6P3ld60lO"
+        value="recd4WdR6P3ld60lO"
+      >
+        Master Wand
+      </option>
+      <option
+        key="recKfsZpmul8Mc89v"
+        value="recKfsZpmul8Mc89v"
+      >
+        Maximize Spell
+      </option>
+      <option
+        key="reclfpVhNiab9k5gb"
+        value="reclfpVhNiab9k5gb"
+      >
+        Mighty Rage
+      </option>
+      <option
+        key="recUv7HQzFXwLgRB9"
+        value="recUv7HQzFXwLgRB9"
+      >
+        Mind Over Body
+      </option>
+      <option
+        key="recx6OyqdQn5OUCyB"
+        value="recx6OyqdQn5OUCyB"
+      >
+        Mobile Defense
+      </option>
+      <option
+        key="rec1oOI1ICj2HuKqa"
+        value="rec1oOI1ICj2HuKqa"
+      >
+        Mobility
+      </option>
+      <option
+        key="recqxhXBJB1KCxzIn"
+        value="recqxhXBJB1KCxzIn"
+      >
+        Mounted Archery
+      </option>
+      <option
+        key="reciJuIqTWUQRhYv0"
+        value="reciJuIqTWUQRhYv0"
+      >
+        Mounted Combat
+      </option>
+      <option
+        key="recKkMD7JxJW1XkHj"
+        value="recKkMD7JxJW1XkHj"
+      >
+        Multiattack
+      </option>
+      <option
+        key="rec43FIS2LihZiFYJ"
+        value="rec43FIS2LihZiFYJ"
+      >
+        Multispell
+      </option>
+      <option
+        key="recvJkbFXbH5ZXAXa"
+        value="recvJkbFXbH5ZXAXa"
+      >
+        Multiweapon Fighting
+      </option>
+      <option
+        key="recUlskP03KLuUhgq"
+        value="recUlskP03KLuUhgq"
+      >
+        Multiweapon Rend
+      </option>
+      <option
+        key="reclFLacz9XUqkOue"
+        value="reclFLacz9XUqkOue"
+      >
+        Music of the Gods
+      </option>
+      <option
+        key="reccG488HS3PmSuGK"
+        value="reccG488HS3PmSuGK"
+      >
+        Natural Spell
+      </option>
+      <option
+        key="rec5982GoHsn1tfis"
+        value="rec5982GoHsn1tfis"
+      >
+        Negative Energy Burst
+      </option>
+      <option
+        key="recoQZX87YxSgmV2T"
+        value="recoQZX87YxSgmV2T"
+      >
+        Negotiator
+      </option>
+      <option
+        key="recL3E07iXqlgd6Mv"
+        value="recL3E07iXqlgd6Mv"
+      >
+        Nimble Fingers
+      </option>
+      <option
+        key="recFp03E0YFKaq5xr"
+        value="recFp03E0YFKaq5xr"
+      >
+        Open Minded
+      </option>
+      <option
+        key="rec7KdtT38XqMZ97s"
+        value="rec7KdtT38XqMZ97s"
+      >
+        Overwhelming Critical
+      </option>
+      <option
+        key="rec7k1FJnYts9LVOo"
+        value="rec7k1FJnYts9LVOo"
+      >
+        Penetrate Damage Reduction
+      </option>
+      <option
+        key="rec73w62ZOJtanhuE"
+        value="rec73w62ZOJtanhuE"
+      >
+        Perfect Health
+      </option>
+      <option
+        key="rec66QzlM01qvGwRN"
+        value="rec66QzlM01qvGwRN"
+      >
+        Perfect Multiweapon Fighting
+      </option>
+      <option
+        key="recCVQuiZAIWOEuJ1"
+        value="recCVQuiZAIWOEuJ1"
+      >
+        Perfect Two-Weapon Fighting
+      </option>
+      <option
+        key="recprHHtBY1m3W8CK"
+        value="recprHHtBY1m3W8CK"
+      >
+        Permanent Emanation
+      </option>
+      <option
+        key="recaTDqd3gilGLAc0"
+        value="recaTDqd3gilGLAc0"
+      >
+        Persistent Spell
+      </option>
+      <option
+        key="recPjLbGCj3xRNPU3"
+        value="recPjLbGCj3xRNPU3"
+      >
+        Persuasive
+      </option>
+      <option
+        key="rec7FtveUXIuh63pp"
+        value="rec7FtveUXIuh63pp"
+      >
+        Planar Turning
+      </option>
+      <option
+        key="recQV754iVrjVSj66"
+        value="recQV754iVrjVSj66"
+      >
+        Plant Control
+      </option>
+      <option
+        key="reco0bwyops62ZxPn"
+        value="reco0bwyops62ZxPn"
+      >
+        Plant Defiance
+      </option>
+      <option
+        key="rec81hWf4GNmLBenB"
+        value="rec81hWf4GNmLBenB"
+      >
+        Plant Wild Shape
+      </option>
+      <option
+        key="rec0Aa93zpU5V3Asy"
+        value="rec0Aa93zpU5V3Asy"
+      >
+        Point Blank Shot
+      </option>
+      <option
+        key="recxPPaGukcQBMN4X"
+        value="recxPPaGukcQBMN4X"
+      >
+        Polyglot
+      </option>
+      <option
+        key="recg6CSotqvsTrakw"
+        value="recg6CSotqvsTrakw"
+      >
+        Positive Energy Aura
+      </option>
+      <option
+        key="recuv5RdScK7Vqhf5"
+        value="recuv5RdScK7Vqhf5"
+      >
+        Power Attack
+      </option>
+      <option
+        key="recvGUzVy6V0nxd2G"
+        value="recvGUzVy6V0nxd2G"
+      >
+        Power Critical
+      </option>
+      <option
+        key="recXyoCOASsqgZXOJ"
+        value="recXyoCOASsqgZXOJ"
+      >
+        Precise Shot
+      </option>
+      <option
+        key="recpHwtjV89aVIoGB"
+        value="recpHwtjV89aVIoGB"
+      >
+        Psionic Affinity
+      </option>
+      <option
+        key="recLp3uvkYGZGyywW"
+        value="recLp3uvkYGZGyywW"
+      >
+        Quick Draw
+      </option>
+      <option
+        key="recGQ0aIb0LViNIDf"
+        value="recGQ0aIb0LViNIDf"
+      >
+        Quicken Spell
+      </option>
+      <option
+        key="rec6QsVR3a7aEc8Ev"
+        value="rec6QsVR3a7aEc8Ev"
+      >
+        Quicken Spell-Like Ability
+      </option>
+      <option
+        key="rec3Mczx6e5dOlHOM"
+        value="rec3Mczx6e5dOlHOM"
+      >
+        Ranged Inspiration
+      </option>
+      <option
+        key="recjCiBAjZ2MCw8v6"
+        value="recjCiBAjZ2MCw8v6"
+      >
+        Rapid Inspiration
+      </option>
+      <option
+        key="recmNzyXLWdoJ94Vp"
+        value="recmNzyXLWdoJ94Vp"
+      >
+        Rapid Metabolism
+      </option>
+      <option
+        key="recEk5kUnIREk59lF"
+        value="recEk5kUnIREk59lF"
+      >
+        Rapid Reload
+      </option>
+      <option
+        key="recoZbyD7qsch7xSe"
+        value="recoZbyD7qsch7xSe"
+      >
+        Rapid Shot
+      </option>
+      <option
+        key="reckz7xRmxxdTbh4G"
+        value="reckz7xRmxxdTbh4G"
+      >
+        Reach Spell
+      </option>
+      <option
+        key="recii9zxr6QoJFGgb"
+        value="recii9zxr6QoJFGgb"
+      >
+        Reactive Countersong
+      </option>
+      <option
+        key="rec3Z5EqrUQXIcAjy"
+        value="rec3Z5EqrUQXIcAjy"
+      >
+        Reckless Offense
+      </option>
+      <option
+        key="recVoMid9syjVPQAm"
+        value="recVoMid9syjVPQAm"
+      >
+        Reflect Arrows
+      </option>
+      <option
+        key="recBVTl3j7Rfs1TjG"
+        value="recBVTl3j7Rfs1TjG"
+      >
+        Repeat Spell
+      </option>
+      <option
+        key="reckCFbXtuDrf5Q4N"
+        value="reckCFbXtuDrf5Q4N"
+      >
+        Ride-By Attack
+      </option>
+      <option
+        key="recrcCBspMITAt03y"
+        value="recrcCBspMITAt03y"
+      >
+        Righteous Strike
+      </option>
+      <option
+        key="recIpizicw40PTLoT"
+        value="recIpizicw40PTLoT"
+      >
+        Ruinous Rage
+      </option>
+      <option
+        key="rec02pDGILJ5EZz1W"
+        value="rec02pDGILJ5EZz1W"
+      >
+        Run
+      </option>
+      <option
+        key="recpoSavlX3cOnlk4"
+        value="recpoSavlX3cOnlk4"
+      >
+        Sacred Spell
+      </option>
+      <option
+        key="recPdYl618loaB28p"
+        value="recPdYl618loaB28p"
+      >
+        Scribe Epic Scroll
+      </option>
+      <option
+        key="recGkxwkqppy7EYmI"
+        value="recGkxwkqppy7EYmI"
+      >
+        Scribe Scroll
+      </option>
+      <option
+        key="recBQeNMELDj3IE7A"
+        value="recBQeNMELDj3IE7A"
+      >
+        Scribe Tattoo
+      </option>
+      <option
+        key="recrXs4R086L9BQ2v"
+        value="recrXs4R086L9BQ2v"
+      >
+        Self-Concealment
+      </option>
+      <option
+        key="recBV4PEpBYb8mVC0"
+        value="recBV4PEpBYb8mVC0"
+      >
+        Self-Sufficient
+      </option>
+      <option
+        key="rechWZl17jELhDThh"
+        value="rechWZl17jELhDThh"
+      >
+        Sharp-Shooting
+      </option>
+      <option
+        key="recy4KGNJkJPrSK6f"
+        value="recy4KGNJkJPrSK6f"
+      >
+        Shattering Strike
+      </option>
+      <option
+        key="recm19w48xltockBW"
+        value="recm19w48xltockBW"
+      >
+        Shield Proficiency
+      </option>
+      <option
+        key="recQNpK7311nbBt15"
+        value="recQNpK7311nbBt15"
+      >
+        Shot on the Run
+      </option>
+      <option
+        key="recghbS5KnXshwJmR"
+        value="recghbS5KnXshwJmR"
+      >
+        Sidestep Charge
+      </option>
+      <option
+        key="recVyjh0BfUwtXfIF"
+        value="recVyjh0BfUwtXfIF"
+      >
+        Silent Spell
+      </option>
+      <option
+        key="rec2wriPyA1jtpZih"
+        value="rec2wriPyA1jtpZih"
+      >
+        Simple Weapon Proficiency
+      </option>
+      <option
+        key="recaj8lyaZepMlFCM"
+        value="recaj8lyaZepMlFCM"
+      >
+        Skill Focus
+      </option>
+      <option
+        key="recpeswIYdGxGtd4g"
+        value="recpeswIYdGxGtd4g"
+      >
+        Snatch
+      </option>
+      <option
+        key="recU0tKxbZB3ShosK"
+        value="recU0tKxbZB3ShosK"
+      >
+        Snatch Arrows
+      </option>
+      <option
+        key="recNul9zU9EzV9JYC"
+        value="recNul9zU9EzV9JYC"
+      >
+        Sneak Attack of Opportunity
+      </option>
+      <option
+        key="recaMu31K8bE507Qh"
+        value="recaMu31K8bE507Qh"
+      >
+        Spectral Strike
+      </option>
+      <option
+        key="recr648zasZ6BHY5D"
+        value="recr648zasZ6BHY5D"
+      >
+        Spell Focus
+      </option>
+      <option
+        key="recJTQZBWe3uN9DKV"
+        value="recJTQZBWe3uN9DKV"
+      >
+        Spell Knowledge
+      </option>
+      <option
+        key="rec4KkfhKpetKIDqj"
+        value="rec4KkfhKpetKIDqj"
+      >
+        Spell Mastery
+      </option>
+      <option
+        key="recTphofr2OGPwf06"
+        value="recTphofr2OGPwf06"
+      >
+        Spell Opportunity
+      </option>
+      <option
+        key="recQM5J2Z4Bg345O0"
+        value="recQM5J2Z4Bg345O0"
+      >
+        Spell Penetration
+      </option>
+      <option
+        key="recm8xrzST82XRtbb"
+        value="recm8xrzST82XRtbb"
+      >
+        Spell Stowaway
+      </option>
+      <option
+        key="recJJTjUAlnPTK5lI"
+        value="recJJTjUAlnPTK5lI"
+      >
+        Spellcasting Harrier
+      </option>
+      <option
+        key="recY4eMlPUaTvuZVL"
+        value="recY4eMlPUaTvuZVL"
+      >
+        Spirited Charge
+      </option>
+      <option
+        key="rec0xSHVkvnocAPyx"
+        value="rec0xSHVkvnocAPyx"
+      >
+        Spontaneous Domain Access
+      </option>
+      <option
+        key="reczBTYLm1NMiiWKO"
+        value="reczBTYLm1NMiiWKO"
+      >
+        Spontaneous Spell
+      </option>
+      <option
+        key="recj9JGm6nU9sSM3W"
+        value="recj9JGm6nU9sSM3W"
+      >
+        Spring Attack
+      </option>
+      <option
+        key="recB7JU0g2Bfz5xqS"
+        value="recB7JU0g2Bfz5xqS"
+      >
+        Stand Still
+      </option>
+      <option
+        key="rece4EQ3n0Ya33LGf"
+        value="rece4EQ3n0Ya33LGf"
+      >
+        Stealthy
+      </option>
+      <option
+        key="recCEnHpjCHJli3pq"
+        value="recCEnHpjCHJli3pq"
+      >
+        Still Spell
+      </option>
+      <option
+        key="recE6PzbZgtMuUcVm"
+        value="recE6PzbZgtMuUcVm"
+      >
+        Storm of Throws
+      </option>
+      <option
+        key="recJeI9Rlq6R1io9r"
+        value="recJeI9Rlq6R1io9r"
+      >
+        Stunning Fist
+      </option>
+      <option
+        key="recZ74DWSuSZULLZh"
+        value="recZ74DWSuSZULLZh"
+      >
+        Subdual Substitution
+      </option>
+      <option
+        key="recfSU9k2yDFrOJl1"
+        value="recfSU9k2yDFrOJl1"
+      >
+        Superior Expertise
+      </option>
+      <option
+        key="recDB8YX4av29yRxm"
+        value="recDB8YX4av29yRxm"
+      >
+        Superior Initiative
+      </option>
+      <option
+        key="recfzLBBH3LdkdqGM"
+        value="recfzLBBH3LdkdqGM"
+      >
+        Swarm of Arrows
+      </option>
+      <option
+        key="recGWkniPVHTwxxDB"
+        value="recGWkniPVHTwxxDB"
+      >
+        Tenacious Magic
+      </option>
+      <option
+        key="receeaaQusxqJ2ZF7"
+        value="receeaaQusxqJ2ZF7"
+      >
+        Terrifying Rage
+      </option>
+      <option
+        key="recBowYlyXstRa97P"
+        value="recBowYlyXstRa97P"
+      >
+        Thundering Rage
+      </option>
+      <option
+        key="reczbG3R5q7p4lj9R"
+        value="reczbG3R5q7p4lj9R"
+      >
+        Toughness
+      </option>
+      <option
+        key="rec4VSjFtUxZwK886"
+        value="rec4VSjFtUxZwK886"
+      >
+        Tower Shield Proficiency
+      </option>
+      <option
+        key="recxkSuS8IvkzRVyV"
+        value="recxkSuS8IvkzRVyV"
+      >
+        Track
+      </option>
+      <option
+        key="recaut9Caobtz40s0"
+        value="recaut9Caobtz40s0"
+      >
+        Trample
+      </option>
+      <option
+        key="reclhvvxKZVEyX745"
+        value="reclhvvxKZVEyX745"
+      >
+        Two-Weapon Defense
+      </option>
+      <option
+        key="recePeBndah0BTNs4"
+        value="recePeBndah0BTNs4"
+      >
+        Two-Weapon Fighting
+      </option>
+      <option
+        key="rec9H5Qje89lulBtp"
+        value="rec9H5Qje89lulBtp"
+      >
+        Two-Weapon Rend
+      </option>
+      <option
+        key="recwC0QFCIsNCYwCZ"
+        value="recwC0QFCIsNCYwCZ"
+      >
+        Uncanny Accuracy
+      </option>
+      <option
+        key="recJFvWvKKUkM6NJM"
+        value="recJFvWvKKUkM6NJM"
+      >
+        Undead Mastery
+      </option>
+      <option
+        key="recpwqw7H735wrK81"
+        value="recpwqw7H735wrK81"
+      >
+        Unholy Strike
+      </option>
+      <option
+        key="reccZ5xjJ9eWUxvY8"
+        value="reccZ5xjJ9eWUxvY8"
+      >
+        Vermin Wild Shape
+      </option>
+      <option
+        key="recBnl6h3mATsgZJc"
+        value="recBnl6h3mATsgZJc"
+      >
+        Vorpal Strike
+      </option>
+      <option
+        key="recVdnKmMFz54fNLF"
+        value="recVdnKmMFz54fNLF"
+      >
+        Weapon Finesse
+      </option>
+      <option
+        key="recy5YNMs3lo9rYTp"
+        value="recy5YNMs3lo9rYTp"
+      >
+        Weapon Focus
+      </option>
+      <option
+        key="recCUKNPq8gkgp8Pt"
+        value="recCUKNPq8gkgp8Pt"
+      >
+        Weapon Specialization
+      </option>
+      <option
+        key="recCT26q7TKufh4x9"
+        value="recCT26q7TKufh4x9"
+      >
+        Whirlwind Attack
+      </option>
+      <option
+        key="recX8EJKHZx7Qv1yO"
+        value="recX8EJKHZx7Qv1yO"
+      >
+        Widen Aura of Courage
+      </option>
+      <option
+        key="recF264keoM3c2uYX"
+        value="recF264keoM3c2uYX"
+      >
+        Widen Aura of Despair
+      </option>
+      <option
+        key="recxFliEDF2AXl0rI"
+        value="recxFliEDF2AXl0rI"
+      >
+        Widen Spell
+      </option>
+      <option
+        key="recF2gHjeFMKLdUmE"
+        value="recF2gHjeFMKLdUmE"
+      >
+        Wild Talent
+      </option>
+      <option
+        key="recI40vCPdTE5LsEu"
+        value="recI40vCPdTE5LsEu"
+      >
+        Wingover
+      </option>
+      <option
+        key="recgApBVCXci88ubj"
+        value="recgApBVCXci88ubj"
+      >
+        Zone of Animation
+      </option>
+    </select>
+    <button
+      className="Selector__button button"
+      onClick={[Function]}
+      type="button"
+    >
+      Select
+    </button>
+  </div>
+  <Content
+    currentItemId="recdmotqOlGgN2otb"
+  />
+</Fragment>
+`;

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SpecialAbilityModal 1`] = `
+<DefaultModal
+  clickedItem={
+    Object {
+      "description": "Elves: Receive the Martial Weapon Proficiency feats for the longsword, rapier, (composite) longbow, and (composite) shortbow as bonus feats.",
+      "name": "Weapon Proficiency",
+    }
+  }
+  contentLabel="Selected Special Ability"
+>
+  <h4>
+    Weapon Proficiency
+  </h4>
+  <h5 />
+  <p
+    key="0"
+  >
+    Elves: Receive the Martial Weapon Proficiency feats for the longsword, rapier, (composite) longbow, and (composite) shortbow as bonus feats.
+  </p>
+</DefaultModal>
+`;

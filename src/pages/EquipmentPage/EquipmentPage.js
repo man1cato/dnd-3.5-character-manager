@@ -4,8 +4,8 @@ import update from 'immutability-helper'
 import _ from 'lodash'
 
 import Counter from '../../components/Counter/Counter'
-import ItemModal from '../../components/ItemModal'
-import ConfirmationModal from '../../components/ConfirmationModal/ConfirmationModal'
+import ItemModal from '../../components/Modals/ItemModal'
+import ConfirmationModal from '../../components/Modals/ConfirmationModal'
 import { startEditProfile } from '../../store/actions/profile'
 import { 
 	calcTotalMoney, calcItemTotalValue, calcItemTotalWeight, 
@@ -54,7 +54,7 @@ export const EquipmentPage = (props) => {
 		props.startEditProfile(props.id, { equipment: _.map(equipment, (item) => ({ id: item.id, qty: item.qty })) })
 	}, [equipment])
 
-	const [selected, setSelected] = useState(undefined)
+	const [clickedItem, setClickedItem] = useState(null)
 
 	const handleQtyChange = (itemId, index, value) => {
 		console.log(value)
@@ -137,7 +137,7 @@ export const EquipmentPage = (props) => {
 								<button 
 									className="grid__col1 button--link" 
 									id={item.id}
-									onClick={() => setSelected({ id: item.id, ...props.items[item.id] })}
+									onClick={() => setClickedItem({ id: item.id, ...props.items[item.id] })}
 								>
 									{props.items[item.id].name}
 								</button>
@@ -201,14 +201,14 @@ export const EquipmentPage = (props) => {
 			</div>
 
 			<ItemModal 
-				selected={selected} 
+				clickedItem={clickedItem} 
 				equipped={equipped}
 				handleEquip={handleEquip}
-				handleCloseModal={() => setSelected(undefined)}
+				handleCloseModal={() => setClickedItem(null)}
 			/>
 
 			<ConfirmationModal
-				isOpen={!!equipmentToRemove}
+				clickedItem={equipmentToRemove}
 				message={`Remove ${equipmentToRemove && equipmentToRemove.name} from equipment?`}
 				handleConfirm={() => handleRemoveEquipment(equipmentToRemove.id)}
 				handleCloseModal={() => setEquipmentToRemove(null)}

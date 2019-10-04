@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import _ from 'lodash'
 import { Field, ErrorMessage } from 'formik'
+
 import { schools, alignments } from '../../utils/staticData'
 import { apiObjectToArray, calcStartingGold } from '../../utils/utils'
 

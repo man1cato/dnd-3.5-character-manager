@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
-import FeatModal from '../FeatModal'
+import FeatModal from '../Modals/FeatModal'
 
 
 export const Feats = (props) => { 
-	const [selected, setSelected] = useState(undefined)
+	const [clickedFeat, setClickedFeat] = useState(null)
 
 	const feats = _.sortBy(props.featIds.map((featId) => ({
-		...props.feats[featId],
-		id: featId
+		id: featId,
+		...props.feats[featId]
 	})), ['name'])
 
 	return (
@@ -21,15 +21,15 @@ export const Feats = (props) => {
 					id={feat.id}
 					key={`feat${i}`}
 					type='button'
-					onClick={() => setSelected(feat)}
+					onClick={() => setClickedFeat(feat)}
 				>
 					{feat.name}
 				</button>
 			))}
 
 			<FeatModal 
-				selected={selected}
-				handleCloseModal={() => setSelected(undefined)}
+				clickedFeat={clickedFeat}
+				handleCloseModal={() => setClickedFeat(null)}
 			/>
 		</div>
 	)

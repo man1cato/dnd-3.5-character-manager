@@ -3,9 +3,9 @@ import _ from 'lodash'
 import update from 'immutability-helper'
 import { ErrorMessage } from 'formik'
 
-import ItemModal from '../../components/ItemModal'
+import ItemModal from '../../components/Modals/ItemModal'
 import Selector from '../../components/Selector/Selector'
-import EquipButton from '../../components/EquipButton'
+import EquipButton from '../../components/EquipButton/EquipButton'
 import { apiObjectToArray, calcItemTotalValue, calcEquipmentTotalValue, calcEquipmentTotalWeight } from '../../utils/utils'
 
 

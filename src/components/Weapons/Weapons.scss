@@ -1,0 +1,26 @@
+@import '../../styles/base/settings';
+
+
+.weapon {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin-bottom: $m-size;
+}
+
+.weapon__features {
+   font-size: $font-size-s;  
+   padding-bottom: $xs-size;
+}
+
+.weapon__stats {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   > * {
+      flex: 1 1 25%;
+   }
+   > :not(:last-child) {
+      border-right: solid 1px $dark-grey;
+   }
+}

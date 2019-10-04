@@ -13,7 +13,7 @@ import './styles/styles.scss'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 import { firebase } from './firebase/firebase'
-import LoadingPage from './pages/LoadingPage'
+import LoadingPage from './pages/LoadingPage/LoadingPage'
 
 
 const store = configureStore()

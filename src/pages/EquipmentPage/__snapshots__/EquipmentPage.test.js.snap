@@ -2,7 +2,7 @@
 
 exports[`should render equipment page with profile data 1`] = `
 <div
-  class="EquipmentPage"
+  class="container--body EquipmentPage"
 >
   <div
     class="money-container"
@@ -120,9 +120,11 @@ exports[`should render equipment page with profile data 1`] = `
           />
         </button>
         <div
-          class="Counter"
+          class="Counter undefined"
         >
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="remove"
               size="small"
@@ -133,7 +135,9 @@ exports[`should render equipment page with profile data 1`] = `
             size="3"
             value="1"
           />
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="add"
               size="small"
@@ -165,9 +169,11 @@ exports[`should render equipment page with profile data 1`] = `
           />
         </button>
         <div
-          class="Counter"
+          class="Counter undefined"
         >
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="remove"
               size="small"
@@ -178,7 +184,9 @@ exports[`should render equipment page with profile data 1`] = `
             size="3"
             value="2"
           />
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="add"
               size="small"
@@ -210,9 +218,11 @@ exports[`should render equipment page with profile data 1`] = `
           />
         </button>
         <div
-          class="Counter"
+          class="Counter undefined"
         >
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="remove"
               size="small"
@@ -223,7 +233,9 @@ exports[`should render equipment page with profile data 1`] = `
             size="3"
             value="30"
           />
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="add"
               size="small"
@@ -255,9 +267,11 @@ exports[`should render equipment page with profile data 1`] = `
           />
         </button>
         <div
-          class="Counter"
+          class="Counter undefined"
         >
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="remove"
               size="small"
@@ -268,7 +282,9 @@ exports[`should render equipment page with profile data 1`] = `
             size="3"
             value="1"
           />
-          <button>
+          <button
+            type="button"
+          >
             <ion-icon
               name="add"
               size="small"
@@ -298,11 +314,11 @@ exports[`should render equipment page with profile data 1`] = `
       <div />
       <div />
       <h5>
-        191
+        191.00
          gp
       </h5>
       <h5>
-        12
+        12.00
          lbs
       </h5>
     </div>

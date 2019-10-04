@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FeatModal 1`] = `
+<DefaultModal
+  clickedItem={
+    Object {
+      "description": "Run 5 times normal speed, +4 bonus on Jump checks Made after a running start",
+      "name": "Run",
+      "types": Array [
+        "General",
+      ],
+    }
+  }
+  contentLabel="Selected Feat"
+>
+  <h4>
+    Run
+  </h4>
+  <h5>
+    General
+  </h5>
+  <p>
+    Run 5 times normal speed, +4 bonus on Jump checks Made after a running start
+  </p>
+</DefaultModal>
+`;

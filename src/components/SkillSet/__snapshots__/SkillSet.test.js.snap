@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SkillSet with profile data 1`] = `
+<div
+  class="SkillSet"
+>
+  <h5
+    class="SkillSet__name-header"
+  >
+    Skill
+  </h5>
+  <h5>
+    Ranks
+  </h5>
+  <h5
+    class="SkillSet__name-header"
+  >
+    Skill
+  </h5>
+  <h5>
+    Ranks
+  </h5>
+  <button
+    class="grid__col1 button--link"
+    id="recfbplSsRmzNs68J"
+    type="button"
+  >
+    Appraise
+  </button>
+  <div
+    class="grid__col2"
+  >
+    4
+  </div>
+  <button
+    class="grid__col1 button--link"
+    id="recoJ7dkAWtHAkj3v"
+    type="button"
+  >
+    Balance
+  </button>
+  <div
+    class="grid__col2"
+  >
+    3
+  </div>
+  <button
+    class="SkillSet__col3 button--link"
+    id="recHCeKVn3CB0HcNA"
+    type="button"
+  >
+    Climb
+  </button>
+  <div
+    class="grid__col4"
+  >
+    5
+  </div>
+  <button
+    class="SkillSet__col3 button--link"
+    id="recs2EXcqiCIfwO0w"
+    type="button"
+  >
+    Concentration
+  </button>
+  <div
+    class="grid__col4"
+  >
+    9
+  </div>
+</div>
+`;
