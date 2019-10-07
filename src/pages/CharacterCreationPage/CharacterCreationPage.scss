@@ -1,0 +1,56 @@
+@import '../../styles/base/settings';
+
+
+.CreatorForm {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.CreatorForm__group {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: $m-size;
+}
+
+.CreatorForm__input-group {
+   display: flex;
+   align-items: center;
+   > * {
+      margin-right: $s-size;
+   }
+   input {
+      max-width: 70px; 
+   }
+   > :last-child {
+      margin-right: 0;
+   }
+}
+
+.CreatorForm__grid {
+	display: grid;
+   grid-template-rows: 2rem auto;
+	grid-gap: $xs-size;
+	justify-items: center;
+	align-items: center;
+	text-align: center; 
+   font-size: $font-size-m;
+}
+
+.CreatorForm__error {
+   font-style: italic;
+   font-size: $font-size-s;
+   margin: 0;
+}
+
+.CreatorForm__error--center {
+   @extend .CreatorForm__error;
+   text-align: center;
+}
+
+.CreatorForm__error--right {
+   @extend .CreatorForm__error;
+   text-align: right;
+}

@@ -1,0 +1,31 @@
+@import '../CharacterCreationPage';
+
+
+.CreatorFormIdentity__group {
+   @extend .CreatorForm__group;
+   > :first-child {
+      width: 35%;
+      padding-right: $s-size;
+   }
+   > :last-child {
+      width: 65%;
+      flex-wrap: wrap;
+   }
+}
+
+.CreatorFormIdentity__group--top {
+   @extend .CreatorFormIdentity__group;
+   align-items: flex-start;
+} 
+
+.CreatorFormIdentity__group--bottom {
+   @extend .CreatorFormIdentity__group;
+   align-items: flex-end;
+} 
+
+.CreatorFormIdentity__list {
+   margin: 0;
+   li {
+      margin-left: -20px;
+   }
+}

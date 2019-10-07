@@ -1,0 +1,48 @@
+@import '../CharacterCreationPage.scss';
+
+
+.CreatorFormSkills {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.CreatorFormSkills__scroll-container {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.CreatorFormSkills__scroll-list {
+   flex-grow: 1;
+   overflow-y: auto;
+   padding-top: $xs-size;
+}
+
+.CreatorFormSkills__grid {
+   @extend .CreatorForm__grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-rows: auto;
+   > button {
+      padding-bottom: 0;
+   }
+}
+.CreatorFormSkills__grid--header {
+   @extend .CreatorFormSkills__grid;
+   padding-right: 17px;
+   padding-bottom: 0.5rem;
+   border-bottom: 1px solid $dark-grey;
+}
+
+.CreatorFormSkills__counter {
+   height: 4rem;
+   button {
+      height: 100%;
+      padding: $xs-size !important; 
+   }
+   input {
+      height: 100%;
+      width: 100%;
+	}
+}

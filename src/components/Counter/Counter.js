@@ -19,7 +19,7 @@ const Counter = ({ value, updateValue, noInput, className }) => {
                className="counter-value"
                size={3}
                value={value}
-               onChange={e => updateValue(isNaN(e.target.value) ? value : e.target.value)}
+               onChange={e => updateValue(isNaN(e.target.value) ? value : Number(e.target.value))}
             />
          )}
          

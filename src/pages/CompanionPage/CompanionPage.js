@@ -8,6 +8,7 @@ import SkillSet from '../../components/SkillSet/SkillSet'
 import PhysicalStats from '../../components/PhysicalStats/PhysicalStats'
 import { startEditProfile } from '../../store/actions/profile'
 import { calcAbilityMod } from '../../utils/utils'
+import './CompanionPage.scss'
 
 
 export const CompanionPage = ({ id, companion, startEditProfile }) => {
@@ -22,7 +23,7 @@ export const CompanionPage = ({ id, companion, startEditProfile }) => {
 
 	return (
 		<div className="container--body">
-			<div className="section grid--companion">
+			<div className="section CompanionPage__grid">
 				<h3>{companion.name}</h3>
 				<div>{companion.type}</div>
 
@@ -66,11 +67,9 @@ export const CompanionPage = ({ id, companion, startEditProfile }) => {
 				handleUpdate={handleUpdate}							
 			/>
 
-			<div className="grid--combat">
-				<div className="row__title">Attack</div>
-				<div className="row--left">            
-					{companion.attack}
-				</div>
+			<div className="PhysicalStats__row">
+				<div>Attack</div>
+				<div>{companion.attack}</div>
 			</div>
 
 		</div>

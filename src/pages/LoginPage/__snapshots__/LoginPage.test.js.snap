@@ -2,13 +2,13 @@
 
 exports[`should render login page correctly 1`] = `
 <div
-  className="box-layout"
+  className="LoginPage"
 >
   <div
-    className="box-layout__box"
+    className="LoginPage__box"
   >
     <h1
-      className="box-layout__title"
+      className="LoginPage__title"
     >
       D&D 3.5e Character Manager
     </h1>

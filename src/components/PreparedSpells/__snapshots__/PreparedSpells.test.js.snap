@@ -2,7 +2,7 @@
 
 exports[`should render PreparedSpells with profile data 1`] = `
 <div
-  class="grid--spells"
+  class="PreparedSpells__grid"
 >
   <h5
     class="grid__col1"

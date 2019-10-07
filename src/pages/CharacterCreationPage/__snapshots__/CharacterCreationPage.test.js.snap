@@ -13145,7 +13145,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                       className="container--body"
                     >
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Name:
@@ -14087,12 +14087,12 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                             </FieldInner>
                           </FormikConnect(FieldInner)>
                           <FormikConnect(ErrorMessageImpl)
-                            className="form-group--error"
+                            className="CreatorForm__error"
                             component="div"
                             name="name"
                           >
                             <ErrorMessageImpl
-                              className="form-group--error"
+                              className="CreatorForm__error"
                               component="div"
                               formik={
                                 Object {
@@ -15018,7 +15018,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Gender:
@@ -15978,14 +15978,14 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </FormikConnect(FieldInner)>
                       </div>
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Age:
                         </h4>
                         <div>
                           <div
-                            className="input-group"
+                            className="CreatorForm__input-group"
                           >
                             <FormikConnect(FieldInner)
                               className="text-input"
@@ -16930,12 +16930,12 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                             </div>
                           </div>
                           <FormikConnect(ErrorMessageImpl)
-                            className="form-group--error"
+                            className="CreatorForm__error"
                             component="div"
                             name="age"
                           >
                             <ErrorMessageImpl
-                              className="form-group--error"
+                              className="CreatorForm__error"
                               component="div"
                               formik={
                                 Object {
@@ -17861,14 +17861,14 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Height:
                         </h4>
                         <div>
                           <div
-                            className="input-group"
+                            className="CreatorForm__input-group"
                           >
                             <FormikConnect(FieldInner)
                               className="text-input"
@@ -19754,15 +19754,15 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            className="input-group"
+                            className="CreatorForm__input-group"
                           >
                             <FormikConnect(ErrorMessageImpl)
-                              className="form-group--error"
+                              className="CreatorForm__error"
                               component="div"
                               name="height.ft"
                             >
                               <ErrorMessageImpl
-                                className="form-group--error"
+                                className="CreatorForm__error"
                                 component="div"
                                 formik={
                                   Object {
@@ -20686,12 +20686,12 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                               />
                             </FormikConnect(ErrorMessageImpl)>
                             <FormikConnect(ErrorMessageImpl)
-                              className="form-group--error"
+                              className="CreatorForm__error"
                               component="div"
                               name="height.in"
                             >
                               <ErrorMessageImpl
-                                className="form-group--error"
+                                className="CreatorForm__error"
                                 component="div"
                                 formik={
                                   Object {
@@ -21618,14 +21618,14 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Weight:
                         </h4>
                         <div>
                           <div
-                            className="input-group"
+                            className="CreatorForm__input-group"
                           >
                             <FormikConnect(FieldInner)
                               className="text-input"
@@ -22570,12 +22570,12 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                             </div>
                           </div>
                           <FormikConnect(ErrorMessageImpl)
-                            className="form-group--error"
+                            className="CreatorForm__error"
                             component="div"
                             name="weight"
                           >
                             <ErrorMessageImpl
-                              className="form-group--error"
+                              className="CreatorForm__error"
                               component="div"
                               formik={
                                 Object {
@@ -23504,7 +23504,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         className="divider"
                       />
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Race:
@@ -24523,7 +24523,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </FormikConnect(FieldInner)>
                       </div>
                       <div
-                        className="form-group--35 align-bottom"
+                        className="CreatorFormIdentity__group align-bottom"
                       >
                         <h4>
                           Favored Class:
@@ -24533,7 +24533,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Size:
@@ -24543,7 +24543,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35"
+                        className="CreatorFormIdentity__group"
                       >
                         <h4>
                           Speed:
@@ -24553,13 +24553,13 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35 align-bottom"
+                        className="CreatorFormIdentity__group--bottom"
                       >
                         <h4>
                           Racial Modifiers:
                         </h4>
                         <div
-                          className="input-group flex-wrap"
+                          className="CreatorForm__input-group"
                         >
                           <div>
                             None
@@ -24567,7 +24567,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35 align-bottom"
+                        className="CreatorFormIdentity__group--bottom"
                       >
                         <h4>
                           Default Language(s):
@@ -24577,7 +24577,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35 align-top"
+                        className="CreatorFormIdentity__group--top"
                       >
                         <h4>
                           Bonus Languages:
@@ -24587,13 +24587,13 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        className="form-group--35 align-top"
+                        className="CreatorFormIdentity__group--top"
                       >
                         <h4>
                           Racial Bonuses:
                         </h4>
                         <ul
-                          className="form-group__list"
+                          className="CreatorFormIdentity__list"
                         >
                           <li
                             key="racialBonus0"
@@ -24608,7 +24608,7 @@ exports[`should render default state of CharacterCreationPage correctly 1`] = `
                         </ul>
                       </div>
                       <div
-                        className="form-group--35 align-top"
+                        className="CreatorFormIdentity__group--top"
                       >
                         <h4>
                           Special Abilities:

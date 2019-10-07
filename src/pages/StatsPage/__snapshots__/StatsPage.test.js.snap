@@ -5,28 +5,32 @@ exports[`should render stats page with profile data 1`] = `
   className="container--body"
 >
   <div
-    className="row"
+    className="section"
   >
-    <h3>
-      Level 
-      5
-    </h3>
-    <span>
-      XP: 
-      10000
-    </span>
-  </div>
-  <div
-    className="row"
-  >
-    <span>
-      Hit Die: 
-      D4
-    </span>
-    <span>
-      To next level: 
-      5000
-    </span>
+    <div
+      className="StatsPage__row"
+    >
+      <h3>
+        Level 
+        5
+      </h3>
+      <span>
+        XP: 
+        10000
+      </span>
+    </div>
+    <div
+      className="StatsPage__row"
+    >
+      <span>
+        Hit Die: 
+        D4
+      </span>
+      <span>
+        To next level: 
+        5000
+      </span>
+    </div>
   </div>
   <div
     className="section"

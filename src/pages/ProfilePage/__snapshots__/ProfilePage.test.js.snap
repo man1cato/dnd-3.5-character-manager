@@ -5,14 +5,14 @@ exports[`should render ProfilePage with profile data 1`] = `
   className="container--body"
 >
   <div
-    className="grid--profile"
+    className="ProfilePage__grid"
   >
     <img
-      className="grid--profile__img"
+      className="ProfilePage__avatar"
       src="images/elf.svg"
     />
     <h4
-      className="grid--profile__name"
+      className="ProfilePage__name"
     >
       Istvyll Bannianea
     </h4>
@@ -43,50 +43,50 @@ exports[`should render ProfilePage with profile data 1`] = `
        lbs
     </div>
     <h4
-      className="grid--profile__features-key"
+      className="grid__col1"
     >
       Languages
     </h4>
     <div
-      className="grid--profile__features-value"
+      className="ProfilePage__features"
     >
       Common, Elven, Draconic, Orc, Sylvan
     </div>
     <h4
-      className="grid--profile__features-key"
+      className="grid__col1"
     >
       Deity
     </h4>
     <div
-      className="grid--profile__features-value"
+      className="ProfilePage__features"
     />
     <h4
-      className="grid--profile__features-key"
+      className="grid__col1"
     >
       School
     </h4>
     <div
-      className="grid--profile__features-value"
+      className="ProfilePage__features"
     >
       Transmutation
     </div>
     <h4
-      className="grid--profile__features-key"
+      className="grid__col1"
     >
       Prohibited Schools
     </h4>
     <div
-      className="grid--profile__features-value"
+      className="ProfilePage__features"
     >
       Illusion, Necromancy
     </div>
     <h4
-      className="grid--profile__features-key"
+      className="grid__col1"
     >
       Special Abilities
     </h4>
     <div
-      className="grid--profile__features-value"
+      className="ProfilePage__features"
     >
       <Connect(SpecialAbilities)
         specialAbilityIds={
@@ -97,12 +97,12 @@ exports[`should render ProfilePage with profile data 1`] = `
       />
     </div>
     <h4
-      className="grid--profile__features-key"
+      className="grid__col1"
     >
       Feats
     </h4>
     <div
-      className="grid--profile__features-value"
+      className="ProfilePage__features"
     >
       <Connect(Feats)
         featIds={

@@ -35,15 +35,15 @@ const PhysicalStats = (props) => {
 
 	return (
 		<>
-			<div className="stat-row">
+			<div className="PhysicalStats__row">
 				<div>Hit Points</div>
 				<div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item">
 						<h5>Base</h5>
 						<div>{hp.base}</div>
 					</div>
-					<div className="stat-row__item--bottom">+</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item--bottom">+</div>
+					<div className="PhysicalStats__row__item">
 						<h5>Mod</h5>
 						<input
 							type="number"
@@ -52,8 +52,8 @@ const PhysicalStats = (props) => {
 							onChange={(e) => setHpMod(Number(e.target.value))}
 						/>
 					</div>
-					<div className="stat-row__item--bottom">-</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item--bottom">-</div>
+					<div className="PhysicalStats__row__item">
 						<h5>Dmg</h5>
 						<input
 							type="number"
@@ -62,41 +62,41 @@ const PhysicalStats = (props) => {
 							onChange={(e) => setHpDamage(Number(e.target.value))}
 						/>
 					</div>
-					<div className="stat-row__item--bottom">=</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item--bottom">=</div>
+					<div className="PhysicalStats__row__item">
 						<h5>Curr</h5>
 						<div>{hpTotal}</div>
 					</div>
 				</div>
 			</div>
 
-			<div className="stat-row">
+			<div className="PhysicalStats__row">
 				<div>Armor Class</div>
 				<div>            
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item">
 						<h5>Base</h5>
 						<div>{ac.base}</div>
 					</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item">
 						<h5>Flat</h5>
 						<div>{ac.flat}</div>
 					</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item">
 						<h5>Touch</h5>
 						<div>{ac.touch}</div>
 					</div>
 				</div>
 			</div>
 
-			<div className="stat-row">
+			<div className="PhysicalStats__row">
 				<div>Initiative</div>
 				<div>            
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item">
 						<h5>Base</h5>
 						<div>{initBase}</div>
 					</div>
-					<div className="stat-row__item--bottom">+</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item--bottom">+</div>
+					<div className="PhysicalStats__row__item">
 						<h5>Mod</h5>
 						<input
 							type="number"
@@ -105,23 +105,23 @@ const PhysicalStats = (props) => {
 							onChange={(e) => setInitMod(Number(e.target.value))}
 						/>
 					</div>
-					<div className="stat-row__item--bottom">=</div>
-					<div className="stat-row__item">
+					<div className="PhysicalStats__row__item--bottom">=</div>
+					<div className="PhysicalStats__row__item">
 						<h5>Total</h5>
 						<div>{initTotal}</div>
 					</div>                
 				</div>
 			</div>
 	
-			<div className="stat-row">
+			<div className="PhysicalStats__row">
 				<div>Speed</div>
 				{speed.ground ? 
 					<div>   
-						<div className="stat-row__item">
+						<div className="PhysicalStats__row__item">
 							<h5>Ground</h5>
 							<div>{speed.ground}</div>
 						</div>
-						<div className="stat-row__item">
+						<div className="PhysicalStats__row__item">
 							<h5>Flight</h5>
 							<div>{speed.flight}</div>
 						</div>                 

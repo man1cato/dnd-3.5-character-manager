@@ -51,14 +51,14 @@ exports[`should render attacks with default profile data 1`] = `
   speed={30}
 >
   <div
-    className="stat-row"
+    className="PhysicalStats__row"
   >
     <div>
       Hit Points
     </div>
     <div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Base
@@ -68,12 +68,12 @@ exports[`should render attacks with default profile data 1`] = `
         </div>
       </div>
       <div
-        className="stat-row__item--bottom"
+        className="PhysicalStats__row__item--bottom"
       >
         +
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Mod
@@ -86,12 +86,12 @@ exports[`should render attacks with default profile data 1`] = `
         />
       </div>
       <div
-        className="stat-row__item--bottom"
+        className="PhysicalStats__row__item--bottom"
       >
         -
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Dmg
@@ -104,12 +104,12 @@ exports[`should render attacks with default profile data 1`] = `
         />
       </div>
       <div
-        className="stat-row__item--bottom"
+        className="PhysicalStats__row__item--bottom"
       >
         =
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Curr
@@ -121,14 +121,14 @@ exports[`should render attacks with default profile data 1`] = `
     </div>
   </div>
   <div
-    className="stat-row"
+    className="PhysicalStats__row"
   >
     <div>
       Armor Class
     </div>
     <div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Base
@@ -138,7 +138,7 @@ exports[`should render attacks with default profile data 1`] = `
         </div>
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Flat
@@ -148,7 +148,7 @@ exports[`should render attacks with default profile data 1`] = `
         </div>
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Touch
@@ -160,14 +160,14 @@ exports[`should render attacks with default profile data 1`] = `
     </div>
   </div>
   <div
-    className="stat-row"
+    className="PhysicalStats__row"
   >
     <div>
       Initiative
     </div>
     <div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Base
@@ -177,12 +177,12 @@ exports[`should render attacks with default profile data 1`] = `
         </div>
       </div>
       <div
-        className="stat-row__item--bottom"
+        className="PhysicalStats__row__item--bottom"
       >
         +
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Mod
@@ -195,12 +195,12 @@ exports[`should render attacks with default profile data 1`] = `
         />
       </div>
       <div
-        className="stat-row__item--bottom"
+        className="PhysicalStats__row__item--bottom"
       >
         =
       </div>
       <div
-        className="stat-row__item"
+        className="PhysicalStats__row__item"
       >
         <h5>
           Total
@@ -212,7 +212,7 @@ exports[`should render attacks with default profile data 1`] = `
     </div>
   </div>
   <div
-    className="stat-row"
+    className="PhysicalStats__row"
   >
     <div>
       Speed

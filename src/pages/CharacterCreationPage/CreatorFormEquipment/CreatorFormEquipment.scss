@@ -1,0 +1,10 @@
+@import '../CharacterCreationPage.scss';
+
+
+.CreatorFormEquipment__grid {
+   @extend .CreatorForm__grid;
+   grid-template-columns: 4fr repeat(3, 2fr) 1fr;
+   input {
+      max-width: 3rem;
+   }
+}

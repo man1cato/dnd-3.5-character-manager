@@ -1,0 +1,21 @@
+@import '../CharacterCreationPage.scss';
+
+
+.CreatorFormJobClass__group {
+   @extend .CreatorForm__group;
+   > :first-child {
+      width: 35%;
+      padding-right: $s-size;
+   }
+   > :last-child {
+      width: 65%;
+   }
+   button {
+      max-width: 80px;
+   }
+}
+
+.CreatorFormJobClass__group--top {
+   @extend .CreatorFormJobClass__group;
+   align-items: flex-start;
+} 

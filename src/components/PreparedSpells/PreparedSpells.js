@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import update from 'immutability-helper'
 
 import SpellModal from '../Modals/SpellModal'
+import './PreparedSpells.scss'
 
 
 const listPreparedSpells = (spellbook) => {
@@ -52,7 +53,7 @@ export const PreparedSpells = (props) => {
   
 	return (
 		<>
-			<div className="grid--spells">
+			<div className="PreparedSpells__grid">
 				<h5 className="grid__col1">Spell</h5>
 				<h5 className="grid__col2">Rmng</h5>
 

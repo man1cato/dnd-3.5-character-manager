@@ -4,6 +4,7 @@ import { startEditProfile } from '../../store/actions/profile'
 
 import Abilities from '../../components/Abilities/Abilities'
 import SkillSet from '../../components/SkillSet/SkillSet'
+import './StatsPage.scss'
 
 
 export const StatsPage = ({ profile, jobClasses, startEditProfile }) => {
@@ -17,15 +18,16 @@ export const StatsPage = ({ profile, jobClasses, startEditProfile }) => {
 
 	return (
 		<div className="container--body">
+			<div className="section">
+				<div className="StatsPage__row">
+					<h3>Level {profile.level}</h3>
+					<span>XP: {xp}</span>
+				</div>
 
-			<div className="row">
-				<h3>Level {profile.level}</h3>
-				<span>XP: {xp}</span>
-			</div>
-
-			<div className="row">
-				<span>Hit Die: {jobClass.hitDie}</span>
-				<span>To next level: {nextLevelXp - xp}</span>
+				<div className="StatsPage__row">
+					<span>Hit Die: {jobClass.hitDie}</span>
+					<span>To next level: {nextLevelXp - xp}</span>
+				</div>
 			</div>
 
 			<div className="section">
@@ -38,7 +40,6 @@ export const StatsPage = ({ profile, jobClasses, startEditProfile }) => {
 			<SkillSet 
 				skillSet={profile.skillSet}
 			/>
-
 		</div>
 	)
 }

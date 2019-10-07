@@ -9,13 +9,13 @@ import { startCreateProfile } from '../../store/actions/profile'
 import { apiObjectToArray, calcAbilityMod, calcSizeMod } from '../../utils/utils'
 import { abilities } from '../../utils/staticData'
 
-import CreatorFormIdentity from './CreatorFormIdentity'
-import CreatorFormJobClass from './CreatorFormJobClass'
-import CreatorFormAbilities from './CreatorFormAbilities'
-import CreatorFormFeats from './CreatorFormFeats'
-import CreatorFormSkills from './CreatorFormSkills'
-import CreatorFormEquipment from './CreatorFormEquipment'
-import CreatorFormFooter from './CreatorFormFooter'
+import CreatorFormIdentity from './CreatorFormIdentity/CreatorFormIdentity'
+import CreatorFormJobClass from './CreatorFormJobClass/CreatorFormJobClass'
+import CreatorFormAbilities from './CreatorFormAbilities/CreatorFormAbilities'
+import CreatorFormFeats from './CreatorFormFeats/CreatorFormFeats'
+import CreatorFormSkills from './CreatorFormSkills/CreatorFormSkills'
+import CreatorFormEquipment from './CreatorFormEquipment/CreatorFormEquipment'
+import CreatorFormFooter from './CreatorFormFooter/CreatorFormFooter'
 
 
 const pages = [CreatorFormIdentity, CreatorFormJobClass, CreatorFormAbilities, CreatorFormFeats, CreatorFormSkills, CreatorFormEquipment]

@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 
 
-.stat-row {
+.PhysicalStats__row {
    display: flex;
    > :first-child {
       flex: 0 1 25%;
@@ -21,7 +21,7 @@
    margin-bottom: $m-size;
 }
 
-.stat-row__item {
+.PhysicalStats__row__item {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -31,7 +31,7 @@
    }
 }
 
-.stat-row__item--bottom {
-   @extend .stat-row__item;
+.PhysicalStats__row__item--bottom {
+   @extend .PhysicalStats__row__item;
    align-self: flex-end;
 }

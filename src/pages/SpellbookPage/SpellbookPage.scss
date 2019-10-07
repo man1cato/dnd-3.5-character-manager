@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 
 
-.spells-grid {
+.SpellbookPage__grid {
    display: grid;
    grid-template-columns: 5fr 2fr 2fr 1fr;
    grid-auto-flow: row;

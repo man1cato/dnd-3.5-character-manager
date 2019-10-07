@@ -1,0 +1,868 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CreatorFormSkills correctly 1`] = `
+<div
+  className="container--body CreatorFormSkills"
+>
+  <h3
+    className="section__title"
+  >
+    Assign Skill Points
+  </h3>
+  <div
+    className="section__title"
+  >
+    0
+    /
+    12
+  </div>
+  <FormikConnect(ErrorMessageImpl)
+    className="CreatorForm__error--center"
+    component="div"
+    name="remainingSkillPoints"
+  />
+  <div
+    className="CreatorFormSkills__scroll-container"
+  >
+    <div
+      className="CreatorFormSkills__grid--header"
+    >
+      <h5
+        className="grid__col1"
+      >
+        Skill
+      </h5>
+      <h5>
+        Ranks
+      </h5>
+    </div>
+    <div
+      className="CreatorFormSkills__scroll-list"
+    >
+      <div
+        className="CreatorFormSkills__grid"
+      >
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Appraise
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Balance
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Bluff
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Climb
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Concentration
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Control Shape
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Alchemy)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Armorsmithing)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Basketweaving)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Blacksmithing)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Bookbinding)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Bowmaking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Carpentry)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Cartography)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Gemcutting)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Leatherworking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Locksmithing)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Metalworking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Poisonmaking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Sculpting)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Shipmaking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Stonemasonry)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Trapmaking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Weaponsmithing)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Winemaking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Craft (Woodmaking)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Decipher Script
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Diplomacy
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Disable Device
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Disguise
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Escape Artist
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Forgery
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Gather Information
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Handle Animal
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Heal
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Hide
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Intimidate
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Jump
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Arcana)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Arch. & Eng.)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Dungeoneering)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Geography)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (History)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Local)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Nature)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Nobility & Royalty)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (Religion)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Knowledge (The Planes)
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Listen
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Literacy
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Move Silently
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Open Lock
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Perform
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Profession
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Ride
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Search
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Sense Motive
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Sleight of Hand
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Speak Language
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Spellcraft
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Spot
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Survival
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Swim
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Tumble
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Use Magic Device
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+        <button
+          className="grid__col1 button--link"
+          onClick={[Function]}
+          type="button"
+        >
+          Use Rope
+        </button>
+        <Counter
+          className="CreatorFormSkills__counter"
+          updateValue={[Function]}
+          value={0}
+        />
+      </div>
+    </div>
+  </div>
+  <SkillModal
+    handleCloseModal={[Function]}
+  />
+</div>
+`;

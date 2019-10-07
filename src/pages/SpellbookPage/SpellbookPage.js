@@ -41,7 +41,7 @@ export const SpellbookPage = (props) => {
 				<div className="section" key={level}>
 					<h3 className="section__title">Level {level} Spells ({preparedTotals[level]}/{spellsPerDay[level]})</h3>
 
-					<div className="spells-grid">
+					<div className="SpellbookPage__grid">
 						<h5 className="grid__col1">Spell</h5>
 						<h5>Prepared</h5>
 						<h5>Rmng</h5>

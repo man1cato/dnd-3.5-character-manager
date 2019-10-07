@@ -3,14 +3,15 @@ import { connect } from 'react-redux'
 
 import Feats from '../../components/Feats/Feats'
 import SpecialAbilities from '../../components/SpecialAbilities/SpecialAbilities'
+import './ProfilePage.scss'
 
 
-export const ProfilePage = (props) => (
+export const ProfilePage = props => (
 	<div className="container--body">
-		<div className="grid--profile">
-			<img className="grid--profile__img" src={props.iconUrl} />
+		<div className="ProfilePage__grid">
+			<img className="ProfilePage__avatar" src={props.iconUrl} />
 
-			<h4 className="grid--profile__name">{props.name}</h4>
+			<h4 className="ProfilePage__name">{props.name}</h4>
 			<div>{props.race.name}</div>
 			<div>{props.gender}</div>
 			<div>{props.jobClass.name}</div>
@@ -20,28 +21,28 @@ export const ProfilePage = (props) => (
 			<div>{props.race.size}</div>
 			<div>{props.weight} lbs</div>
 
-			<h4 className="grid--profile__features-key">Languages</h4>
-			<div className="grid--profile__features-value">{props.languages.join(', ')}</div>
+			<h4 className="grid__col1">Languages</h4>
+			<div className="ProfilePage__features">{props.languages.join(', ')}</div>
 
-			<h4 className="grid--profile__features-key">Deity</h4>
-			<div className="grid--profile__features-value">{props.deity}</div>
+			<h4 className="grid__col1">Deity</h4>
+			<div className="ProfilePage__features">{props.deity}</div>
 
 			{props.school && 
 				<Fragment>
-					<h4 className="grid--profile__features-key">School</h4>
-					<div className="grid--profile__features-value">{props.school}</div>
+				<h4 className="grid__col1">School</h4>
+					<div className="ProfilePage__features">{props.school}</div>
 				</Fragment>
 			}
 
 			{props.prohibitedSchools && 
 				<Fragment>
-					<h4 className="grid--profile__features-key">Prohibited Schools</h4>
-					<div className="grid--profile__features-value">{props.prohibitedSchools.join(', ')}</div>
+					<h4 className="grid__col1">Prohibited Schools</h4>
+					<div className="ProfilePage__features">{props.prohibitedSchools.join(', ')}</div>
 				</Fragment>
 			}
 				
-			<h4 className="grid--profile__features-key">Special Abilities</h4>
-			<div className="grid--profile__features-value">
+			<h4 className="grid__col1">Special Abilities</h4>
+			<div className="ProfilePage__features">
 				{props.specialAbilities &&
 					<SpecialAbilities specialAbilityIds={props.specialAbilities} />
 					||
@@ -49,11 +50,10 @@ export const ProfilePage = (props) => (
 				}				
 			</div> 
 
-			<h4 className="grid--profile__features-key">Feats</h4>
-			<div className="grid--profile__features-value">
+			<h4 className="grid__col1">Feats</h4>
+			<div className="ProfilePage__features">
 				<Feats featIds={props.feats} />
 			</div>
-
 		</div>
 	</div>
 )

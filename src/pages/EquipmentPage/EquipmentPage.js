@@ -101,7 +101,7 @@ export const EquipmentPage = (props) => {
 
 	return (
 		<div className="container--body EquipmentPage">
-			<div className="money-container">
+			<div className="section">
 				<div className="money-row">
 					{denominations.map((denomination, i) => (
 						<div className="money-group" key={`denomination${i}`}>
@@ -117,7 +117,7 @@ export const EquipmentPage = (props) => {
 					))}
 				</div>
 
-				<div className="row--right">
+				<div className="money-total">
 					<h4 data-testid="totalMoney">Total money: {totalMoney} gp</h4> 
 				</div>
 			</div>

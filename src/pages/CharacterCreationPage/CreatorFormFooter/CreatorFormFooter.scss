@@ -1,0 +1,24 @@
+@import '../CharacterCreationPage.scss';
+
+
+.CreatorFormFooter {
+   position: fixed;
+   bottom: 0px;
+   height: 10vh;
+   min-height: 60px;
+   width: -webkit-fill-available;
+   background: white;
+   box-shadow: 0 0 5px $light-grey;
+   padding: $s-size 0;
+}
+
+.CreatorFormFooter__content {
+   display: flex;
+   justify-content: space-between;
+   > * {
+      width: -webkit-fill-available;
+   }
+   :nth-child(2) {
+      margin-left: $s-size;
+   }
+}

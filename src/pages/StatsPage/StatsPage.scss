@@ -1,0 +1,9 @@
+@import '../../styles/base/settings';
+
+
+.StatsPage__row {
+   display: flex;
+   align-items: stretch;
+   justify-content: space-between;
+   margin-bottom: $m-size;
+}
