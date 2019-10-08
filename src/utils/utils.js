@@ -93,6 +93,15 @@ export const calcBaseGrappleBonus = (baseAttackBonus, strScore, size) => {
 
 export const calcTotalMoney = ({ pp, gp, sp, cp }) => Number((pp * 10 + gp + sp / 10 + cp / 100).toFixed(2))
 
+export const convertMoneyToDenominations = moneyInGp => {
+	const pp = Math.trunc(moneyInGp / 10) 
+	const gp = Math.trunc(moneyInGp - pp * 10) 
+	const sp = Math.trunc(moneyInGp * 10 - pp * 100 - gp * 10)
+	const cp = Math.trunc(moneyInGp * 100 - pp * 1000 - gp * 100 - sp * 10)
+
+	return {	pp, gp, sp, cp	}
+}
+
 export const calcItemTotalValue = (item, qty) => {
 	const totalValue = item.value * qty
 	return isNaN(totalValue) ? 0 : Number(totalValue.toFixed(1))

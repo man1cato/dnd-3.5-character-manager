@@ -41,7 +41,7 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'))
 
 firebase.auth().onAuthStateChanged(async (user) => {
 	if (user) {
-		console.log('logged in')
+		console.log('logged in user: ', user.uid)
 		await store.dispatch(startGetProfiles(user.uid))
 		const profiles = store.getState().profiles
 		const selectedCharacterId = localStorage.getItem('selectedCharacterId')
@@ -55,6 +55,7 @@ firebase.auth().onAuthStateChanged(async (user) => {
 		renderApp()
 	} else {
 		console.log('logged out')
+		localStorage.removeItem('selectedCharacterId')
 		store.dispatch(removeProfile())
 		store.dispatch(removeProfiles())
 		store.dispatch(logout())

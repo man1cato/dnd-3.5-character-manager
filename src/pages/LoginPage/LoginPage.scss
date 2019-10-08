@@ -13,7 +13,7 @@
 }
 
 .LoginPage__box {
-   background: fade-out(white, .15);
+   background: fade-out(white, .1);
    border-radius: 3px;
    text-align: center;
    width: 80vw;
@@ -23,6 +23,8 @@
 }
 
 .LoginPage__title {
-   margin: 0 0 $m-size 0;
+   font-family: 'Roboto Slab', Roboto, Open-Sans, sans-serif;
+   color: $dark-blue;
    line-height: 1;
+   margin: 0 0 $l-size 0;
 }

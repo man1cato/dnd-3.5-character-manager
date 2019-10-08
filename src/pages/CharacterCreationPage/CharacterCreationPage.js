@@ -6,7 +6,7 @@ import _ from 'lodash'
 
 import { history } from '../../routers/AppRouter'
 import { startCreateProfile } from '../../store/actions/profile'
-import { apiObjectToArray, calcAbilityMod, calcSizeMod } from '../../utils/utils'
+import { apiObjectToArray, calcAbilityMod, calcSizeMod, convertMoneyToDenominations } from '../../utils/utils'
 import { abilities } from '../../utils/staticData'
 
 import CreatorFormIdentity from './CreatorFormIdentity/CreatorFormIdentity'
@@ -125,7 +125,7 @@ export const CharacterCreationPage = (props) => {
 					race: values.race,
 					alignment: values.alignment,
 					jobClass: values.jobClass,
-					money: { pp: 0, gp: values.remainingGold, sp: 0, cp: 0 },
+					money: convertMoneyToDenominations(values.remainingGold),
 					languages: _.orderBy(selectedRace.defaultLanguages.concat(values.bonusLanguages)),
 					specialAbilities: selectedJobClass.levels["1"].specialAbilities,
 					deity: !!values.deity ? values.deity : "None",

@@ -15,7 +15,7 @@ const CreatorFormSkills = ({
 }) => { 
 	const { skillSet, skillPoints } = values
 	const [assignedSkillPoints, setAssignedSkillPoints] = useState(0)
-	const [selected, setSelected] = useState(undefined)
+	const [clickedSkill, setClickedSkill] = useState(undefined)
 
 	useEffect(() => {
 		setAssignedSkillPoints(_.sumBy(skillSet, skill => skill.ranks))
@@ -50,7 +50,7 @@ const CreatorFormSkills = ({
 									<button
 										className="grid__col1 button--link"	
 										type="button"
-										onClick={() => setSelected(skill)}
+										onClick={() => setClickedSkill(skill)}
 									>
 										{skill.name}
 									</button>
@@ -68,8 +68,8 @@ const CreatorFormSkills = ({
 			</div>
 			
 			<SkillModal
-				selected={selected}
-				handleCloseModal={() => setSelected(undefined)}
+				clickedSkill={clickedSkill}
+				handleCloseModal={() => setClickedSkill(undefined)}
 			/>
 
 		</div>

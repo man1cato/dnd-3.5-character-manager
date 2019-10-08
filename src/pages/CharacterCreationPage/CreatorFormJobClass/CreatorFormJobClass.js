@@ -110,7 +110,7 @@ const CreatorFormJobClass = ({
 						className="number-input"
 						type="number"
 						value={values.startingGold}
-						onChange={(e) => setFieldValue('startingGold', e.target.value)}
+						onChange={(e) => setFieldValue('startingGold', Number(e.target.value))}
 					/>
 					<div> gp</div>
 					<button

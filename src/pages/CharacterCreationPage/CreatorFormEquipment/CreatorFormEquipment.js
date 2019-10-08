@@ -173,7 +173,7 @@ const CreatorFormEquipment = ({
 			<ErrorMessage className="CreatorForm__error--right" name="remainingGold" component="div" />
 
 			<ItemModal
-				selected={clickedItem}
+				clickedItem={clickedItem}
 				equipped={equipped}
 				handleCloseModal={() => setClickedItem(undefined)}
 				handleEquip={handleEquip}
