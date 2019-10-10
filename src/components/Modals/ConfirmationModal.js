@@ -3,13 +3,20 @@ import React from 'react'
 import DefaultModal from './DefaultModal'
 
 
-const ConfirmationModal = ({ clickedItem, message, handleConfirm, handleCloseModal }) => (
+const ConfirmationModal = ({ 
+   clickedItem, 
+   messageTitle, 
+   message, 
+   handleConfirm, 
+   handleCloseModal 
+}) => (
    <DefaultModal
       clickedItem={clickedItem}
       onRequestClose={handleCloseModal}
       contentLabel="Confirm Decision"
    >
-      <h3 className="modal-header">{message}</h3>
+      <h3 className="modal-header">{messageTitle}</h3>
+      <p className="modal-body">{message}</p>
       <div className="button-container">
          <button
             className="button--primary"

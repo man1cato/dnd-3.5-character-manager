@@ -1,61 +1,76 @@
-import React from 'react'
-import { connect } from 'react-redux';
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
 
-import { startSetProfile } from '../../store/actions/profile'
+import ConfirmationModal from '../../components/Modals/ConfirmationModal'
+import { startSetProfile, startRemoveProfile } from '../../store/actions/profile'
 import { history } from '../../routers/AppRouter'
 import './CharacterSelectionPage.scss'
 
 
-export class CharacterSelectionPage extends React.Component {
-   state = {
-      disabled: false 
+export const CharacterSelectionPage = props => {
+   const [characterToRemove, setCharacterToRemove] = useState(null)
+   const [disabled, setDisabled] = useState(false)
+
+   const handleSelectCharacter = async profileId => {
+      try {
+         setDisabled(true)
+         await props.startSetProfile(props.uid, profileId)
+         history.push('/profile')
+      } catch (e) {
+         setDisabled(false)
+         alert('An error occurred. Please try again.')
+         console.log(e)
+      }      
    }
 
-   handleClick = (e) => {
-		const id = e.currentTarget.id
-		this.setState(() => ({
-			disabled: true
-		}))
-      this.props.startSetProfile(this.props.uid, id)
-      localStorage.setItem('selectedCharacterId', id)
-      setTimeout(() => { history.push('/profile') }, 1000)
-   }
-
-   render() {
-      return (
-         <div className="container--body CharacterSelectionPage">
-            {this.props.profiles.map((profile, i) => (
+   return (
+      <div className="container--body CharacterSelectionPage">
+         {props.profiles.map((profile, i) => (
+            <div className="profile-container" key={i}>
                <button 
-                  key={i}
-                  className="profile-button"
-                  id={profile.id}   
-                  disabled={this.state.disabled}
-                  onClick={this.handleClick}
+                  className="profile__select-button"
+                  disabled={disabled}
+                  onClick={() => handleSelectCharacter(profile.id)}
                >
                   <img src={profile.iconUrl} />
                   <div>
                      <h3>{profile.name}</h3>
-                     <div>{profile.gender} {this.props.races[profile.race].name}</div>
-                     <div>{this.props.jobClasses[profile.jobClass].name}</div>
+                     <div>{profile.gender} {props.races[profile.race].name}</div>
+                     <div>{props.jobClasses[profile.jobClass].name}</div>
                      <div>{profile.alignment}</div>
                      <div>{`Level ${profile.level}`}</div>
                   </div>
                </button>
-            ))}
-         </div>
-      )
-   }
+               <button
+                  className="profile__remove-button"
+                  disabled={disabled}
+                  onClick={() => setCharacterToRemove(profile)}
+               >
+                  <ion-icon name="trash" size="large"/>
+               </button>
+            </div>
+         ))}
+         <ConfirmationModal
+            clickedItem={characterToRemove}
+            messageTitle={`Delete Character ${characterToRemove && characterToRemove.name}?`}
+            message="This action cannot be undone!"
+            handleConfirm={() => props.startRemoveProfile(characterToRemove.id)}
+            handleCloseModal={() => setCharacterToRemove(null)}
+         />
+      </div>
+   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
    uid: state.auth.uid,
    profiles: state.profiles,
    jobClasses: state.jobClasses,
    races: state.races
 })
 
-const mapDispatchToProps = (dispatch, props) => ({
-   startSetProfile: (uid, id) => dispatch(startSetProfile(uid, id))
+const mapDispatchToProps = dispatch => ({
+   startSetProfile: (uid, profileId) => dispatch(startSetProfile(uid, profileId)),
+   startRemoveProfile: profileId => dispatch(startRemoveProfile(profileId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharacterSelectionPage)

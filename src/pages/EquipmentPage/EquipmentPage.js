@@ -209,7 +209,7 @@ export const EquipmentPage = (props) => {
 
 			<ConfirmationModal
 				clickedItem={equipmentToRemove}
-				message={`Remove ${equipmentToRemove && equipmentToRemove.name} from equipment?`}
+				messageTitle={`Remove ${equipmentToRemove && equipmentToRemove.name} from equipment?`}
 				handleConfirm={() => handleRemoveEquipment(equipmentToRemove.id)}
 				handleCloseModal={() => setEquipmentToRemove(null)}
 			/>

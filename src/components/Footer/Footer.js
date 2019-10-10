@@ -34,7 +34,6 @@ export const Footer = ({profile}) => (
 			<Link to="/equipment" >
 				<FooterIcon svgFile={equipmentSVG} />
 			</Link>
-
 			
 			{profile.spellbook && 
 				<Link to="/spellbook" >

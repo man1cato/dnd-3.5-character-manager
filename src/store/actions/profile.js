@@ -9,24 +9,31 @@ export const setProfile = (id, profile) => ({
 })
 
 //READ PROFILE FROM FIREBASE
-export const startSetProfile = (uid, id) => {
-    return (dispatch) => {
-        return database.ref(`users/${uid}/profiles/${id}`).once('value').then((snapshot) => {
+export const startSetProfile = (uid, profileId) => {
+    return async dispatch => {
+        try {
+            const snapshot = await database.ref(`users/${uid}/profiles/${profileId}`).once('value')
             const profile = snapshot.val()
-            dispatch(setProfile(id, profile))
-        })
+            dispatch(setProfile(profileId, profile))
+            localStorage.setItem('selectedCharacterId', profileId)
+        } catch (e) {
+            console.log(e)
+        }
     }
 }
 
 //CREATE PROFILE IN FIREBASE
-export const startCreateProfile = (profile) => {    
-    return (dispatch, getState) => {
-        const uid = getState().auth.uid       
-        return database.ref(`users/${uid}/profiles`).push(profile).then((ref) => {
+export const startCreateProfile = profile => {    
+    return async (dispatch, getState) => {
+        try {
+            const uid = getState().auth.uid       
+            const ref = await database.ref(`users/${uid}/profiles`).push(profile)
             dispatch(setProfile(ref.key, profile))
             dispatch(startGetProfiles(uid))
             localStorage.setItem('selectedCharacterId', ref.key)
-        })
+        } catch (e) {
+            console.log(e)
+        }
     }
 }
 
@@ -39,11 +46,14 @@ export const editProfile = (updates) => ({
 
 //UPDATE PROFILE IN FIREBASE
 export const startEditProfile = (id, updates) => {
-    return (dispatch, getState) => {
-        const uid = getState().auth.uid
-        return database.ref(`users/${uid}/profiles/${id}`).update(updates).then(() => {
+    return async (dispatch, getState) => {
+        try {
+            const uid = getState().auth.uid
+            await database.ref(`users/${uid}/profiles/${id}`).update(updates)
             dispatch(editProfile(updates))
-        })
+        } catch {
+            console.log(e)
+        }
     }
 }
 
@@ -53,13 +63,19 @@ export const removeProfile = () => ({
 })
 
 //REMOVE PROFILE FROM FIREBASE
-// export const startRemoveProfile = () => {
-//     return (dispatch) => {
-//         return database.ref(`users/${uid}/profiles/${id}`).remove().then(() => {
-//             dispatch(removeProfile())
-//         })
-//     }
-// }
+export const startRemoveProfile = profileId => {
+    return async (dispatch, getState) => {
+        const uid = getState().auth.uid
+        try {
+            await database.ref(`users/${uid}/profiles/${profileId}`).remove()
+            dispatch(removeProfile())
+            dispatch(startGetProfiles(uid))
+            localStorage.removeItem('selectedCharacterId')
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}
 
 //LEVEL UP CHARACTER IN STORE
 // export const levelUp = (character) => ({

@@ -58,7 +58,8 @@ export const getItems = async () => {
 					critical: item.fields.Critical || null,
 					range: item.fields.Range || null,
 					armorBonus: item.fields["Armor Bonus"] || null,
-					maxDexBonus: item.fields["Max DEX Bonus"] || null
+					maxDexBonus: item.fields["Max DEX Bonus"] || null,
+					notes: item.fields.Notes || null
 				}
 			})
 		} while (!!offset)

@@ -2,24 +2,28 @@
 
 
 .DefaultModal {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    border: 1px solid rgb(204, 204, 204);
-    background: rgb(255, 255, 255);
-    overflow: auto;
-    border-radius: 4px;
-    outline: none;
-    padding: 20px;
-    height: min-content;
-    max-height: 90%;
+   position: absolute;
+   top: 40px;
+   left: 40px;
+   right: 40px;
+   bottom: 40px;
+   border: 1px solid rgb(204, 204, 204);
+   background: rgb(255, 255, 255);
+   overflow: auto;
+   border-radius: 4px;
+   outline: none;
+   padding: 20px;
+   height: min-content;
+   max-height: 90%;
 }
 
 .modal-header {
    text-align: center;
    margin-bottom: $m-size;
+}
+
+.modal-body {
+   text-align: center;
 }
 
 .button-container {

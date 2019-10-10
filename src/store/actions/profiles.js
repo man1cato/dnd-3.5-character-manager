@@ -9,8 +9,8 @@ export const setProfiles = (profiles) => ({
 
 //READ PROFILES FROM FIREBASE 
 export const startGetProfiles = (uid) => {
-    return (dispatch) => {
-        return database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
+    return dispatch => {
+        database.ref(`users/${uid}/profiles`).once('value').then((snapshot) => {
             let profiles = snapshot.val()
             if (profiles) {
                 const profileIds = Object.keys(profiles)

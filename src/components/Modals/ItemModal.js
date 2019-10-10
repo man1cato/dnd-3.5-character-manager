@@ -15,6 +15,7 @@ const ItemModal = ({ clickedItem, equipped, handleEquip, handleCloseModal }) => 
 			<>
 				<h4>{clickedItem.name}</h4>
 				<h5>{clickedItem.category}</h5>
+				<p>{clickedItem.notes}</p>
 
 				{clickedItem.weaponType && (
 					<>

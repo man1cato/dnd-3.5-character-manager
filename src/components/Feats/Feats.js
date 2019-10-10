@@ -5,21 +5,20 @@ import _ from 'lodash'
 import FeatModal from '../Modals/FeatModal'
 
 
-export const Feats = (props) => { 
+export const Feats = props => { 
 	const [clickedFeat, setClickedFeat] = useState(null)
 
-	const feats = _.sortBy(props.featIds.map((featId) => ({
+	const feats = _.sortBy(props.featIds.map(featId => ({
 		id: featId,
 		...props.feats[featId]
 	})), ['name'])
 
 	return (
 		<div>
-			{feats.map((feat, i) => (
+			{feats.map(feat => (
 				<button
 					className="button--link"
-					id={feat.id}
-					key={`feat${i}`}
+					key={feat.id}
 					type='button'
 					onClick={() => setClickedFeat(feat)}
 				>
@@ -36,7 +35,7 @@ export const Feats = (props) => {
 }
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   	feats: state.feats
 })
 
