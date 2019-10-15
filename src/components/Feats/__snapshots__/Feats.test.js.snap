@@ -4,21 +4,18 @@ exports[`should render Feats with profile data 1`] = `
 <div>
   <button
     class="button--link"
-    id="recRjuAWe7oy6a7wY"
     type="button"
   >
     Craft Wondrous Item
   </button>
   <button
     class="button--link"
-    id="recGkxwkqppy7EYmI"
     type="button"
   >
     Scribe Scroll
   </button>
   <button
     class="button--link"
-    id="rec4KkfhKpetKIDqj"
     type="button"
   >
     Spell Mastery

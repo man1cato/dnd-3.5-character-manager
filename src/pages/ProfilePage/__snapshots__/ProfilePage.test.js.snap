@@ -2,17 +2,17 @@
 
 exports[`should render ProfilePage with profile data 1`] = `
 <div
-  className="container--body"
+  class="container--body"
 >
   <div
-    className="ProfilePage__grid"
+    class="ProfilePage__grid"
   >
     <img
-      className="ProfilePage__avatar"
+      class="ProfilePage__avatar"
       src="images/elf.svg"
     />
     <h4
-      className="ProfilePage__name"
+      class="ProfilePage__name"
     >
       Istvyll Bannianea
     </h4>
@@ -43,76 +43,103 @@ exports[`should render ProfilePage with profile data 1`] = `
        lbs
     </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Languages
     </h4>
     <div
-      className="ProfilePage__features"
+      class="ProfilePage__features"
     >
       Common, Elven, Draconic, Orc, Sylvan
     </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Deity
     </h4>
     <div
-      className="ProfilePage__features"
+      class="ProfilePage__features"
     />
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       School
     </h4>
     <div
-      className="ProfilePage__features"
+      class="ProfilePage__features"
     >
       Transmutation
     </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Prohibited Schools
     </h4>
     <div
-      className="ProfilePage__features"
+      class="ProfilePage__features"
     >
       Illusion, Necromancy
     </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Special Abilities
     </h4>
     <div
-      className="ProfilePage__features"
+      class="ProfilePage__features"
     >
-      <Connect(SpecialAbilities)
-        specialAbilityIds={
-          Array [
-            "rect54ikkC9SDLJ1x",
-          ]
-        }
-      />
+      <div>
+        <button
+          class="button--link"
+          data-testid="rect54ikkC9SDLJ1x"
+          type="button"
+        >
+          A Thousand Faces
+        </button>
+        <button
+          class="button--link"
+          data-testid="recRTyqYzJplDO3fH"
+          type="button"
+        >
+          Alternate Form
+        </button>
+        <button
+          class="button--link"
+          data-testid="rec2luvq12PlWrz62"
+          type="button"
+        >
+          Flurry of Blows
+        </button>
+      </div>
     </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Feats
     </h4>
     <div
-      className="ProfilePage__features"
+      class="ProfilePage__features"
     >
-      <Connect(Feats)
-        featIds={
-          Array [
-            "recRjuAWe7oy6a7wY",
-            "rec4KkfhKpetKIDqj",
-            "recGkxwkqppy7EYmI",
-          ]
-        }
-      />
+      <div>
+        <button
+          class="button--link"
+          type="button"
+        >
+          Craft Wondrous Item
+        </button>
+        <button
+          class="button--link"
+          type="button"
+        >
+          Scribe Scroll
+        </button>
+        <button
+          class="button--link"
+          type="button"
+        >
+          Spell Mastery
+        </button>
+      </div>
     </div>
   </div>
 </div>

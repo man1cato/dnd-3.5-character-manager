@@ -1,6 +1,6 @@
 import _ from 'lodash'
-import profile from '../fixtures/profile'
-import database from '../../firebase/firebase'
+import profile from './fixtures/profile'
+import database from '../firebase/firebase'
 
 
 export const characterOne = {

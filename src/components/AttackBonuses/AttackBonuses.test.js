@@ -1,14 +1,14 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 
 import AttackBonuses from './AttackBonuses'
-import { characterOne } from '../../tests/utils/seedDatabase'
-import { apiData } from '../../tests/utils/utils'
+import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../tests/utils'
 
 
 const handleUpdate = jest.fn()
 const attackBonusMods = characterOne.attackBonusMods
-let props, wrapper
+let props
 
 beforeAll(async () => {
     const api = await apiData()
@@ -21,18 +21,17 @@ beforeAll(async () => {
     }
 })
 
-beforeEach(() => {
-    wrapper = mount(<AttackBonuses {...props} />)
-})
 
 test('should render attacks with default profile data', () => {
-    expect(wrapper).toMatchSnapshot()
+    const { container } = render(<AttackBonuses {...props} />)
+    expect(container.firstChild).toMatchSnapshot()
 })
 
 test('should trigger handleUpdate when input changes', () => {
+    const { getByTestId } = render(<AttackBonuses {...props} />)
     const value = 2
-	wrapper.find('#melee').simulate('change', { target: { value } })
-    expect(handleUpdate).toHaveBeenCalledWith({
-        attackBonusMods: { ...attackBonusMods, melee: value }
-    })
+    const meleeInputNode = getByTestId('melee')
+    fireEvent.change(meleeInputNode, { target: { value } })
+
+    expect(meleeInputNode.value).toBe(`${value}`)
 })

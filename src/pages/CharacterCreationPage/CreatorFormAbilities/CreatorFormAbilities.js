@@ -9,17 +9,16 @@ import './CreatorFormAbilities.scss'
 
 const CreatorFormAbilities = ({
 	values,
-	selectedJobClass,
-	selectedRace,
 	setFieldValue, 
 	validateForm
 }) => {
-	const raceMods = selectedRace.abilityMods
+	const { jobClass } = values
+	const raceMods = values.race.abilityMods
 
-	const setSkillPoints = (intScore) => {
-		let skillPoints = calcSkillPoints(selectedJobClass.name, calcAbilityMod(intScore)) * 4
+	const setSkillPoints = intScore => {
+		let skillPoints = calcSkillPoints(jobClass.name, calcAbilityMod(intScore)) * 4
 		if (skillPoints < 1) { skillPoints = 1	} 
-		if (selectedJobClass.name === 'Human') { skillPoints += 4}			
+		if (jobClass.name === 'Human') { skillPoints += 4}			
 		setFieldValue('skillPoints', skillPoints, false)
 		setFieldValue('remainingSkillPoints', skillPoints)
 	}
@@ -28,6 +27,12 @@ const CreatorFormAbilities = ({
 		validateForm()
 		if (!!values.abilities.int.final) { setSkillPoints(values.abilities.int.final) }
 	}, [])
+
+	const handleScoreChange = (ability, score, finalScore) => {
+		setFieldValue(`abilities.${ability}.score`, score)
+		setFieldValue(`abilities.${ability}.final`, finalScore, false)
+		if (ability === 'int') { setSkillPoints(finalScore) }
+	}
 
 	return (
 		<div className="container--body">					
@@ -39,28 +44,26 @@ const CreatorFormAbilities = ({
 				<h5 className="grid__col3">Race Mod</h5>
 				<h5 className="grid__col4">Final</h5>
 
-				{_.keys(abilities).map((abbr) => {
-					const fieldName = `abilities.${abbr}.score`
-					const raceMod = raceMods[abbr]
+				{_.keys(abilities).map((ability) => {
+					const fieldName = `abilities.${ability}.score`
+					const raceMod = raceMods[ability]
 					return (
-						<Fragment key={abbr}>
-							<div className="grid__col1">{abilities[abbr]} ({abbr.toUpperCase()})</div>
+						<Fragment key={ability}>
+							<div className="grid__col1">{abilities[ability]} ({ability.toUpperCase()})</div>
 							<Field 
 								className="grid__col2 number-input"
 								type="number"
 								name={fieldName}
-								id={`${abbr}Input`}
-								value={values.abilities[abbr].score}
+								data-testid={`${ability}Input`}
+								value={values.abilities[ability].score}
 								onChange={(e) => {
 									const score = Number(e.target.value)
 									const finalScore = score + raceMod
-									setFieldValue(`abilities.${abbr}.score`, score)
-									setFieldValue(`abilities.${abbr}.final`, finalScore, false)
-									if (abbr === 'int') { setSkillPoints(finalScore) }
+									handleScoreChange(ability, score, finalScore)
 								}}
 							/>	
 							<div className="grid__col3">{raceMod}</div>
-							<div className="grid__col4">{values.abilities[abbr].final}</div>					
+							<div className="grid__col4">{values.abilities[ability].final}</div>					
 							<ErrorMessage className="CreatorFormAbilities__error" name={fieldName} component="div" />
 						</Fragment>
 					)
@@ -68,15 +71,13 @@ const CreatorFormAbilities = ({
 
 				<button
 					className="button grid__col2"
-					id="abilitiesRollButton"
+					data-testid="abilitiesRollButton"
 					type='button'
 					onClick={() => {
-						_.keys(abilities).forEach((abbr) => {
+						_.keys(abilities).forEach((ability) => {
 							const score = rollDice(3, 6)
-							const finalScore = score + raceMods[abbr]
-							setFieldValue(`abilities.${abbr}.score`, score)
-							setFieldValue(`abilities.${abbr}.final`, finalScore, false)
-							if (abbr === 'int') { setSkillPoints(finalScore) }
+							const finalScore = score + raceMods[ability]
+							handleScoreChange(ability, score, finalScore)
 						})
 					}}
 				>

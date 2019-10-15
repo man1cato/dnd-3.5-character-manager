@@ -1,9 +1,9 @@
 import _ from 'lodash'
 
 
-export const convertTextToArray = (string) => _.compact(string.split(/\n/))
+export const convertTextToArray = string => _.compact(string.split(/\n/))
 
-export const convertInputValue = (value) => {
+export const convertInputValue = value => {
 	value = Number(value)
 	if (value === '' || isNaN(value)) { return 0 }
 	if (value === 0) { return '' }
@@ -24,7 +24,7 @@ export const rollDice = (countDice = 1, dieFaces = 6) => {
 	return total
 }
 
-export const calcStartingGold = (jobClassName) => {
+export const calcStartingGold = jobClassName => {
 	if (_.includes(['Sorcerer', 'Wizard'], jobClassName)) {
 		return rollDice(3, 4) * 10
 	}
@@ -45,9 +45,9 @@ export const calcStartingGold = (jobClassName) => {
 	}
 }
 
-export const calcAbilityMod = (abilityScore) => Math.floor(abilityScore/2 - 5)
+export const calcAbilityMod = abilityScore => Math.floor(abilityScore/2 - 5)
 
-export const calcSizeMod = (size) => ({
+export const calcSizeMod = size => ({
 	Colossal: -8,
 	Gargantuan: -4,
 	Huge: -2,
@@ -114,7 +114,7 @@ export const calcItemTotalWeight = (item, qty) => {
 
 export const calcEquipmentTotalValue = (equipment, items) => {
 	const res = _.reduce(
-		_.map(equipment, (item) => items[item.id].value * item.qty), 
+		_.map(equipment, item => items[item.id].value * item.qty), 
 		(total, num) => total + num, 
 		0
 	)
@@ -122,7 +122,7 @@ export const calcEquipmentTotalValue = (equipment, items) => {
 }
 export const calcEquipmentTotalWeight = (equipment, items) => {
 	const res = _.reduce(
-		_.map(equipment, (item) => items[item.id].weight * item.qty), 
+		_.map(equipment, item => items[item.id].weight * item.qty), 
 		(total, num) => total + num, 
 		0
 	)

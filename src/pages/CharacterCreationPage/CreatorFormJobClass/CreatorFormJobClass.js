@@ -7,7 +7,7 @@ import { apiObjectToArray, calcStartingGold } from '../../../utils/utils'
 import './CreatorFormJobClass.scss'
 
 
-const validateProhibitedSchools = (selectedSchool) => (value) => {
+const validateProhibitedSchools = selectedSchool => value => {
 	let error
 	if (selectedSchool === 'Divination') {
 		if (value.length < 1) {
@@ -29,56 +29,51 @@ const validateProhibitedSchools = (selectedSchool) => (value) => {
 
 const CreatorFormJobClass = ({
 	values, 
-	selectedRace,
-	selectedJobClass, 
-	setSelectedJobClass,
 	jobClasses, 
 	handleChange, 
 	handleMultiSelect, 
 	setFieldValue, 
 	setFieldError
 }) => {
-	const { school } = values
+	const { race, jobClass, school } = values
 
 	useEffect(() => {
-		if (selectedJobClass.name === 'Paladin') {
+		if (jobClass.name === 'Paladin') {
 			setFieldValue('alignment', 'Lawful Good')
-		} else if (selectedJobClass.name === 'Wizard') {
+		} else if (jobClass.name === 'Wizard') {
 			setFieldValue('school', 'Universal')
 		} else {
 			setFieldValue('school', null)
 			setFieldValue('prohibitedSchools', [])
 		}
-	}, [selectedJobClass])
+	}, [jobClass])
 
 	return (
 		<div className="container--body">			
 			<div className="CreatorFormJobClass__group">
 				<h4>Job Class:</h4>
-				<Field
+				<select
 					className="select"
-					name="jobClass"
-					component="select"
+					defaultValue={_.findKey(jobClasses, jobClass)}
 					onChange={(e) => {
-						setSelectedJobClass(jobClasses[e.target.value])
+						setFieldValue('jobClass', jobClasses[e.target.value])
 						setFieldValue('startingGold', 0)
-						handleChange(e)
 					}}
 				>
-					{apiObjectToArray(jobClasses).map((jobClass, i) => (
+					{_.map(apiObjectToArray(jobClasses), jobClass => (
 						<option
-							key={`jobClass${i}`}
+							key={jobClass.id}
 							value={jobClass.id}
 						>
 							{jobClass.name}
 						</option>
 					))}
-				</Field>
+				</select>
 			</div>
 
 			<div className="CreatorFormJobClass__group">
 				<h4>Alignment:</h4>
-				{selectedJobClass.name === "Paladin" ?
+				{jobClass.name === "Paladin" ?
 					<div>Lawful Good</div>
 					:
 					<Field 
@@ -100,7 +95,7 @@ const CreatorFormJobClass = ({
 
 			<div className="CreatorFormJobClass__group--top">
 				<h4>Hit Die:</h4>
-				<div>{selectedJobClass.hitDie}</div>
+				<div>{jobClass.hitDie}</div>
 			</div>
 
 			<div className="CreatorFormJobClass__group">
@@ -116,7 +111,7 @@ const CreatorFormJobClass = ({
 					<button
 						className="button"
 						type="button"
-						onClick={() => setFieldValue('startingGold', calcStartingGold(selectedJobClass.name))}
+						onClick={() => setFieldValue('startingGold', calcStartingGold(jobClass.name))}
 					>
 						Roll
 					</button>
@@ -125,7 +120,7 @@ const CreatorFormJobClass = ({
 
 			<div className="CreatorFormJobClass__group--top">
 				<h4>Proficiencies:</h4>
-				<div>{selectedJobClass.proficiencies.join(", ")}</div>
+				<div>{jobClass.proficiencies.join(", ")}</div>
 			</div>
 
 			<div className="CreatorFormJobClass__group--top">
@@ -135,9 +130,9 @@ const CreatorFormJobClass = ({
 					name="bonusLanguages" 
 					component="select" 
 					multiple 
-					onChange={(e) => {handleMultiSelect(e, setFieldValue)}}
+					onChange={(e) => handleMultiSelect(e, setFieldValue)}
 				>
-					{_.orderBy(selectedRace.bonusLanguages).map((language) => (
+					{_.sortBy(race.bonusLanguages).map(language => (
 						<option 
 							value={language} 
 							key={language}
@@ -157,7 +152,7 @@ const CreatorFormJobClass = ({
 				/>                                  
 			</div>
 		
-			{selectedJobClass.name === 'Wizard' && (
+			{jobClass.name === 'Wizard' && (
 				<div className="CreatorFormJobClass__group">
 					<h4>School:</h4>
 					<Field 
@@ -184,7 +179,7 @@ const CreatorFormJobClass = ({
 				</div>
 			)}
 
-			{selectedJobClass.name === 'Wizard' && school !== 'Universal' && (
+			{jobClass.name === 'Wizard' && school !== 'Universal' && (
 				<>
 					<div className="CreatorFormJobClass__group--top">
 						<h4>Prohibited School(s):</h4>

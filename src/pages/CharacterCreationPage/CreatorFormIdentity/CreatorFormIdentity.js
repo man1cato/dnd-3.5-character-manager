@@ -8,13 +8,13 @@ import './CreatorFormIdentity.scss'
 
 
 const CreatorFormIdentity = ({
-	selectedRace, 
-	setSelectedRace,
+	values,
 	races, 
 	jobClasses,
-	handleChange,
-	setTouched
+	setTouched,
+	setFieldValue
 }) => {
+	const { race } = values 
 	useEffect(() => {
 		setTouched({ remainingSkillPoints: true, feats: true, equipment: true, remainingGold: true })
 	},[])
@@ -80,52 +80,44 @@ const CreatorFormIdentity = ({
 
 			<div className="CreatorFormIdentity__group">
 				<h4>Race:</h4>
-				<Field 
+				<select 
 					className="select" 
-					name="race" 
-					component="select" 
-					onChange={(e) => {
-						setSelectedRace(races[e.target.value])
-						handleChange(e)
-					}}
+					defaultValue={_.findKey(races, race)}
+					onChange={(e) => setFieldValue('race', races[e.target.value])}
 				>
-					{_.map(apiObjectToArray(races), (race, i) => (
+					{_.map(apiObjectToArray(races), race => (
 						<option 
 							value={race.id} 
-							key={`race${i}`}
+							key={race.id}
 						>
 							{race.name}
 						</option>
 					))}
-				</Field>                                    
+				</select>                                    
 			</div>
 
 			<div className="CreatorFormIdentity__group align-bottom">
 				<h4>Favored Class:</h4>
 				<div>
-					{selectedRace.favoredClass ? 
-						jobClasses[selectedRace.favoredClass].name
-						:
-						'Any'
-					}
+					{race.favoredClass ? jobClasses[race.favoredClass].name : 'Any'}
 				</div>
 			</div>
 
 			<div className="CreatorFormIdentity__group">
 				<h4>Size:</h4>                                 
-				<div>{selectedRace.size}</div>
+				<div>{race.size}</div>
 			</div> 
 
 			<div className="CreatorFormIdentity__group">
 				<h4>Speed:</h4>                                 
-				<div>{selectedRace.speed}</div>
+				<div>{race.speed}</div>
 			</div> 
 
 			<div className="CreatorFormIdentity__group--bottom">
 				<h4>Racial Modifiers:</h4>     
 				<div className="CreatorForm__input-group">
-					{_.filter(selectedRace.abilityMods, (mod) => mod !== 0).length > 0 ?
-						_.filter(_.toPairs(selectedRace.abilityMods), (mod) => mod[1] !== 0).map((mod) => (
+					{_.filter(race.abilityMods, mod => mod !== 0).length > 0 ?
+						_.filter(_.toPairs(race.abilityMods), mod => mod[1] !== 0).map(mod => (
 							<div key={mod}>{mod[0].toUpperCase()}: {mod[1]}</div>
 						))
 						:
@@ -136,21 +128,21 @@ const CreatorFormIdentity = ({
 
 			<div className="CreatorFormIdentity__group--bottom">
 				<h4>Default Language(s):</h4>
-				<div>{selectedRace.defaultLanguages.join(', ')}</div>
+				<div>{race.defaultLanguages.join(', ')}</div>
 			</div>
 
 			<div className="CreatorFormIdentity__group--top">
 				<h4>Bonus Languages:</h4>
 				<div>
-					{selectedRace.bonusLanguages.join(', ')}
+					{race.bonusLanguages.join(', ')}
 				</div>                                    
 			</div>
 
 			<div className="CreatorFormIdentity__group--top">
 				<h4>Racial Bonuses:</h4>
-				{selectedRace.racialBonuses ? 
+				{race.racialBonuses ? 
 					<ul className="CreatorFormIdentity__list">
-						{selectedRace.racialBonuses.map((item, i) => (
+						{race.racialBonuses.map((item, i) => (
 							<li key={`racialBonus${i}`}>{item}</li>
 						))}
 					</ul>
@@ -162,8 +154,8 @@ const CreatorFormIdentity = ({
 			<div className="CreatorFormIdentity__group--top">
 				<h4>Special Abilities:</h4>
 				<div>
-					{selectedRace.specialAbilities ?
-						<SpecialAbilities specialAbilityIds={selectedRace.specialAbilities} />
+					{race.specialAbilities ?
+						<SpecialAbilities specialAbilityIds={race.specialAbilities} />
 						:
 						"None"
 					}

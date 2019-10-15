@@ -53,10 +53,8 @@ const validationSchema = Yup.object().shape({
 })
 
 
-export const CharacterCreationPage = (props) => {
+export const CharacterCreationPage = props => {
 	const [page, setPage] = useState(1)
-	const [selectedRace, setSelectedRace] = useState(_.find(props.races, (race) => race.name === 'Human'))
-	const [selectedJobClass, setSelectedJobClass] = useState(_.find(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'))
 
 	const handleMultiSelect = (e, setFieldValue) => {
 		const name = e.target.name
@@ -82,8 +80,8 @@ export const CharacterCreationPage = (props) => {
 				},
 				weight: '',
 				alignment: 'Lawful Good',
-				race: _.findKey(props.races, (race) => race.name === 'Human'),
-				jobClass: _.findKey(props.jobClasses, (jobClass) => jobClass.name === 'Fighter'),
+				race: _.find(props.races, race => race.name === 'Human'),
+				jobClass: _.find(props.jobClasses, jobClass => jobClass.name === 'Fighter'),
 				bonusLanguages: [],
 				deity: '',
 				abilities: _.mapValues(abilities, () => ({ score: '', final: '' })),
@@ -103,37 +101,41 @@ export const CharacterCreationPage = (props) => {
 										
 			validationSchema={Yup.reach(validationSchema, `page${page}`)}
 
-			onSubmit={(values, {setErrors, setSubmitting}) => {
-				const selectedJobClass = props.jobClasses[values.jobClass]
-				const selectedRace = props.races[values.race]
-				const abilities = _.mapValues(values.abilities, (ability) => ({ 
+			onSubmit={(values, { setSubmitting }) => {
+				const { 
+					name, gender, age, height, weight, race, alignment, jobClass, 
+					remainingGold, bonusLanguages, deity, feats, skillSet,
+					equipment, equipped, school, prohibitedSchools  
+				} = values
+
+				const abilities = _.mapValues(values.abilities, ability => ({ 
 					score: ability.final,
 					tempScore: ''
 				}))
 				const dexMod = calcAbilityMod(abilities.dex.score)
 				let armorBonus = 0
-				if (values.equipped.armor) { armorBonus += props.items[values.equipped.armor].armorBonus }
-				if (values.equipped.shield) { armorBonus += props.items[values.equipped.shield].armorBonus }
-				const baseArmorClass = 10 + armorBonus + calcSizeMod(selectedRace.size) + dexMod
+				if (equipped.armor) { armorBonus += props.items[equipped.armor].armorBonus }
+				if (equipped.shield) { armorBonus += props.items[equipped.shield].armorBonus }
+				const baseArmorClass = 10 + armorBonus + calcSizeMod(race.size) + dexMod
 				
 				const profile = {
-					name: values.name,
-					gender: values.gender,
-					age: values.age,
-					height: `${values.height.ft}'${values.height.in}"`,
-					weight: values.weight,
-					race: values.race,
-					alignment: values.alignment,
-					jobClass: values.jobClass,
-					money: convertMoneyToDenominations(values.remainingGold),
-					languages: _.orderBy(selectedRace.defaultLanguages.concat(values.bonusLanguages)),
-					specialAbilities: selectedJobClass.levels["1"].specialAbilities,
-					deity: !!values.deity ? values.deity : "None",
+					name,
+					gender,
+					age,
+					height: `${height.ft}'${height.in}"`,
+					weight,
+					race: _.findKey(props.races, race),
+					alignment,
+					jobClass: _.findKey(props.jobClasses, jobClass),
+					money: convertMoneyToDenominations(remainingGold),
+					languages: _.sortBy(race.defaultLanguages.concat(bonusLanguages)),
+					specialAbilities: jobClass.levels["1"].specialAbilities,
+					deity: !!deity ? deity : "None",
 					abilities,
-					feats: values.feats,
-					skillSet: _.filter(values.skillSet, skill => skill.ranks > 0),
-					equipment: values.equipment,
-					equipped: values.equipped,
+					feats,
+					skillSet: _.filter(skillSet, skill => skill.ranks > 0),
+					equipment,
+					equipped,
 					ac: {
 						base: baseArmorClass,
 						flat: baseArmorClass - dexMod,
@@ -141,15 +143,16 @@ export const CharacterCreationPage = (props) => {
 					},
 					level: 1,
 					hp: {
-						base: Number(selectedJobClass.hitDie.slice(1)) + calcAbilityMod(abilities.con.score)
+						base: Number(jobClass.hitDie.slice(1)) + calcAbilityMod(abilities.con.score)
 					},
 					xp: 0,
-					iconUrl: selectedRace.iconUrl
+					iconUrl: race.iconUrl
 				}
-				if(!!values.school) {
-					profile.school = values.school 
-					profile.prohibitedSchools = values.prohibitedSchools
+				if(!!school) {
+					profile.school = school 
+					profile.prohibitedSchools = prohibitedSchools
 				}
+				console.log('Created profile: ', profile)
 				props.startCreateProfile(profile)
 				
 				setTimeout(() => { history.push('/profile') }, 1500)
@@ -160,19 +163,14 @@ export const CharacterCreationPage = (props) => {
 				<Form className="CreatorForm">
 					{{
 						1: <CreatorFormIdentity 
-							selectedRace={selectedRace}
-							setSelectedRace={setSelectedRace}
+							values={values}
 							races={props.races}
 							jobClasses={props.jobClasses}
-							handleChange={handleChange} 
 							setFieldValue={setFieldValue}
 							setTouched={setTouched}
 						/>,
 						2: <CreatorFormJobClass
 							values={values}
-							selectedRace={selectedRace}
-							selectedJobClass={selectedJobClass}
-							setSelectedJobClass={setSelectedJobClass}
 							jobClasses={props.jobClasses}
 							handleChange={handleChange}
 							handleMultiSelect={handleMultiSelect}
@@ -182,8 +180,6 @@ export const CharacterCreationPage = (props) => {
 						/>,
 						3: <CreatorFormAbilities
 							values={values}
-							selectedRace={selectedRace}
-							selectedJobClass={selectedJobClass}
 							handleChange={handleChange}
 							setFieldValue={setFieldValue}
 							validateForm={validateForm}								

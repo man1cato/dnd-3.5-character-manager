@@ -16,7 +16,7 @@ const FooterIcon = ({svgFile}) => (
 	<SVGInline svg={svgFile} cleanup={true} height="100%" width="100%" fill="white" />
 )
 
-export const Footer = ({profile}) => (
+export const Footer = ({ profile }) => (
 	<footer className="footer--navbar">
 		<div className="container footer--navbar__content" >
 			<Link to="/profile" >
@@ -50,7 +50,7 @@ export const Footer = ({profile}) => (
 	</footer>
 )
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 	profile: state.profile
 })
 

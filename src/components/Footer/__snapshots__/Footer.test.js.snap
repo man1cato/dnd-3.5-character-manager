@@ -2,53 +2,65 @@
 
 exports[`should render footer correctly 1`] = `
 <footer
-  className="footer--navbar"
+  class="footer--navbar"
 >
   <div
-    className="container footer--navbar__content"
+    class="container footer--navbar__content"
   >
-    <Link
-      to="/profile"
+    <a
+      href="/profile"
     >
-      <FooterIcon
-        svgFile="test-file-stub"
-      />
-    </Link>
-    <Link
-      to="/stats"
+      <span
+        class="SVGInline SVGInline--cleaned"
+      >
+        test-file-stub
+      </span>
+    </a>
+    <a
+      href="/stats"
     >
-      <FooterIcon
-        svgFile="test-file-stub"
-      />
-    </Link>
-    <Link
-      to="/combat"
+      <span
+        class="SVGInline SVGInline--cleaned"
+      >
+        test-file-stub
+      </span>
+    </a>
+    <a
+      href="/combat"
     >
-      <FooterIcon
-        svgFile="test-file-stub"
-      />
-    </Link>
-    <Link
-      to="/equipment"
+      <span
+        class="SVGInline SVGInline--cleaned"
+      >
+        test-file-stub
+      </span>
+    </a>
+    <a
+      href="/equipment"
     >
-      <FooterIcon
-        svgFile="test-file-stub"
-      />
-    </Link>
-    <Link
-      to="/spellbook"
+      <span
+        class="SVGInline SVGInline--cleaned"
+      >
+        test-file-stub
+      </span>
+    </a>
+    <a
+      href="/spellbook"
     >
-      <FooterIcon
-        svgFile="test-file-stub"
-      />
-    </Link>
-    <Link
-      to="/companion"
+      <span
+        class="SVGInline SVGInline--cleaned"
+      >
+        test-file-stub
+      </span>
+    </a>
+    <a
+      href="/companion"
     >
-      <FooterIcon
-        svgFile="test-file-stub"
-      />
-    </Link>
+      <span
+        class="SVGInline SVGInline--cleaned"
+      >
+        test-file-stub
+      </span>
+    </a>
   </div>
 </footer>
 `;

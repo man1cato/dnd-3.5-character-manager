@@ -2,8 +2,8 @@ import React from 'react'
 import {	render, fireEvent } from '@testing-library/react'
 
 import { Feats } from './Feats'
-import { apiData } from '../../tests/utils/utils'
-import { characterOne } from '../../tests/utils/seedDatabase'
+import { apiData } from '../../tests/utils'
+import { characterOne } from '../../tests/seedDatabase'
 
 
 const featIds = characterOne.feats

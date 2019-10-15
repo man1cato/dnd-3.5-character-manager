@@ -1,34 +1,42 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { fireEvent } from '@testing-library/react'
 import _ from 'lodash'
 
 import CreatorFormAbilities from './CreatorFormAbilities'
 import { abilities } from '../../../utils/staticData'
-import { apiData } from '../../../tests/utils/utils'
-import { characterOne } from '../../../tests/utils/seedDatabase'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
+import { characterOne } from '../../../tests/seedDatabase'
 
 
 const setFieldValue = jest.fn()
-let wrapper, props
+const validateForm = jest.fn()
+let props
 beforeAll(async () => {
    const api = await apiData()
    props = {
-      values: { abilities: _.mapValues(abilities, () => ({ score: '' })) },
+      values: { 
+         race: api.races[characterOne.race],
+         abilities: _.mapValues(abilities, () => ({ score: '' })) 
+      },
       selectedJobClass: api.jobClasses[characterOne.jobClass],
-      selectedRace: api.races[characterOne.race],
-      setFieldValue
+      setFieldValue,
+      validateForm
    }
 })
 
-beforeEach(() => {
-   wrapper = shallow(<CreatorFormAbilities {...props} />)
-})
 
 test('should render CreatorFormAbilities correctly', () => {
-	expect(wrapper).toMatchSnapshot()
+   const { container } = renderWithRedux(<CreatorFormAbilities {...props} />, null, FormikWrapper)
+   expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should call setFieldValue when roll button is clicked', () => {
-   wrapper.find('#abilitiesRollButton').simulate('click')
-   expect(setFieldValue).toHaveBeenCalled()
+test('should fill out all inputs with numbers when roll button is clicked', () => {
+   // const { getByTestId } = render(<CreatorFormAbilities {...props} />)
+   // fireEvent.click(getByTestId('abilitiesRollButton'))
+   // expect(getByTestId('strInput').value).toEqual(expect.any(Number))
+   // expect(getByTestId('dexInput').value).toEqual(expect.any(Number))
+   // expect(getByTestId('conInput').value).toEqual(expect.any(Number))
+   // expect(getByTestId('intInput').value).toEqual(expect.any(Number))
+   // expect(getByTestId('wisInput').value).toEqual(expect.any(Number))
+   // expect(getByTestId('chaInput').value).toEqual(expect.any(Number))
 })

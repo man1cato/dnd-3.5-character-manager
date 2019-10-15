@@ -32,14 +32,14 @@ const AttackBonuses = props => {
             <div></div>
             <h5>Total</h5>
 
-            {_.map(['melee', 'ranged', 'grapple'], (key) => (
+            {_.map(['melee', 'ranged', 'grapple'], key => (
                 <Fragment key={key}>
                     <div className="grid__col1">{_.startCase(key)}</div>
                     <div>{attackBonusBases[key].join(' / ')}</div>
                     <div>+</div>
                     <input
                         type="number"
-                        id={key}
+                        data-testid={key}
                         value={convertInputValue(attackBonusMods[key])}
                         onChange={(e) => {
                             setAttackBonusMods(update(attackBonusMods, {

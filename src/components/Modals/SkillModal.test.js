@@ -1,8 +1,8 @@
 import React from 'react'
-import {shallow} from 'enzyme'
+import { shallow } from 'enzyme'
 
 import SkillModal from './SkillModal'
-import { apiData } from '../../tests/utils/utils'
+import { apiData } from '../../tests/utils'
 
 
 let props

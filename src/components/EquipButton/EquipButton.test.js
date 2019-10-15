@@ -3,14 +3,15 @@ import { shallow } from 'enzyme'
 import _ from 'lodash'
 
 import EquipButton from './EquipButton'
-import { apiData } from '../../tests/utils/utils'
+import { apiData } from '../../tests/utils'
+
 
 let items, item, wrapper
 
 beforeAll(async () => {
    const api = await apiData()
    items = api.items   
-   item = _.find(items, (item) => item.category === 'Weapon')
+   item = _.find(items, item => item.category === 'Weapon')
    wrapper = shallow(<EquipButton item={item} />)
 })
 
@@ -22,7 +23,7 @@ test('should display equip button if category is armor, shield, or weapon', () =
    wrapper = shallow(<EquipButton item={item} />)
    expect(wrapper.find('button')).toHaveLength(1)
 
-   item = _.find(items, (item) => item.category === 'Misc')
+   item = _.find(items, (item) => item.category === 'Clothing')
    wrapper = shallow(<EquipButton item={item} />)
    expect(wrapper.find('button')).toHaveLength(0)
 

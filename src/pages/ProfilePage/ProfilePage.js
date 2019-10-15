@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import Feats from '../../components/Feats/Feats'
@@ -28,17 +28,17 @@ export const ProfilePage = props => (
 			<div className="ProfilePage__features">{props.deity}</div>
 
 			{props.school && 
-				<Fragment>
-				<h4 className="grid__col1">School</h4>
+				<>
+					<h4 className="grid__col1">School</h4>
 					<div className="ProfilePage__features">{props.school}</div>
-				</Fragment>
+				</>
 			}
 
 			{props.prohibitedSchools && 
-				<Fragment>
+				<>
 					<h4 className="grid__col1">Prohibited Schools</h4>
 					<div className="ProfilePage__features">{props.prohibitedSchools.join(', ')}</div>
-				</Fragment>
+				</>
 			}
 				
 			<h4 className="grid__col1">Special Abilities</h4>

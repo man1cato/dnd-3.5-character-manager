@@ -1,36 +1,34 @@
 import React from 'react'
-import { Provider } from 'react-redux'
-import { StaticRouter, NavLink } from 'react-router-dom'
-import { shallow, mount } from 'enzyme'
-import configureStore from 'redux-mock-store'
+import { fireEvent } from '@testing-library/react'
 
-import profiles from '../../tests/fixtures/profiles'
-import ConnectedHeader, { Header } from './Header'
+import { renderWithRedux } from '../../tests/utils'
+import { Header } from './Header'
 
-const mockStore = configureStore()
-const createConnectedWrapper = (state) => mount(
-    <Provider store={mockStore(state)}>
-        <StaticRouter>
-            <ConnectedHeader /> 
-        </StaticRouter>
-	</Provider>
-)
 
-let wrapper
+const startLogout = jest.fn()
+let props
+beforeAll(() => {
+    props = {
+        pageTitle: 'Profile',
+        startLogout
+    }
+})
+
 
 test('should render Header correctly', () => {
-    wrapper = shallow(<Header startLogout={() => {}}/>)
-    expect(wrapper).toMatchSnapshot()
+    const { container } = renderWithRedux(<Header {...props}/>)
+    expect(container.firstChild).toMatchSnapshot()
 })
 
 test('should call startLogout on button click', () => {
-    const startLogout = jest.fn()
-    wrapper = shallow(<Header startLogout={startLogout}/>)
-    wrapper.find('button').simulate('click')
+    const { getByTestId } = renderWithRedux(<Header {...props} />)
+    const logoutButton = getByTestId('logoutButton')
+    fireEvent.click(logoutButton)
     expect(startLogout).toHaveBeenCalled()
 })
 
 test('should show select character icon when profiles in store', () => {
-    wrapper = createConnectedWrapper({ profiles })
-    expect(wrapper.find(NavLink).at(1).props().hidden).toEqual(false)
+    // const { getByTestId } = renderWithRedux(<Header {...props} />, { profiles })
+
+    // expect(wrapper.find(NavLink).at(1).props().hidden).toEqual(false)
 })

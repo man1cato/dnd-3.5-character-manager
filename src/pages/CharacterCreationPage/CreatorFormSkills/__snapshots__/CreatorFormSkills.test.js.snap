@@ -1,868 +1,2154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CreatorFormSkills correctly 1`] = `
-<div
-  className="container--body CreatorFormSkills"
->
-  <h3
-    className="section__title"
-  >
-    Assign Skill Points
-  </h3>
+<form>
   <div
-    className="section__title"
+    class="container--body CreatorFormSkills"
   >
-    0
-    /
-    12
-  </div>
-  <FormikConnect(ErrorMessageImpl)
-    className="CreatorForm__error--center"
-    component="div"
-    name="remainingSkillPoints"
-  />
-  <div
-    className="CreatorFormSkills__scroll-container"
-  >
-    <div
-      className="CreatorFormSkills__grid--header"
+    <h3
+      class="section__title"
     >
-      <h5
-        className="grid__col1"
-      >
-        Skill
-      </h5>
-      <h5>
-        Ranks
-      </h5>
+      Assign Skill Points
+    </h3>
+    <div
+      class="section__title"
+    >
+      0
+      /
+      0
     </div>
     <div
-      className="CreatorFormSkills__scroll-list"
+      class="CreatorFormSkills__scroll-container"
     >
       <div
-        className="CreatorFormSkills__grid"
+        class="CreatorFormSkills__grid--header"
       >
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Appraise
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Balance
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Bluff
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Climb
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Concentration
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Control Shape
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Alchemy)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Armorsmithing)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Basketweaving)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Blacksmithing)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Bookbinding)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Bowmaking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Carpentry)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Cartography)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Gemcutting)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Leatherworking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Locksmithing)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Metalworking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Poisonmaking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Sculpting)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Shipmaking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Stonemasonry)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Trapmaking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Weaponsmithing)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Winemaking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Craft (Woodmaking)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Decipher Script
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Diplomacy
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Disable Device
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Disguise
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Escape Artist
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Forgery
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Gather Information
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Handle Animal
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Heal
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Hide
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Intimidate
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Jump
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Arcana)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Arch. & Eng.)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Dungeoneering)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Geography)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (History)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Local)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Nature)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Nobility & Royalty)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (Religion)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Knowledge (The Planes)
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Listen
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Literacy
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Move Silently
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Open Lock
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Perform
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Profession
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Ride
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Search
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Sense Motive
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Sleight of Hand
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Speak Language
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Spellcraft
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Spot
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Survival
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Swim
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Tumble
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Use Magic Device
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
-        <button
-          className="grid__col1 button--link"
-          onClick={[Function]}
-          type="button"
-        >
-          Use Rope
-        </button>
-        <Counter
-          className="CreatorFormSkills__counter"
-          updateValue={[Function]}
-          value={0}
-        />
+        <h5
+          class="grid__col1"
+        >
+          Skill
+        </h5>
+        <h5>
+          Ranks
+        </h5>
+      </div>
+      <div
+        class="CreatorFormSkills__scroll-list"
+      >
+        <div
+          class="CreatorFormSkills__grid"
+        >
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Appraise
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Balance
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Bluff
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Climb
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Concentration
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Control Shape
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Alchemy)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Armorsmithing)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Basketweaving)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Blacksmithing)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Bookbinding)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Bowmaking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Carpentry)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Cartography)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Gemcutting)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Leatherworking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Locksmithing)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Metalworking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Poisonmaking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Sculpting)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Shipmaking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Stonemasonry)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Trapmaking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Weaponsmithing)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Winemaking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Craft (Woodmaking)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Decipher Script
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Diplomacy
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Disable Device
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Disguise
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Escape Artist
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Forgery
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Gather Information
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Handle Animal
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Heal
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Hide
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Intimidate
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Jump
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Arcana)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Arch. & Eng.)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Dungeoneering)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Geography)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (History)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Local)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Nature)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Nobility & Royalty)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (Religion)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Knowledge (The Planes)
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Listen
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Literacy
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Move Silently
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Open Lock
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Perform
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Profession
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Ride
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Search
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Sense Motive
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Sleight of Hand
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Speak Language
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Spellcraft
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Spot
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Survival
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Swim
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Tumble
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Use Magic Device
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+          <button
+            class="grid__col1 button--link"
+            type="button"
+          >
+            Use Rope
+          </button>
+          <div
+            class="Counter CreatorFormSkills__counter"
+          >
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="remove"
+                size="small"
+              />
+            </button>
+            <input
+              class="counter-value"
+              size="3"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              <ion-icon
+                name="add"
+                size="small"
+              />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <SkillModal
-    handleCloseModal={[Function]}
-  />
-</div>
+</form>
 `;

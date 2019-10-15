@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 
 import { firebase } from '../../firebase/firebase'
 import { startLogin } from '../../store/actions/auth'
@@ -8,17 +8,6 @@ import './LoginPage.scss'
 
 
 const uiConfig = {
-    callbacks: {
-        signInSuccessWithAuthResult: (authResult, redirectUrl) => {
-            // User successfully signed in.
-            // Return type determines whether we continue the redirect automatically
-            // or whether we leave that to developer to handle.
-            console.log('authResult: ', authResult)
-            console.log('redirectUrl: ', redirectUrl)
-
-            return true;
-        }
-    },
     signInFlow: 'popup',
     signInSuccessUrl: '/',
     signInOptions: [

@@ -3,8 +3,8 @@ import { mount } from 'enzyme'
 import { render, fireEvent } from '@testing-library/react'
 
 import { SpellbookPage } from './SpellbookPage'
-import { characterOne } from '../../tests/utils/seedDatabase'
-import { apiData } from '../../tests/utils/utils'
+import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../tests/utils'
 
 
 const startEditProfile = jest.fn()

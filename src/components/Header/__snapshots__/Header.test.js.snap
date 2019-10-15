@@ -3,36 +3,38 @@
 exports[`should render Header correctly 1`] = `
 <header>
   <div
-    className="container header__content"
+    class="container header__content"
   >
     <h2
-      className="header__title"
-    />
-    <div
-      className="header__nav"
+      class="header__title"
     >
-      <NavLink
-        className="header__button"
-        to="/create"
+      Profile
+    </h2>
+    <div
+      class="header__nav"
+    >
+      <a
+        class="header__button"
+        href="/create"
       >
         <ion-icon
           name="add-circle-outline"
           size="large"
         />
-      </NavLink>
-      <NavLink
-        className="header__button"
-        hidden={true}
-        to="/select"
+      </a>
+      <a
+        class="header__button"
+        hidden=""
+        href="/select"
       >
         <ion-icon
           name="swap"
           size="large"
         />
-      </NavLink>
+      </a>
       <button
-        className="header__button"
-        onClick={[Function]}
+        class="header__button"
+        data-testid="logoutButton"
       >
         <ion-icon
           name="log-out"

@@ -2,13 +2,13 @@
 
 exports[`should render stats page with profile data 1`] = `
 <div
-  className="container--body"
+  class="container--body"
 >
   <div
-    className="section"
+    class="section"
   >
     <div
-      className="StatsPage__row"
+      class="StatsPage__row"
     >
       <h3>
         Level 
@@ -20,7 +20,7 @@ exports[`should render stats page with profile data 1`] = `
       </span>
     </div>
     <div
-      className="StatsPage__row"
+      class="StatsPage__row"
     >
       <span>
         Hit Die: 
@@ -33,55 +33,346 @@ exports[`should render stats page with profile data 1`] = `
     </div>
   </div>
   <div
-    className="section"
+    class="section"
   >
-    <Abilities
-      abilities={
-        Object {
-          "cha": Object {
-            "score": 11,
-          },
-          "con": Object {
-            "score": 16,
-          },
-          "dex": Object {
-            "score": 18,
-          },
-          "int": Object {
-            "score": 20,
-          },
-          "str": Object {
-            "score": 14,
-          },
-          "wis": Object {
-            "score": 14,
-          },
-        }
-      }
-      handleUpdate={[Function]}
-    />
+    <div
+      class="Abilities"
+    >
+      <h5
+        class="grid__col1"
+      >
+        Ability
+      </h5>
+      <h5
+        class="grid__col2"
+      >
+        Score
+      </h5>
+      <h5
+        class="grid__col3"
+      >
+        Temp Score
+      </h5>
+      <h5
+        class="grid__col4"
+      >
+        Mod
+      </h5>
+      <div
+        class="grid__col1"
+      >
+        STR
+      </div>
+      <div
+        class="grid__col2"
+      >
+        14
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="strMod"
+      >
+        2
+      </div>
+      <div
+        class="grid__col1"
+      >
+        DEX
+      </div>
+      <div
+        class="grid__col2"
+      >
+        18
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="dexMod"
+      >
+        4
+      </div>
+      <div
+        class="grid__col1"
+      >
+        CON
+      </div>
+      <div
+        class="grid__col2"
+      >
+        16
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="conMod"
+      >
+        3
+      </div>
+      <div
+        class="grid__col1"
+      >
+        INT
+      </div>
+      <div
+        class="grid__col2"
+      >
+        20
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="intMod"
+      >
+        5
+      </div>
+      <div
+        class="grid__col1"
+      >
+        WIS
+      </div>
+      <div
+        class="grid__col2"
+      >
+        14
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="wisMod"
+      >
+        2
+      </div>
+      <div
+        class="grid__col1"
+      >
+        CHA
+      </div>
+      <div
+        class="grid__col2"
+      >
+        11
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="chaMod"
+      >
+        0
+      </div>
+    </div>
   </div>
-  <Connect(SkillSet)
-    skillSet={
-      Array [
-        Object {
-          "id": "recfbplSsRmzNs68J",
-          "ranks": 4,
-        },
-        Object {
-          "id": "recoJ7dkAWtHAkj3v",
-          "ranks": 3,
-        },
-        Object {
-          "id": "recHCeKVn3CB0HcNA",
-          "ranks": 5,
-        },
-        Object {
-          "id": "recs2EXcqiCIfwO0w",
-          "ranks": 9,
-        },
-      ]
-    }
-  />
+  <div
+    class="SkillSet"
+  >
+    <h5
+      class="SkillSet__name-header"
+    >
+      Skill
+    </h5>
+    <h5>
+      Ranks
+    </h5>
+    <h5
+      class="SkillSet__name-header"
+    >
+      Skill
+    </h5>
+    <h5>
+      Ranks
+    </h5>
+    <button
+      class="grid__col1 button--link"
+      id="recfbplSsRmzNs68J"
+      type="button"
+    >
+      Appraise
+    </button>
+    <div
+      class="grid__col2"
+    >
+      4
+    </div>
+    <button
+      class="grid__col1 button--link"
+      id="recoJ7dkAWtHAkj3v"
+      type="button"
+    >
+      Balance
+    </button>
+    <div
+      class="grid__col2"
+    >
+      3
+    </div>
+    <button
+      class="SkillSet__col3 button--link"
+      id="recHCeKVn3CB0HcNA"
+      type="button"
+    >
+      Climb
+    </button>
+    <div
+      class="grid__col4"
+    >
+      5
+    </div>
+    <button
+      class="SkillSet__col3 button--link"
+      id="recs2EXcqiCIfwO0w"
+      type="button"
+    >
+      Concentration
+    </button>
+    <div
+      class="grid__col4"
+    >
+      9
+    </div>
+  </div>
 </div>
 `;

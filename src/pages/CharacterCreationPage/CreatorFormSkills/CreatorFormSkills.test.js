@@ -1,29 +1,27 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import _ from 'lodash'
 
 import CreatorFormSkills from './CreatorFormSkills'
-import { apiData } from '../../../tests/utils/utils'
-import { characterOne } from '../../../tests/utils/seedDatabase'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
 import { apiObjectToArray } from '../../../utils/utils'
 
 
 const setFieldValue = jest.fn()
-let wrapper, props
+let props
 beforeAll(async () => {
    const api = await apiData()
    props = {
       values: { 
          skillSet: apiObjectToArray(api.skills).map(skill => ({ id: skill.id, ranks: 0 })),
-         skillPoints: characterOne.skillPoints
+         skillPoints: 0
       },
       skills: api.skills,
       setFieldValue
    }
-   wrapper = shallow(<CreatorFormSkills {...props} />)
 })
 
 
 test('should render CreatorFormSkills correctly', () => {
-	expect(wrapper).toMatchSnapshot()
+   const { container } = renderWithRedux(<CreatorFormSkills {...props} />, null, FormikWrapper)
+   expect(container.firstChild).toMatchSnapshot()
 })

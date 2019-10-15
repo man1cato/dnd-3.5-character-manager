@@ -14,7 +14,9 @@ import { calcAbilityMod } from '../../utils/utils'
 export const CombatPage = ({ profile, races, jobClasses, spells, startEditProfile }) => {
 	const jobClassLevel = jobClasses[profile.jobClass].levels[profile.level]
 	const race = races[profile.race]
-	const handleUpdate = (updates) => {	startEditProfile(profile.id, updates) }
+	const handleUpdate = updates => { 
+		startEditProfile(profile.id, updates) 
+	}
 
 	return (
 		<div className="container--body">
@@ -28,7 +30,7 @@ export const CombatPage = ({ profile, races, jobClasses, spells, startEditProfil
 						calcAbilityMod(profile.abilities.dex.tempScore) : 
 						calcAbilityMod(profile.abilities.dex.score)
 					}
-					initMod={profile.initMod}
+					initMod={profile.initiativeMod}
 					speed={race.speed}
 					handleUpdate={handleUpdate}							
 				/>
@@ -77,14 +79,14 @@ export const CombatPage = ({ profile, races, jobClasses, spells, startEditProfil
 	)
 }
 
-const mapStateToProps = ({ profile, races, jobClasses, spells }) => ({
-	profile,
-	races,
-	jobClasses,
-	spells
+const mapStateToProps = state => ({
+	profile: state.profile,
+	races: state.races,
+	jobClasses: state.jobClasses,
+	spells: state.spells
 })
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 })
 

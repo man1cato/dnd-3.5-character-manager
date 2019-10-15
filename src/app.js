@@ -41,7 +41,7 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'))
 
 firebase.auth().onAuthStateChanged(async (user) => {
 	if (user) {
-		console.log('logged in user: ', user.uid)
+		console.log('logged in')
 		await store.dispatch(startGetProfiles(user.uid))
 		const profiles = store.getState().profiles
 		const selectedCharacterId = localStorage.getItem('selectedCharacterId')

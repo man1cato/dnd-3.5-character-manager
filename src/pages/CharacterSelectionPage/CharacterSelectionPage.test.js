@@ -1,14 +1,14 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, fireEvent, wait } from '@testing-library/react'
 
 import { CharacterSelectionPage } from './CharacterSelectionPage'
 import profiles from '../../tests/fixtures/profiles'
-import { apiData } from '../../tests/utils/utils'
+import { apiData, renderWithRouter } from '../../tests/utils'
 
 
+const profileId = profiles[0].id
 const startSetProfile = jest.fn()
-const uid = 'abc123'
-let wrapper, props
+let props
 
 beforeAll(async () => {
 	const api = await apiData()
@@ -21,22 +21,30 @@ beforeAll(async () => {
 	}
 })
 
-beforeEach(() => {
-	wrapper = shallow(<CharacterSelectionPage {...props}	/>)
-})
-
 
 test('should render CharacterSelectionPage with profiles data', () => {
-	expect(wrapper).toMatchSnapshot()
+	const { container } = render(<CharacterSelectionPage {...props} />)
+	expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should disable buttons and call startSetProfile', () => {
-	const id = profiles[0].id 
-	wrapper.find(`#${id}`).simulate('click', {
-		currentTarget: { id }
-	})
-    
-	expect(wrapper.state('disabled')).toBe(true)
-	expect(wrapper.find('button').at(1).props().disabled).toBe(true)
-	expect(startSetProfile).toHaveBeenCalledWith(uid, id)
+test('should redirect to /profile when profile clicked', async () => {
+	// const { getByTestId, history } = renderWithRouter(<CharacterSelectionPage {...props} />, {
+	// 	route: '/select'
+	// })
+	// expect(history.location.pathname).toBe('/select')
+
+	// const profileButton = getByTestId(profileId)
+	// fireEvent.click(profileButton)
+
+	// await wait()
+	// expect(history.location.pathname).toBe('/profile')
+})
+
+test('should display ConfirmationModal when remove button clicked', async () => {
+	const { getByTestId, findByLabelText } = render(<CharacterSelectionPage {...props} />)
+	
+	const removeButton = getByTestId(profileId + 'RemoveButton')
+	fireEvent.click(removeButton)
+	const modal = await findByLabelText('Confirm Decision')
+	expect(modal).not.toBeNull()
 })

@@ -1,36 +1,34 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { render, fireEvent, getNodeText } from '@testing-library/react'
 
 import Saves from './Saves'
-import { characterOne } from '../../tests/utils/seedDatabase'
-import { apiData } from '../../tests/utils/utils'
+import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../tests/utils'
+
 
 const handleUpdate = jest.fn()
-const saveMods = characterOne.saveMods
-let props, wrapper
+let props
 
-beforeAll(async () => {
-	const api = await apiData()
+beforeEach(() => {
 	props = {
-		saveMods,
-		saveBases: api.jobClasses[characterOne.jobClass].levels[characterOne.level].saves,
+		saveBases: { fortitude: 1, reflex: 4, will: 1 },
 		handleUpdate
 	}
 })
 
-beforeEach(() => {
-	wrapper = mount(<Saves {...props} />)
-})
-
-
 test('should render saves with profile data', () => {
-	expect(wrapper).toMatchSnapshot()
+	const { container } = render(<Saves {...props} />)
+	expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should trigger handleUpdate when mod field changes', () => {
+test('should update total value when mod field changes', () => {
+	const { getByTestId } = render(<Saves {...props} />)
+	
 	const value = 3
-	wrapper.find('#fortitude').simulate('change', {	target: { value }	})
-	expect(handleUpdate).toHaveBeenCalledWith({
-		saveMods: { ...saveMods, fortitude: value }
-	})
+	const fortitudeModNode = getByTestId('fortitudeMod')
+	fireEvent.change(fortitudeModNode, { target: { value } })
+	expect(fortitudeModNode.value).toBe(`${value}`)
+
+	const fortitudeTotalNode = getByTestId('fortitudeTotal')
+	expect(getNodeText(fortitudeTotalNode)).toBe(`${props.saveBases.fortitude + value}`)
 })

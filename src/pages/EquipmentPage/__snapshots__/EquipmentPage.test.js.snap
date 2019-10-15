@@ -196,12 +196,12 @@ exports[`should render equipment page with profile data 1`] = `
         <div
           data-testid="rec35ieQLel7fW2MoTotalValue"
         >
-          0
+          0.2
         </div>
         <div
           data-testid="rec35ieQLel7fW2MoTotalWeight"
         >
-          0
+          10
         </div>
         <button
           class="grid__col1 button--link"
@@ -314,11 +314,11 @@ exports[`should render equipment page with profile data 1`] = `
       <div />
       <div />
       <h5>
-        191.00
+        191.20
          gp
       </h5>
       <h5>
-        12.00
+        22.00
          lbs
       </h5>
     </div>
@@ -335,9 +335,29 @@ exports[`should render equipment page with profile data 1`] = `
         Add a new item
       </option>
       <option
+        value="rec5S7j8Ef2sjxRQi"
+      >
+        Alchemist’s lab
+      </option>
+      <option
         value="recvNcEk3PNoStz2Z"
       >
         Arrow
+      </option>
+      <option
+        value="recFXZvFLuLdLNUzT"
+      >
+        Artisan’s outfit
+      </option>
+      <option
+        value="recSPxxuOkEV3f3pq"
+      >
+        Artisan’s tools
+      </option>
+      <option
+        value="rec2enDkPMOblmSOa"
+      >
+        Artisan’s tools, masterwork
       </option>
       <option
         value="reczHJRu1GImUfB8d"
@@ -358,6 +378,11 @@ exports[`should render equipment page with profile data 1`] = `
         value="recwC6fYdv3dGEbmX"
       >
         Bite
+      </option>
+      <option
+        value="recMfBuVg9RNlrAz8"
+      >
+        Block and tackle
       </option>
       <option
         value="recxH2pD5DK23RSPb"
@@ -390,6 +415,21 @@ exports[`should render equipment page with profile data 1`] = `
         Bullet
       </option>
       <option
+        value="recVn13EH7d6CttLq"
+      >
+        Caltrops
+      </option>
+      <option
+        value="recle1X2VPvoL87q3"
+      >
+        Candle
+      </option>
+      <option
+        value="recgbQQSOUc7KBaSB"
+      >
+        Chain (10 ft.)
+      </option>
+      <option
         value="recXSxRJI2r6eZ77y"
       >
         Chain shirt
@@ -400,9 +440,24 @@ exports[`should render equipment page with profile data 1`] = `
         Claws
       </option>
       <option
+        value="recvadUwHBDtxxe1r"
+      >
+        Cleric’s vestments
+      </option>
+      <option
+        value="recCV1j6Nm77BTPy7"
+      >
+        Climber’s kit
+      </option>
+      <option
         value="recq504GUQ9cVjYrZ"
       >
         Club
+      </option>
+      <option
+        value="recaU4qOVoeOWwrla"
+      >
+        Cold weather outfit
       </option>
       <option
         value="recZ0cPuaD6obmPt6"
@@ -420,6 +475,16 @@ exports[`should render equipment page with profile data 1`] = `
         Copper Piece
       </option>
       <option
+        value="rec0nWhiOxO0qIoVl"
+      >
+        Courtier’s outfit
+      </option>
+      <option
+        value="recbuPfJHmyjMHhQU"
+      >
+        Crowbar
+      </option>
+      <option
         value="reckinAA8j0zE1qYG"
       >
         Dagger
@@ -433,6 +498,11 @@ exports[`should render equipment page with profile data 1`] = `
         value="recyQ6dGLHiby0auM"
       >
         Dire Flail
+      </option>
+      <option
+        value="recQChWprYHDEq0s9"
+      >
+        Disguise kit
       </option>
       <option
         value="recdauUcanZYERAL0"
@@ -453,6 +523,16 @@ exports[`should render equipment page with profile data 1`] = `
         value="recLjsCOMiz7Gp1Pg"
       >
         Dwarven Waraxe
+      </option>
+      <option
+        value="recfj4dvzRdGIxINB"
+      >
+        Entertainer’s outfit
+      </option>
+      <option
+        value="rec2u68zdokNfEcEx"
+      >
+        Explorer’s outfit
       </option>
       <option
         value="rec5rr8NvisUanp0q"
@@ -540,6 +620,11 @@ exports[`should render equipment page with profile data 1`] = `
         Half-plate
       </option>
       <option
+        value="recaymuyizHxS6JHf"
+      >
+        Hammer
+      </option>
+      <option
         value="rec2OeTGGSrzGVMMG"
       >
         Hand Crossbow
@@ -548,6 +633,11 @@ exports[`should render equipment page with profile data 1`] = `
         value="reckrpTDGo1Z13XQu"
       >
         Handaxe
+      </option>
+      <option
+        value="rec1sJBJfitBCoq16"
+      >
+        Healer’s kit
       </option>
       <option
         value="recKogDI571sIGJe8"
@@ -583,6 +673,26 @@ exports[`should render equipment page with profile data 1`] = `
         value="recz1UKhXvjxrG1cV"
       >
         Hide
+      </option>
+      <option
+        value="recEiGPFtz5hiD7Oq"
+      >
+        Holly and mistletoe
+      </option>
+      <option
+        value="recPA3EfImKRk28CF"
+      >
+        Holy symbol, silver
+      </option>
+      <option
+        value="reclWOlqLHIhYkg1l"
+      >
+        Holy symbol, wooden
+      </option>
+      <option
+        value="recOfWQd9ouMlEwu8"
+      >
+        Hourglass
       </option>
       <option
         value="recXzUW8Zh4kft34c"
@@ -660,14 +770,39 @@ exports[`should render equipment page with profile data 1`] = `
         Longsword
       </option>
       <option
+        value="recXPeop9fzPxp3mL"
+      >
+        Magnifying glass
+      </option>
+      <option
+        value="recvQ9JtDMVLF6uTB"
+      >
+        Monk’s outfit
+      </option>
+      <option
         value="recLRqDjOPFzbQOjq"
       >
         Morningstar
       </option>
       <option
+        value="recvACTRbCrHMjqvR"
+      >
+        Musical instrument, common
+      </option>
+      <option
+        value="rec52IYY1rx6x44Nd"
+      >
+        Musical instrument, masterwork
+      </option>
+      <option
         value="recLCWZUrzv9vXDUa"
       >
         Net
+      </option>
+      <option
+        value="recqV8ypVKKkf9cao"
+      >
+        Noble’s outfit
       </option>
       <option
         value="recPvSRFFsWx1LbP7"
@@ -683,6 +818,11 @@ exports[`should render equipment page with profile data 1`] = `
         value="recCScbmMjzGHAyAB"
       >
         Padded
+      </option>
+      <option
+        value="reclMGYunoAYSzwew"
+      >
+        Peasant’s outfit
       </option>
       <option
         value="recABkU6F0DFvkERT"
@@ -730,6 +870,11 @@ exports[`should render equipment page with profile data 1`] = `
         Rope, hemp
       </option>
       <option
+        value="rec5iII0mMA1Tr4DR"
+      >
+        Royal outfit
+      </option>
+      <option
         value="recParpRbpmkp9Wod"
       >
         Sai
@@ -743,6 +888,16 @@ exports[`should render equipment page with profile data 1`] = `
         value="recCMz646OTItRZNF"
       >
         Scale mail
+      </option>
+      <option
+        value="recvZibbog2OmcPuO"
+      >
+        Scale, merchant’s
+      </option>
+      <option
+        value="recyIw9mRyuQleBdb"
+      >
+        Scholar’s outfit
       </option>
       <option
         value="recpb8WlBeCJbUryB"
@@ -768,6 +923,11 @@ exports[`should render equipment page with profile data 1`] = `
         value="recnIPKR672TnSnYl"
       >
         Shortsword
+      </option>
+      <option
+        value="recaUDdSjNUO3z4X4"
+      >
+        Shovel
       </option>
       <option
         value="reccpQwnC44OsrGBE"
@@ -810,7 +970,7 @@ exports[`should render equipment page with profile data 1`] = `
         Spear
       </option>
       <option
-        value="recUwzNk9na7jSQxQ"
+        value="rec8HlxYbXDpOZcaK"
       >
         Spell component pouch
       </option>
@@ -835,6 +995,11 @@ exports[`should render equipment page with profile data 1`] = `
         Splint mail
       </option>
       <option
+        value="recmsrIsqwGO0q8Jr"
+      >
+        Spyglass
+      </option>
+      <option
         value="rectaWcLJh5xbEyBf"
       >
         Sting
@@ -855,9 +1020,14 @@ exports[`should render equipment page with profile data 1`] = `
         Tentacle
       </option>
       <option
-        value="rec4LnENouXd7XUiE"
+        value="rec4UM5rEuDdyMn7E"
       >
-        Thieves' tools
+        Thieves’ tools
+      </option>
+      <option
+        value="rechGBDSkQysibOAi"
+      >
+        Thieves’ tools, masterwork
       </option>
       <option
         value="recuOEI8Mv3a4wKSG"
@@ -865,14 +1035,24 @@ exports[`should render equipment page with profile data 1`] = `
         Throwing Axe
       </option>
       <option
+        value="recAhjHv1tXyRVdRp"
+      >
+        Tool, masterwork
+      </option>
+      <option
+        value="recNMoaCq5Ng3DgkZ"
+      >
+        Torch
+      </option>
+      <option
         value="recvMMCsdSJEpZmcK"
       >
         Tower Shield
       </option>
       <option
-        value="recRnQZ4tD1CSdVtl"
+        value="recofxRgpu8Sx62G5"
       >
-        Traveler's outfit
+        Traveler’s outfit
       </option>
       <option
         value="rec4gBxMabAvBRNEm"
@@ -893,6 +1073,11 @@ exports[`should render equipment page with profile data 1`] = `
         value="rec6LbpVzZCv5DdR4"
       >
         Warhammer
+      </option>
+      <option
+        value="recnOONApkyWGWJTW"
+      >
+        Water clock
       </option>
       <option
         value="recTnEbBAzGtBfdbJ"

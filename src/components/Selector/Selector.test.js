@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import Selector from './Selector'
-import { apiData } from '../../tests/utils/utils'
+import { apiData } from '../../tests/utils'
 import { apiObjectToArray } from '../../utils/utils'
 
 

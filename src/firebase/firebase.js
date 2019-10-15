@@ -2,7 +2,6 @@ import firebase from 'firebase/app'
 import 'firebase/app'
 import 'firebase/database'
 import 'firebase/auth'
-import * as firebaseui from 'firebaseui'
 
 
 const config = {
@@ -15,9 +14,7 @@ const config = {
 }
 
 firebase.initializeApp(config)
-
-const ui = new firebaseui.auth.AuthUI(firebase.auth())
 const database = firebase.database()
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 
-export { firebase, ui, googleAuthProvider, database as default }
+export { firebase, googleAuthProvider, database as default }

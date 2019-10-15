@@ -17,7 +17,11 @@ export const Header = ({pageTitle, startLogout, hasProfiles}) => (
 				<NavLink to="/select" className="header__button" hidden={!hasProfiles}>
 					<ion-icon name="swap" size="large" />
 				</NavLink>
-				<button className="header__button" onClick={startLogout}>
+				<button 
+					className="header__button" 
+					data-testid="logoutButton"
+					onClick={startLogout}
+				>
 					<ion-icon name="log-out" size="large"/>
 				</button>
 			</div>
@@ -25,11 +29,11 @@ export const Header = ({pageTitle, startLogout, hasProfiles}) => (
 	</header>
 )
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 	hasProfiles: !!state.profiles && state.profiles.length > 1
 })
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
 	startLogout: () => dispatch(startLogout())
 })
 

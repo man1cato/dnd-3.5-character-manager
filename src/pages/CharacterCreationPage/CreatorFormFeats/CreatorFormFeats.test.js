@@ -1,22 +1,24 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import _ from 'lodash'
-import { apiData } from '../../../tests/utils/utils'
+
+import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
 import CreatorFormFeats from './CreatorFormFeats'
 
 
-let api, wrapper, props
+const setFieldValue = jest.fn()
+let props
 
 beforeAll(async () => {
-   api = await apiData()
+   const api = await apiData()
    props = {
+      values: { feats: [] },
       feats: _.omitBy(api.feats, (feat) => !!feat.prerequisites || _.includes(feat.types, 'Epic')),
-      values: { feats: [] }
+      setFieldValue
    }
-   wrapper = shallow(<CreatorFormFeats {...props} />)
 })
 
 
 test('should correctly render CreatorFormFeats', () => {
-	expect(wrapper).toMatchSnapshot()
+   const { container } = renderWithRedux(<CreatorFormFeats {...props} />, null, FormikWrapper)
+   expect(container.firstChild).toMatchSnapshot()
 })

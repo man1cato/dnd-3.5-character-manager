@@ -12,8 +12,8 @@ const Abilities = ({ abilities, handleUpdate }) => {
 
 	useEffect(() => {
 		handleUpdate({ 
-			abilities: _.mapValues(tempScores, (val, key) => ({
-				score: scores[key],
+			abilities: _.mapValues(tempScores, (val, ability) => ({
+				score: scores[ability],
 				tempScore: val
 			})) 
 		})
@@ -26,21 +26,24 @@ const Abilities = ({ abilities, handleUpdate }) => {
 			<h5 className="grid__col3">Temp Score</h5>
 			<h5 className="grid__col4">Mod</h5>
 
-			{_.map(['str', 'dex', 'con', 'int', 'wis', 'cha'], (key) => {
-				const score = scores[key]
-				const tempScore = tempScores[key]
+			{_.map(['str', 'dex', 'con', 'int', 'wis', 'cha'], ability => {
+				const score = scores[ability]
+				const tempScore = tempScores[ability]
 				return (
-					<Fragment key={key}>
-						<div className="grid__col1">{key.toUpperCase()}</div>
+					<Fragment key={ability}>
+						<div className="grid__col1">{ability.toUpperCase()}</div>
 						<div className="grid__col2">{score}</div>
 						<Counter
 							className="grid__col3"
 							value={convertInputValue(tempScore)}
 							updateValue={value => setTempScores(update(tempScores, {
-								[key]: { $set: convertInputValue(value) }
+								[ability]: { $set: convertInputValue(value) }
 							}))}
 						/>
-						<div className="grid__col4">
+						<div 
+							className="grid__col4"
+							data-testid={ability + 'Mod'}
+						>
 							{!!tempScore ? calcAbilityMod(tempScore) : calcAbilityMod(score)}
 						</div>
 					</Fragment>

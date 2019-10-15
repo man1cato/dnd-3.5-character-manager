@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import _ from 'lodash'
 
 import ItemModal from './ItemModal'
-import { apiData } from '../../tests/utils/utils'
+import { apiData } from '../../tests/utils'
 
 
 let items, wrapper

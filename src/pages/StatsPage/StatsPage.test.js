@@ -1,17 +1,17 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import { StatsPage } from './StatsPage'
-import { apiData } from '../../tests/utils/utils'
-import { characterOne } from '../../tests/utils/seedDatabase'
+import { apiData } from '../../tests/utils'
+import { characterOne } from '../../tests/seedDatabase'
+import { renderWithRedux } from '../../tests/utils'
  
 
 const startEditProfile = jest.fn() 
-let props
+let props, api
 
 beforeAll(async () => {
-	const api = await apiData()
+	api = await apiData()
 	props = {
 		profile: characterOne, 
 		jobClasses: api.jobClasses,
@@ -21,6 +21,9 @@ beforeAll(async () => {
 
 
 test('should render stats page with profile data', () => {
-	const wrapper = shallow(<StatsPage {...props} />)
-	expect(wrapper).toMatchSnapshot()
+	const { container } = renderWithRedux(<StatsPage {...props} />, {
+		abilities: api.abilities,
+		skills: api.skills
+	})
+	expect(container.firstChild).toMatchSnapshot()
 })

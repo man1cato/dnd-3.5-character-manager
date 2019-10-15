@@ -2,67 +2,87 @@
 
 exports[`should render CharacterSelectionPage with profiles data 1`] = `
 <div
-  className="container--body CharacterSelectionPage"
+  class="container--body CharacterSelectionPage"
 >
-  <button
-    className="profile-button"
-    disabled={false}
-    id="recnPKEA6sOWaOt57"
-    key="0"
-    onClick={[Function]}
+  <div
+    class="profile-container"
   >
-    <img
-      src="images/elf.svg"
-    />
-    <div>
-      <h3>
-        Istvyll Bannianea
-      </h3>
+    <button
+      class="profile__select-button"
+      data-testid="recnPKEA6sOWaOt57"
+    >
+      <img
+        src="images/elf.svg"
+      />
       <div>
-        Male
-         
-        Gray Elf
+        <h3>
+          Istvyll Bannianea
+        </h3>
+        <div>
+          Male
+           
+          Gray Elf
+        </div>
+        <div>
+          Wizard
+        </div>
+        <div>
+          Lawful Evil
+        </div>
+        <div>
+          Level 5
+        </div>
       </div>
-      <div>
-        Wizard
-      </div>
-      <div>
-        Lawful Evil
-      </div>
-      <div>
-        Level 5
-      </div>
-    </div>
-  </button>
-  <button
-    className="profile-button"
-    disabled={false}
-    id="-LfeNscfMYgOyQV11vXY"
-    key="1"
-    onClick={[Function]}
+    </button>
+    <button
+      class="profile__remove-button"
+      data-testid="recnPKEA6sOWaOt57RemoveButton"
+    >
+      <ion-icon
+        name="trash"
+        size="large"
+      />
+    </button>
+  </div>
+  <div
+    class="profile-container"
   >
-    <img
-      src="images/orc.svg"
-    />
-    <div>
-      <h3>
-        Korg
-      </h3>
+    <button
+      class="profile__select-button"
+      data-testid="-LfeNscfMYgOyQV11vXY"
+    >
+      <img
+        src="images/orc.svg"
+      />
       <div>
-        Male
-         
-        Orc
+        <h3>
+          Korg
+        </h3>
+        <div>
+          Male
+           
+          Orc
+        </div>
+        <div>
+          Barbarian
+        </div>
+        <div>
+          Lawful Evil
+        </div>
+        <div>
+          Level 5
+        </div>
       </div>
-      <div>
-        Barbarian
-      </div>
-      <div>
-        Lawful Evil
-      </div>
-      <div>
-        Level 5
-      </div>
-    </div>
-  </button>
+    </button>
+    <button
+      class="profile__remove-button"
+      data-testid="-LfeNscfMYgOyQV11vXYRemoveButton"
+    >
+      <ion-icon
+        name="trash"
+        size="large"
+      />
+    </button>
+  </div>
 </div>
 `;

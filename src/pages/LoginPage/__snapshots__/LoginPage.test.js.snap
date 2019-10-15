@@ -12,12 +12,26 @@ exports[`should render login page correctly 1`] = `
     >
       D&D 3.5e Character Manager
     </h1>
-    <button
-      className="button--primary"
-      onClick={[Function]}
-    >
-      Login with Google
-    </button>
+    <e
+      firebaseAuth={
+        Object {
+          "apiKey": "AIzaSyChIDLvv9RpD9-kzAs5Z_r20fv3L0jYHjA",
+          "appName": "[DEFAULT]",
+          "authDomain": "dnd-3-5-character-manager-test.firebaseapp.com",
+          "currentUser": null,
+        }
+      }
+      uiConfig={
+        Object {
+          "signInFlow": "popup",
+          "signInOptions": Array [
+            "google.com",
+            "password",
+          ],
+          "signInSuccessUrl": "/",
+        }
+      }
+    />
   </div>
 </div>
 `;

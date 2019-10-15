@@ -4,16 +4,14 @@ import { convertInputValue } from '../../utils/utils'
 import './PhysicalStats.scss'
 
 
-const PhysicalStats = (props) => {
+const PhysicalStats = props => {
 	const { hp, ac, initBase, speed, handleUpdate } = props
-
 	const [hpMod, setHpMod] = useState(hp.mod || 0)
 	const [hpDamage, setHpDamage] = useState(hp.damage || 0)
 	const [hpTotal, setHpTotal] = useState(hp.base + hpMod + hpDamage)
 
 	const [initMod, setInitMod] = useState(props.initMod || 0)
 	const [initTotal, setInitTotal] = useState(initBase + initMod)
-
 
 	useEffect(() => {
 		setHpTotal(hp.base + hpMod - hpDamage)
@@ -47,7 +45,7 @@ const PhysicalStats = (props) => {
 						<h5>Mod</h5>
 						<input
 							type="number"
-							id="hpMod"
+							data-testid="hpMod"
 							value={convertInputValue(hpMod)}
 							onChange={(e) => setHpMod(Number(e.target.value))}
 						/>
@@ -57,7 +55,7 @@ const PhysicalStats = (props) => {
 						<h5>Dmg</h5>
 						<input
 							type="number"
-							id="hpDamage"
+							data-testid="hpDamage"
 							value={convertInputValue(hpDamage)}
 							onChange={(e) => setHpDamage(Number(e.target.value))}
 						/>
@@ -65,7 +63,7 @@ const PhysicalStats = (props) => {
 					<div className="PhysicalStats__row__item--bottom">=</div>
 					<div className="PhysicalStats__row__item">
 						<h5>Curr</h5>
-						<div>{hpTotal}</div>
+						<div data-testid="hpTotal">{hpTotal}</div>
 					</div>
 				</div>
 			</div>
@@ -100,7 +98,7 @@ const PhysicalStats = (props) => {
 						<h5>Mod</h5>
 						<input
 							type="number"
-							id="initMod"
+							data-testid="initMod"
 							value={convertInputValue(initMod)}
 							onChange={(e) => setInitMod(Number(e.target.value))}
 						/>
@@ -135,4 +133,4 @@ const PhysicalStats = (props) => {
 }
 
 
-export default PhysicalStats;
+export default PhysicalStats

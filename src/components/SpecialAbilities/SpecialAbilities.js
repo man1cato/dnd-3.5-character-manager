@@ -5,22 +5,20 @@ import _ from 'lodash'
 import SpecialAbilityModal from '../Modals/SpecialAbilityModal'
 
 
-export const SpecialAbilities = (props) => {
+export const SpecialAbilities = props => {
 	const [clickedAbility, setClickedAbility] = useState(null)	 
-	const specialAbilities = _.sortBy(props.specialAbilityIds.map((id) => {
-		return {
-			...props.specialAbilities[id],
-			id
-		}
-	}), ['name'])
+	const specialAbilities = _.sortBy(props.specialAbilityIds.map(id => ({
+		...props.specialAbilities[id],
+		id
+	})), ['name'])
 
 	return (
 		<div>
-			{specialAbilities.map((specialAbility, i) => (
+			{specialAbilities.map(specialAbility => (
 				<button
 					className="button--link"
-					id={specialAbility.id}
-					key={`specialAbility${i}`}
+					key={specialAbility.id}
+					data-testid={specialAbility.id}
 					type='button'
 					onClick={() => setClickedAbility(specialAbility)}
 				>
@@ -36,7 +34,7 @@ export const SpecialAbilities = (props) => {
 	)	
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   	specialAbilities: state.specialAbilities
 })
 

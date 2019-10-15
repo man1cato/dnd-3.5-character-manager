@@ -1,131 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render saves with profile data 1`] = `
-<Saves
-  handleUpdate={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
-            "saveMods": Object {
-              "fortitude": 1,
-              "reflex": -1,
-              "will": "",
-            },
-          },
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  saveBases={
-    Object {
-      "fortitude": 1,
-      "reflex": 1,
-      "will": 4,
-    }
-  }
-  saveMods={
-    Object {
-      "fortitude": 1,
-      "reflex": -1,
-      "will": "",
-    }
-  }
+<div
+  class="Saves"
 >
-  <div
-    className="Saves"
+  <h5
+    class="grid__col1"
   >
-    <h5
-      className="grid__col1"
-    >
-      Type
-    </h5>
-    <h5>
-      Base
-    </h5>
-    <div />
-    <h5>
-      Mod
-    </h5>
-    <div />
-    <h5>
-      Total
-    </h5>
-    <div
-      className="grid__col1"
-    >
-      Fortitude
-    </div>
-    <div>
-      1
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="fortitude"
-      onChange={[Function]}
-      type="number"
-      value={1}
-    />
-    <div>
-      =
-    </div>
-    <div>
-      2
-    </div>
-    <div
-      className="grid__col1"
-    >
-      Reflex
-    </div>
-    <div>
-      1
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="reflex"
-      onChange={[Function]}
-      type="number"
-      value={-1}
-    />
-    <div>
-      =
-    </div>
-    <div>
-      0
-    </div>
-    <div
-      className="grid__col1"
-    >
-      Will
-    </div>
-    <div>
-      4
-    </div>
-    <div>
-      +
-    </div>
-    <input
-      id="will"
-      onChange={[Function]}
-      type="number"
-      value=""
-    />
-    <div>
-      =
-    </div>
-    <div>
-      4
-    </div>
+    Type
+  </h5>
+  <h5>
+    Base
+  </h5>
+  <div />
+  <h5>
+    Mod
+  </h5>
+  <div />
+  <h5>
+    Total
+  </h5>
+  <div
+    class="grid__col1"
+  >
+    Fortitude
   </div>
-</Saves>
+  <div>
+    1
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    data-testid="fortitudeMod"
+    type="number"
+    value=""
+  />
+  <div>
+    =
+  </div>
+  <div
+    data-testid="fortitudeTotal"
+  >
+    1
+  </div>
+  <div
+    class="grid__col1"
+  >
+    Reflex
+  </div>
+  <div>
+    4
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    data-testid="reflexMod"
+    type="number"
+    value=""
+  />
+  <div>
+    =
+  </div>
+  <div
+    data-testid="reflexTotal"
+  >
+    4
+  </div>
+  <div
+    class="grid__col1"
+  >
+    Will
+  </div>
+  <div>
+    1
+  </div>
+  <div>
+    +
+  </div>
+  <input
+    data-testid="willMod"
+    type="number"
+    value=""
+  />
+  <div>
+    =
+  </div>
+  <div
+    data-testid="willTotal"
+  >
+    1
+  </div>
+</div>
 `;

@@ -6,7 +6,7 @@ import { convertInputValue } from '../../utils/utils'
 import './Saves.scss'
 
 
-const Saves = (props) => {
+const Saves = props => {
     const { saveBases, handleUpdate } = props
     const [saveMods, setSaveMods] = useState(props.saveMods || { fortitude: 0, reflex: 0, will: 0 })
     const [saveTotals, setSaveTotals] = useState(_.mapValues(saveMods, (val, key) => saveBases[key] + val))
@@ -32,7 +32,7 @@ const Saves = (props) => {
                     <div>+</div>
                     <input
                         type="number"
-                        id={key}
+                        data-testid={key + 'Mod'}
                         value={convertInputValue(val)}
                         onChange={(e) => {
                             setSaveMods(update(saveMods, {
@@ -41,7 +41,7 @@ const Saves = (props) => {
                         }}
                     />
                     <div>=</div>
-                    <div>{saveTotals[key]}</div>
+                    <div data-testid={key + 'Total'}>{saveTotals[key]}</div>
                 </Fragment>
             ))}
         </div>

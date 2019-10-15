@@ -44,12 +44,12 @@ export const StatsPage = ({ profile, jobClasses, startEditProfile }) => {
 	)
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 	profile: state.profile,
 	jobClasses: state.jobClasses
 })
 
-const mapDispatchToProps = (dispatch) => ({ 
+const mapDispatchToProps = dispatch => ({ 
   	startEditProfile: (id, updates) => dispatch(startEditProfile(id, updates))
 })
 

@@ -29,6 +29,7 @@ export const CharacterSelectionPage = props => {
             <div className="profile-container" key={i}>
                <button 
                   className="profile__select-button"
+                  data-testid={profile.id}
                   disabled={disabled}
                   onClick={() => handleSelectCharacter(profile.id)}
                >
@@ -43,6 +44,7 @@ export const CharacterSelectionPage = props => {
                </button>
                <button
                   className="profile__remove-button"
+                  data-testid={profile.id + 'RemoveButton'}
                   disabled={disabled}
                   onClick={() => setCharacterToRemove(profile)}
                >

@@ -21,25 +21,25 @@ export default {
 	xp: 10000,
 	abilities: {
 		str: {
-			score:14
+			score: 14
 		},
 		dex: {
-			score:18
+			score: 18
 		},
 		con: {
-			score:16
+			score: 16
 		},
 		int: {
-			score:20
+			score: 20
 		},
 		wis: {
-			score:14
+			score: 14
 		},
 		cha: {
-			score:11
+			score: 11
 		}
 	},
-	specialAbilities: ["rect54ikkC9SDLJ1x"],
+	specialAbilities: ["rect54ikkC9SDLJ1x", "rec2luvq12PlWrz62", "recRTyqYzJplDO3fH"],
 	feats: ["recRjuAWe7oy6a7wY", "rec4KkfhKpetKIDqj", "recGkxwkqppy7EYmI"],
 	skillSet: [
 		{
@@ -94,11 +94,7 @@ export default {
 		flat: 10,
 		touch: 14
 	},
-	speed: 30,
-	initiative: {
-		base: 2
-	},
-	initMod: 2,
+	initiativeMod: 2,
 	money: {
 		pp: 0,
 		gp: 1200,

@@ -1,25 +1,27 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
-import { characterOne } from '../../tests/utils/seedDatabase'
-import { apiData } from '../../tests/utils/utils'
-import { ProfilePage } from './ProfilePage';
+import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../tests/utils'
+import { ProfilePage } from './ProfilePage'
+import { renderWithRedux } from '../../tests/utils'
 
 
-let props
+let props, api
 
 beforeAll(async () => {
-	const api = await apiData()
+	api = await apiData()
 	props = {
 		...characterOne,
 		race: api.races[characterOne.race],
 		jobClass: api.jobClasses[characterOne.jobClass]
-	}	
-	
+	}		
 })
 
 test('should render ProfilePage with profile data', () => {
-	const wrapper = shallow(<ProfilePage {...props}/>)
-	expect(wrapper).toMatchSnapshot()
+	const { container } = renderWithRedux(<ProfilePage {...props}/>, {
+		specialAbilities: api.specialAbilities,
+		feats: api.feats
+	})
+	expect(container.firstChild).toMatchSnapshot()
 })

@@ -2,7 +2,7 @@ import React from 'react'
 import {shallow} from 'enzyme'
 
 import SpellModal from './SpellModal'
-import { apiData } from '../../tests/utils/utils'
+import { apiData } from '../../tests/utils'
 
 
 let props

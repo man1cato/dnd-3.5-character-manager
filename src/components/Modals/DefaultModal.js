@@ -20,6 +20,7 @@ const DefaultModal = ({
          isOpen={!!clickedItem}
          onRequestClose={onRequestClose}
          contentLabel={contentLabel}
+         ariaHideApp={process.env.NODE_ENV === 'test' ? false : true}
          {...rest}
       >
          {children}

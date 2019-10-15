@@ -4,8 +4,8 @@ import { mount } from 'enzyme'
 import _ from 'lodash'
 
 import PreparedSpells from './PreparedSpells'
-import { characterOne } from '../../tests/utils/seedDatabase'
-import { apiData } from '../../tests/utils/utils'
+import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../tests/utils'
 
 
 const handleUpdate = jest.fn()

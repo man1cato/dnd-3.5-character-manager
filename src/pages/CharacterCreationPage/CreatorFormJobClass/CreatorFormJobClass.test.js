@@ -1,31 +1,38 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import _ from 'lodash'
 
 import CreatorFormJobClass from './CreatorFormJobClass'
-import { apiData } from '../../../tests/utils/utils'
-import { characterOne } from '../../../tests/utils/seedDatabase'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
+import { characterOne } from '../../../tests/seedDatabase'
 
 
-let wrapper, props
+const handleChange = jest.fn()
+const handleMultiSelect = jest.fn()
+const setFieldValue = jest.fn()
+const setFieldError = jest.fn()
+
+let props
 
 beforeAll(async () => {
    const api = await apiData()
    
    props = {
-      values: { school: characterOne.school },
-      selectedRace: api.races[characterOne.race],
-      selectedJobClass: api.jobClasses[characterOne.jobClass],
-      setSelectedJobClass: jest.fn(),
-      jobClasses: api.jobClasses
+      values: { 
+         race: api.races[characterOne.race],
+         jobClass: api.jobClasses[characterOne.jobClass],
+         school: characterOne.school 
+      },
+      jobClasses: api.jobClasses,
+      handleChange,
+      handleMultiSelect,
+      setFieldValue,
+      setFieldError
    }
 })
 
-beforeEach(() => {
-   wrapper = shallow(<CreatorFormJobClass {...props} />)
-})
 
 test('should render CreatorFormJobClass', () => {
-	expect(wrapper).toMatchSnapshot()
+   const { container } = renderWithRedux(<CreatorFormJobClass {...props} />, null, FormikWrapper)
+   expect(container.firstChild).toMatchSnapshot()
 })
 

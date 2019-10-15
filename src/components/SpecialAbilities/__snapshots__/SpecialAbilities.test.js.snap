@@ -3,17 +3,25 @@
 exports[`should render special abilities with profile data 1`] = `
 <div>
   <button
-    className="button--link"
-    id="rect54ikkC9SDLJ1x"
-    key="specialAbility0"
-    onClick={[Function]}
+    class="button--link"
+    data-testid="rect54ikkC9SDLJ1x"
     type="button"
   >
     A Thousand Faces
   </button>
-  <SpecialAbilityModal
-    clickedAbility={null}
-    handleCloseModal={[Function]}
-  />
+  <button
+    class="button--link"
+    data-testid="recRTyqYzJplDO3fH"
+    type="button"
+  >
+    Alternate Form
+  </button>
+  <button
+    class="button--link"
+    data-testid="rec2luvq12PlWrz62"
+    type="button"
+  >
+    Flurry of Blows
+  </button>
 </div>
 `;

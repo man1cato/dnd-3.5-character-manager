@@ -1,29 +1,34 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { apiData } from '../../../tests/utils/utils'
+import { fireEvent } from '@testing-library/react'
 
+import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
 import CreatorFormIdentity from './CreatorFormIdentity'
-import { characterOne } from '../../../tests/utils/seedDatabase'
+import { characterOne } from '../../../tests/seedDatabase'
 
 
-let wrapper, props
+const setTouched = jest.fn()
+const setFieldValue = jest.fn()
+let props, state
 
 beforeAll(async () => {
    const api = await apiData()
    props = {
-      selectedRace: api.races[characterOne.race],
-      setSelectedRace: jest.fn(),
+      values: {
+         race: api.races[characterOne.race]
+      },      
       races: api.races,
       jobClasses: api.jobClasses,
-      handleChange: jest.fn()
+      setTouched,
+      setFieldValue
+   }
+   state = {
+      specialAbilities: api.specialAbilities 
    }
 })
 
-beforeEach(() => {
-   wrapper = shallow(<CreatorFormIdentity {...props} />)
-})
 
 test('should render CreatorFormIdentity correctly', () => {
-	expect(wrapper).toMatchSnapshot()
+   const { container } = renderWithRedux(<CreatorFormIdentity {...props} />, state, FormikWrapper)
+   expect(container.firstChild).toMatchSnapshot()
 })
 

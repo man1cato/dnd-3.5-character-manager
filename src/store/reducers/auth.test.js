@@ -2,7 +2,7 @@ import authReducer from './auth'
 
 
 test('should set uid for login', () => {
-    const uid = 'KHfaehfUenv';
+    const uid = 'KHfaehfUenv'
     const action = {
         type: 'LOGIN',
         uid
@@ -14,7 +14,7 @@ test('should set uid for login', () => {
 test('should clear uid for logout', () => {
     const action = {
         type: 'LOGOUT'
-    };
+    }
     const state = authReducer({uid: 'KHfaehfUenv'}, action)
     expect(state).toEqual({})
 })

@@ -1,389 +1,274 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Abilities with profile data 1`] = `
-<Abilities
-  abilities={
-    Object {
-      "cha": Object {
-        "score": 11,
-      },
-      "con": Object {
-        "score": 16,
-      },
-      "dex": Object {
-        "score": 18,
-      },
-      "int": Object {
-        "score": 20,
-      },
-      "str": Object {
-        "score": 14,
-      },
-      "wis": Object {
-        "score": 14,
-      },
-    }
-  }
-  handleUpdate={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
-            "abilities": Object {
-              "cha": Object {
-                "score": 11,
-                "tempScore": undefined,
-              },
-              "con": Object {
-                "score": 16,
-                "tempScore": undefined,
-              },
-              "dex": Object {
-                "score": 18,
-                "tempScore": undefined,
-              },
-              "int": Object {
-                "score": 20,
-                "tempScore": undefined,
-              },
-              "str": Object {
-                "score": 14,
-                "tempScore": undefined,
-              },
-              "wis": Object {
-                "score": 14,
-                "tempScore": undefined,
-              },
-            },
-          },
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
+<div
+  class="Abilities"
 >
-  <div
-    className="Abilities"
+  <h5
+    class="grid__col1"
   >
-    <h5
-      className="grid__col1"
-    >
-      Ability
-    </h5>
-    <h5
-      className="grid__col2"
-    >
-      Score
-    </h5>
-    <h5
-      className="grid__col3"
-    >
-      Temp Score
-    </h5>
-    <h5
-      className="grid__col4"
-    >
-      Mod
-    </h5>
-    <div
-      className="grid__col1"
-    >
-      STR
-    </div>
-    <div
-      className="grid__col2"
-    >
-      14
-    </div>
-    <Counter
-      className="grid__col3"
-      updateValue={[Function]}
-      value={0}
-    >
-      <div
-        className="Counter grid__col3"
-      >
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="remove"
-            size="small"
-          />
-        </button>
-        <input
-          className="counter-value"
-          onChange={[Function]}
-          size={3}
-          value={0}
-        />
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="add"
-            size="small"
-          />
-        </button>
-      </div>
-    </Counter>
-    <div
-      className="grid__col4"
-    >
-      2
-    </div>
-    <div
-      className="grid__col1"
-    >
-      DEX
-    </div>
-    <div
-      className="grid__col2"
-    >
-      18
-    </div>
-    <Counter
-      className="grid__col3"
-      updateValue={[Function]}
-      value={0}
-    >
-      <div
-        className="Counter grid__col3"
-      >
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="remove"
-            size="small"
-          />
-        </button>
-        <input
-          className="counter-value"
-          onChange={[Function]}
-          size={3}
-          value={0}
-        />
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="add"
-            size="small"
-          />
-        </button>
-      </div>
-    </Counter>
-    <div
-      className="grid__col4"
-    >
-      4
-    </div>
-    <div
-      className="grid__col1"
-    >
-      CON
-    </div>
-    <div
-      className="grid__col2"
-    >
-      16
-    </div>
-    <Counter
-      className="grid__col3"
-      updateValue={[Function]}
-      value={0}
-    >
-      <div
-        className="Counter grid__col3"
-      >
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="remove"
-            size="small"
-          />
-        </button>
-        <input
-          className="counter-value"
-          onChange={[Function]}
-          size={3}
-          value={0}
-        />
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="add"
-            size="small"
-          />
-        </button>
-      </div>
-    </Counter>
-    <div
-      className="grid__col4"
-    >
-      3
-    </div>
-    <div
-      className="grid__col1"
-    >
-      INT
-    </div>
-    <div
-      className="grid__col2"
-    >
-      20
-    </div>
-    <Counter
-      className="grid__col3"
-      updateValue={[Function]}
-      value={0}
-    >
-      <div
-        className="Counter grid__col3"
-      >
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="remove"
-            size="small"
-          />
-        </button>
-        <input
-          className="counter-value"
-          onChange={[Function]}
-          size={3}
-          value={0}
-        />
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="add"
-            size="small"
-          />
-        </button>
-      </div>
-    </Counter>
-    <div
-      className="grid__col4"
-    >
-      5
-    </div>
-    <div
-      className="grid__col1"
-    >
-      WIS
-    </div>
-    <div
-      className="grid__col2"
-    >
-      14
-    </div>
-    <Counter
-      className="grid__col3"
-      updateValue={[Function]}
-      value={0}
-    >
-      <div
-        className="Counter grid__col3"
-      >
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="remove"
-            size="small"
-          />
-        </button>
-        <input
-          className="counter-value"
-          onChange={[Function]}
-          size={3}
-          value={0}
-        />
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="add"
-            size="small"
-          />
-        </button>
-      </div>
-    </Counter>
-    <div
-      className="grid__col4"
-    >
-      2
-    </div>
-    <div
-      className="grid__col1"
-    >
-      CHA
-    </div>
-    <div
-      className="grid__col2"
-    >
-      11
-    </div>
-    <Counter
-      className="grid__col3"
-      updateValue={[Function]}
-      value={0}
-    >
-      <div
-        className="Counter grid__col3"
-      >
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="remove"
-            size="small"
-          />
-        </button>
-        <input
-          className="counter-value"
-          onChange={[Function]}
-          size={3}
-          value={0}
-        />
-        <button
-          onClick={[Function]}
-          type="button"
-        >
-          <ion-icon
-            name="add"
-            size="small"
-          />
-        </button>
-      </div>
-    </Counter>
-    <div
-      className="grid__col4"
-    >
-      0
-    </div>
+    Ability
+  </h5>
+  <h5
+    class="grid__col2"
+  >
+    Score
+  </h5>
+  <h5
+    class="grid__col3"
+  >
+    Temp Score
+  </h5>
+  <h5
+    class="grid__col4"
+  >
+    Mod
+  </h5>
+  <div
+    class="grid__col1"
+  >
+    STR
   </div>
-</Abilities>
+  <div
+    class="grid__col2"
+  >
+    14
+  </div>
+  <div
+    class="Counter grid__col3"
+  >
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="remove"
+        size="small"
+      />
+    </button>
+    <input
+      class="counter-value"
+      size="3"
+      value="0"
+    />
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="add"
+        size="small"
+      />
+    </button>
+  </div>
+  <div
+    class="grid__col4"
+    data-testid="strMod"
+  >
+    2
+  </div>
+  <div
+    class="grid__col1"
+  >
+    DEX
+  </div>
+  <div
+    class="grid__col2"
+  >
+    18
+  </div>
+  <div
+    class="Counter grid__col3"
+  >
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="remove"
+        size="small"
+      />
+    </button>
+    <input
+      class="counter-value"
+      size="3"
+      value="0"
+    />
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="add"
+        size="small"
+      />
+    </button>
+  </div>
+  <div
+    class="grid__col4"
+    data-testid="dexMod"
+  >
+    4
+  </div>
+  <div
+    class="grid__col1"
+  >
+    CON
+  </div>
+  <div
+    class="grid__col2"
+  >
+    16
+  </div>
+  <div
+    class="Counter grid__col3"
+  >
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="remove"
+        size="small"
+      />
+    </button>
+    <input
+      class="counter-value"
+      size="3"
+      value="0"
+    />
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="add"
+        size="small"
+      />
+    </button>
+  </div>
+  <div
+    class="grid__col4"
+    data-testid="conMod"
+  >
+    3
+  </div>
+  <div
+    class="grid__col1"
+  >
+    INT
+  </div>
+  <div
+    class="grid__col2"
+  >
+    20
+  </div>
+  <div
+    class="Counter grid__col3"
+  >
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="remove"
+        size="small"
+      />
+    </button>
+    <input
+      class="counter-value"
+      size="3"
+      value="0"
+    />
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="add"
+        size="small"
+      />
+    </button>
+  </div>
+  <div
+    class="grid__col4"
+    data-testid="intMod"
+  >
+    5
+  </div>
+  <div
+    class="grid__col1"
+  >
+    WIS
+  </div>
+  <div
+    class="grid__col2"
+  >
+    14
+  </div>
+  <div
+    class="Counter grid__col3"
+  >
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="remove"
+        size="small"
+      />
+    </button>
+    <input
+      class="counter-value"
+      size="3"
+      value="0"
+    />
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="add"
+        size="small"
+      />
+    </button>
+  </div>
+  <div
+    class="grid__col4"
+    data-testid="wisMod"
+  >
+    2
+  </div>
+  <div
+    class="grid__col1"
+  >
+    CHA
+  </div>
+  <div
+    class="grid__col2"
+  >
+    11
+  </div>
+  <div
+    class="Counter grid__col3"
+  >
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="remove"
+        size="small"
+      />
+    </button>
+    <input
+      class="counter-value"
+      size="3"
+      value="0"
+    />
+    <button
+      type="button"
+    >
+      <ion-icon
+        name="add"
+        size="small"
+      />
+    </button>
+  </div>
+  <div
+    class="grid__col4"
+    data-testid="chaMod"
+  >
+    0
+  </div>
+</div>
 `;
