@@ -1,22 +1,31 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, getNodeText } from '@testing-library/react'
 
 import AttackBonuses from './AttackBonuses'
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData } from '../../tests/utils'
 
 
 const handleUpdate = jest.fn()
-const attackBonusMods = characterOne.attackBonusMods
 let props
 
-beforeAll(async () => {
-    const api = await apiData()
+beforeAll(() => {
     props = {
-        attackBonusMods,
-        abilities: characterOne.abilities,
-        baseAttackBonuses: api.jobClasses[characterOne.jobClass].levels[characterOne.level].baseAttackBonuses,
-        size: api.races[characterOne.race].size,
+        attackBonuses: {
+            melee: {
+                base: [4, 2],
+                mod: 0,
+                total: [4, 2]
+            },
+            ranged: {
+                base: [6],
+                mod: 0,
+                total: [6]
+            },
+            grapple: {
+                base: [4],
+                mod: 1,
+                total: [5]
+            }
+        },
         handleUpdate
     }
 })
@@ -27,11 +36,12 @@ test('should render attacks with default profile data', () => {
     expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should trigger handleUpdate when input changes', () => {
-    const { getByTestId } = render(<AttackBonuses {...props} />)
-    const value = 2
-    const meleeInputNode = getByTestId('melee')
-    fireEvent.change(meleeInputNode, { target: { value } })
+// test('should update total when input changes', async () => {
+//     //REQUIRES A STORE
+//     const { getByTestId, findByText } = render(<AttackBonuses {...props} />)
 
-    expect(meleeInputNode.value).toBe(`${value}`)
-})
+//     fireEvent.change(getByTestId('meleeMod'), { target: { value: 2 } })
+    
+//     const meleeTotalNode = await findByText('6 / 4')
+//     expect(meleeTotalNode).toBeDefined()
+// })

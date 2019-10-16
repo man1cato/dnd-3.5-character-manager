@@ -1,12 +1,12 @@
 import React from 'react'
-import { render, fireEvent, wait } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 
 import { CharacterSelectionPage } from './CharacterSelectionPage'
 import profiles from '../../tests/fixtures/profiles'
-import { apiData, renderWithRouter } from '../../tests/utils'
+import { apiData } from '../../tests/utils'
 
 
-const profileId = profiles[0].id
+const profile = profiles[0]
 const startSetProfile = jest.fn()
 let props
 
@@ -27,23 +27,9 @@ test('should render CharacterSelectionPage with profiles data', () => {
 	expect(container.firstChild).toMatchSnapshot()
 })
 
-test('should redirect to /profile when profile clicked', async () => {
-	// const { getByTestId, history } = renderWithRouter(<CharacterSelectionPage {...props} />, {
-	// 	route: '/select'
-	// })
-	// expect(history.location.pathname).toBe('/select')
-
-	// const profileButton = getByTestId(profileId)
-	// fireEvent.click(profileButton)
-
-	// await wait()
-	// expect(history.location.pathname).toBe('/profile')
-})
-
 test('should display ConfirmationModal when remove button clicked', async () => {
 	const { getByTestId, findByLabelText } = render(<CharacterSelectionPage {...props} />)
-	
-	const removeButton = getByTestId(profileId + 'RemoveButton')
+	const removeButton = getByTestId(profile.id + 'RemoveButton')
 	fireEvent.click(removeButton)
 	const modal = await findByLabelText('Confirm Decision')
 	expect(modal).not.toBeNull()

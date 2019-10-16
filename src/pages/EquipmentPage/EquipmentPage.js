@@ -16,9 +16,10 @@ import './EquipmentPage.scss'
 
 const denominations = ['pp', 'gp', 'sp', 'cp']
 
-export const EquipmentPage = (props) => {
+export const EquipmentPage = props => {
 	const [money, setMoney] = useState(props.money)
 	const [totalMoney, setTotalMoney] = useState(calcTotalMoney(money))
+
 	useEffect(() => {
 		setTotalMoney(calcTotalMoney(money))
 		props.startEditProfile(props.id, { money })
@@ -34,9 +35,9 @@ export const EquipmentPage = (props) => {
 	const [equipmentTotalWeight, setEquipmentTotalWeight] = useState(calcEquipmentTotalWeight(equipment, props.items) || 0)
 
 	const [equipped, setEquipped] = useState({
-		weapons: props.equipped.weapons || [],
-		armor: props.equipped.armor || null,
-		shield: props.equipped.shield || null
+		weapons: props.equipped && props.equipped.weapons || [],
+		armor: props.equipped && props.equipped.armor || null,
+		shield: props.equipped && props.equipped.shield || null
 	})
 	
 	const [newItemId, setNewItemId] = useState(0)
@@ -83,6 +84,10 @@ export const EquipmentPage = (props) => {
 			}))
 		}
 	}
+
+	useEffect(() => {
+		props.startEditProfile(props.id, { equipped })
+	}, [equipped])
 
 	const handleAddEquipment = () => {
 		setEquipment(_.sortBy([...equipment, {
@@ -201,6 +206,7 @@ export const EquipmentPage = (props) => {
 			</div>
 
 			<ItemModal 
+				characterSize={props.size}
 				clickedItem={clickedItem} 
 				equipped={equipped}
 				handleEquip={handleEquip}
@@ -218,8 +224,9 @@ export const EquipmentPage = (props) => {
 	)
 }
 
-const mapStateToProps = ({ profile, items }) => ({
+const mapStateToProps = ({ profile, items, races }) => ({
 	id: profile.id,
+	size: races[profile.race].size,
 	money: profile.money,
 	equipment: profile.equipment,
 	equipped: profile.equipped,

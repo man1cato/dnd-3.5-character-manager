@@ -6,8 +6,8 @@ import _ from 'lodash'
 
 import { history } from '../../routers/AppRouter'
 import { startCreateProfile } from '../../store/actions/profile'
-import { apiObjectToArray, calcAbilityMod, calcSizeMod, convertMoneyToDenominations } from '../../utils/utils'
-import { abilities } from '../../utils/staticData'
+import { apiObjectToArray, calcAbilityMod, convertMoneyToDenominations, calcAttackBonuses } from '../../utils/utils'
+import { abilities, sizeMods } from '../../utils/staticData'
 
 import CreatorFormIdentity from './CreatorFormIdentity/CreatorFormIdentity'
 import CreatorFormJobClass from './CreatorFormJobClass/CreatorFormJobClass'
@@ -116,7 +116,7 @@ export const CharacterCreationPage = props => {
 				let armorBonus = 0
 				if (equipped.armor) { armorBonus += props.items[equipped.armor].armorBonus }
 				if (equipped.shield) { armorBonus += props.items[equipped.shield].armorBonus }
-				const baseArmorClass = 10 + armorBonus + calcSizeMod(race.size) + dexMod
+				const baseArmorClass = 10 + armorBonus + sizeMods[race.size].size + dexMod
 				
 				const profile = {
 					name,
@@ -141,6 +141,15 @@ export const CharacterCreationPage = props => {
 						flat: baseArmorClass - dexMod,
 						touch: baseArmorClass - armorBonus
 					},
+					attackBonuses: _.mapValues(
+						calcAttackBonuses(
+							jobClass.levels[1].baseAttackBonuses || [0],
+							race.size,
+							abilities.str.score,
+							abilities.dex.score
+						),
+						val => ({ base: val, mod: 0, total: val })
+					),
 					level: 1,
 					hp: {
 						base: Number(jobClass.hitDie.slice(1)) + calcAbilityMod(abilities.con.score)

@@ -12,9 +12,9 @@ exports[`should render SkillModal 1`] = `
   }
   contentLabel="Selected Skill"
 >
-  <h4>
+  <h3>
     Knowledge (Local)
-  </h4>
+  </h3>
   <h5>
     INT
   </h5>

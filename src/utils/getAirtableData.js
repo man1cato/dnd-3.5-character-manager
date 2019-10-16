@@ -53,8 +53,10 @@ export const getItems = async () => {
 					weaponType: item.fields["Weapon Type"] || null,
 					encumbrance: item.fields.Encumbrance || null,
 					damageType: item.fields["Damage Type"] ? item.fields["Damage Type"].join(" / ") : [],
-					damageS: item.fields["Damage (S)"] || null,
-					damageM: item.fields["Damage (M)"] || null,
+					damage: {
+						small: item.fields["Damage (S)"] || null,
+						medium: item.fields["Damage (M)"] || null, 
+					},
 					critical: item.fields.Critical || null,
 					range: item.fields.Range || null,
 					armorBonus: item.fields["Armor Bonus"] || null,

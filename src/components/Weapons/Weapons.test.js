@@ -1,24 +1,24 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import fs from 'fs'
+import { render, fireEvent } from '@testing-library/react'
 
 import { Weapons } from './Weapons'
+import { apiData } from '../../tests/utils'
 import profile from '../../tests/fixtures/profile'
 import { apiObjectToArray } from '../../utils/utils'
 
 
 let props
 beforeAll(async () => {
-   const api = await fs.promises.readFile('src/tests/fixtures/api.json')
-   const items = JSON.parse(api).items
-
-   props = { 
-       equippedWeapons: profile.equipped.weapons,
-       weapons: apiObjectToArray(items).filter((item) => item.category === "Weapon")
-   }
+    const api = await apiData()
+    props = { 
+        equippedWeapons: profile.equipped.weapons,
+        weapons: apiObjectToArray(api.items).filter(item => item.category === "Weapon"),
+        characterSize: 'Medium',
+        attackBonuses: profile.attackBonuses
+    }
 })
 
 test('should render weapons with profile data', async () => {
-    const wrapper = shallow(<Weapons {...props} />)
-    expect(wrapper).toMatchSnapshot()
+    const { container } = render(<Weapons {...props} />)
+    expect(container).toMatchSnapshot()
 })

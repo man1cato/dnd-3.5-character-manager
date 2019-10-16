@@ -1,20 +1,32 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 import _ from 'lodash'
 
 import ItemModal from './ItemModal'
 import { apiData } from '../../tests/utils'
 
 
-let items, wrapper
+const handleEquip = jest.fn()
+const handleCloseModal = jest.fn()
+let props
 
 beforeAll(async () => {
    const api = await apiData()
-   items = api.items      
-   wrapper = shallow(<ItemModal clickedItem={items[0]} />)
+   props = {
+      characterSize: 'Medium', 
+      clickedItem: api.items[0],
+      equipped: {
+         armor: null,
+         shield: null,
+         weapons: []
+      }, 
+      handleEquip, 
+      handleCloseModal
+   }
 })
 
 
 test('should render ItemModal', () => {
-   expect(wrapper).toMatchSnapshot()
+   const { container } = render(<ItemModal {...props}/>)
+   expect(container).toMatchSnapshot()
 })

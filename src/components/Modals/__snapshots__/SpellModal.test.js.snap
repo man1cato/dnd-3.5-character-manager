@@ -18,9 +18,9 @@ exports[`should render SpellModal 1`] = `
   }
   contentLabel="Selected Spell"
 >
-  <h4>
+  <h3>
     Fog Cloud
-  </h4>
+  </h3>
   <h5>
     Conjuration
   </h5>

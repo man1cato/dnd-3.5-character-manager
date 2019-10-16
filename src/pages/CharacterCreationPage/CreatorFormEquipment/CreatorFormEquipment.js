@@ -15,7 +15,7 @@ const CreatorFormEquipment = ({
 	items, 
 	setFieldValue
 }) => {
-	const { equipped } = values
+	const { race, equipped } = values
 	const itemsArray = apiObjectToArray(items)
 
 	const [equipment, setEquipment] = useState(values.equipment)
@@ -25,7 +25,7 @@ const CreatorFormEquipment = ({
 	const [totalCost, setTotalCost] = useState(0)
 	const [totalWeight, setTotalWeight] = useState(0)
 
-	const updateEquipment = (equipment) => {
+	const updateEquipment = equipment => {
 		setFieldValue('equipment', equipment)
 		setEquipment(equipment)
 	}
@@ -37,12 +37,12 @@ const CreatorFormEquipment = ({
 		if (selectedItemIds.length > equipment.length) {
 			updateEquipment([...equipment, { id: _.last(selectedItemIds), qty: 1 }])
 		} else {
-			const idToRemove = _.difference(_.map(equipment, (item) => item.id), selectedItemIds)[0]
-			updateEquipment(_.filter(equipment, (item) => item.id !== idToRemove))
+			const idToRemove = _.difference(_.map(equipment, item => item.id), selectedItemIds)[0]
+			updateEquipment(_.filter(equipment, item => item.id !== idToRemove))
 			setFieldValue('equipped', {
 				armor: equipped.armor === idToRemove ? null : equipped.armor,
 				shield: equipped.shield === idToRemove ? null : equipped.shield,
-				weapons: _.filter(equipped.weapons, (id) => id !== idToRemove)
+				weapons: _.filter(equipped.weapons, id => id !== idToRemove)
 			})
 		}
 	}, [selectedItemIds])
@@ -85,8 +85,7 @@ const CreatorFormEquipment = ({
 					<>
 						<p><b>Type:</b> {currentItem.weaponType} / {currentItem.encumbrance} / {currentItem.damageType}</p>
 						<p><b>Range:</b> {currentItem.range}</p>
-						<p><b>Damage (M):</b> {currentItem.damageM}</p>
-						<p><b>Damage (S):</b> {currentItem.damageS}</p>
+						<p><b>Damage:</b> {currentItem.damage[_.lowerCase(race.size)]}</p>
 						<p><b>Critical:</b> {currentItem.critical}</p>
 					</>
 				)}
@@ -173,6 +172,7 @@ const CreatorFormEquipment = ({
 			<ErrorMessage className="CreatorForm__error--right" name="remainingGold" component="div" />
 
 			<ItemModal
+				characterSize={race.size}
 				clickedItem={clickedItem}
 				equipped={equipped}
 				handleCloseModal={() => setClickedItem(undefined)}

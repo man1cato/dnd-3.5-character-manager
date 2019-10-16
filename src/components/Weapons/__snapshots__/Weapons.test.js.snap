@@ -1,16 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render weapons with profile data 1`] = `
-<Fragment>
+<div>
   <div
-    className="weapon"
-    key="recAaHr4qEcbytOpu"
+    class="weapon"
   >
     <h4>
       Repeating Light Crossbow
     </h4>
     <div
-      className="weapon__features"
+      class="weapon__features"
     >
       Exotic
       , 
@@ -19,7 +18,7 @@ exports[`should render weapons with profile data 1`] = `
       Piercing
     </div>
     <div
-      className="weapon__stats"
+      class="weapon__stats"
     >
       <div>
         <h5>
@@ -27,6 +26,15 @@ exports[`should render weapons with profile data 1`] = `
         </h5>
         <div>
           80 ft.
+        </div>
+      </div>
+      <div>
+        <h5>
+          Atk
+        </h5>
+        <div>
+          +
+          6
         </div>
       </div>
       <div>
@@ -48,14 +56,13 @@ exports[`should render weapons with profile data 1`] = `
     </div>
   </div>
   <div
-    className="weapon"
-    key="rec0JezjbAvUiWr8A"
+    class="weapon"
   >
     <h4>
       Quarterstaff
     </h4>
     <div
-      className="weapon__features"
+      class="weapon__features"
     >
       Simple
       , 
@@ -64,7 +71,7 @@ exports[`should render weapons with profile data 1`] = `
       Bludgeoning
     </div>
     <div
-      className="weapon__stats"
+      class="weapon__stats"
     >
       <div>
         <h5>
@@ -72,6 +79,15 @@ exports[`should render weapons with profile data 1`] = `
         </h5>
         <div>
           —
+        </div>
+      </div>
+      <div>
+        <h5>
+          Atk
+        </h5>
+        <div>
+          +
+          6
         </div>
       </div>
       <div>
@@ -93,14 +109,13 @@ exports[`should render weapons with profile data 1`] = `
     </div>
   </div>
   <div
-    className="weapon"
-    key="recWQ2ml4RhoLtvik"
+    class="weapon"
   >
     <h4>
       Light Crossbow
     </h4>
     <div
-      className="weapon__features"
+      class="weapon__features"
     >
       Simple
       , 
@@ -109,7 +124,7 @@ exports[`should render weapons with profile data 1`] = `
       Piercing
     </div>
     <div
-      className="weapon__stats"
+      class="weapon__stats"
     >
       <div>
         <h5>
@@ -117,6 +132,15 @@ exports[`should render weapons with profile data 1`] = `
         </h5>
         <div>
           80 ft.
+        </div>
+      </div>
+      <div>
+        <h5>
+          Atk
+        </h5>
+        <div>
+          +
+          6
         </div>
       </div>
       <div>
@@ -137,5 +161,5 @@ exports[`should render weapons with profile data 1`] = `
       </div>
     </div>
   </div>
-</Fragment>
+</div>
 `;

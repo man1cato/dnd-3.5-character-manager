@@ -10,9 +10,9 @@ exports[`should render SpecialAbilityModal 1`] = `
   }
   contentLabel="Selected Special Ability"
 >
-  <h4>
+  <h3>
     Weapon Proficiency
-  </h4>
+  </h3>
   <h5 />
   <p
     key="0"

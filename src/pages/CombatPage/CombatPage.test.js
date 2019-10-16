@@ -1,14 +1,13 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { render, fireEvent } from '@testing-library/react'
+import { fireEvent } from '@testing-library/react'
 
 import { CombatPage } from './CombatPage'
 import { characterOne } from '../../tests/seedDatabase'
-import { apiData } from '../../tests/utils'
+import { apiData, renderWithRedux } from '../../tests/utils'
  
 
 const startEditProfile = jest.fn()
-let props
+let props, state
 
 beforeAll(async () => {
     const api = await apiData()
@@ -20,10 +19,15 @@ beforeAll(async () => {
         spells: api.spells,
         startEditProfile
     }
+    state = {
+        profile: characterOne,
+        races: api.races,
+        items: api.items
+    }
 })
 
 
 test('should render combat page with profile data', () => {
-    const wrapper = shallow(<CombatPage {...props} />)
-    expect(wrapper).toMatchSnapshot()
+    const { container } = renderWithRedux(<CombatPage {...props} />, state)
+    expect(container).toMatchSnapshot()
 })

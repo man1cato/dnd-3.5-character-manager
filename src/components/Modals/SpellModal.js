@@ -12,7 +12,7 @@ const SpellModal = ({ clickedSpell, handleCloseModal }) => (
     >
         {clickedSpell && 
             <>
-                <h4>{clickedSpell.name}</h4>
+                <h3>{clickedSpell.name}</h3>
                 <h5>{clickedSpell.school}</h5>
                 {convertTextToArray(clickedSpell.description).map((paragraph, i) => 
                     <p key={i}>{paragraph}</p>

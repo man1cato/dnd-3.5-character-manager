@@ -26,21 +26,21 @@ exports[`should render attacks with default profile data 1`] = `
     Melee
   </div>
   <div>
-    4
+    4 / 2
   </div>
   <div>
     +
   </div>
   <input
-    data-testid="melee"
+    data-testid="meleeMod"
     type="number"
-    value="2"
+    value=""
   />
   <div>
     =
   </div>
   <div>
-    6
+    4 / 2
   </div>
   <div
     class="grid__col1"
@@ -54,7 +54,7 @@ exports[`should render attacks with default profile data 1`] = `
     +
   </div>
   <input
-    data-testid="ranged"
+    data-testid="rangedMod"
     type="number"
     value=""
   />
@@ -76,7 +76,7 @@ exports[`should render attacks with default profile data 1`] = `
     +
   </div>
   <input
-    data-testid="grapple"
+    data-testid="grappleMod"
     type="number"
     value="1"
   />

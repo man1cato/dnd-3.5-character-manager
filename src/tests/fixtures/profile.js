@@ -73,21 +73,22 @@ export default {
 		reflex: -1,
 		will: ''
 	},
-	attacks: {
+	attackBonuses: {
 		melee: {
-			base: 4
+			base: [4],
+			mod: 2,
+			total: [6]
 		},
 		ranged: {
-			base: 6
+			base: [6],
+			mod: 0,
+			total: [6]
 		},
 		grapple: {
-			base: 4
+			base: [4],
+			mod: 1,
+			total: [5]
 		}
-	},
-	attackBonusMods: {
-		melee: 2,
-		ranged: '',
-		grapple: 1
 	},
 	ac: {
 		base: 14,

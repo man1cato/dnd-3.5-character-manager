@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render ItemModal 1`] = `
-<DefaultModal
-  contentLabel="Selected Item"
-/>
-`;
+exports[`should render ItemModal 1`] = `<div />`;

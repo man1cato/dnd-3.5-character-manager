@@ -25,8 +25,8 @@ export const CharacterSelectionPage = props => {
 
    return (
       <div className="container--body CharacterSelectionPage">
-         {props.profiles.map((profile, i) => (
-            <div className="profile-container" key={i}>
+         {props.profiles.map(profile => (
+            <div className="profile-container" key={profile.id}>
                <button 
                   className="profile__select-button"
                   data-testid={profile.id}

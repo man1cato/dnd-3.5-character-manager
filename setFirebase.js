@@ -77,9 +77,9 @@ const setProfile = (uid) => {
 // setFeats()
 // setSpecialAbilities()
 // setSkills()
-// setItems()
+setItems()
 // setSpells()
-setProfile(process.env.USER_ID)
+// setProfile(process.env.USER_ID)
 
 // Run the following in the powershell to set env var: 
 // $env:NODE_ENV="test"

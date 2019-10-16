@@ -48,21 +48,20 @@ export const CombatPage = ({ profile, races, jobClasses, spells, startEditProfil
 			<div className="section">       
 				<h3 className="section__title">Attack Bonuses</h3>
 				<AttackBonuses 
-					attackBonusMods={profile.attackBonusMods}
-					abilities={profile.abilities}
-					baseAttackBonuses={jobClassLevel.baseAttackBonuses}
-					size={race.size}
+					attackBonuses={profile.attackBonuses}
 					handleUpdate={handleUpdate}
 				/>
 			</div>
 
-			<div className="section">
-				<h3 className="section__title">Equipped Weapons</h3>
-				<Weapons 
-					equippedWeapons={profile.equipped.weapons}
-					// attackBonuses={}
-				/>
-			</div>
+			{profile.equipped && ( 
+				<div className="section">
+					<h3 className="section__title">Equipped Weapons</h3>
+					<Weapons 
+						equippedWeapons={profile.equipped.weapons}
+						attackBonuses={profile.attackBonuses}
+					/>
+				</div>
+			)}
 
 			{profile.spellbook && (
 				<div className="section">

@@ -12,7 +12,7 @@ const SpecialAbilityModal = ({ clickedAbility, handleCloseModal }) => (
     >
         {clickedAbility && 
             <>
-                <h4>{clickedAbility.name}</h4>
+                <h3>{clickedAbility.name}</h3>
                 <h5>{clickedAbility.type}</h5>
                 {convertTextToArray(clickedAbility.description).map((paragraph, i) => 
                     <p key={i}>{paragraph}</p>

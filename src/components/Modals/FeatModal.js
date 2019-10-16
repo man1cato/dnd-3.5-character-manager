@@ -11,7 +11,7 @@ const FeatModal = ({ clickedFeat, handleCloseModal }) => (
     >
         {clickedFeat && 
             <>
-                <h4>{clickedFeat.name}</h4>
+                <h3>{clickedFeat.name}</h3>
                 <h5>{clickedFeat.types.join(", ")}</h5>
                 <p>{clickedFeat.description}</p>
             </>

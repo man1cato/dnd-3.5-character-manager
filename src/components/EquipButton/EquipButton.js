@@ -8,7 +8,7 @@ const EquipButton = ({ item, equipped, handleEquip }) => (
          <button
             className="button"
             id={item.id}
-            name={item.category === 'Weapon' ? 'weapons' : item.category.toLowerCase()}
+            name={item.category === 'Weapon' ? 'weapons' : _.lowerCase(item.category)}
             type="button"
             onClick={(e) => handleEquip(e)}
          >

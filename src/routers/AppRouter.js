@@ -19,8 +19,8 @@ import CompanionPage from '../pages/CompanionPage/CompanionPage'
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage'
 import UnderConstructionPage from '../pages/UnderConstructionPage'
 
-export const history = createBrowserHistory()
 
+export const history = createBrowserHistory()
 
 const AppRouter = () => (
 	<Router history={history}>

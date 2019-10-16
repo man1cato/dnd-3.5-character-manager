@@ -12,7 +12,7 @@ const SkillModal = ({clickedSkill, handleCloseModal}) => (
     >
         {clickedSkill && 
             <>
-                <h4>{clickedSkill.name}</h4>
+                <h3>{clickedSkill.name}</h3>
                 <h5>{clickedSkill.keyAbility}</h5>
                 {convertTextToArray(clickedSkill.description).map((paragraph, i) => 
                     <p key={i}>{paragraph}</p>

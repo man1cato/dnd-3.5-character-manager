@@ -13,9 +13,9 @@ exports[`should render FeatModal 1`] = `
   }
   contentLabel="Selected Feat"
 >
-  <h4>
+  <h3>
     Run
-  </h4>
+  </h3>
   <h5>
     General
   </h5>

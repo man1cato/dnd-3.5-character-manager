@@ -6,6 +6,7 @@ import Counter from '../Counter/Counter'
 import { calcAbilityMod, convertInputValue } from '../../utils/utils'
 import './Abilities.scss'
 
+
 const Abilities = ({ abilities, handleUpdate }) => {
 	const scores = _.mapValues(abilities, (obj) => obj.score)
 	const [tempScores, setTempScores] = useState(_.mapValues(abilities, (obj) => obj.tempScore))

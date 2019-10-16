@@ -5,7 +5,7 @@ import DefaultModal from './DefaultModal'
 import EquipButton from '../EquipButton/EquipButton'
 
 
-const ItemModal = ({ clickedItem, equipped, handleEquip, handleCloseModal }) => (
+const ItemModal = ({ characterSize, clickedItem, equipped, handleEquip, handleCloseModal }) => (
 	<DefaultModal
 		clickedItem={clickedItem}
 		onRequestClose={handleCloseModal}
@@ -13,22 +13,21 @@ const ItemModal = ({ clickedItem, equipped, handleEquip, handleCloseModal }) => 
 	>
 		{clickedItem && 
 			<>
-				<h4>{clickedItem.name}</h4>
+				<h3>{clickedItem.name}</h3>
 				<h5>{clickedItem.category}</h5>
 				<p>{clickedItem.notes}</p>
 
 				{clickedItem.weaponType && (
 					<>
-						<p>Type: {clickedItem.weaponType} / {clickedItem.encumbrance} / {clickedItem.damageType}</p>
-						<p>Range: {clickedItem.range}</p>
-						<p>Damage (M): {clickedItem.damageM}</p>
-						<p>Damage (S): {clickedItem.damageS}</p>
-						<p>Critical: {clickedItem.critical}</p>
+						<p><b>Type:</b> {clickedItem.weaponType} / {clickedItem.encumbrance} / {clickedItem.damageType}</p>
+						<p><b>Range:</b> {clickedItem.range}</p>
+						<p><b>Damage:</b> {clickedItem.damage[_.lowerCase(characterSize)]}</p>
+						<p><b>Critical:</b> {clickedItem.critical}</p>
 					</>
 				)}
 
-				<p>Value: {clickedItem.value} gp</p>
-				<p>Weight: {clickedItem.weight} lbs</p>
+				<p><b>Value:</b> {clickedItem.value} gp</p>
+				<p><b>Weight:</b> {clickedItem.weight} lbs</p>
 
 				<EquipButton item={clickedItem} equipped={equipped} handleEquip={handleEquip} />
 

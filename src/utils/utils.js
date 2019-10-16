@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import { sizeMods } from './staticData'
 
 
 export const convertTextToArray = string => _.compact(string.split(/\n/))
@@ -47,17 +48,6 @@ export const calcStartingGold = jobClassName => {
 
 export const calcAbilityMod = abilityScore => Math.floor(abilityScore/2 - 5)
 
-export const calcSizeMod = size => ({
-	Colossal: -8,
-	Gargantuan: -4,
-	Huge: -2,
-	Large: -1,
-	Medium: 0,
-	Small: 1,
-	Tiny: 2,
-	Diminutive: 4,
-	Fine: 8
-}[size])
 
 export const calcSkillPoints = (jobClassName, intMod) => {
 	if (_.includes(['Cleric', 'Fighter', 'Paladin', 'Sorcerer', 'Wizard'], jobClassName)) {
@@ -74,22 +64,16 @@ export const calcSkillPoints = (jobClassName, intMod) => {
 	}
 }
 
-export const calcBaseMeleeBonus = (baseAttackBonus, strScore, size) => baseAttackBonus + calcAbilityMod(strScore) + calcSizeMod(size)
-export const calcBaseRangedBonus = (baseAttackBonus, dexScore, size) => baseAttackBonus + calcAbilityMod(dexScore) + calcSizeMod(size)
-export const calcBaseGrappleBonus = (baseAttackBonus, strScore, size) => {
-	const specialSizeMod = {
-		Colossal: 16,
-		Gargantuan: 12,
-		Huge: 8,
-		Large: 4,
-		Medium: 0,
-		Small: -4,
-		Tiny: -8,
-		Diminutive: -12,
-		Fine: -16
-	}[size]
-	return baseAttackBonus + calcAbilityMod(strScore) + specialSizeMod
-} 
+
+export const calcBaseMeleeBonus = (baseAttackBonus, strScore, size) => baseAttackBonus + calcAbilityMod(strScore) + sizeMods[size].size
+export const calcBaseRangedBonus = (baseAttackBonus, dexScore, size) => baseAttackBonus + calcAbilityMod(dexScore) + sizeMods[size].size
+export const calcBaseGrappleBonus = (baseAttackBonus, strScore, size) => baseAttackBonus + calcAbilityMod(strScore) + sizeMods[size].grapple 
+
+export const calcAttackBonuses = (baseAttackBonuses, characterSize, strScore, dexScore) => ({
+	melee: _.map(baseAttackBonuses, bab => bab + calcAbilityMod(strScore) + sizeMods[characterSize].size),
+	ranged: _.map(baseAttackBonuses, bab => bab + calcAbilityMod(dexScore) + sizeMods[characterSize].size),
+	grapple: _.map(baseAttackBonuses, bab => bab + calcAbilityMod(strScore) + sizeMods[characterSize].grapple) 
+})
 
 export const calcTotalMoney = ({ pp, gp, sp, cp }) => Number((pp * 10 + gp + sp / 10 + cp / 100).toFixed(2))
 
