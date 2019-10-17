@@ -1,20 +1,22 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
+import _ from 'lodash'
 
 import FeatModal from './FeatModal'
 import { apiData } from '../../tests/utils'
 
 
-let props
+let props, feat
 
 beforeAll(async () => {
    const api = await apiData()
+   feat = _.values(api.feats)[0]
    props = {
-      clickedFeat: Object.values(api.feats)[0]
+      clickedFeat: feat
    }
 })
 
 test('should render FeatModal', () => {
-   const wrapper = shallow(<FeatModal {...props} />)
-   expect(wrapper).toMatchSnapshot()
+   const { baseElement } = render(<FeatModal {...props} />)
+   expect(baseElement).toMatchSnapshot()
 })

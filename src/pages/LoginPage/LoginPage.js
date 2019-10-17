@@ -1,9 +1,9 @@
 import React from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 
 import { firebase } from '../../firebase/firebase'
-import { startLogin } from '../../store/actions/auth'
+// import { startLogin } from '../../store/actions/auth'
 import './LoginPage.scss'
 
 
@@ -19,21 +19,21 @@ const uiConfig = {
     ]
 }
 
-export const LoginPage = ({ startLogin }) => {
-
+export const LoginPage = props => {
     return (
         <div className="LoginPage">
             <div className="LoginPage__box">
                 <h1 className="LoginPage__title">D&D 3.5e Character Manager</h1>
-                {/* <button className="button--primary" onClick={startLogin}>Login with Google</button> */}
                 <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
             </div>
         </div>
     )
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    startLogin: () => dispatch(startLogin())
-})
+// const mapDispatchToProps = dispatch => ({
+//     startLogin: () => dispatch(startLogin())
+// })
 
-export default connect(undefined, mapDispatchToProps)(LoginPage)
+// export default connect(undefined, mapDispatchToProps)(LoginPage)
+
+export default LoginPage

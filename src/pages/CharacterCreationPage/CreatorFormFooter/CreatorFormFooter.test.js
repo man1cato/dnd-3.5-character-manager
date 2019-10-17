@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 
 import CreatorFormFooter from './CreatorFormFooter'
 
@@ -17,6 +17,6 @@ const props = {
 }
 
 test('should render CreatorFormFooter', () => {
-    const wrapper = shallow(<CreatorFormFooter {...props} />)
-    expect(wrapper).toMatchSnapshot()
+    const { container } = render(<CreatorFormFooter {...props} />)
+    expect(container.firstChild).toMatchSnapshot()
 })

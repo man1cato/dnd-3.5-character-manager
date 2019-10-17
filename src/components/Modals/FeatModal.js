@@ -9,13 +9,13 @@ const FeatModal = ({ clickedFeat, handleCloseModal }) => (
         onRequestClose={handleCloseModal}
         contentLabel="Selected Feat"
     >
-        {clickedFeat && 
+        {clickedFeat && (
             <>
                 <h3>{clickedFeat.name}</h3>
                 <h5>{clickedFeat.types.join(", ")}</h5>
                 <p>{clickedFeat.description}</p>
             </>
-        }
+        )}
     </DefaultModal>
 )
 

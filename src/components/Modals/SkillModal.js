@@ -4,7 +4,7 @@ import DefaultModal from './DefaultModal'
 import { convertTextToArray } from '../../utils/utils'
 
 
-const SkillModal = ({clickedSkill, handleCloseModal}) => (
+const SkillModal = ({ clickedSkill, handleCloseModal }) => (
     <DefaultModal
         clickedItem={clickedSkill}
         onRequestClose={handleCloseModal}

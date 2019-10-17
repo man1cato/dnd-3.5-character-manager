@@ -2,10 +2,10 @@
 
 exports[`should render loading page correctly 1`] = `
 <div
-  className="loader"
+  class="loader"
 >
   <img
-    className="loader__image"
+    class="loader__image"
     src="/images/loader.gif"
   />
 </div>

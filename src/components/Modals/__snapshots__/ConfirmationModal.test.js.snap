@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render SkillModal 1`] = `
+exports[`should render ConfirmationModal 1`] = `
 <body
   class="ReactModal__Body--open"
 >
@@ -13,21 +13,35 @@ exports[`should render SkillModal 1`] = `
       style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.75);"
     >
       <div
-        aria-label="Selected Skill"
+        aria-label="Confirm Decision"
         class="ReactModal__Content ReactModal__Content--after-open DefaultModal"
         role="dialog"
         tabindex="-1"
       >
-        <h3>
-          Knowledge (Local)
+        <h3
+          class="modal-header"
+        >
+          Decision
         </h3>
-        <h5>
-          INT
-        </h5>
-        <p>
-          You possess knowledge of local customs and events. 
+        <p
+          class="modal-body"
+        >
+          Do the thing?
         </p>
-        
+        <div
+          class="button-container"
+        >
+          <button
+            class="button--primary"
+          >
+            Confirm
+          </button>
+          <button
+            class="button--secondary"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   </div>

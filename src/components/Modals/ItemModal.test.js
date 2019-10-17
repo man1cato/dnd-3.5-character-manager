@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import _ from 'lodash'
 
 import ItemModal from './ItemModal'
@@ -27,6 +27,6 @@ beforeAll(async () => {
 
 
 test('should render ItemModal', () => {
-   const { container } = render(<ItemModal {...props}/>)
-   expect(container).toMatchSnapshot()
+   const { baseElement } = render(<ItemModal {...props}/>)
+   expect(baseElement).toMatchSnapshot()
 })

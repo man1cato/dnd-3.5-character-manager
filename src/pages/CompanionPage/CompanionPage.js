@@ -12,7 +12,7 @@ import './CompanionPage.scss'
 
 
 export const CompanionPage = ({ id, companion, startEditProfile }) => {
-	const handleUpdate = (updates) => {
+	const handleUpdate = updates => {
 		startEditProfile(id, {
 			companion: {
 				...companion,

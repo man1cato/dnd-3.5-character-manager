@@ -1,14 +1,15 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { LoginPage } from './LoginPage'
+import { render, fireEvent } from '@testing-library/react'
+
+import LoginPage from './LoginPage'
 
 
 test('should render login page correctly', () => {
-    const wrapper = shallow(<LoginPage startLogin={() => {}} />)
-    expect(wrapper).toMatchSnapshot()
+    const { container } = render(<LoginPage />)
+    expect(container).toMatchSnapshot()
 })
 
-// test('should startLogin on button click', () => {
+// test('should trigger startLogin on button click', () => {
 //     const startLogin = jest.fn()
 //     const wrapper = shallow(<LoginPage startLogin={startLogin} />)
 //     wrapper.find('button').simulate('click')

@@ -52,15 +52,6 @@ exports[`should render footer correctly 1`] = `
         test-file-stub
       </span>
     </a>
-    <a
-      href="/companion"
-    >
-      <span
-        class="SVGInline SVGInline--cleaned"
-      >
-        test-file-stub
-      </span>
-    </a>
   </div>
 </footer>
 `;

@@ -1,27 +1,27 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 
 import Selector from './Selector'
 import { apiData } from '../../tests/utils'
 import { apiObjectToArray } from '../../utils/utils'
 
 
-let props, wrapper
+const handleSelect = jest.fn()
+let props
 beforeAll(async () => {
    const api = await apiData()
-   const Content = ({ currentItemId }) => (
-		<p>
-         Description: {api.items[currentItemId].description}
-		</p>
-	)
    props = {
       items: apiObjectToArray(api.feats),
-      Content,
-      handleSelect: jest.fn() 
+      Content: () => (
+         <p>
+            Description: Feat description
+         </p>
+      ),
+      handleSelect
    }
-   wrapper = shallow(<Selector {...props}/>)
 })
 
 test('should render Selector correctly with feats data', () => {
-   expect(wrapper).toMatchSnapshot()
+   const { container } = render(<Selector {...props} />)
+   expect(container).toMatchSnapshot()
 })

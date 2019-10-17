@@ -2,10 +2,10 @@
 
 exports[`should render CompanionPage with profile data 1`] = `
 <div
-  className="container--body"
+  class="container--body"
 >
   <div
-    className="section CompanionPage__grid"
+    class="section CompanionPage__grid"
   >
     <h3>
       Nyx
@@ -14,132 +14,612 @@ exports[`should render CompanionPage with profile data 1`] = `
       Raven
     </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Special Abilities
     </h4>
-    <Connect(SpecialAbilities)
-      specialAbilityIds={
-        Array [
-          "recoVjIceMNsVyiqI",
-          "recC7zmmkwPjM104d",
-          "recD7wgtCKPM9k7X9",
-          "recmKq1KJyCGILkHN",
-        ]
-      }
-    />
+    <div>
+      <button
+        class="button--link"
+        data-testid="recmKq1KJyCGILkHN"
+        type="button"
+      >
+        Empathic Link
+      </button>
+      <button
+        class="button--link"
+        data-testid="recC7zmmkwPjM104d"
+        type="button"
+      >
+        Improved Evasion
+      </button>
+      <button
+        class="button--link"
+        data-testid="recoVjIceMNsVyiqI"
+        type="button"
+      >
+        Low-Light Vision
+      </button>
+      <button
+        class="button--link"
+        data-testid="recD7wgtCKPM9k7X9"
+        type="button"
+      >
+        Share Spells
+      </button>
+    </div>
     <h4
-      className="grid__col1"
+      class="grid__col1"
     >
       Feats
     </h4>
-    <Connect(Feats)
-      featIds={
-        Array [
-          "recvzMqdCBIzd7z9n",
-          "recVdnKmMFz54fNLF",
-        ]
-      }
-    />
+    <div>
+      <button
+        class="button--link"
+        type="button"
+      >
+        Alertness
+      </button>
+      <button
+        class="button--link"
+        type="button"
+      >
+        Weapon Finesse
+      </button>
+    </div>
   </div>
   <div
-    className="section"
+    class="section"
   >
     <h3
-      className="section__title"
+      class="section__title"
     >
       Abilities
     </h3>
-    <Abilities
-      abilities={
-        Object {
-          "cha": Object {
-            "score": 6,
-          },
-          "con": Object {
-            "score": 10,
-          },
-          "dex": Object {
-            "score": 15,
-          },
-          "int": Object {
-            "score": 8,
-          },
-          "str": Object {
-            "score": 1,
-          },
-          "wis": Object {
-            "score": 14,
-          },
-        }
-      }
-      handleUpdate={[Function]}
-    />
+    <div
+      class="Abilities"
+    >
+      <h5
+        class="grid__col1"
+      >
+        Ability
+      </h5>
+      <h5
+        class="grid__col2"
+      >
+        Score
+      </h5>
+      <h5
+        class="grid__col3"
+      >
+        Temp Score
+      </h5>
+      <h5
+        class="grid__col4"
+      >
+        Mod
+      </h5>
+      <div
+        class="grid__col1"
+      >
+        STR
+      </div>
+      <div
+        class="grid__col2"
+      >
+        1
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="strMod"
+      >
+        -5
+      </div>
+      <div
+        class="grid__col1"
+      >
+        DEX
+      </div>
+      <div
+        class="grid__col2"
+      >
+        15
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="dexMod"
+      >
+        2
+      </div>
+      <div
+        class="grid__col1"
+      >
+        CON
+      </div>
+      <div
+        class="grid__col2"
+      >
+        10
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="conMod"
+      >
+        0
+      </div>
+      <div
+        class="grid__col1"
+      >
+        INT
+      </div>
+      <div
+        class="grid__col2"
+      >
+        8
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="intMod"
+      >
+        -1
+      </div>
+      <div
+        class="grid__col1"
+      >
+        WIS
+      </div>
+      <div
+        class="grid__col2"
+      >
+        14
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="wisMod"
+      >
+        2
+      </div>
+      <div
+        class="grid__col1"
+      >
+        CHA
+      </div>
+      <div
+        class="grid__col2"
+      >
+        6
+      </div>
+      <div
+        class="Counter grid__col3"
+      >
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="remove"
+            size="small"
+          />
+        </button>
+        <input
+          class="counter-value"
+          size="3"
+          value="0"
+        />
+        <button
+          type="button"
+        >
+          <ion-icon
+            name="add"
+            size="small"
+          />
+        </button>
+      </div>
+      <div
+        class="grid__col4"
+        data-testid="chaMod"
+      >
+        -2
+      </div>
+    </div>
   </div>
   <div
-    className="section"
+    class="section"
   >
     <h3
-      className="section__title"
+      class="section__title"
     >
       Skills
     </h3>
-    <Connect(SkillSet)
-      skillSet={
-        Array [
-          Object {
-            "name": "Hide",
-            "ranks": 10,
-          },
-          Object {
-            "name": "Climb",
-            "ranks": 3,
-          },
-          Object {
-            "name": "Listen",
-            "ranks": 5,
-          },
-          Object {
-            "name": "Concentration",
-            "ranks": 9,
-          },
-          Object {
-            "name": "Spot",
-            "ranks": 5,
-          },
-        ]
-      }
-    />
+    <div
+      class="SkillSet"
+    >
+      <h5
+        class="SkillSet__name-header"
+      >
+        Skill
+      </h5>
+      <h5>
+        Ranks
+      </h5>
+      <h5
+        class="SkillSet__name-header"
+      >
+        Skill
+      </h5>
+      <h5>
+        Ranks
+      </h5>
+      <button
+        class="grid__col1 button--link"
+        id="rec1xorrcc2QO41Pt"
+        type="button"
+      >
+        Swim
+      </button>
+      <div
+        class="grid__col2"
+      >
+        10
+      </div>
+      <button
+        class="grid__col1 button--link"
+        id="recHCeKVn3CB0HcNA"
+        type="button"
+      >
+        Climb
+      </button>
+      <div
+        class="grid__col2"
+      >
+        3
+      </div>
+      <button
+        class="SkillSet__col3 button--link"
+        id="rec5I8HeM6Vdy5bF9"
+        type="button"
+      >
+        Listen
+      </button>
+      <div
+        class="grid__col4"
+      >
+        5
+      </div>
+      <button
+        class="SkillSet__col3 button--link"
+        id="recRRUvksO0HXqoll"
+        type="button"
+      >
+        Spot
+      </button>
+      <div
+        class="grid__col4"
+      >
+        5
+      </div>
+    </div>
   </div>
   <h3
-    className="section__title"
+    class="section__title"
   >
     Combat
   </h3>
-  <PhysicalStats
-    ac={
-      Object {
-        "base": 14,
-        "flat": 12,
-        "touch": 14,
-      }
-    }
-    handleUpdate={[Function]}
-    hp={
-      Object {
-        "base": 16,
-      }
-    }
-    initBase={2}
-    speed={
-      Object {
-        "flight": 40,
-        "ground": 10,
-      }
-    }
-  />
   <div
-    className="PhysicalStats__row"
+    class="PhysicalStats__row"
+  >
+    <div>
+      Hit Points
+    </div>
+    <div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          16
+        </div>
+      </div>
+      <div
+        class="PhysicalStats__row__item--bottom"
+      >
+        +
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Mod
+        </h5>
+        <input
+          data-testid="hpMod"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="PhysicalStats__row__item--bottom"
+      >
+        -
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Dmg
+        </h5>
+        <input
+          data-testid="hpDamage"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="PhysicalStats__row__item--bottom"
+      >
+        =
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Curr
+        </h5>
+        <div
+          data-testid="hpTotal"
+        >
+          16
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="PhysicalStats__row"
+  >
+    <div>
+      Armor Class
+    </div>
+    <div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          14
+        </div>
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Flat
+        </h5>
+        <div>
+          12
+        </div>
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Touch
+        </h5>
+        <div>
+          14
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="PhysicalStats__row"
+  >
+    <div>
+      Initiative
+    </div>
+    <div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Base
+        </h5>
+        <div>
+          2
+        </div>
+      </div>
+      <div
+        class="PhysicalStats__row__item--bottom"
+      >
+        +
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Mod
+        </h5>
+        <input
+          data-testid="initMod"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="PhysicalStats__row__item--bottom"
+      >
+        =
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Total
+        </h5>
+        <div>
+          2
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="PhysicalStats__row"
+  >
+    <div>
+      Speed
+    </div>
+    <div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Ground
+        </h5>
+        <div>
+          10
+        </div>
+      </div>
+      <div
+        class="PhysicalStats__row__item"
+      >
+        <h5>
+          Flight
+        </h5>
+        <div>
+          40
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="PhysicalStats__row"
   >
     <div>
       Attack

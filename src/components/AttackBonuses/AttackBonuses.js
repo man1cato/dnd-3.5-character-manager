@@ -16,31 +16,34 @@ const AttackBonuses = ({ attackBonuses, handleUpdate }) => {
             <div></div>
             <h5>Total</h5>
 
-            {_.map(attackBonuses, ({ base, mod }, type) => (
-                <Fragment key={type}>
-                    <div className="grid__col1">{_.startCase(type)}</div>
-                    <div>{base.join(' / ')}</div>
-                    <div>+</div>
-                    <input
-                        type="number"
-                        data-testid={type + 'Mod'}
-                        value={convertInputValue(mod)}
-                        onChange={e => {
-                            const newMod = Number(e.target.value)
-                            handleUpdate({
-                                attackBonuses: update(attackBonuses, {
-                                    [type]: {
-                                        mod: { $set: newMod },
-                                        total: { $set: _.map(base, val => val + newMod) }
-                                    }
+            {_.map(['melee', 'ranged', 'grapple'], type => {
+                const { base, mod } = attackBonuses[type]
+                return (
+                    <Fragment key={type}>
+                        <div className="grid__col1">{_.startCase(type)}</div>
+                        <div>{base.join(' / ')}</div>
+                        <div>+</div>
+                        <input
+                            type="number"
+                            data-testid={type + 'Mod'}
+                            value={convertInputValue(mod)}
+                            onChange={e => {
+                                const newMod = Number(e.target.value)
+                                handleUpdate({
+                                    attackBonuses: update(attackBonuses, {
+                                        [type]: {
+                                            mod: { $set: newMod },
+                                            total: { $set: _.map(base, val => val + newMod) }
+                                        }
+                                    })
                                 })
-                            })
-                        }}
-                    />
-                    <div>=</div>
-                    <div>{_.map(base, val => val + mod).join(' / ')}</div>
-                </Fragment>
-            ))}
+                            }}
+                        />
+                        <div>=</div>
+                        <div>{_.map(base, val => val + mod).join(' / ')}</div>
+                    </Fragment>
+                )
+            })}
 
         </div>
     )

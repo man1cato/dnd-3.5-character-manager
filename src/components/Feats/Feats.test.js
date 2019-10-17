@@ -26,7 +26,7 @@ test('should launch FeatModal on feat button click', async () => {
 	const { getByText, queryByLabelText, findByLabelText } = render(<Feats {...props} />)
 	const labelMatch = 'Selected Feat'
 	
-	expect(queryByLabelText(labelMatch)).toBe(null)
+	expect(queryByLabelText(labelMatch)).toBeNull()
 
 	const textMatch = props.feats[featIds[0]].name
 	fireEvent.click(getByText(textMatch))

@@ -36,12 +36,13 @@ test('should render attacks with default profile data', () => {
     expect(container.firstChild).toMatchSnapshot()
 })
 
-// test('should update total when input changes', async () => {
-//     //REQUIRES A STORE
-//     const { getByTestId, findByText } = render(<AttackBonuses {...props} />)
-
-//     fireEvent.change(getByTestId('meleeMod'), { target: { value: 2 } })
+test('should trigger handleUpdate when input changes', async () => {
+    const { getByTestId, findByText } = render(<AttackBonuses {...props} />)
     
-//     const meleeTotalNode = await findByText('6 / 4')
-//     expect(meleeTotalNode).toBeDefined()
-// })
+    fireEvent.change(getByTestId('meleeMod'), { target: { value: 2 } })
+    expect(handleUpdate).toHaveBeenCalled()
+    
+    //REQUIRES A STORE
+    // const meleeTotalNode = await findByText('6 / 4')
+    // expect(meleeTotalNode).toBeDefined()
+})

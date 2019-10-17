@@ -1,82 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SpellModal 1`] = `
-<DefaultModal
-  clickedItem={
-    Object {
-      "castingTime": "1 action",
-      "components": "V, S",
-      "description": "Fog limits vision to 5-ft",
-      "duration": "10 min/lvl",
-      "effectArea": "20-ft radius",
-      "name": "Fog Cloud",
-      "range": "Medium (100ft + 10ft/lvl)",
-      "savingThrow": "None",
-      "school": "Conjuration",
-      "spellResistance": "No",
-    }
-  }
-  contentLabel="Selected Spell"
+<body
+  class="ReactModal__Body--open"
 >
-  <h3>
-    Fog Cloud
-  </h3>
-  <h5>
-    Conjuration
-  </h5>
-  <p
-    key="0"
+  <div />
+  <div
+    class="ReactModalPortal"
   >
-    Fog limits vision to 5-ft
-  </p>
-  <p>
-    <b>
-      Components:
-    </b>
-     
-    V, S
-  </p>
-  <p>
-    <b>
-      Casting Time:
-    </b>
-     
-    1 action
-  </p>
-  <p>
-    <b>
-      Range:
-    </b>
-     
-    Medium (100ft + 10ft/lvl)
-  </p>
-  <p>
-    <b>
-      Duration:
-    </b>
-     
-    10 min/lvl
-  </p>
-  <p>
-    <b>
-      Target / Effect / Area:
-    </b>
-     
-    20-ft radius
-  </p>
-  <p>
-    <b>
-      Saving Throw:
-    </b>
-     
-    None
-  </p>
-  <p>
-    <b>
-      Spell Resistance:
-    </b>
-     
-    No
-  </p>
-</DefaultModal>
+    <div
+      class="ReactModal__Overlay ReactModal__Overlay--after-open"
+      style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.75);"
+    >
+      <div
+        aria-label="Selected Spell"
+        class="ReactModal__Content ReactModal__Content--after-open DefaultModal"
+        role="dialog"
+        tabindex="-1"
+      >
+        <h3>
+          Fog Cloud
+        </h3>
+        <h5>
+          Conjuration
+        </h5>
+        <p>
+          Fog limits vision to 5-ft
+        </p>
+        <p>
+          <b>
+            Components:
+          </b>
+           
+          V, S
+        </p>
+        <p>
+          <b>
+            Casting Time:
+          </b>
+           
+          1 action
+        </p>
+        <p>
+          <b>
+            Range:
+          </b>
+           
+          Medium (100ft + 10ft/lvl)
+        </p>
+        <p>
+          <b>
+            Duration:
+          </b>
+           
+          10 min/lvl
+        </p>
+        <p>
+          <b>
+            Target / Effect / Area:
+          </b>
+           
+          20-ft radius
+        </p>
+        <p>
+          <b>
+            Saving Throw:
+          </b>
+           
+          None
+        </p>
+        <p>
+          <b>
+            Spell Resistance:
+          </b>
+           
+          No
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
 `;

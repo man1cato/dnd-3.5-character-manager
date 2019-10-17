@@ -1,23 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SpecialAbilityModal 1`] = `
-<DefaultModal
-  clickedItem={
-    Object {
-      "description": "Elves: Receive the Martial Weapon Proficiency feats for the longsword, rapier, (composite) longbow, and (composite) shortbow as bonus feats.",
-      "name": "Weapon Proficiency",
-    }
-  }
-  contentLabel="Selected Special Ability"
+<body
+  class="ReactModal__Body--open"
 >
-  <h3>
-    Weapon Proficiency
-  </h3>
-  <h5 />
-  <p
-    key="0"
+  <div />
+  <div
+    class="ReactModalPortal"
   >
-    Elves: Receive the Martial Weapon Proficiency feats for the longsword, rapier, (composite) longbow, and (composite) shortbow as bonus feats.
-  </p>
-</DefaultModal>
+    <div
+      class="ReactModal__Overlay ReactModal__Overlay--after-open"
+      style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.75);"
+    >
+      <div
+        aria-label="Selected Special Ability"
+        class="ReactModal__Content ReactModal__Content--after-open DefaultModal"
+        role="dialog"
+        tabindex="-1"
+      >
+        <h3>
+          Weapon Proficiency
+        </h3>
+        <h5 />
+        <p>
+          Elves: Receive the Martial Weapon Proficiency feats for the longsword, rapier, (composite) longbow, and (composite) shortbow as bonus feats.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
 `;

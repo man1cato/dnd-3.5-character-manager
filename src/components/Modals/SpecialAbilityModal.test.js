@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
+import _ from 'lodash'
 
 import SpecialAbilityModal from './SpecialAbilityModal'
 import { apiData } from '../../tests/utils'
@@ -9,14 +10,13 @@ let props
 
 beforeAll(async () => {
    const api = await apiData()
-   const specialAbilities = api.specialAbilities
    props = {
-      clickedAbility: Object.values(specialAbilities)[0]
+      clickedAbility: _.values(api.specialAbilities)[0]
    }
 })
 
 
 test('should render SpecialAbilityModal', () => {
-   const wrapper = shallow(<SpecialAbilityModal {...props} />)
-   expect(wrapper).toMatchSnapshot()
+   const { baseElement } = render(<SpecialAbilityModal {...props} />)
+   expect(baseElement).toMatchSnapshot()
 })

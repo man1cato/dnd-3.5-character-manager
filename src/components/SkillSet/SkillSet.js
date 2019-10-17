@@ -6,7 +6,7 @@ import SkillModal from '../Modals/SkillModal'
 import './SkillSet.scss'
 
 
-export const SkillSet = (props) => {
+export const SkillSet = props => {
 	const[clickedSkill, setClickedSkill] = useState(null)
 
 	const skillCount = props.skillSet.length
@@ -20,7 +20,7 @@ export const SkillSet = (props) => {
 			<h5 className="SkillSet__name-header">Skill</h5>
 			<h5>Ranks</h5>        
 
-			{col1.map((skill) => ( 
+			{col1.map(skill => ( 
 				<Fragment key={skill.id}>       
 					<button 
 						className="grid__col1 button--link" 
@@ -34,7 +34,7 @@ export const SkillSet = (props) => {
 				</Fragment>
 			))}
 
-			{col2.map((skill) => (
+			{col2.map(skill => (
 				<Fragment key={skill.id}>
 					<button 
 						className="SkillSet__col3 button--link" 
@@ -57,7 +57,7 @@ export const SkillSet = (props) => {
 }
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   	skills: state.skills
 })
 

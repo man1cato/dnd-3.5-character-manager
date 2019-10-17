@@ -1,23 +1,29 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 
 import { CompanionPage } from './CompanionPage'
 import profile from '../../tests/fixtures/profile'
+import companion from '../../tests/fixtures/companion'
+import { apiData, renderWithRedux } from '../../tests/utils'
 
 
 const startEditProfile = jest.fn()
-let wrapper, props
-beforeEach(() => {
+let props, state
+beforeEach(async () => {
+    const api = await apiData()
     props = {
         id: profile.id,
-        companion: profile.companion,
+        companion,
         startEditProfile
     }
-    
-    wrapper = shallow(<CompanionPage {...props} />)
+    state = {
+        specialAbilities: api.specialAbilities,
+        feats: api.feats,
+        skills: api.skills
+    }
 })
 
 
 test('should render CompanionPage with profile data', () => {
-    expect(wrapper).toMatchSnapshot()
+    const { container } = renderWithRedux(<CompanionPage {...props} />, state)
+    expect(container.firstChild).toMatchSnapshot()
 })

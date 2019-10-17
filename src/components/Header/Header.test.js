@@ -15,9 +15,10 @@ beforeAll(() => {
 })
 
 
-test('should render Header correctly', () => {
-    const { container } = renderWithRedux(<Header {...props}/>)
+test('should render Header with swap button hidden', () => {
+    const { container, getByTestId } = renderWithRedux(<Header {...props}/>)
     expect(container.firstChild).toMatchSnapshot()
+    expect(getByTestId('swapButton')).toHaveProperty('hidden', true)
 })
 
 test('should call startLogout on button click', () => {
@@ -28,7 +29,6 @@ test('should call startLogout on button click', () => {
 })
 
 test('should show select character icon when profiles in store', () => {
-    // const { getByTestId } = renderWithRedux(<Header {...props} />, { profiles })
-
-    // expect(wrapper.find(NavLink).at(1).props().hidden).toEqual(false)
+    const { getByTestId } = renderWithRedux(<Header {...props} hasProfiles />)
+    expect(getByTestId('swapButton')).toHaveProperty('hidden', false)
 })

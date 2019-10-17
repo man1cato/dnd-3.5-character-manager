@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Header correctly 1`] = `
+exports[`should render Header with swap button hidden 1`] = `
 <header>
   <div
     class="container header__content"
@@ -24,6 +24,7 @@ exports[`should render Header correctly 1`] = `
       </a>
       <a
         class="header__button"
+        data-testid="swapButton"
         hidden=""
         href="/select"
       >

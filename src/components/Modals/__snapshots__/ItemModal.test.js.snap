@@ -1,3 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render ItemModal 1`] = `<div />`;
+exports[`should render ItemModal 1`] = `
+<body>
+  <div />
+  <div
+    class="ReactModalPortal"
+  />
+</body>
+`;

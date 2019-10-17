@@ -14,7 +14,7 @@ export const Header = ({pageTitle, startLogout, hasProfiles}) => (
 				<NavLink to="/create" className="header__button">
 					<ion-icon name="add-circle-outline" size="large" />
 				</NavLink>
-				<NavLink to="/select" className="header__button" hidden={!hasProfiles}>
+				<NavLink to="/select" className="header__button" hidden={!hasProfiles} data-testid="swapButton">
 					<ion-icon name="swap" size="large" />
 				</NavLink>
 				<button 

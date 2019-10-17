@@ -1,5 +1,6 @@
 import React from 'react'
-import {shallow} from 'enzyme'
+import { render } from '@testing-library/react'
+import _ from 'lodash'
 
 import SpellModal from './SpellModal'
 import { apiData } from '../../tests/utils'
@@ -9,14 +10,13 @@ let props
 
 beforeAll(async () => {
    const api = await apiData()
-   const spells = api.spells
    props = {
-      clickedSpell: Object.values(spells)[0]
+      clickedSpell: _.values(api.spells)[0]
    }
 })
 
 
 test('should render SpellModal', () => {
-   const wrapper = shallow(<SpellModal {...props} />)
-   expect(wrapper).toMatchSnapshot()
+   const { baseElement } = render(<SpellModal {...props} />)
+   expect(baseElement).toMatchSnapshot()
 })

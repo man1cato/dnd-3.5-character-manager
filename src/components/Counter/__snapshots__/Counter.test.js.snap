@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Counter with input field 1`] = `
+<div
+  class="Counter undefined"
+>
+  <button
+    type="button"
+  >
+    <ion-icon
+      name="remove"
+      size="small"
+    />
+  </button>
+  <input
+    class="counter-value"
+    size="3"
+    value="0"
+  />
+  <button
+    type="button"
+  >
+    <ion-icon
+      name="add"
+      size="small"
+    />
+  </button>
+</div>
+`;
+
+exports[`should render Counter without input field 1`] = `
+<div
+  class="Counter undefined"
+>
+  <button
+    type="button"
+  >
+    <ion-icon
+      name="remove"
+      size="small"
+    />
+  </button>
+  <div
+    class="counter-value"
+  >
+    0
+  </div>
+  <button
+    type="button"
+  >
+    <ion-icon
+      name="add"
+      size="small"
+    />
+  </button>
+</div>
+`;
