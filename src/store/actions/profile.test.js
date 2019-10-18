@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 import database from '../../firebase/firebase'
 import { setProfile, editProfile, removeProfile, startSetProfile, startCreateProfile, startEditProfile } from './profile'
-import seedDatabase, { userOne, userTwo, characterOne } from '../../tests/seedDatabase'
+import seedDatabase, { userOne, userTwo, characterOne } from '../../test-utils/seedDatabase'
 
 
 const middlewares = [thunk]

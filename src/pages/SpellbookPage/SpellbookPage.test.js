@@ -1,10 +1,9 @@
 import React from 'react'
-import { mount } from 'enzyme'
 import { render, fireEvent } from '@testing-library/react'
 
 import { SpellbookPage } from './SpellbookPage'
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData } from '../../tests/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
+import { apiData } from '../../test-utils/utils'
 
 
 const startEditProfile = jest.fn()

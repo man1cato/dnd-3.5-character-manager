@@ -2,11 +2,11 @@ import React from 'react'
 import {	render, fireEvent } from '@testing-library/react'
 
 import { Feats } from './Feats'
-import { apiData } from '../../tests/utils'
-import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../test-utils/utils'
+import profile from '../../test-utils/fixtures/profile'
 
 
-const featIds = characterOne.feats
+const featIds = profile.feats
 let props
 beforeAll(async () => {
 	const api = await apiData()

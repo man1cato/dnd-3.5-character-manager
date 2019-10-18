@@ -1,10 +1,9 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData } from '../../tests/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
+import { apiData, renderWithRedux } from '../../test-utils/utils'
 import { ProfilePage } from './ProfilePage'
-import { renderWithRedux } from '../../tests/utils'
 
 
 let props, api

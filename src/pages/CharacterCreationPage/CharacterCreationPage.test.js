@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import _ from 'lodash'
 
-import { apiData, renderWithRedux } from '../../tests/utils'
+import { apiData, renderWithRedux } from '../../test-utils/utils'
 import { CharacterCreationPage } from './CharacterCreationPage'
 
 

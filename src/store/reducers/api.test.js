@@ -1,12 +1,11 @@
 import * as reducers from './api'
-import fs from 'fs'
+import { apiData } from '../../test-utils/utils'
 
 
 let api
 
-beforeAll( async () => {
-  api = await fs.promises.readFile('src/tests/fixtures/api.json')
-	api = JSON.parse(api)
+beforeAll(async () => {
+  api = await apiData()  
 })
 
 

@@ -61,19 +61,24 @@ export const PreparedSpells = (props) => {
 					<Fragment key={i}>						
 						<button 
 							className="grid__col1 button--link"                         
-							id={spell.id}
+							data-testid={spell.id}
 							type='button'
 							onClick={() => setClickedSpell(props.spells[spell.id])}
 						>
 							{props.spells[spell.id].name}
 						</button>
 			
-						<div className="grid__col2" id={`${spell.id}Remaining`}>{spell.remaining}</div>
+						<div 
+							className="grid__col2" 
+							data-testid={`${spell.id}Remaining`}
+						>
+							{spell.remaining}
+						</div>
 
 						{castSpells.includes(spell.id) && (
 							<button 
 								className="grid__col3"
-								id={`${spell.id}UndoButton`}
+								data-testid={`${spell.id}UndoButton`}
 								spellid={spell.id}
 								level={spell.level}
 								change={-1}
@@ -86,7 +91,7 @@ export const PreparedSpells = (props) => {
 						{spell.remaining > 0 && (
 							<button 
 								className="grid__col4"
-								id={`${spell.id}CastButton`}
+								data-testid={`${spell.id}CastButton`}
 								spellid={spell.id}
 								level={spell.level}
 								change={1}

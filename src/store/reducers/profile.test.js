@@ -1,5 +1,5 @@
 import profileReducer from './profile'
-import profile from '../../tests/fixtures/profile'
+import profile from '../../test-utils/fixtures/profile'
 import update from 'immutability-helper'
 import _ from 'lodash'
 

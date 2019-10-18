@@ -2,8 +2,8 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 import { CharacterSelectionPage } from './CharacterSelectionPage'
-import profiles from '../../tests/fixtures/profiles'
-import { apiData } from '../../tests/utils'
+import profiles from '../../test-utils/fixtures/profiles'
+import { apiData } from '../../test-utils/utils'
 
 
 const profile = profiles[0]

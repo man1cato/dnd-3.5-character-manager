@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { CompanionPage } from './CompanionPage'
-import profile from '../../tests/fixtures/profile'
-import companion from '../../tests/fixtures/companion'
-import { apiData, renderWithRedux } from '../../tests/utils'
+import profile from '../../test-utils/fixtures/profile'
+import companion from '../../test-utils/fixtures/companion'
+import { apiData, renderWithRedux } from '../../test-utils/utils'
 
 
 const startEditProfile = jest.fn()

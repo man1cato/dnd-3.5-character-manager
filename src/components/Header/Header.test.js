@@ -1,7 +1,7 @@
 import React from 'react'
 import { fireEvent } from '@testing-library/react'
 
-import { renderWithRedux } from '../../tests/utils'
+import { renderWithRedux } from '../../test-utils/utils'
 import { Header } from './Header'
 
 

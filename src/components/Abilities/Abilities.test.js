@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent, getNodeText } from '@testing-library/react'
 
 import Abilities from './Abilities'
-import { characterOne } from '../../tests/seedDatabase'
+import profile from '../../test-utils/fixtures/profile'
 import { calcAbilityMod } from '../../utils/utils'
 
 
@@ -10,7 +10,7 @@ const handleUpdate = jest.fn()
 let props
 beforeEach(() => {
 	props = {
-		abilities: characterOne.abilities,
+		abilities: profile.abilities,
 		handleUpdate
 	}
 })

@@ -2,8 +2,6 @@ import React from 'react'
 import { render, fireEvent, getNodeText } from '@testing-library/react'
 
 import Saves from './Saves'
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData } from '../../tests/utils'
 
 
 const handleUpdate = jest.fn()

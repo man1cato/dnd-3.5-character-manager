@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 import Selector from './Selector'
-import { apiData } from '../../tests/utils'
+import { apiData } from '../../test-utils/utils'
 import { apiObjectToArray } from '../../utils/utils'
 
 

@@ -1,11 +1,10 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
-import { mount } from 'enzyme'
+import { render, fireEvent, getNodeText } from '@testing-library/react'
 import _ from 'lodash'
 
 import PreparedSpells from './PreparedSpells'
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData } from '../../tests/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
+import { apiData } from '../../test-utils/utils'
 
 
 const handleUpdate = jest.fn()
@@ -41,14 +40,16 @@ test('should launch SpellModal on spell button click', async () => {
 })
 
 test('should reduce remaining value for spell when Cast button clicked', () => {
-    const wrapper = mount(<PreparedSpells {...props} />)
+    const { getByTestId, queryByTestId } = render(<PreparedSpells {...props} />)
+
     const { id, remaining } = characterOne.spellbook[0][0]
+    const remainingNode = getByTestId(`${id}Remaining`)
 
-    expect(wrapper.find(`#${id}Remaining`).text()).toEqual(`${remaining}`)
-    expect(wrapper.find(`#${id}UndoButton`)).toHaveLength(0)
+    expect(getNodeText(remainingNode)).toBe(`${remaining}`)
+    expect(queryByTestId(`${id}UndoButton`)).toBeNull()
 
-    wrapper.find(`#${id}CastButton`).simulate('click')
+    fireEvent.click(getByTestId(`${id}CastButton`))
 
-    expect(wrapper.find(`#${id}Remaining`).text()).toEqual(`${remaining - 1}`)
-    expect(wrapper.find(`#${id}UndoButton`)).toHaveLength(1)
+    expect(getNodeText(remainingNode)).toBe(`${remaining - 1}`)
+    expect(queryByTestId(`${id}UndoButton`)).not.toBeNull()
 })

@@ -4,8 +4,8 @@ import { MemoryRouter, Switch, Route } from 'react-router-dom'
 import { mount } from 'enzyme'
 import configureStore from 'redux-mock-store'
 
-import profile from '../tests/fixtures/profile'
-import profiles from '../tests/fixtures/profiles'
+import profile from '../test-utils/fixtures/profile'
+import profiles from '../test-utils/fixtures/profiles'
 
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
@@ -17,7 +17,7 @@ import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import CharacterCreationPage from '../pages/CharacterCreationPage/CharacterCreationPage'
 import CharacterSelectionPage from '../pages/CharacterSelectionPage/CharacterSelectionPage'
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage'
-import { apiData } from '../tests/utils'
+import { apiData } from '../test-utils/utils'
 
 
 const mockStore = configureStore()

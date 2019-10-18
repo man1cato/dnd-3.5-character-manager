@@ -2,8 +2,8 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 import { SkillSet } from './SkillSet'
-import { apiData } from '../../tests/utils'
-import { characterOne } from '../../tests/seedDatabase'
+import { apiData } from '../../test-utils/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
 
 
 const skillSet = characterOne.skillSet

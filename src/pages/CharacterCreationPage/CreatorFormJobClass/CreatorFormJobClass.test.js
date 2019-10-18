@@ -2,8 +2,8 @@ import React from 'react'
 import _ from 'lodash'
 
 import CreatorFormJobClass from './CreatorFormJobClass'
-import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
-import { characterOne } from '../../../tests/seedDatabase'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../test-utils/utils'
+import { characterOne } from '../../../test-utils/seedDatabase'
 
 
 const handleChange = jest.fn()

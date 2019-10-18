@@ -2,7 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 
 import CreatorFormSkills from './CreatorFormSkills'
-import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../test-utils/utils'
 import { apiObjectToArray } from '../../../utils/utils'
 
 

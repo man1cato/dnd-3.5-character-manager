@@ -1,7 +1,7 @@
 import React from 'react'
 
 import NotFoundPage from './NotFoundPage'
-import { renderWithRouter } from '../../tests/utils'
+import { renderWithRouter } from '../../test-utils/utils'
 
 
 test('should render NotFoundPage correctly', () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 
-import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../test-utils/utils'
 import CreatorFormFeats from './CreatorFormFeats'
 
 

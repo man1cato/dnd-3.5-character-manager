@@ -2,8 +2,8 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 import { SpecialAbilities } from './SpecialAbilities'
-import profile from '../../tests/fixtures/profile'
-import { apiData } from '../../tests/utils'
+import profile from '../../test-utils/fixtures/profile'
+import { apiData } from '../../test-utils/utils'
 
 
 let props

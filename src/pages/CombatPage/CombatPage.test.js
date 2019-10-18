@@ -2,8 +2,8 @@ import React from 'react'
 import { fireEvent } from '@testing-library/react'
 
 import { CombatPage } from './CombatPage'
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData, renderWithRedux } from '../../tests/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
+import { apiData, renderWithRedux } from '../../test-utils/utils'
  
 
 const startEditProfile = jest.fn()

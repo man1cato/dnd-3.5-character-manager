@@ -572,21 +572,21 @@ exports[`should render combat page with profile data 1`] = `
         </h5>
         <button
           class="grid__col1 button--link"
-          id="rec8IQeYmBr3f1BMC"
+          data-testid="rec8IQeYmBr3f1BMC"
           type="button"
         >
           Acid Splash
         </button>
         <div
           class="grid__col2"
-          id="rec8IQeYmBr3f1BMCRemaining"
+          data-testid="rec8IQeYmBr3f1BMCRemaining"
         >
           1
         </div>
         <button
           change="1"
           class="grid__col4"
-          id="rec8IQeYmBr3f1BMCCastButton"
+          data-testid="rec8IQeYmBr3f1BMCCastButton"
           level="0"
           spellid="rec8IQeYmBr3f1BMC"
         >
@@ -594,21 +594,21 @@ exports[`should render combat page with profile data 1`] = `
         </button>
         <button
           class="grid__col1 button--link"
-          id="recwpeRoCsea4vidW"
+          data-testid="recwpeRoCsea4vidW"
           type="button"
         >
           Arcane Mark
         </button>
         <div
           class="grid__col2"
-          id="recwpeRoCsea4vidWRemaining"
+          data-testid="recwpeRoCsea4vidWRemaining"
         >
           1
         </div>
         <button
           change="1"
           class="grid__col4"
-          id="recwpeRoCsea4vidWCastButton"
+          data-testid="recwpeRoCsea4vidWCastButton"
           level="0"
           spellid="recwpeRoCsea4vidW"
         >
@@ -616,14 +616,14 @@ exports[`should render combat page with profile data 1`] = `
         </button>
         <button
           class="grid__col1 button--link"
-          id="recRhVs0ahtQZpbXx"
+          data-testid="recRhVs0ahtQZpbXx"
           type="button"
         >
           Charm Person
         </button>
         <div
           class="grid__col2"
-          id="recRhVs0ahtQZpbXxRemaining"
+          data-testid="recRhVs0ahtQZpbXxRemaining"
         >
           0
         </div>

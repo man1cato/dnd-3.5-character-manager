@@ -3,8 +3,8 @@ import { render, fireEvent } from '@testing-library/react'
 import _ from 'lodash'
 
 import CreatorFormEquipment from './CreatorFormEquipment'
-import { apiData } from '../../../tests/utils'
-import profile from '../../../tests/fixtures/profile'
+import { apiData } from '../../../test-utils/utils'
+import profile from '../../../test-utils/fixtures/profile'
 
 
 const setFieldValue = jest.fn()

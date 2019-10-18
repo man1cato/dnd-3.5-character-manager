@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 import _ from 'lodash'
 
 import ConfirmationModal from './ConfirmationModal'
-import { apiData } from '../../tests/utils'
+import { apiData } from '../../test-utils/utils'
 
 
 const handleConfirm = jest.fn()

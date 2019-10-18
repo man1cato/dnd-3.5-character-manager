@@ -2,9 +2,8 @@ import React from 'react'
 import { render } from '@testing-library/react'
 
 import { StatsPage } from './StatsPage'
-import { apiData } from '../../tests/utils'
-import { characterOne } from '../../tests/seedDatabase'
-import { renderWithRedux } from '../../tests/utils'
+import { apiData, renderWithRedux } from '../../test-utils/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
  
 
 const startEditProfile = jest.fn() 

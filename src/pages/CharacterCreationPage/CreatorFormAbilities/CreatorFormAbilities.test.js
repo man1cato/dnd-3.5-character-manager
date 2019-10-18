@@ -4,8 +4,8 @@ import _ from 'lodash'
 
 import CreatorFormAbilities from './CreatorFormAbilities'
 import { abilities } from '../../../utils/staticData'
-import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
-import { characterOne } from '../../../tests/seedDatabase'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../test-utils/utils'
+import { characterOne } from '../../../test-utils/seedDatabase'
 
 
 const setFieldValue = jest.fn()

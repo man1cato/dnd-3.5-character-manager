@@ -4,7 +4,7 @@ import getApi from '../utils/getApi'
 export default async () => {
    const api = await getApi()
    
-   fs.writeFile('src/tests/fixtures/api.json', JSON.stringify(api), (err) => {
+   fs.writeFile('src/test-utils/fixtures/api.json', JSON.stringify(api), (err) => {
       if (err) throw err
    })
 }

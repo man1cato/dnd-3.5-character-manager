@@ -1,7 +1,7 @@
 {
     "setupFiles": [
         "raf/polyfill",
-        "<rootDir>/src/tests/setupTests.js"
+        "<rootDir>/src/test-utils/setupTests.js"
     ],
     "setupFilesAfterEnv": [
         "@testing-library/react/cleanup-after-each"
@@ -10,8 +10,8 @@
         "enzyme-to-json/serializer"    
     ],
     "moduleNameMapper": {
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
-        "\\.(css|less|scss)$": "<rootDir>/src/tests/__mocks__/styleMock.js"
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test-utils/__mocks__/fileMock.js",
+        "\\.(css|less|scss)$": "<rootDir>/src/test-utils/__mocks__/styleMock.js"
     },
-    "globalSetup": "<rootDir>/src/tests/globalSetup.js"
+    "globalSetup": "<rootDir>/src/test-utils/globalSetup.js"
 }

@@ -22,8 +22,8 @@ import UnderConstructionPage from '../pages/UnderConstructionPage'
 
 export const history = createBrowserHistory()
 
-const AppRouter = () => (
-	<Router history={history}>
+const AppRouter = ({ appHistory = history }) => (
+	<Router history={appHistory}>
 		<Switch>
 			<PublicRoute path="/" component={LoginPage} exact={true}/>
 			<PrivateRoute path="/create" pageTitle="Character Creation" component={CharacterCreationPage} />

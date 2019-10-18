@@ -2,8 +2,8 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 import { EquipmentPage } from './EquipmentPage'
-import { characterOne } from '../../tests/seedDatabase'
-import { apiData  } from '../../tests/utils'
+import { characterOne } from '../../test-utils/seedDatabase'
+import { apiData } from '../../test-utils/utils'
 import { calcTotalMoney } from '../../utils/utils'
 
 

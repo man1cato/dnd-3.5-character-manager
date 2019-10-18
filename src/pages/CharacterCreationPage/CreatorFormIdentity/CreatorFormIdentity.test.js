@@ -1,9 +1,9 @@
 import React from 'react'
 import { fireEvent } from '@testing-library/react'
 
-import { apiData, renderWithRedux, FormikWrapper } from '../../../tests/utils'
+import { apiData, renderWithRedux, FormikWrapper } from '../../../test-utils/utils'
 import CreatorFormIdentity from './CreatorFormIdentity'
-import { characterOne } from '../../../tests/seedDatabase'
+import { characterOne } from '../../../test-utils/seedDatabase'
 
 
 const setTouched = jest.fn()

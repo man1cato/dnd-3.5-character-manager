@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 import _ from 'lodash'
 
 import EquipButton from './EquipButton'
-import { apiData } from '../../tests/utils'
+import { apiData } from '../../test-utils/utils'
 import { apiObjectToArray } from '../../utils/utils'
 
 
